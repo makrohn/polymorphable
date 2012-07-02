@@ -1,0 +1,9 @@
+[power]
+id=100
+type=effect
+icon=32
+name=Carrot
+sfx=chomp.ogg
+new_state=cast
+requires_item=1
+buff_restore_hp=4

@@ -1,0 +1,15 @@
+[item]
+id=1
+name=Carrot
+level=1
+quality=normal
+icon=32
+power=100
+power_desc=Restore 4 HP
+type=consumable
+sfx=potion
+max_quantity=25
+
+[item]
+id=2
+name=
