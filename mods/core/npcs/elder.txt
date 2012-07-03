@@ -1,0 +1,28 @@
+name=Village Elder
+
+talker=true
+
+gfx=elder
+render_size=64,64
+render_offset=32,48
+anim_frames=4
+anim_duration=30
+
+[dialog]
+him=Daphne, you must save the world from Zalkaz!
+
+[dialog]
+requires_not=juggsearch
+set_status=juggsearch
+him=You must find the Juggernaut Talisman!
+
+[dialog]
+requires_item=498
+requires_item=499
+set_status=fulljugg
+him=Thank you for finding both halves of the Talisman!
+him=Now I will make them whole again.
+him=Thank you!
+reward_item=500
+remove_item=498
+remove_item=499

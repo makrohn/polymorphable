@@ -1,0 +1,14 @@
+[quest]
+requires_status=juggsearch
+requires_not=1stjugg
+quest_text=You have been tasked with finding the Juggernaut Talisman.  Go east to find the first half in the ruined castle.
+
+[quest]
+requires_status=1stjugg
+requires_not=2ndjugg
+quest_text=You have found the first half of the Juggernaut Talisman.  Go to the volcano to the west to find the second half.
+
+[quest]
+requires_status=2ndjugg
+requires_not=fulljugg
+quest_text=You have found the 2nd half of the Juggernaut Talisman.  Bring it to the village elder to have him combine the halves.

@@ -17,3 +17,55 @@ sfx=chomp.ogg
 new_state=cast
 requires_item=2
 buff_restore_mp=4
+
+[power]
+id=200
+name=Transform into Bat
+type=transform
+new_state=cast
+spawn_type=bat
+requires_item=200
+icon=114
+description=Turn into a bat for ten minutes
+sfx=
+transform_duration=600
+manual_untransform=true
+
+[power]
+id=300
+name=Transform into Snake
+type=transform
+new_state=cast
+spawn_type=snake
+requires_item=300
+icon=115
+description=Turn into a snake for ten minutes
+sfx=
+transform_duration=600
+manual_untransform=true
+
+[power]
+id=400
+name=Transform into Ghost
+type=transform
+new_state=cast
+spawn_type=ghost
+requires_item=400
+icon=116
+description=Turn into a ghost for ten minutes
+sfx=
+transform_duration=600
+manual_untransform=true
+
+[power]
+id=500
+name=Transform into Juggernaut
+type=transform
+new_state=cast
+spawn_type=ghost
+requires_item=500
+icon=102
+description=Turn into a juggernaut for ten minutes
+sfx=
+transform_duration=600
+manual_untransform=true
