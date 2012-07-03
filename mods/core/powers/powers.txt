@@ -7,3 +7,13 @@ sfx=chomp.ogg
 new_state=cast
 requires_item=1
 buff_restore_hp=4
+
+[power]
+id=101
+type=effect
+icon=33
+name=Watermelon
+sfx=chomp.ogg
+new_state=cast
+requires_item=2
+buff_restore_mp=4

@@ -7,9 +7,25 @@ icon=32
 power=100
 power_desc=Restore 4 HP
 type=consumable
-sfx=potion
 max_quantity=25
 
 [item]
 id=2
-name=
+name=Watermelon
+level=1
+quality=normal
+icon=33
+power=101
+power_desc=Restore 4 MP
+type=consumable
+max_quantity=25
+
+[item]
+id=50
+name=Robes
+level=5
+quality=normal
+type=body
+icon=112,16
+sfx=cloth
+gfx=robes
