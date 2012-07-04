@@ -5,7 +5,7 @@ talker=true
 gfx=elder
 render_size=64,64
 render_offset=32,48
-anim_frames=4
+anim_frames=1
 anim_duration=30
 
 [dialog]
