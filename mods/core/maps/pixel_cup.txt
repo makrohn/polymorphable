@@ -323,6 +323,13 @@ type=elder
 location=45,45,1,1
 
 [event]
+location=50,38,1,1
+type=run_once
+hotspot=-16,-16,32,32
+tooltip=A sword in this chest
+loot=id,49,39,100
+
+[event]
 location=52,53,1,1
 hotspot=-16,-16,32,32
 type=run_once
@@ -330,3 +337,7 @@ requires_not=2ndjugg
 tooltip=Juggernaut Talisman Chest
 loot=id,53,54,498
 loot=id,54,55,499
+
+[enemy]
+type=bat
+location=60,60,1,1
