@@ -9,4 +9,4 @@ location=0,0,3
 [event]
 type=teleport
 location=0,0,1,1
-intermap=pixel_cup.txt,40,40
+intermap=laurelia.txt,128,128
