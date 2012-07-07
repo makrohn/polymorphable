@@ -19,6 +19,16 @@ requires_item=2
 buff_restore_mp=4
 
 [power]
+id=136
+name=Disenchant
+type=transform
+icon=20
+new_state=cast
+spawn_type=untransform
+description=Transform back to human
+sfx=quake.ogg
+
+[power]
 id=200
 name=Transform into Bat
 type=transform
@@ -26,9 +36,9 @@ new_state=cast
 spawn_type=bat
 requires_item=200
 icon=114
-description=Turn into a bat for ten minutes
+description=Turn into a bat
 sfx=
-transform_duration=600
+transform_duration=0
 manual_untransform=true
 
 [power]
