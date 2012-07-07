@@ -24,6 +24,7 @@ chance_melee_ment=0
 power_beacon=132
 power_melee_ment=136
 power_melee_phys=1
+attunement_fire=0
 
 accuracy=100
 avoidance=0

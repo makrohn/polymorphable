@@ -36,6 +36,7 @@ name=Leather Armor
 level=5
 quality=normal
 type=body
+abs=1,1
 icon=113,17
 sfx=cloth
 gfx=leather
