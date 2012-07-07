@@ -13,8 +13,8 @@ loot_chance=25
 
 # combat stats
 hp=10
-speed=15
-dspeed=15
+speed=10
+dspeed=10
 melee_range=32
 threat_range=512
 turn_delay=12

@@ -1,0 +1,32 @@
+name=Venom Bat
+level=1
+categories=bat
+rarity=common
+xp=0
+
+sfx_prefix=bat
+gfx_prefix=venombat
+animations=bat
+animation_speed=30
+
+loot_chance=25
+
+# combat stats
+hp=10
+speed=4
+dspeed=3
+melee_range=32
+threat_range=512
+turn_delay=12
+chance_pursue=20
+chance_melee_ment=2
+power_beacon=132
+power_ranged_phys=301
+flying=1
+
+accuracy=100
+avoidance=0
+
+dmg_ranged_min=4
+dmg_ranged_max=4
+cooldown=30

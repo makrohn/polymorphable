@@ -825,3 +825,15 @@ location=133,125,1,1
 [npc]
 type=librarian
 location=137,124,1,1
+
+[enemy]
+type=fireskeleton
+location=150,150,1,1
+
+[enemy]
+type=venombat
+location=160,150,1,1
+
+[enemy]
+type=firebat
+location=170,150,1,1
