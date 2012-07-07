@@ -19,6 +19,42 @@ requires_item=2
 buff_restore_mp=4
 
 [power]
+id=30
+name=Spit Acid
+type=missile
+icon=20
+new_state=cast
+face=true
+directional=true
+requires_los=true
+gfx=venom.png
+sfx=shock.ogg
+use_hazard=true
+rendered=true
+aim_assist=32
+base_damage=ranged
+lifespan=26
+radius=64
+speed=30
+frame_loop=12
+frame_duration=3
+frame_size=64,64
+frame_offset=32,64
+trait_elemental=water
+post_power=126
+wall_power=126
+
+[power]
+id=136
+name=Disenchant
+type=transform
+icon=22
+new_state=cast
+spawn_type=untransform
+description=Transform back to human
+sfx=quake.ogg
+
+[power]
 id=200
 name=Transform into Bat
 type=transform
@@ -26,10 +62,8 @@ new_state=cast
 spawn_type=bat
 requires_item=200
 icon=114
-description=Turn into a bat for ten minutes
-sfx=
-transform_duration=600
-manual_untransform=true
+description=Turn into a bat
+transform_duration=0
 
 [power]
 id=300
@@ -39,10 +73,34 @@ new_state=cast
 spawn_type=snake
 requires_item=300
 icon=115
-description=Turn into a snake for ten minutes
-sfx=
-transform_duration=600
-manual_untransform=true
+description=Turn into a spitting snake
+transform_duration=0
+
+[power]
+id=301
+name=Spit Acid
+type=missile
+icon=9
+new_state=cast
+face=true
+directional=true
+requires_los=true
+gfx=venom.png
+sfx=shock.ogg
+use_hazard=true
+rendered=true
+aim_assist=32
+base_damage=ranged
+lifespan=26
+radius=64
+speed=30
+frame_loop=12
+frame_duration=3
+frame_size=64,64
+frame_offset=32,64
+trait_elemental=water
+post_power=126
+wall_power=126
 
 [power]
 id=400
@@ -52,20 +110,17 @@ new_state=cast
 spawn_type=ghost
 requires_item=400
 icon=116
-description=Turn into a ghost for ten minutes
-sfx=
-transform_duration=600
-manual_untransform=true
+description=Turn into a ghost
+transform_duration=0
 
 [power]
 id=500
 name=Transform into Juggernaut
 type=transform
 new_state=cast
-spawn_type=ghost
+spawn_type=juggernaut
 requires_item=500
-icon=102
-description=Turn into a juggernaut for ten minutes
-sfx=
-transform_duration=600
-manual_untransform=true
+requires_mp=1
+icon=101
+description=Turn into a powerful knight for a short time
+transform_duration=0

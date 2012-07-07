@@ -1,34 +1,33 @@
-name=Bat
+name=Snake
 level=1
-categories=bat
+categories=snake
 rarity=common
 xp=0
 
-sfx_prefix=bat
-gfx_prefix=bat
-animations=bat
+sfx_prefix=snake
+gfx_prefix=snake
+animations=snake
 animation_speed=30
 
 loot_chance=25
 
 # combat stats
-hp=2
+hp=3
 speed=4
 dspeed=3
 melee_range=32
 threat_range=512
 turn_delay=12
 chance_pursue=20
-chance_melee_phys=2
+chance_ranged_phys=2
 chance_melee_ment=0
 power_beacon=132
+power_melee_phys=301
 power_melee_ment=136
-power_melee_phys=1
-flying=1
 
 accuracy=100
 avoidance=0
 
-dmg_melee_min=1
-dmg_melee_max=1
+dmg_ranged_min=2
+dmg_ranged_max=2
 cooldown=30
