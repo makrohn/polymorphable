@@ -19,41 +19,7 @@ requires_item=2
 buff_restore_mp=4
 
 [power]
-id=136
-name=Disenchant
-type=transform
-icon=20
-new_state=cast
-spawn_type=untransform
-description=Transform back to human
-sfx=quake.ogg
-
-[power]
-id=200
-name=Transform into Bat
-type=transform
-new_state=cast
-spawn_type=bat
-requires_item=200
-icon=114
-description=Turn into a bat
-transform_duration=0
-manual_untransform=true
-
-[power]
-id=300
-name=Transform into Snake
-type=transform
-new_state=cast
-spawn_type=snake
-requires_item=300
-icon=115
-description=Turn into a spitting snake
-transform_duration=0
-manual_untransform=true
-
-[power]
-id=301
+id=30
 name=Spit Acid
 type=missile
 icon=20
@@ -79,6 +45,38 @@ post_power=126
 wall_power=126
 
 [power]
+id=136
+name=Disenchant
+type=transform
+icon=20
+new_state=cast
+spawn_type=untransform
+description=Transform back to human
+sfx=quake.ogg
+
+[power]
+id=200
+name=Transform into Bat
+type=transform
+new_state=cast
+spawn_type=bat
+requires_item=200
+icon=114
+description=Turn into a bat
+transform_duration=0
+
+[power]
+id=300
+name=Transform into Snake
+type=transform
+new_state=cast
+spawn_type=snake
+requires_item=300
+icon=115
+description=Turn into a spitting snake
+transform_duration=0
+
+[power]
 id=400
 name=Transform into Ghost
 type=transform
@@ -88,7 +86,6 @@ requires_item=400
 icon=116
 description=Turn into a ghost
 transform_duration=0
-manual_untransform=true
 
 [power]
 id=500

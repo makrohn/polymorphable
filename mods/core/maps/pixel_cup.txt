@@ -345,3 +345,7 @@ location=60,60,1,1
 [enemy]
 type=snake
 location=40,60,1,1
+
+[enemy]
+type=ghost
+location=50,60,1,1
