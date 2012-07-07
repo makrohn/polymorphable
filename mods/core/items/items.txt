@@ -65,6 +65,16 @@ gfx=
 power_desc=The sword of the ancient hero
 
 [item]
+id=136
+name=Reversion Talisman
+level=5
+quality=normal
+type=quest
+icon=98
+power=136
+power_desc=Use if you find yourself unable to revert to human
+
+[item]
 id=200
 name=Bat Talisman
 level=5
