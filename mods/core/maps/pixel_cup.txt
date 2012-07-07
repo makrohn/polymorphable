@@ -343,9 +343,9 @@ type=bat
 location=60,60,1,1
 
 [enemy]
-type=snake
+type=skeleton
 location=40,60,1,1
 
 [enemy]
-type=ghost
+type=skeletonmage
 location=50,60,1,1
