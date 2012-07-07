@@ -28,7 +28,7 @@ quality=normal
 type=body
 icon=112,16
 sfx=cloth
-gfx=robes
+gfx=clothes
 
 [item]
 id=51
