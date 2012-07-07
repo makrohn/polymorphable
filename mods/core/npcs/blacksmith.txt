@@ -1,0 +1,14 @@
+name=Clara the Blacksmith
+
+talker=true
+
+gfx=blacksmith
+render_size=64,64
+render_offset=32,58
+anim_frames=1
+anim_duration=30
+
+[dialog]
+him=Ah, so you need a better sword to beat the Evil One?
+him=Fancy that, I can get one made for you, but the materials ain't cheap.
+him=It'll cost ya 100 gold.  Sound like a deal?

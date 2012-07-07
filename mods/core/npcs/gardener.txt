@@ -1,0 +1,12 @@
+name=Howard the Gardener
+
+talker=true
+
+gfx=gardener
+render_size=64,64
+render_offset=32,58
+anim_frames=1
+anim_duration=30
+
+[dialog]
+him=Oh, I have some fresh carrots and watermelons, they're good for what ails you!

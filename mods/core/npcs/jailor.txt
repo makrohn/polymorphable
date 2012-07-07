@@ -1,0 +1,14 @@
+name=Jailor
+
+talker=true
+
+gfx=guard
+render_size=64,64
+render_offset=32,58
+anim_frames=1
+anim_duration=30
+
+[dialog]
+him=Lots of unsavory types locked up here!
+him=Aw, who am I kidding?  We haven't had an inmate in fifty years.
+him=I think I still have the keys around here somewhere, though...

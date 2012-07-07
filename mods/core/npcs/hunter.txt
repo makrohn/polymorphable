@@ -1,0 +1,13 @@
+name=Robin the Hunter
+
+talker=true
+
+gfx=hunter
+render_size=64,64
+render_offset=32,58
+anim_frames=1
+anim_duration=30
+
+[dialog]
+him=This bow is the best ever seen in this village.
+him=what?  No, of course you can't have it!
