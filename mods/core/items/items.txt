@@ -8,6 +8,7 @@ power=100
 power_desc=Restore 4 HP
 type=consumable
 max_quantity=25
+price=25
 
 [item]
 id=2
@@ -19,6 +20,7 @@ power=101
 power_desc=Restore 4 MP
 type=consumable
 max_quantity=25
+price=25
 
 [item]
 id=50
@@ -62,8 +64,9 @@ type=main
 icon=97,1
 dmg=2,2
 sfx=
-gfx=
+gfx=sword
 power_desc=The sword of the ancient hero
+price=100
 
 [item]
 id=136

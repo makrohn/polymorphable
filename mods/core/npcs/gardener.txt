@@ -1,6 +1,8 @@
 name=Howard the Gardener
 
 talker=true
+vendor=true
+constant_stock=1,1,1,1,1,2,2,2,2,2
 
 gfx=gardener
 render_size=64,64
