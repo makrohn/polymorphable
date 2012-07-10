@@ -504,3 +504,8 @@ location=69,60,1,1
 type=hunter
 location=22,106,1,1
 
+[enemy]
+# Bat
+type=bat
+location=31,81,1,1
+
