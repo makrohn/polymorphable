@@ -1,4 +1,4 @@
-name=Village Elder
+name=Elder Thomas
 
 talker=true
 
@@ -26,3 +26,35 @@ him=Thank you!
 reward_item=500
 remove_item=498
 remove_item=499
+
+[dialog]
+requires_item=199
+set_status=juggsearch
+him=Ah, the Fairy Flower!  Did you run into any trouble in the forest?
+you=Yes, I did.  I suppose I ought to thank you for the sword.
+him=Snarks?  Grumpkins?
+you=No, I just, you know, unleashed an ancient evil.  Thanks a bunch for the warning.
+him=Ah, I hoped that I would never have to tell you.  You see, I never told you about your parents.  You weren't actually left on my doorstep - the house you live in was theirs, before they left to seal away the ancient evil Zalkaz.
+you=When in the heck were you planning on letting me know the truth!?
+him=Tomorrow, after your birthday party, I promise!  They died nobly, but now, it falls to you to finish their work.
+him=You must find what they never could: both halves of the Juggernaut Talisman.  With the Talisman, you can seal away the Ancient Evil forever!
+him=Go east, and use your bat talisman to fly over the ruined bridge, and seek the first half of the Juggernaut Talisman in the ruined castle.
+remove_item=199
+
+[dialog]
+requires_not=flowerfound
+him=Have you found the Fairy Flower yet?
+
+[dialog]
+requires_not=elderintro
+set_status=elderintro
+him=Ah, Daphne!  It's good to see you this morning.  You turn sixteen tomorrow, but it seems like just yesterday that I found you in a basket at my door.
+you=Sixteen long years of doing pointless chores for you, Thomas.
+him=Come now, you wound an old man!  Tomorrow you shall be released from my endless tasks, but today, I need you to do one more.
+you=Joy of joys.  Where are you sending me today?
+him=I need you to find the Fairy Flower in the forests.  It's the last ingredient I need to create the wreath to hang in your new home.
+you=A housewarming present I have to fetch myself?  Awww, you shouldn't have.
+him=Ha!  You're my girl.  The Fairy Flower is found north of town, across the river.  Here's a sword just in case you find trouble.
+you=Aww, thanks.  All the years of learning swordplay from Clara shouldn't go to waste, then, if I run into any vicious logs.
+him=You never know!
+reward_item=100

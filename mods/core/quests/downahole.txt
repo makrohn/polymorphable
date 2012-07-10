@@ -1,0 +1,13 @@
+[quest]
+requires_not=elderintro
+quest_text=Explore the village of Laurelia
+
+[quest]
+requires_status=elderintro
+requires_not=flowerfound
+quest_text=Find the Fairy Flower noth of town, over the river.
+
+[quest]
+requires_status=flowerfound
+requires_not=juggsearch
+quest_text=You found the Fairy Flower!  Now to bring it home to the Elder, and to explain what you saw in the cave.

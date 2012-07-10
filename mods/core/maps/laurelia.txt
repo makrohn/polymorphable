@@ -509,3 +509,11 @@ location=22,106,1,1
 type=bat
 location=31,81,1,1
 
+[event]
+location=90,80,1,1
+requires_not=flowerfound
+type=run_once
+hotspot=-16,-16,32,32
+tooltip=**SPOILER DO NOT OPEN**
+loot=id,91,80,199
+

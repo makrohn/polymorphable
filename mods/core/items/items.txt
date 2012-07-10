@@ -79,6 +79,17 @@ power=136
 power_desc=Use if you find yourself unable to revert to human
 
 [item]
+id=199
+name=Fairy Flower
+level=5
+quality=normal
+type=quest
+icon=98,2
+loot=gem
+power_desc=Return this flower to Elder Thomas
+pickup_status=flowerfound
+
+[item]
 id=200
 name=Bat Talisman
 level=5
