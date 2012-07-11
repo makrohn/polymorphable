@@ -517,3 +517,8 @@ hotspot=-16,-16,32,32
 tooltip=**SPOILER DO NOT OPEN**
 loot=id,91,80,199
 
+[event]
+location=89,0,4,1
+type=teleport
+intermap=cavern.txt,98,98
+msg=You've fallen in a hole!
