@@ -1,0 +1,22 @@
+name=Ancient Tombstone
+
+talker=true
+
+gfx=blank
+render_size=64,64
+render_offset=32,58
+anim_frames=1
+anim_duration=30
+
+[dialog]
+requires_not=evil_unleashed
+set_status=evil_unleashed
+him=As you gaze upon the tombstone, you hear a voice coming from the walls.
+him=I knew it was just a matter of time until someone stumbled upon my tomb!
+him=But never in the wildest dreams did I believe it would be the daughter of my captors!
+you=What?  Who are you?  Where are you?
+him=I am Zalkaz, the Destroyer of Worlds!  When you approached my tombstone, your life force set me free.
+you=Oh, and I'm so scared now.  You're just a voice, who cares?
+him=Who cares?  The entire world shall tremble, for soon I shall have my body back, and I shall sweep through the lands with my fiery sword of rage!
+you=Great.  Why can't we just have a sewer like most modern cities?  Sheesh.
+you=Now I just need to find my way out of here.  Is that a breeze coming from behind the tombstone?

@@ -506,6 +506,7 @@ location=22,106,1,1
 
 [event]
 location=91,7,1,1
+requires_status=elderintro
 requires_not=flowerfound
 type=run_once
 hotspot=-16,-16,32,32
@@ -515,8 +516,14 @@ mapmod=object,91,7,0
 
 [event]
 requires_status=elderintro
-requires_not=flowerfound
-location=86,14,5,1
+requires_not=cavernexplored
+location=86,14,6,1
 type=teleport
 intermap=cavern.txt,98,98
 msg=You've fallen in a hole!
+
+[event]
+requires_status=cavernexplored
+location=88,0,6,1
+type=teleport
+intermap=cavern.txt,61,36

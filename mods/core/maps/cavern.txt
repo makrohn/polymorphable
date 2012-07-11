@@ -323,7 +323,8 @@ type=run_once
 hotspot=-16,-16,32,32
 tooltip=Chest
 loot=id,58,47,200
-msg=Hold this talisman in your off hand, and right-click to turn into a bat!
+msg=Equip talisman, drag to action bar to use.
+mapmod=object,57,47,206
 
 [event]
 location=94,62,1,1
@@ -331,6 +332,7 @@ type=run_once
 hotspot=-16,-16,32,32
 tooltip=Chest
 loot=random,94,63,1
+mapmod=object,94,62,206
 
 [event]
 location=97,73,1,1
@@ -365,6 +367,7 @@ mapmod=collision,95,85,0
 [event]
 location=62,36,1,2
 type=teleport
+set_status=cavernexplored
 intermap=laurelia.txt,91,2
 
 [event]
@@ -373,6 +376,7 @@ type=run_once
 hotspot=-16,-16,32,32
 tooltip=Chest
 loot=random,80,41,1
+mapmod=object,79,41,206
 
 [event]
 location=86,41,1,1
@@ -380,6 +384,7 @@ type=run_once
 hotspot=-16,-16,32,32
 tooltip=Chest
 loot=random,86,42,1
+mapmod=object,86,41,206
 
 [event]
 location=88,42,1,1
@@ -387,6 +392,7 @@ type=run_once
 hotspot=-16,-16,32,32
 tooltip=Chest
 loot=random,87,42,1
+mapmod=object,88,42,206
 
 [enemy]
 location=90,86,1,1
@@ -429,14 +435,6 @@ location=49,52,1,1
 type=bat
 
 [enemy]
-location=47,42,1,1
-type=bat
-
-[enemy]
-location=51,43,1,1
-type=bat
-
-[enemy]
 location=48,41,1,1
 type=snake
 
@@ -467,3 +465,37 @@ type=snake
 [enemy]
 location=87,42,1,1
 type=snake
+
+[npc]
+type=gravestone
+location=76,75,1,1
+
+[npc]
+type=gravestone
+location=77,75,1,1
+
+[event]
+requires_not=evil_unleashed
+location=98,98,1,1
+type=run_once
+mapmod=object,75,72,134
+mapmod=object,76,72,134
+mapmod=object,77,72,134
+mapmod=object,78,72,134
+mapmod=collision,75,72,1s
+mapmod=collision,76,72,1
+mapmod=collision,77,72,1
+mapmod=collision,78,72,1
+
+[event]
+requires_status=evil_unleashed
+location=75,73,4,1
+type=run_once
+mapmod=object,75,72,135
+mapmod=object,76,72,0
+mapmod=object,77,72,0
+mapmod=object,78,72,133
+mapmod=collision,75,72,0
+mapmod=collision,75,72,0
+mapmod=collision,75,72,0
+mapmod=collision,75,72,0
