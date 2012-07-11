@@ -98,6 +98,7 @@ type=off
 icon=98,2
 power=200
 power_desc=Use to transform into a bat and fly
+pickup_status=battalisfound
 
 [item]
 id=300
