@@ -368,7 +368,7 @@ mapmod=collision,95,85,0
 location=62,36,1,2
 type=teleport
 set_status=cavernexplored
-intermap=laurelia.txt,91,2
+intermap=glade.txt,15,14
 
 [event]
 location=79,41,1,1
