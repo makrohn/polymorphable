@@ -8,3 +8,5 @@ flare.desktop
 build/
 # ignore also vim swap files
 .*.sw*
+polymorphable
+polymorphable.exe
