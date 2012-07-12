@@ -12,7 +12,7 @@ else (MSVC)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wno-unused -Wshadow -Woverloaded-virtual")
 endif (MSVC)
 if(CMAKE_BUILD_TYPE STREQUAL "Release")
-  set(CMAKE_CXX_FLAGS_RELEASE "-O2 -g0")
+  set(CMAKE_CXX_FLAGS_RELEASE "-O2 -g0 -flto -fwhole-program")
 elseif(CMAKE_BUILD_TYPE STREQUAL "RelWithDebInfo")
   set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "-O2 -g")
 elseif(CMAKE_BUILD_TYPE STREQUAL "MinSizeRel")
@@ -27,7 +27,11 @@ endif()
 set(BINDIR  "games"             CACHE STRING "Directory from CMAKE_INSTALL_PREFIX where game executable will be installed.")
 set(DATADIR "share/games/flare" CACHE STRING "Directory from CMAKE_INSTALL_PREFIX where game data files will be installed.")
 
-add_definitions(-DDATA_INSTALL_DIR="${CMAKE_INSTALL_PREFIX}/${DATADIR}")
+If(NOT IS_ABSOLUTE "${DATADIR}")
+	add_definitions(-DDATA_INSTALL_DIR="${CMAKE_INSTALL_PREFIX}/${DATADIR}")
+Else(NOT IS_ABSOLUTE "${DATADIR}")
+	add_definitions(-DDATA_INSTALL_DIR="${DATADIR}")
+EndIf(NOT IS_ABSOLUTE "${DATADIR}")
 
 # Detect missing dependencies
 
@@ -91,15 +95,14 @@ Set (FLARE_SOURCES
 	./src/ItemStorage.cpp
 	./src/LootManager.cpp
 	./src/MapCollision.cpp
-	./src/MapIso.cpp
+	./src/MapRenderer.cpp
 	./src/Menu.cpp
 	./src/MenuActionBar.cpp
+	./src/MenuActiveEffects.cpp
 	./src/MenuCharacter.cpp
 	./src/MenuConfirm.cpp
 	./src/MenuEnemy.cpp
 	./src/MenuExit.cpp
-	./src/MenuExperience.cpp
-	./src/MenuHPMP.cpp
 	./src/MenuHUDLog.cpp
 	./src/MenuInventory.cpp
 	./src/MenuItemStorage.cpp
@@ -107,6 +110,7 @@ Set (FLARE_SOURCES
 	./src/MenuManager.cpp
 	./src/MenuMiniMap.cpp
 	./src/MenuPowers.cpp
+	./src/MenuStatBar.cpp
 	./src/MenuTalker.cpp
 	./src/MenuVendor.cpp
 	./src/MessageEngine.cpp
@@ -116,6 +120,7 @@ Set (FLARE_SOURCES
 	./src/PowerManager.cpp
 	./src/QuestLog.cpp
 	./src/SaveLoad.cpp
+	./src/SDL_gfxBlitFunc.c
 	./src/Settings.cpp
 	./src/SharedResources.cpp
 	./src/StatBlock.cpp
@@ -130,8 +135,8 @@ Set (FLARE_SOURCES
 	./src/WidgetInput.cpp
  	./src/WidgetLabel.cpp
  	./src/WidgetListBox.cpp
-    ./src/WidgetScrollBar.cpp
-    ./src/WidgetScrollBox.cpp
+	./src/WidgetScrollBar.cpp
+	./src/WidgetScrollBox.cpp
 	./src/WidgetSlider.cpp
  	./src/WidgetTabControl.cpp
 	./src/WidgetTooltip.cpp
@@ -163,10 +168,10 @@ configure_file("${CMAKE_CURRENT_SOURCE_DIR}/distribution/flare.desktop.in" "${CM
 # installing to the proper places
 install(PROGRAMS
   ${CMAKE_CURRENT_BINARY_DIR}/flare
-  DESTINATION ${CMAKE_INSTALL_PREFIX}/${BINDIR})
+  DESTINATION ${BINDIR})
 install(DIRECTORY
   "${CMAKE_CURRENT_SOURCE_DIR}/mods"
-  DESTINATION ${CMAKE_INSTALL_PREFIX}/${DATADIR})
+  DESTINATION ${DATADIR})
 install(FILES
   "${CMAKE_CURRENT_BINARY_DIR}/flare.desktop"
   DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)

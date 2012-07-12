@@ -7,6 +7,8 @@ icon=32
 power=100
 power_desc=Restore 4 HP
 type=consumable
+loot=hp_potion
+rand_vendor=3
 max_quantity=25
 price=25
 
@@ -19,6 +21,8 @@ icon=33
 power=101
 power_desc=Restore 4 MP
 type=consumable
+loot=mp_potion
+rand_vendor=3
 max_quantity=25
 price=25
 
@@ -31,6 +35,7 @@ type=body
 icon=112,16
 sfx=cloth
 gfx=clothes
+loot=clothing
 
 [item]
 id=51
@@ -42,6 +47,7 @@ abs=1,1
 icon=113,17
 sfx=cloth
 gfx=leather
+loot=clothing
 
 [item]
 id=100
@@ -54,6 +60,7 @@ dmg=1,1
 sfx=
 gfx=sword
 power_desc=Just a normal sword
+loot=sword
 
 [item]
 id=101
@@ -67,6 +74,7 @@ sfx=
 gfx=sword
 power_desc=The sword of the ancient hero
 price=100
+loot=sword
 
 [item]
 id=136
@@ -77,6 +85,7 @@ type=quest
 icon=98
 power=136
 power_desc=Use if you find yourself unable to revert to human
+loot=talisman
 
 [item]
 id=199
@@ -88,6 +97,7 @@ icon=98,2
 loot=gem
 power_desc=Return this flower to Elder Thomas
 pickup_status=flowerfound
+loot=talisman
 
 [item]
 id=200
@@ -98,6 +108,7 @@ type=off
 icon=98,2
 power=200
 power_desc=Use to transform into a bat and fly
+loot=talisman
 
 [item]
 id=300
@@ -108,6 +119,7 @@ type=off
 icon=99,3
 power=300
 power_desc=Use to transform into a snake and spit acid at enemies and switches
+loot=talisman
 
 
 [item]
@@ -119,6 +131,7 @@ type=off
 icon=100,4
 power=400
 power_desc=Use to transform into a ghost and pass through flame
+loot=talisman
 
 [item]
 id=498
@@ -132,6 +145,7 @@ power_desc=Bring to the Village Elder to create the Juggernaut Talisman
 loot=gem
 sfx=gem
 pickup_status=1stjugg
+loot=talisman
 
 [item]
 id=499
@@ -145,6 +159,7 @@ power_desc=Bring to the Village Elder to create the Juggernaut Talisman
 loot=gem
 sfx=gem
 pickup_status=2ndjugg
+loot=talisman
 
 [item]
 id=500
@@ -156,3 +171,4 @@ type=off
 power=500
 loot=gem
 power_desc=Transform into a mighty juggernaut
+loot=talisman
