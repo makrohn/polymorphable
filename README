@@ -7,6 +7,13 @@ Rather than building a very abstract, robust game engine, the goal of this proje
 
 Flare uses simple file formats (INI style config files) for most of the game data, allowing anyone to easily modify game contents. Open formats are preferred (png, ogg). The game code is C++.
 
+Polymorphable README
+====================
+
+This game, Laurelia's Polymorphable Citizens ("polymorphable" for short) is adapted from the FLARE engine to run a different scenario entirely, while contributing back to the codebase of the original FLARE.
+
+Polymorphable is an Action-RPG which we hope will evoke many of the design principles of older adventure games, while retaining it's own character and style.
+
 COPYRIGHT AND LICENSE
 =====================
 
@@ -27,8 +34,8 @@ Email     clintbellanger@gmail.com
 DEPENDENCIES
 ============
 
-To build flare you need the 1.2 Development Libraries for SDL, SDL_image, SDL_mixer, and SDL_ttf.
-To run flare you need the equivalent 1.2 Runtime Libraries.
+To build polymorphable you need the 1.2 Development Libraries for SDL, SDL_image, SDL_mixer, and SDL_ttf.
+To run polymorphable you need the equivalent 1.2 Runtime Libraries.
 
 http://www.libsdl.org/download-1.2.php
 
@@ -38,21 +45,12 @@ For easy building I recommend using cmake and make.
 
 Installing dependencies on Ubuntu:
 sudo apt-get install libsdl1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev
-
-  There is also a flare build in the Ubuntu (universe)
-  http://packages.ubuntu.com/source/precise/flare
  
 Installing dependencies on Arch Linux:
 pacman -S --asdeps sdl sdl_image sdl_mixer libogg libvorbis hicolor-icon-theme python sdl_ttf
 
-  There is also a flare-rpg-git pkgbuild at the arch user repository:
-  https://aur.archlinux.org/packages.php?ID=57522
-
 Installing dependencies on openSUSE:
 sudo zypper in make cmake gcc gcc-c++ libSDL-devel libSDL_image-devel libSDL_mixer-devel libSDL_ttf-devel python
-
-  There is also a flare build at the openSUSE Build Service:
-  http://software.opensuse.org/download.html?project=home:DarkSS&package=flare
 
 
 BUILDING WITH CMAKE
@@ -79,26 +77,26 @@ or, BUILDING WITH g++
 If you prefer building directly with C++, the command will be something like this.
 
 Windows plus MinGW (depending on where your SDL dev headers are)
-g++ -I C:\MinGW\include\SDL src\*.cpp -o flare.exe -lmingw32 -lSDLmain -lSDL -lSDL_image -lSDL_mixer -lSDL_ttf
+g++ -I C:\MinGW\include\SDL src\*.cpp -o polymorphable.exe -lmingw32 -lSDLmain -lSDL -lSDL_image -lSDL_mixer -lSDL_ttf
 
 Linux (depending on where your SDL includes are)
-g++ -I /usr/include/SDL src/*.cpp -o flare -lSDL -lSDL_image -lSDL_mixer -lSDL_ttf
+g++ -I /usr/include/SDL src/*.cpp -o polymorphable -lSDL -lSDL_image -lSDL_mixer -lSDL_ttf
 
 
 RUNNING FLARE
 =============
 
-If the program is installing system-wide (i.e., you typed 'make install' and it worked), you can run it just by executing the 'flare' command.
+If the program is installing system-wide (i.e., you typed 'make install' and it worked), you can run it just by executing the 'polymorphable' command.
 
 If you did not perform the installation step, you should copy back the binary in 'build' to the top directory, and run it from there, like this:
 
-	cp flare ..
+	cp polymorphable ..
 	cd ..
-	./flare
+	./polymorphable
 
 Also, in newer versions, the game can be launched from an icon in your main menu in your GUI environment (KDE, GNOME, etc.).
 
-If you're running flare from your operating system's gui file browser (e.g. Windows Explorer or OSX Finder), you'll want to use one of the provided launchers.  This helps the flare executable use its own working directory, so it can see all those data folders.
+If you're running polymorphable from your operating system's gui file browser (e.g. Windows Explorer or OSX Finder), you'll want to use one of the provided launchers.  This helps the polymorphable executable use its own working directory, so it can see all those data folders.
 
 
 SETTINGS
@@ -106,8 +104,8 @@ SETTINGS
 
 Settings are stored in one of these places:
 
-$XDG_CONFIG_HOME/flare
-$HOME/.config/flare
+$XDG_CONFIG_HOME/polymorphable
+$HOME/.config/polymorphable
 ./config
 
 Here you can enable fullscreen, change the game resolution, enable mouse-move, and change keybindings. The settings files are created the first time you run Flare.
@@ -117,8 +115,8 @@ SAVE FILES
 
 Save files are stored in one of these places:
 
-$XDG_DATA_HOME/flare
-$HOME/.local/share/flare
+$XDG_DATA_HOME/polymorphable
+$HOME/.local/share/polymorphable
 ./saves
 
 If permissions are correct, the game is automatically saved when you exit.
