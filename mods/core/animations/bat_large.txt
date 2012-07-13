@@ -1,7 +1,7 @@
-render_size_x=32
-render_size_y=32
-render_offset_x=16
-render_offset_y=29
+render_size_x=64
+render_size_y=64
+render_offset_x=32
+render_offset_y=58
 
 [stance]
 position=0
