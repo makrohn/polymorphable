@@ -23,12 +23,134 @@
  </layer>
  <layer name="object" width="100" height="100">
   <data encoding="base64" compression="zlib">
-   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
+   eJztnOFx1TAMx0PZAiZggPKNGShjwDEGhYH6pXPADjAAC/B84MMVkiLbcsslv9+d7971JWme/7YsKXK2DQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgNy8u7bPSXj7lTR0cq89L+2Kcc7uhyQqKFlafa/xsPn9IvhfYto+D571/hh4raPV4e2k3TXvXfNfOi8In9EhH2irZv9fbQ01ainavV9zUSdHWDW28F01ulIYWOVRfSlvDH9Nn8ny6s/jUli/1mD5TOx7unOPKd7fbsXWJ+FIr9ej1rQtFl6P6DVUP6Su1rPzto771EfWIjs2Va4imhzU2jh539ozNFb9/xFZV0OMvWfnEUVsl7+coeLFdi4zzSj9qflD1faItMjcs23VEPQreel7/Jvt51MZkUO/p6HrM4Plmq0CPGDL/ONM8W3oGPbRxrvWv10+ZvnHNk9X/197LUXNle/5/JJ8o9WnXmxFtpP9W16ujzokWOQYrdSxGxqFn83rzTV5McgY9KnLM99gDS9OWqC7es7Cj2qhVROKZvTHe6kF9xDx7c2Wvj6XtO5ONWomni9fHUg/mSC6aDfP6WDueOZJLrybYrPVYmmg+lzwWPdZg+V/aXGnnyJ4ebfzIWtNHVJOI3yvrYu6cY8HG08TK6WvPVojj84g+CxsBPcbI0kTmpdFjHOnb1pyVld+M5P3RYxyZP6w5w0h+U8srU9M9R49fK9HqutFijhk9IB/0+L9Aj6fFejZekDFfzzPeM+4VyWBFzbB2zfuO88+MVl/09Wrbvl39e2ykP7X6h6PXMGaijeXvFy1+NHr09Kc339Bjn2x7ZdUfExfGyNZjL1fMmu4T2R9XidobLy+JzfJZtSfLqmFFDx+v9nemHvHMNb+ZZMTn1PzmkVEfSs1vHhm1VvUa+LjzaPWh1U+NvM+kXSvwcefx4ofazz37E8lbzROta3j1PHY99JgnsqfnjaEH9SXraOOT0Vog9FhDJJbX1hb0WIMXV3ixPT5vPm3MbcUVMpbkOe0a9t5xWrHsGfYqB+29ml7MbdWaYq/GaWNwmRPcy39YsT02awwrLxsd50UPK3Ynd9LPrP3X6nfZmztO0eP+z+esd1WyN3ecFf4Reoyz4j3w2r6RX7JD5VQ=
   </data>
  </layer>
- <layer name="collision" width="100" height="100">
+ <layer name="collision" width="100" height="100" visible="0">
   <data encoding="base64" compression="zlib">
    eJzt2YFuwjAMRVHY/3/0hNAkiBLbz7E7aO+RkDZawurXpk53uwEAAAAAAAAAAAAAAAAAAAAAAADA0914oYdV81XdyaSHWtf74mfU2KkpedQbz/fVXDWrPXnU8mrO/eM4s3qurgH6qz5WPY+ss9fTXSFzK4fZz51/g1fvK+QSOa7OY8/U9gp5eOdl9/cf9blPFj3POs9HpWc++7rzcUw/wVfH8e/kTB7vn6vofXgO8C47X3m9sfKKfLfy/rez7uev25Q6/l1THSL9xzerOK5xjM48Vt95FtXHlZmzMvPZFfJQ7gnWeFW1Gr/vquvzTEbW9szfNBvjrBm8itQ0MoY6vre/+j1ns7OWUOYxb1xvnYM4td7edjLY553Lat9EHjWsXNQ8yKSO1Sso+6NOJhPrd+xTeurxPfLoYd1PrGsi0pPRE+dEM4n0vdbzFMRF6vt4jf8Pi64PyUMXOY9f81DHhs7LJJoH/Vgdq+divjre6r4dqX20V0PczjpDuWYQw7rvs5DHZyGP/2XN99l7weo+Qr4+pUZKHrP3yMOnPieMjLdaD5KHT3mWGM0jsw1P1fPVKjvmq5iOPCLP4jFXNReN+/EsK6ejv/rbd9brkoetY/1hfZY8NBXrc+arOqvn7btjcD/PWa3lMmNQ/32rdYP6Gj+LHG/9cFtsV8dDXHUNyWNfZK6J9lDkUaeiNyKPHtlnKuTRw1tXWNtRa9bHzvYZ9yePerNzf7Wf8j401jy02t/7PDTWPKP2v8xZe7y1uVdT79ohF83u/O/1XMpYWD+j2qkheeR19Efkkec9P68a8xeFJQKK
   </data>
  </layer>
+ <objectgroup name="event" width="100" height="100">
+  <object name="Bat Talisman Chest" type="run_once" x="1824" y="1504" width="32" height="32">
+   <properties>
+    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="loot" value="id,58,47,200"/>
+    <property name="mapmod" value="object,57,47,206"/>
+    <property name="msg" value="Equip talisman, drag to actionbar to use."/>
+    <property name="requires_not" value="battalisfound"/>
+    <property name="tooltip" value="Chest"/>
+   </properties>
+  </object>
+  <object name="Chest" type="run_once" x="3008" y="1984" width="32" height="32">
+   <properties>
+    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="loot" value="random,94,63,1"/>
+    <property name="mapmod" value="object,94,62,206"/>
+    <property name="tooltip" value="Chest"/>
+   </properties>
+  </object>
+  <object name="Chest" type="run_once" x="2816" y="1344" width="32" height="32">
+   <properties>
+    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="loot" value="random,87,42,1"/>
+    <property name="mapmod" value="object,88,42,206"/>
+    <property name="tooltip" value="Chest"/>
+   </properties>
+  </object>
+  <object name="Chest" type="run_once" x="2752" y="1312" width="32" height="32">
+   <properties>
+    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="loot" value="random,86,42,1"/>
+    <property name="mapmod" value="object,86,41,206"/>
+    <property name="tooltip" value="Chest"/>
+   </properties>
+  </object>
+  <object name="Chest" type="run_once" x="2528" y="1312" width="32" height="32">
+   <properties>
+    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="loot" value="random,79,40,1"/>
+    <property name="mapmod" value="object,79,41,206"/>
+    <property name="tooltip" value="Chest"/>
+   </properties>
+  </object>
+  <object name="Carrots" type="run_once" x="3104" y="2336" width="32" height="32">
+   <properties>
+    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="loot" value="id,97,74,1;id,97,73,1"/>
+    <property name="mapmod" value="object,97,73,0;collision,97,73,0"/>
+    <property name="tooltip" value="Carrots"/>
+   </properties>
+  </object>
+  <object name="Carrots" type="run_once" x="3040" y="2720" width="32" height="32">
+   <properties>
+    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="loot" value="id,95,85,1;id,95,86,1"/>
+    <property name="mapmod" value="object,95,85,0;collision,95,85,0"/>
+    <property name="tooltip" value="Carrots"/>
+   </properties>
+  </object>
+  <object name="Teleport to Glade" type="teleport" x="1984" y="1152" width="32" height="64">
+   <properties>
+    <property name="intermap" value="glade.txt,15,14"/>
+    <property name="set_status" value="cavernexplored"/>
+   </properties>
+  </object>
+  <object name="Block Passage" type="run_once" x="3136" y="3136" width="32" height="32">
+   <properties>
+    <property name="mapmod" value="object,75,72,134;object,76,72,134;object,77,72,134;collision,75,72,1;collision,76,72,1;collision,77,72,1;collision,78,72,1"/>
+    <property name="requires_not" value="evil_unleashed"/>
+   </properties>
+  </object>
+  <object name="Unblock passage" type="run_once" x="2400" y="2336" width="128" height="64">
+   <properties>
+    <property name="mapmod" value="object,75,72,135;object,76,72,0;object,77,72,0;object,78,72,133;collision,75,72,0;collision,76,72,0;collision,77,72,0;collision,78,72,0"/>
+    <property name="requires_status" value="evil_unleashed"/>
+   </properties>
+  </object>
+  <object name="Carrots" type="run_once" x="2400" y="3104" width="32" height="32">
+   <properties>
+    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="loot" value="id,75,98,1;id,75,97,1"/>
+    <property name="mapmod" value="object,75,97,0;collision,75,97,0"/>
+    <property name="tooltip" value="Carrots"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="npc" width="100" height="100">
+  <object name="Gravestone" type="gravestone" x="2432" y="2400" width="32" height="32"/>
+  <object name="Gravestone" type="gravestone" x="2464" y="2400" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="enemygroup" width="100" height="100">
+  <object name="2 Snakes" type="snake" x="1408" y="1312" width="256" height="128">
+   <properties>
+    <property name="level" value="1,3"/>
+    <property name="number" value="2,2"/>
+   </properties>
+  </object>
+  <object name="2 Bats" type="bat" x="1408" y="1504" width="256" height="224">
+   <properties>
+    <property name="level" value="1,3"/>
+    <property name="number" value="2,2"/>
+   </properties>
+  </object>
+  <object name="4-5 Bats" type="bat" x="2464" y="1344" width="384" height="256">
+   <properties>
+    <property name="level" value="1,3"/>
+    <property name="number" value="4,5"/>
+   </properties>
+  </object>
+  <object name="1 snake" type="snake" x="2912" y="2016" width="160" height="128">
+   <properties>
+    <property name="level" value="1,1"/>
+    <property name="number" value="1,1"/>
+   </properties>
+  </object>
+  <object name="1 Bat" type="bat" x="1984" y="1664" width="320" height="192">
+   <properties>
+    <property name="level" value="1,1"/>
+    <property name="number" value="1,1"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>

@@ -185,8 +185,8 @@ data=
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,108,0,0,106,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,134,134,134,135,0,0,133,134,134,134,27,0,0,0,0,0,0,0,0,0,26,134,134,134,134,134,27,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,0,0,108,0,0,0,0,184,106,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,108,0,0,243,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,0,26,135,0,0,0,243,0,106,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,108,0,0,0,0,722,723,0,0,243,0,106,0,0,0,0,0,0,0,0,108,0,0,0,0,0,0,106,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,108,0,0,243,0,722,723,0,0,0,0,106,0,0,0,0,0,0,0,0,26,135,0,0,0,243,0,106,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,108,0,0,0,0,742,743,0,0,243,0,106,0,0,0,0,0,0,0,0,108,0,0,0,0,0,0,106,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,0,108,0,243,0,0,0,79,54,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,108,0,0,0,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,0,53,81,0,0,0,0,133,134,27,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,108,0,243,0,0,0,0,0,0,0,0,106,0,0,0,0,0,0,0,0,0,53,81,0,0,0,0,0,106,
@@ -317,185 +317,142 @@ data=
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1
 
 [event]
-location=57,47,1,1
-requires_not=battalisfound
+# Bat Talisman Chest
 type=run_once
+location=57,47,1,1
 hotspot=-16,-16,32,32
-tooltip=Chest
 loot=id,58,47,200
-msg=Equip talisman, drag to action bar to use.
 mapmod=object,57,47,206
+msg=Equip talisman, drag to actionbar to use.
+requires_not=battalisfound
+tooltip=Chest
 
 [event]
-location=94,62,1,1
+# Chest
 type=run_once
+location=94,62,1,1
 hotspot=-16,-16,32,32
-tooltip=Chest
 loot=random,94,63,1
 mapmod=object,94,62,206
-
-[event]
-location=97,73,1,1
-type=run_once
-hotspot=-16,-16,32,32
-tooltip=Carrots
-loot=id,97,74,1
-loot=id,97,73,1
-mapmod=object,97,73,0
-mapmod=collision,97,73,0
-
-[event]
-location=75,97,1,1
-type=run_once
-hotspot=-16,-16,32,32
-tooltip=Carrots
-loot=id,75,96,1
-loot=id,75,97,1
-mapmod=object,75,97,0
-mapmod=collision,75,97,0
-
-[event]
-location=95,85,1,1
-type=run_once
-hotspot=-16,-16,32,32
-tooltip=Carrots
-loot=id,95,86,1
-loot=id,95,85,1
-mapmod=object,95,85,0
-mapmod=collision,95,85,0
-
-[event]
-location=62,36,1,2
-type=teleport
-set_status=cavernexplored
-intermap=glade.txt,15,14
-
-[event]
-location=79,41,1,1
-type=run_once
-hotspot=-16,-16,32,32
 tooltip=Chest
-loot=random,80,41,1
-mapmod=object,79,41,206
 
 [event]
-location=86,41,1,1
+# Chest
 type=run_once
-hotspot=-16,-16,32,32
-tooltip=Chest
-loot=random,86,42,1
-mapmod=object,86,41,206
-
-[event]
 location=88,42,1,1
-type=run_once
 hotspot=-16,-16,32,32
-tooltip=Chest
 loot=random,87,42,1
 mapmod=object,88,42,206
+tooltip=Chest
 
-[enemy]
-location=90,86,1,1
-type=bat
+[event]
+# Chest
+type=run_once
+location=86,41,1,1
+hotspot=-16,-16,32,32
+loot=random,86,42,1
+mapmod=object,86,41,206
+tooltip=Chest
 
-[enemy]
-location=78,96,1,1
-type=bat
+[event]
+# Chest
+type=run_once
+location=79,41,1,1
+hotspot=-16,-16,32,32
+loot=random,79,40,1
+mapmod=object,79,41,206
+tooltip=Chest
 
-[enemy]
-location=92,75,1,1
-type=bat
+[event]
+# Carrots
+type=run_once
+location=97,73,1,1
+hotspot=-16,-16,32,32
+loot=id,97,74,1;id,97,73,1
+mapmod=object,97,73,0;collision,97,73,0
+tooltip=Carrots
 
-[enemy]
-location=96,73,1,1
-type=bat
+[event]
+# Carrots
+type=run_once
+location=95,85,1,1
+hotspot=-16,-16,32,32
+loot=id,95,85,1;id,95,86,1
+mapmod=object,95,85,0;collision,95,85,0
+tooltip=Carrots
 
-[enemy]
-location=80,76,1,1
-type=bat
+[event]
+# Teleport to Glade
+type=teleport
+location=62,36,1,2
+intermap=glade.txt,15,14
+set_status=cavernexplored
 
-[enemy]
-location=75,74,1,1
-type=bat
+[event]
+# Block Passage
+type=run_once
+location=98,98,1,1
+mapmod=object,75,72,134;object,76,72,134;object,77,72,134;collision,75,72,1;collision,76,72,1;collision,77,72,1;collision,78,72,1
+requires_not=evil_unleashed
 
-[enemy]
-location=76,78,1,1
-type=bat
+[event]
+# Unblock passage
+type=run_once
+location=75,73,4,2
+mapmod=object,75,72,135;object,76,72,0;object,77,72,0;object,78,72,133;collision,75,72,0;collision,76,72,0;collision,77,72,0;collision,78,72,0
+requires_status=evil_unleashed
 
-[enemy]
-location=93,64,1,1
-type=bat
-
-[enemy]
-location=45,49,1,1
-type=bat
-
-[enemy]
-location=49,52,1,1
-type=bat
-
-[enemy]
-location=48,41,1,1
-type=snake
-
-[enemy]
-location=57,34,1,1
-type=snake
-
-[enemy]
-location=57,38,1,1
-type=snake
-
-[enemy]
-location=79,44,1,1
-type=bat
-
-[enemy]
-location=80,47,1,1
-type=bat
-
-[enemy]
-location=85,44,1,1
-type=bat
-
-[enemy]
-location=84,48,1,1
-type=snake
-
-[enemy]
-location=87,42,1,1
-type=snake
+[event]
+# Carrots
+type=run_once
+location=75,97,1,1
+hotspot=-16,-16,32,32
+loot=id,75,98,1;id,75,97,1
+mapmod=object,75,97,0;collision,75,97,0
+tooltip=Carrots
 
 [npc]
+# Gravestone
 type=gravestone
 location=76,75,1,1
 
 [npc]
+# Gravestone
 type=gravestone
 location=77,75,1,1
 
-[event]
-requires_not=evil_unleashed
-location=98,98,1,1
-type=run_once
-mapmod=object,75,72,134
-mapmod=object,76,72,134
-mapmod=object,77,72,134
-mapmod=object,78,72,134
-mapmod=collision,75,72,1s
-mapmod=collision,76,72,1
-mapmod=collision,77,72,1
-mapmod=collision,78,72,1
+[enemygroup]
+# 2 Snakes
+type=snake
+location=44,41,8,4
+level=1,3
+number=2,2
 
-[event]
-requires_status=evil_unleashed
-location=75,73,4,1
-type=run_once
-mapmod=object,75,72,135
-mapmod=object,76,72,0
-mapmod=object,77,72,0
-mapmod=object,78,72,133
-mapmod=collision,75,72,0
-mapmod=collision,75,72,0
-mapmod=collision,75,72,0
-mapmod=collision,75,72,0
+[enemygroup]
+# 2 Bats
+type=bat
+location=44,47,8,7
+level=1,3
+number=2,2
+
+[enemygroup]
+# 4-5 Bats
+type=bat
+location=77,42,12,8
+level=1,3
+number=4,5
+
+[enemygroup]
+# 1 snake
+type=snake
+location=91,63,5,4
+level=1,1
+number=1,1
+
+[enemygroup]
+# 1 Bat
+type=bat
+location=62,52,10,6
+level=1,1
+number=1,1
+
