@@ -20,3 +20,7 @@ you=Oh, and I'm so scared now.  You're just a voice, who cares?
 him=Who cares?  The entire world shall tremble, for soon I shall have my body back, and I shall sweep through the lands with my fiery sword of rage!
 you=Great.  Why can't we just have a sewer like most modern cities?  Sheesh.
 you=Now I just need to find my way out of here.  Is that a breeze coming from behind the tombstone?
+
+[dialog]
+requires_status=evil_unleashed
+him=The tombstone stands quiet now.

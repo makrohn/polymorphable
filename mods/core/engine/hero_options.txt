@@ -4,6 +4,4 @@
 # portrait is the png in /images/portraits
 
 option=female,head_long,female01
-option=female,head_long,female02
-option=female,head_long,female03
 

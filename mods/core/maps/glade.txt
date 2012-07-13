@@ -2,7 +2,7 @@
 width=32
 height=32
 music=calmtown.ogg
-title=glade
+title=Glade
 
 [layer]
 type=background

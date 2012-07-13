@@ -12,9 +12,13 @@ anim_duration=30
 
 [dialog]
 him=Ah, so you need a better sword to beat the Evil One?
-him=Fancy that, I can get one made for you, but the materials ain't cheap.
+him=I've got this one that I made last night, but I'm feeling pretty attached to it.
 him=It'll cost ya 100 gold.  Sound like a deal?
 
 [dialog]
 requires_item=101
 him=Give the Evil One a slice for me, too!
+
+[dialog]
+requires_not=evil_unleashed
+him=Good morning!  I just finished some work on a new sword last night, and I'm showing it off to anyone who comes by.
