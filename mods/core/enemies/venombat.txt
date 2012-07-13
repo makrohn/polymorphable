@@ -1,5 +1,5 @@
 name=Venom Bat
-level=1
+level=3
 categories=bat
 rarity=common
 xp=0

@@ -1,5 +1,5 @@
 name=Firebat
-level=1
+level=2
 categories=bat
 rarity=common
 xp=0

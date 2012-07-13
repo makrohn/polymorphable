@@ -40,7 +40,6 @@ frame_loop=12
 frame_duration=3
 frame_size=64,64
 frame_offset=32,64
-trait_elemental=water
 post_power=126
 wall_power=126
 
