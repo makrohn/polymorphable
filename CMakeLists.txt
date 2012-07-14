@@ -25,7 +25,7 @@ elseif(CMAKE_BUILD_TYPE STREQUAL "Debug")
 endif()
 
 set(BINDIR  "games"             CACHE STRING "Directory from CMAKE_INSTALL_PREFIX where game executable will be installed.")
-set(DATADIR "share/games/flare" CACHE STRING "Directory from CMAKE_INSTALL_PREFIX where game data files will be installed.")
+set(DATADIR "share/games/polymorphable" CACHE STRING "Directory from CMAKE_INSTALL_PREFIX where game data files will be installed.")
 
 If(NOT IS_ABSOLUTE "${DATADIR}")
 	add_definitions(-DDATA_INSTALL_DIR="${CMAKE_INSTALL_PREFIX}/${DATADIR}")
@@ -151,31 +151,31 @@ IF (WIN32)
     )
 ENDIF (WIN32)
 
-Add_Executable (flare ${FLARE_SOURCES})
+Add_Executable (polymorphable ${FLARE_SOURCES})
 
 # libSDLMain comes with libSDL if needed on certain platforms
 If (NOT SDLMAIN_LIBRARY)
   Set (SDLMAIN_LIBRARY "")
 EndIf (NOT SDLMAIN_LIBRARY)
 
-Target_Link_Libraries (flare ${SDL_LIBRARY} ${SDLMIXER_LIBRARY} ${SDLIMAGE_LIBRARY} ${SDLTTF_LIBRARY} ${SDLMAIN_LIBRARY})
+Target_Link_Libraries (polymorphable ${SDL_LIBRARY} ${SDLMIXER_LIBRARY} ${SDLIMAGE_LIBRARY} ${SDLTTF_LIBRARY} ${SDLMAIN_LIBRARY})
 
 
-set(FLARE_EXECUTABLE_PATH ${CMAKE_INSTALL_PREFIX}/${BINDIR}/flare)
-configure_file("${CMAKE_CURRENT_SOURCE_DIR}/distribution/flare.desktop.in" "${CMAKE_CURRENT_BINARY_DIR}/flare.desktop")
+set(FLARE_EXECUTABLE_PATH ${CMAKE_INSTALL_PREFIX}/${BINDIR}/polymorphable)
+configure_file("${CMAKE_CURRENT_SOURCE_DIR}/distribution/polymorphable.desktop.in" "${CMAKE_CURRENT_BINARY_DIR}/polymorphable.desktop")
 
 
 # installing to the proper places
 install(PROGRAMS
-  ${CMAKE_CURRENT_BINARY_DIR}/flare
+  ${CMAKE_CURRENT_BINARY_DIR}/polymorphable
   DESTINATION ${BINDIR})
 install(DIRECTORY
   "${CMAKE_CURRENT_SOURCE_DIR}/mods"
   DESTINATION ${DATADIR})
 install(FILES
-  "${CMAKE_CURRENT_BINARY_DIR}/flare.desktop"
+  "${CMAKE_CURRENT_BINARY_DIR}/polymorphable.desktop"
   DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)
-install(FILES
-  "${CMAKE_CURRENT_SOURCE_DIR}/art_src/logo/flare_logo.svg"
-  DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/apps
-  RENAME flare.svg)
+#install(FILES
+#  "${CMAKE_CURRENT_SOURCE_DIR}/art_src/logo/polymorphable_logo.svg"
+#  DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/apps
+#  RENAME polymorphable.svg)
