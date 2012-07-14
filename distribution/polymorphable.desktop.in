@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Polymorphable
+GenericName=Polymorphable (Action Role-Playing Game)
+Comment=A single player, 2D, action Role-Playing Game
+TryExec=@FLARE_EXECUTABLE_PATH@
+Exec=@FLARE_EXECUTABLE_PATH@
+Categories=Game;RolePlaying;
+Icon=polymorphable
+Terminal=false
