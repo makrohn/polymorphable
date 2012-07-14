@@ -161,3 +161,44 @@ requires_mp=1
 icon=101
 description=Turn into a powerful knight for a short time
 transform_duration=0
+
+# Powers from Flare
+
+[power]
+id=1
+name=Swing
+type=effect
+icon=1
+description=Basic melee attack
+new_state=swing
+face=true
+use_hazard=true
+rendered=false
+aim_assist=32
+base_damage=melee
+lifespan=1
+radius=64
+starting_pos=melee
+allow_power_mod=true
+
+[power]
+id=3
+name=Block
+icon=3
+description=Raise your shield to double your avoidance and absorb
+new_state=block
+face=true
+
+[power]
+id=132
+name=Enemy Beacon
+description=Bring other enemies into the fight with a dummy attack
+type=effect
+icon=20
+use_hazard=true
+lifespan=1
+radius=256
+multitarget=true
+source_type=hero
+beacon=true
+
