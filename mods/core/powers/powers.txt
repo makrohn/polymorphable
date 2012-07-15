@@ -51,7 +51,6 @@ icon=20
 spawn_type=bomb
 new_state=swing
 starting_pos=source
-target_neighbor=1
 source_type=hero
 
 [power]
