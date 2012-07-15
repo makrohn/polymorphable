@@ -517,3 +517,8 @@ requires_status=cavernexplored
 location=88,0,6,1
 type=teleport
 intermap=glade.txt,13,30
+
+[event]
+location=177,69,1,5
+type=teleport
+intermap=mountainpath.txt,1,18
