@@ -40,6 +40,7 @@ him=Tomorrow, after your birthday party, I promise!  They died nobly, but now, i
 him=You must find what they never could: both halves of the Juggernaut Talisman.  With the Talisman, you can seal away the Ancient Evil forever!
 him=Go east, and use your bat talisman to fly over the ruined bridge, and seek the first half of the Juggernaut Talisman in the ruined castle.
 remove_item=199
+reward_xp=100
 
 [dialog]
 requires_not=flowerfound
