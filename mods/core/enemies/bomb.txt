@@ -18,7 +18,7 @@ dspeed=0
 chance_pursue=0
 chance_on_death=100
 power_on_death=32
-hp_countdown_ticks=150
+hp_countdown_ticks=60
 
 accuracy=100
 avoidance=0
