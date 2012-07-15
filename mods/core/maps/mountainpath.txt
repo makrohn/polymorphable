@@ -1,6 +1,8 @@
 [header]
 width=32
 height=32
+tileset=town.txt
+title=Mountain Path
 
 [layer]
 type=background
