@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
+  <image source="tiled_collision.png" width="480" height="32"/>
+ </tileset>
+ <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32">
+  <image source="generic_background.png" width="864" height="832"/>
+ </tileset>
+ <layer name="background" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztlk1Ow0AMRucK7RIEJyjZgegF2u5oCBdIu0NALpCAWEBLTo0t2ZJleTI/TRGLLN4mTfM8mW++duec2w0wA56BV6ABXoAOmAN7oCBquhc/+zS+Uwc8PvbqWbdACbTAu/B/kPcB2AJ3Z/DfA080w9YDeh+BCliO7H+jGaoAS7r3CuhH8h+Bn0TQfQEcaL86wTzCPaM9/gK+M0F3YdAGZmA35wkpxfdXwBrYeJ4fQxt47+jmPHHuSnLf0H2LwAxyfr2GImLf0Y154uxbWVrQu5Bs1PyVWkOsn3OfmmU9P58dXkOKn92c5RQ/z880if6jcsu9zzm3fYJfnjvLzX1vMXRuDxF+K1PaLfs/l5xOHMu9SnTKd3uqm3+zuxPXi2vg/vF1pdVBnKXC+TMUWi8/Y6grrQ7C/HP/5+yZzuNQV+oOkv9h6gy3dfatrmmEX17XPa7P2BC+3rG6phd+vH7txvtPEuoq2TN4/VLMltrjMVhdJX8H9WwpPX6u2f7CPTEx8b/5BV0ZaBg=
+  </data>
+ </layer>
+ <layer name="object" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztzbENADAIwDBuKO/S3+ELBmwpcyIAgIv+9Bb/OdXiHwCuabJIAR8=
+  </data>
+ </layer>
+ <layer name="collision" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztlDsOACAIQwn3P7SLiwOGCoKJfQmbWD8tIj50FsJJz+v6nv1UsPWoPlqd+iRO51tm/GekP6of9WTm3TtmGDNJfsLyeIX/rZxV5c+rf+sM3fo7OP8IIWRlAH5/AN8=
+  </data>
+ </layer>
+ <objectgroup name="event" width="32" height="32">
+  <object name="Teleport to Volcano" type="teleport" x="480" y="0" width="128" height="32">
+   <properties>
+    <property name="intermap" value="volcano1.txt,0,0"/>
+   </properties>
+  </object>
+  <object name="Teleport to Laurelia" type="teleport" x="0" y="512" width="32" height="160">
+   <properties>
+    <property name="intermap" value="laurelia.txt,176,71"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
