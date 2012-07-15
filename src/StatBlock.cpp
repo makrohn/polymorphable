@@ -165,7 +165,7 @@ StatBlock::StatBlock() {
 
 	// default hero base/option
 	base="female";
-	head="head_short";
+	head="head_long";
 	portrait="female01";
 
 	// default animations
