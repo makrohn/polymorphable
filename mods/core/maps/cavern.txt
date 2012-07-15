@@ -332,7 +332,7 @@ tooltip=Chest
 type=run_once
 location=94,62,1,1
 hotspot=-16,-16,32,32
-loot=currency,94,63,100
+loot=currency,94,63,5
 mapmod=object,94,62,206
 tooltip=Chest
 
@@ -341,7 +341,7 @@ tooltip=Chest
 type=run_once
 location=88,42,1,1
 hotspot=-16,-16,32,32
-loot=currency,87,42,100
+loot=currency,87,42,5
 mapmod=object,88,42,206
 tooltip=Chest
 
@@ -350,7 +350,7 @@ tooltip=Chest
 type=run_once
 location=86,41,1,1
 hotspot=-16,-16,32,32
-loot=currency,86,42,100
+loot=currency,86,42,10
 mapmod=object,86,41,206
 tooltip=Chest
 
@@ -359,7 +359,7 @@ tooltip=Chest
 type=run_once
 location=79,41,1,1
 hotspot=-16,-16,32,32
-loot=currency,79,40,100
+loot=currency,79,40,5
 mapmod=object,79,41,206
 tooltip=Chest
 
@@ -390,17 +390,19 @@ set_status=cavernexplored
 
 [event]
 # Block Passage
+requires_not=evil_unleashed
 type=run_once
 location=98,98,1,1
 mapmod=object,75,72,134;object,76,72,134;object,77,72,134;collision,75,72,1;collision,76,72,1;collision,77,72,1;collision,78,72,1
-requires_not=evil_unleashed
+
 
 [event]
 # Unblock passage
+requires_status=evil_unleashed
 type=run_once
 location=75,73,4,2
-mapmod=object,75,72,135;object,76,72,0;object,77,72,0;object,78,72,133;collision,75,72,0;collision,76,72,0;collision,77,72,0;collision,78,72,0
-requires_status=evil_unleashed
+mapmod=object,75,72,135;object,76,72,0;object,77,72,0;object,78,72,133;collision,76,72,0;collision,77,72,0
+
 
 [event]
 # Carrots
@@ -453,6 +455,27 @@ number=1,1
 # 1 Bat
 type=bat
 location=62,52,10,6
+level=1,1
+number=1,1
+
+[enemygroup]
+# 2 bats
+type=bat
+location=75,76,3,2
+level=1,1
+number=2,2
+
+[enemygroup]
+# 2 bats
+type=bat
+location=83,85,12,5
+level=1,1
+number=2,2
+
+[enemygroup]
+# 1 bat
+type=bat
+location=76,95,4,3
 level=1,1
 number=1,1
 
