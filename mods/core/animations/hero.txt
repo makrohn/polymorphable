@@ -16,7 +16,7 @@ duration=60
 type=looped
 
 [melee]
-position=9
+position=10
 frames=5
 duration=90
 type=play_once
