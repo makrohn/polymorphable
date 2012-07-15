@@ -2,6 +2,7 @@
 width=32
 height=32
 music=calmtown.ogg
+tileset=town.txt
 title=Glade
 
 [layer]
