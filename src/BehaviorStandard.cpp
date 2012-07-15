@@ -52,7 +52,7 @@ void BehaviorStandard::doUpkeep() {
 	e->stats.logic();
 
 	// heal rapidly while not in combat
-	if (!e->stats.in_combat) {
+	if (!e->stats.in_combat && e->stats.hp_countdown_ticks == -1) {
 		if (e->stats.alive && e->stats.hero_alive) {
 			e->stats.hp++;
 			if (e->stats.hp > e->stats.maxhp) e->stats.hp = e->stats.maxhp;
@@ -433,6 +433,12 @@ void BehaviorStandard::updateState() {
 			if (e->activeAnimation->isFirstFrame()) e->sfx_die = true;
 			if (e->activeAnimation->isLastFrame()) e->stats.corpse = true; // puts renderable under object layer
 
+			if (e->stats.power_index[ON_DEATH] != -1 && !e->stats.on_death_casted) {
+				e->powers->activate(e->stats.power_index[ON_DEATH], &e->stats, pursue_pos);
+			}
+			e->stats.on_death_casted = true;
+			e->map->collider.unblock(e->stats.pos.x, e->stats.pos.y);
+
 			break;
 
 		case ENEMY_CRITDEAD:
@@ -440,6 +446,12 @@ void BehaviorStandard::updateState() {
 			e->setAnimation("critdie");
 			if (e->activeAnimation->isFirstFrame()) e->sfx_critdie = true;
 			if (e->activeAnimation->isLastFrame()) e->stats.corpse = true; // puts renderable under object layer
+
+			if (e->stats.power_index[ON_DEATH] != -1 && !e->stats.on_death_casted) {
+				e->powers->activate(e->stats.power_index[ON_DEATH], &e->stats, pursue_pos);
+			}
+			e->stats.on_death_casted = true;
+			e->map->collider.unblock(e->stats.pos.x, e->stats.pos.y);
 
 			break;
 

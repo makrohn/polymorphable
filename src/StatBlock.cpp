@@ -112,6 +112,8 @@ StatBlock::StatBlock() {
 	cooldown_ticks = 0;
 	blocking = false;
 	effects = vector<Effect>();
+	on_death_casted = false;
+	hp_countdown_ticks = -1;
 
 	// patrol waypoints
 	waypoint_pause = 0;
@@ -326,6 +328,8 @@ void StatBlock::load(const string& filename) {
 			for (unsigned int i=0; i<ELEMENTS.size(); i++) {
 				if (infile.key == "vulnerable_" + ELEMENTS[i].name) vulnerable[i] = num;
 			}
+			// hp countdown
+			else if (infile.key == "hp_countdown_ticks") hp_countdown_ticks = num;
 		}
 		infile.close();
 	} else fprintf(stderr, "Unable to open %s!\n", filename.c_str());
@@ -432,6 +436,13 @@ void StatBlock::logic() {
 
 	// handle cooldowns
 	if (cooldown_ticks > 0) cooldown_ticks--; // global cooldown
+
+	// auto-decrease hp if set to do so
+	if (hp_countdown_ticks > 0) {
+		hp_countdown_ticks--;
+	}
+	if (hp_countdown_ticks % 30 == 0 && hp > 0) hp--;
+
 
 	for (int i=0; i<POWERSLOT_COUNT; i++) { // NPC/enemy powerslot cooldown
 		if (power_ticks[i] > 0) power_ticks[i]--;
