@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <properties>
+  <property name="tileset" value="town.txt"/>
+  <property name="title" value="Volcano"/>
+ </properties>
+ <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
+  <image source="tiled_collision.png" width="480" height="32"/>
+ </tileset>
+ <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32">
+  <image source="generic_background.png" width="864" height="832"/>
+ </tileset>
+ <layer name="background" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztld0NgzAMhDMHf2tA14BuUQFbIMrUdSWQ8hBMfDG0Qn74HhCCOx8mNzjnBsMwDOPvKIk3QKWkuxAvgDnBR8noFoAPiQdOmyPkqwY8jGDeGjmgs8fS/2j22AxC+vXOu7g95O5xGZw9v4Z+Szwv1v9qdisPovGupV4Qfe6ZZsdDaG/a1b/030P2VvvbIxnEzh6jf9Qn/k6E4LQlGab0mubZJ+21M3pny0Ijj9Sz76hb7qSfEZNHnqD/Af2ZrKY=
+  </data>
+ </layer>
+ <layer name="object" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMAqGFthMofxQAZ8H2gEUguESD7jAYI+fwe4+agFs6Wy4pz1agJGSXkbBKBjpAABVxwdM
+  </data>
+ </layer>
+ <layer name="collision" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztVkEOgDAI2/7/aa/GBGgpWzy0idHIShGxcy3DMAzjj9jCMaV7m5/xdnA9VYNSc3SPyZnlUYDUMDE3Ud73uVp3CtXzMb3P5pDVQGIK0G8G0VdnpKOP+hzy/rr6GQedm8rXOrFIi13H9vEbU71F9XJ1P2R6eMIn2XzTNSj79NT/hvn3+Q/gxgB6
+  </data>
+ </layer>
+ <objectgroup name="enemy" width="32" height="32">
+  <object name="Skeleton Mage" type="skeletonmage" x="256" y="544" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="enemygroup" width="32" height="32">
+  <object name="2 Skeleton" type="skeleton" x="128" y="544" width="96" height="96">
+   <properties>
+    <property name="level" value="1,1"/>
+    <property name="number" value="2,2"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="event" width="32" height="32">
+  <object name="Chest" type="run_once" x="480" y="416" width="32" height="32">
+   <properties>
+    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="loot" value="id,16,13,1"/>
+    <property name="mapmod" value="object,15,13,206"/>
+    <property name="tooltip" value="Chest"/>
+   </properties>
+  </object>
+  <object name="Chest" type="run_once" x="736" y="416" width="32" height="32">
+   <properties>
+    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="loot" value="id,22,13,2"/>
+    <property name="mapmod" value="object,23,13,206"/>
+    <property name="tooltip" value="Chest"/>
+   </properties>
+  </object>
+  <object name="Chest" type="run_once" x="800" y="512" width="32" height="32">
+   <properties>
+    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="loot" value="currency,25,17,5"/>
+    <property name="mapmod" value="object,25,16,206"/>
+    <property name="tooltip" value="Chest"/>
+   </properties>
+  </object>
+  <object name="Chest" type="run_once" x="768" y="672" width="32" height="32">
+   <properties>
+    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="loot" value="currency,24,22,5"/>
+    <property name="mapmod" value="object,24,21,206"/>
+    <property name="tooltip" value="Chest"/>
+   </properties>
+  </object>
+  <object name="Chest" type="run_once" x="608" y="672" width="32" height="32">
+   <properties>
+    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="loot" value="id,20,21,1"/>
+    <property name="mapmod" value="object,19,21,206"/>
+    <property name="tooltip" value="Chest"/>
+   </properties>
+  </object>
+  <object name="Teleport to Volcano2" type="teleport" x="96" y="992" width="320" height="32">
+   <properties>
+    <property name="intermap" value="volcano2.txt,7,1"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

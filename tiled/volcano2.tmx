@@ -12,7 +12,7 @@
  </tileset>
  <layer name="background" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztllsKwjAQRbMLRdBNiGL34LO6B/FV9yCCrav2Bhoog5PMtGn88eN8FJKcm+Y1hTGmaHAHFyFXsAQrsAZnpl0JJsTDofU/wBCcPH5NBo1/BnbgKPBbbpH9I/D6od+t/zSifwEOCr+d+wA8I/ldhr0gh9t/1r0Bc0/bHGRCP81Bs+T1t91/2xqfWzN3SZaMfHP/Kid9uvg1+VI5//yJzRhUAaRvaRvv24Tv3bKHHJp3J9ad1qefrmPoX8X20/FCWSXrLvV/G0+TtYufm0sqPzeWr/5s4+fqCd9Y3LkN1VzNdzz0tkrqN5ejEvbTnnNNDUn70Xm2rSOkGWLdX1yGUB3bp1+yJ1P4fWuRwu/bW6n8HB8QCqbk
+   eJztl1sKwjAQRbMLRdBNiGL34LO6B/FV9yCC1VV7Ay2UoZPMpDH+9ON8FJqcmybtTAtjTNHgDi5CrmAJVmANzqAE7xYmxMOh9T/AEJwqP3dvKcyg8c/ADhwFfsstsn8EXn/01/s/jehfgIPCb9c+AM9I/jrDXpCjPn/WvQFzx705yIR+moNmyatre/62FS63Zu2SLBm55p5VTsZ08WvypXL29MRmbNrrZ0gtDfF+jP+7W9f4mDk0dSfWN+2XfrqPvmcV20/n82WV7LvU3zafJmsXP7eWVH5uLlf/GeLn+gnXXNx76+u5mnXcV1sl/VvzH0EyTvuea3pIOo6uM7SPkGaI9f3iMvj62F/6JWcyhd+1Fyn8rrOVys/xBTztp3o=
   </data>
  </layer>
  <layer name="object" width="32" height="32">
@@ -22,7 +22,7 @@
  </layer>
  <layer name="collision" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztllEOgCAMQ8H7H9rfSTZsZ6cYbUL8YOMVnMPWjuqN02ZGpE6s24engs94YPdvPSjWfhsfPX+Gz3hQ820cEh+xx9zsN2CHt1ZFXXv7H714w1tnNs/wkRzEUxVfqZ//Xb73bavqGuEyPVrpI9PD7uYzOew7y/Y8dA7xyirKGWsY4WfE3kVqPqPZGWfqOtMbohgm74yD1vrsn8aLZ3SlnlX9tqpPZzys4ONp/ioequ9xVjsEFQDJ
+   eJztltsOgCAMQ8H//2ifTJBs2NbiJdqE+OC2M3EblLJXLZyWZm3+2UJUuyfLH8VFYrLf3+bgiP02Prr/DJ/Jwc1v7RD7jN37qj0Q9U8NbNCYLL9nMv2t9H/GR3zUmePgO/Xzv8uPettV1wiXmdHOPJQZdjWf8WH/mTrz0HdIrqwyn76GEb4i9ixy8xmN9lipa2U2ZDaM3xEHrfXRnSayZ3Smnl3zdtacVnJ4Qh5385+Sw+xznNUKUl0Azg==
   </data>
  </layer>
  <objectgroup name="event" width="32" height="32">
@@ -37,6 +37,11 @@
     <property name="loot" value="id,5,19,198"/>
     <property name="requires_not" value="skelkey"/>
     <property name="tooltip" value="Anvil"/>
+   </properties>
+  </object>
+  <object name="Teleport to VolcanoA" type="teleport" x="160" y="0" width="352" height="32">
+   <properties>
+    <property name="intermap" value="volcanoa.txt,12,30"/>
    </properties>
   </object>
  </objectgroup>
