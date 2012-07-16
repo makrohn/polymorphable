@@ -258,3 +258,9 @@ type=teleport
 location=31,8,1,8
 intermap=volcano4.txt,1,23
 
+[event]
+# Teleport to Volcano5
+type=teleport
+location=10,0,6,1
+intermap=volcano5.txt,12,30
+

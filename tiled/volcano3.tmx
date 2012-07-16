@@ -159,5 +159,10 @@
     <property name="intermap" value="volcano4.txt,1,23"/>
    </properties>
   </object>
+  <object name="Teleport to Volcano5" type="teleport" x="320" y="0" width="192" height="32">
+   <properties>
+    <property name="intermap" value="volcano5.txt,12,30"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>
