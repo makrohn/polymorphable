@@ -41,7 +41,7 @@
   </object>
   <object name="Teleport to VolcanoA" type="teleport" x="160" y="0" width="352" height="32">
    <properties>
-    <property name="intermap" value="volcanoa.txt,12,30"/>
+    <property name="intermap" value="volcanoa.txt,5,30"/>
    </properties>
   </object>
  </objectgroup>

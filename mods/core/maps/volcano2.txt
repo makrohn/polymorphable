@@ -131,7 +131,7 @@ tooltip=Anvil
 # Teleport to VolcanoA
 type=teleport
 location=5,0,11,1
-intermap=volcanoa.txt,12,30
+intermap=volcanoa.txt,5,30
 
 [enemy]
 # Skeleton with Key

@@ -146,6 +146,7 @@ power=400
 power_desc=Use to transform into a ghost and pass through flame
 loot=gem
 bonus=fire resist,100
+pikckup_status=ghosttalis
 
 [item]
 id=498
