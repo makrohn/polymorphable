@@ -28,6 +28,12 @@ remove_item=498
 remove_item=499
 
 [dialog]
+requires_not=1stjuggfound
+set_status=1stjuggfound
+reward_xp=100
+him=You've found the first half of the Talisman, wonderful!  The second half is in a ruined castle to the west.
+
+[dialog]
 requires_item=199
 set_status=juggsearch
 him=Ah, the Fairy Flower!  Did you run into any trouble in the forest?
