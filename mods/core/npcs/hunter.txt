@@ -11,3 +11,16 @@ anim_duration=30
 [dialog]
 him=This bow is the best ever seen in this village.
 him=what?  No, of course you can't have it!
+
+[dialog]
+requires_status=1stjugg
+requires_not=lareceived
+reward_item=51
+set_status=lareceived
+him=I talked to the Elder...  he wants me to give you something.
+you=Your precious bow?  Yes, that should come in handy.
+him=My bow??  You're nuts, I grew up with this thing!
+you=What else do you have?
+him=Well, I have some old leather armor.  It should help.
+you=Ew, it smells like wet socks.
+him=No, that's just the smell o' tha woods!  Don't look a gift horse in the mouth!
