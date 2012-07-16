@@ -32,6 +32,7 @@ requires_not=1stjuggfound
 set_status=1stjuggfound
 reward_xp=100
 him=You've found the first half of the Talisman, wonderful!  The second half is in a ruined castle to the west.
+him=You may also want to speak with Robin the Hunter on your way over.  I told him to give you some of his equipment.
 
 [dialog]
 requires_item=199
