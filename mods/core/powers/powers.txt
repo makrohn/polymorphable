@@ -3,6 +3,7 @@ id=1
 name=Bomb
 type=spawn
 icon=20
+description=Drop a bomb that does 5 damage when it explodes.
 requires_mp=1
 spawn_type=bomb
 new_state=cast
@@ -15,7 +16,7 @@ id=2
 name=Lightning Storm
 type=effect
 icon=6
-description=Up to 3 lightning bolts strike randomly around you
+description=Three lightning bolts strike randomly around you
 new_state=cast
 gfx=lightning.png
 sfx=shock.ogg
@@ -35,6 +36,69 @@ starting_pos=source
 multitarget=true
 target_neighbor=1
 missile_num=3
+
+[power]
+id=6
+name=Leech Strike
+type=effect
+icon=7
+description=Turn 25% of damage you deal into HP
+new_state=swing
+face=true
+use_hazard=true
+rendered=false
+aim_assist=32
+base_damage=melee
+lifespan=1
+radius=64
+starting_pos=melee
+allow_power_mod=true
+hp_steal=25
+
+[power]
+id=7
+name=Stun Strike
+type=effect
+icon=10
+description=Stun an enemy for 1 second
+new_state=swing
+face=true
+use_hazard=true
+rendered=false
+aim_assist=32
+base_damage=melee
+lifespan=1
+radius=64
+starting_pos=melee
+allow_power_mod=true
+stun_duration=30
+
+[power]
+id=8
+name=Ice Blast
+type=effect
+icon=14
+description=Slow nearby enemies for 5 seconds
+new_state=cast
+gfx=quake.png
+sfx=freeze.ogg
+use_hazard=true
+rendered=true
+base_damage=none
+lifespan=12
+radius=128
+frame_duration=2
+frame_size=256,128
+frame_offset=128,64
+frame_loop=0
+floor=true
+active_frame=4
+trait_elemental=water
+visual_option=2
+starting_pos=source
+multitarget=true
+slow_duration=150
+#cooldown=3000
 
 [power]
 id=30
