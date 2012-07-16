@@ -88,6 +88,18 @@ power_desc=Use if you find yourself unable to revert to human
 loot=gem
 
 [item]
+id=198
+name=Skeleton Key
+level=5
+quality=normal
+type=quest
+icon=98,2
+loot=gem
+power_desc=Unlocks a door in the Volcano
+pickup_status=skelkey
+loot=gem
+
+[item]
 id=199
 name=Fairy Flower
 level=5

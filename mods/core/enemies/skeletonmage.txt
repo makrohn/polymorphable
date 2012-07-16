@@ -1,5 +1,5 @@
-name=Skeleton
-level=1
+name=Skeleton Mage
+level=2
 categories=skeleton
 rarity=common
 xp=0
