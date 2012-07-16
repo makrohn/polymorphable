@@ -1,0 +1,28 @@
+name=Fire Bomb
+level=1
+categories=firebomb
+rarity=common
+xp=0
+
+sfx_prefix=bomb
+gfx_prefix=firebomb
+animations=bomb
+animation_speed=30
+
+loot_chance=0
+
+# combat stats
+hp=3
+speed=0
+dspeed=0
+chance_pursue=0
+chance_on_death=100
+power_on_death=103
+hp_countdown_ticks=60
+
+accuracy=100
+avoidance=0
+
+dmg_ment_min=10
+dmg_ment_max=10
+cooldown=30
