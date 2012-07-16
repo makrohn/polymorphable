@@ -235,6 +235,44 @@ starting_pos=melee
 allow_power_mod=true
 
 [power]
+id=3
+name=Shield
+type=effect
+icon=11
+description=Create a force field that absorbs damage
+new_state=cast
+gfx=shield.png
+sfx=shield.ogg
+buff_shield=true
+
+[power]
+id=4
+name=Haste
+icon=12
+description=Double run and attack speed for 8 seconds
+type=effect
+new_state=cast
+face=false
+haste_duration=240
+
+[power]
+id=5
+name=Cleave
+type=effect
+icon=13
+description=Attack all enemies in a wide arc
+new_state=swing
+face=true
+use_hazard=true
+multitarget=true
+aim_assist=32
+base_damage=melee
+lifespan=1
+radius=128
+starting_pos=melee
+allow_power_mod=true
+
+[power]
 id=132
 name=Enemy Beacon
 description=Bring other enemies into the fight with a dummy attack
