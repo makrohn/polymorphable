@@ -1,6 +1,6 @@
 name=Skeleton Knight
 level=2
-categories=skeleton
+categories=skeleton,skeletonknight
 rarity=common
 xp=0
 

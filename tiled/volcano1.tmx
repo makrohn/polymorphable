@@ -12,17 +12,17 @@
  </tileset>
  <layer name="background" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztl70RgCAMRllE59A11C08cQ11akPhHceRhB+BghSvI3nBwi9opZQmOIEd4QJGpj4Xym84CvsnYGvop2ZYgLmC/5thdajlFgShLQNwE7TOgZgswu6C1ZvzD+MPnYHqhWUJd/eYPKJ6id9fw+0Af/i5LA+dgfO7fWKy3N4BcvYRu0/q/0D2EaFHfNlVOnttry+7engH/rl/lPCnfoMXVuyvCg==
+   eJztlcENgEAIBK8RrUPbULswahtq1WKiycVwwJHwMNnH/GAXeLBrSmkFAAAACjTEIdAG+2/ELLBXzFDapdR/15+Kv3UGSWtx7m7RsGjBn+/piCnYfyB6oc86g+b/1RkfJO+8963nZtF24HS8/yDXqNkBgD/DZVd09ua+XHbVZK8XLQO0vxftH30DSwZ6bnAB+sixTQ==
   </data>
  </layer>
  <layer name="object" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFQwXwMjIw8DMOnP0aQLu1Ru0ftX/U/lH7BwA4A+12HUD7hzPIBIZrFg6cTUKY4zMHn3kteOxoI8F+fOaQY94owA5AbRE+KB6INgmoLNKE4oEok0btH7V/JNsPqotdoHi0Th66AAC3fRMj
+   eJxjYBgFo2AUjIJRMApGwUgFmYwMDFk4cDYjdczBZ14LHjvaSLAfnznkmDcKsANeYBjyQTH/AISnBtBOTSjWGrV/1P5R++kKnIF2ukCx62h5OmQBABlgD4c=
   </data>
  </layer>
  <layer name="collision" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztlksOwCAIRPX+l+6ypoEBBcYumKSJ6SiP4q9jYE3DQ36GrPgMvlWDamk5MOq/sr5cFlvis9X85jf/bUsPi6/53hy0/LXx3tiefh5OpLYoBvvM3tXt74/OP4oRZeysQcs/vcuz98npWvzTvxB61/zmV7Bv8D17v5of8Rn8yhwyzn5JD0HMAIg=
+   eJztlVESABAIRLn/pV2gtFnlw74ZHyYs2hhDCCGE8JlAq9aP4ugesmdA10bGITrM3b7OE8Pr87P5363BamQ8GMWn0c/4+1adnHrRmtfpbU+/C+n/q+/5vOP/jWq/Wp+Jd+hX7uHG22+xAMTuAGw=
   </data>
  </layer>
  <objectgroup name="event" width="32" height="32">
@@ -39,6 +39,18 @@
   <object name="Teleport to Volcano2" type="teleport" x="0" y="480" width="32" height="160">
    <properties>
     <property name="intermap" value="volcano2.txt,30,28"/>
+   </properties>
+  </object>
+  <object name="Teleport to Volcano3" type="teleport" x="992" y="448" width="32" height="192">
+   <properties>
+    <property name="intermap" value="volcano3.txt,1,15"/>
+    <property name="requires_status" value="skelkey"/>
+   </properties>
+  </object>
+  <object name="Need Skeleton Key" type="run_once" x="960" y="448" width="32" height="192">
+   <properties>
+    <property name="msg" value="An invisible force blocks your path."/>
+    <property name="requires_not" value="skelkey"/>
    </properties>
   </object>
  </objectgroup>
