@@ -38,7 +38,7 @@ him=Ah, I hoped that I would never have to tell you.  You see, I never told you 
 you=When in the heck were you planning on letting me know the truth!?
 him=Tomorrow, after your birthday party, I promise!  They died nobly, but now, it falls to you to finish their work.
 him=You must find what they never could: both halves of the Juggernaut Talisman.  With the Talisman, you can seal away the Ancient Evil forever!
-him=Go east, and use your bat talisman to fly over the ruined bridge, and seek the first half of the Juggernaut Talisman in the ruined castle.
+him=Go east, and use your bat talisman to fly over the ruined bridge, and seek the first half of the Juggernaut Talisman in the volcano.
 remove_item=199
 reward_xp=100
 
