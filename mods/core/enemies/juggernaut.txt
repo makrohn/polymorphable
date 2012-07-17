@@ -9,7 +9,7 @@ gfx_prefix=juggernaut
 animations=juggernaut
 animation_speed=60
 
-loot_chance=25
+loot_chance=100
 
 # combat stats
 hp=10

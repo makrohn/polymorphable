@@ -9,7 +9,7 @@ gfx_prefix=skeleton
 animations=skeleton
 animation_speed=75
 
-loot_chance=25
+loot_chance=100
 
 # combat stats
 hp=4
