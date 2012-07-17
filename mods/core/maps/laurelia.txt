@@ -513,18 +513,18 @@ intermap=mountainpath.txt,1,18
 [event]
 # Teleport to Glade
 type=teleport
-requires_status=cavernexplored
 location=88,0,6,1
-intermap=glade.txt
+intermap=glade.txt,13,30
+requires_status=cavernexplored
 
 [event]
 # Fall to Cavern
 type=teleport
-requires_not=cavernexplored
-requires_status=elderintro
 location=86,14,6,1
 intermap=cavern.txt,98,98
 msg=You've fallen in a hole!
+requires_not=cavernexplored
+requires_status=elderintro
 
 [event]
 # Teleport to Castle Path

@@ -27,6 +27,18 @@ max_quantity=25
 price=25
 
 [item]
+id=3
+name=Bomb
+level=1
+quality=superior
+icon=20
+power=31
+power_desc=Plant a 3-second bomb
+type=consumable
+loot=hp_potion
+max_quantity=25
+
+[item]
 id=50
 name=Robes
 level=5

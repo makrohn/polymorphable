@@ -54,7 +54,7 @@
   </object>
   <object name="Teleport to Glade" type="teleport" x="2816" y="0" width="192" height="32">
    <properties>
-    <property name="intermap" value="glade.txt"/>
+    <property name="intermap" value="glade.txt,13,30"/>
     <property name="requires_status" value="cavernexplored"/>
    </properties>
   </object>

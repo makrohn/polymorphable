@@ -1,14 +1,21 @@
 [power]
 id=1
-name=Bomb
-type=spawn
-icon=20
-description=Drop a bomb that does 5 damage when it explodes.
+name=Crush
+type=effect
+icon=5
+description=Knock your enemy back
 requires_mp=1
-spawn_type=bomb
-new_state=cast
-starting_pos=source
-source_type=hero
+new_state=swing
+face=true
+use_hazard=true
+rendered=false
+aim_assist=32
+base_damage=melee
+lifespan=1
+radius=64
+starting_pos=melee
+allow_power_mod=true
+forced_move=10,30
 
 [power]
 id=2
@@ -107,7 +114,7 @@ slow_duration=150
 id=30
 name=Spit Acid
 type=missile
-icon=20
+icon=9
 new_state=cast
 face=true
 directional=true
@@ -127,6 +134,18 @@ frame_size=64,64
 frame_offset=32,64
 post_power=126
 wall_power=126
+
+[power]
+id=31
+name=Bomb
+type=spawn
+icon=20
+description=Drop a bomb that does 5 damage when it explodes.
+requires_mp=1
+spawn_type=bomb
+new_state=cast
+starting_pos=source
+source_type=hero
 
 [power]
 id=32
