@@ -18,7 +18,7 @@
  </tileset>
  <layer name="background" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJzt0UEOgjAQheHODVygK29AArLyDMCSM8A1wJtbkjbWF6ZtGDQsZvHF0ET+YToaY0allFK7FNYCrn/svqwKzD+ch+uW7reB81swj3SOgvneXLgXSfsimMOT3jOnZM7xbnL6k7vDVDPcR2v1Gf8hSpsS71hbHXhYNZxtzXOnj4G+n72wj3ttXStnjzhPZ7Z7sf7eNodrDpG+37e0jf3Y/sM7PqLrPSmtPriplFJn8AYb+2hU
+   eJzt0UEKgzAQheHkBl3YrnoDodZVz6CeQ6/R9uaNkEB4dJiY0dLFW3wIAf3Hyeycm4mIqEoTvMD5h913cAPPA+eRum189nB+yeaxztEI/1sK92JpnwxzJNZ7lrTCOd5NSX+Jd6g1830MwVTwjve6RfnG2hrBPejg7Ns8V6/L+7jXIbZK9ojzjBX92rakpp/2bW1v6ed3vEc3eXhdt3OTiOgffAAsj2ev
   </data>
  </layer>
  <layer name="object" width="32" height="32">
@@ -39,7 +39,7 @@
   </object>
   <object name="Teleport to Castle1" type="teleport" x="0" y="544" width="32" height="192">
    <properties>
-    <property name="intermap" value="castle1.txt,0,0"/>
+    <property name="intermap" value="castle1.txt,30,13"/>
    </properties>
   </object>
  </objectgroup>
