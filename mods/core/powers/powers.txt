@@ -369,7 +369,6 @@ icon=11
 description=Create a force field that absorbs damage
 requires_mp=1
 new_state=cast
-gfx=shield.png
 sfx=shield.ogg
 buff_shield=true
 
