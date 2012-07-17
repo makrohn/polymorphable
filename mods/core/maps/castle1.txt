@@ -180,7 +180,7 @@ power_path=0,0,13,3
 # Teleport to Castle 2
 type=teleport
 location=14,2,1,1
-intermap=castle2.txt,0,0
+intermap=castle2.txt,13,29
 
 [npc]
 # Gaspar the Ghost

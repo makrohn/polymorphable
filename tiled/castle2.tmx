@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <properties>
+  <property name="tielset" value="town.txt"/>
+  <property name="title" value="Castle Atrium"/>
+ </properties>
+ <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
+  <image source="tiled_collision.png" width="480" height="32"/>
+ </tileset>
+ <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32">
+  <image source="generic_background.png" width="864" height="832"/>
+ </tileset>
+ <tileset firstgid="718" name="small_objects" tilewidth="32" tileheight="64">
+  <image source="small_objects.png" width="671" height="512"/>
+ </tileset>
+ <tileset firstgid="878" name="town_buildings" tilewidth="32" tileheight="128">
+  <image source="town_buildings.png" width="672" height="768"/>
+ </tileset>
+ <layer name="background" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztk0EKgCAQAHf3E+UzOvSR6hFdqjdX39BoPZkEoWDboR0YEBHnsAqgKIryDhYBHHvgP/sVAdSsIfn2SHe1r33ty/Vzz5c2hw2DO8r3HQaPH/ZrCpoP5v90z4rx+0h9J6X6FuP5pM5J+2V46kvg+y3Ff6Qh2b5vdbzu2eGyJ8nEzuxS6L4TXuSICQ==
+  </data>
+ </layer>
+ <layer name="object" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRQE0wjZmBYSIzqlgzkD+dGbt6aoOpOOyZMmr/qP2j9mMAUH5toSJGz/uE7MflXmqDkWb/ZCLjhVb2E5veR+0ftX/U/pFrfzOB+qQVR3uylcx6CAYAbYgxYg==
+  </data>
+ </layer>
+ <layer name="collision" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzt1kEOABAMRFHuf2kru5KWTln8Sbog4kkkpTVCiCLdqGp/N8bX2pZfdYaVg4+Pb89nl9d/3Req+2Kl77kXtZ+xRu2rzuDdFx//d//kPxnxo2/KzTs0MwBI0gBo
+  </data>
+ </layer>
+ <objectgroup name="enemygroup" width="32" height="32">
+  <object name="2 Venom Bats" type="venombat" x="288" y="608" width="288" height="96">
+   <properties>
+    <property name="level" value="3,3"/>
+    <property name="number" value="2,2"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="enemy" width="32" height="32"/>
+ <objectgroup name="event" width="32" height="32">
+  <object name="Teleport to CastleA" type="teleport" x="768" y="224" width="96" height="32">
+   <properties>
+    <property name="intermap" value="castlea.txt"/>
+   </properties>
+  </object>
+  <object name="Teleport to Castle 3" type="teleport" x="64" y="640" width="32" height="128">
+   <properties>
+    <property name="intermap" value="castle3.txt"/>
+   </properties>
+  </object>
+  <object name="Fire Trap" type="run_once" x="384" y="960" width="32" height="32">
+   <properties>
+    <property name="power" value="33"/>
+    <property name="power_damage" value="100,100"/>
+    <property name="power_path" value="0,0,12,30"/>
+   </properties>
+  </object>
+  <object name="Fire Trap" type="run_once" x="416" y="960" width="32" height="32">
+   <properties>
+    <property name="power" value="33"/>
+    <property name="power_damage" value="100,100"/>
+    <property name="power_path" value="0,0,13,30"/>
+   </properties>
+  </object>
+  <object name="Fire Trap" type="run_once" x="448" y="960" width="32" height="32">
+   <properties>
+    <property name="power" value="33"/>
+    <property name="power_damage" value="100,100"/>
+    <property name="power_path" value="0,0,14,30"/>
+   </properties>
+  </object>
+  <object name="Fire Trap" type="run_once" x="384" y="992" width="32" height="32">
+   <properties>
+    <property name="power" value="33"/>
+    <property name="power_damage" value="100,100"/>
+    <property name="power_path" value="0,0,12,31"/>
+   </properties>
+  </object>
+  <object name="Teleport to Castle1" type="teleport" x="416" y="992" width="32" height="32">
+   <properties>
+    <property name="intermap" value="castle1.txt,14,5"/>
+   </properties>
+  </object>
+  <object name="Fire Trap" type="run_once" x="448" y="992" width="32" height="32">
+   <properties>
+    <property name="power" value="33"/>
+    <property name="power_damage" value="100,100"/>
+    <property name="power_path" value="0,0,14,31"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
