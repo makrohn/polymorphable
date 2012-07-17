@@ -8,7 +8,6 @@ requires_mp=1
 spawn_type=bomb
 new_state=cast
 starting_pos=source
-target_neighbor=false
 source_type=hero
 
 [power]
@@ -212,7 +211,6 @@ requires_mp=1
 spawn_type=firebomb
 new_state=cast
 starting_pos=source
-target_neighbor=false
 source_type=hero
 msg=Deadly fire bomb to whole room in 3 seconds!
 cooldown=6000
