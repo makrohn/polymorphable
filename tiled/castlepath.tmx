@@ -18,7 +18,7 @@
  </tileset>
  <layer name="background" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJzt0UEKgzAQheHkBl3YrnoDodZVz6CeQ6/R9uaNkEB4dJiY0dLFW3wIAf3Hyeycm4mIqEoTvMD5h913cAPPA+eRum189nB+yeaxztEI/1sK92JpnwxzJNZ7lrTCOd5NSX+Jd6g1830MwVTwjve6RfnG2hrBPejg7Ns8V6/L+7jXIbZK9ojzjBX92rakpp/2bW1v6ed3vEc3eXhdt3OTiOgffAAsj2ev
+   eJzt0U0OgjAQhuGOJ3CBruQEJP6s9ArA0jPgNdSbW0Ib6menNAwaF7N4Ymgi7zDtjDGdUkqpWQrrATY/7D6tPbh/cR6uW7nfE5xvg3mkcxTM9+bCvUjaa8EcnvSeORVzjneT07+5O5xqhvuorTbjP0RpKxr6qXf0rQYcrQOcxebZ0ehK78+9Evq419q1cvaI8zTmszfVn9vmYA93EOv7fUvbsT7O4vvhHS/R9c6UdqHh3pZsKqXUP3gBPwNoWg==
   </data>
  </layer>
  <layer name="object" width="32" height="32">

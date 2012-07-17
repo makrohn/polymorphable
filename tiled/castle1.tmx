@@ -18,21 +18,24 @@
  </tileset>
  <layer name="background" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJxLZWBgSB3FYNzMzMDQgge3Quk2IG4H4g40cVx4IjP13CjNyMCQC6SXAHE+EMsy0jeMQPZ3AOlOIO4aIPtlkPCo/aP2j2T7nwHFGBnJx5TaTyketZ80bAbUY05FTM+0O4pH8SgexaN4FI/iwYEBt6BzjQ==
+   eJxLZWBgSB3FYNzMzMDQgge3Quk2IG4H4g40cVx4IjP13CjNyMCQC6SXAHE+EMsy0jeMQPZ3AOlOIO4aIPtlkPBA2R88wPYPtP8Hg/3BA2R/8CDxPwg/A4oxMpKPKbUfOS6wiROSp5b95GJK0x85fqbEfjOgHnMqYnqm3VE8ikfxKB7Fo3gUDw4MABiAdQ4=
   </data>
  </layer>
  <layer name="object" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+   eJxjYICAp8wMNAWEzB+1f9T+gbT/NlD+DpH4PhA/AOKHQPyYSExr/42CkQeYGQfaBbjBYHYbrQAhPxMTJv+ZQAqp4pxhBWidnjRHw5xsIIon7EiNN2GgWSI0jgtVMswnR88ooC34Cywr/zGRpofe9RK+vEEMGOzlErHuwxfuxJhBaTjSCwy1cgIAmbYlwg==
   </data>
  </layer>
  <layer name="collision" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztzDEKACAQA8H4/09biaWecNjMwHYhyTbS4/a3slt1/Z562QMAAMAvE8E3AB4=
+   eJztlMsSABAIReP/P9oCO5PKFI17Zlqh5xVRpwzzQOJbE7+Q7b7Up8Ssb7j4niD+/vzm/AHQUm8nwPBybl7sapb0BLtizY96ygKnV+3cIvRv8Y8/+R4WrUTvEeimc9r3LH3MkuekAUawAF4=
   </data>
  </layer>
  <objectgroup name="enemygroup" width="32" height="32"/>
- <objectgroup name="enemy" width="32" height="32"/>
+ <objectgroup name="enemy" width="32" height="32">
+  <object name="Ghost" type="ghost" x="768" y="256" width="32" height="32"/>
+  <object name="Ghost" type="ghost" x="736" y="544" width="32" height="32"/>
+ </objectgroup>
  <objectgroup name="event" width="32" height="32">
   <object name="Teleport to Castle Path" type="teleport" x="992" y="352" width="32" height="160">
    <properties>
