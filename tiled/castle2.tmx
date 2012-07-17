@@ -18,17 +18,17 @@
  </tileset>
  <layer name="background" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztk0EKgCAQAHf3E+UzOvSR6hFdqjdX39BoPZkEoWDboR0YEBHnsAqgKIryDhYBHHvgP/sVAdSsIfn2SHe1r33ty/Vzz5c2hw2DO8r3HQaPH/ZrCpoP5v90z4rx+0h9J6X6FuP5pM5J+2V46kvg+y3Ff6Qh2b5vdbzu2eGyJ8nEzuxS6L4TXuSICQ==
+   eJztlu0JwjAQhpMsoR3DHy6iriD0jzpOQbqcukZbTJDC9XpJLl8tioUHTCk+eXOXNkJ8rnMhOilErxkk7RkvfP+Oxs3Cfi54nmbcevwwi8+Pc2Ofi1pN/Wbsy8/5f5ivEfQ8R/9Gs9VUiufPSa3m4HmH+m31aIlnXX5bfmodY3s/xs+Fylsqf2xtbP6U/QdrXnL9uQ7XeoX4qXpS+3zt/gupR8n+Xyv/3/9dft8z0E/NNxWu/ymnvOSy/l5OGX7cj88f5owEqTK4c/bfQ857hNMnMCv17ub6OzmvEadOufLn8uM1WMpv+35DvwuXP+UdGeLfoz2yU3H+kPMf9BvXQf8+ak7gXqgzJv/IRXPV3BLWHPIGaZepKQ==
   </data>
  </layer>
  <layer name="object" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjIJRQE0wjZmBYSIzqlgzkD+dGbt6aoOpOOyZMmr/qP2j9mMAUH5toSJGz/uE7MflXmqDkWb/ZCLjhVb2E5veR+0ftX/U/pFrfzOB+qQVR3uylcx6CAYAbYgxYg==
+   eJztl9EKgCAMRQd++uoDrKzfTaMeilkrNl+6B3xwDI5M2ZAIeDAHIg7nWMz7Jcj51qSKZ4Iffvjhhx9++DfKrB7z6gxXfOFPN/nW1PytaO2/3qtUZ0+/5r3D/29/+ScMTmfQ9luvGsCvy+OHedILvYv3+Jc5dLAC3Ww8hw==
   </data>
  </layer>
  <layer name="collision" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJzt1kEOABAMRFHuf2kru5KWTln8Sbog4kkkpTVCiCLdqGp/N8bX2pZfdYaVg4+Pb89nl9d/3Req+2Kl77kXtZ+xRu2rzuDdFx//d//kPxnxo2/KzTs0MwBI0gBo
+   eJzt10EKACAIRNG8/6Xb1C5IycmgP+BGohe0sFrTxEbteqrgx/r4+Pj4+Pg/+iYor1/9LrhlV/iee1H7GWvUvuoM3n3x8V/3V/+5TD86U07m0EwHFM0AdQ==
   </data>
  </layer>
  <objectgroup name="enemygroup" width="32" height="32">
@@ -41,7 +41,7 @@
  </objectgroup>
  <objectgroup name="enemy" width="32" height="32"/>
  <objectgroup name="event" width="32" height="32">
-  <object name="Teleport to CastleA" type="teleport" x="768" y="224" width="96" height="32">
+  <object name="Teleport to CastleA" type="teleport" x="768" y="0" width="96" height="32">
    <properties>
     <property name="intermap" value="castlea.txt"/>
    </properties>
