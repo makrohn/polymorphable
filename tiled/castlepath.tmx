@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <properties>
+  <property name="tileset" value="town.txt"/>
+  <property name="title" value="Castle Path"/>
+ </properties>
+ <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
+  <image source="tiled_collision.png" width="480" height="32"/>
+ </tileset>
+ <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32">
+  <image source="generic_background.png" width="864" height="832"/>
+ </tileset>
+ <tileset firstgid="718" name="town_buildings" tilewidth="32" tileheight="32">
+  <image source="town_buildings.png" width="672" height="768"/>
+ </tileset>
+ <tileset firstgid="1222" name="small_objects" tilewidth="32" tileheight="32">
+  <image source="small_objects.png" width="671" height="512"/>
+ </tileset>
+ <layer name="background" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzt0UEOgjAQheHODVygK29AArLyDMCSM8A1wJtbkjbWF6ZtGDQsZvHF0ET+YToaY0allFK7FNYCrn/svqwKzD+ch+uW7reB81swj3SOgvneXLgXSfsimMOT3jOnZM7xbnL6k7vDVDPcR2v1Gf8hSpsS71hbHXhYNZxtzXOnj4G+n72wj3ttXStnjzhPZ7Z7sf7eNodrDpG+37e0jf3Y/sM7PqLrPSmtPriplFJn8AYb+2hU
+  </data>
+ </layer>
+ <layer name="object" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztlkEOgCAMBDH+/4G+gosP8GRCoNLSLGVJnMSTCmVaa1Pi4TxWR+AjK/dv0D6IdbRYLc958nRVVzTW/RFx1nmyOH/f+drfmrdoULU9A0Q/QZ+vtx6Ty7LedujLTO5+WpjzI9U3e80z+/RQ+ka7Z3M1818eNSewOZUYmcOk81hdsvcKJCNOezOE5naVU28d7PA9SDzpOCv3
+  </data>
+ </layer>
+ <layer name="collision" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzVllEOgCAMQxn3P7TxjyxTRqmsvsRIArKuw4XWdOjVAkBsc54Vh7nH2zqkTuae02TjM3T67zL72PCO4ld4lkFV1w2jn7Dzm509FUYtqz769Sf6upJ3yqC12K2hcn2i3NTvIsp+IvSHMQM1r77UcypXNU8jVu5h0Vw2R/VewQT11Hs087bKU/Qc/OF/iLgAtToATw==
+  </data>
+ </layer>
+ <objectgroup name="event" width="32" height="32">
+  <object name="Teleport to Laurelia" type="teleport" x="992" y="416" width="32" height="192">
+   <properties>
+    <property name="intermap" value="laurelia.txt,1,104"/>
+   </properties>
+  </object>
+  <object name="Teleport to Castle1" type="teleport" x="0" y="544" width="32" height="192">
+   <properties>
+    <property name="intermap" value="castle1.txt,0,0"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="enemy" width="32" height="32">
+  <object name="Bat" type="bat" x="576" y="128" width="32" height="32"/>
+  <object name="Bat" type="bat" x="576" y="768" width="32" height="32"/>
+ </objectgroup>
+</map>

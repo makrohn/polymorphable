@@ -45,7 +45,31 @@
   <object name="Elder" type="elder" x="2208" y="1920" width="32" height="32"/>
   <object name="Hunter" type="hunter" x="704" y="3392" width="32" height="32"/>
  </objectgroup>
- <objectgroup name="enemy" width="178" height="144">
-  <object name="Bat" type="bat" x="992" y="2592" width="32" height="32"/>
+ <objectgroup name="enemy" width="178" height="144"/>
+ <objectgroup name="event" width="178" height="144">
+  <object name="Teleport to Mt Path" type="teleport" x="5664" y="2208" width="32" height="160">
+   <properties>
+    <property name="intermap" value="mountainpath.txt,1,18"/>
+   </properties>
+  </object>
+  <object name="Teleport to Glade" type="teleport" x="2816" y="0" width="192" height="32">
+   <properties>
+    <property name="intermap" value="glade.txt"/>
+    <property name="requires_status" value="cavernexplored"/>
+   </properties>
+  </object>
+  <object name="Fall to Cavern" type="teleport" x="2752" y="448" width="192" height="32">
+   <properties>
+    <property name="intermap" value="cavern.txt,98,98"/>
+    <property name="msg" value="You've fallen in a hole!"/>
+    <property name="requires_not" value="cavernexplored"/>
+    <property name="requires_status" value="elderintro"/>
+   </properties>
+  </object>
+  <object name="Teleport to Castle Path" type="teleport" x="0" y="3296" width="32" height="192">
+   <properties>
+    <property name="intermap" value="castlepath.txt,30,14"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>
