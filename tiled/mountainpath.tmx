@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
  <properties>
-  <property name="tileset" value="town.txt"/>
+  <property name="tileset" value="outside.txt"/>
   <property name="title" value="Mountain Path"/>
  </properties>
  <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
@@ -10,14 +10,20 @@
  <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32">
   <image source="generic_background.png" width="864" height="832"/>
  </tileset>
+ <tileset firstgid="718" name="small_objects" tilewidth="32" tileheight="64">
+  <image source="small_objects.png" width="671" height="512"/>
+ </tileset>
+ <tileset firstgid="878" name="outside_objects" tilewidth="32" tileheight="128">
+  <image source="outside_objects.png" width="672" height="768"/>
+ </tileset>
  <layer name="background" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztlk1uwjAQhX0FWBbBCWh2ReUCwK6/FwB2FW0uEFp10ZJy6o6lGWk0mvFP4qIusvg2ieM3tt+8eOec2wUYAUeFMbAHKmTLxn4Cd8A98oDvQzoWezEXzdcA70z/Q+gugEfgGTj01H/BuZ5wvhusoVLgY5dAXUj/FXgDbtmaLH0aOwXOhfRb4Ac5R/RbNu4KOOF5Sf/EtEd4xl/At+Bk6Mux1rgmUgNpSx/T9ytgDWyM+VNoIvvutbmPyXde+xrHzSM1aL3D36f43vuY+056aY57wdmI+q3eSfV9rpdl/VbvpOiTNnk5R5/qJ+pM/VZo87PP7Vutd0Pf817StK1/g8fqW9mTlr7mKanN878rXTKxlPYqU5PvbV9t+mcfe67Xr4Hyx8pKLYPIS5WzPRRbL80Rykotg7z/Kf+7nJn0YygrZQbVrLZtB22t97WsqZk+fy5zXPZYCCt3QncEej5z5e4ksaziOeOfT5x+Jymlr2UV/w9qd5LUHP+r2i6hPTAw8L/5Bd/hYvI=
+   eJztlk1SAjEQhXMFdCclJ0B2UnoBZIeCFwB2FDoXGKVcCCOntlPVXXY13fkZouViFt9mJpPXmbx+yco5twrQA94ULoA1MEKWbOwHMAMekSd8H9KxWIu5aL4aeGf6O6E7BubAM7A9U3+Dcy1wvlusYaTAx94DVSH9F+AVuGNrsvRp7DVwLKTfAF/IMaLfsHFXwAH3S/onpt3DPf4E9oKDoS/HWuPqSA2kLX1M30+AB2BqzJ9CHfnvXpv7mHzntW9w3DBSg9Y7/H2K772Pue+kl4b4LzhTUb/VO6m+z/WyrN/qnRR90iYv5+hT/USVqd8Ibb73uX2r9W7oe95LmrZ1NnisvpU9aelrnpLaPP/b0iYTS2lPMjX5vz1Xm87slDwOrdevgfLHykotg8hL/v2lOz0fpJcsbT9HKCu1DNq6n/xvs2fSj6GslBlUsdqWLbS13teypmL6/LnMcdljIazcCd0R6PnAlbuTxLKK54x/3nf6naSUvpZV/BzU7iSpOf5btf2FdkdHx//mGxjpYlI=
   </data>
  </layer>
  <layer name="object" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztzbENADAIwDBuKO/S3+ELBmwpcyIAgIv+9Bb/OdXiHwCuabJIAR8=
+   eJztwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
   </data>
  </layer>
  <layer name="collision" width="32" height="32">
