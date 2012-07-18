@@ -19,13 +19,14 @@ him=You must find the Juggernaut Talisman!
 [dialog]
 requires_item=498
 requires_item=499
-set_status=fulljugg
-him=Thank you for finding both halves of the Talisman!
-him=Now I will make them whole again.
-him=Thank you!
 reward_item=500
 remove_item=498
 remove_item=499
+set_status=fulljugg
+reward_xp=100
+him=Thank you for finding both halves of the Talisman!
+him=Now I will make them whole again.
+him=Thank you!
 
 [dialog]
 requires_not=1stjuggfound

@@ -115,7 +115,7 @@ data=
 [enemygroup]
 # 2 ghosts
 type=ghost
-location=15,7,4,2
+location=15,16,4,2
 level=1,1
 number=2,2
 
@@ -176,7 +176,7 @@ intermap=castle3.txt,1,22
 # Teleport to Castle6
 type=teleport
 location=15,0,4,1
-intermap=castle6.txt
+intermap=castle6.txt,14,30
 
 [event]
 # Teleport to CastleC
