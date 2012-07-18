@@ -182,7 +182,7 @@ intermap=castle6.txt,14,30
 # Teleport to CastleC
 type=teleport
 location=0,9,1,4
-intermap=castlec.txt
+intermap=castlec.txt,30,12
 
 [event]
 # Alert
