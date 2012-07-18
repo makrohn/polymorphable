@@ -146,5 +146,5 @@ intermap=castle3.txt,14,11
 # Teleport to CastleB
 type=teleport
 location=0,15,1,4
-intermap=castleb.txt
+intermap=castleb.txt,30,11
 
