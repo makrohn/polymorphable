@@ -201,6 +201,18 @@ source_type=neutral
 requires_targeting=false
 
 [power]
+id=34
+name=Bomb
+type=spawn
+icon=20
+description=Plant a 3-second bomb.
+spawn_type=bomb
+new_state=cast
+starting_pos=source
+source_type=hero
+requires_item=3
+
+[power]
 id=100
 type=effect
 icon=32
