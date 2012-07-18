@@ -56,7 +56,7 @@
   </object>
   <object name="Teleport to Castle5" type="teleport" x="0" y="704" width="32" height="128">
    <properties>
-    <property name="intermap" value="castle5.txt"/>
+    <property name="intermap" value="castle5.txt,30,25"/>
    </properties>
   </object>
   <object name="Teleport to Castle4" type="teleport" x="448" y="320" width="32" height="32">

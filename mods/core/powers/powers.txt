@@ -213,6 +213,34 @@ source_type=hero
 requires_item=3
 
 [power]
+id=35
+name=Destroy Barriers
+type=effect
+icon=10
+description=Damages nearby enemies
+new_state=cast
+gfx=quake.png
+sfx=quake.ogg
+use_hazard=true
+rendered=true
+base_damage=ment
+lifespan=12
+radius=128
+frame_duration=2
+frame_size=256,128
+frame_offset=128,64
+frame_loop=0
+floor=true
+active_frame=4
+trait_elemental=earth
+starting_pos=source
+multitarget=true
+cooldown=3000
+source_type=neutral
+requires_targeting=false
+mapmod=collision,21,24,0;object,21,24,0
+
+[power]
 id=100
 type=effect
 icon=32
@@ -313,10 +341,10 @@ icon=9
 new_state=cast
 face=true
 directional=true
-requires_los=true
+requires_los=false
 gfx=venom.png
 sfx=shock.ogg
-use_hazard=true
+use_hazard=false
 rendered=true
 aim_assist=32
 base_damage=ranged
