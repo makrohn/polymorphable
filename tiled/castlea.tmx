@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <properties>
+  <property name="tileset" value="town.txt"/>
+  <property name="title" value="Castle Ballroom"/>
+ </properties>
  <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
   <image source="tiled_collision.png" width="480" height="32"/>
  </tileset>
@@ -14,12 +18,12 @@
  </tileset>
  <layer name="background" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+   eJztllsKwkAMRTOzBBW061PBVajb0C7D7aigLkIFLU0/CqGk8yLjMxfOR2nIIVNCB0Cj0fxzTgbgnJGLcfsf+H5qAWaEOfI08XB9qgD/EutWhHWin+sT498B798jB4Zjj5/2kZj/itwY7kLzb7BuSygT/VyfEL/vu1J/c7Z9fg5pv2v+b/X79n+Az0OGUafuV/c/1i+9/7nn9+1/KCn7P8aaSUYK6/a7srDh5Ij61f9J/vau2twp3+Fv/5XVi/zdUL9EatquTYw=
   </data>
  </layer>
  <layer name="object" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+   eJxjYBgFo2AUDBSYxszA0EIHPJ0Zu/1TcYhTG0wZtX/U/lH7R+0ftX/U/lH74aAZT509iUS3TcZj1kQy/Elq2ODyI7lg1P5R+0ey/ehlA3oeJiRPDAAA4EQ2ZA==
   </data>
  </layer>
  <layer name="collision" width="32" height="32">
@@ -28,6 +32,57 @@
   </data>
  </layer>
  <objectgroup name="enemygroup" width="32" height="32"/>
- <objectgroup name="enemy" width="32" height="32"/>
- <objectgroup name="event" width="32" height="32"/>
+ <objectgroup name="enemy" width="32" height="32">
+  <object name="Ghost" type="ghost" x="672" y="384" width="32" height="32"/>
+  <object name="Ghost" type="ghost" x="672" y="576" width="32" height="32"/>
+  <object name="Ghost" type="ghost" x="160" y="384" width="32" height="32"/>
+  <object name="Ghost" type="ghost" x="160" y="576" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="event" width="32" height="32">
+  <object name="Teleport to Castle2" type="teleport" x="384" y="992" width="96" height="32">
+   <properties>
+    <property name="intermap" value="castle2.txt,25,1"/>
+   </properties>
+  </object>
+  <object name="Chest" type="run_once" x="416" y="448" width="32" height="32">
+   <properties>
+    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="loot" value="currency,13,15,10"/>
+    <property name="mapmod" value="object,13,14,206"/>
+    <property name="tooltip" value="Chest"/>
+   </properties>
+  </object>
+  <object name="Chest" type="run_once" x="128" y="352" width="32" height="32">
+   <properties>
+    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="loot" value="id,4,12,1"/>
+    <property name="mapmod" value="object,4,11,206"/>
+    <property name="tooltip" value="Chest"/>
+   </properties>
+  </object>
+  <object name="Chest" type="run_once" x="704" y="608" width="32" height="32">
+   <properties>
+    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="loot" value="id,22,20,1"/>
+    <property name="mapmod" value="object,22,19,206"/>
+    <property name="tooltip" value="Chest"/>
+   </properties>
+  </object>
+  <object name="Chest" type="run_once" x="704" y="352" width="32" height="32">
+   <properties>
+    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="loot" value="id,22,12,2"/>
+    <property name="mapmod" value="object,22,11,206"/>
+    <property name="tooltip" value="Chest"/>
+   </properties>
+  </object>
+  <object name="Chest" type="run_once" x="128" y="608" width="32" height="32">
+   <properties>
+    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="loot" value="id,4,20,2"/>
+    <property name="mapmod" value="object,4,19,206"/>
+    <property name="tooltip" value="Chest"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>

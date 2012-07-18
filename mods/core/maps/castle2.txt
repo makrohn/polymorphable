@@ -123,7 +123,7 @@ number=2,2
 # Teleport to CastleA
 type=teleport
 location=24,0,3,1
-intermap=castlea.txt
+intermap=castlea.txt,13,30
 
 [event]
 # Teleport to Castle 3
