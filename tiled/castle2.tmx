@@ -23,12 +23,12 @@
  </layer>
  <layer name="object" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztl9EKgCAMRQd++uoDrKzfTaMeilkrNl+6B3xwDI5M2ZAIeDAHIg7nWMz7Jcj51qSKZ4Iffvjhhx9++DfKrB7z6gxXfOFPN/nW1PytaO2/3qtUZ0+/5r3D/29/+ScMTmfQ9luvGsCvy+OHedILvYv3+Jc5dLAC3Ww8hw==
+   eJztlm0KgCAMhhfew8taB9C+rptCwRIrlekIfcEfDeVp79QJ0FVCmwBQ4h7T9nsX4fnUWh84S+ez8cVQl+94vlr2n4svUR1azJ+L73zHZ0BWPn+Ye/1HS/7/hW9sbLZjJBw6gb++zKfWEx8r1DdiJT/WxvAp5dc15HNJfsx+p+Jj71PuG/dONYU8iM2/VA1y+Ln731+X8t7jzL/z+fnqo59MgbtLnfGcPnTpAAUHPpE=
   </data>
  </layer>
  <layer name="collision" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJzt10EKACAIRNG8/6Xb1C5IycmgP+BGohe0sFrTxEbteqrgx/r4+Pj4+Pg/+iYor1/9LrhlV/iee1H7GWvUvuoM3n3x8V/3V/+5TD86U07m0EwHFM0AdQ==
+   eJztlt0KwCAIhSt8/2feTcKIomNT15oHhDhkH/2hKdko15h5Vgq+zA++PZ+c+TTwvfgS/2Q+DXwvPuKfyC81WMWZz8x7/On8v8TPBoHy3+4LWq9XN1DNchG+ppB7seZrzEFEnTHKtzoDdN2d+Kvvv82T9Hs77T/42BzNv71SU57UIdYFjpwAqw==
   </data>
  </layer>
  <objectgroup name="enemygroup" width="32" height="32">
@@ -48,7 +48,7 @@
   </object>
   <object name="Teleport to Castle 3" type="teleport" x="64" y="640" width="32" height="128">
    <properties>
-    <property name="intermap" value="castle3.txt"/>
+    <property name="intermap" value="castle3.txt,30,22"/>
    </properties>
   </object>
   <object name="Fire Trap" type="run_once" x="384" y="960" width="32" height="32">

@@ -18,7 +18,7 @@
  </tileset>
  <layer name="background" width="100" height="100">
   <data encoding="base64" compression="zlib">
-   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
+   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
   </data>
  </layer>
  <layer name="object" width="100" height="100">
@@ -98,7 +98,7 @@
   </object>
   <object name="Block Passage" type="run_once" x="3136" y="3136" width="32" height="32">
    <properties>
-    <property name="mapmod" value="object,75,72,134;object,76,72,134;object,77,72,134;collision,75,72,1;collision,76,72,1;collision,77,72,1;collision,78,72,1"/>
+    <property name="mapmod" value="object,75,72,879;object,76,72,879;object,77,72,879;collision,75,72,1;collision,76,72,1;collision,77,72,1;collision,78,72,1"/>
     <property name="requires_not" value="evil_unleashed"/>
    </properties>
   </object>

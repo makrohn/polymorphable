@@ -37,6 +37,8 @@ him=You may also want to speak with Robin the Hunter on your way over.  I told h
 [dialog]
 requires_item=199
 set_status=juggsearch
+remove_item=199
+reward_xp=100
 him=Ah, the Fairy Flower!  Did you run into any trouble in the forest?
 you=Yes, I did.  I suppose I ought to thank you for the sword.
 him=Snarks?  Grumpkins?
@@ -46,8 +48,6 @@ you=When in the heck were you planning on letting me know the truth!?
 him=Tomorrow, after your birthday party, I promise!  They died nobly, but now, it falls to you to finish their work.
 him=You must find what they never could: both halves of the Juggernaut Talisman.  With the Talisman, you can seal away the Ancient Evil forever!
 him=Go east, and use your bat talisman to fly over the ruined bridge, and seek the first half of the Juggernaut Talisman in the volcano.
-remove_item=199
-reward_xp=100
 
 [dialog]
 requires_not=flowerfound
