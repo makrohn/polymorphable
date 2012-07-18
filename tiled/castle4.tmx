@@ -2,7 +2,7 @@
 <map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
  <properties>
   <property name="tileset" value="town.txt"/>
-  <property name="title" value="Castle Hall"/>
+  <property name="title" value="Castle Basement"/>
  </properties>
  <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
   <image source="tiled_collision.png" width="480" height="32"/>
@@ -18,50 +18,52 @@
  </tileset>
  <layer name="background" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJzdlEsSwiAMQKGXUM+nvYZ6C8biqt7Du6jXUEeycEozEKQNn7p4CzqQlwTSVgjR/gEdWp8Z482N5csx9H1KrFJQPeLqXw6W1NdaHTX1MKY2nDdeXxo/OWoBT1/YD2wNO3B6/Kne7Ne1NxwMR4d/qjt097b/ZOgMOrL/c+cC3/l1Ae+P81/g8vaZ68d9LzF/peef00/FpPC9w1jucuAh3bFd943zoPbY3OTY+bJ4S56aKJ7IWdq/bgY2id3Aqhk7U/tCwAzoDLMLqMi9yjpDneXMH3u0FV8lcsbmp37015BviA9XBuGo
+   eJztk8EKwyAMQNN+39i5926U/UTtD3Q7b4Melu/ovq0KFUoWRWnjLjk8VIS8JJoJACZFURRFUYoyVgCN5bGud8unTmeO3KX4m+oXGgcZ15e5l/J72jUH57swPXDrVdAfwpBcMMOfAvfOJnAeMutP9Tv6zL4c7ae1+p4gYT7YH5oxs/HfLB2ZBYn66bt7/9lyKuDn/iHtv5T/uYn9CuTzFvRjpA/I7KX+/7/nT/1l/bG89sZYAGUGd2Y=
   </data>
  </layer>
  <layer name="object" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJxjYBh64MtAO4CGAJff3pOh9z0ajQsQY/ZAAWrGNT39Saq7B3McUAuQEiaDMTwmMzMwzITiOUjsSczUMZ9Q+EzBYg8zIwPDVCLtpzRMsdkPAsTaTylAtn8zEfZTUnZg00sr/xMbLyD7QfFNbfuJBYMp/geD/bC4GKn+p4b9LczE44k47GkmwQx0PApGNiA33VALjwLag/9MQGIQh7XoALoNAPnMQhA=
+   eJxjYBgFo2AUjIJRMApGHpjJTDvcxDxw/toMxPV0sF+OEcFmZkSVo4f9+AAt7Ef3I6X2E0pDyynwAzX83zAI7JcjEOa44mSg/A9zz3AJfxggJe3Twn5SAT3tx5ZGR5L/R+2njf0zcNQLy5jxyyOrwQcAFvYsNQ==
   </data>
  </layer>
  <layer name="collision" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztlUsKACAIRNP7H7pti36SORnzYEBm0XMhVAohhORBmiC90Xv0PAr2z/qb/tEc5d/pb/gV7Lf0v/t10Ef5V30Gvxjj8Qbq/yDvcXI7HiEESQU1TgBg
+   eJxjYBgFo2AUjIJRMApGHmCkMR4owEwn+1lwsBnoZD8+QAv70f1Iqf20TEPU8P9gsJ9QmOOSHyj/w9wzXMIfBkhJ+7Swn556STUDW9iMJP+P2k87+/HVC5TWHQBVwgBv
   </data>
  </layer>
  <objectgroup name="enemygroup" width="32" height="32">
-  <object name="3 snakes" type="snake" x="384" y="640" width="160" height="96">
+  <object name="Venom Bat" type="venombat" x="384" y="544" width="288" height="288">
+   <properties>
+    <property name="level" value="3,3"/>
+    <property name="number" value="1,1"/>
+   </properties>
+  </object>
+  <object name="2 snakes" type="snake" x="352" y="544" width="288" height="288">
    <properties>
     <property name="level" value="1,1"/>
-    <property name="number" value="3,3"/>
+    <property name="number" value="2,2"/>
    </properties>
   </object>
  </objectgroup>
  <objectgroup name="enemy" width="32" height="32"/>
  <objectgroup name="event" width="32" height="32">
-  <object name="Fake chest" type="run_once" x="448" y="416" width="32" height="32">
+  <object name="Chest" type="run_once" x="704" y="480" width="32" height="32">
    <properties>
     <property name="hotspot" value="-16,-16,32,32"/>
-    <property name="mapmod" value="object,14,13,206"/>
-    <property name="spawn" value="ghost,13,14"/>
+    <property name="loot" value="id,22,16,300"/>
+    <property name="mapmod" value="object,22,15,206"/>
+    <property name="requires_not" value="snaketalis"/>
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>
-  <object name="Teleport to Castle2" type="teleport" x="992" y="704" width="32" height="128">
+  <object name="Teleport to Castle3" type="teleport" x="480" y="992" width="32" height="32">
    <properties>
-    <property name="intermap" value="castle2.txt,3,20"/>
+    <property name="intermap" value="castle3.txt,14,11"/>
    </properties>
   </object>
-  <object name="Teleport to Castle5" type="teleport" x="0" y="704" width="32" height="128">
+  <object name="Teleport to CastleB" type="teleport" x="0" y="480" width="32" height="128">
    <properties>
-    <property name="intermap" value="castle5.txt"/>
-   </properties>
-  </object>
-  <object name="Teleport to Castle4" type="teleport" x="448" y="320" width="32" height="32">
-   <properties>
-    <property name="intermap" value="castle4.txt,15,30"/>
+    <property name="intermap" value="castleb.txt"/>
    </properties>
   </object>
  </objectgroup>

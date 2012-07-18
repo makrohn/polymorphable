@@ -145,6 +145,7 @@ icon=99,3
 power=300
 power_desc=Use to transform into a snake and spit acid at enemies and switches
 loot=gem
+pickup_status=snaketalis
 
 
 [item]
