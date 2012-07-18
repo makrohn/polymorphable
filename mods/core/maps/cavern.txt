@@ -391,16 +391,16 @@ set_status=cavernexplored
 [event]
 # Block Passage
 type=run_once
+requires_not=evil_unleashed
 location=98,98,1,1
 mapmod=object,75,72,134;object,76,72,134;object,77,72,134;collision,75,72,1;collision,76,72,1;collision,77,72,1;collision,78,72,1
-requires_not=evil_unleashed
 
 [event]
 # Unblock passage
 type=run_once
+requires_status=evil_unleashed
 location=75,73,4,2
 mapmod=object,75,72,135;object,76,72,0;object,77,72,0;object,78,72,133;collision,76,72,0;collision,77,72,0
-requires_status=evil_unleashed
 
 [event]
 # Carrots
