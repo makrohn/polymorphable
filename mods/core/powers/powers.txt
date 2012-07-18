@@ -201,6 +201,19 @@ source_type=neutral
 requires_targeting=false
 
 [power]
+id=34
+name=Bomb
+type=spawn
+icon=20
+description=Drop a bomb that does 5 damage when it explodes.
+requires_mp=1
+spawn_type=bomb
+new_state=cast
+starting_pos=source
+source_type=hero
+requires_item=3
+
+[power]
 id=100
 type=effect
 icon=32
