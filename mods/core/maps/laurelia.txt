@@ -522,9 +522,9 @@ intermap=glade.txt,13,30
 type=teleport
 location=86,14,6,1
 requires_status=elderintro
+requires_not=cavernexplored
 intermap=cavern.txt,98,98
 msg=You've fallen in a hole!
-requires_not=cavernexplored
 
 [event]
 # Teleport to Castle Path
