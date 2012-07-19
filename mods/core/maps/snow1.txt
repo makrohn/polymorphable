@@ -112,6 +112,13 @@ data=
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 
+[enemygroup]
+# Cultist
+type=cultist
+location=7,11,1,1
+level=2,2
+number=1,1
+
 [event]
 # Teleport to Laurelia
 type=teleport

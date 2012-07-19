@@ -31,7 +31,14 @@
    eJzt08EJACAMBMHYf9M2YMBAjv3sgO9FOaskaccZnkSf9NOn7598I/vvjad337W7Pv337NtP9On9k31JmrheogBM
   </data>
  </layer>
- <objectgroup name="enemygroup" width="32" height="32"/>
+ <objectgroup name="enemygroup" width="32" height="32">
+  <object name="Cultist" type="cultist" x="224" y="352" width="32" height="32">
+   <properties>
+    <property name="level" value="2,2"/>
+    <property name="number" value="1,1"/>
+   </properties>
+  </object>
+ </objectgroup>
  <objectgroup name="enemy" width="32" height="32"/>
  <objectgroup name="event" width="32" height="32">
   <object name="Teleport to Laurelia" type="teleport" x="0" y="0" width="224" height="32">

@@ -5,7 +5,7 @@ rarity=common
 xp=0
 
 sfx_prefix=monk
-gfx_prefix=monk
+gfx_prefix=brawler
 animations=humanoid
 animation_speed=50
 

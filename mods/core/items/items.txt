@@ -10,7 +10,7 @@ type=consumable
 loot=hp_potion
 rand_vendor=3
 max_quantity=25
-price=25
+price=5
 
 [item]
 id=2
@@ -24,7 +24,7 @@ type=consumable
 loot=mp_potion
 rand_vendor=3
 max_quantity=25
-price=25
+price=5
 
 [item]
 id=3
