@@ -1,6 +1,8 @@
 [header]
 width=32
 height=32
+tileset=outside.txt
+title=Snow Mountain
 
 [layer]
 type=background
