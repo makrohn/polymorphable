@@ -14,20 +14,26 @@
  </tileset>
  <layer name="background" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+   eJztlcENgDAMAzsDc6CuUdZAFVvA7hQJfiUJqZsWwcM/xFmODdE55zOakxYDxZ/fJX9NGhryrTIYk6aPZ0DxLTKg+BoP1Lt85nmqA5o7POWjM9DwJRlIPWj4yDto+RIPFnvgPPT8TeCyl9xAsoe7DFB8bQ9QfG0PkHzOQy4DNL+ki1Z7PDxsp1rssURv4Uv+DTX5l4cA9qHtYwB5QWwjFKjmbn/x2gEl40WY
   </data>
  </layer>
  <layer name="object" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+   eJxjYBgFo2AUjAL6gBxGBoZcJExv0A60swMJUxt0MzMw9ODBi4B29jJT314Y6CDC7K5R+0ftpxFoBprdgobr0PitNLIflvcIAZAaWuRBYsIeBmgRB6P2Yxf3xlLOD0f7seU9bPmPlnlwFIyCUTB0AADvJCLX
   </data>
  </layer>
  <layer name="collision" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+   eJzt08EJACAMBMHYf9M2YMBAjv3sgO9FOaskaccZnkSf9NOn7598I/vvjad337W7Pv337NtP9On9k31JmrheogBM
   </data>
  </layer>
  <objectgroup name="enemygroup" width="32" height="32"/>
  <objectgroup name="enemy" width="32" height="32"/>
- <objectgroup name="event" width="32" height="32"/>
+ <objectgroup name="event" width="32" height="32">
+  <object name="Teleport to Laurelia" type="teleport" x="0" y="0" width="224" height="32">
+   <properties>
+    <property name="intermap" value="laurelia.txt,74,142"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>

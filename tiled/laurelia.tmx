@@ -71,5 +71,10 @@
     <property name="intermap" value="castlepath.txt,30,14"/>
    </properties>
   </object>
+  <object name="Teleport to Snow1" type="teleport" x="2272" y="4576" width="224" height="32">
+   <properties>
+    <property name="intermap" value="snow1.txt,3,1"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>

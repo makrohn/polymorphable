@@ -1,0 +1,31 @@
+name=Cultist Mage
+level=2
+categories=cultist,caster
+rarity=common
+xp=0
+
+sfx_prefix=caster
+gfx_prefix=caster
+animations=humanoid
+animation_speed=75
+
+loot_chance=100
+
+# combat stats
+hp=4
+speed=4
+dspeed=3
+melee_range=32
+threat_range=512
+turn_delay=12
+chance_pursue=20
+chance_ranged_ment=5
+power_beacon=132
+power_ranged_ment=30
+
+accuracy=100
+avoidance=0
+
+dmg_ranged_min=4
+dmg_ranged_max=4
+cooldown=60
