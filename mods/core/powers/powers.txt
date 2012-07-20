@@ -242,6 +242,7 @@ name=Summon Bat
 type=spawn
 icon=20
 spawn_type=bat
+spawn_num=10
 new_state=cast
 starting_pos=source
 target_neighbor=1
