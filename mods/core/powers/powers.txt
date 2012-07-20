@@ -237,6 +237,17 @@ multitarget=true
 cooldown=10000
 
 [power]
+id=36
+name=Summon Bat
+type=spawn
+icon=20
+spawn_type=bat
+new_state=cast
+starting_pos=source
+target_neighbor=1
+cooldown=10000
+
+[power]
 id=100
 type=effect
 icon=32
