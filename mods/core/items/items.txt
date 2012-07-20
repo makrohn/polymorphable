@@ -7,7 +7,7 @@ icon=32
 power=100
 power_desc=Restore 4 HP
 type=consumable
-loot=hp_potion
+loot=carrot
 rand_vendor=3
 max_quantity=25
 price=5
@@ -21,7 +21,7 @@ icon=33
 power=101
 power_desc=Restore 4 MP
 type=consumable
-loot=mp_potion
+loot=watermelon
 rand_vendor=3
 max_quantity=25
 price=5
@@ -109,7 +109,6 @@ icon=102,2
 loot=gem
 power_desc=Unlocks a door in the Volcano
 pickup_status=skelkey
-loot=gem
 
 [item]
 id=199
@@ -121,7 +120,6 @@ icon=103,2
 loot=gem
 power_desc=Return this flower to Elder Thomas
 pickup_status=flowerfound
-loot=gem
 
 [item]
 id=200
@@ -172,7 +170,6 @@ power_desc=Bring to the Village Elder to create the Juggernaut Talisman
 loot=gem
 sfx=gem
 pickup_status=1stjugg
-loot=gem
 
 [item]
 id=499
@@ -186,7 +183,6 @@ power_desc=Bring to the Village Elder to create the Juggernaut Talisman
 loot=gem
 sfx=gem
 pickup_status=2ndjugg
-loot=gem
 
 [item]
 id=500
@@ -198,4 +194,3 @@ type=off
 power=500
 loot=gem
 power_desc=Transform into a mighty juggernaut
-loot=gem
