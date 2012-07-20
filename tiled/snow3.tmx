@@ -18,37 +18,48 @@
  </tileset>
  <layer name="background" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztlMENwjAUQzND54COAawBVbdodycHIlUo/fn2twJSe3jXPtdxMqWUxgrPzNyB6fT/pX/JDD/09+rgknkcvAPL36MDy49msL5TQDaAnoPHX8ug6oD1ezrwZGD9qnOI+D0Z0PtgudgMyJvA+Ft7tDqI9u+9D3sdqPzsDlR+dgdKfytDrQO1P7LFyP7RLawfvP61kRu9DwzIO6L23zJX4Rkw//4C/CXDXZCj/Dvq/87BZNm6Wf9eFg9bt8J/EuMNdFFERA==
+   eJzt1LEJACAMBdFIpsjIgujK4gYaIipe8eoLv4glEQNwhaJxPP2scejTf60/e9uJ37C7XwO3H9rinZFtz070/+4DwE86CBTeRw==
   </data>
  </layer>
  <layer name="object" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjAL6gBxGBoZcJExv0A60swMJUxN0MzMw9BDAi2jo5w5m2plNbfu7aODWUfsH1v5moJktSLgNakc7mjgItw5wWqUFGOjwH7V/ZNs/0vPfKBgFo4A0AAABGh+L
+   eJxjYMAOtBlxSBAA5OobtX/UfmTgRqY55OobDKCbmbrm9ZJoXgeV7e8atX/U/iFkfzNQfQsO3IZmVjsOdTOAeCaU3Upl/9ASULvsgQFiyyBqxz0MEJsGRu0f2fbjy/uU4KFUBoyCUTAKRhYAADwxJlg=
   </data>
  </layer>
  <layer name="collision" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJzt0skNACAMA0Gn/6ZpIJ9wxCB2JN4rwBIArIuJs7vvVOm773/irejn++7YPv07/p++t+/e3899AG8Z4tIAYg==
+   eJztkkEKACAIBO3/n+7UpTysoYIwAxLB6khk9rKuU+W3Dz/+03fqvqvlzYn4M8GPP5qP/m8ln7Gv51f27/Z7edWd8f7ePNVfAf45/qqa4AcAgF42J0YAog==
   </data>
  </layer>
  <objectgroup name="enemygroup" width="32" height="32">
-  <object name="Cultist" type="cultist" x="224" y="352" width="32" height="32">
+  <object name="2 Skeletons" type="skeleton" x="128" y="192" width="608" height="160">
+   <properties>
+    <property name="level" value="1,1"/>
+    <property name="number" value="2,2"/>
+   </properties>
+  </object>
+  <object name="2 melee cultists" type="melee" x="96" y="480" width="672" height="160">
    <properties>
     <property name="level" value="2,2"/>
-    <property name="number" value="1,1"/>
+    <property name="number" value="2,2"/>
    </properties>
   </object>
  </objectgroup>
  <objectgroup name="enemy" width="32" height="32"/>
  <objectgroup name="event" width="32" height="32">
-  <object name="Teleport to Laurelia" type="teleport" x="0" y="0" width="224" height="32">
+  <object name="Teleport to Snow2" type="teleport" x="640" y="0" width="32" height="32">
    <properties>
-    <property name="intermap" value="laurelia.txt,74,142"/>
+    <property name="intermap" value="snow2.txt,22,30"/>
    </properties>
   </object>
-  <object name="Teleport to Snow2" type="teleport" x="992" y="288" width="32" height="32">
+  <object name="Teleport to Snow2" type="teleport" x="192" y="0" width="32" height="32">
    <properties>
-    <property name="intermap" value="snow2.txt,1,9"/>
+    <property name="intermap" value="snow2.txt,8,30"/>
+   </properties>
+  </object>
+  <object name="Teleport to Snow4" type="teleport" x="640" y="416" width="64" height="64">
+   <properties>
+    <property name="intermap" value="snow4.txt"/>
    </properties>
   </object>
  </objectgroup>

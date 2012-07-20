@@ -1,6 +1,6 @@
 name=Cultist Monk
 level=2
-categories=cultist,monk
+categories=cultist,monk,melee
 rarity=common
 xp=0
 

@@ -18,37 +18,48 @@
  </tileset>
  <layer name="background" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztlMENwjAUQzND54COAawBVbdodycHIlUo/fn2twJSe3jXPtdxMqWUxgrPzNyB6fT/pX/JDD/09+rgknkcvAPL36MDy49msL5TQDaAnoPHX8ug6oD1ezrwZGD9qnOI+D0Z0PtgudgMyJvA+Ft7tDqI9u+9D3sdqPzsDlR+dgdKfytDrQO1P7LFyP7RLawfvP61kRu9DwzIO6L23zJX4Rkw//4C/CXDXZCj/Dvq/87BZNm6Wf9eFg9bt8J/EuMNdFFERA==
+   eJztlDsOgCAQBddwCi7hKS00friyFpJQwNsVglq8YjrnzcZE/SDiCfkZo5Rp8S3u6kQ2wO5wF/nIjRzXMwsgFHZiF/lB6c9KG+1od0dyXbnfm3Ujt1PrpTdYN3r0n7TZ/7bf4qPv7437W/rav6u1r21oLvItbsm3upGpwum5QwghhKScrjzV5g==
   </data>
  </layer>
  <layer name="object" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjAL6gBxGBoZcJExv0A60swMJUxN0MzMw9BDAi2jo5w5m2plNbfu7aODWUfsH1v5moJktSLgNakc7mjgItw5wWqUFGOjwH7V/ZNs/0vPfKBgFo4A0AAABGh+L
+   eJztk1EKwjAQRDf0At7Dq7VeohFjP0SvUDyoyUcwLpt2sy3FjxkIlLAzbxIaIgiCWtU7ooGtizuOf4uswNbdwLf2n4XZt9I/dd/vrf0tKvmlHpV9TU5o8Nb4rdqT3+IHn+gV56878se491RmcLbEPy28pdr/J52B50jsJN7/bOBLd8Bzlt5O6Zf4qbuv9M/id5BzNN7cIc0ln+9+15q39HuWo/FKvbfKmgM++OCDD/5/8z84XzCA
   </data>
  </layer>
  <layer name="collision" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJzt0skNACAMA0Gn/6ZpIJ9wxCB2JN4rwBIArIuJs7vvVOm773/irejn++7YPv07/p++t+/e3899AG8Z4tIAYg==
+   eJztlEEKACEMA/X/n/a8ZbHptAcPCQhCTccKZi3L+moLq+NXvOSMwlDqishsGaPSo6Md9tX7d71TM8Y5qI+++wSf+F/gxzeb4Ff/Xtazwld7ZNnT5SvZd6spdZJ/JL9JPv6dp/nSzRnax3zzzTfffPNf5x8lHwCg
   </data>
  </layer>
  <objectgroup name="enemygroup" width="32" height="32">
-  <object name="Cultist" type="cultist" x="224" y="352" width="32" height="32">
+  <object name="2 Skeletons" type="skeleton" x="256" y="160" width="160" height="288">
+   <properties>
+    <property name="level" value="1,1"/>
+    <property name="number" value="2,2"/>
+   </properties>
+  </object>
+  <object name="2 Skeleton Mages" type="skeletonmage" x="704" y="160" width="192" height="320">
    <properties>
     <property name="level" value="2,2"/>
-    <property name="number" value="1,1"/>
+    <property name="number" value="2,2,"/>
    </properties>
   </object>
  </objectgroup>
  <objectgroup name="enemy" width="32" height="32"/>
  <objectgroup name="event" width="32" height="32">
-  <object name="Teleport to Laurelia" type="teleport" x="0" y="0" width="224" height="32">
+  <object name="Teleport to Snow1" type="teleport" x="0" y="288" width="32" height="32">
    <properties>
-    <property name="intermap" value="laurelia.txt,74,142"/>
+    <property name="intermap" value="snow1.txt,30,9"/>
    </properties>
   </object>
-  <object name="Teleport to Snow2" type="teleport" x="992" y="288" width="32" height="32">
+  <object name="Teleport to Snow3" type="teleport" x="256" y="992" width="32" height="32">
    <properties>
-    <property name="intermap" value="snow2.txt,1,9"/>
+    <property name="intermap" value="snow3.txt,6,1"/>
+   </properties>
+  </object>
+  <object name="Teleport to Snow3" type="teleport" x="704" y="992" width="32" height="32">
+   <properties>
+    <property name="intermap" value="snow3.txt,20,1"/>
    </properties>
   </object>
  </objectgroup>
