@@ -2,7 +2,7 @@
 <map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
  <properties>
   <property name="tileset" value="outside.txt"/>
-  <property name="title" value="Snow Mountain"/>
+  <property name="title" value="Mountain Cave"/>
  </properties>
  <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
   <image source="tiled_collision.png" width="480" height="32"/>
@@ -18,27 +18,27 @@
  </tileset>
  <layer name="background" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJzt1LEJACAMBdFIpsjIgujK4gYaIipe8eoLv4glEQNwhaJxPP2scejTf60/e9uJ37C7XwO3H9rinZFtz070/+4DwE86CBTeRw==
+   eJztlEEOACEIA3nRPtm3ejdhU0oVl+yBI51KG4eZjQ/Ns0y1h2o+Mr+H+pyqO9Ll/tHeZdgMS/VWll39dpUHJZ/xodjLeNm1q9LYva/SQDP1tE91CtE+zff0FXmyXc/kgfDZOyEebuJ7HVfwoze4jR/hdOVnPXTgR/4zdP+t64yHrN8JBIi2QA==
   </data>
  </layer>
  <layer name="object" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJxjYMAOtBlxSBAA5OobtX/UfmTgRqY55OobDKCbmbrm9ZJoXgeV7e8atX/U/iFkfzNQfQsO3IZmVjsOdTOAeCaU3Upl/9ASULvsgQFiyyBqxz0MEJsGRu0f2fbjy/uU4KFUBoyCUTAKRhYAADwxJlg=
+   eJzVlw0OgjAMhZdwX0QMqLiD6G0diUua5vUHtok2WUyI+L2W9lFD+K8YuxCe6bzSOXdHq/l+LCnn2yfvPn2ejPNoUCOqwYr+BzRcGvXJquGqnKyvFV+LmJhDY35U+m4gzJr8KDByzOA53HfyUX6ISaNWrtHBQkE9oWTupgp5lMx+DX7WsKcWmY/6yTPzkg6vlsznHm/d6/FFT49K9fc8U+SLVFMJ36sBadL8eGQ1tuq4R8Ok8NFv8zpyPVu9xsunGmgsTMfW2ZL4o+B1SCfyRa8OK//Z0adaX1p1lfj0utWnJXNBPYV+j+vS6mT5sqZByq0mX7pPYml8tF973sml/C27bQt+qYYafHr9KL6236Pa5F1B2zc5i3rf2m/e/7RIm7XnItYbcdd3Sg==
   </data>
  </layer>
  <layer name="collision" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztkkEKACAIBO3/n+7UpTysoYIwAxLB6khk9rKuU+W3Dz/+03fqvqvlzYn4M8GPP5qP/m8ln7Gv51f27/Z7edWd8f7ePNVfAf45/qqa4AcAgF42J0YAog==
+   eJztlVEOgDAIQ939L+2nxlBooduXS4zGga9jHV6XNhZ4PjV+/sNd5LVDgxLr1qCubdc+sbU/6ZOTfNZvTr7q7Yn/OufJdf66ua6z79iz6fodo1sLtcdWnI5vEb/KY2JYfvf7me4Jn9WQ5aAepdR66ik0l2n55u3ivzVE7yJvTvjKf4PR1eFn8UxsNcfwo/qqfEYfOo/ozvIrDagHOPlZDKptxlf7b6VR4XeHgz/RMOVPNSj8qJ99NbA+qDzC9E6ll6rejFg3+p4BAw==
   </data>
  </layer>
  <objectgroup name="enemygroup" width="32" height="32">
-  <object name="2 Skeletons" type="skeleton" x="128" y="192" width="608" height="160">
+  <object name="1 Skeleton Mage" type="skeletonmage" x="416" y="704" width="192" height="32">
    <properties>
-    <property name="level" value="1,1"/>
-    <property name="number" value="2,2"/>
+    <property name="level" value="2,2"/>
+    <property name="number" value="1,1"/>
    </properties>
   </object>
-  <object name="2 melee cultists" type="melee" x="96" y="480" width="672" height="160">
+  <object name="2 Melee Cultists" type="melee" x="416" y="736" width="192" height="160">
    <properties>
     <property name="level" value="2,2"/>
     <property name="number" value="2,2"/>
@@ -47,19 +47,19 @@
  </objectgroup>
  <objectgroup name="enemy" width="32" height="32"/>
  <objectgroup name="event" width="32" height="32">
-  <object name="Teleport to Snow2" type="teleport" x="640" y="0" width="32" height="32">
+  <object name="Teleport to Snow3" type="teleport" x="32" y="992" width="96" height="32">
    <properties>
-    <property name="intermap" value="snow2.txt,22,30"/>
+    <property name="intermap" value="snow3.txt,21,15"/>
    </properties>
   </object>
-  <object name="Teleport to Snow2" type="teleport" x="192" y="0" width="32" height="32">
+  <object name="Teleport to Snow5" type="teleport" x="896" y="992" width="96" height="32">
    <properties>
-    <property name="intermap" value="snow2.txt,8,30"/>
+    <property name="intermap" value="snow5.txt"/>
    </properties>
   </object>
-  <object name="Teleport to Snow4" type="teleport" x="640" y="416" width="64" height="64">
+  <object name="Teleport to SnowA" type="teleport" x="416" y="0" width="64" height="32">
    <properties>
-    <property name="intermap" value="snow4.txt,2,30"/>
+    <property name="intermap" value="snowa.txt"/>
    </properties>
   </object>
  </objectgroup>
