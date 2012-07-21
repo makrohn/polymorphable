@@ -18,12 +18,12 @@
  </tileset>
  <layer name="background" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztlMENwjAUQzND54COAawBVbdodycHIlUo/fn2twJSe3jXPtdxMqWUxgrPzNyB6fT/pX/JDD/09+rgknkcvAPL36MDy49msL5TQDaAnoPHX8ug6oD1ezrwZGD9qnOI+D0Z0PtgudgMyJvA+Ft7tDqI9u+9D3sdqPzsDlR+dgdKfytDrQO1P7LFyP7RLawfvP61kRu9DwzIO6L23zJX4Rkw//4C/CXDXZCj/Dvq/87BZNm6Wf9eFg9bt8J/EuMNdFFERA==
+   eJztldEJwzAMRA3ZoHOkHaPNGk3oFs0AgQ5dG2owRnJOsuwW0o/7CAS/8+mULM65C6G716ODlj//J/lPr9MX+b0yGL2mg2dQ4vfIoMSXeiidEyXpgGQOs9drwNQqg23ApMkA8aDlW82hho942Muglo94KGVgwa/5JuTvBhayg9J94DKw4mt7QGWt4Wt7YDV/xAOVgTVf2sUWfKQL60cof2X6o90HTlz/0H9aK/7V62w4Ayk/3H0W8KOHm9AHxY93l/JzH4iXnJ+ytXzOC6XAT59TtgV/T9JdPxr/DcC6Zn0=
   </data>
  </layer>
  <layer name="object" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjAL6gBxGBoZcJExv0A60swMJUxN0MzMw9BDAi2jo5w5m2plNbfu7aODWUfsH1v5moJktSLgNakc7mjgItw5wWqUFGOjwH7V/ZNs/0vPfKBgFo4A0AAABGh+L
+   eJxjYBgFo2AUjAL6gBxGBoZcJExv0A60swMJUxN0MxNWs4iGfu4gwn5aAlLs76KBW0ftH1j7m4FmtiDhNqgd7WjiINw6wGmVFmCgw3/U/pFt/0jPf6Ng8AH3AbY/adR+vAAApaEcgA==
   </data>
  </layer>
  <layer name="collision" width="32" height="32">
@@ -49,6 +49,13 @@
   <object name="Teleport to Snow2" type="teleport" x="992" y="288" width="32" height="32">
    <properties>
     <property name="intermap" value="snow2.txt,1,9"/>
+   </properties>
+  </object>
+  <object name="Require Juggernaut Talisman" type="teleport" x="768" y="448" width="32" height="32">
+   <properties>
+    <property name="intramap" value="24,24"/>
+    <property name="msg" value="You need the Juggernaut Talisman to proceed!"/>
+    <property name="requires_not" value="fulljugg"/>
    </properties>
   </object>
  </objectgroup>
