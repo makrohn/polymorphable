@@ -1,4 +1,5 @@
 name=Juggernaut
+humanoid=true
 level=1
 categories=juggernaut
 rarity=commons
