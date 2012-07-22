@@ -41,7 +41,7 @@ max_quantity=25
 [item]
 id=50
 name=Robes
-level=5
+level=10
 quality=normal
 type=body
 icon=112,16
@@ -52,7 +52,7 @@ loot=clothes
 [item]
 id=51
 name=Leather Armor
-level=5
+level=10
 quality=normal
 type=body
 abs=1,1
@@ -64,7 +64,7 @@ loot=leather_armor
 [item]
 id=100
 name=Sword
-level=5
+level=10
 quality=normal
 type=main
 icon=96,0
@@ -77,7 +77,7 @@ loot=sword
 [item]
 id=101
 name=Hero's Sword
-level=5
+level=10
 quality=normal
 type=main
 icon=97,1
@@ -91,7 +91,7 @@ loot=sword
 [item]
 id=136
 name=Reversion Talisman
-level=5
+level=10
 quality=normal
 type=quest
 icon=98
@@ -102,7 +102,7 @@ loot=gem
 [item]
 id=198
 name=Skeleton Key
-level=5
+level=10
 quality=normal
 type=quest
 icon=102,2
@@ -113,7 +113,7 @@ pickup_status=skelkey
 [item]
 id=199
 name=Fairy Flower
-level=5
+level=10
 quality=normal
 type=quest
 icon=103,2
@@ -124,7 +124,7 @@ pickup_status=flowerfound
 [item]
 id=200
 name=Bat Talisman
-level=5
+level=10
 quality=normal
 type=off
 icon=114,2
@@ -136,7 +136,7 @@ pickup_status=battalisfound
 [item]
 id=300
 name=Snake Talisman
-level=5
+level=10
 quality=normal
 type=off
 icon=115,3
@@ -149,7 +149,7 @@ pickup_status=snaketalis
 [item]
 id=400
 name=Ghost Talisman
-level=5
+level=10
 quality=normal
 type=off
 icon=116,4
@@ -161,7 +161,7 @@ pikckup_status=ghosttalis
 [item]
 id=498
 name=Half of Juggernaut Talisman
-level=5
+level=10
 quality=normal
 type=quest
 icon=99,3
@@ -174,7 +174,7 @@ pickup_status=1stjugg
 [item]
 id=499
 name=Half of Juggernaut Talisman
-level=5
+level=10
 type=quest
 quality=normal
 icon=98,2
@@ -187,7 +187,7 @@ pickup_status=2ndjugg
 [item]
 id=500
 name=Juggernaut Talisman
-level=5
+level=10
 quality=normal
 icon=101,3
 type=off

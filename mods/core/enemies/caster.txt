@@ -1,6 +1,6 @@
 name=Cultist Mage
 level=2
-categories=cultist,caster
+categories=cultist,caster,ranged
 rarity=common
 xp=0
 

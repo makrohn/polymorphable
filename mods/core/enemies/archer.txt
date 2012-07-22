@@ -1,6 +1,6 @@
 name=Cultist Archer
 level=2
-categories=cultist,archer
+categories=cultist,archer,ranged
 rarity=common
 xp=0
 
