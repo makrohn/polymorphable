@@ -18,7 +18,7 @@
  </tileset>
  <layer name="background" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztlu0JwjAQhpMsoR3DHy6iriD0jzpOQbqcukZbTJDC9XpJLl8tioUHTCk+eXOXNkJ8rnMhOilErxkk7RkvfP+Oxs3Cfi54nmbcevwwi8+Pc2Ofi1pN/Wbsy8/5f5ivEfQ8R/9Gs9VUiufPSa3m4HmH+m31aIlnXX5bfmodY3s/xs+Fylsqf2xtbP6U/QdrXnL9uQ7XeoX4qXpS+3zt/gupR8n+Xyv/3/9dft8z0E/NNxWu/ymnvOSy/l5OGX7cj88f5owEqTK4c/bfQ857hNMnMCv17ub6OzmvEadOufLn8uM1WMpv+35DvwuXP+UdGeLfoz2yU3H+kPMf9BvXQf8+ak7gXqgzJv/IRXPV3BLWHPIGaZepKQ==
+   eJztl20KgzAMhpteYvMY+7EjDbyRMHa5bddQWYsUYkzb9EvZmPCCleKTN0lrVWq5bo00glKT0Qw8x130+Z2Mh535UtE47fgR4WMvMT71TXkh9XrNt+OYf8n7sb9B8XE6/snobNRpGb+mer0VjTuV76vHg5kb4vv8c3nM7f0cvlSc31b+c2vj45esP1zzlvmXMkL5SuFz9eTW+dH9l1KPlv1/lP8//7v4sTmYz8VbKin/BWu9YV/+BGvNP86n5w97RsLqKrBr9t8Ttj0i6RPsldu7pfwRtjWS1KmW/1p8moO9+L7vN+aHFOKX7JEp/Kvxc9EL193n8FPOf5hvWfh/akzwX5p/WofSvDt9APBzrfQ=
   </data>
  </layer>
  <layer name="object" width="32" height="32">
@@ -51,44 +51,9 @@
     <property name="intermap" value="castle3.txt,30,22"/>
    </properties>
   </object>
-  <object name="Fire Trap" type="run_once" x="384" y="960" width="32" height="32">
-   <properties>
-    <property name="power" value="33"/>
-    <property name="power_damage" value="100,100"/>
-    <property name="power_path" value="0,0,12,30"/>
-   </properties>
-  </object>
-  <object name="Fire Trap" type="run_once" x="416" y="960" width="32" height="32">
-   <properties>
-    <property name="power" value="33"/>
-    <property name="power_damage" value="100,100"/>
-    <property name="power_path" value="0,0,13,30"/>
-   </properties>
-  </object>
-  <object name="Fire Trap" type="run_once" x="448" y="960" width="32" height="32">
-   <properties>
-    <property name="power" value="33"/>
-    <property name="power_damage" value="100,100"/>
-    <property name="power_path" value="0,0,14,30"/>
-   </properties>
-  </object>
-  <object name="Fire Trap" type="run_once" x="384" y="992" width="32" height="32">
-   <properties>
-    <property name="power" value="33"/>
-    <property name="power_damage" value="100,100"/>
-    <property name="power_path" value="0,0,12,31"/>
-   </properties>
-  </object>
-  <object name="Teleport to Castle1" type="teleport" x="416" y="992" width="32" height="32">
+  <object name="Teleport to Castle1" type="teleport" x="384" y="992" width="96" height="32">
    <properties>
     <property name="intermap" value="castle1.txt,14,5"/>
-   </properties>
-  </object>
-  <object name="Fire Trap" type="run_once" x="448" y="992" width="32" height="32">
-   <properties>
-    <property name="power" value="33"/>
-    <property name="power_damage" value="100,100"/>
-    <property name="power_path" value="0,0,14,31"/>
    </properties>
   </object>
  </objectgroup>

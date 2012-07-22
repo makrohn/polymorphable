@@ -1,0 +1,16 @@
+name=Shade of Elder Thomas
+
+talker=true
+
+gfx=elder
+render_size=64,64
+render_offset=32,58
+anim_frames=1
+anim_duration=30
+
+[dialog]
+him=Daphne, I'm projecting to you via telepathy!
+him=I was reading my brother's ancient scrolls, and discovered that Zalkaz has the power to summon hordes of bats.
+him=Do not face him without polymorphing into a juggernaut first!
+him=Avoid him when he summons the bats, and then use your Holy Sword power to knock them all out in one swing of your sword!
+him=I wish you luck.

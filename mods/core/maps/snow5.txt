@@ -136,7 +136,7 @@ intermap=snow4.txt,29,30
 # Teleport to Snow6
 type=teleport
 location=31,12,1,1
-intermap=snow6.txt
+intermap=snow6.txt,1,4
 
 [event]
 # Teleport to SnowB

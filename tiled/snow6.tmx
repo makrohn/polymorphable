@@ -18,27 +18,33 @@
  </tileset>
  <layer name="background" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJzt0kEKACAIBVGjU3TkIOrK0Q1MFCNmMesn8lsRaURERA80qq4ov1dd+P/5U2mfVsANWjvqB/h5/s32IjZ4a3v/AD/Pt2zPc4NW2+sH2X5WG3iizcg=
+   eJzt1TEKwCAQRNENnsIjS4K5ciobCeyuOqvFFL+xeYOEmC+RzNjG7iTyKCH9kvRe4AaLj9xg9VEbPH7hHUDuYLfv3YDwPRtQvmVLhP23I9o91be8V7PvWTNq99/pz0bT/BXGjI+06fu//SiPMRbXB+8Z5E4=
   </data>
  </layer>
  <layer name="object" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztlUEKgCAQRY2uW6ewUor2te2kuUgQMZmckSGZBx/c6JfhoUoJgiAIf2LolBoJUopxey1BYrYe1n8h7p7DAvtr8aV/rXBX7c6cXrIEfcatZ+ZZUQN1L2QnnEGJe5QOcPfrhGMpDw+X81m34mCJex4KBzHvHoUD3P068iqX1t5BjHsejIMUfy7GAe7+3J8LTamDNy+fOvY=
+   eJxjYMAPtBkJKKAxGO725wLNz8NjB63t7wCa34nHDjegXCIzbd2whAg/9tLYDcQAWrihg0Qzqe0GUu2nthvIsb+LivY3A82aMMLDYKDtJycOqGk/OW6gtv0wN7RAMT63TATKtdK4PIS5pQ3JnnaoGK3tHgmAHvVZN9COHihGtw9f+u2mkttAaWgGEM/Ekmbw2U9OeUQqGLUft1wzEWUQqWAiUtlGbBnSjKaHEjxaZo2CUYAJAEXALtQ=
   </data>
  </layer>
  <layer name="collision" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztldsNACAIA3X/pV0AECwoJr3EP8pF4mMMQgghHZiXl+R/ScRftX9PvZZHsXpW+yPzsmaI+G9kOvu1GUfOcKZfqtHqM9ye/VsZxP8i28l/8m5WzH/XL9t/cu+kWsSP8ru/4i8nexYjMACn
+   eJztlUEOwCAIBPH/n/ZOdBFl5QCTmJq0ZTbaosieoa6/qeAfxhA1z4KVwVOTkcFbLzrDTa1of69Bvv9mDyLxZmD1At370HNMVjlOsjFyrOaZfuvMOh2W93X9ke/H94X2zvJHUN2PaD++xzjjPf//7h1Wv2maikxMFACF
   </data>
  </layer>
  <objectgroup name="enemygroup" width="32" height="32">
-  <object name="2 Ranged Cultists" type="ranged" x="96" y="704" width="192" height="64">
+  <object name="2 Melee Cultists" type="melee" x="96" y="192" width="96" height="96">
    <properties>
     <property name="level" value="2,2"/>
     <property name="number" value="2,2"/>
    </properties>
   </object>
-  <object name="2 Melee Cultists" type="melee" x="448" y="864" width="128" height="64">
+  <object name="2 Ranged Cultists" type="ranged" x="224" y="192" width="160" height="160">
+   <properties>
+    <property name="level" value="2,2"/>
+    <property name="number" value="2,2"/>
+   </properties>
+  </object>
+  <object name="2 Melee cultists" type="melee" x="416" y="608" width="64" height="64">
    <properties>
     <property name="level" value="2,2"/>
     <property name="number" value="2,2"/>
@@ -47,19 +53,26 @@
  </objectgroup>
  <objectgroup name="enemy" width="32" height="32"/>
  <objectgroup name="event" width="32" height="32">
-  <object name="Teleport to Snow4" type="teleport" x="96" y="800" width="64" height="64">
+  <object name="Teleport to SnowC" type="teleport" x="768" y="576" width="64" height="64">
    <properties>
-    <property name="intermap" value="snow4.txt,29,30"/>
+    <property name="intermap" value="snowc.txt,18,30"/>
    </properties>
   </object>
-  <object name="Teleport to Snow6" type="teleport" x="992" y="384" width="32" height="32">
+  <object name="Alert" type="run_once" x="288" y="96" width="32" height="32">
    <properties>
-    <property name="intermap" value="snow6.txt,1,4"/>
+    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="msg" value="Bring ssssacrifices for Zalkaz here!"/>
+    <property name="tooltip" value="Sign"/>
    </properties>
   </object>
-  <object name="Teleport to SnowB" type="teleport" x="416" y="640" width="64" height="64">
+  <object name="Teleport to Snow7" type="teleport" x="256" y="0" width="32" height="32">
    <properties>
-    <property name="intermap" value="snowb.txt,17,30"/>
+    <property name="intermap" value="snow7.txt,22,46"/>
+   </properties>
+  </object>
+  <object name="Teleport to Snow5" type="teleport" x="0" y="128" width="32" height="32">
+   <properties>
+    <property name="intermap" value="snow5.txt,30,12"/>
    </properties>
   </object>
  </objectgroup>
