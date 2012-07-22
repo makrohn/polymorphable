@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <properties>
+  <property name="tileset" value="town.txt"/>
+  <property name="title" value="Mountain Shop"/>
+ </properties>
+ <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
+  <image source="tiled_collision.png" width="480" height="32"/>
+ </tileset>
+ <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32">
+  <image source="generic_background.png" width="864" height="832"/>
+ </tileset>
+ <tileset firstgid="718" name="small_objects" tilewidth="32" tileheight="64">
+  <image source="small_objects.png" width="671" height="512"/>
+ </tileset>
+ <tileset firstgid="878" name="town_buildings" tilewidth="32" tileheight="128">
+  <image source="town_buildings.png" width="672" height="768"/>
+ </tileset>
+ <layer name="background" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJybx8DAMG8Uj+JRPIpH8SgexaN4FI/iUYwVRzCi4n5GTDF8ctS2n1RMDft/QDHMTHT+cLdfiImBQYQJYSY6nx7xjy/d0dr/A53+RrL9uNxErl4AJShV1g==
+  </data>
+ </layer>
+ <layer name="object" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGwSgYBaNgcIJGZgaGmUC8GEovgtLY8Gwc4k3M5NvfANS7mUQ9b6E0MyOErqfQfmLACzzqqGn/uwGwH2T2MyB+DmVj49PS/utEYlh8g8BfJgaGf0zUsZ9SMGr/0LV/BpbybBkzbjlseBma/QAAJTaX
+  </data>
+ </layer>
+ <layer name="collision" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzt00EKACAIRFHD7n/mlrlp45QV/Aft0oE0MwAAAOBNbdNR8j1Z20MPJV+993u+OuOq/B7q3ObeVLz/qR7k389f7Xr2bwwgGwBd
+  </data>
+ </layer>
+ <objectgroup name="enemygroup" width="32" height="32"/>
+ <objectgroup name="enemy" width="32" height="32">
+  <object name="Shopkeep" type="skeleton" x="416" y="800" width="32" height="32"/>
+  <object name="Shopkeep" type="skeleton" x="544" y="800" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="event" width="32" height="32">
+  <object name="Teleport to Snow5" type="teleport" x="544" y="992" width="32" height="32">
+   <properties>
+    <property name="intermap" value="snow5.txt,13,22"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="npc" width="32" height="32">
+  <object name="Shop Chest" type="shopchest" x="384" y="704" width="32" height="32">
+   <properties>
+    <property name="" value=""/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

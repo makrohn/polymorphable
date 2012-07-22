@@ -142,5 +142,5 @@ intermap=snow6.txt
 # Teleport to SnowB
 type=teleport
 location=13,20,2,2
-teleport=snowb.txt
+intermap=snowb.txt,17,30
 

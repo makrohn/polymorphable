@@ -59,7 +59,7 @@
   </object>
   <object name="Teleport to SnowB" type="teleport" x="416" y="640" width="64" height="64">
    <properties>
-    <property name="teleport" value="snowb.txt"/>
+    <property name="intermap" value="snowb.txt,17,30"/>
    </properties>
   </object>
  </objectgroup>
