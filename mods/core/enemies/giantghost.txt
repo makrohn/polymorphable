@@ -27,5 +27,5 @@ quest_loot=1stjugg,2ndjugg,499
 accuracy=100
 avoidance=0
 
-dmg_melee_min=3
-dmg_melee_max=3
+dmg_melee_min=4
+dmg_melee_max=4

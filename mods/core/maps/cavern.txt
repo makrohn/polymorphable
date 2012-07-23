@@ -400,7 +400,7 @@ mapmod=object,75,72,879;object,76,72,879;object,77,72,879;collision,75,72,1;coll
 type=run_once
 requires_status=evil_unleashed
 location=75,73,4,2
-mapmod=object,75,72,135;object,76,72,0;object,77,72,0;object,78,72,133;collision,76,72,0;collision,77,72,0
+mapmod=object,75,72,880;object,76,72,0;object,77,72,0;object,78,72,878;collision,76,72,0;collision,77,72,0
 
 [event]
 # Carrots

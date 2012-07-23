@@ -28,7 +28,7 @@
  </layer>
  <layer name="collision" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztlUEOwCAIBPH/n/ZOdBFl5QCTmJq0ZTbaosieoa6/qeAfxhA1z4KVwVOTkcFbLzrDTa1of69Bvv9mDyLxZmD1At370HNMVjlOsjFyrOaZfuvMOh2W93X9ke/H94X2zvJHUN2PaD++xzjjPf//7h1Wv2maikxMFACF
+   eJztlksOACEIQ/H+l549cfhoKybyEqMLQxtQVOSfoebTvKA/nCFqXQXLQyYmw0M2HtrDSiy0fuegXn+lBkiyHli9QPc+ax+TmY+IN4aP2bpS33uzosPT3c2/pXfifFm18/QRvK5vEak/o8dnYqPu2Q3/x6Zp7uMDViwAgQ==
   </data>
  </layer>
  <objectgroup name="enemygroup" width="32" height="32">

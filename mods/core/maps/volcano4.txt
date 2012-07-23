@@ -139,5 +139,5 @@ location=23,7,1,1
 hotspot=-16,-16,32,32
 loot=id,24,6,400
 requires_not=ghosttalis
-tooltip=altar
+tooltip=Altar
 

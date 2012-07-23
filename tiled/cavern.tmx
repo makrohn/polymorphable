@@ -104,7 +104,7 @@
   </object>
   <object name="Unblock passage" type="run_once" x="2400" y="2336" width="128" height="64">
    <properties>
-    <property name="mapmod" value="object,75,72,135;object,76,72,0;object,77,72,0;object,78,72,133;collision,76,72,0;collision,77,72,0"/>
+    <property name="mapmod" value="object,75,72,880;object,76,72,0;object,77,72,0;object,78,72,878;collision,76,72,0;collision,77,72,0"/>
     <property name="requires_status" value="evil_unleashed"/>
    </properties>
   </object>
