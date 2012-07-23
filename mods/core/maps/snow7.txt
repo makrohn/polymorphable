@@ -176,6 +176,7 @@ msg=You're home!
 [event]
 # Alert
 type=run_once
+requires_not=theend
 location=22,46,1,1
 msg=TRAPPED!
 

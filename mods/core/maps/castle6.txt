@@ -120,13 +120,14 @@ location=13,14,1,1
 [event]
 # Teleport to Castle5
 type=teleport
+requires_status=2ndjugg
 location=12,31,4,1
 intermap=castle5.txt,17,1
-requires_status=2ndjugg
 
 [event]
 # Alert
 type=run_once
+requires_not=2ndjugg
 location=12,30,4,1
 msg=TRAPPED!
 

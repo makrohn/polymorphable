@@ -1,6 +1,8 @@
 [header]
 width=32
 height=32
+tileset=outside.txt
+title=Safe Room
 
 [layer]
 type=background

@@ -120,6 +120,7 @@ location=12,18,1,1
 [event]
 # Alert
 type=run_once
+requires_not=1stjugg
 location=10,30,6,1
 msg=TRAPPED!
 sfx=quake.ogg
