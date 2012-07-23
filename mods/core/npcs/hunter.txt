@@ -24,3 +24,9 @@ you=What else do you have?
 him=Well, I have some old leather armor.  It should help.
 you=Ew, it smells like wet socks.
 him=No, that's just the smell o' tha woods!  Don't look a gift horse in the mouth!
+
+[dialog]
+requires_status=theend
+him=Ah, hey, you kill Zalkaz!  I would have done it myself, but you know how it is.
+you=How is it exactly?
+him=Ah, er, well...  oh look!  Squirrel!

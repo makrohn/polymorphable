@@ -12,3 +12,8 @@ anim_duration=30
 
 [dialog]
 him=Oh, I have some fresh carrots and watermelons, they're good for what ails you!
+
+[dialog]
+requires_status=theend
+him=Thanks for saving the village!
+him=Now that we're so famous, maybe soon some more vendors will come to town.

@@ -22,3 +22,9 @@ him=Give the Evil One a slice for me, too!
 [dialog]
 requires_not=evil_unleashed
 him=Good morning!  I just finished some work on a new sword last night, and I'm showing it off to anyone who comes by.
+
+[dialog]
+requires_status=theend
+him=Daphne, you've destroyed Zalkaz!  I'm proud of you for putting that sword to good use.
+you=So that means I'll get a refund?  Come on, this is like free advertising.
+him=No way!  But I'll tell you what, I'll cook you dinner tonight.

@@ -11,3 +11,6 @@ anim_duration=30
 [dialog]
 her=Welcome to the Church!
 
+[dialog]
+requires_status=theend
+him=I can already feel the spirits resting more easily in the graveyard.  Thank you, Daphne, for everything you've done!

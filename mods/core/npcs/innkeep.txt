@@ -10,3 +10,7 @@ anim_duration=30
 
 [dialog]
 him=Welcome to the tavern.  Would you like some chicken wings?
+
+[dialog]
+requires_status=theend
+him=I expect suitors will soon be coming to town looking for you.  Ah, to be young again.

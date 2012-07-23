@@ -67,3 +67,11 @@ you=A housewarming present I have to fetch myself?  Awww, you shouldn't have.
 him=Ha!  You're my girl.  The Fairy Flower is found north of town, across the river.  Here's a sword just in case you find trouble.
 you=Aww, thanks.  All the years of learning swordplay from Clara shouldn't go to waste, then, if I run into any vicious logs.
 him=You never know!
+
+[dialog]
+requires_status=theend
+him=I know your parents will rest much better knowing that their work is finished.
+you=May they rest in peace...  Thank you, Thomas.
+him=Be wary, though.  Zalkaz is but one of the many evils who threaten our world.  I hope that someday you can venture beyond Laurelia, where the world may have use of your sword once more.
+you=Oh great, just what I always wanted...  more bats and snakes to kill.
+#him=By the way, you should go into my house.  There's some people there who would love to meet you.
