@@ -112,14 +112,14 @@ slow_duration=150
 
 [power]
 id=30
-name=Spit Acid
+name=Shoot
 type=missile
 icon=9
-new_state=cast
+new_state=shoot
 face=true
 directional=true
 requires_los=true
-gfx=venom.png
+gfx=arrow.png
 sfx=shock.ogg
 use_hazard=true
 rendered=true

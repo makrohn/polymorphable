@@ -7,7 +7,7 @@ xp=0
 sfx_prefix=archer
 gfx_prefix=archer
 animations=archer
-animation_speed=50
+animation_speed=75
 
 loot_chance=100
 
