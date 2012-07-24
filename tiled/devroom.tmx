@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <properties>
+  <property name="tileset" value="inside.txt"/>
+  <property name="title" value="Dev Room"/>
+ </properties>
+ <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
+  <image source="tiled_collision.png" width="480" height="32"/>
+ </tileset>
+ <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32">
+  <image source="generic_background.png" width="864" height="832"/>
+ </tileset>
+ <tileset firstgid="718" name="small_objects" tilewidth="32" tileheight="64">
+  <image source="small_objects.png" width="671" height="512"/>
+ </tileset>
+ <tileset firstgid="878" name="inside_objects" tilewidth="32" tileheight="128">
+  <image source="inside_objects.png" width="672" height="768"/>
+ </tileset>
+ <layer name="background" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztzbEJAAAIBLF3BPdf1g0EO4sErr4EAAB+6brn7+/v778b374KDw==
+  </data>
+ </layer>
+ <layer name="object" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzt1DEKACAMBMGD/NCvaP4vwVYEg4LIDlyVYrtIAAAAwDuqSZ5Ys3P9DPr06f/bLzZ2ux9m/2118412B/OVFS0=
+  </data>
+ </layer>
+ <layer name="collision" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+</map>
