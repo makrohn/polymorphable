@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
  <properties>
-  <property name="tileset" value="outside.txt"/>
+  <property name="tileset" value="inside.txt"/>
   <property name="title" value="Castle Sewer"/>
  </properties>
  <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
@@ -10,25 +10,25 @@
  <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32">
   <image source="generic_background.png" width="864" height="832"/>
  </tileset>
- <tileset firstgid="718" name="small_objects" tilewidth="32" tileheight="64">
-  <image source="small_objects.png" width="671" height="512"/>
+ <tileset firstgid="718" name="furniture" tilewidth="32" tileheight="64">
+  <image source="furniture.png" width="671" height="512"/>
  </tileset>
- <tileset firstgid="878" name="outside_objects" tilewidth="32" tileheight="128">
-  <image source="outside_objects.png" width="672" height="768"/>
+ <tileset firstgid="878" name="inside_objects" tilewidth="32" tileheight="128">
+  <image source="inside_objects.png" width="672" height="768"/>
  </tileset>
  <layer name="background" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztlm0OgyAMQDHZ1zXmnRbnLczmLQS5gWcdZph0TVsB2fZDTF4wkfTRUoiTUmoq7JZbpVTjuG+grd5xKGL8I4prwTv+xvkHP+oE/4IRXBbNsZnyl/KT1pOz/jE1HwW/BvuQq/8MsT7D+GPzfzieK1yEGtSOE8NaXty6MU1AH0h1W9ZqCb9GIzxH0E/Fkc5sCAdHhzgy+XMxzo4rQ677DPpxzlv6L8Q/AL9FowHz4Z6F3n9Ur/dEP0j135J/6/d8fjrvoeJJZ7SvPmuV4l+Y/bWQTywp/ph74Vv+X/1/FH/xF3/x/8u/d16v5v+p
+   eJztlE0OwiAQRiFq9Bp6D49hqLcw2lv0h4X7nlWINo6TYZhCExayeKFRyuMbmE5KqalSlK1W6pbBznEhkPqNm9tkcF3JP6J1LXjG/4X83WfsM/IPjMuiOXal/Fw+bj9c/aV7gPmlNR+Rn7qXKf5YDSzxm5Qzgfff3fiIcIjUIBXvD50dxCTkhTWa92oJf6+/PYP7CPqpdbieleaXfM+4O7J3HANI/JJ+gn6cObf/Y/4O+C0aBzAfntmS7x++6y1xH7j65+b3Z/7cvEcTWI/r0Vb/1irFP+P9p0CepaT6m8J+6XtrUf3VX/3VX8r/z7wAQXIHMw==
   </data>
  </layer>
  <layer name="object" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztk0sOgDAIBUl6X40av8fwexAvKN26KWqfaMpLZlkGUiCypJzSEeUgCifvYwfMVl3wIyLx18Ae/+TX+n/k/JngRpB+ScyPq91w7TbAV+5P0z8yEzNH7kXqX5iV2ZT85/i96SL0ctfv3w2C3Q3RP/C/FfOb3/zmT9V/ADdLN1w=
+   eJzt1ksKgDAMBNBAjq7Vvfg5iBc0gnvHkJguZmB2lUdoA4owlZlUZLCOwW3WWTE/K1/8s9jPCH3cz7j/t726dyRzfiT0+/ORd4vE+/6ifO/+/+0vz7lVa/zNuluPIt/zXaYf8T/SwBky56dPnz79nv3qXDpiQH4=
   </data>
  </layer>
- <layer name="collision" width="32" height="32">
+ <layer name="collision" width="32" height="32" visible="0">
   <data encoding="base64" compression="zlib">
-   eJztljkOwCAMBDny/zdHKWgQITYbxxB2pGmQ0HAVhEA8icZK+gncwzX/aKjpZ+c+Avvz3r/EJLTX184pxJu116J39Oc+ev65obaPvL+aN/tPrNTvad0fcbRf3oV3/6v/h2TMCvbZZ3/f/u6cJbkC8A==
+   eJztltEKgCAMRS39/2+OPfQim82tOcR74LwIeZKRVArI5ApW07+dZ6DnG+NMvyb3PaDPu2r+o701Su/fGwH1udn1oi/jmRn1K+NsX/r+LHf0n/0vduqPjO5btPbftcz+yv8PzVoU6KOP/rn903kAHnsCwQ==
   </data>
  </layer>
  <objectgroup name="enemygroup" width="32" height="32">

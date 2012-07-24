@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
  <properties>
-  <property name="tileset" value="town.txt"/>
+  <property name="tileset" value="inside.txt"/>
   <property name="title" value="Castle Basement"/>
  </properties>
  <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
@@ -10,20 +10,20 @@
  <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32">
   <image source="generic_background.png" width="864" height="832"/>
  </tileset>
- <tileset firstgid="718" name="small_objects" tilewidth="32" tileheight="64">
-  <image source="small_objects.png" width="671" height="512"/>
+ <tileset firstgid="718" name="furniture" tilewidth="32" tileheight="64">
+  <image source="furniture.png" width="671" height="512"/>
  </tileset>
- <tileset firstgid="878" name="town_buildings" tilewidth="32" tileheight="128">
-  <image source="town_buildings.png" width="672" height="768"/>
+ <tileset firstgid="878" name="inside_objects" tilewidth="32" tileheight="128">
+  <image source="inside_objects.png" width="672" height="768"/>
  </tileset>
  <layer name="background" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztk8EKwyAMQNN+39i5926U/UTtD3Q7b4Melu/ovq0KFUoWRWnjLjk8VIS8JJoJACZFURRFUYoyVgCN5bGud8unTmeO3KX4m+oXGgcZ15e5l/J72jUH57swPXDrVdAfwpBcMMOfAvfOJnAeMutP9Tv6zL4c7ae1+p4gYT7YH5oxs/HfLB2ZBYn66bt7/9lyKuDn/iHtv5T/uYn9CuTzFvRjpA/I7KX+/7/nT/1l/bG89sZYAGUGd2Y=
+   eJztk8EKwjAMQOu+Tzx732T4E6s/oDtPYQfzHfXbtkILI6YjxWY7mMOjLYW+JE1GY8yoKIqiKH/G+fDNuyoDx38Pzj6sj0y/+9HPyR8I14e4l/JH6hCD9zVEDfx6EfSnsCgWyPBzoP7ZJs63zPy5fk8n0P85fpxrrAkgXGF/asbswn+dadEsSOSP/z36TzPHDfxUH+L6S/mHxdvPRDwvQT+s1AGIvVT/7z1/6t/WL8kEAc92cw==
   </data>
  </layer>
  <layer name="object" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjIJRMApGHpjJTDvcxDxw/toMxPV0sF+OEcFmZkSVo4f9+AAt7Ef3I6X2E0pDyynwAzX83zAI7JcjEOa44mSg/A9zz3AJfxggJe3Twn5SAT3tx5ZGR5L/R+2njf0zcNQLy5jxyyOrwQcAFvYsNQ==
+   eJxjYBgFo2AUjIJRMApGHmhmZmBooRFuZx44f21moI/9cowINjMjqtxA+p9W9qP7kVL7CaW/Vgr8QA3/tw0C++VwhPlCoNwiZtxxMlD+h7lnuIQ/DJCS9mlhP6mAnvZjS6Mjyf/IYDFQzxIq1X9D0f/UtB8EcNUN3UDcg6fuIAYAAP9UKxg=
   </data>
  </layer>
  <layer name="collision" width="32" height="32">
@@ -56,7 +56,7 @@
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>
-  <object name="Teleport to Castle3" type="teleport" x="480" y="992" width="32" height="32">
+  <object name="Teleport to Castle3" type="teleport" x="480" y="992" width="64" height="32">
    <properties>
     <property name="intermap" value="castle3.txt,14,11"/>
    </properties>
