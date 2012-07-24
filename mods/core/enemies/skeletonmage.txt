@@ -9,7 +9,7 @@ gfx_prefix=skeletonmage
 animations=skeleton
 animation_speed=75
 
-loot_chance=66
+loot_chance=100
 
 # combat stats
 hp=3

@@ -9,7 +9,7 @@ gfx_prefix=giantfireskeleton
 animations=giantskeleton
 animation_speed=75
 
-loot_chance=33
+loot_chance=100
 
 # combat stats
 hp=10
