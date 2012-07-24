@@ -3,6 +3,7 @@ width=32
 height=32
 tileset=town.txt
 title=Castle Balcony
+music=mysticaltheme.ogg
 
 [layer]
 type=background

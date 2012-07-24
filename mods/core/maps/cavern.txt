@@ -3,6 +3,7 @@ width=100
 height=100
 tileset=outside.txt
 title=Cavern
+music=technophobic.ogg
 
 [layer]
 type=background

@@ -3,6 +3,7 @@ width=32
 height=32
 tileset=inside.txt
 title=Dev Room
+music=calmtown.ogg
 
 [layer]
 type=background

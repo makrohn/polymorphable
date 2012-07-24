@@ -3,6 +3,7 @@ width=32
 height=32
 tileset=inside.txt
 title=Castle Sewer
+music=mysticaltheme.ogg
 
 [layer]
 type=background

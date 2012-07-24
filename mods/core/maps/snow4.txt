@@ -3,6 +3,7 @@ width=32
 height=32
 tileset=outside.txt
 title=Mountain Cave
+music=snow_about_a_castle.ogg
 
 [layer]
 type=background

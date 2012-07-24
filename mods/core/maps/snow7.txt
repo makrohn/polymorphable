@@ -3,6 +3,7 @@ width=48
 height=48
 tileset=outside.txt
 title=Zalkaz's Lair
+music=snow_about_a_castle.ogg
 
 [layer]
 type=background

@@ -3,6 +3,7 @@ width=32
 height=32
 tileset=town.txt
 title=Mountain Shop
+music=snow_about_a_castle.ogg
 
 [layer]
 type=background

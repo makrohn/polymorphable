@@ -3,6 +3,7 @@ width=32
 height=32
 tileset=town.txt
 title=Volcano
+music=evil_temple.ogg
 
 [layer]
 type=background
