@@ -10,8 +10,8 @@
  <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32">
   <image source="generic_background.png" width="864" height="832"/>
  </tileset>
- <tileset firstgid="718" name="small_objects" tilewidth="32" tileheight="64">
-  <image source="small_objects.png" width="671" height="512"/>
+ <tileset firstgid="718" name="furniture" tilewidth="32" tileheight="64">
+  <image source="furniture.png" width="671" height="512"/>
  </tileset>
  <tileset firstgid="878" name="inside_objects" tilewidth="32" tileheight="128">
   <image source="inside_objects.png" width="672" height="768"/>
@@ -23,7 +23,7 @@
  </layer>
  <layer name="object" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJzt1DEKACAMBMGD/NCvaP4vwVYEg4LIDlyVYrtIAAAAwDuqSZ5Ys3P9DPr06f/bLzZ2ux9m/2118412B/OVFS0=
+   eJzt1LsJACAQBNED+/UXa00aWZ/XwsKBBvNg0xtMNAMAAAD+0ZJZ9hVh1ddTXF91gvvLt8V7L99Pnz79uP4Ubw3h/7nzpRLr
   </data>
  </layer>
  <layer name="collision" width="32" height="32">
