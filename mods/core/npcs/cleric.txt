@@ -9,7 +9,9 @@ anim_frames=1
 anim_duration=30
 
 [dialog]
-her=Welcome to the Church!
+him=Welcome to the Church!
+him=Come to the Church whenever you are wounded, and I shall heal you.
+restore=all
 
 [dialog]
 requires_status=theend
