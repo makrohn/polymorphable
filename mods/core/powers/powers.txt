@@ -1,4 +1,21 @@
 [power]
+id=0
+name=Swing
+type=effect
+icon=1
+description=Basic melee attack
+new_state=swing
+face=true
+use_hazard=true
+rendered=false
+aim_assist=32
+base_damage=melee
+lifespan=1
+radius=64
+starting_pos=melee
+allow_power_mod=true
+
+[power]
 id=1
 name=Crush
 type=effect
@@ -43,6 +60,46 @@ starting_pos=source
 multitarget=true
 target_neighbor=1
 missile_num=3
+
+[power]
+id=3
+name=Shield
+type=effect
+icon=11
+description=Create a force field that absorbs damage
+requires_mp=1
+new_state=cast
+sfx=shield.ogg
+buff_shield=true
+
+[power]
+id=4
+name=Haste
+icon=12
+description=Double run and attack speed for 8 seconds
+requires_mp=1
+type=effect
+new_state=cast
+face=false
+haste_duration=240
+
+[power]
+id=5
+name=Cleave
+type=effect
+icon=13
+description=Attack all enemies in a wide arc
+requires_mp=1
+new_state=swing
+face=true
+use_hazard=true
+multitarget=true
+aim_assist=32
+base_damage=melee
+lifespan=1
+radius=128
+starting_pos=melee
+allow_power_mod=true
 
 [power]
 id=6
@@ -112,7 +169,7 @@ slow_duration=150
 
 [power]
 id=30
-name=Shoot
+name=Shoot (enemy)
 type=missile
 icon=9
 new_state=shoot
@@ -149,7 +206,7 @@ source_type=hero
 
 [power]
 id=32
-name=Explode
+name=Explode (npc)
 type=effect
 icon=10
 description=Damages nearby enemies
@@ -176,7 +233,7 @@ requires_targeting=false
 
 [power]
 id=33
-name=flametrap
+name=flametrap (trap)
 type=effect
 icon=10
 description=Damages nearby enemies
@@ -238,7 +295,7 @@ cooldown=10000
 
 [power]
 id=36
-name=Summon Bat
+name=Summon Bat (enemy)
 type=spawn
 icon=114
 spawn_type=bat
@@ -308,6 +365,19 @@ multitarget=true
 cooldown=3000
 source_type=enemy
 requires_targeting=false
+
+[power]
+id=132
+name=Enemy Beacon
+description=Bring other enemies into the fight with a dummy attack
+type=effect
+icon=20
+use_hazard=true
+lifespan=1
+radius=256
+multitarget=true
+source_type=hero
+beacon=true
 
 [power]
 id=136
@@ -389,76 +459,3 @@ requires_mp=1
 icon=101
 description=Turn into a powerful knight for a short time
 transform_duration=0
-
-# Powers from Flare
-
-[power]
-id=0
-name=Swing
-type=effect
-icon=1
-description=Basic melee attack
-new_state=swing
-face=true
-use_hazard=true
-rendered=false
-aim_assist=32
-base_damage=melee
-lifespan=1
-radius=64
-starting_pos=melee
-allow_power_mod=true
-
-[power]
-id=3
-name=Shield
-type=effect
-icon=11
-description=Create a force field that absorbs damage
-requires_mp=1
-new_state=cast
-sfx=shield.ogg
-buff_shield=true
-
-[power]
-id=4
-name=Haste
-icon=12
-description=Double run and attack speed for 8 seconds
-requires_mp=1
-type=effect
-new_state=cast
-face=false
-haste_duration=240
-
-[power]
-id=5
-name=Cleave
-type=effect
-icon=13
-description=Attack all enemies in a wide arc
-requires_mp=1
-new_state=swing
-face=true
-use_hazard=true
-multitarget=true
-aim_assist=32
-base_damage=melee
-lifespan=1
-radius=128
-starting_pos=melee
-allow_power_mod=true
-
-[power]
-id=132
-name=Enemy Beacon
-description=Bring other enemies into the fight with a dummy attack
-type=effect
-icon=20
-use_hazard=true
-lifespan=1
-radius=256
-multitarget=true
-source_type=hero
-beacon=true
-

@@ -19,12 +19,34 @@
  </layer>
  <layer name="object" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJybzczAMAeI5wLx7AFgD4Sdo/aP2j9q/6j9Q8V+GBAE4locWAihjOr2w+ytQ7LjMxBnM0JoEKhBcgc17Ef2M7K9yPa3IdkPAzUkhgUh+5Ox2E0IJNLB/kMDbP9dOtmvA8QeeOxCB25ArEsF+5HZIDe4E3CHG1SNLhF2kpv/cYUFqX6mpPzDlh4SSbRz1H7yy39sZSG97Mfmd1jaGyj7YWXNqP2j9o/aT7r9ALpCBGw=
+   eJybzczAMAeI5wLx7AFgD4Sdo/aP2j9q/6j9Q8V+GBAE4locWAihjOr2w+ytg5rfDRTrgeJeqPtqkNxBDfuR/VzHgAqagfIzgHgmELcyo8rVkBgWhOxPZiAdJNLB/kMDbP9dOtmvA8QeeOxCB25ArEsF+5HZIDe4E3CHG1SNLhF2kpv/cYUFqX6mpPzDlh4SSbRz1H7yy3/0spCe9mPzOyztDZT9sLJm1P5R+0ftJ91+AHl+BC4=
   </data>
  </layer>
  <layer name="collision" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztlNsKACAIQ/X/f7p3CbwwFWqD6MXtoJQiFEVR1E1aPEj+hMf6vV7U3Fm/x4/WeLUb85vgR3Nf5XdmId4vahdk5ty1fyK5SGaF0cXf7r/zn5FPPvl/8w9RBgBU
+   eJztlNEKABAQBPn/n/YDyt61m2KmPHE7RxgDAAB2zOZw+k89KTVVp5rf6U/xq/OVtS5/OkupUXNf9SezHPfX9RdUzjn1/yi5TmfHkfLf3n/yneHHj/9v/wJ6JgBY
   </data>
  </layer>
+ <objectgroup name="event" width="32" height="32">
+  <object name="Teleport to Laurelia" type="teleport" x="352" y="992" width="192" height="32">
+   <properties>
+    <property name="intermap" value="laurelia.txt,91,2"/>
+   </properties>
+  </object>
+  <object name="Fairy Flower" type="run_once" x="448" y="480" width="32" height="64">
+   <properties>
+    <property name="hotspot" value="-16,-16,32,64"/>
+    <property name="loot" value="id,14,16,199"/>
+    <property name="requires_not" value="flowerfound"/>
+    <property name="requires_status" value="elderintro"/>
+    <property name="tooltip" value="Fairy Flower"/>
+   </properties>
+  </object>
+  <object name="Teleport to Cavern" type="teleport" x="448" y="384" width="64" height="64">
+   <properties>
+    <property name="intermap" value="cavern.txt,61,36"/>
+    <property name="requires_status" value="cavernexplored"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>

@@ -9,7 +9,7 @@ gfx_prefix=giantghost
 animations=giantghost
 animation_speed=30
 
-loot_chance=100
+loot_chance=300
 
 # combat stats
 hp=15

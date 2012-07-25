@@ -9,7 +9,7 @@ gfx_prefix=knight
 animations=humanoid
 animation_speed=75
 
-loot_chance=100
+loot_chance=200
 
 # combat stats
 hp=6

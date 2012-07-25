@@ -9,7 +9,7 @@ gfx_prefix=firebat
 animations=bat_large
 animation_speed=30
 
-loot_chance=100
+loot_chance=200
 
 # combat stats
 hp=4

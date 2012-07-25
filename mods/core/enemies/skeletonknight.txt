@@ -9,7 +9,7 @@ gfx_prefix=skeletonknight
 animations=skeleton
 animation_speed=60
 
-loot_chance=100
+loot_chance=200
 
 # combat stats
 hp=6

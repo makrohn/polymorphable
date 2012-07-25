@@ -1,4 +1,4 @@
-name=Fire Skeleton
+name=Giant Fire Skeleton
 level=3
 categories=skeleton,fireskeleton
 rarity=common
@@ -9,7 +9,7 @@ gfx_prefix=giantfireskeleton
 animations=giantskeleton
 animation_speed=75
 
-loot_chance=100
+loot_chance=300
 
 # combat stats
 hp=10

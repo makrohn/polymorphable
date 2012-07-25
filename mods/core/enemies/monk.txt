@@ -9,7 +9,7 @@ gfx_prefix=brawler
 animations=humanoid
 animation_speed=50
 
-loot_chance=100
+loot_chance=200
 
 # combat stats
 hp=4

@@ -9,7 +9,7 @@ gfx_prefix=fireskeleton
 animations=skeleton
 animation_speed=75
 
-loot_chance=100
+loot_chance=300
 
 # combat stats
 hp=10
