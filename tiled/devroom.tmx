@@ -18,17 +18,31 @@
  </tileset>
  <layer name="background" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztzbEJAAAIBLF3BPdf1g0EO4sErr4EAAB+6brn7+/v778b374KDw==
+   eJztzbEJAAAIwDA9wf+f9QYHQSSBzo0AAIBbKuf5+/v7f/hvaqGjCSU=
   </data>
  </layer>
  <layer name="object" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJzt1LsJACAQBNED+/UXa00aWZ/XwsKBBvNg0xtMNAMAAAD+0ZJZ9hVh1ddTXF91gvvLt8V7L99Pnz79uP4Ubw3h/7nzpRLr
+   eJxjYBgFo2AUjIJRMApGwSgYBaNg8IA2ZgaGZjJwOzP17CcFbAHibVS2fz0QbyDRvIHy/2CwP5rK4f+ciTQ9F5gG1v/Utn8jEG8i0jxQ2J9nGNnpj5r2gwCoPGtBw91A3APErTgwsQAANOwgzw==
   </data>
  </layer>
  <layer name="collision" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+   eJzt1EEKACAIRFGj+9+5TUGLiCJHW/wH7tKJCM0AAACAf5SH8sqvvU6Ms1n5c59XfmSfxxzF+2fn39whM1/x/yP7VnN2u0W9f9QaMHMAXQ==
   </data>
  </layer>
+ <objectgroup name="event" width="32" height="32">
+  <object name="Teleport to Laurelia" type="teleport" x="448" y="960" width="64" height="32">
+   <properties>
+    <property name="intermap" value="laurelia.txt,20,81"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="npc" width="32" height="32">
+  <object name="Pennomi" type="pennomi" x="352" y="704" width="32" height="32"/>
+  <object name="Makrohn" type="makrohn" x="416" y="704" width="32" height="32"/>
+  <object name="Igorko" type="igorko" x="480" y="704" width="32" height="32"/>
+  <object name="Dorkster" type="dorkster" x="544" y="704" width="32" height="32"/>
+  <object name="Clint" type="clint" x="608" y="704" width="32" height="32"/>
+ </objectgroup>
 </map>

@@ -1,0 +1,22 @@
+name=Matthew Krohn
+talker=true
+portrait=makrohn
+
+gfx=makrohn
+render_size=64,64
+render_offset=32,58
+anim_frames=1
+anim_duration=30
+
+[dialog]
+him=A few months ago, I downloaded FLARE and decided to start modding for it.  I was interested in doing maps and enemies so much as fleshing out the small Frontier Clint Bellanger created.
+him=So I created a bunch of new npcs and quests and familiarized myself with how the Flare modding system worked.  I couldn't do any major changes, though, with my meager programming knowledge.
+him=Then during the art portion of the LPC, Pennomi had seen the extra quests I'd done, and recruited me to the Polymorphable project.
+him=So, I fleshed out a basic quest to get us started, and then used the great tilesets and inspiring art from the Phase 1 LPC to get us some dungeons!
+him=It was important to me as well to have a female protagonist, as even in the indie games scene, there don't seem to be many.  Just take a look at the Humble Indie Bundle.
+him=That was inspiration, too, and a bit of an ego trip, as I hope my daughter turns out smart, powerful, and sassy, just like the Daphne of Laurelia.
+him=I can't wait to continue to develop even after the LPC is finished.  I've already started hatching ideas for extra dungeons in the graveyard, a fireplace, the forest, etc, so that we can really explore the backstories of Laurelia's other polyorphable citizens.
+him=Lastly, I learned a lot about the joys of Open Source software.  Though they weren't originally part of the project, what Pennomi and I started clearly inspired Igorko and Dorkster to join in.
+him=They offered elegant and timely bugfixes and features so that Pennomi and I could do more work on the game.  It just happens, and suddenly, the engine improves by leaps and bounds!
+him=And I hope we offered a lot to the FLARE trunk as well, as we tested it, pulled at the seams, and implemented a few new features.
+him=Anyways, I hope you enjoyed Polymorphable, and I hope that the content we continue to produce will just make the game longer, more exciting, and get you more emotionally invested in Laurelia!
