@@ -20,14 +20,15 @@ mods/core/images/menus (except where otherwise noted)
 Tilset compilation
 Features and bugfixes
 Town map
+Power design
 
 Matthew Krohn (AKA makrohn)
 ---------------------------
 mods/core/images/enemies/bomb.png
 mods/core/images/enemies/firebomb.png
 Dungeon maps
-Enemy definitions
-Character, dialogue, and story
+Enemy, item,  design
+Character, dialogue, quest and story design
 
 Igor Paliychuk (AKA igorko)
 ---------------------------
@@ -37,6 +38,7 @@ Justin Jacobs (AKA dorkster)
 ----------------------------
 mods/core/images/powers/lightning.png
 Feature adds and bugfixes
+Menu and UI design
 
 --------------------------------------------------------------
 --------------------------------------------------------------
