@@ -141,4 +141,5 @@ hotspot=-16,-16,32,32
 loot=id,24,6,400
 requires_not=ghosttalis
 tooltip=Altar
+msg=Someone has scrawled here: "The fire skeleton's bombs killed my friend instantly!  If I wasn't a ghost already, I'd have died, too."
 
