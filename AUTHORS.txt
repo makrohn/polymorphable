@@ -1,4 +1,15 @@
-Assets were authored by the following people:
+Code authors:
+=============
+This program was written by the following people:
+
+Thane Brimhall
+Matthew Krohn
+Justin Jacobs
+Igor Paliychuk
+FLARE dev team https://github.com/clintbellanger/flare/wiki/Credits
+
+Asset attribution:
+==================
 
 Thane Brimhall (AKA Pennomi)
 ----------------------------
