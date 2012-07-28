@@ -148,7 +148,7 @@ tooltip=Chest
 type=run_once
 location=25,16,1,1
 hotspot=-16,-16,32,32
-loot=currency,25,17,5
+loot=currency,25,17,10
 mapmod=object,25,16,206
 tooltip=Chest
 
@@ -157,7 +157,7 @@ tooltip=Chest
 type=run_once
 location=24,21,1,1
 hotspot=-16,-16,32,32
-loot=currency,24,22,5
+loot=currency,24,22,10
 mapmod=object,24,21,206
 tooltip=Chest
 

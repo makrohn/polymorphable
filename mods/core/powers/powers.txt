@@ -48,7 +48,7 @@ use_hazard=true
 rendered=true
 base_damage=melee
 lifespan=11
-radius=64
+radius=96
 frame_duration=1
 frame_size=64,128
 frame_offset=32,128
@@ -60,6 +60,7 @@ starting_pos=source
 multitarget=true
 target_neighbor=1
 missile_num=3
+damage_multiplier=200
 
 [power]
 id=3
@@ -97,7 +98,7 @@ multitarget=true
 aim_assist=32
 base_damage=melee
 lifespan=1
-radius=128
+radius=96
 starting_pos=melee
 allow_power_mod=true
 

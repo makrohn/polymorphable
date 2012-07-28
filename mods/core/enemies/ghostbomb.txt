@@ -16,11 +16,11 @@ hp=1
 speed=0
 dspeed=0
 melee_range=64
-threat_range=512
+threat_range=144
 turn_delay=12
 chance_pursue=20
-chance_melee_phys=100
-power_melee_phys=103
+chance_ranged_phys=100
+power_ranged_phys=103
 
 accuracy=100
 avoidance=0
