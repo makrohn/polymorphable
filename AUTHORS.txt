@@ -1,5 +1,3 @@
-(List is in progress)
-
 Assets were authored by the following people:
 
 Thane Brimhall (AKA Pennomi)
@@ -10,6 +8,7 @@ mods/core/images/avatar/female/head_long.png
 mods/core/images/menus (except where otherwise noted)
 Tilset compilation
 Features and bugfixes
+Town map
 
 Matthew Krohn (AKA makrohn)
 ---------------------------
@@ -25,12 +24,14 @@ Feature adds and bugfixes
 
 Justin Jacobs (AKA dorkster)
 ----------------------------
+mods/core/images/powers/lightning.png
 Feature adds and bugfixes
 
 --------------------------------------------------------------
 --------------------------------------------------------------
 
 Many assets were adapted from Liberated Pixel Cup Art entries.  Original images can be found here:  http://lpc.opengameart.org/lpc.opengameart.org/static/lpc-assets/lpc_full_assets.tar.gz
+LPC assets are all dual-licensed under both both GNU GPL 3.0 and CC-BY-SA 3.0.
 
 Jonathan Palecek (Creative Commons)
 -----------------------------------
@@ -178,25 +179,119 @@ Brandon
 -------
 mods/core/music/calmtown.ogg
 
+Artur Reterski
+---------------
+His work was adapted into the following:
+mods/core/images/icons/icons64.png
+
+--------------------------------------------------------------
+
+The following assets were inherited from the original FLARE project
+
+Clint Bellanger
+---------------
+License: GPL 3.0 and CC-BY-SA 3.0
+art_src/Flare.ico
+art_src/flare_logo.svg
+mods/core/images/logo/icon.png
+mods/core/images/loot/clothes.png
+mods/core/images/loot/coins5.png
+mods/core/images/loot/coins25.png
+mods/core/images/loot/coins100.png
+mods/core/images/loot/gem.png
+mods/core/images/loot/hp_potion.png
+mods/core/images/loot/leather_armor.png
+mods/core/images/loot/mp_potion.png
+mods/core/images/powers/quake.png
+mods/core/images/powers/runes.png
+mods/core/images/powers/shield.png
+mods/core/images/menus/buttons/upgrade.png
+mods/core/images/menus/powers_unlock.png
+mods/core/images/menus/attention_glow.png
+
+His work was adapted into the following:
+mods/core/images/powers/venom.png
+
+Sound Effects Artist - remaxim
+------------------------------
+License: CC-BY-SA 3.0
+/mods/core/soundfx/female_hit.ogg
+/mods/core/soundfx/female_die.ogg
+
+Sound Effects Artist - Iwan "qubodup" Gabovitch
+-----------------------------------------------
+License: Public Domain, CC0
+/mods/core/soundfx/flying_loot.ogg
+
+Sound Effects Artist - Brandon Morris (Augmentality)
+----------------------------------------------------
+License: CC-BY 3.0
+/mods/core/soundfx/powers/shock.ogg
+/mods/core/soundfx/powers/block.ogg
+/mods/core/soundfx/powers/quake.ogg
+/mods/core/soundfx/powers/shield.ogg
+/mods/core/soundfx/level_up.ogg
+
+Sound Effects Artist - Bart K
+-----------------------------
+License: CC-BY-SA 3.0
+You must include a link to OpenGameArt.org when crediting this to Bart K
+/mods/core/soundfx/freeze.ogg
+
+Sound Effects Artist - Mike Koenig
+----------------------------------
+License: CC-BY 3.0
+/mods/core/soundfx/inventory/inventory_wood.ogg
+
+Sound Effects Artist - Cori Samuel
+----------------------------------
+License: Public Domain, CC0
+/mods/core/soundfx/inventory/inventory_book.ogg
+
+Sound Effects Artist - artisticdude
+-----------------------------------
+License: Public Domain, CC-BY 3.0
+/mods/core/soundfx/inventory/inventory_page.ogg 
+/mods/core/soundfx/inventory/inventory_cloth.ogg 
+/mods/core/soundfx/inventory/inventory_leather.ogg 
+/mods/core/soundfx/inventory/inventory_gem.ogg 
+/mods/core/soundfx/inventory/inventory_metal.ogg 
+/mods/core/soundfx/inventory/inventory_coins.ogg 
+
+Sound Effects Artist - Stephan
+------------------------------
+License: Public Domain, CC0
+/mods/core/soundfx/wood_open.ogg 
+/mods/core/soundfx/inventory/inventory_potion.ogg 
+
+Sound Effects Artist - Michel Baradari
+--------------------------------------
+License: CC-BY 3.0
+/mods/core/soundfx/inventory/inventory_object.ogg 
+/mods/core/soundfx/inventory/inventory_maille.ogg 
+/mods/core/soundfx/inventory/inventory_heavy.ogg 
 
 --------------------------------------------------------------
 --------------------------------------------------------------
 
 From other sources on OpenGameArt
 
-Alexandr Zhelanov (CC-BY 3.0)
+Alexandr Zhelanov
 -----------------
+License: CC-BY 3.0
 mods/core/music/mysticaltheme.ogg
 
-Technophobic Android (CC-BY-SA 3.0)
+Technophobic Android
 --------------------
+License: CC-BY 3.0
 mods/core/music/technophobic.ogg
 
-Telaron (GPL 2.0 & GPL 3.0)
+Telaron
 -------
+License: GPL 2.0 & GPL 3.0
 mods/core/music/snow_about_a_castle.ogg
 
-Brandon Morris (CC-BY 3.0)
+Brandon Morris
 --------------
+License: CC-BY 3.0
 mods/core/music/evil_temple.ogg
-
