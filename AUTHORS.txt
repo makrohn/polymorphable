@@ -1,0 +1,202 @@
+(List is in progress)
+
+Assets were authored by the following people:
+
+Thane Brimhall (AKA Pennomi)
+----------------------------
+art_src/menus/frame.xcf
+mods/core/images/avatar/female/clothes.png
+mods/core/images/avatar/female/head_long.png
+mods/core/images/menus (except where otherwise noted)
+Tilset compilation
+Features and bugfixes
+
+Matthew Krohn (AKA makrohn)
+---------------------------
+mods/core/images/enemies/bomb.png
+mods/core/images/enemies/firebomb.png
+Dungeon maps
+Enemy definitions
+Character, dialogue, and story
+
+Igor Paliychuk (AKA igorko)
+---------------------------
+Feature adds and bugfixes
+
+Justin Jacobs (AKA dorkster)
+----------------------------
+Feature adds and bugfixes
+
+--------------------------------------------------------------
+--------------------------------------------------------------
+
+Many assets were adapted from Liberated Pixel Cup Art entries.  Original images can be found here:  http://lpc.opengameart.org/lpc.opengameart.org/static/lpc-assets/lpc_full_assets.tar.gz
+
+Jonathan Palecek (Creative Commons)
+-----------------------------------
+co-author of LPC background cup image
+
+Lanea Zimmerman (AKA Sharm)
+---------------------------
+ - Base tileset (most of which is adapted into tilesets located in tiled/ folder)
+barrel.png
+brackish.png
+buckets.png
+bridges.png
+cabinets.png
+cement.png
+cementstair.png
+chests.png
+country.png
+cup.png
+dirt2.png
+dirt.png
+dungeon.png
+grassalt.png
+grass.png
+holek.png
+holemid.png
+hole.png
+house.png
+inside.png
+kitchen.png
+lava.png
+lavarock.png
+mountains.png
+rock.png
+shadow.png
+signs.png
+stairs.png
+treetop.png
+trunk.png
+waterfall.png
+watergrass.png
+water.png
+co-author of LPC background cup image
+
+Charles Sanchez (AKA CharlesGabriel)
+------------------------------------
+His work was adapted into the following:
+mods/core/images/enemies/bat.png
+mods/core/images/enemies/bat_large.png
+mods/core/images/enemies/firebat.png
+mods/core/images/enemies/venombat.png
+mods/core/images/enemies/zalkaz.png
+mods/core/images/enemies/ghost.png
+mods/core/images/enemies/giantghost.png
+mods/core/images/enemies/snake.png
+mods/core/images/npcs/ghost.png
+
+Stephen Challener (AKA Redshrike)
+---------------------------------
+Character templates (adapted into most humanoid art)
+female_walkcycle.png
+female_hurt.png
+female_slash.png
+female_spellcast.png
+male_walkcycle.png
+male_hurt.png
+male_slash.png
+male_spellcast.png
+male_pants.png
+male_hurt_pants.png
+male_fall_down_pants.png
+male_slash_pants.png
+
+Daniel Armstrong (AKA HughSpectrum)
+-----------------------------------
+Castle work (adapted into tiled/ images)
+castlewalls.png
+castlefloors.png
+castle_outside.png
+castlefloors_outside.png
+castle_lightsources.png
+
+Johannes Sjölund
+----------------
+His work was adapted into the following:
+mods/core/images/enemies/archer.png
+mods/core/images/enemies/fireskeleton.png
+mods/core/images/enemies/giantfireskeleton.png
+mods/core/images/enemies/juggernaut.png
+mods/core/images/enemies/knight.png
+mods/core/images/enemies/skeletonknight.png
+mods/core/images/enemies/skeletonmage.png
+mods/core/images/enemies/skeleton.png
+mods/core/images/avatar/female/sword.png
+mods/core/images/avatar/female/leather.png
+mods/core/images/npcs/gardener.png
+mods/core/images/npcs/guard.png
+mods/core/images/npcs/elder.png
+mods/core/images/npcs/makrohn.png
+mods/core/images/npcs/hunter.png
+mods/core/images/portraits/makrohn.png
+mods/core/images/powers/arrow.png
+
+Lorc
+----
+His icons, with color added by Matthew Krohn, was adapted into the following:
+mods/core/images/icons/icons64.png
+mods/core/images/icons/icons32.png
+
+Joshua Taylor
+-------------
+His work was adapted into the following:
+mods/core/images/loot/watermelon.png
+mods/core/images/loot/carrot.png
+mods/core/images/icons/icons32.png
+
+Luke Mehl
+---------
+His work was adapted into the following:
+mods/core/images/enemies/brawler.png
+mods/core/images/enemies/caster.png
+mods/core/images/avatar/female/clothes.png
+mods/core/images/npcs/innkeep.png
+mods/core/images/npcs/blacksmith.png
+mods/core/images/npcs/brewmaster.png
+mods/core/images/npcs/cleric.png
+mods/core/images/portraits/female01.png
+
+Johnathan Roatch
+----------------
+mods/core/soundfx/powers/chomp.ogg
+
+Nelson James Gatlin
+-------------------
+mods/core/music/ambient_slow_guitar.ogg
+mods/core/music/ambient_sea_dungeon.ogg
+mods/core/music/choir_loop.ogg
+mods/core/music/farm_theme.ogg
+mods/core/music/magic_bells.ogg
+mods/core/music/ocarina.ogg
+mods/core/music/playful_theme.ogg
+mods/core/music/slow_brass_loop.ogg
+mods/core/music/title_theme.ogg
+
+Brandon
+-------
+mods/core/music/calmtown.ogg
+
+
+--------------------------------------------------------------
+--------------------------------------------------------------
+
+From other sources on OpenGameArt
+
+Alexandr Zhelanov (CC-BY 3.0)
+-----------------
+mods/core/music/mysticaltheme.ogg
+
+Technophobic Android (CC-BY-SA 3.0)
+--------------------
+mods/core/music/technophobic.ogg
+
+Telaron (GPL 2.0 & GPL 3.0)
+-------
+mods/core/music/snow_about_a_castle.ogg
+
+Brandon Morris (CC-BY 3.0)
+--------------
+mods/core/music/evil_temple.ogg
+
