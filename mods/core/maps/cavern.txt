@@ -324,7 +324,7 @@ location=57,47,1,1
 hotspot=-16,-16,32,32
 loot=id,58,47,200
 mapmod=object,57,47,206
-msg=Equip talisman, drag to actionbar to use.
+msg=Drag to actionbar to use.
 requires_not=battalisfound
 tooltip=Chest
 

@@ -335,7 +335,7 @@
     <property name="hotspot" value="-16,-16,32,32"/>
     <property name="loot" value="id,58,47,200"/>
     <property name="mapmod" value="object,57,47,206"/>
-    <property name="msg" value="Equip talisman, drag to actionbar to use."/>
+    <property name="msg" value="Drag to actionbar to use."/>
     <property name="requires_not" value="battalisfound"/>
     <property name="tooltip" value="Chest"/>
    </properties>
