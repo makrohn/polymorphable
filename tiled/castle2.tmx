@@ -2,32 +2,32 @@
 <map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
  <properties>
   <property name="music" value="mysticaltheme.ogg"/>
-  <property name="tileset" value="town.txt"/>
+  <property name="tileset" value="interior.txt"/>
   <property name="title" value="Castle Atrium"/>
  </properties>
  <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
   <image source="tiled_collision.png" width="480" height="32"/>
  </tileset>
- <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32">
-  <image source="generic_background.png" width="864" height="832"/>
+ <tileset firstgid="16" name="interior_background" tilewidth="32" tileheight="32">
+  <image source="interior tiles/interior_background.png" width="864" height="832"/>
  </tileset>
- <tileset firstgid="718" name="small_objects" tilewidth="32" tileheight="64">
-  <image source="small_objects.png" width="671" height="512"/>
+ <tileset firstgid="718" name="intfurniture" tilewidth="32" tileheight="64">
+  <image source="interior tiles/intfurniture.png" width="671" height="512"/>
  </tileset>
- <tileset firstgid="878" name="town_buildings" tilewidth="32" tileheight="128">
-  <image source="town_buildings.png" width="672" height="768"/>
+ <tileset firstgid="878" name="interiorbuildings" tilewidth="32" tileheight="128">
+  <image source="interior tiles/interiorbuildings.png" width="672" height="768"/>
  </tileset>
  <layer name="background" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztl20KgzAMhpteYvMY+7EjDbyRMHa5bddQWYsUYkzb9EvZmPCCleKTN0lrVWq5bo00glKT0Qw8x130+Z2Mh535UtE47fgR4WMvMT71TXkh9XrNt+OYf8n7sb9B8XE6/snobNRpGb+mer0VjTuV76vHg5kb4vv8c3nM7f0cvlSc31b+c2vj45esP1zzlvmXMkL5SuFz9eTW+dH9l1KPlv1/lP8//7v4sTmYz8VbKin/BWu9YV/+BGvNP86n5w97RsLqKrBr9t8Ttj0i6RPsldu7pfwRtjWS1KmW/1p8moO9+L7vN+aHFOKX7JEp/Kvxc9EL193n8FPOf5hvWfh/akzwX5p/WofSvDt9APBzrfQ=
+   eJzt10EORTAQBuCOS2DhUk16B9fGNZDXxII0o63fmIdY/Asi+TpTbWkKY5qL0vqMZMzkM9NyfZXF2ZyPjMEp+vbEmCzjlz6VT13g9Z/pP5cjNYX3cvuD+Ej23g0JP1Zrqg9a9f/Dz1mPiM/1FFn7Wv0Px+sE/FS9d1t/n//5En7seenc0e9pzUD6/kRr5pf5W2dv/6w2qQXt0Ee+VyT81LmiPd/afuzcdA+qvwP2CK5e1Of+p3J9y8yDU/Ql+i/t/wCl3Rkh
   </data>
  </layer>
  <layer name="object" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztlm0KgCAMhhfew8taB9C+rptCwRIrlekIfcEfDeVp79QJ0FVCmwBQ4h7T9nsX4fnUWh84S+ez8cVQl+94vlr2n4svUR1azJ+L73zHZ0BWPn+Ye/1HS/7/hW9sbLZjJBw6gb++zKfWEx8r1DdiJT/WxvAp5dc15HNJfsx+p+Jj71PuG/dONYU8iM2/VA1y+Ln731+X8t7jzL/z+fnqo59MgbtLnfGcPnTpAAUHPpE=
+   eJztlUkOgCAMRSG9B9f0ALpTF87XFRYmtZYIBnDAn3QhAV/4dBDi1xc1gxAF7NfM9wL8/tCaLJwxY76Safkgj+s5+38XX6F3yPH+d/FN/mPvIXH9Ye5Wizn5/ya+mZe1jiZQtB58blbHEsenXilmbriKmzm+/JAa9L8rFF1ivku+h+Jj75VHvyn1nj6SB671HusNrvDPctgmWjc+8+ZJ9//56fkl6VNc0N515QzVCkp/O/I=
   </data>
  </layer>
- <layer name="collision" width="32" height="32">
+ <layer name="collision" width="32" height="32" visible="0">
   <data encoding="base64" compression="zlib">
    eJztlt0KwCAIhSt8/2feTcKIomNT15oHhDhkH/2hKdko15h5Vgq+zA++PZ+c+TTwvfgS/2Q+DXwvPuKfyC81WMWZz8x7/On8v8TPBoHy3+4LWq9XN1DNchG+ppB7seZrzEFEnTHKtzoDdN2d+Kvvv82T9Hs77T/42BzNv71SU57UIdYFjpwAqw==
   </data>

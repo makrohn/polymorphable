@@ -2,29 +2,29 @@
 <map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
  <properties>
   <property name="music" value="mysticaltheme.ogg"/>
-  <property name="tileset" value="town.txt"/>
+  <property name="tileset" value="interior.txt"/>
   <property name="title" value="Castle Hall"/>
  </properties>
  <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
   <image source="tiled_collision.png" width="480" height="32"/>
  </tileset>
- <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32">
-  <image source="generic_background.png" width="864" height="832"/>
+ <tileset firstgid="16" name="interior_background" tilewidth="32" tileheight="32">
+  <image source="interior tiles/interior_background.png" width="864" height="832"/>
  </tileset>
- <tileset firstgid="718" name="small_objects" tilewidth="32" tileheight="64">
-  <image source="small_objects.png" width="671" height="512"/>
+ <tileset firstgid="718" name="intfurniture" tilewidth="32" tileheight="64">
+  <image source="interior tiles/intfurniture.png" width="671" height="512"/>
  </tileset>
- <tileset firstgid="878" name="town_buildings" tilewidth="32" tileheight="128">
-  <image source="town_buildings.png" width="672" height="768"/>
+ <tileset firstgid="878" name="interiorbuildings" tilewidth="32" tileheight="128">
+  <image source="interior tiles/interiorbuildings.png" width="672" height="768"/>
  </tileset>
  <layer name="background" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJzdlEsSwiAMQKGXUM+nvYZ6C8biqt7Du6jXUEeycEozEKQNn7p4CzqQlwTSVgjR/gEdWp8Z482N5csx9H1KrFJQPeLqXw6W1NdaHTX1MKY2nDdeXxo/OWoBT1/YD2wNO3B6/Kne7Ne1NxwMR4d/qjt097b/ZOgMOrL/c+cC3/l1Ae+P81/g8vaZ68d9LzF/peef00/FpPC9w1jucuAh3bFd943zoPbY3OTY+bJ4S56aKJ7IWdq/bgY2id3Aqhk7U/tCwAzoDLMLqMi9yjpDneXMH3u0FV8lcsbmp37015BviA9XBuGo
+   eJzt00EOQEAMheF2joAEi7mfQyPBIZAguhsjs6SdxVt82/5Jm3pH5AEAIHtdgna/Z6JBjGzTX6W7id2oX4hSVEb7t74/+uh/1U/N0zRzsPD/vYnj5vlwKfSPV9O637igVbh37eKm5u8A5OYGkpXGGQ==
   </data>
  </layer>
  <layer name="object" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJxjYBh64MtAO4CGAJff3pOh9z0ajQsQY/ZAAWrGNT39Saq7B3McUAuQEiaDMTwmMzMwzITiOUjsSczUMZ9Q+EzBYg8zIwPDVCLtpzRMsdkPAsTaTylAtn8zEfZTUnZg00sr/xMbLyD7QfFNbfuJBYMp/geD/bC4GKn+p4b9LczE44k47GkmwQx0PApGNiA33VALjwLag/9MQGIQh7XoALoNAPnMQhA=
+   eJyTZWJgkB0EOJSAvCAzA4MQM33c8heI/xGplhGLm9D9Qshvg8k/6G4NwqMWn9xAYErCmdZ+Icd8aqcbeqbDIBLto5XbSC038LljGtCcmVA8F4k9nUbl0l8m1Hw7FWgPOmBmZGCYQqH9sDAiFAfY7AcBdPtplZeQ7d+Mx35ccYkenpTYj8//hDCh8MElD7IfFN+U2j/Q/h8u9sPiYqT6nxr2dwP19hCJe3HYT4oZxJg3CkYOaAamgZYBwhPplG8JYVz1DTFtp1A8+rHZQaiNgUseph9bf4sUjE1/EA42ORjZ/cjhR665+MKLGu0sAIuBmZk=
   </data>
  </layer>
  <layer name="collision" width="32" height="32">
