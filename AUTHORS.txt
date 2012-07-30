@@ -197,6 +197,18 @@ Artur Reterski
 His work was adapted into the following:
 mods/core/images/icons/icons64.png
 
+Casper Nilsson
+---------------
+Tombstones and Iron Fences
+
+Daniel Eddeland
+----------------
+Vegetables, Market and Farming Tiles
+
+Johann C
+---------
+Rocks for outdoor tileset
+
 --------------------------------------------------------------
 
 The following assets were inherited from the original FLARE project
