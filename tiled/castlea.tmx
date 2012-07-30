@@ -48,7 +48,7 @@
   <object name="Chest" type="run_once" x="416" y="448" width="32" height="32">
    <properties>
     <property name="hotspot" value="-16,-16,32,32"/>
-    <property name="loot" value="currency,13,15,20"/>
+    <property name="loot" value="currency,13,15,35"/>
     <property name="mapmod" value="object,13,14,206"/>
     <property name="tooltip" value="Chest"/>
    </properties>
