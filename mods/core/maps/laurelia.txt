@@ -538,10 +538,9 @@ type=teleport
 location=71,143,7,1
 intermap=snow1.txt,3,1
 
-[event]
+#[event]
 # Teleport to DevRoom
-type=teleport
-requires_status=theend
-location=20,79,1,2
-intermap=devroom.txt,14,29
-
+#type=teleport
+#requires_status=theend
+#location=20,79,1,2
+#intermap=devroom.txt,14,29

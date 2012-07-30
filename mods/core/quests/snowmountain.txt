@@ -1,0 +1,8 @@
+[quest]
+requires_status=fulljugg
+requires_not=theend
+quest_text=Scale Snow Mountain, south of Laurelia, to put an end to Zalkaz once and for all.
+
+[quest]
+requires_status=theend
+quest_text=Leave Zalkaz's Lair, and return to Laurelia to talk to the townsfolk.  Congratulations, you've beaten Laurelia's Polymorphable Citizens!
