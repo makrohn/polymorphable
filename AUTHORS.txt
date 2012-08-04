@@ -144,8 +144,10 @@ mods/core/images/npcs/guard.png
 mods/core/images/npcs/elder.png
 mods/core/images/npcs/makrohn.png
 mods/core/images/npcs/hunter.png
+mods/core/images/npcs/vacationerb.png
 mods/core/images/portraits/makrohn.png
 mods/core/images/powers/arrow.png
+
 
 Lorc
 ----
@@ -208,6 +210,11 @@ Vegetables, Market and Farming Tiles
 Johann C
 ---------
 Rocks for outdoor tileset
+
+Marcel van de Steeg
+-------------------
+mods/core/images/npcs/daughter.png
+mods/core/images/npcs/vacationera.png
 
 --------------------------------------------------------------
 

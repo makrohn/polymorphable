@@ -1,0 +1,16 @@
+name=Harry
+
+talker=true
+
+gfx=vacationerb
+render_size=64,64
+render_offset=32,58
+anim_frames=1
+anim_duration=30
+
+[dialog]
+him=Ah, the vacation life!
+him=I hear there's some great spelunking to the north, and skiing to the south.
+him=Do you know where I rent some skis around here?
+you=Uh, I'm not sure we have any shops like that.
+him=Darn.  Our castle is way more impressive than your ruined one here, I'll bet you could get skis there.

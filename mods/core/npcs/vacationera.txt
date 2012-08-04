@@ -1,0 +1,20 @@
+name=Sally
+
+talker=true
+
+gfx=vacationera
+render_size=64,64
+render_offset=32,58
+anim_frames=1
+anim_duration=30
+
+[dialog]
+him=We're getting away for a few days.  Castle life is just so hectic!
+him=Don't tell Harry, but I'm really interested in going to the volcano - there might even be some obsidian there!
+him=Only trouble is, it's too hot to get close enough.  If only there was a way to traverse the lava.
+
+[dialog]
+requires_status=theend
+him=We're almost ready to go back home to the castle, but I still haven't been to the volcano.
+you=I'd let you borrow this charm, but apparently they only work for Laurelians,
+him=Shucks.  Well, if you ever want to visit us back at the castle, just let me know!

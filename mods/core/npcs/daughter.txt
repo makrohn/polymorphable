@@ -1,0 +1,17 @@
+name=Shandra's Daughter, Kelsey
+
+talker=true
+
+gfx=daughter
+render_size=64,64
+render_offset=32,58
+anim_frames=1
+anim_duration=30
+
+[dialog]
+him=Hey Daphne, out and about today?
+you=It's beautiful, plus I have a couple errands to do for Elder Thomas.  Will you be coming to my sixteenth birthday ceremony tomorrow?
+him=Of course!  There's no place else in the village I'd rather.
+you=I hope it's half as awesome as yours was last month.
+him=I'm sure it will be.  Come back tonight for dinner, too!
+you=Mmm, more pulled pork?  Excellent!
