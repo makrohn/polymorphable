@@ -341,6 +341,7 @@
     <property name="tooltip" value="book"/>
    </properties>
   </object>
+  <object x="380" y="686"/>
  </objectgroup>
  <objectgroup name="npc" width="28" height="18"/>
 </map>

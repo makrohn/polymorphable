@@ -1,0 +1,21 @@
+name=Wot the Apprentice
+
+talker=true
+
+gfx=apprentice
+render_size=64,64
+render_offset=32,58
+anim_frames=1
+anim_duration=30
+
+[dialog]
+him=Good morning Daphne.
+you=Good morning Wot!  Clara working you hard?
+him=It's miserable.  I've forged three swords and two helms this morning, but she says it's still not enough.
+you=Keep at it!  One of these days, maybe you'll be as good a smith as she is!
+him=I hope so, but I suppose I can always join the King's knights if this doesn't pan out.
+you=Oh, don't be silly - you couldn't leave this village.  I've seen how Waka looks at you!
+him=Wait, what?  She's never said anything!
+you=Oh, I see her staring.
+him=*Wot blushes*
+you=See you around!
