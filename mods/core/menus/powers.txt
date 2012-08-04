@@ -24,7 +24,11 @@ tabs=1
 
 [power]
 id=0
-position=144,64
+position=84,64
+
+[power]
+id=136
+position=216,64
 
 [power]
 id=1
