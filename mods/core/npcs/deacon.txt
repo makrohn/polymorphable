@@ -1,0 +1,25 @@
+name=Deacon Ray
+
+talker=true
+
+gfx=deacon
+render_size=64,64
+render_offset=32,58
+anim_frames=1
+anim_duration=30
+
+[dialog]
+requires_status=ghosttalis
+you=Hey, still having that ghost issue?
+him=Who's asking?  Me?  You?  I seriously need some sleep.
+you=I'll take that as a yes.
+him=I think it's coming from the gravestone all the way on the east side of the graveyard...
+set_status=exploregrave
+
+[dialog]
+requires_not=ghosttalis
+him=Hi Daphne, it's bee a while.  You don't see anything weird around here, do you?
+you=Should I?
+him=No, uh, no.  It's just that there's been weird sounds from the graveyard at night lately.
+you=Maybe you shouldn't drink coffee before bed.
+him=Yeah, that's it, I'll lay off the coffee.
