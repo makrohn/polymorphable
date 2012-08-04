@@ -78,6 +78,14 @@ location=13,16,2,1
 intermap=laurelia.txt,24,92
 
 [event]
+# Test
+type=run_once
+location=4,8,1,1
+hotspot=-16,-16,32,32
+msg=This book is a test.  Ignore it.
+tooltip=Test
+
+[event]
 # Book
 type=run_once
 location=11,8,1,1
@@ -116,6 +124,14 @@ location=7,8,1,1
 hotspot=-16,-16,32,32
 msg=
 tooltip=book
+
+[event]
+# On Ghosts
+type=run_once
+location=6,8,1,1
+hotspot=-16,-16,32,32
+msg=p.32: "Ghosts, being incorporeal, are nearly immune to heat and fire."
+tooltip=On Ghosts
 
 [event]
 # Book
@@ -206,6 +222,14 @@ msg=
 tooltip=book
 
 [event]
+# History
+type=run_once
+location=4,11,1,1
+hotspot=-16,-16,32,32
+msg=p.1:  "This small town is a seeming backwater.  However, nearly every one of it's citizens has the ability to polymorph into another creature."  Better put it back on the top shelf where the tourists can't find it.
+tooltip=History of Laurelia
+
+[event]
 # Book
 type=run_once
 location=5,11,1,1
@@ -284,6 +308,14 @@ location=16,11,1,1
 hotspot=-16,-16,32,32
 msg=
 tooltip=book
+
+[event]
+# Demonology
+type=run_once
+location=17,11,1,1
+hotspot=-16,-16,32,32
+msg=p. 967: "Zalkas was constantly beset by paladins seeking to destroy them; he would eliminate each one by blotting out the light with flocks of bats."
+tooltip=Deomonology
 
 [event]
 # Book
