@@ -16,3 +16,4 @@ restore=all
 [dialog]
 requires_status=theend
 him=I can already feel the spirits resting more easily in the graveyard.  Thank you, Daphne, for everything you've done!
+restore=all
