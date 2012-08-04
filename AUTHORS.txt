@@ -216,6 +216,10 @@ Marcel van de Steeg
 mods/core/images/npcs/daughter.png
 mods/core/images/npcs/vacationera.png
 
+Mark Weyer
+----------
+Signpost in tilesets
+
 --------------------------------------------------------------
 
 The following assets were inherited from the original FLARE project
