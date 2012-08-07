@@ -1,6 +1,7 @@
 # Avatar Attributes Definitions
 # Values should be integer
 
+max_points_per_stat=10
 hp_base=10
 hp_per_level=0
 hp_per_physical=2
