@@ -1,9 +1,9 @@
 [header]
 width=100
 height=100
+music=technophobic.ogg
 tileset=outside.txt
 title=Cavern
-music=technophobic.ogg
 
 [layer]
 type=background
@@ -333,7 +333,7 @@ tooltip=Chest
 type=run_once
 location=94,62,1,1
 hotspot=-16,-16,32,32
-loot=currency,94,63,10
+loot=currency,94,63,15
 mapmod=object,94,62,206
 tooltip=Chest
 
@@ -360,7 +360,7 @@ tooltip=Chest
 type=run_once
 location=79,41,1,1
 hotspot=-16,-16,32,32
-loot=currency,79,40,15
+loot=currency,79,40,10
 mapmod=object,79,41,206
 tooltip=Chest
 
@@ -393,15 +393,15 @@ set_status=cavernexplored
 # Block Passage
 type=run_once
 location=98,98,1,1
-requires_not=evil_unleashed
 mapmod=object,75,72,879;object,76,72,879;object,77,72,879;collision,75,72,1;collision,76,72,1;collision,77,72,1;collision,78,72,1
+requires_not=evil_unleashed
 
 [event]
 # Unblock passage
 type=run_once
-requires_status=evil_unleashed
 location=75,73,4,2
 mapmod=object,75,72,880;object,76,72,0;object,77,72,0;object,78,72,878;collision,76,72,0;collision,77,72,0
+requires_status=evil_unleashed
 
 [event]
 # Carrots

@@ -504,17 +504,17 @@ intermap=mountainpath.txt,1,18
 # Teleport to Glade
 type=teleport
 location=88,0,6,1
-requires_status=cavernexplored
 intermap=glade.txt,13,30
+requires_status=cavernexplored
 
 [event]
 # Fall to Cavern
 type=teleport
 location=86,14,6,1
-requires_not=cavernexplored
-requires_status=elderintro
 intermap=cavern.txt,98,98
 msg=You've fallen in a hole!
+requires_not=cavernexplored
+requires_status=elderintro
 
 [event]
 # Teleport to Castle Path
@@ -544,10 +544,10 @@ intermap=church.txt,19,4
 # Eerie Gravestone
 type=teleport
 location=47,51,2,1
-requires_status=exploregrave
 hotspot=-16,-16,64,32
 intermap=shadowlaurelia.txt
 msg=Strange sounds come from this gravestone...
+requires_status=exploregrave
 tooltip=Eerie Gravestone
 
 [event]

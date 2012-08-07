@@ -135,8 +135,8 @@ intermap=snow2.txt,1,9
 [event]
 # Require Juggernaut Talisman
 type=teleport
-requires_not=fulljugg
 location=24,14,1,1
 intramap=24,24
 msg=You need the Juggernaut Talisman to proceed!
+requires_not=fulljugg
 
