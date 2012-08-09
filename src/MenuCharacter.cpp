@@ -293,7 +293,7 @@ void MenuCharacter::refreshStats() {
 	if (show_stat[0]) {
 		ss.str("");
 		ss << msg->get("Max HP:") << " " << stats->maxhp;
-		statList->append(ss.str(),msg->get("Each point of Physical grants +%d HP. Each level grants +%d HP", stats->hp_per_physical, stats->hp_per_level));
+		statList->append(ss.str(),msg->get("Each point of Physical grants +%d HP.", stats->hp_per_physical, stats->hp_per_level));
 	}
 
 	if (show_stat[1]) {
@@ -305,7 +305,7 @@ void MenuCharacter::refreshStats() {
 	if (show_stat[2]) {
 		ss.str("");
 		ss << msg->get("Max MP:") << " " << stats->maxmp;
-		statList->append(ss.str(),msg->get("Each point of Mental grants +%d MP. Each level grants +%d MP", stats->mp_per_mental, stats->mp_per_level));
+		statList->append(ss.str(),msg->get("Each point of Mental grants +%d MP.", stats->mp_per_mental, stats->mp_per_level));
 	}
 
 	if (show_stat[3]) {
@@ -408,12 +408,10 @@ void MenuCharacter::refreshStats() {
 	}
 
 	cstat[CSTAT_PHYSICAL].tip.num_lines = 0;
-	cstat[CSTAT_PHYSICAL].tip.lines[cstat[CSTAT_PHYSICAL].tip.num_lines++] = msg->get("Physical (P) increases melee weapon proficiency and total HP.");
-	cstat[CSTAT_PHYSICAL].tip.lines[cstat[CSTAT_PHYSICAL].tip.num_lines++] = msg->get("base (%d), bonus (%d)", stats->physical_character, stats->physical_additional);
+	cstat[CSTAT_PHYSICAL].tip.lines[cstat[CSTAT_PHYSICAL].tip.num_lines++] = msg->get("Physical (P) increases total HP.");
 
 	cstat[CSTAT_MENTAL].tip.num_lines = 0;
-	cstat[CSTAT_MENTAL].tip.lines[cstat[CSTAT_MENTAL].tip.num_lines++] = msg->get("Mental (M) increases mental weapon proficiency and total MP.");
-	cstat[CSTAT_MENTAL].tip.lines[cstat[CSTAT_MENTAL].tip.num_lines++] = msg->get("base (%d), bonus (%d)", stats->mental_character, stats->mental_additional);
+	cstat[CSTAT_MENTAL].tip.lines[cstat[CSTAT_MENTAL].tip.num_lines++] = msg->get("Mental (M) increases total MP.");
 
 	cstat[CSTAT_OFFENSE].tip.num_lines = 0;
 	cstat[CSTAT_OFFENSE].tip.lines[cstat[CSTAT_OFFENSE].tip.num_lines++] = msg->get("Offense (O) increases ranged weapon proficiency and accuracy.");
