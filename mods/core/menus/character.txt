@@ -7,8 +7,6 @@ title=160,8,center,top
 
 upgrade_physical=110,64
 upgrade_mental=110,88
-upgrade_offense=250,64
-upgrade_defense=250,88
 
 statlist=24,128
 
@@ -23,12 +21,6 @@ label_physical=40,72,left,center
 
 mental=16,88,16,16
 label_mental=40,96,left,center
-
-offense=156,64,16,16
-label_offense=180,72,left,center
-
-defense=156,88,16,16
-label_defense=180,96,left,center
 
 unspent=96,106,120,16
 
