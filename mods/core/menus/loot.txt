@@ -1,6 +1,0 @@
-# Loot settings
-
-loot_animation=0,0,32,32
-loot_animation_offset=32,56
-
-tooltip_margin=32
