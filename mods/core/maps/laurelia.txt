@@ -631,7 +631,7 @@ intermap=barracks.txt,18,11
 # Teleport to Elder's House
 type=teleport
 location=69,58,1,1
-intermap=eldershouse.txt
+intermap=eldershouse.txt,18,11
 
 [event]
 # Teleport to Daphne's House

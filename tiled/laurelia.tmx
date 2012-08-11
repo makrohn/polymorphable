@@ -585,7 +585,7 @@
   </object>
   <object name="Teleport to Elder's House" type="teleport" x="2208" y="1856" width="32" height="32">
    <properties>
-    <property name="intermap" value="eldershouse.txt"/>
+    <property name="intermap" value="eldershouse.txt,18,11"/>
    </properties>
   </object>
   <object name="Teleport to Daphne's House" type="teleport" x="640" y="2560" width="32" height="32">
