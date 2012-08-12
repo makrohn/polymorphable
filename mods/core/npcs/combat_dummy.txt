@@ -1,0 +1,7 @@
+name=Combat Dummy
+
+gfx=combat_dummy
+render_size=64,64
+render_offset=32,58
+anim_frames=8
+anim_duration=2
