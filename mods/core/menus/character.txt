@@ -61,6 +61,5 @@ show_ranged=0
 show_mental=0
 show_crit=0
 show_absorb=1
-show_resist_fire=1
-show_resist_ice=1
+show_resists=1
 
