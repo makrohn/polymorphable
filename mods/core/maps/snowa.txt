@@ -1,9 +1,9 @@
 [header]
 width=32
 height=32
+music=snow_about_a_castle.ogg
 tileset=outside.txt
 title=Mountain Mine
-music=snow_about_a_castle.ogg
 
 [layer]
 type=background
@@ -131,7 +131,7 @@ number=2,2
 # Chest
 type=run_once
 location=23,16,1,1
-hotspot=-16,-16,32,32
+hotspot=location
 mapmod=object,23,16,206
 msg=Empty...
 tooltip=Chest

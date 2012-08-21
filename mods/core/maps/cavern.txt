@@ -321,7 +321,7 @@ data=
 # Bat Talisman Chest
 type=run_once
 location=57,47,1,1
-hotspot=-16,-16,32,32
+hotspot=location
 loot=id,58,47,200
 mapmod=object,57,47,206
 msg=Drag to actionbar to use.
@@ -332,7 +332,7 @@ tooltip=Chest
 # Chest
 type=run_once
 location=94,62,1,1
-hotspot=-16,-16,32,32
+hotspot=location
 loot=currency,94,63,15
 mapmod=object,94,62,206
 tooltip=Chest
@@ -341,7 +341,7 @@ tooltip=Chest
 # Chest
 type=run_once
 location=88,42,1,1
-hotspot=-16,-16,32,32
+hotspot=location
 loot=currency,87,42,10
 mapmod=object,88,42,206
 tooltip=Chest
@@ -350,7 +350,7 @@ tooltip=Chest
 # Chest
 type=run_once
 location=86,41,1,1
-hotspot=-16,-16,32,32
+hotspot=location
 loot=currency,86,42,10
 mapmod=object,86,41,206
 tooltip=Chest
@@ -359,7 +359,7 @@ tooltip=Chest
 # Chest
 type=run_once
 location=79,41,1,1
-hotspot=-16,-16,32,32
+hotspot=location
 loot=currency,79,40,10
 mapmod=object,79,41,206
 tooltip=Chest
@@ -368,7 +368,7 @@ tooltip=Chest
 # Carrots
 type=run_once
 location=97,73,1,1
-hotspot=-16,-16,32,32
+hotspot=location
 loot=id,97,74,1;id,97,73,1
 mapmod=object,97,73,0;collision,97,73,0
 tooltip=Carrots
@@ -377,7 +377,7 @@ tooltip=Carrots
 # Carrots
 type=run_once
 location=95,85,1,1
-hotspot=-16,-16,32,32
+hotspot=location
 loot=id,95,85,1;id,95,86,1
 mapmod=object,95,85,0;collision,95,85,0
 tooltip=Carrots
@@ -391,8 +391,8 @@ set_status=cavernexplored
 
 [event]
 # Block Passage
-type=run_once
-location=98,98,1,1
+type=on_load
+location=75,71,4,2
 mapmod=object,75,72,879;object,76,72,879;object,77,72,879;collision,75,72,1;collision,76,72,1;collision,77,72,1;collision,78,72,1
 requires_not=evil_unleashed
 
@@ -407,7 +407,7 @@ requires_status=evil_unleashed
 # Carrots
 type=run_once
 location=75,97,1,1
-hotspot=-16,-16,32,32
+hotspot=location
 loot=id,75,98,1;id,75,97,1
 mapmod=object,75,97,0;collision,75,97,0
 tooltip=Carrots

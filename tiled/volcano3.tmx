@@ -49,7 +49,7 @@
   </object>
   <object name="Lava Trap" type="run_once" x="320" y="96" width="32" height="32">
    <properties>
-    <property name="hotspot" value=""/>
+    <property name=" " value=""/>
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
     <property name="power_path" value="0,0,10,3"/>
@@ -58,7 +58,7 @@
   </object>
   <object name="Lava Trap" type="run_once" x="352" y="96" width="32" height="32">
    <properties>
-    <property name="hotspot" value=""/>
+    <property name=" " value=""/>
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
     <property name="power_path" value="0,0,11,3"/>
@@ -67,7 +67,7 @@
   </object>
   <object name="Lava Trap" type="run_once" x="416" y="96" width="32" height="32">
    <properties>
-    <property name="hotspot" value=""/>
+    <property name=" " value=""/>
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
     <property name="power_path" value="0,0,13,3"/>
@@ -76,7 +76,7 @@
   </object>
   <object name="Lava Trap" type="run_once" x="384" y="96" width="32" height="32">
    <properties>
-    <property name="hotspot" value=""/>
+    <property name=" " value=""/>
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
     <property name="power_path" value="0,0,12,3"/>
@@ -85,7 +85,7 @@
   </object>
   <object name="Lava Trap" type="run_once" x="448" y="96" width="32" height="32">
    <properties>
-    <property name="hotspot" value=""/>
+    <property name=" " value=""/>
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
     <property name="power_path" value="0,0,14,3"/>
@@ -94,7 +94,7 @@
   </object>
   <object name="Lava Trap" type="run_once" x="480" y="96" width="32" height="32">
    <properties>
-    <property name="hotspot" value=""/>
+    <property name=" " value=""/>
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
     <property name="power_path" value="0,0,15,3"/>
@@ -103,7 +103,7 @@
   </object>
   <object name="Lava Trap" type="run_once" x="352" y="128" width="32" height="32">
    <properties>
-    <property name="hotspot" value=""/>
+    <property name=" " value=""/>
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
     <property name="power_path" value="0,0,11,4"/>
@@ -112,7 +112,7 @@
   </object>
   <object name="Lava Trap" type="run_once" x="320" y="128" width="32" height="32">
    <properties>
-    <property name="hotspot" value=""/>
+    <property name=" " value=""/>
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
     <property name="power_path" value="0,0,10,4"/>
@@ -121,7 +121,7 @@
   </object>
   <object name="Lava Trap" type="run_once" x="384" y="128" width="32" height="32">
    <properties>
-    <property name="hotspot" value=""/>
+    <property name=" " value=""/>
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
     <property name="power_path" value="0,0,12,4"/>
@@ -130,7 +130,7 @@
   </object>
   <object name="Lava Trap" type="run_once" x="416" y="128" width="32" height="32">
    <properties>
-    <property name="hotspot" value=""/>
+    <property name=" " value=""/>
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
     <property name="power_path" value="0,0,13,4"/>
@@ -139,7 +139,7 @@
   </object>
   <object name="Lava Trap" type="run_once" x="448" y="128" width="32" height="32">
    <properties>
-    <property name="hotspot" value=""/>
+    <property name=" " value=""/>
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
     <property name="power_path" value="0,0,14,4"/>
@@ -148,7 +148,7 @@
   </object>
   <object name="Lava Trap" type="run_once" x="480" y="128" width="32" height="32">
    <properties>
-    <property name="hotspot" value=""/>
+    <property name=" " value=""/>
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
     <property name="power_path" value="0,0,15,4"/>

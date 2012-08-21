@@ -1,9 +1,9 @@
 [header]
 width=32
 height=32
+music=evil_temple.ogg
 tileset=town.txt
 title=Volcano
-music=evil_temple.ogg
 
 [layer]
 type=background
@@ -137,7 +137,7 @@ sfx=quake.ogg
 # Lava Trap
 type=run_once
 location=10,3,1,1
-hotspot=
+ =
 power=33
 power_damage=100,100
 power_path=0,0,10,3
@@ -147,7 +147,7 @@ tooltip=Lava River
 # Lava Trap
 type=run_once
 location=11,3,1,1
-hotspot=
+ =
 power=33
 power_damage=100,100
 power_path=0,0,11,3
@@ -157,7 +157,7 @@ tooltip=Lava River
 # Lava Trap
 type=run_once
 location=13,3,1,1
-hotspot=
+ =
 power=33
 power_damage=100,100
 power_path=0,0,13,3
@@ -167,7 +167,7 @@ tooltip=Lava River
 # Lava Trap
 type=run_once
 location=12,3,1,1
-hotspot=
+ =
 power=33
 power_damage=100,100
 power_path=0,0,12,3
@@ -177,7 +177,7 @@ tooltip=Lava River
 # Lava Trap
 type=run_once
 location=14,3,1,1
-hotspot=
+ =
 power=33
 power_damage=100,100
 power_path=0,0,14,3
@@ -187,7 +187,7 @@ tooltip=Lava River
 # Lava Trap
 type=run_once
 location=15,3,1,1
-hotspot=
+ =
 power=33
 power_damage=100,100
 power_path=0,0,15,3
@@ -197,7 +197,7 @@ tooltip=Lava River
 # Lava Trap
 type=run_once
 location=11,4,1,1
-hotspot=
+ =
 power=33
 power_damage=100,100
 power_path=0,0,11,4
@@ -207,7 +207,7 @@ tooltip=Lava River
 # Lava Trap
 type=run_once
 location=10,4,1,1
-hotspot=
+ =
 power=33
 power_damage=100,100
 power_path=0,0,10,4
@@ -217,7 +217,7 @@ tooltip=Lava River
 # Lava Trap
 type=run_once
 location=12,4,1,1
-hotspot=
+ =
 power=33
 power_damage=100,100
 power_path=0,0,12,4
@@ -227,7 +227,7 @@ tooltip=Lava River
 # Lava Trap
 type=run_once
 location=13,4,1,1
-hotspot=
+ =
 power=33
 power_damage=100,100
 power_path=0,0,13,4
@@ -237,7 +237,7 @@ tooltip=Lava River
 # Lava Trap
 type=run_once
 location=14,4,1,1
-hotspot=
+ =
 power=33
 power_damage=100,100
 power_path=0,0,14,4
@@ -247,7 +247,7 @@ tooltip=Lava River
 # Lava Trap
 type=run_once
 location=15,4,1,1
-hotspot=
+ =
 power=33
 power_damage=100,100
 power_path=0,0,15,4

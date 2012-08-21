@@ -34,7 +34,7 @@
   </object>
   <object name="Forge" type="run_once" x="128" y="608" width="32" height="32">
    <properties>
-    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="hotspot" value="location"/>
     <property name="loot" value="id,5,19,198"/>
     <property name="requires_not" value="skelkey"/>
     <property name="tooltip" value="Anvil"/>

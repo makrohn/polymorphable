@@ -50,7 +50,7 @@
  <objectgroup name="event" width="32" height="32">
   <object name="Chest" type="run_once" x="736" y="512" width="32" height="32">
    <properties>
-    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="hotspot" value="location"/>
     <property name="mapmod" value="object,23,16,206"/>
     <property name="msg" value="Empty..."/>
     <property name="tooltip" value="Chest"/>

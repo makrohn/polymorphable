@@ -1,9 +1,9 @@
 [header]
 width=32
 height=32
+music=mysticaltheme.ogg
 tileset=inside.txt
 title=Castle Sewer
-music=mysticaltheme.ogg
 
 [layer]
 type=background
@@ -131,7 +131,7 @@ number=2,2
 # Chest
 type=run_once
 location=2,5,1,1
-hotspot=-16,-16,32,32
+hotspot=location
 loot=id,2,6,3;id,2,6,3
 mapmod=object,2,5,206
 tooltip=Chest
@@ -140,7 +140,7 @@ tooltip=Chest
 # Chest
 type=run_once
 location=2,9,1,1
-hotspot=-16,-16,32,32
+hotspot=location
 loot=id,3,9,1;id,3,10,2
 mapmod=object,2,9,206
 tooltip=Chest

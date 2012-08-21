@@ -124,7 +124,7 @@ number=3,3
 # Fake chest
 type=run_once
 location=14,13,1,1
-hotspot=-16,-16,32,32
+hotspot=location
 mapmod=object,14,13,206
 spawn=ghost,13,14
 tooltip=Chest
