@@ -1,9 +1,9 @@
 [header]
 width=32
 height=32
+music=mysticaltheme.ogg
 tileset=inside.txt
 title=Castle Basement
-music=mysticaltheme.ogg
 
 [layer]
 type=background
@@ -131,7 +131,7 @@ number=2,2
 # Chest
 type=run_once
 location=22,15,1,1
-hotspot=-16,-16,32,32
+hotspot=location
 loot=id,22,16,300
 mapmod=object,22,15,206
 requires_not=snaketalis

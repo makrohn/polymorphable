@@ -144,7 +144,7 @@ intermap=snowc.txt,18,30
 # Alert
 type=run_once
 location=9,3,1,1
-hotspot=-16,-16,32,32
+hotspot=location
 msg=Bring ssssacrifices for Zalkaz here!
 tooltip=Sign
 

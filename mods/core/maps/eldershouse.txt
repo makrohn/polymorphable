@@ -84,6 +84,6 @@ intermap=laurelia.txt,69,59
 # Fireplace
 type=run_once
 location=18,4,2,1
-hotspot=-16,-16,64,32
+hotspot=location
 msg=This will be a fireplace and bring you to a dungeon eventually.
 

@@ -50,7 +50,7 @@
  <objectgroup name="event" width="32" height="32">
   <object name="Chest" type="run_once" x="64" y="160" width="32" height="32">
    <properties>
-    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="hotspot" value="location"/>
     <property name="loot" value="id,2,6,3;id,2,6,3"/>
     <property name="mapmod" value="object,2,5,206"/>
     <property name="tooltip" value="Chest"/>
@@ -58,7 +58,7 @@
   </object>
   <object name="Chest" type="run_once" x="64" y="288" width="32" height="32">
    <properties>
-    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="hotspot" value="location"/>
     <property name="loot" value="id,3,9,1;id,3,10,2"/>
     <property name="mapmod" value="object,2,9,206"/>
     <property name="tooltip" value="Chest"/>

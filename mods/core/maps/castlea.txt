@@ -143,7 +143,7 @@ intermap=castle2.txt,25,1
 # Chest
 type=run_once
 location=13,14,1,1
-hotspot=-16,-16,32,32
+hotspot=location
 loot=currency,13,15,35
 mapmod=object,13,14,206
 tooltip=Chest
@@ -152,7 +152,7 @@ tooltip=Chest
 # Chest
 type=run_once
 location=4,11,1,1
-hotspot=-16,-16,32,32
+hotspot=location
 loot=id,4,12,1
 mapmod=object,4,11,206
 tooltip=Chest
@@ -161,7 +161,7 @@ tooltip=Chest
 # Chest
 type=run_once
 location=22,19,1,1
-hotspot=-16,-16,32,32
+hotspot=location
 loot=id,22,20,1
 mapmod=object,22,19,206
 tooltip=Chest
@@ -170,7 +170,7 @@ tooltip=Chest
 # Chest
 type=run_once
 location=22,11,1,1
-hotspot=-16,-16,32,32
+hotspot=location
 loot=id,22,12,2
 mapmod=object,22,11,206
 tooltip=Chest
@@ -179,7 +179,7 @@ tooltip=Chest
 # Chest
 type=run_once
 location=4,19,1,1
-hotspot=-16,-16,32,32
+hotspot=location
 loot=id,4,20,2
 mapmod=object,4,19,206
 tooltip=Chest

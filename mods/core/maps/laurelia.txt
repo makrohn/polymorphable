@@ -549,7 +549,7 @@ intermap=church.txt,19,4
 # Eerie Gravestone
 type=teleport
 location=47,51,2,1
-hotspot=-16,-16,64,32
+hotspot=location
 intermap=shadowlaurelia.txt
 msg=Strange sounds come from this gravestone...
 requires_status=exploregrave

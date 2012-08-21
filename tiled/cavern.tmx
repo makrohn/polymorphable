@@ -35,7 +35,7 @@
  <objectgroup name="event" width="100" height="100">
   <object name="Bat Talisman Chest" type="run_once" x="1824" y="1504" width="32" height="32">
    <properties>
-    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="hotspot" value="location"/>
     <property name="loot" value="id,58,47,200"/>
     <property name="mapmod" value="object,57,47,206"/>
     <property name="msg" value="Drag to actionbar to use."/>
@@ -45,7 +45,7 @@
   </object>
   <object name="Chest" type="run_once" x="3008" y="1984" width="32" height="32">
    <properties>
-    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="hotspot" value="location"/>
     <property name="loot" value="currency,94,63,15"/>
     <property name="mapmod" value="object,94,62,206"/>
     <property name="tooltip" value="Chest"/>
@@ -53,7 +53,7 @@
   </object>
   <object name="Chest" type="run_once" x="2816" y="1344" width="32" height="32">
    <properties>
-    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="hotspot" value="location"/>
     <property name="loot" value="currency,87,42,10"/>
     <property name="mapmod" value="object,88,42,206"/>
     <property name="tooltip" value="Chest"/>
@@ -61,7 +61,7 @@
   </object>
   <object name="Chest" type="run_once" x="2752" y="1312" width="32" height="32">
    <properties>
-    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="hotspot" value="location"/>
     <property name="loot" value="currency,86,42,10"/>
     <property name="mapmod" value="object,86,41,206"/>
     <property name="tooltip" value="Chest"/>
@@ -69,7 +69,7 @@
   </object>
   <object name="Chest" type="run_once" x="2528" y="1312" width="32" height="32">
    <properties>
-    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="hotspot" value="location"/>
     <property name="loot" value="currency,79,40,10"/>
     <property name="mapmod" value="object,79,41,206"/>
     <property name="tooltip" value="Chest"/>
@@ -77,7 +77,7 @@
   </object>
   <object name="Carrots" type="run_once" x="3104" y="2336" width="32" height="32">
    <properties>
-    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="hotspot" value="location"/>
     <property name="loot" value="id,97,74,1;id,97,73,1"/>
     <property name="mapmod" value="object,97,73,0;collision,97,73,0"/>
     <property name="tooltip" value="Carrots"/>
@@ -85,7 +85,7 @@
   </object>
   <object name="Carrots" type="run_once" x="3040" y="2720" width="32" height="32">
    <properties>
-    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="hotspot" value="location"/>
     <property name="loot" value="id,95,85,1;id,95,86,1"/>
     <property name="mapmod" value="object,95,85,0;collision,95,85,0"/>
     <property name="tooltip" value="Carrots"/>
@@ -97,7 +97,7 @@
     <property name="set_status" value="cavernexplored"/>
    </properties>
   </object>
-  <object name="Block Passage" type="run_once" x="3136" y="3136" width="32" height="32">
+  <object name="Block Passage" type="on_load" x="2400" y="2272" width="128" height="64">
    <properties>
     <property name="mapmod" value="object,75,72,879;object,76,72,879;object,77,72,879;collision,75,72,1;collision,76,72,1;collision,77,72,1;collision,78,72,1"/>
     <property name="requires_not" value="evil_unleashed"/>
@@ -111,7 +111,7 @@
   </object>
   <object name="Carrots" type="run_once" x="2400" y="3104" width="32" height="32">
    <properties>
-    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="hotspot" value="location"/>
     <property name="loot" value="id,75,98,1;id,75,97,1"/>
     <property name="mapmod" value="object,75,97,0;collision,75,97,0"/>
     <property name="tooltip" value="Carrots"/>

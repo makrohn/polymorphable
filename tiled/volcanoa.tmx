@@ -40,7 +40,7 @@
  <objectgroup name="event" width="32" height="32">
   <object name="Chest" type="run_once" x="480" y="416" width="32" height="32">
    <properties>
-    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="hotspot" value="location"/>
     <property name="loot" value="id,16,13,1"/>
     <property name="mapmod" value="object,15,13,206"/>
     <property name="tooltip" value="Chest"/>
@@ -48,7 +48,7 @@
   </object>
   <object name="Chest" type="run_once" x="736" y="416" width="32" height="32">
    <properties>
-    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="hotspot" value="location"/>
     <property name="loot" value="id,22,13,2"/>
     <property name="mapmod" value="object,23,13,206"/>
     <property name="tooltip" value="Chest"/>
@@ -56,7 +56,7 @@
   </object>
   <object name="Chest" type="run_once" x="800" y="512" width="32" height="32">
    <properties>
-    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="hotspot" value="location"/>
     <property name="loot" value="currency,25,17,20"/>
     <property name="mapmod" value="object,25,16,206"/>
     <property name="tooltip" value="Chest"/>
@@ -64,7 +64,7 @@
   </object>
   <object name="Chest" type="run_once" x="768" y="672" width="32" height="32">
    <properties>
-    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="hotspot" value="location"/>
     <property name="loot" value="currency,24,22,20"/>
     <property name="mapmod" value="object,24,21,206"/>
     <property name="tooltip" value="Chest"/>
@@ -72,7 +72,7 @@
   </object>
   <object name="Chest" type="run_once" x="608" y="672" width="32" height="32">
    <properties>
-    <property name="hotspot" value="-16,-16,32,32"/>
+    <property name="hotspot" value="location"/>
     <property name="loot" value="id,20,21,1"/>
     <property name="mapmod" value="object,19,21,206"/>
     <property name="tooltip" value="Chest"/>
