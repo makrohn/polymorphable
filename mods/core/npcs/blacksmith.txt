@@ -17,7 +17,12 @@ him=It'll cost ya 100 gold.  Sound like a deal?
 
 [dialog]
 requires_item=101
-him=Give the Evil One a slice for me, too!
+you=The tag on this sword says "The sword of the ancient hero."
+him=It is!
+you=Didn't you say you just finished forging it last night?
+him=No!  Of course not!  It's the Ancient Hero's sword.  I just finished polishing it last night.
+you=You were going to try to sell it to the next nobleman who comes through town, weren't you?
+him=Could be.
 
 [dialog]
 requires_not=evil_unleashed
