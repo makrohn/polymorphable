@@ -73,6 +73,8 @@ requires_mp=1
 gfx=shield.png
 sfx=shield.ogg
 buff_shield=true
+cooldown=10000
+damage_multiplier=500
 
 [power]
 id=4
