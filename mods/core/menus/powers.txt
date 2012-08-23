@@ -39,7 +39,7 @@ requires_level=1
 requires_point=true
 
 [power]
-id=3
+id=11
 position=176,192
 requires_level=2
 requires_point=true

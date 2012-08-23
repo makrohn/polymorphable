@@ -70,6 +70,7 @@ quality=normal
 item_type=main
 icon=96,0
 dmg_melee=1,1
+dmg_ment=1,1
 sfx=
 gfx=sword
 power_desc=Just a normal sword

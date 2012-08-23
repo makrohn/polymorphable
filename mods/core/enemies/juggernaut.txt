@@ -34,6 +34,8 @@ dmg_melee_min=4
 dmg_melee_max=4
 dmg_ranged_min=2
 dmg_ranged_max=2
+dmg_ment_min=4
+dmg_ment_max=4
 cooldown=30
 
 absorb_min=2

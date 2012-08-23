@@ -63,13 +63,14 @@ missile_num=3
 damage_multiplier=200
 
 [power]
-id=3
+id=11
 name=Shield
 type=effect
 icon=11
 description=Create a force field that absorbs damage
-requires_mp=1
 new_state=cast
+requires_mp=1
+gfx=shield.png
 sfx=shield.ogg
 buff_shield=true
 
