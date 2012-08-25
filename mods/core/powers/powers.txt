@@ -459,3 +459,13 @@ requires_mp=1
 icon=101
 description=Turn into a powerful knight for a short time
 transform_duration=0
+
+[power]
+id=600
+name=Transform into Squirrel
+type=transform
+new_state=cast
+spawn_type=squirreld
+icon=101
+description=Turn into a squirrel
+transform_duration=0

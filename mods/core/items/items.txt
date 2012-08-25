@@ -196,3 +196,14 @@ item_type=quest
 power=500
 loot_animation=gem
 power_desc=Transform into a mighty juggernaut
+
+[item]
+id=600
+name=Squirrel Talisman
+level=10
+quality=normal
+icon=101,3
+item_type=quest
+power=600
+loot_animation=gem
+power_desc=Transform into a Squirrel at a shrine
