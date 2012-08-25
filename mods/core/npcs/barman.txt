@@ -1,0 +1,13 @@
+name=Barman Insel
+
+talker=true
+
+gfx=barman
+render_size=64,64
+render_offset=32,58
+anim_frames=1
+anim_duration=30
+
+[dialog]
+you=Not too many people in the tavern.
+him=It's midmorning.  Gives me time to get the steins clean.

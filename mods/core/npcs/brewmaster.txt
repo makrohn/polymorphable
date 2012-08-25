@@ -1,4 +1,4 @@
-name=Brewmaster Waka
+name=Brewmistress Waka
 
 talker=true
 
