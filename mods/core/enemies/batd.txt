@@ -1,34 +1,34 @@
-name=Ghost
+name=Bat
 level=1
-categories=ghost
+categories=bat
 rarity=common
 xp=0
 
-sfx_prefix=ghost
-gfx_prefix=ghost
-animations=ghost
+sfx_prefix=bat
+gfx_prefix=bat
+animations=bat
 animation_speed=30
 
 loot_chance=100
 
 # combat stats
-hp=5
-speed=6
-dspeed=4
-melee_range=32
+hp=2
+speed=14
+dspeed=10
+melee_range=64
 threat_range=512
 turn_delay=12
 chance_pursue=20
-chance_melee_phys=2
+chance_melee_phys=10
 chance_melee_ment=0
 power_beacon=132
 power_melee_ment=136
 power_melee_phys=0
-vulnerable_fire=0
+flying=1
 
 accuracy=100
 avoidance=0
 
-dmg_melee_min=3
-dmg_melee_max=3
+dmg_melee_min=1
+dmg_melee_max=1
 cooldown=30
