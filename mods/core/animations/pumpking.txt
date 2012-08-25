@@ -1,25 +1,25 @@
-render_size_x=32
-render_size_y=32
-render_offset_x=16
-render_offset_y=16
+render_size_x=46
+render_size_y=46
+render_offset_x=23
+render_offset_y=58
 
 [stance]
 position=0
-frames=1
+frames=3
 duration=20
 type=back_forth
 
 [run]
-position=1
+position=0
 frames=3
 duration=20
-type=looped
+type=back_forth
 
 [melee]
-position=4
-frames=8
+position=0
+frames=3
 duration=20
-type=run_once
+type=back_forth
 
 [ment]
 position=0
@@ -28,10 +28,10 @@ duration=20
 type=back_forth
 
 [ranged]
-position=4
-frames=8
+position=0
+frames=3
 duration=20
-type=run_once
+type=back_forth
 
 [block]
 position=0
@@ -40,19 +40,19 @@ duration=20
 type=back_forth
 
 [hit]
-position=12
+position=3
 frames=1
-duration=20
+duration=30
 type=play_once
 
 [die]
-position=13
-frames=1
+position=3
+frames=3
 duration=60
 type=play_once
 
 [critdie]
-position=5
+position=3
 frames=3
 duration=60
 type=play_once

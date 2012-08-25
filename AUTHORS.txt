@@ -138,6 +138,11 @@ mods/core/images/enemies/knight.png
 mods/core/images/enemies/skeletonknight.png
 mods/core/images/enemies/skeletonmage.png
 mods/core/images/enemies/skeleton.png
+mods/core/images/enemies/pumpking.png
+mods/core/images/enemies/slime.png
+mods/core/images/enemies/bee.png
+mods/core/images/enemies/big_worm.png
+mods/core/images/enemies/man_eater_flower.png
 mods/core/images/avatar/female/sword.png
 mods/core/images/avatar/female/leather.png
 mods/core/images/npcs/gardener.png

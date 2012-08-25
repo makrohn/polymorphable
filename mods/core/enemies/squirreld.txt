@@ -23,7 +23,7 @@ chance_ranged_phys=10
 chance_melee_ment=0
 power_beacon=132
 power_melee_ment=136
-power_ranged_phys=30
+power_ranged_phys=301
 flying=1
 
 accuracy=100
