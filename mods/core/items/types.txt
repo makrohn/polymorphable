@@ -1,0 +1,19 @@
+[type]
+name=body
+description=Body
+
+[type]
+name=consumable
+description=Consumable
+
+[type]
+name=gem
+description=Gem
+
+[type]
+name=main
+description=Main Hand
+
+[type]
+name=quest
+description=Quest Item
