@@ -10,11 +10,11 @@ anim_duration=30
 
 [dialog]
 requires_status=ghosttalis
+set_status=exploregrave
 you=Hey, still having that ghost issue?
 him=Who's asking?  Me?  You?  I seriously need some sleep.
 you=I'll take that as a yes.
 him=I think it's coming from the gravestone all the way on the east side of the graveyard...
-set_status=exploregrave
 
 [dialog]
 requires_not=ghosttalis
