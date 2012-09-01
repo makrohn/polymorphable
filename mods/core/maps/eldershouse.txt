@@ -105,8 +105,10 @@ intermap=laurelia.txt,69,59
 
 [event]
 # Fireplace
-type=run_once
+type=teleport
 location=18,4,2,1
 hotspot=location
-msg=This will be a fireplace and bring you to a dungeon eventually.
+intermap=basement1.txt,13,30
+msg=A secret passage!
+requires_status=ghosttalis
 
