@@ -204,7 +204,7 @@
   </object>
   <object name="Teleport to Basement2" type="teleport" x="256" y="448" width="32" height="32">
    <properties>
-    <property name="inermap" value="basement2.txt,2,6"/>
+    <property name="intermap" value="basement2.txt,2,7"/>
    </properties>
   </object>
  </objectgroup>

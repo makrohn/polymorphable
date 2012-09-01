@@ -194,7 +194,7 @@ intermap=eldershouse.txt,18,5
 # Teleport to Basement2
 type=teleport
 location=8,14,1,1
-inermap=basement2.txt,2,6
+intermap=basement2.txt,2,7
 
 [enemy]
 # Bat

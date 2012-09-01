@@ -1,6 +1,6 @@
 name=Ruby Snake
 level=1
-categories=snake
+categories=rubysnake
 rarity=common
 xp=0
 

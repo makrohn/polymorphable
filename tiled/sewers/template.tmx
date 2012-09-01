@@ -194,6 +194,6 @@
  </layer>
  <objectgroup name="event" width="32" height="32"/>
  <objectgroup name="enemy" width="32" height="32"/>
- <objectgroup name="enemgroup" width="32" height="32"/>
+ <objectgroup name="enemygroup" width="32" height="32"/>
  <objectgroup name="npc" width="32" height="32"/>
 </map>
