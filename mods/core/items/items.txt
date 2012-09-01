@@ -147,7 +147,6 @@ power_desc=Use to transform into a snake and spit acid at enemies and switches
 loot_animation=gem
 pickup_status=snaketalis
 
-
 [item]
 id=400
 name=Ghost Talisman
@@ -159,6 +158,18 @@ power=400
 power_desc=Use to transform into a ghost and pass through flame
 loot_animation=gem
 pickup_status=ghosttalis
+
+[item]
+id=401
+name=Ghost Talisman
+level=10
+quality=normal
+item_type=quest
+icon=116,4
+power=401
+power_desc=Use to transform into a ghost and pass through flame
+loot_animation=gem
+pickup_status=ghostupgrade
 
 [item]
 id=498

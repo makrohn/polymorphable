@@ -116,6 +116,7 @@ male_pants.png
 male_hurt_pants.png
 male_fall_down_pants.png
 male_slash_pants.png
+beetle.png
 
 Daniel Armstrong (AKA HughSpectrum)
 -----------------------------------
@@ -143,7 +144,6 @@ mods/core/images/enemies/slime.png
 mods/core/images/enemies/bee.png
 mods/core/images/enemies/big_worm.png
 mods/core/images/enemies/man_eater_flower.png
-mods/core/images/avatar/female/sword.png
 mods/core/images/avatar/female/leather.png
 mods/core/images/npcs/gardener.png
 mods/core/images/npcs/guard.png
