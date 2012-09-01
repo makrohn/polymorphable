@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <properties>
+  <property name="music" value="snow_about_a_castle.ogg"/>
+  <property name="tileset" value="snowmt.txt"/>
+  <property name="title" value="Safe Room"/>
+ </properties>
+ <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
+  <image source="tiled_collision.png" width="480" height="32"/>
+ </tileset>
+ <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32">
+  <image source="generic_background.png" width="864" height="832"/>
+ </tileset>
+ <tileset firstgid="718" name="small_objects" tilewidth="32" tileheight="64">
+  <image source="small_objects.png" width="671" height="512"/>
+ </tileset>
+ <tileset firstgid="878" name="outside_objects" tilewidth="32" tileheight="128">
+  <image source="outside_objects.png" width="672" height="768"/>
+ </tileset>
+ <layer name="background" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztzaEBAAAIA6D960/eardqJJDpJA0AsNQjv9/v9/v9Nx/PAETqPfM=
+  </data>
+ </layer>
+ <layer name="fringe" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
+  </data>
+ </layer>
+ <layer name="object" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGwSjABEXMDAz5VMCFzAPtk6EJSqkUbsVkmjNqP6aYDAE92OSHk/9H7R+1f6TYXwXUV44DV6CZWYZHbSWV6z9QvVyAZmYeifUsAIIPHGA=
+  </data>
+ </layer>
+ <layer name="collision" width="32" height="32" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJzt1bEJACAMBEDdf2kHEIyGaOMdpBHyb5fWAABmvXCy/RX066/ai7IyOydZL3P06/+9f/em3bh/0b+it5UBJjcARA==
+  </data>
+ </layer>
+ <objectgroup name="enemygroup" width="32" height="32"/>
+ <objectgroup name="enemy" width="32" height="32"/>
+ <objectgroup name="event" width="32" height="32">
+  <object name="Teleport to Snow6" type="teleport" x="544" y="992" width="96" height="32">
+   <properties>
+    <property name="intermap" value="snow6.txt,24,20"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="npc" width="32" height="32">
+  <object name="Shade of Elder Thomas" type="eldershade" x="576" y="608" width="32" height="32"/>
+ </objectgroup>
+</map>
