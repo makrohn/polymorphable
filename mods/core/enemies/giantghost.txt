@@ -21,7 +21,7 @@ turn_delay=12
 chance_pursue=20
 chance_melee_phys=100
 power_beacon=132
-power_melee_phys=1
+power_melee_phys=2
 quest_loot=1stjugg,2ndjugg,499
 
 accuracy=100
