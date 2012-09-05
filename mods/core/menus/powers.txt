@@ -23,17 +23,17 @@ tabs=1
 # Don't add tab_title=, tab_tree=, and tab= keys if you use only 1 tab
 
 [power]
-id=0
+id=1
 position=144,64
 
 [power]
-id=1
+id=2
 position=176,128
 requires_level=1
 requires_point=true
 
 [power]
-id=2
+id=3
 position=240,128
 requires_level=1
 requires_point=true

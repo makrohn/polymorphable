@@ -1,5 +1,5 @@
 [power]
-id=0
+id=1
 name=Swing
 type=effect
 icon=1
@@ -16,7 +16,7 @@ starting_pos=melee
 allow_power_mod=true
 
 [power]
-id=1
+id=2
 name=Crush
 type=effect
 icon=5
@@ -35,7 +35,7 @@ allow_power_mod=true
 forced_move=10,30
 
 [power]
-id=2
+id=3
 name=Lightning Storm
 type=effect
 icon=6
