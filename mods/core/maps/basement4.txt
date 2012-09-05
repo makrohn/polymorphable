@@ -203,7 +203,7 @@ intermap=basement3.txt,30,28
 # Teleport to Basement A
 type=teleport
 location=29,1,1,1
-intermap=basementa.txt
+intermap=basementa.txt,1,30
 
 [event]
 # Trick Chest

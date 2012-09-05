@@ -1,7 +1,7 @@
 render_size_x=35
 render_size_y=50
 render_offset_x=18
-render_offset_y=41
+render_offset_y=44
 
 [stance]
 position=0

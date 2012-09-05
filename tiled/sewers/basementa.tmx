@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+ <properties>
+  <property name="tileset" value="sewer.txt"/>
+  <property name="title" value="Hidden Waterway"/>
+ </properties>
+ <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
+  <image source="tiled_collision.png" width="480" height="32"/>
+ </tileset>
+ <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32">
+  <image source="generic_background.png" width="864" height="832"/>
+ </tileset>
+ <tileset firstgid="718" name="small_objects" tilewidth="32" tileheight="64">
+  <image source="small_objects.png" width="671" height="512"/>
+ </tileset>
+ <tileset firstgid="878" name="sewer_objects" tilewidth="32" tileheight="128">
+  <image source="sewer_objects.png" width="672" height="768"/>
+ </tileset>
+ <layer name="background" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzt1EEOQDAUhOFXl8D5kDgFroGkPRuugZhF7SyQ6luYxb/+0sxLnYg4xm5UJ+GL7U9GZPYtJr6/wtx8+w/9FGW+XGF/jfsrUIkqJb9BLeqU/B4NaFTyr7Ki71ul//e0beA3/c1/st0Xm9KnT58+ffpvOwBpwBe8
+  </data>
+ </layer>
+ <layer name="fringe" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4B6gJMRlS/HiF3dSAACA+2AUTCggHkEp318wAeIfYHYb4DsT4fSRnSyDzkdgPxuTCd7sYF0wkpG7UcC6PUZrQEx9eVIqVMHU/1J6zDXRuPTO92NglEwCkYeAABgWQQi
+  </data>
+ </layer>
+ <layer name="object" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFQwUcYmZgOExFfISZNPuPkageG9jJjMBHB8B+ZDCU7ceXFgjF63Og/Asqh/9fJgaGf0wQNrHm0ir8R+3HFNtMBfuJTXO08j8hAAufoWQ/JWX6IbTwJ8d+kJ73pHsVrx2k2k8OoDTsYJgS+6kBRu0ftX/U/lH7CQFRNHUjzf/D1f6TUHNIrctI7bvhAgDJnXxj
+  </data>
+ </layer>
+ <layer name="foreground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMArwg2PMA+0CVDB/1P5R+7GAo4MsnY6CUTAKRsEoGAXogNw2FbXqOACr/QY+
+  </data>
+ </layer>
+ <layer name="collision" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztldEOgCAIRS39/2/uJTZ2N1MUUNO78dAijhdNQjhaRZdBSPlSJXiOLDz4mvW0+Br+e/bWov9Uk6+tp15P/ix8PPvefK6YyZPya85cqf/3G1b/cw0/OfL5OSDvKdT1s+U+//JPbOS3es29k/BbNGoGcr6GsE7pzqAcK771d6vycV9283/4Y/k4v3fz/3e+19xCPdoAAQI=
+  </data>
+ </layer>
+ <objectgroup name="event" width="32" height="32">
+  <object name="Strange Rock" type="run_once" x="32" y="512" width="32" height="32">
+   <properties>
+    <property name="hotspot" value="location"/>
+    <property name="msg" value="There's a key-shaped hole in this rock."/>
+    <property name="requires_not" value="switch_key"/>
+    <property name="tooltip" value="Strange Rock"/>
+   </properties>
+  </object>
+  <object name="Strange Rock" type="run_once" x="32" y="512" width="32" height="32">
+   <properties>
+    <property name="hotspot" value="location"/>
+    <property name="mapmod" value="foreground,15,13,0;foreground,15,14,0;foreground,15,15,0;foreground,15,16,0;foreground,15,17,0;object,14,16,0;object,14,17,0;collision,14,16,0"/>
+    <property name="msg" value="The switch key fits into the hole in this rock!"/>
+    <property name="requires_status" value="switch_key"/>
+    <property name="tooltip" value="Strange Rock"/>
+   </properties>
+  </object>
+  <object name="Teleport to Basement4" type="teleport" x="32" y="992" width="32" height="32">
+   <properties>
+    <property name="intermap" value="basement4.txt,29,2"/>
+   </properties>
+  </object>
+  <object name="Book" type="run_once" x="896" y="96" width="32" height="32">
+   <properties>
+    <property name="hotspot" value="location"/>
+    <property name="msg" value="It has been a long journey from Castle Hestian, but we have finally found a safe glade away from prying eyes.  We shall found our village here, among the laurel trees."/>
+    <property name="tooltip" value="Dusty Diary"/>
+   </properties>
+  </object>
+  <object name="Book" type="run_once" x="928" y="96" width="32" height="32">
+   <properties>
+    <property name="hotspot" value="location"/>
+    <property name="msg" value="It has been a hundred years now since King Hestian's decree to burn all the &quot;skinchangers.&quot;  We must go into hiding or he'll destroy us all."/>
+    <property name="tooltip" value="Moldy Diary"/>
+   </properties>
+  </object>
+  <object name="Book" type="run_once" x="960" y="96" width="32" height="32">
+   <properties>
+    <property name="hotspot" value="location"/>
+    <property name="msg" value="King Hestian will not let us live in the open unless we share with him the secret of immortality.  If only we actually held that secret, as he believes!"/>
+    <property name="tooltip" value="Yellowed Diary"/>
+   </properties>
+  </object>
+  <object name="Strange Chest" type="run_once" x="832" y="352" width="32" height="32">
+   <properties>
+    <property name="hotspot" value="location"/>
+    <property name="msg" value="This chest has no keyhole."/>
+    <property name="requires_not" value="acidflask"/>
+    <property name="tooltip" value="Enchanted Chest"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="enemy" width="32" height="32"/>
+ <objectgroup name="enemygroup" width="32" height="32">
+  <object name="2 Skeletons" type="skeleton" x="800" y="192" width="96" height="96">
+   <properties>
+    <property name="level" value="2,2"/>
+    <property name="number" value="2,2"/>
+   </properties>
+  </object>
+  <object name="3 Ruby Snakes" type="rubysnake" x="96" y="544" width="288" height="288">
+   <properties>
+    <property name="level" value="1,1"/>
+    <property name="number" value="3,3"/>
+   </properties>
+  </object>
+  <object name="2 Skeletons" type="skeleton" x="320" y="576" width="64" height="64">
+   <properties>
+    <property name="level" value="1,1"/>
+    <property name="number" value="2,2"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="npc" width="32" height="32"/>
+</map>
