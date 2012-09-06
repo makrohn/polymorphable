@@ -200,7 +200,7 @@ intermap=basement2.txt,27,8
 # Teleport to Basement 5
 type=teleport
 location=7,2,2,1
-intermap=basement5.txt
+intermap=basement5.txt,27,23
 
 [event]
 # Chest

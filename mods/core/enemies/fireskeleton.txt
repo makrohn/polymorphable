@@ -12,7 +12,7 @@ animation_speed=75
 loot_chance=300
 
 # combat stats
-hp=10
+hp=7
 speed=8
 dspeed=6
 melee_range=32

@@ -209,7 +209,7 @@
   </object>
   <object name="Teleport to Basement 5" type="teleport" x="224" y="64" width="64" height="32">
    <properties>
-    <property name="intermap" value="basement5.txt"/>
+    <property name="intermap" value="basement5.txt,27,23"/>
    </properties>
   </object>
   <object name="Chest" type="run_once" x="736" y="128" width="32" height="32">
