@@ -1,6 +1,6 @@
 name=Slime
 level=1
-categories=slime
+categories=slime,sewer
 rarity=common
 xp=0
 

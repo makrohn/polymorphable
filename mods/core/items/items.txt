@@ -102,6 +102,17 @@ power_desc=Use if you find yourself unable to revert to human
 loot_animation=gem
 
 [item]
+id=197
+name=Shiny Rock
+level=10
+quality=normal
+item_type=quest
+icon=
+loot_animation=gem
+power_desc=A shiny rock
+pickup_status=shiny_rock
+
+[item]
 id=198
 name=Skeleton Key
 level=10

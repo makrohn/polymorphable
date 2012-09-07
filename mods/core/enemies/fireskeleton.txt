@@ -19,7 +19,7 @@ melee_range=32
 threat_range=512
 turn_delay=12
 chance_pursue=20
-chance_melee_phys=2
+chance_melee_phys=4
 power_beacon=132
 power_melee_phys=1
 
@@ -30,5 +30,5 @@ dmg_melee_min=4
 dmg_melee_max=4
 cooldown=30
 
-absorb_min=1
-absorb_max=1
+absorb_min=0
+absorb_max=0

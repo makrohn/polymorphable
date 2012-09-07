@@ -1,6 +1,6 @@
 name=Beetle
 level=1
-categories=beetle
+categories=beetle,sewer
 rarity=common
 xp=0
 
