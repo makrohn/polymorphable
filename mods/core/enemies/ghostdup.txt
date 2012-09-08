@@ -1,7 +1,7 @@
 name=Ghost
 level=1
 humanoid=true
-categories=ghost
+categories=ghostd
 rarity=common
 xp=0
 

@@ -208,7 +208,7 @@ tooltip=Sign
 # Teleport to Basement7
 type=teleport
 location=6,3,2,1
-intermap=basement7.txt
+intermap=basement7.txt,29,29
 
 [enemy]
 # bomb

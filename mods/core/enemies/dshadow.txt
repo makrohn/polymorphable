@@ -1,18 +1,20 @@
-name=Ghost
-level=1
-categories=ghostd
+name=Daphne's Shadow
+level=4
+humanoid=true
+categories=dshadow
 rarity=common
 xp=0
 
 sfx_prefix=ghost
-gfx_prefix=ghost
-animations=ghost
-animation_speed=30
+gfx_prefix=ghostdup
+animations=humanoid
+animation_speed=90
 
 loot_chance=100
+defeat_status=shadowdefeated
 
 # combat stats
-hp=5
+hp=10
 speed=14
 dspeed=10
 melee_range=32

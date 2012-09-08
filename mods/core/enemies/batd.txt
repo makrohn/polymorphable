@@ -1,6 +1,6 @@
 name=Bat
 level=1
-categories=bat
+categories=batd
 rarity=common
 xp=0
 

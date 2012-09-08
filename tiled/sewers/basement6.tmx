@@ -216,7 +216,7 @@
   </object>
   <object name="Teleport to Basement7" type="teleport" x="192" y="96" width="64" height="32">
    <properties>
-    <property name="intermap" value="basement7.txt"/>
+    <property name="intermap" value="basement7.txt,29,29"/>
    </properties>
   </object>
  </objectgroup>

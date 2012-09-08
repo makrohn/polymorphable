@@ -1,0 +1,32 @@
+name=Balthasar
+
+talker=true
+
+gfx=ghost
+render_size=40,46
+render_offset=20,40
+anim_frames=3
+anim_duration=30
+
+[dialog]
+requires_status=ghostupgrade
+him=Ah, I can rest now...  if you wish, read the books beside me for history of these ruins...
+
+[dialog]
+requires_not=shadowdefeated
+him=I cannot rest!  Look into the fountain...  and defeat your shadow there!
+
+[dialog]
+requires_status=shadowdefeated
+requires_not=ghostupgrade
+set_status=ghostupgrade
+remove_item=400
+reward_item=401
+reward_xp=100
+him=These ruins have been here a long time, before the founding of Laurelia.
+him=During the dark times when we the Kingdom was ruled by King Hestian, we fled here, and built a city in the light.
+him=Some people, including the sorcerer Zalkaz, created warrens under the city, in case the mad King's soldiers found us.
+him=Zalkaz conducted experiments in the darkness while the other Laurelians remained in the light.
+him=After the mad King died, he sent guards to root our Zalkaz, with the assistance of the Laurelian populace.
+him=The skeletons you see down here are the remainder of his frightening experiments.
+him=Take this talisman, which has a piece of your shadow bound to it.  You should now be able to remain humanoid while incorporeal.

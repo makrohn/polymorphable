@@ -1,6 +1,6 @@
 name=Snake
 level=1
-categories=snake
+categories=snaked
 rarity=common
 xp=0
 
