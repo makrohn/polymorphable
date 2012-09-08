@@ -59,7 +59,7 @@ trait_elemental=shock
 starting_pos=source
 multitarget=true
 target_neighbor=1
-missile_num=3
+count=3
 damage_multiplier=200
 
 [power]
@@ -303,7 +303,7 @@ name=Summon Bat (enemy)
 type=spawn
 icon=114
 spawn_type=bat
-spawn_num=10
+count=10
 new_state=cast
 starting_pos=source
 target_neighbor=1
