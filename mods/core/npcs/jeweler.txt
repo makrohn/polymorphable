@@ -11,3 +11,16 @@ anim_duration=30
 [dialog]
 her=I came here all the way from the Castle Keradon to sell the jewels my family mines, but nobody here is buying!
 her=Hopefully there's more money to be made at my next stop in Haladria.
+
+[dialog]
+requires_status=shiny_rock
+requires_not=gemill
+you=Hey, is this worth anything?
+her=Oh, it's beautiful!  It's not worth a lot right now, but I can set it into a necklace.
+you=That would be great, thanks!  How much do I owe you?
+her=Oh, consider it a favor for helping save the village.
+you=Could you maybe convince Clara to give me equipment for free while you're at it?
+her=Oh, no, I could never ask that.  If you find yourself in Keradon, though, look me up, and tell your friends!
+remove_item=197
+reward_item=196
+set_status=gemill

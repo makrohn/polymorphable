@@ -1,0 +1,8 @@
+[quest]
+requires_status=shiny_rock
+requires_not=gemill
+quest_text=Maybe someone in town has a use for this shiny rock?
+
+[quest]
+requires_status=gemill
+quest_text=Maybe the library has some information on the Gem of Illusion.

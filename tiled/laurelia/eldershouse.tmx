@@ -121,6 +121,7 @@
     <property name="intermap" value="basement1.txt,13,30"/>
     <property name="msg" value="A secret passage!"/>
     <property name="requires_status" value="ghosttalis"/>
+    <property name="set_status" value="explorebasement"/>
    </properties>
   </object>
  </objectgroup>

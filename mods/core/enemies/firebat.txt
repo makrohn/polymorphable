@@ -31,6 +31,3 @@ avoidance=0
 dmg_melee_min=3
 dmg_melee_max=3
 cooldown=30
-
-absorb_min=1
-absorb_max=1

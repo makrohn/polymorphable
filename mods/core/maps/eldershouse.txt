@@ -111,4 +111,5 @@ hotspot=location
 intermap=basement1.txt,13,30
 msg=A secret passage!
 requires_status=ghosttalis
+set_status=explorebasement
 
