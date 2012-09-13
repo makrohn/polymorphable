@@ -70,7 +70,6 @@ icon=11
 description=Create a force field that absorbs damage
 new_state=cast
 requires_mp=1
-gfx=shield.png
 sfx=shield.ogg
 buff_shield=true
 cooldown=10000
@@ -315,9 +314,10 @@ type=effect
 icon=32
 name=Carrot
 sfx=chomp.ogg
-new_state=cast
+new_state=instant
 requires_item=1
-buff_restore_hp=4
+buff_restore_hp=8
+cooldown=600
 
 [power]
 id=101
@@ -325,9 +325,10 @@ type=effect
 icon=33
 name=Watermelon
 sfx=chomp.ogg
-new_state=cast
+new_state=instant
 requires_item=2
 buff_restore_mp=4
+cooldown=600
 
 [power]
 id=102
@@ -340,7 +341,6 @@ spawn_type=firebomb
 new_state=cast
 starting_pos=source
 source_type=hero
-msg=Deadly fire bomb to whole room in 3 seconds!
 cooldown=6000
 
 [power]
