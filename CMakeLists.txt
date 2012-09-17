@@ -171,8 +171,13 @@ EndIf (NOT SDLMAIN_LIBRARY)
 Target_Link_Libraries (polymorphable ${CMAKE_LD_FLAGS} ${SDL_LIBRARY} ${SDLMIXER_LIBRARY} ${SDLIMAGE_LIBRARY} ${SDLTTF_LIBRARY} ${SDLMAIN_LIBRARY})
 
 
-set(FLARE_EXECUTABLE_PATH ${CMAKE_INSTALL_PREFIX}/${BINDIR}/polymorphable)
-configure_file("${CMAKE_CURRENT_SOURCE_DIR}/distribution/polymorphable.desktop.in" "${CMAKE_CURRENT_BINARY_DIR}/polymorphable.desktop")
+# desktop file
+If(NOT IS_ABSOLUTE "${BINDIR}")
+	set(FLARE_EXECUTABLE_PATH ${CMAKE_INSTALL_PREFIX}/${BINDIR}/polymorphable)
+Else(NOT IS_ABSOLUTE "${BINDIR}")
+	set(FLARE_EXECUTABLE_PATH ${BINDIR}/polymorphable)
+EndIf(NOT IS_ABSOLUTE "${BINDIR}")
+configure_file("${CMAKE_CURRENT_SOURCE_DIR}/distribution/polymorphable.desktop.in" "${CMAKE_CURRENT_BINARY_DIR}/flare.desktop")
 
 
 # installing to the proper places
@@ -185,7 +190,7 @@ install(DIRECTORY
 install(FILES
   "${CMAKE_CURRENT_BINARY_DIR}/polymorphable.desktop"
   DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)
-#install(FILES
-#  "${CMAKE_CURRENT_SOURCE_DIR}/art_src/logo/polymorphable_logo.svg"
-#  DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/apps
-#  RENAME polymorphable.svg)
+install(FILES
+  "${CMAKE_CURRENT_SOURCE_DIR}/distribution/flare_logo.svg"
+  DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/apps
+  RENAME flare.svg)

@@ -10,3 +10,7 @@ build/
 .*.sw*
 polymorphable
 polymorphable.exe
+build/
+# ignore also vim swap files
+.*.sw*
+flare.desktop
