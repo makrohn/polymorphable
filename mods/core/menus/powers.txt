@@ -7,7 +7,7 @@
 
 caption=160,8,center,top
 close=294,2
-unspent_points=160,396
+unspent_points=160,396,center,bottom
 tabs=1
 
 #tab_title=Melee
