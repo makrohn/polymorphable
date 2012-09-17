@@ -164,9 +164,9 @@ StatBlock::StatBlock() {
 	first_defeat_loot = 0;
 
 	// default hero base/option
-	base="male";
+	base="female";
 	head="head_short";
-	portrait="male01";
+	portrait="female01";
 
 	// default animations
 	animations = "";
