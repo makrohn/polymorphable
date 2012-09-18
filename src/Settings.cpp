@@ -187,7 +187,7 @@ void setPaths() {
 #else
 void setPaths() {
 
-	string engine_folder = "flare";
+	string engine_folder = "polymorphable";
 
 	// attempting to follow this spec:
 	// http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html

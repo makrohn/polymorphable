@@ -322,18 +322,20 @@ void StatBlock::load(const string& filename) {
 			else if (infile.key == "animations") animations = infile.val;
 			else if (infile.key == "animation_speed") animationSpeed = num;
 
+			// hp countdown
+			else if (infile.key == "hp_countdown_ticks") hp_countdown_ticks = num;
+
 			// hide enemy HP bar
 			else if (infile.key == "suppress_hp") suppress_hp = num;
 
 			for (unsigned int i=0; i<ELEMENTS.size(); i++) {
 				if (infile.key == "vulnerable_" + ELEMENTS[i].name) vulnerable[i] = num;
 			}
-			// hp countdown
-			else if (infile.key == "hp_countdown_ticks") hp_countdown_ticks = num;
 		}
 		infile.close();
 	} else fprintf(stderr, "Unable to open %s!\n", filename.c_str());
 }
+
 
 /**
  * Reduce temphp first, then hp
