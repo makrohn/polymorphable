@@ -177,7 +177,7 @@ If(NOT IS_ABSOLUTE "${BINDIR}")
 Else(NOT IS_ABSOLUTE "${BINDIR}")
 	set(FLARE_EXECUTABLE_PATH ${BINDIR}/polymorphable)
 EndIf(NOT IS_ABSOLUTE "${BINDIR}")
-configure_file("${CMAKE_CURRENT_SOURCE_DIR}/distribution/polymorphable.desktop.in" "${CMAKE_CURRENT_BINARY_DIR}/flare.desktop")
+configure_file("${CMAKE_CURRENT_SOURCE_DIR}/distribution/polymorphable.desktop.in" "${CMAKE_CURRENT_BINARY_DIR}/polymorphable.desktop")
 
 
 # installing to the proper places
