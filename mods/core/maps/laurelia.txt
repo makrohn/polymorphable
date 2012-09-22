@@ -842,16 +842,6 @@ location=34,67,3,1
 intermap=church.txt,19,4
 
 [event]
-# Eerie Gravestone
-type=teleport
-location=47,51,2,1
-hotspot=location
-intermap=shadowlaurelia.txt,47,52
-msg=Strange sounds come from this gravestone...
-requires_status=exploregrave
-tooltip=Eerie Gravestone
-
-[event]
 # Teleport to Small House
 type=teleport
 location=53,75,1,1
