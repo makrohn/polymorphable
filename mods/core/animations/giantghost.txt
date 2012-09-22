@@ -6,53 +6,53 @@ render_offset_y=86
 [stance]
 position=0
 frames=3
-duration=20
+duration=120
 type=back_forth
 
 [run]
 position=0
 frames=3
-duration=20
+duration=120
 type=back_forth
 
 [melee]
 position=0
 frames=3
-duration=20
+duration=120
 type=back_forth
 
 [ment]
 position=0
 frames=3
-duration=20
+duration=120
 type=back_forth
 
 [ranged]
 position=0
 frames=3
-duration=20
+duration=120
 type=back_forth
 
 [block]
 position=0
 frames=3
-duration=20
+duration=120
 type=back_forth
 
 [hit]
 position=4
 frames=1
-duration=2
+duration=120
 type=play_once
 
 [die]
 position=4
 frames=1
-duration=2
+duration=60
 type=play_once
 
 [critdie]
 position=4
 frames=1
-duration=2
+duration=60
 type=play_once
