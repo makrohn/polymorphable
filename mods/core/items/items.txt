@@ -63,6 +63,18 @@ gfx=leather
 loot_animation=leather_armor
 
 [item]
+id=52
+name=Chain Armor
+level=10
+quality=normal
+item_type=body
+abs=2,2
+icon=113,17
+sfx=cloth
+gfx=chain
+loot_animation=leather_armor
+
+[item]
 id=100
 name=Sword
 level=10
@@ -89,6 +101,19 @@ sfx=
 gfx=sword
 power_desc=The sword of the ancient hero
 price=100
+loot_animation=sword
+
+[item]
+id=102
+name=Dream Sword
+level=10
+quality=normal
+item_type=main
+icon=97,1
+dmg_melee=2,2
+dmg_mental=3,3
+gfx=sword
+power_desc=the sword of the ancient hero
 loot_animation=sword
 
 [item]
