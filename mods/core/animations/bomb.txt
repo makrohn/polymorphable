@@ -9,6 +9,12 @@ frames=1
 duration=120
 type=back_forth
 
+[spawn]
+position=0
+frames=1
+duration=120
+type=back_forth
+
 [run]
 position=0
 frames=1

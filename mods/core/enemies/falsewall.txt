@@ -4,10 +4,8 @@ categories=falsewall
 rarity=common
 xp=0
 
-sfx_prefix=falsewall
 gfx_prefix=falsewall
 animations=falsewall
-animation_speed=60
 
 loot_chance=0
 suppress_hp=0
@@ -21,7 +19,7 @@ threat_range=0
 turn_delay=12
 chance_pursue=20
 chance_ranged_phys=5
-vulnerable_fire=400
+vulnerable_earth=400
 
 accuracy=100
 avoidance=0

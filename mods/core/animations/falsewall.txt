@@ -1,6 +1,6 @@
 render_size_x=96
 render_size_y=128
-render_offset_x=64
+render_offset_x=48
 render_offset_y=112
 
 [stance]
