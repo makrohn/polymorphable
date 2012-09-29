@@ -1,7 +1,7 @@
-render_size_x=64
-render_size_y=64
-render_offset_x=32
-render_offset_y=58
+render_size_x=192
+render_size_y=192
+render_offset_x=96
+render_offset_y=122
 
 [stance]
 position=0
@@ -16,8 +16,8 @@ duration=60
 type=looped
 
 [melee]
-position=10
-frames=5
+position=9
+frames=6
 duration=90
 type=play_once
 
