@@ -5,11 +5,11 @@
 
 option=female,head_long,female01
 
-layer=0,main,body,head,off
-layer=1,main,body,head,off
-layer=2,main,body,head,off
-layer=3,main,body,head,off
-layer=4,main,body,head,off
-layer=5,main,body,head,off
-layer=6,main,body,head,off
-layer=7,main,body,head,off
+layer=0,body,main,head
+layer=1,body,main,head
+layer=2,body,main,head
+layer=3,body,main,head
+layer=4,body,main,head
+layer=5,body,main,head
+layer=6,body,main,head
+layer=7,body,main,head
