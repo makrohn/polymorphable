@@ -161,27 +161,18 @@ void Avatar::loadLayerDefinitions() {
 void Avatar::loadGraphics(std::vector<Layer_gfx> _img_gfx) {
 
 	for (unsigned int i=0; i<animsets.size(); i++) {
-		if (animsets[i]) {
-			AnimationManager::instance()->decreaseCount(animsets[i]->getName());
-			// animsets[i] = 0;
-		}
-		if (anims[i])
-			delete anims[i];
-			// anim[i]=0;
+		AnimationManager::instance()->decreaseCount(animsets[i]->getName());
+		delete anims[i];
 	}
-
-	animsets.resize(_img_gfx.size());
-	anims.resize(_img_gfx.size());
+	animsets.clear();
+	anims.clear();
 
 	for (unsigned int i=0; i<_img_gfx.size(); i++) {
-		if (_img_gfx[i].gfx == "") {
-			animsets[i] = 0;
-			anims[i] = 0;
-		} else {
+		if (_img_gfx[i].gfx != "") {
 			string name = "animations/avatar/"+stats.base+"/"+_img_gfx[i].gfx+".txt";
 			AnimationManager::instance()->increaseCount(name);
-			animsets[i] = AnimationManager::instance()->getAnimationSet(name);
-			anims[i] = animsets[i]->getAnimation(animsets[i]->starting_animation);
+			animsets.push_back(AnimationManager::instance()->getAnimationSet(name));
+			anims.push_back(animsets.back()->getAnimation(animsets.back()->starting_animation));
 		}
 	}
 	AnimationManager::instance()->cleanUp();
@@ -802,31 +793,12 @@ void Avatar::transform() {
 	stats.transformed = true;
 	setPowers = true;
 
+	delete charmed_stats;
 	charmed_stats = new StatBlock();
 	charmed_stats->load("enemies/" + stats.transform_type + ".txt");
 
-	// transform the hero graphic
-	if (last_transform != charmed_stats->name) {
-		if (transformed_sprites) SDL_FreeSurface(transformed_sprites);
-
-		//transformed_sprites = IMG_Load(mods->locate("images/enemies/" + charmed_stats->gfx_prefix + ".png").c_str());
-
-		if(!transformed_sprites) {
-			fprintf(stderr, "Couldn't load image: %s\n", IMG_GetError());
-			SDL_Quit();
-			exit(1);
-		}
-		last_transform = charmed_stats->name;
-	}
-
-	SDL_SetColorKey( transformed_sprites, SDL_SRCCOLORKEY, SDL_MapRGB(transformed_sprites->format, 255, 0, 255) );
-
-	// optimize
-	SDL_Surface *cleanup = transformed_sprites;
-	transformed_sprites = SDL_DisplayFormatAlpha(transformed_sprites);
-	SDL_FreeSurface(cleanup);
-
 	// temporary save hero stats
+	delete hero_stats;
 	hero_stats = new StatBlock();
 	*hero_stats = stats;
 
@@ -837,7 +809,11 @@ void Avatar::transform() {
 	stats.humanoid = charmed_stats->humanoid;
 	stats.animations = charmed_stats->animations;
 	stats.animationSpeed = charmed_stats->animationSpeed;
-	animationSet = AnimationManager::instance()->getAnimationSet("animations/"+charmed_stats->animations + ".txt");
+
+	string animationname = "animations/"+charmed_stats->animations + ".txt";
+	AnimationManager::instance()->decreaseCount("animations/hero.txt");
+	AnimationManager::instance()->increaseCount(animationname);
+	animationSet = AnimationManager::instance()->getAnimationSet(animationname);
 	delete activeAnimation;
 	activeAnimation = animationSet->getAnimation(animationSet->starting_animation);
 	stats.cur_state = AVATAR_STANCE;
@@ -903,6 +879,8 @@ void Avatar::untransform() {
 	stats.animations = hero_stats->animations;
 	stats.animationSpeed = hero_stats->animationSpeed;
 
+	AnimationManager::instance()->increaseCount("animations/hero.txt");
+	AnimationManager::instance()->decreaseCount("animations/"+charmed_stats->animations + ".txt");
 	animationSet = AnimationManager::instance()->getAnimationSet("animations/hero.txt");
 	delete activeAnimation;
 	activeAnimation = animationSet->getAnimation(animationSet->starting_animation);
@@ -931,6 +909,8 @@ void Avatar::untransform() {
 
 	delete charmed_stats;
 	delete hero_stats;
+	charmed_stats = NULL;
+	hero_stats = NULL;
 }
 
 void Avatar::setAnimation(std::string name) {
@@ -938,11 +918,10 @@ void Avatar::setAnimation(std::string name) {
 		return;
 
 	Entity::setAnimation(name);
-	for (unsigned i=0; i < animsets.size(); i++)
-		if (animsets[i] != NULL) {
-			delete anims[i];
-			anims[i] = animsets[i]->getAnimation(name);
-		}
+	for (unsigned i=0; i < animsets.size(); i++) {
+		delete anims[i];
+		anims[i] = animsets[i]->getAnimation(name);
+	}
 }
 
 /**
@@ -957,30 +936,33 @@ int Avatar::getUntransformPower() {
 }
 
 void Avatar::addRenders(vector<Renderable> &r) {
-	for (unsigned i = 0; i < anims.size(); ++i) {
-		if (anims[i] != NULL) {
-			Renderable ren = anims[i]->getCurrentFrame(stats.direction);
-			ren.map_pos = stats.pos;
-			ren.prio = i;
-			r.push_back(ren);
+	if (!stats.transformed) {
+		for (unsigned i = 0; i < anims.size(); ++i) {
+			if (anims[i] != NULL) {
+				Renderable ren = anims[i]->getCurrentFrame(stats.direction);
+				ren.map_pos = stats.pos;
+				ren.prio = i;
+				r.push_back(ren);
+			}
 		}
+	} else {
+		Renderable ren = activeAnimation->getCurrentFrame(stats.direction);
+		ren.map_pos = stats.pos;
+		r.push_back(ren);
 	}
 }
 
 Avatar::~Avatar() {
 
 	AnimationManager::instance()->decreaseCount("animations/hero.txt");
-
-	SDL_FreeSurface(sprites);
-	if (transformed_sprites) SDL_FreeSurface(transformed_sprites);
-
 	for (unsigned int i=0; i<animsets.size(); i++) {
-		if (animsets[i])
-			AnimationManager::instance()->decreaseCount(animsets[i]->getName());
-		//animsets[i] = 0;
+		AnimationManager::instance()->decreaseCount(animsets[i]->getName());
 		delete anims[i];
 	}
 	AnimationManager::instance()->cleanUp();
+
+	delete charmed_stats;
+	delete hero_stats;
 
 	Mix_FreeChunk(sound_melee);
 	Mix_FreeChunk(sound_hit);
