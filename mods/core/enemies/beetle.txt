@@ -5,7 +5,6 @@ rarity=common
 xp=0
 
 sfx_prefix=bettle
-gfx_prefix=beetle
 animations=beetle
 animation_speed=30
 

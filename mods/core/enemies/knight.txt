@@ -5,8 +5,7 @@ rarity=common
 xp=0
 
 sfx_prefix=cultist
-gfx_prefix=knight
-animations=humanoid
+animations=knight
 animation_speed=75
 
 loot_chance=200

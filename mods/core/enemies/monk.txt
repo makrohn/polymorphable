@@ -5,8 +5,7 @@ rarity=common
 xp=0
 
 sfx_prefix=monk
-gfx_prefix=brawler
-animations=humanoid
+animations=brawler
 animation_speed=50
 
 loot_chance=200

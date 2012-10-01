@@ -5,7 +5,6 @@ rarity=common
 xp=0
 
 sfx_prefix=ghost
-gfx_prefix=ghost
 animations=ghost
 animation_speed=30
 

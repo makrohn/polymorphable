@@ -1,4 +1,4 @@
-image=images/enemies/bat_large.png
+image=images/enemies/venombat.png
 
 render_size_x=64
 render_size_y=64

@@ -5,8 +5,7 @@ rarity=common
 xp=0
 
 sfx_prefix=bat
-gfx_prefix=firebat
-animations=bat_large
+animations=firebat
 animation_speed=30
 
 loot_chance=200

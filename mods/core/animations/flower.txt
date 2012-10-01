@@ -1,3 +1,5 @@
+image=images/enemies/flower.png
+
 render_size_x=60
 render_size_y=76
 render_offset_x=30

@@ -1,3 +1,5 @@
+image=images/enemies/beetle.png
+
 render_size_x=48
 render_size_y=48
 render_offset_x=24

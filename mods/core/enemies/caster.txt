@@ -5,8 +5,7 @@ rarity=common
 xp=0
 
 sfx_prefix=caster
-gfx_prefix=caster
-animations=humanoid
+animations=caster
 animation_speed=75
 
 loot_chance=200

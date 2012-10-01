@@ -5,7 +5,6 @@ rarity=common
 xp=0
 
 sfx_prefix=squirrel
-gfx_prefix=squirrel
 animations=squirrel
 animation_speed=30
 

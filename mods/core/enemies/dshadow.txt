@@ -6,8 +6,7 @@ rarity=common
 xp=0
 
 sfx_prefix=ghost
-gfx_prefix=ghostdup
-animations=humanoid
+animations=ghostdup
 animation_speed=90
 
 loot_chance=100

@@ -5,7 +5,6 @@ rarity=common
 xp=0
 
 sfx_prefix=combat_dummy
-gfx_prefix=combat_dummy
 animations=combat_dummy
 animation_speed=60
 

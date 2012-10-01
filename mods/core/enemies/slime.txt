@@ -5,7 +5,6 @@ rarity=common
 xp=0
 
 sfx_prefix=slime
-gfx_prefix=slime
 animations=slime
 animation_speed=30
 

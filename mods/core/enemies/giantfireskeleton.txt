@@ -5,8 +5,7 @@ rarity=common
 xp=0
 
 sfx_prefix=skeleton
-gfx_prefix=giantfireskeleton
-animations=giantskeleton
+animations=giantfireskeleton
 animation_speed=75
 
 loot_chance=300

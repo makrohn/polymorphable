@@ -6,7 +6,6 @@ rarity=commons
 xp=0
 
 sfx_prefix=juggernaut
-gfx_prefix=juggernaut
 animations=juggernaut
 animation_speed=60
 

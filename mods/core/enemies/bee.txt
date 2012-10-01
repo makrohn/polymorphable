@@ -5,7 +5,6 @@ rarity=common
 xp=0
 
 sfx_prefix=bee
-gfx_prefix=bee
 animations=bee
 animation_speed=30
 

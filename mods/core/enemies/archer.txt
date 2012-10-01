@@ -5,7 +5,6 @@ rarity=common
 xp=0
 
 sfx_prefix=archer
-gfx_prefix=archer
 animations=archer
 animation_speed=75
 

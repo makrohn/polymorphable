@@ -5,8 +5,7 @@ rarity=common
 xp=0
 
 sfx_prefix=skeleton
-gfx_prefix=skeletonknight
-animations=skeleton
+animations=skeletonknight
 animation_speed=60
 
 loot_chance=200

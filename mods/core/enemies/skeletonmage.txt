@@ -5,8 +5,7 @@ rarity=common
 xp=0
 
 sfx_prefix=skeleton
-gfx_prefix=skeletonmage
-animations=skeleton
+animations=skeletonmage
 animation_speed=75
 
 loot_chance=200

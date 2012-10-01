@@ -1,3 +1,5 @@
+image=images/enemies/giantghost.png
+
 render_size_x=80
 render_size_y=92
 render_offset_x=40

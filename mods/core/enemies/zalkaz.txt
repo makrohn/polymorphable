@@ -5,7 +5,6 @@ rarity=common
 xp=0
 
 sfx_prefix=bat
-gfx_prefix=zalkaz
 animations=zalkaz
 animation_speed=30
 defeat_status=theend

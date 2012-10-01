@@ -1,4 +1,4 @@
-image=images/enemies/skeleton.png
+image=images/enemies/skeletonknight.png
 
 render_size_x=64
 render_size_y=64
