@@ -9,6 +9,7 @@ animations=bomb
 animation_speed=30
 
 loot_chance=0
+suppress_hp=1
 
 # combat stats
 hp=2
