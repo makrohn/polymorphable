@@ -1,9 +1,7 @@
 image=images/enemies/big_worm.png
 
-render_size_x=35
-render_size_y=50
-render_offset_x=18
-render_offset_y=44
+render_size=35,50
+render_offset=18,44
 
 [stance]
 position=0

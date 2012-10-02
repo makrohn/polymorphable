@@ -1,7 +1,5 @@
-render_size_x=192
-render_size_y=192
-render_offset_x=96
-render_offset_y=122
+render_size=192,192
+render_offset=96,122
 
 [stance]
 position=0

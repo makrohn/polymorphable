@@ -1,9 +1,7 @@
 image=images/enemies/ghost.png
 
-render_size_x=40
-render_size_y=46
-render_offset_x=20
-render_offset_y=40
+render_size=40,46
+render_offset=20,40
 
 [stance]
 position=0

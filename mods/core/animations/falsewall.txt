@@ -1,9 +1,7 @@
 image=images/enemies/falsewall.png
 
-render_size_x=96
-render_size_y=128
-render_offset_x=48
-render_offset_y=112
+render_size=96,128
+render_offset=48,112
 
 [stance]
 position=0

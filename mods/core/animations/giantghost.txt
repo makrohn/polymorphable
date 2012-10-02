@@ -1,9 +1,7 @@
 image=images/enemies/giantghost.png
 
-render_size_x=80
-render_size_y=92
-render_offset_x=40
-render_offset_y=86
+render_size=80,92
+render_offset=40,86
 
 [stance]
 position=0

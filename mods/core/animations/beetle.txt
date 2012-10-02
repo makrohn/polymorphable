@@ -1,9 +1,7 @@
 image=images/enemies/beetle.png
 
-render_size_x=48
-render_size_y=48
-render_offset_x=24
-render_offset_y=42
+render_size=48,48
+render_offset=24,42
 
 [stance]
 position=0
