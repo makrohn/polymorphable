@@ -3,10 +3,6 @@ name=Mana Spring
 talker=false
 
 gfx=blank
-render_size=32,32
-render_offset=16,16
-anim_frames=1
-anim_duration=30
 
 [dialog]
 him=A strange spring

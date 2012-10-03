@@ -3,10 +3,6 @@ name=Elder Thomas
 talker=true
 
 gfx=elder
-render_size=64,64
-render_offset=32,58
-anim_frames=1
-anim_duration=30
 
 [dialog]
 him=Daphne, you must save the world from Zalkaz!

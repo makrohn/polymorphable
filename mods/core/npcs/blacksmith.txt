@@ -5,10 +5,6 @@ vendor=true
 constant_stock=101
 
 gfx=blacksmith
-render_size=64,64
-render_offset=32,58
-anim_frames=1
-anim_duration=30
 
 [dialog]
 him=Ah, so you need a better sword to beat the Evil One?

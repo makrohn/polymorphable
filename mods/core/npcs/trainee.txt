@@ -3,10 +3,6 @@ name=PFC Xavier
 talker=true
 
 gfx=trainee
-render_size=64,64
-render_offset=32,58
-anim_frames=8
-anim_duration=4
 
 [dialog]
 him=Don't break my concentration, or that thing will send me sprawling!

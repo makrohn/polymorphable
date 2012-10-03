@@ -1,0 +1,10 @@
+image=images/npcs/blank.png
+
+render_size=64,64
+render_offset=32,58
+
+[stance]
+position=0
+frames=1
+duration=60
+type=looped

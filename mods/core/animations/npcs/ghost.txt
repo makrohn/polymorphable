@@ -1,0 +1,10 @@
+image=images/npcs/ghost.png
+
+render_size=40,46
+render_offset=20,58
+
+[stance]
+position=0
+frames=3
+duration=60
+type=looped

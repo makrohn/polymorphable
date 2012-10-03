@@ -5,10 +5,6 @@ vendor=true
 constant_stock=1,1,1,1,1,2,2,2,2,2,3,3,3,3,3
 
 gfx=blank
-render_size=32,32
-render_offset=16,16
-anim_frames=1
-anim_duration=30
 
 [dialog]
 him=If we're not in right now, feel free to leave the money in the chest.  Honor system!

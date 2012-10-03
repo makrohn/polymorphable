@@ -3,10 +3,6 @@ talker=true
 portrait=makrohn
 
 gfx=makrohn
-render_size=64,64
-render_offset=32,58
-anim_frames=1
-anim_duration=30
 
 [dialog]
 him=A few months ago, I downloaded FLARE and decided to start modding for it.  I was interested in doing maps and enemies so much as fleshing out the small Frontier Clint Bellanger created.

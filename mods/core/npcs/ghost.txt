@@ -3,10 +3,6 @@ name=Gaspar
 talker=true
 
 gfx=ghost
-render_size=40,46
-render_offset=20,58
-anim_frames=3
-anim_duration=30
 
 [dialog]
 him=Be careful not to traverse the river of flames...

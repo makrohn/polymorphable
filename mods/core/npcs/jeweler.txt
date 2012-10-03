@@ -3,10 +3,6 @@ name=Celade the Jeweler
 talker=true
 
 gfx=jeweler
-render_size=64,64
-render_offset=32,58
-anim_frames=1
-anim_duration=30
 
 [dialog]
 her=I came here all the way from the Castle Keradon to sell the jewels my family mines, but nobody here is buying!

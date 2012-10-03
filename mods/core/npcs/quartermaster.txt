@@ -3,10 +3,6 @@ name=Quartermaster Fenton
 talker=true
 
 gfx=quartermaster
-render_size=64,64
-render_offset=32,58
-anim_frames=1
-anim_duration=30
 
 [dialog]
 him=We're stocking up the granary for the winter.
