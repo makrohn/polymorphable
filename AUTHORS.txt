@@ -116,7 +116,7 @@ male_pants.png
 male_hurt_pants.png
 male_fall_down_pants.png
 male_slash_pants.png
-beetle.png
+beetle.png (and colored variants)
 
 Daniel Armstrong (AKA HughSpectrum)
 -----------------------------------
@@ -273,6 +273,7 @@ License: CC-BY 3.0
 /mods/core/soundfx/powers/quake.ogg
 /mods/core/soundfx/powers/shield.ogg
 /mods/core/soundfx/level_up.ogg
+mods/core/music/evil_temple.ogg
 
 Sound Effects Artist - Bart K
 -----------------------------
@@ -332,8 +333,3 @@ Telaron
 -------
 License: GPL 2.0 & GPL 3.0
 mods/core/music/snow_about_a_castle.ogg
-
-Brandon Morris
---------------
-License: CC-BY 3.0
-mods/core/music/evil_temple.ogg
