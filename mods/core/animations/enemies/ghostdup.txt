@@ -3,7 +3,7 @@ image=images/enemies/ghostdup.png
 
 [stance]
 frames=1
-duration=180
+duration=3
 type=back_forth
 frame=0,0,316,645,157,176,79,108
 frame=0,1,314,925,156,177,79,108
@@ -11,7 +11,7 @@ frame=0,2,0,1102,156,113,78,108
 
 [spawn]
 frames=1
-duration=180
+duration=3
 type=back_forth
 frame=0,0,316,645,157,176,79,108
 frame=0,1,314,925,156,177,79,108
@@ -19,7 +19,7 @@ frame=0,2,0,1102,156,113,78,108
 
 [melee]
 frames=6
-duration=90
+duration=3
 type=play_once
 frame=0,0,471,821,34,164,79,94
 frame=0,1,471,821,34,164,79,94
@@ -27,7 +27,7 @@ frame=0,2,470,985,34,100,79,94
 
 [run]
 frames=8
-duration=60
+duration=3
 type=looped
 frame=0,0,0,467,159,177,79,108
 frame=0,1,349,178,157,177,79,108

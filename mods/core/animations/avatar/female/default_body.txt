@@ -2,7 +2,7 @@ image=images/avatar/female/default_body.png
 
 [stance]
 frames=1
-duration=180
+duration=3
 type=back_forth
 frame=0,0,271,94,20,47,8,42
 frame=0,1,271,94,20,47,8,42
@@ -15,7 +15,7 @@ frame=0,7,129,0,28,47,14,43
 
 [run]
 frames=8
-duration=60
+duration=3
 type=looped
 frame=0,0,467,80,21,46,10,41
 frame=0,1,467,80,21,46,10,41
@@ -105,7 +105,7 @@ frame=1,7,136,94,31,47,11,42
 
 [ment]
 frames=7
-duration=90
+duration=3
 type=play_once
 frame=0,0,294,141,20,47,8,42
 frame=0,1,294,141,20,47,8,42
@@ -166,7 +166,7 @@ frame=6,7,127,47,32,47,16,43
 
 [die]
 frames=6
-duration=120
+duration=3
 type=play_once
 frame=0,0,187,47,28,47,14,42
 frame=0,1,187,47,28,47,14,42
@@ -219,7 +219,7 @@ frame=5,7,440,0,34,35,15,30
 
 [melee]
 frames=6
-duration=90
+duration=3
 type=play_once
 frame=0,0,287,47,20,47,9,42
 frame=0,1,287,47,20,47,9,42
@@ -272,7 +272,7 @@ frame=5,7,28,47,34,47,12,42
 
 [hit]
 frames=3
-duration=20
+duration=1
 type=back_forth
 frame=0,0,187,47,28,47,14,42
 frame=0,1,187,47,28,47,14,42
@@ -301,7 +301,7 @@ frame=2,7,0,192,27,39,12,35
 
 [block]
 frames=2
-duration=30
+duration=3
 type=play_once
 frame=0,0,187,47,28,47,14,42
 frame=0,1,187,47,28,47,14,42

@@ -3,7 +3,7 @@ image=images/enemies/archer.png
 
 [stance]
 frames=1
-duration=180
+duration=3
 type=back_forth
 frame=0,0,488,141,29,47,17,43
 frame=0,1,488,141,29,47,17,43
@@ -16,7 +16,7 @@ frame=0,7,385,47,34,47,15,43
 
 [run]
 frames=8
-duration=60
+duration=3
 type=looped
 frame=0,0,635,46,29,46,17,42
 frame=0,1,635,46,29,46,17,42
@@ -85,7 +85,7 @@ frame=7,7,312,48,34,48,15,43
 
 [ranged]
 frames=12
-duration=90
+duration=3
 type=play_once
 frame=0,0,208,207,44,47,25,43
 frame=0,1,208,207,44,47,25,43
@@ -186,7 +186,7 @@ frame=11,7,269,99,27,49,12,43
 
 [ment]
 frames=7
-duration=90
+duration=3
 type=play_once
 frame=0,0,62,0,45,55,31,51
 frame=0,1,62,0,45,55,31,51
@@ -247,7 +247,7 @@ frame=6,7,246,50,29,49,14,43
 
 [die]
 frames=6
-duration=120
+duration=3
 type=play_once
 frame=0,0,406,94,34,47,15,43
 frame=0,1,406,94,34,47,15,43
@@ -300,7 +300,7 @@ frame=5,7,136,212,39,35,14,30
 
 [melee]
 frames=5
-duration=90
+duration=3
 type=play_once
 frame=0,0,208,207,44,47,25,43
 frame=0,1,208,207,44,47,25,43
@@ -345,7 +345,7 @@ frame=4,7,268,0,28,49,13,43
 
 [hit]
 frames=3
-duration=20
+duration=3
 type=back_forth
 frame=0,0,406,94,34,47,15,43
 frame=0,1,406,94,34,47,15,43
@@ -374,7 +374,7 @@ frame=2,7,103,212,33,39,13,35
 
 [block]
 frames=2
-duration=30
+duration=3
 type=play_once
 frame=0,0,406,94,34,47,15,43
 frame=0,1,406,94,34,47,15,43

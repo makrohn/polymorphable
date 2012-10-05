@@ -3,7 +3,7 @@ image=images/enemies/squirrel.png
 
 [stance]
 frames=1
-duration=20
+duration=3
 type=back_forth
 frame=0,0,258,39,21,19,11,19
 frame=0,1,258,39,21,19,11,19
@@ -16,7 +16,7 @@ frame=0,7,191,42,9,21,5,21
 
 [run]
 frames=3
-duration=20
+duration=3
 type=looped
 frame=0,0,108,0,28,22,16,20
 frame=0,1,108,0,28,22,16,20
@@ -45,7 +45,7 @@ frame=2,7,0,30,15,30,8,24
 
 [ranged]
 frames=8
-duration=20
+duration=3
 type=run_once
 frame=0,0,222,0,22,20,12,20
 frame=0,1,222,0,22,20,12,20
@@ -114,7 +114,7 @@ frame=7,7,293,38,14,18,5,18
 
 [ment]
 frames=3
-duration=20
+duration=3
 type=back_forth
 frame=0,0,258,39,21,19,11,19
 frame=0,1,258,39,21,19,11,19
@@ -143,7 +143,7 @@ frame=2,7,15,0,15,25,8,26
 
 [die]
 frames=1
-duration=60
+duration=3
 type=play_once
 frame=0,0,276,0,28,18,14,14
 frame=0,1,276,0,28,18,14,14
@@ -156,7 +156,7 @@ frame=0,7,276,0,28,18,14,14
 
 [melee]
 frames=8
-duration=20
+duration=3
 type=run_once
 frame=0,0,222,0,22,20,12,20
 frame=0,1,222,0,22,20,12,20
@@ -225,7 +225,7 @@ frame=7,7,293,38,14,18,5,18
 
 [critdie]
 frames=3
-duration=60
+duration=3
 type=play_once
 frame=0,0,224,20,18,20,11,20
 frame=0,1,224,20,18,20,11,20
@@ -254,7 +254,7 @@ frame=2,7,279,38,14,18,10,18
 
 [hit]
 frames=1
-duration=20
+duration=3
 type=play_once
 frame=0,0,274,19,21,19,11,19
 frame=0,1,274,19,21,19,11,19
@@ -267,7 +267,7 @@ frame=0,7,215,21,9,21,5,21
 
 [block]
 frames=3
-duration=20
+duration=3
 type=back_forth
 frame=0,0,258,39,21,19,11,19
 frame=0,1,258,39,21,19,11,19

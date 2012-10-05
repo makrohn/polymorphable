@@ -3,7 +3,7 @@ image=images/enemies/juggernaut.png
 
 [stance]
 frames=1
-duration=180
+duration=3
 type=back_forth
 frame=0,0,445,0,25,48,11,43
 frame=0,1,445,0,25,48,11,43
@@ -16,7 +16,7 @@ frame=0,7,120,150,30,50,15,44
 
 [run]
 frames=8
-duration=60
+duration=3
 type=looped
 frame=0,0,149,200,28,47,14,42
 frame=0,1,149,200,28,47,14,42
@@ -85,7 +85,7 @@ frame=7,7,150,150,30,50,15,44
 
 [ranged]
 frames=2
-duration=90
+duration=3
 type=back_forth
 frame=0,0,0,50,62,50,30,44
 frame=0,1,106,50,41,50,29,44
@@ -106,7 +106,7 @@ frame=1,7,108,0,34,50,12,44
 
 [ment]
 frames=7
-duration=90
+duration=3
 type=play_once
 frame=0,0,296,0,25,49,12,44
 frame=0,1,296,0,25,49,12,44
@@ -167,7 +167,7 @@ frame=6,7,88,150,32,50,16,44
 
 [die]
 frames=6
-duration=120
+duration=3
 type=play_once
 frame=0,0,177,50,30,50,15,44
 frame=0,1,177,50,30,50,15,44
@@ -220,7 +220,7 @@ frame=5,7,511,79,34,35,15,31
 
 [melee]
 frames=5
-duration=90
+duration=3
 type=play_once
 frame=0,0,269,49,25,49,12,44
 frame=0,1,269,49,25,49,12,44
@@ -265,7 +265,7 @@ frame=4,7,108,0,34,50,12,44
 
 [hit]
 frames=3
-duration=20
+duration=3
 type=back_forth
 frame=0,0,177,50,30,50,15,44
 frame=0,1,177,50,30,50,15,44
@@ -294,7 +294,7 @@ frame=2,7,521,0,29,43,12,37
 
 [block]
 frames=2
-duration=30
+duration=3
 type=play_once
 frame=0,0,177,50,30,50,15,44
 frame=0,1,177,50,30,50,15,44

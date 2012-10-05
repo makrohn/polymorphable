@@ -3,7 +3,7 @@ image=images/enemies/skeleton.png
 
 [stance]
 frames=1
-duration=180
+duration=3
 type=back_forth
 frame=0,0,294,188,20,47,9,43
 frame=0,1,294,188,20,47,9,43
@@ -16,7 +16,7 @@ frame=0,7,101,188,30,47,15,43
 
 [spawn]
 frames=1
-duration=180
+duration=3
 type=back_forth
 frame=0,0,294,188,20,47,9,43
 frame=0,1,294,188,20,47,9,43
@@ -29,7 +29,7 @@ frame=0,7,101,188,30,47,15,43
 
 [run]
 frames=8
-duration=60
+duration=3
 type=looped
 frame=0,0,390,184,25,46,13,42
 frame=0,1,390,184,25,46,13,42
@@ -98,7 +98,7 @@ frame=7,7,0,144,30,48,15,43
 
 [ranged]
 frames=2
-duration=90
+duration=3
 type=back_forth
 frame=0,0,80,0,34,47,21,43
 frame=0,1,80,0,34,47,21,43
@@ -119,7 +119,7 @@ frame=1,7,78,47,35,47,12,43
 
 [ment]
 frames=7
-duration=90
+duration=3
 type=play_once
 frame=0,0,299,0,20,47,9,43
 frame=0,1,299,0,20,47,9,43
@@ -180,7 +180,7 @@ frame=6,7,67,188,34,47,17,43
 
 [die]
 frames=6
-duration=120
+duration=3
 type=play_once
 frame=0,0,101,188,30,47,15,43
 frame=0,1,101,188,30,47,15,43
@@ -233,7 +233,7 @@ frame=5,7,436,198,34,35,14,30
 
 [melee]
 frames=5
-duration=90
+duration=3
 type=play_once
 frame=0,0,315,141,20,47,9,43
 frame=0,1,315,141,20,47,9,43
@@ -278,7 +278,7 @@ frame=4,7,78,47,35,47,12,43
 
 [hit]
 frames=3
-duration=20
+duration=3
 type=back_forth
 frame=0,0,101,188,30,47,15,43
 frame=0,1,101,188,30,47,15,43
@@ -307,7 +307,7 @@ frame=2,7,0,192,31,39,13,35
 
 [block]
 frames=2
-duration=30
+duration=3
 type=play_once
 frame=0,0,101,188,30,47,15,43
 frame=0,1,101,188,30,47,15,43

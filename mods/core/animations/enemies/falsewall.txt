@@ -3,7 +3,7 @@ image=images/enemies/falsewall.png
 
 [stance]
 frames=1
-duration=20
+duration=3
 type=back_forth
 frame=0,0,0,0,96,92,48,97
 frame=0,1,0,92,96,92,48,97
@@ -16,7 +16,7 @@ frame=0,7,0,92,96,92,48,97
 
 [run]
 frames=1
-duration=20
+duration=3
 type=back_forth
 frame=0,0,0,0,96,92,48,97
 frame=0,1,0,92,96,92,48,97
@@ -29,7 +29,7 @@ frame=0,7,0,92,96,92,48,97
 
 [ranged]
 frames=1
-duration=20
+duration=3
 type=back_forth
 frame=0,0,0,0,96,92,48,97
 frame=0,1,0,92,96,92,48,97
@@ -42,7 +42,7 @@ frame=0,7,0,92,96,92,48,97
 
 [ment]
 frames=1
-duration=20
+duration=3
 type=back_forth
 frame=0,0,0,0,96,92,48,97
 frame=0,1,0,92,96,92,48,97
@@ -55,7 +55,7 @@ frame=0,7,0,92,96,92,48,97
 
 [melee]
 frames=1
-duration=20
+duration=3
 type=back_forth
 frame=0,0,0,0,96,92,48,97
 frame=0,1,0,92,96,92,48,97
@@ -68,7 +68,7 @@ frame=0,7,0,92,96,92,48,97
 
 [hit]
 frames=1
-duration=20
+duration=3
 type=back_forth
 frame=0,0,0,0,96,92,48,97
 frame=0,1,0,92,96,92,48,97
@@ -81,7 +81,7 @@ frame=0,7,0,92,96,92,48,97
 
 [block]
 frames=1
-duration=20
+duration=3
 type=back_forth
 frame=0,0,0,0,96,92,48,97
 frame=0,1,0,92,96,92,48,97

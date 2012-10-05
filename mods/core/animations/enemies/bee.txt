@@ -3,7 +3,7 @@ image=images/enemies/bee.png
 
 [stance]
 frames=3
-duration=20
+duration=3
 type=back_forth
 frame=0,0,48,0,16,30,6,25
 frame=0,1,48,30,16,30,6,25
@@ -32,7 +32,7 @@ frame=2,7,44,221,20,29,10,23
 
 [run]
 frames=3
-duration=20
+duration=3
 type=back_forth
 frame=0,0,48,0,16,30,6,25
 frame=0,1,48,30,16,30,6,25
@@ -61,7 +61,7 @@ frame=2,7,44,221,20,29,10,23
 
 [ranged]
 frames=3
-duration=20
+duration=3
 type=back_forth
 frame=0,0,48,0,16,30,6,25
 frame=0,1,48,30,16,30,6,25
@@ -90,7 +90,7 @@ frame=2,7,44,221,20,29,10,23
 
 [ment]
 frames=3
-duration=20
+duration=3
 type=back_forth
 frame=0,0,48,0,16,30,6,25
 frame=0,1,48,30,16,30,6,25
@@ -119,7 +119,7 @@ frame=2,7,44,221,20,29,10,23
 
 [die]
 frames=3
-duration=60
+duration=3
 type=play_once
 frame=0,0,48,90,16,22,6,25
 frame=0,1,48,90,16,22,6,25
@@ -148,7 +148,7 @@ frame=2,7,0,106,24,23,12,17
 
 [melee]
 frames=3
-duration=20
+duration=3
 type=back_forth
 frame=0,0,48,0,16,30,6,25
 frame=0,1,48,30,16,30,6,25
@@ -177,7 +177,7 @@ frame=2,7,44,221,20,29,10,23
 
 [critdie]
 frames=3
-duration=60
+duration=3
 type=play_once
 frame=0,0,48,90,16,22,6,25
 frame=0,1,48,90,16,22,6,25
@@ -206,7 +206,7 @@ frame=2,7,0,106,24,23,12,17
 
 [hit]
 frames=1
-duration=30
+duration=3
 type=play_once
 frame=0,0,48,90,16,22,6,25
 frame=0,1,48,90,16,22,6,25
@@ -219,7 +219,7 @@ frame=0,7,24,60,24,23,12,25
 
 [block]
 frames=3
-duration=20
+duration=3
 type=back_forth
 frame=0,0,48,0,16,30,6,25
 frame=0,1,48,30,16,30,6,25

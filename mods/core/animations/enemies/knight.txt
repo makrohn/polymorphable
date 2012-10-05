@@ -3,7 +3,7 @@ image=images/enemies/knight.png
 
 [stance]
 frames=1
-duration=180
+duration=3
 type=back_forth
 frame=0,0,105,194,23,48,11,43
 frame=0,1,105,194,23,48,11,43
@@ -16,7 +16,7 @@ frame=0,7,98,49,30,49,15,43
 
 [run]
 frames=8
-duration=60
+duration=3
 type=looped
 frame=0,0,53,786,26,46,14,42
 frame=0,1,53,786,26,46,14,42
@@ -85,7 +85,7 @@ frame=7,7,30,384,30,49,15,43
 
 [ranged]
 frames=2
-duration=90
+duration=3
 type=back_forth
 frame=0,0,88,98,38,49,25,43
 frame=0,1,88,98,38,49,25,43
@@ -106,7 +106,7 @@ frame=1,7,36,193,35,48,12,43
 
 [ment]
 frames=7
-duration=90
+duration=3
 type=play_once
 frame=0,0,49,927,23,48,11,43
 frame=0,1,49,927,23,48,11,43
@@ -167,7 +167,7 @@ frame=6,7,0,239,34,49,17,43
 
 [die]
 frames=6
-duration=120
+duration=3
 type=play_once
 frame=0,0,0,433,30,49,15,43
 frame=0,1,0,433,30,49,15,43
@@ -220,7 +220,7 @@ frame=5,7,71,194,34,35,14,30
 
 [melee]
 frames=5
-duration=90
+duration=3
 type=play_once
 frame=0,0,33,289,32,48,20,43
 frame=0,1,33,289,32,48,20,43
@@ -265,7 +265,7 @@ frame=4,7,36,193,35,48,12,43
 
 [hit]
 frames=3
-duration=20
+duration=3
 type=back_forth
 frame=0,0,0,433,30,49,15,43
 frame=0,1,0,433,30,49,15,43
@@ -294,7 +294,7 @@ frame=2,7,90,605,30,41,13,35
 
 [block]
 frames=2
-duration=30
+duration=3
 type=play_once
 frame=0,0,0,433,30,49,15,43
 frame=0,1,0,433,30,49,15,43

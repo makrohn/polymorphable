@@ -3,7 +3,7 @@ image=images/enemies/brawler.png
 
 [stance]
 frames=1
-duration=180
+duration=3
 type=back_forth
 frame=0,0,193,196,25,49,11,43
 frame=0,1,193,196,25,49,11,43
@@ -16,7 +16,7 @@ frame=0,7,111,196,28,49,14,44
 
 [run]
 frames=8
-duration=60
+duration=3
 type=looped
 frame=0,0,418,0,25,48,11,42
 frame=0,1,418,0,25,48,11,42
@@ -85,7 +85,7 @@ frame=7,7,0,100,28,50,14,44
 
 [ranged]
 frames=2
-duration=90
+duration=3
 type=back_forth
 frame=0,0,61,49,32,49,20,43
 frame=0,1,61,49,32,49,20,43
@@ -106,7 +106,7 @@ frame=1,7,103,147,31,49,11,43
 
 [ment]
 frames=7
-duration=90
+duration=3
 type=play_once
 frame=0,0,259,49,25,49,12,44
 frame=0,1,259,49,25,49,12,44
@@ -167,7 +167,7 @@ frame=6,7,93,98,32,49,16,44
 
 [die]
 frames=6
-duration=120
+duration=3
 type=play_once
 frame=0,0,139,196,28,49,14,43
 frame=0,1,139,196,28,49,14,43
@@ -220,7 +220,7 @@ frame=5,7,452,131,34,36,15,30
 
 [melee]
 frames=5
-duration=90
+duration=3
 type=play_once
 frame=0,0,240,147,25,49,12,43
 frame=0,1,240,147,25,49,12,43
@@ -265,7 +265,7 @@ frame=4,7,103,147,31,49,11,43
 
 [hit]
 frames=3
-duration=20
+duration=3
 type=back_forth
 frame=0,0,139,196,28,49,14,43
 frame=0,1,139,196,28,49,14,43
@@ -294,7 +294,7 @@ frame=2,7,0,200,27,41,12,36
 
 [block]
 frames=2
-duration=30
+duration=3
 type=play_once
 frame=0,0,139,196,28,49,14,43
 frame=0,1,139,196,28,49,14,43

@@ -3,7 +3,7 @@ image=images/enemies/zalkaz.png
 
 [stance]
 frames=3
-duration=120
+duration=3
 type=back_forth
 frame=0,0,632,0,80,104,28,100
 frame=0,1,296,0,80,106,28,100
@@ -32,7 +32,7 @@ frame=2,7,96,0,96,108,48,122
 
 [run]
 frames=3
-duration=120
+duration=3
 type=back_forth
 frame=0,0,632,0,80,104,28,100
 frame=0,1,296,0,80,106,28,100
@@ -61,7 +61,7 @@ frame=2,7,96,0,96,108,48,122
 
 [ranged]
 frames=3
-duration=120
+duration=3
 type=back_forth
 frame=0,0,632,0,80,104,28,100
 frame=0,1,296,0,80,106,28,100
@@ -90,7 +90,7 @@ frame=2,7,96,0,96,108,48,122
 
 [ment]
 frames=3
-duration=120
+duration=3
 type=back_forth
 frame=0,0,632,0,80,104,28,100
 frame=0,1,296,0,80,106,28,100
@@ -119,7 +119,7 @@ frame=2,7,96,0,96,108,48,122
 
 [melee]
 frames=3
-duration=120
+duration=3
 type=back_forth
 frame=0,0,632,0,80,104,28,100
 frame=0,1,296,0,80,106,28,100
@@ -148,7 +148,7 @@ frame=2,7,96,0,96,108,48,122
 
 [block]
 frames=3
-duration=120
+duration=3
 type=back_forth
 frame=0,0,632,0,80,104,28,100
 frame=0,1,296,0,80,106,28,100

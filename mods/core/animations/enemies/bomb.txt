@@ -3,7 +3,7 @@ image=images/enemies/bomb.png
 
 [stance]
 frames=1
-duration=120
+duration=3
 type=back_forth
 frame=0,0,0,17,24,31,12,25
 frame=0,1,0,17,24,31,12,25
@@ -16,7 +16,7 @@ frame=0,7,0,17,24,31,12,25
 
 [spawn]
 frames=1
-duration=120
+duration=3
 type=back_forth
 frame=0,0,0,17,24,31,12,25
 frame=0,1,0,17,24,31,12,25
@@ -29,7 +29,7 @@ frame=0,7,0,17,24,31,12,25
 
 [run]
 frames=1
-duration=120
+duration=3
 type=back_forth
 frame=0,0,0,17,24,31,12,25
 frame=0,1,0,17,24,31,12,25
@@ -42,7 +42,7 @@ frame=0,7,0,17,24,31,12,25
 
 [ranged]
 frames=1
-duration=120
+duration=3
 type=back_forth
 frame=0,0,0,17,24,31,12,25
 frame=0,1,0,17,24,31,12,25
@@ -55,7 +55,7 @@ frame=0,7,0,17,24,31,12,25
 
 [ment]
 frames=1
-duration=120
+duration=3
 type=back_forth
 frame=0,0,0,17,24,31,12,25
 frame=0,1,0,17,24,31,12,25
@@ -68,7 +68,7 @@ frame=0,7,0,17,24,31,12,25
 
 [die]
 frames=1
-duration=20
+duration=3
 type=back_forth
 frame=0,0,0,0,30,17,15,11
 frame=0,1,0,0,30,17,15,11
@@ -81,7 +81,7 @@ frame=0,7,0,0,30,17,15,11
 
 [melee]
 frames=1
-duration=120
+duration=3
 type=back_forth
 frame=0,0,0,17,24,31,12,25
 frame=0,1,0,17,24,31,12,25
@@ -94,7 +94,7 @@ frame=0,7,0,17,24,31,12,25
 
 [critdie]
 frames=1
-duration=20
+duration=3
 type=back_forth
 frame=0,0,0,0,30,17,15,11
 frame=0,1,0,0,30,17,15,11
@@ -107,7 +107,7 @@ frame=0,7,0,0,30,17,15,11
 
 [hit]
 frames=1
-duration=120
+duration=3
 type=back_forth
 frame=0,0,0,17,24,31,12,25
 frame=0,1,0,17,24,31,12,25
@@ -120,7 +120,7 @@ frame=0,7,0,17,24,31,12,25
 
 [block]
 frames=1
-duration=120
+duration=3
 type=back_forth
 frame=0,0,0,17,24,31,12,25
 frame=0,1,0,17,24,31,12,25

@@ -2,7 +2,7 @@ image=images/avatar/female/leather.png
 
 [stance]
 frames=1
-duration=180
+duration=3
 type=back_forth
 frame=0,0,269,94,20,47,8,42
 frame=0,1,269,94,20,47,8,42
@@ -15,7 +15,7 @@ frame=0,7,158,47,28,47,14,43
 
 [run]
 frames=8
-duration=60
+duration=3
 type=looped
 frame=0,0,437,46,21,46,10,41
 frame=0,1,437,46,21,46,10,41
@@ -84,7 +84,7 @@ frame=7,7,0,48,28,48,14,43
 
 [ranged]
 frames=2
-duration=90
+duration=3
 type=back_forth
 frame=0,0,71,94,32,47,20,42
 frame=0,1,71,94,32,47,20,42
@@ -105,7 +105,7 @@ frame=1,7,135,94,31,47,11,42
 
 [ment]
 frames=7
-duration=90
+duration=3
 type=play_once
 frame=0,0,289,0,20,47,8,42
 frame=0,1,289,0,20,47,8,42
@@ -166,7 +166,7 @@ frame=6,7,118,188,32,47,16,43
 
 [die]
 frames=6
-duration=120
+duration=3
 type=play_once
 frame=0,0,166,94,28,47,14,42
 frame=0,1,166,94,28,47,14,42
@@ -219,7 +219,7 @@ frame=5,7,457,102,34,35,15,30
 
 [melee]
 frames=6
-duration=90
+duration=3
 type=play_once
 frame=0,0,287,141,20,47,9,42
 frame=0,1,287,141,20,47,9,42
@@ -272,7 +272,7 @@ frame=5,7,28,0,34,47,12,42
 
 [hit]
 frames=3
-duration=20
+duration=1
 type=back_forth
 frame=0,0,166,94,28,47,14,42
 frame=0,1,166,94,28,47,14,42
@@ -301,7 +301,7 @@ frame=2,7,458,28,27,39,12,35
 
 [block]
 frames=2
-duration=30
+duration=3
 type=play_once
 frame=0,0,166,94,28,47,14,42
 frame=0,1,166,94,28,47,14,42

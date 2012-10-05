@@ -3,7 +3,7 @@ image=images/enemies/bat.png
 
 [stance]
 frames=3
-duration=120
+duration=3
 type=back_forth
 frame=0,0,0,126,20,26,7,20
 frame=0,1,0,126,20,26,7,20
@@ -32,7 +32,7 @@ frame=2,7,24,77,24,27,12,26
 
 [spawn]
 frames=1
-duration=120
+duration=3
 type=back_forth
 frame=0,0,0,126,20,26,7,20
 frame=0,1,0,126,20,26,7,20
@@ -45,7 +45,7 @@ frame=0,7,32,0,32,26,16,24
 
 [run]
 frames=3
-duration=120
+duration=3
 type=back_forth
 frame=0,0,0,126,20,26,7,20
 frame=0,1,0,126,20,26,7,20
@@ -74,7 +74,7 @@ frame=2,7,24,77,24,27,12,26
 
 [ranged]
 frames=3
-duration=120
+duration=3
 type=back_forth
 frame=0,0,0,126,20,26,7,20
 frame=0,1,0,126,20,26,7,20
@@ -103,7 +103,7 @@ frame=2,7,24,77,24,27,12,26
 
 [ment]
 frames=3
-duration=120
+duration=3
 type=back_forth
 frame=0,0,0,126,20,26,7,20
 frame=0,1,0,126,20,26,7,20
@@ -132,7 +132,7 @@ frame=2,7,24,77,24,27,12,26
 
 [die]
 frames=3
-duration=60
+duration=3
 type=play_once
 frame=0,0,20,128,20,26,7,20
 frame=0,1,20,128,20,26,7,20
@@ -161,7 +161,7 @@ frame=2,7,0,104,24,22,12,16
 
 [melee]
 frames=3
-duration=120
+duration=3
 type=back_forth
 frame=0,0,0,126,20,26,7,20
 frame=0,1,0,126,20,26,7,20
@@ -190,7 +190,7 @@ frame=2,7,24,77,24,27,12,26
 
 [critdie]
 frames=3
-duration=60
+duration=3
 type=play_once
 frame=0,0,20,128,20,26,7,20
 frame=0,1,20,128,20,26,7,20
@@ -219,7 +219,7 @@ frame=2,7,0,104,24,22,12,16
 
 [hit]
 frames=1
-duration=120
+duration=3
 type=play_once
 frame=0,0,20,128,20,26,7,20
 frame=0,1,20,128,20,26,7,20
@@ -232,7 +232,7 @@ frame=0,7,32,26,32,26,16,24
 
 [block]
 frames=3
-duration=120
+duration=3
 type=back_forth
 frame=0,0,0,126,20,26,7,20
 frame=0,1,0,126,20,26,7,20

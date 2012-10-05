@@ -3,7 +3,7 @@ image=images/enemies/combat_dummy.png
 
 [stance]
 frames=1
-duration=180
+duration=3
 type=back_forth
 frame=0,0,0,0,59,55,30,53
 frame=0,1,0,0,59,55,30,53
@@ -16,7 +16,7 @@ frame=0,7,0,0,59,55,30,53
 
 [run]
 frames=1
-duration=60
+duration=3
 type=looped
 frame=0,0,0,0,59,55,30,53
 frame=0,1,0,0,59,55,30,53
@@ -29,7 +29,7 @@ frame=0,7,0,0,59,55,30,53
 
 [ranged]
 frames=1
-duration=90
+duration=3
 type=play_once
 frame=0,0,0,0,59,55,30,53
 frame=0,1,0,0,59,55,30,53
@@ -42,7 +42,7 @@ frame=0,7,0,0,59,55,30,53
 
 [ment]
 frames=1
-duration=90
+duration=3
 type=play_once
 frame=0,0,0,0,59,55,30,53
 frame=0,1,0,0,59,55,30,53
@@ -55,7 +55,7 @@ frame=0,7,0,0,59,55,30,53
 
 [die]
 frames=1
-duration=120
+duration=3
 type=play_once
 frame=0,0,0,0,59,55,30,53
 frame=0,1,0,0,59,55,30,53
@@ -68,7 +68,7 @@ frame=0,7,0,0,59,55,30,53
 
 [melee]
 frames=1
-duration=90
+duration=3
 type=play_once
 frame=0,0,0,0,59,55,30,53
 frame=0,1,0,0,59,55,30,53
@@ -81,7 +81,7 @@ frame=0,7,0,0,59,55,30,53
 
 [hit]
 frames=8
-duration=60
+duration=3
 type=play_once
 frame=0,0,0,0,59,55,30,53
 frame=0,1,0,0,59,55,30,53
@@ -150,7 +150,7 @@ frame=7,7,105,0,43,54,22,52
 
 [block]
 frames=1
-duration=30
+duration=3
 type=play_once
 frame=0,0,0,0,59,55,30,53
 frame=0,1,0,0,59,55,30,53
