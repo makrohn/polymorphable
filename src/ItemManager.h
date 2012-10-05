@@ -34,6 +34,10 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 #include <stdint.h>
 #include <vector>
 
+#define VENDOR_BUY 0
+#define VENDOR_SELL 1
+#define PLAYER_INV 2
+
 class StatBlock;
 
 const int REQUIRES_PHYS = 0;
@@ -108,6 +112,8 @@ public:
 	std::string pickup_status; // when this item is picked up, set a campaign state (usually for quest items)
 	std::string stepfx;        // sound effect played when walking (armors only)
 
+	int getSellPrice();
+
 	Item() {
 		name = "";
 		level = 0;
@@ -167,7 +173,6 @@ class ItemStack {
 public:
 	int item;
 	int quantity;
-	int highlight;
 	bool operator > (const ItemStack &param) const;
 };
 
@@ -175,7 +180,6 @@ class ItemManager {
 private:
 	SDL_Surface *icons_small;
 	SDL_Surface *icons_large; // item db is the only module that currently uses the 64px icons
-	SDL_Surface *icons_highlight_small;
 	SDL_Rect src;
 	SDL_Rect dest;
 	Mix_Chunk *sfx[12];
@@ -202,7 +206,7 @@ public:
 	void renderIcon(ItemStack stack, int x, int y, int size);
 	void playSound(int item);
 	void playCoinsSound();
-	TooltipData getTooltip(int item, StatBlock *stats, bool vendor_view);
+	TooltipData getTooltip(int item, StatBlock *stats, int context);
 	TooltipData getShortTooltip(ItemStack item);
 	std::string getItemType(std::string _type);
 

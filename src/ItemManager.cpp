@@ -367,10 +367,8 @@ void ItemManager::loadIcons() {
 
 	icons_small = IMG_Load(mods->locate("images/icons/icons_small.png").c_str());
 	icons_large = IMG_Load(mods->locate("images/icons/icons_large.png").c_str());
-	icons_highlight_small = IMG_Load(mods->locate("images/menus/attention_glow.png").c_str());
-	// TODO Add graphics for large icon highlights
 
-	if(!icons_small || !icons_large || !icons_highlight_small) {
+	if(!icons_small || !icons_large) {
 		fprintf(stderr, "Couldn't load icons: %s\n", IMG_GetError());
 		SDL_Quit();
 		exit(1);
@@ -383,10 +381,6 @@ void ItemManager::loadIcons() {
 
 	cleanup = icons_large;
 	icons_large = SDL_DisplayFormatAlpha(icons_large);
-	SDL_FreeSurface(cleanup);
-
-	cleanup = icons_highlight_small;
-	icons_highlight_small = SDL_DisplayFormatAlpha(icons_highlight_small);
 	SDL_FreeSurface(cleanup);
 }
 
@@ -433,7 +427,6 @@ void ItemManager::renderIcon(ItemStack stack, int x, int y, int size) {
 			src.y = (items[stack.item].icon_small / columns) * size;
 			SDL_BlitSurface(icons_small, &src, screen, &dest);
 		}
-		if (stack.highlight) SDL_BlitSurface(icons_highlight_small, NULL, screen, &dest);
 	}
 	else if (size == ICON_SIZE_LARGE) {
 		if (stack.item > 0) {
@@ -500,7 +493,7 @@ TooltipData ItemManager::getShortTooltip(ItemStack stack) {
 /**
  * Create detailed tooltip showing all relevant item info
  */
-TooltipData ItemManager::getTooltip(int item, StatBlock *stats, bool vendor_view) {
+TooltipData ItemManager::getTooltip(int item, StatBlock *stats, int context) {
 	TooltipData tip;
 
 	if (item == 0) return tip;
@@ -611,19 +604,23 @@ TooltipData ItemManager::getTooltip(int item, StatBlock *stats, bool vendor_view
 	// buy or sell price
 	if (items[item].price > 0) {
 
-		if (vendor_view) {
+		int price_per_unit;
+		if (context == VENDOR_BUY) {
+			price_per_unit = items[item].price;
 			if (stats->currency < items[item].price) tip.colors[tip.num_lines] = color_requirements_not_met;
 			if (items[item].max_quantity <= 1)
-				tip.lines[tip.num_lines++] = msg->get("Buy Price: %d %s", items[item].price, CURRENCY);
+				tip.lines[tip.num_lines++] = msg->get("Buy Price: %d %s", price_per_unit, CURRENCY);
 			else
-				tip.lines[tip.num_lines++] = msg->get("Buy Price: %d %s each", items[item].price, CURRENCY);
-		}
-		else {
-			int price_per_unit;
-			if(items[item].price_sell != 0)
-				price_per_unit = items[item].price_sell;
+				tip.lines[tip.num_lines++] = msg->get("Buy Price: %d %s each", price_per_unit, CURRENCY);
+		} else if (context == VENDOR_SELL) {
+			price_per_unit = items[item].getSellPrice();
+			if (stats->currency < price_per_unit) tip.colors[tip.num_lines] = color_requirements_not_met;
+			if (items[item].max_quantity <= 1)
+				tip.lines[tip.num_lines++] = msg->get("Buy Price: %d %s", price_per_unit, CURRENCY);
 			else
-				price_per_unit = static_cast<int>(items[item].price * VENDOR_RATIO);
+				tip.lines[tip.num_lines++] = msg->get("Buy Price: %d %s each", price_per_unit, CURRENCY);
+		} else if (context == PLAYER_INV) {
+			price_per_unit = items[item].getSellPrice();
 			if (price_per_unit == 0) price_per_unit = 1;
 			if (items[item].max_quantity <= 1)
 				tip.lines[tip.num_lines++] = msg->get("Sell Price: %d %s", price_per_unit, CURRENCY);
@@ -661,7 +658,6 @@ TooltipData ItemManager::getTooltip(int item, StatBlock *stats, bool vendor_view
 ItemManager::~ItemManager() {
 	SDL_FreeSurface(icons_small);
 	SDL_FreeSurface(icons_large);
-	SDL_FreeSurface(icons_highlight_small);
 
 	if (audio) {
 		for (int i=0; i<12; i++) {
@@ -683,5 +679,16 @@ bool ItemStack::operator > (const ItemStack &param) const {
 	} else {
 		return item > param.item;
 	}
+}
+
+int Item::getSellPrice() {
+	int new_price = 0;
+	if(price_sell != 0)
+		new_price = price_sell;
+	else
+		new_price = static_cast<int>(price * VENDOR_RATIO);
+	if (new_price == 0) new_price = 1;
+
+	return new_price;
 }
 
