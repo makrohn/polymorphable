@@ -333,3 +333,20 @@ Telaron
 -------
 License: GPL 2.0 & GPL 3.0
 mods/core/music/snow_about_a_castle.ogg
+
+Joseph Gilbert
+--------------
+License:  CC-BY-SA 3.0
+mods/core/music/apricot_milk.ogg
+
+Eliot Corley
+------------
+License:  CC-BY-SA 3.0
+mods/core/music/dream.ogg
+
+HorrorPen
+---------
+License:  CC-BY-SA 3.0
+mods/core/music/spiritwaltz.ogg
+mods/core/music/winds_of_stories.ogg
+
