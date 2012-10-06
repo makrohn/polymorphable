@@ -1,6 +1,7 @@
 [header]
 width=32
 height=32
+music=winds_of_stories.ogg
 tileset=sewer.txt
 title=Sewer
 
