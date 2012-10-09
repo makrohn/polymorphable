@@ -1,10 +1,18 @@
+
 image=images/powers/lightning.png
 
-render_size=64,128
-render_offset=32,64
-
 [power]
-position=0
 frames=11
 duration=3
 type=play_once
+frame=0,0,32,472,16,11,8,44
+frame=1,0,0,472,32,21,17,50
+frame=2,0,0,430,64,42,32,59
+frame=3,0,0,379,64,51,32,59
+frame=4,0,0,313,64,66,32,59
+frame=5,0,0,229,64,84,32,59
+frame=6,0,0,123,64,106,32,59
+frame=7,0,0,0,64,123,32,59
+frame=8,0,0,430,64,42,32,59
+frame=9,0,0,472,32,21,17,50
+frame=10,0,32,472,16,11,8,44

@@ -1,10 +1,15 @@
+
 image=images/npcs/combat_dummy.png
 
-render_size=64,64
-render_offset=32,58
-
 [stance]
-position=0
 frames=8
 duration=2
 type=looped
+frame=0,0,0,0,59,55,30,53
+frame=1,0,59,0,46,54,22,52
+frame=2,0,148,0,19,54,10,52
+frame=3,0,59,54,45,54,23,52
+frame=4,0,0,55,59,55,29,53
+frame=5,0,104,54,43,54,21,52
+frame=6,0,147,54,20,54,10,52
+frame=7,0,105,0,43,54,22,52

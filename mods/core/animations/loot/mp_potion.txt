@@ -1,11 +1,13 @@
 
 image=images/loot/mp_potion.png
 
-render_size=64,128
-render_offset=32,112
-
 [power]
-position=0
 frames=6
 duration=3
 type=play_once
+frame=0,0,0,145,22,41,2,59
+frame=1,0,0,99,24,46,4,71
+frame=2,0,0,0,28,52,5,83
+frame=3,0,0,52,25,47,4,71
+frame=4,0,0,186,16,27,3,36
+frame=5,0,16,186,9,11,4,10

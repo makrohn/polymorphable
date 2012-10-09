@@ -1,11 +1,13 @@
 
 image=images/loot/carrot.png
 
-render_size=64,128
-render_offset=32,112
-
 [power]
-position=0
 frames=6
 duration=3
 type=play_once
+frame=0,0,30,65,36,49,11,60
+frame=1,0,0,68,30,53,1,74
+frame=2,0,24,0,46,65,14,87
+frame=3,0,0,0,24,68,4,82
+frame=4,0,66,65,26,47,8,48
+frame=5,0,70,0,26,23,14,19
