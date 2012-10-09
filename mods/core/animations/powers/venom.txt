@@ -5,6 +5,7 @@ image=images/powers/venom.png
 frames=4
 duration=3
 type=play_once
+active_frame=all
 frame=0,0,0,291,51,27,24,29
 frame=0,1,0,75,64,14,32,21
 frame=0,2,0,263,51,28,25,27

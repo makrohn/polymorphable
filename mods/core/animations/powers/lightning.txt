@@ -5,6 +5,7 @@ image=images/powers/lightning.png
 frames=11
 duration=3
 type=play_once
+active_frame=8
 frame=0,0,32,472,16,11,8,44
 frame=1,0,0,472,32,21,17,50
 frame=2,0,0,430,64,42,32,59

@@ -5,6 +5,7 @@ image=images/powers/arrow.png
 frames=4
 duration=3
 type=play_once
+active_frame=all
 frame=0,0,20,20,32,20,18,26
 frame=0,1,20,0,60,10,32,26
 frame=0,2,20,40,32,20,18,26
