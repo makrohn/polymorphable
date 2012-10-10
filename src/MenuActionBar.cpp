@@ -47,10 +47,12 @@ MenuActionBar::MenuActionBar(PowerManager *_powers, StatBlock *_hero, SDL_Surfac
 
 	src.x = 0;
 	src.y = 0;
-	src.w = ICON_SIZE_SMALL;
-	src.h = ICON_SIZE_SMALL;
+	src.w = ICON_SIZE;
+	src.h = ICON_SIZE;
 	drag_prev_slot = -1;
 	default_M1 = 0;
+	last_mouse.x = 0;
+	last_mouse.y = 0;
 
 	clear();
 
@@ -180,19 +182,19 @@ void MenuActionBar::update() {
 	// set keybinding labels
 	for (unsigned int i=0; i<10; i++) {
 		if (inpt->binding[i+6] < 8)
-			labels[i]->set(slots[i].x+slots[i].w, slots[i].y+slots[i].h-12, JUSTIFY_RIGHT, VALIGN_TOP, mouse_button[inpt->binding[i+6]-1], font->getColor("menu_normal"));
+			labels[i]->set(slots[i].x+slots[i].w, slots[i].y+slots[i].h-12, JUSTIFY_RIGHT, VALIGN_TOP, inpt->mouse_button[inpt->binding[i+6]-1], font->getColor("menu_normal"));
 		else
 			labels[i]->set(slots[i].x+slots[i].w, slots[i].y+slots[i].h-12, JUSTIFY_RIGHT, VALIGN_TOP, SDL_GetKeyName((SDLKey)inpt->binding[i+6]), font->getColor("menu_normal"));
 	}
 	for (unsigned int i=0; i<2; i++) {
 		if (inpt->binding[i+20] < 8)
-			labels[i+10]->set(slots[i+10].x+slots[i+10].w, slots[i+10].y+slots[i+10].h-12, JUSTIFY_RIGHT, VALIGN_TOP, mouse_button[inpt->binding[i+20]-1], font->getColor("menu_normal"));
+			labels[i+10]->set(slots[i+10].x+slots[i+10].w, slots[i+10].y+slots[i+10].h-12, JUSTIFY_RIGHT, VALIGN_TOP, inpt->mouse_button[inpt->binding[i+20]-1], font->getColor("menu_normal"));
 		else
 			labels[i+10]->set(slots[i+10].x+slots[i+10].w, slots[i+10].y+slots[i+10].h-12, JUSTIFY_RIGHT, VALIGN_TOP, SDL_GetKeyName((SDLKey)inpt->binding[i+20]), font->getColor("menu_normal"));
 	}
 	for (unsigned int i=0; i<4; i++) {
 		if (inpt->binding[i+16] < 8)
-			labels[i+12]->set(menus[i].x+menus[i].w, menus[i].y+menus[i].h-12, JUSTIFY_RIGHT, VALIGN_TOP, mouse_button[inpt->binding[i+16]-1], font->getColor("menu_normal"));
+			labels[i+12]->set(menus[i].x+menus[i].w, menus[i].y+menus[i].h-12, JUSTIFY_RIGHT, VALIGN_TOP, inpt->mouse_button[inpt->binding[i+16]-1], font->getColor("menu_normal"));
 		else
 			labels[i+12]->set(menus[i].x+menus[i].w, menus[i].y+menus[i].h-12, JUSTIFY_RIGHT, VALIGN_TOP, SDL_GetKeyName((SDLKey)inpt->binding[i+16]), font->getColor("menu_normal"));
 	}
@@ -257,9 +259,9 @@ void MenuActionBar::renderIcon(int icon_id, int x, int y) {
 
 	icon_dest.x = x;
 	icon_dest.y = y;
-	icon_src.w = icon_src.h = icon_dest.w = icon_dest.h = ICON_SIZE_SMALL;
-	icon_src.x = (icon_id % 16) * ICON_SIZE_SMALL;
-	icon_src.y = (icon_id / 16) * ICON_SIZE_SMALL;
+	icon_src.w = icon_src.h = icon_dest.w = icon_dest.h = ICON_SIZE;
+	icon_src.x = (icon_id % 16) * ICON_SIZE;
+	icon_src.y = (icon_id / 16) * ICON_SIZE;
 	SDL_BlitSurface(icons, &icon_src, screen, &icon_dest);
 }
 
@@ -268,9 +270,9 @@ void MenuActionBar::renderAttention(int menu_id) {
 	SDL_Rect dest;
 
     // x-value is 12 hotkeys and 4 empty slots over
-	dest.x = window_area.x + (menu_id * ICON_SIZE_SMALL) + ICON_SIZE_SMALL*15;
+	dest.x = window_area.x + (menu_id * ICON_SIZE) + ICON_SIZE*15;
 	dest.y = window_area.y+3;
-    dest.w = dest.h = ICON_SIZE_SMALL;
+    dest.w = dest.h = ICON_SIZE;
 	SDL_BlitSurface(attention, NULL, screen, &dest);
 }
 
@@ -297,14 +299,14 @@ void MenuActionBar::render() {
 
 	// draw hotkeyed icons
 	src.x = src.y = 0;
-	src.w = src.h = dest.w = dest.h = ICON_SIZE_SMALL;
+	src.w = src.h = dest.w = dest.h = ICON_SIZE;
 	dest.y = window_area.y+3;
 	for (int i=0; i<12; i++) {
 
 		if (i<=9)
-			dest.x = window_area.x + (i * ICON_SIZE_SMALL) + ICON_SIZE_SMALL;
+			dest.x = window_area.x + (i * ICON_SIZE) + ICON_SIZE;
 		else
-			dest.x = window_area.x + (i * ICON_SIZE_SMALL) + ICON_SIZE_SMALL * 2;
+			dest.x = window_area.x + (i * ICON_SIZE) + ICON_SIZE* 2;
 
 		if (hotkeys[i] != 0) {
 			const Power &power = powers->getPower(hotkeys[i]);
@@ -351,12 +353,12 @@ void MenuActionBar::renderCooldowns() {
 
 			item_src.x = 0;
 			item_src.y = 0;
-			item_src.h = ICON_SIZE_SMALL;
-			item_src.w = ICON_SIZE_SMALL;
+			item_src.h = ICON_SIZE;
+			item_src.w = ICON_SIZE;
 
 			// Wipe from bottom to top
 			if (hero->hero_cooldown[hotkeys[i]]) {
-				item_src.h = (ICON_SIZE_SMALL * hero->hero_cooldown[hotkeys[i]]) / powers->powers[hotkeys[i]].cooldown;
+				item_src.h = (ICON_SIZE * hero->hero_cooldown[hotkeys[i]]) / powers->powers[hotkeys[i]].cooldown;
 			}
 
 			// SDL_BlitSurface will write to these Rects, so make a copy
@@ -396,25 +398,25 @@ TooltipData MenuActionBar::checkTooltip(Point mouse) {
 	TooltipData tip;
 
 	if (isWithin(menus[0], mouse)) {
-		tip.lines[tip.num_lines++] = msg->get("Character Menu (C)");
+		tip.addText(msg->get("Character Menu (C)"));
 		return tip;
 	}
 	if (isWithin(menus[1], mouse)) {
-		tip.lines[tip.num_lines++] = msg->get("Inventory Menu (I)");
+		tip.addText(msg->get("Inventory Menu (I)"));
 		return tip;
 	}
 	if (isWithin(menus[2], mouse)) {
-		tip.lines[tip.num_lines++] = msg->get("Power Menu (P)");
+		tip.addText(msg->get("Power Menu (P)"));
 		return tip;
 	}
 	if (isWithin(menus[3], mouse)) {
-		tip.lines[tip.num_lines++] = msg->get("Log Menu (L)");
+		tip.addText(msg->get("Log Menu (L)"));
 		return tip;
 	}
 	for (int i=0; i<12; i++) {
 		if (hotkeys[i] != 0) {
 			if (isWithin(slots[i], mouse)) {
-				tip.lines[tip.num_lines++] = powers->powers[hotkeys[i]].name;
+				tip.addText(powers->powers[hotkeys[i]].name);
 			}
 		}
 	}
@@ -439,6 +441,13 @@ void MenuActionBar::drop(Point mouse, int power_index, bool rearranging) {
 			return;
 		}
 	}
+}
+
+/**
+ * Return the power to the last clicked on slot
+ */
+void MenuActionBar::actionReturn(int power_index) {
+	drop(last_mouse, power_index, 0);
 }
 
 /**
@@ -500,6 +509,7 @@ int MenuActionBar::checkDrag(Point mouse) {
 			drag_prev_slot = i;
 			power_index = hotkeys[i];
 			hotkeys[i] = 0;
+			last_mouse = mouse;
 			return power_index;
 		}
 	}

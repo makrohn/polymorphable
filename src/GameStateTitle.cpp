@@ -40,6 +40,10 @@ GameStateTitle::GameStateTitle() : GameState() {
 	button_play->label = msg->get("Play Game");
 	button_play->pos.x = VIEW_W_HALF - button_play->pos.w/2;
 	button_play->pos.y = VIEW_H - (button_exit->pos.h*3);
+	if (!ENABLE_PLAYGAME) {
+		button_play->enabled = false;
+		button_play->tooltip = msg->get("Enable a core mod to continue");
+	}
 	button_play->refresh();
 
 	button_cfg->label = msg->get("Configuration");
@@ -54,7 +58,7 @@ GameStateTitle::GameStateTitle() : GameState() {
 
 	// set up labels
 	label_version = new WidgetLabel();
-	label_version->set(VIEW_W, 0, JUSTIFY_RIGHT, VALIGN_TOP, msg->get("Flare Alpha v0.16"), font->getColor("menu_normal"));
+	label_version->set(VIEW_W, 0, JUSTIFY_RIGHT, VALIGN_TOP, msg->get("Flare Alpha v0.17"), font->getColor("menu_normal"));
 }
 
 void GameStateTitle::loadGraphics() {
@@ -113,7 +117,7 @@ void GameStateTitle::render() {
 
 	// display buttons
 	button_play->render();
-    button_cfg->render();
+	button_cfg->render();
 	button_exit->render();
 
 	// version number

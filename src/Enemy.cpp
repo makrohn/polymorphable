@@ -1,5 +1,6 @@
 /*
 Copyright © 2011-2012 Clint Bellanger
+Copyright © 2012 Stefan Beller
 
 This file is part of FLARE.
 
@@ -20,6 +21,7 @@ FLARE.  If not, see http://www.gnu.org/licenses/
  */
 
 #include "Animation.h"
+#include "BehaviorStandard.h"
 #include "CampaignManager.h"
 #include "CombatText.h"
 #include "Enemy.h"
@@ -56,6 +58,23 @@ Enemy::Enemy(PowerManager *_powers, MapRenderer *_map) : Entity(_map) {
 	instant_power = false;
 
 	eb = NULL;
+}
+
+Enemy::Enemy(const Enemy& e)
+ : Entity(e)
+ , type(e.type)
+ , haz(NULL) // do not copy hazard. This constructor is used during mapload, so no hazard should be active.
+ , eb(new BehaviorStandard(this))
+ , powers(e.powers)
+ , sfx_phys(e.sfx_phys)
+ , sfx_ment(e.sfx_ment)
+ , sfx_hit(e.sfx_hit)
+ , sfx_die(e.sfx_die)
+ , sfx_critdie(e.sfx_critdie)
+ , reward_xp(e.reward_xp)
+ , instant_power(e.instant_power)
+{
+	assert(e.haz == NULL);
 }
 
 /**
@@ -127,7 +146,7 @@ void Enemy::logic() {
  *
  * Returns false on miss
  */
-bool Enemy::takeHit(Hazard h) {
+bool Enemy::takeHit(const Hazard &h) {
 	if (stats.cur_state != ENEMY_DEAD && stats.cur_state != ENEMY_CRITDEAD)
 	{
 		if (!stats.in_combat) {
@@ -148,7 +167,7 @@ bool Enemy::takeHit(Hazard h) {
 		int avoidance = stats.avoidance;
 		if (MAX_AVOIDANCE < avoidance) avoidance = MAX_AVOIDANCE;
 		if (rand() % 100 > (h.accuracy - avoidance + 25)) {
-		    combat_text->addMessage("miss", stats.pos, COMBAT_MESSAGE_MISS, false);
+		    combat_text->addMessage(msg->get("miss"), stats.pos, COMBAT_MESSAGE_MISS, false);
 		    return false;
 		}
 
@@ -161,15 +180,14 @@ bool Enemy::takeHit(Hazard h) {
 		int vulnerable;
 		for (unsigned int i=0; i<stats.vulnerable.size(); i++) {
 			if (h.trait_elemental == (signed)i) {
-				if (MAX_RESIST < stats.vulnerable[i]) vulnerable = MAX_RESIST;
+				if (MAX_RESIST < stats.vulnerable[i] && stats.vulnerable[i] < 100) vulnerable = MAX_RESIST;
 				else vulnerable = stats.vulnerable[i];
 				dmg = (dmg * vulnerable) / 100;
 			}
 		}
 
-		// substract absorption from armor
-		int absorption;
 		if (!h.trait_armor_penetration) { // armor penetration ignores all absorption
+			int absorption; // substract absorption from armor
 			if (stats.absorb_min == stats.absorb_max) absorption = stats.absorb_min;
 			else absorption = stats.absorb_min + (rand() % (stats.absorb_max - stats.absorb_min + 1));
 			if (absorption > 0) {
@@ -178,7 +196,7 @@ bool Enemy::takeHit(Hazard h) {
 				if (absorption == 0) absorption = 1;
 			}
 			dmg = dmg - absorption;
-			if (dmg < 0) {
+			if (dmg <= 0) {
 				dmg = 0;
 				if (h.trait_elemental < 0) {
 					if (MAX_ABSORB < 100) dmg = 1;

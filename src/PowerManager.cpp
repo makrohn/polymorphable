@@ -1,6 +1,7 @@
 /*
 Copyright © 2011-2012 Clint Bellanger
 Copyright © 2012 Igor Paliychuk
+Copyright © 2012 Stefan Beller
 
 This file is part of FLARE.
 
@@ -21,6 +22,9 @@ FLARE.  If not, see http://www.gnu.org/licenses/
  */
 
 #include "PowerManager.h"
+#include "Animation.h"
+#include "AnimationSet.h"
+#include "AnimationManager.h"
 #include "CombatText.h"
 #include "FileParser.h"
 #include "Hazard.h"
@@ -46,7 +50,6 @@ PowerManager::PowerManager() {
 
 	log_msg = "";
 
-	loadGraphics();
 	loadAll();
 }
 
@@ -82,225 +85,227 @@ void PowerManager::loadAll() {
  * @param filename The full path and filename to this powers.txt file
  */
 void PowerManager::loadPowers(const std::string& filename) {
-
 	FileParser infile;
-	int input_id = 0;
+	if (!infile.open(filename)) {
+		fprintf(stderr, "Unable to open %s!\n", filename.c_str());
+		return;
+	}
 
+	int input_id = 0;
 	bool skippingEntry = false;
 
-	if (infile.open(filename)) {
-		while (infile.next()) {
-			// id needs to be the first component of each power.  That is how we write
-			// data to the correct power.
-			if (infile.key == "id") {
-				input_id = toInt(infile.val);
-				skippingEntry = input_id < 1;
-				if (skippingEntry)
-					fprintf(stderr, "Power index out of bounds 1-%d, skipping\n", INT_MAX);
-				if (static_cast<int>(powers.size()) < input_id + 1)
-					powers.resize(input_id + 1);
-				continue;
-			}
+	while (infile.next()) {
+		// id needs to be the first component of each power.  That is how we write
+		// data to the correct power.
+		if (infile.key == "id") {
+			input_id = toInt(infile.val);
+			skippingEntry = input_id < 1;
 			if (skippingEntry)
-				continue;
-
-			if (infile.key == "type") {
-				if (infile.val == "effect") powers[input_id].type = POWTYPE_EFFECT;
-				else if (infile.val == "missile") powers[input_id].type = POWTYPE_MISSILE;
-				else if (infile.val == "repeater") powers[input_id].type = POWTYPE_REPEATER;
-				else if (infile.val == "spawn") powers[input_id].type = POWTYPE_SPAWN;
-				else if (infile.val == "transform") powers[input_id].type = POWTYPE_TRANSFORM;
-				else fprintf(stderr, "unknown type %s\n", infile.val.c_str());
-			}
-			else if (infile.key == "name")
-				powers[input_id].name = msg->get(infile.val);
-			else if (infile.key == "description")
-				powers[input_id].description = msg->get(infile.val);
-			else if (infile.key == "icon")
-				powers[input_id].icon = toInt(infile.val);
-			else if (infile.key == "new_state") {
-				if (infile.val == "swing") powers[input_id].new_state = POWSTATE_SWING;
-				else if (infile.val == "shoot") powers[input_id].new_state = POWSTATE_SHOOT;
-				else if (infile.val == "cast") powers[input_id].new_state = POWSTATE_CAST;
-				else if (infile.val == "block") powers[input_id].new_state = POWSTATE_BLOCK;
-				else if (infile.val == "instant") powers[input_id].new_state = POWSTATE_INSTANT;
-				else fprintf(stderr, "unknown new_state %s\n", infile.val.c_str());
-			}
-			else if (infile.key == "face")
-				powers[input_id].face = toBool(infile.val);
-			else if (infile.key == "source_type") {
-				if (infile.val == "hero") powers[input_id].source_type = SOURCE_TYPE_HERO;
-				else if (infile.val == "neutral") powers[input_id].source_type = SOURCE_TYPE_NEUTRAL;
-				else if (infile.val == "enemy") powers[input_id].source_type = SOURCE_TYPE_ENEMY;
-				else fprintf(stderr, "unknown source_type %s\n", infile.val.c_str());
-			}
-			else if (infile.key == "beacon")
-				powers[input_id].beacon = toBool(infile.val);
-			else if (infile.key == "count")
-				powers[input_id].count = toInt(infile.val);
-			// power requirements
-			else if (infile.key == "requires_physical_weapon")
-				powers[input_id].requires_physical_weapon = toBool(infile.val);
-			else if (infile.key == "requires_mental_weapon")
-				powers[input_id].requires_mental_weapon = toBool(infile.val);
-			else if (infile.key == "requires_offense_weapon")
-				powers[input_id].requires_offense_weapon = toBool(infile.val);
-			else if (infile.key == "requires_mp")
-				powers[input_id].requires_mp = toInt(infile.val);
-			else if (infile.key == "requires_los")
-				powers[input_id].requires_los = toBool(infile.val);
-			else if (infile.key == "requires_empty_target")
-				powers[input_id].requires_empty_target = toBool(infile.val);
-			else if (infile.key == "requires_item")
-				powers[input_id].requires_item = toInt(infile.val);
-			else if (infile.key == "requires_targeting")
-				powers[input_id].requires_targeting =toBool(infile.val);
-			else if (infile.key == "cooldown")
-				powers[input_id].cooldown = toInt(infile.val);
-			// animation info
-			else if (infile.key == "gfx")
-				powers[input_id].gfx_index = loadGFX(infile.val);
-			else if (infile.key == "sfx")
-				powers[input_id].sfx_index = loadSFX(infile.val);
-			else if (infile.key == "rendered")
-				powers[input_id].rendered = toBool(infile.val);
-			else if (infile.key == "directional")
-				powers[input_id].directional = toBool(infile.val);
-			else if (infile.key == "visual_random")
-				powers[input_id].visual_random = toInt(infile.val);
-			else if (infile.key == "visual_option")
-				powers[input_id].visual_option = toInt(infile.val);
-			else if (infile.key == "aim_assist")
-				powers[input_id].aim_assist = toInt(infile.val);
-			else if (infile.key == "speed")
-				powers[input_id].speed = toInt(infile.val);
-			else if (infile.key == "lifespan")
-				powers[input_id].lifespan = toInt(infile.val);
-			else if (infile.key == "frame_loop")
-				powers[input_id].frame_loop = toInt(infile.val);
-			else if (infile.key == "frame_duration")
-				powers[input_id].frame_duration = toInt(infile.val);
-			else if (infile.key == "frame_size") {
-				powers[input_id].frame_size.x = toInt(infile.nextValue());
-				powers[input_id].frame_size.y = toInt(infile.nextValue());
-			}
-			else if (infile.key == "frame_offset") {
-				powers[input_id].frame_offset.x = toInt(infile.nextValue());
-				powers[input_id].frame_offset.y = toInt(infile.nextValue());
-			}
-			else if (infile.key == "floor")
-				powers[input_id].floor = toBool(infile.val);
-			else if (infile.key == "active_frame")
-				powers[input_id].active_frame = toInt(infile.val);
-			else if (infile.key == "complete_animation")
-				powers[input_id].complete_animation = toBool(infile.val);
-			// hazard traits
-			else if (infile.key == "use_hazard")
-				powers[input_id].use_hazard = toBool(infile.val);
-			else if (infile.key == "no_attack")
-				powers[input_id].no_attack = toBool(infile.val);
-			else if (infile.key == "radius")
-				powers[input_id].radius = toInt(infile.val);
-			else if (infile.key == "base_damage") {
-				if (infile.val == "none")        powers[input_id].base_damage = BASE_DAMAGE_NONE;
-				else if (infile.val == "melee")  powers[input_id].base_damage = BASE_DAMAGE_MELEE;
-				else if (infile.val == "ranged") powers[input_id].base_damage = BASE_DAMAGE_RANGED;
-				else if (infile.val == "ment")   powers[input_id].base_damage = BASE_DAMAGE_MENT;
-				else fprintf(stderr, "unknown base_damage %s\n", infile.val.c_str());
-			}
-			else if (infile.key == "damage_multiplier")
-				powers[input_id].damage_multiplier = toInt(infile.val);
-			else if (infile.key == "starting_pos") {
-				if (infile.val == "source")      powers[input_id].starting_pos = STARTING_POS_SOURCE;
-				else if (infile.val == "target") powers[input_id].starting_pos = STARTING_POS_TARGET;
-				else if (infile.val == "melee")  powers[input_id].starting_pos = STARTING_POS_MELEE;
-				else fprintf(stderr, "unknown starting_pos %s\n", infile.val.c_str());
-			}
-			else if (infile.key == "multitarget")
-				powers[input_id].multitarget = toBool(infile.val);
-			else if (infile.key == "trait_armor_penetration")
-				powers[input_id].trait_armor_penetration = toBool(infile.val);
-			else if (infile.key == "trait_crits_impaired")
-				powers[input_id].trait_crits_impaired = toInt(infile.val);
-			else if (infile.key == "trait_elemental") {
-				for (unsigned int i=0; i<ELEMENTS.size(); i++) {
-					if (infile.val == ELEMENTS[i].name) powers[input_id].trait_elemental = i;
-				}
-			}
-			else if (infile.key == "forced_move") {
-				powers[input_id].forced_move_speed = toInt(infile.nextValue());
-				powers[input_id].forced_move_duration = toInt(infile.nextValue());
-			}
-			else if (infile.key == "range")
-				powers[input_id].range = toInt(infile.nextValue());
-			//steal effects
-			else if (infile.key == "hp_steal")
-				powers[input_id].hp_steal = toInt(infile.val);
-			else if (infile.key == "mp_steal")
-				powers[input_id].mp_steal = toInt(infile.val);
-			//missile modifiers
-			else if (infile.key == "missile_angle")
-				powers[input_id].missile_angle = toInt(infile.val);
-			else if (infile.key == "angle_variance")
-				powers[input_id].angle_variance = toInt(infile.val);
-			else if (infile.key == "speed_variance")
-				powers[input_id].speed_variance = toInt(infile.val);
-			//repeater modifiers
-			else if (infile.key == "delay")
-				powers[input_id].delay = toInt(infile.val);
-			else if (infile.key == "start_frame")
-				powers[input_id].start_frame = toInt(infile.val);
-			// buff/debuff durations
-			else if (infile.key == "bleed_duration")
-				powers[input_id].bleed_duration = toInt(infile.val);
-			else if (infile.key == "stun_duration")
-				powers[input_id].stun_duration = toInt(infile.val);
-			else if (infile.key == "slow_duration")
-				powers[input_id].slow_duration = toInt(infile.val);
-			else if (infile.key == "immobilize_duration")
-				powers[input_id].immobilize_duration = toInt(infile.val);
-			else if (infile.key == "immunity_duration")
-				powers[input_id].immunity_duration = toInt(infile.val);
-			else if (infile.key == "transform_duration")
-				powers[input_id].transform_duration = toInt(infile.val);
-			else if (infile.key == "manual_untransform")
-				powers[input_id].manual_untransform = toBool(infile.val);
-			else if (infile.key == "haste_duration")
-				powers[input_id].haste_duration = toInt(infile.val);
-			else if (infile.key == "hot_duration")
-				powers[input_id].hot_duration = toInt(infile.val);
-			else if (infile.key == "hot_value")
-				powers[input_id].hot_value = toInt(infile.val);
-			// buffs
-			else if (infile.key == "buff_heal")
-				powers[input_id].buff_heal = toBool(infile.val);
-			else if (infile.key == "buff_shield")
-				powers[input_id].buff_shield = toBool(infile.val);
-			else if (infile.key == "buff_teleport")
-				powers[input_id].buff_teleport = toBool(infile.val);
-			else if (infile.key == "buff_immunity")
-				powers[input_id].buff_immunity = toBool(infile.val);
-			else if (infile.key == "buff_restore_hp")
-				powers[input_id].buff_restore_hp = toInt(infile.val);
-			else if (infile.key == "buff_restore_mp")
-				powers[input_id].buff_restore_mp = toInt(infile.val);
-			// pre and post power effects
-			else if (infile.key == "post_power")
-				powers[input_id].post_power = toInt(infile.val);
-			else if (infile.key == "wall_power")
-				powers[input_id].wall_power = toInt(infile.val);
-			else if (infile.key == "allow_power_mod")
-				powers[input_id].allow_power_mod = toBool(infile.val);
-			// spawn info
-			else if (infile.key == "spawn_type")
-				powers[input_id].spawn_type = infile.val;
-			else if (infile.key == "target_neighbor")
-				powers[input_id].target_neighbor = toInt(infile.val);
-			else
-				fprintf(stderr, "ignoring unknown key %s set to %s\n", infile.key.c_str(), infile.val.c_str());
+				fprintf(stderr, "Power index out of bounds 1-%d, skipping\n", INT_MAX);
+			if (static_cast<int>(powers.size()) < input_id + 1)
+				powers.resize(input_id + 1);
+			continue;
 		}
-		infile.close();
-	} else fprintf(stderr, "Unable to open %s!\n", filename.c_str());
+		if (skippingEntry)
+			continue;
+
+		if (infile.key == "type") {
+			if (infile.val == "effect") powers[input_id].type = POWTYPE_EFFECT;
+			else if (infile.val == "missile") powers[input_id].type = POWTYPE_MISSILE;
+			else if (infile.val == "repeater") powers[input_id].type = POWTYPE_REPEATER;
+			else if (infile.val == "spawn") powers[input_id].type = POWTYPE_SPAWN;
+			else if (infile.val == "transform") powers[input_id].type = POWTYPE_TRANSFORM;
+			else fprintf(stderr, "unknown type %s\n", infile.val.c_str());
+		}
+		else if (infile.key == "name")
+			powers[input_id].name = msg->get(infile.val);
+		else if (infile.key == "description")
+			powers[input_id].description = msg->get(infile.val);
+		else if (infile.key == "icon")
+			powers[input_id].icon = toInt(infile.val);
+		else if (infile.key == "new_state") {
+			if (infile.val == "swing") powers[input_id].new_state = POWSTATE_SWING;
+			else if (infile.val == "shoot") powers[input_id].new_state = POWSTATE_SHOOT;
+			else if (infile.val == "cast") powers[input_id].new_state = POWSTATE_CAST;
+			else if (infile.val == "block") powers[input_id].new_state = POWSTATE_BLOCK;
+			else if (infile.val == "instant") powers[input_id].new_state = POWSTATE_INSTANT;
+			else fprintf(stderr, "unknown new_state %s\n", infile.val.c_str());
+		}
+		else if (infile.key == "face")
+			powers[input_id].face = toBool(infile.val);
+		else if (infile.key == "source_type") {
+			if (infile.val == "hero") powers[input_id].source_type = SOURCE_TYPE_HERO;
+			else if (infile.val == "neutral") powers[input_id].source_type = SOURCE_TYPE_NEUTRAL;
+			else if (infile.val == "enemy") powers[input_id].source_type = SOURCE_TYPE_ENEMY;
+			else fprintf(stderr, "unknown source_type %s\n", infile.val.c_str());
+		}
+		else if (infile.key == "beacon")
+			powers[input_id].beacon = toBool(infile.val);
+		else if (infile.key == "count")
+			powers[input_id].count = toInt(infile.val);
+		// power requirements
+		else if (infile.key == "requires_physical_weapon")
+			powers[input_id].requires_physical_weapon = toBool(infile.val);
+		else if (infile.key == "requires_mental_weapon")
+			powers[input_id].requires_mental_weapon = toBool(infile.val);
+		else if (infile.key == "requires_offense_weapon")
+			powers[input_id].requires_offense_weapon = toBool(infile.val);
+		else if (infile.key == "requires_mp")
+			powers[input_id].requires_mp = toInt(infile.val);
+		else if (infile.key == "requires_los")
+			powers[input_id].requires_los = toBool(infile.val);
+		else if (infile.key == "requires_empty_target")
+			powers[input_id].requires_empty_target = toBool(infile.val);
+		else if (infile.key == "requires_item")
+			powers[input_id].requires_item = toInt(infile.val);
+		else if (infile.key == "requires_targeting")
+			powers[input_id].requires_targeting =toBool(infile.val);
+		else if (infile.key == "cooldown")
+			powers[input_id].cooldown = toInt(infile.val);
+		// animation info
+		else if (infile.key == "animation") {
+			string animation_name = "animations/powers/" + infile.val;
+			AnimationManager::instance()->increaseCount(animation_name);
+			powers[input_id].animationSet = AnimationManager::instance()->getAnimationSet(animation_name);
+		}
+		else if (infile.key == "sfx")
+			powers[input_id].sfx_index = loadSFX(infile.val);
+		else if (infile.key == "directional")
+			powers[input_id].directional = toBool(infile.val);
+		else if (infile.key == "visual_random")
+			powers[input_id].visual_random = toInt(infile.val);
+		else if (infile.key == "visual_option")
+			powers[input_id].visual_option = toInt(infile.val);
+		else if (infile.key == "aim_assist")
+			powers[input_id].aim_assist = toInt(infile.val);
+		else if (infile.key == "speed")
+			powers[input_id].speed = toInt(infile.val);
+		else if (infile.key == "lifespan")
+			powers[input_id].lifespan = toInt(infile.val);
+		else if (infile.key == "frame_loop")
+			powers[input_id].frame_loop = toInt(infile.val);
+		else if (infile.key == "frame_duration")
+			powers[input_id].frame_duration = toInt(infile.val);
+		else if (infile.key == "frame_size") {
+			powers[input_id].frame_size.x = toInt(infile.nextValue());
+			powers[input_id].frame_size.y = toInt(infile.nextValue());
+		}
+		else if (infile.key == "frame_offset") {
+			powers[input_id].frame_offset.x = toInt(infile.nextValue());
+			powers[input_id].frame_offset.y = toInt(infile.nextValue());
+		}
+		else if (infile.key == "floor")
+			powers[input_id].floor = toBool(infile.val);
+		else if (infile.key == "active_frame")
+			powers[input_id].active_frame = toInt(infile.val);
+		else if (infile.key == "complete_animation")
+			powers[input_id].complete_animation = toBool(infile.val);
+		// hazard traits
+		else if (infile.key == "use_hazard")
+			powers[input_id].use_hazard = toBool(infile.val);
+		else if (infile.key == "no_attack")
+			powers[input_id].no_attack = toBool(infile.val);
+		else if (infile.key == "radius")
+			powers[input_id].radius = toInt(infile.val);
+		else if (infile.key == "base_damage") {
+			if (infile.val == "none")        powers[input_id].base_damage = BASE_DAMAGE_NONE;
+			else if (infile.val == "melee")  powers[input_id].base_damage = BASE_DAMAGE_MELEE;
+			else if (infile.val == "ranged") powers[input_id].base_damage = BASE_DAMAGE_RANGED;
+			else if (infile.val == "ment")   powers[input_id].base_damage = BASE_DAMAGE_MENT;
+			else fprintf(stderr, "unknown base_damage %s\n", infile.val.c_str());
+		}
+		else if (infile.key == "damage_multiplier")
+			powers[input_id].damage_multiplier = toInt(infile.val);
+		else if (infile.key == "starting_pos") {
+			if (infile.val == "source")      powers[input_id].starting_pos = STARTING_POS_SOURCE;
+			else if (infile.val == "target") powers[input_id].starting_pos = STARTING_POS_TARGET;
+			else if (infile.val == "melee")  powers[input_id].starting_pos = STARTING_POS_MELEE;
+			else fprintf(stderr, "unknown starting_pos %s\n", infile.val.c_str());
+		}
+		else if (infile.key == "multitarget")
+			powers[input_id].multitarget = toBool(infile.val);
+		else if (infile.key == "trait_armor_penetration")
+			powers[input_id].trait_armor_penetration = toBool(infile.val);
+		else if (infile.key == "trait_crits_impaired")
+			powers[input_id].trait_crits_impaired = toInt(infile.val);
+		else if (infile.key == "trait_elemental") {
+			for (unsigned int i=0; i<ELEMENTS.size(); i++) {
+				if (infile.val == ELEMENTS[i].name) powers[input_id].trait_elemental = i;
+			}
+		}
+		else if (infile.key == "forced_move") {
+			powers[input_id].forced_move_speed = toInt(infile.nextValue());
+			powers[input_id].forced_move_duration = toInt(infile.nextValue());
+		}
+		else if (infile.key == "range")
+			powers[input_id].range = toInt(infile.nextValue());
+		//steal effects
+		else if (infile.key == "hp_steal")
+			powers[input_id].hp_steal = toInt(infile.val);
+		else if (infile.key == "mp_steal")
+			powers[input_id].mp_steal = toInt(infile.val);
+		//missile modifiers
+		else if (infile.key == "missile_angle")
+			powers[input_id].missile_angle = toInt(infile.val);
+		else if (infile.key == "angle_variance")
+			powers[input_id].angle_variance = toInt(infile.val);
+		else if (infile.key == "speed_variance")
+			powers[input_id].speed_variance = toInt(infile.val);
+		//repeater modifiers
+		else if (infile.key == "delay")
+			powers[input_id].delay = toInt(infile.val);
+		else if (infile.key == "start_frame")
+			powers[input_id].start_frame = toInt(infile.val);
+		// buff/debuff durations
+		else if (infile.key == "bleed_duration")
+			powers[input_id].bleed_duration = toInt(infile.val);
+		else if (infile.key == "stun_duration")
+			powers[input_id].stun_duration = toInt(infile.val);
+		else if (infile.key == "slow_duration")
+			powers[input_id].slow_duration = toInt(infile.val);
+		else if (infile.key == "immobilize_duration")
+			powers[input_id].immobilize_duration = toInt(infile.val);
+		else if (infile.key == "immunity_duration")
+			powers[input_id].immunity_duration = toInt(infile.val);
+		else if (infile.key == "transform_duration")
+			powers[input_id].transform_duration = toInt(infile.val);
+		else if (infile.key == "manual_untransform")
+			powers[input_id].manual_untransform = toBool(infile.val);
+		else if (infile.key == "haste_duration")
+			powers[input_id].haste_duration = toInt(infile.val);
+		else if (infile.key == "hot_duration")
+			powers[input_id].hot_duration = toInt(infile.val);
+		else if (infile.key == "hot_value")
+			powers[input_id].hot_value = toInt(infile.val);
+		// buffs
+		else if (infile.key == "buff_heal")
+			powers[input_id].buff_heal = toBool(infile.val);
+		else if (infile.key == "buff_shield")
+			powers[input_id].buff_shield = toBool(infile.val);
+		else if (infile.key == "buff_teleport")
+			powers[input_id].buff_teleport = toBool(infile.val);
+		else if (infile.key == "buff_immunity")
+			powers[input_id].buff_immunity = toBool(infile.val);
+		else if (infile.key == "buff_restore_hp")
+			powers[input_id].buff_restore_hp = toInt(infile.val);
+		else if (infile.key == "buff_restore_mp")
+			powers[input_id].buff_restore_mp = toInt(infile.val);
+		// pre and post power effects
+		else if (infile.key == "post_power")
+			powers[input_id].post_power = toInt(infile.val);
+		else if (infile.key == "wall_power")
+			powers[input_id].wall_power = toInt(infile.val);
+		else if (infile.key == "allow_power_mod")
+			powers[input_id].allow_power_mod = toBool(infile.val);
+		// spawn info
+		else if (infile.key == "spawn_type")
+			powers[input_id].spawn_type = infile.val;
+		else if (infile.key == "target_neighbor")
+			powers[input_id].target_neighbor = toInt(infile.val);
+		else
+			fprintf(stderr, "ignoring unknown key %s set to %s\n", infile.key.c_str(), infile.val.c_str());
+	}
+	infile.close();
 }
 
 /**
@@ -310,83 +315,58 @@ void PowerManager::loadPowers(const std::string& filename) {
  */
 void PowerManager::loadEffects(const std::string& filename) {
 	FileParser infile;
+	if (!infile.open(filename)) {
+		fprintf(stderr, "Unable to open %s!\n", filename.c_str());
+		return;
+	}
+
 	int input_id = 0;
 	bool skippingEntry = false;
-
-	if (infile.open(filename)) {
-		while (infile.next()) {
-			// id needs to be the first component of each effect.  That is how we write
-			// data to the correct effect.
-			if (infile.key == "id") {
-				input_id = toInt(infile.val);
-				skippingEntry = input_id < 1;
-				if (skippingEntry)
-					fprintf(stderr, "Effect index out of bounds 1-%d, skipping\n", INT_MAX);
-				if (static_cast<int>(effects.size()) < input_id + 1)
-					effects.resize(input_id + 1);
-				continue;
-			}
+	while (infile.next()) {
+		// id needs to be the first component of each effect.  That is how we write
+		// data to the correct effect.
+		if (infile.key == "id") {
+			input_id = toInt(infile.val);
+			skippingEntry = input_id < 1;
 			if (skippingEntry)
-				continue;
+				fprintf(stderr, "Effect index out of bounds 1-%d, skipping\n", INT_MAX);
+			if (static_cast<int>(effects.size()) < input_id + 1)
+				effects.resize(input_id + 1);
+			continue;
+		}
+		if (skippingEntry)
+			continue;
 
-			infile.val = infile.val + ',';
+		infile.val = infile.val + ',';
 
-			if (infile.key == "type") {
-				effects[input_id].type = eatFirstString(infile.val,',');
-			} else if (infile.key == "icon") {
-				effects[input_id].icon = eatFirstInt(infile.val,',');
-			} else if (infile.key == "gfx") {
-				effects[input_id].gfx = NULL;
-				SDL_Surface *surface = IMG_Load(mods->locate("images/powers/" + eatFirstString(infile.val,',')).c_str());
-				if(!surface)
-					fprintf(stderr, "Couldn't load effect sprites: %s\n", IMG_GetError());
+		if (infile.key == "type") {
+			effects[input_id].type = eatFirstString(infile.val,',');
+		} else if (infile.key == "icon") {
+			effects[input_id].icon = eatFirstInt(infile.val,',');
+		} else if (infile.key == "gfx") {
+			effects[input_id].gfx = NULL;
+			SDL_Surface *surface = IMG_Load(mods->locate("images/powers/" + eatFirstString(infile.val,',')).c_str());
+			if(!surface) {
+				fprintf(stderr, "Couldn't load effect sprites: %s\n", IMG_GetError());
+			} else {
 				effects[input_id].gfx = SDL_DisplayFormatAlpha(surface);
 				SDL_FreeSurface(surface);
-			} else if (infile.key == "size") {
-				effects[input_id].frame_size.x = eatFirstInt(infile.val, ',');
-				effects[input_id].frame_size.y = eatFirstInt(infile.val, ',');
-				effects[input_id].frame_size.w = eatFirstInt(infile.val, ',');
-				effects[input_id].frame_size.h = eatFirstInt(infile.val, ',');
-			} else if (infile.key == "offset") {
-				effects[input_id].frame_offset.x = eatFirstInt(infile.val, ',');
-				effects[input_id].frame_offset.y = eatFirstInt(infile.val, ',');
-			} else if (infile.key == "frame_total") {
-				effects[input_id].frame_total = eatFirstInt(infile.val, ',');
-			} else if (infile.key == "ticks_per_frame") {
-				effects[input_id].ticks_per_frame = eatFirstInt(infile.val, ',');
 			}
-		}
-		infile.close();
-	} else fprintf(stderr, "Unable to open %s!\n", filename.c_str());
-}
-
-/**
- * Load the specified graphic for this power
- *
- * @param filename The .png file containing sprites for this power, assumed to be in images/powers/
- * @return The gfx[] array index for this graphic, or -1 upon load failure
- */
-int PowerManager::loadGFX(const string& filename) {
-	// first check to make sure the sprite isn't already loaded
-	for (unsigned i=0; i<gfx_filenames.size(); i++) {
-		if (gfx_filenames[i] == filename) {
-			return i; // already have this one
+		} else if (infile.key == "size") {
+			effects[input_id].frame_size.x = eatFirstInt(infile.val, ',');
+			effects[input_id].frame_size.y = eatFirstInt(infile.val, ',');
+			effects[input_id].frame_size.w = eatFirstInt(infile.val, ',');
+			effects[input_id].frame_size.h = eatFirstInt(infile.val, ',');
+		} else if (infile.key == "offset") {
+			effects[input_id].frame_offset.x = eatFirstInt(infile.val, ',');
+			effects[input_id].frame_offset.y = eatFirstInt(infile.val, ',');
+		} else if (infile.key == "frame_total") {
+			effects[input_id].frame_total = eatFirstInt(infile.val, ',');
+		} else if (infile.key == "ticks_per_frame") {
+			effects[input_id].ticks_per_frame = eatFirstInt(infile.val, ',');
 		}
 	}
-
-	// we don't already have this sprite loaded, so load it
-	SDL_Surface* surface = IMG_Load(mods->locate("images/powers/" + filename).c_str());
-	if(!surface) {
-		fprintf(stderr, "Couldn't load power sprites: %s\n", IMG_GetError());
-		return -1;
-	}
-	gfx_filenames.push_back(filename);
-	gfx.push_back(SDL_DisplayFormatAlpha(surface));
-
-	// optimize
-	SDL_FreeSurface(surface);
-
-	return gfx.size() - 1;
+	infile.close();
 }
 
 /**
@@ -422,17 +402,6 @@ int PowerManager::loadSFX(const string& filename) {
 		return sfx.size() - 1;
 }
 
-
-void PowerManager::loadGraphics() {
-
-	runes = IMG_Load(mods->locate("images/powers/runes.png").c_str());
-
-	if(!runes) {
-		fprintf(stderr, "Couldn't load image: %s\n", IMG_GetError());
-		SDL_Quit();
-		exit(1);
-	}
-}
 
 /**
  * Set new collision object
@@ -558,7 +527,7 @@ Point PowerManager::targetNeighbor(Point target, int range, bool ignore_blocked)
 		}
 	}
 
-	if (valid_tiles.size() > 0)
+	if (!valid_tiles.empty())
 		return valid_tiles[rand() % valid_tiles.size()];
 	else
 		return target;
@@ -636,30 +605,18 @@ void PowerManager::initHazard(int power_index, StatBlock *src_stats, Point targe
 	// If we do this, we can init with multiple power layers
 	// (e.g. base spell plus weapon type)
 
-	if (powers[power_index].gfx_index != -1)
-		haz->sprites = gfx[powers[power_index].gfx_index];
-	if (powers[power_index].rendered)
-		haz->rendered = powers[power_index].rendered;
+	if (powers[power_index].animationSet != NULL) {
+		delete haz->activeAnimation;
+		haz->activeAnimation = powers[power_index].animationSet->getAnimation(powers[power_index].animationSet->starting_animation);
+	}
 	if (powers[power_index].lifespan != 0)
 		haz->lifespan = powers[power_index].lifespan;
-	if (powers[power_index].frame_loop != 1)
-		haz->frame_loop = powers[power_index].frame_loop;
-	if (powers[power_index].frame_duration != 1)
-		haz->frame_duration = powers[power_index].frame_duration;
-	if (powers[power_index].frame_size.x != 0)
-		haz->frame_size.x = powers[power_index].frame_size.x;
-	if (powers[power_index].frame_size.y != 0)
-		haz->frame_size.y = powers[power_index].frame_size.y;
-	if (powers[power_index].frame_offset.x != 0)
-		haz->frame_offset.x = powers[power_index].frame_offset.x;
-	if (powers[power_index].frame_offset.y != 0)
-		haz->frame_offset.y = powers[power_index].frame_offset.y;
 	if (powers[power_index].directional)
-		haz->direction = calcDirection(src_stats->pos.x, src_stats->pos.y, target.x, target.y);
+		haz->animationKind = calcDirection(src_stats->pos.x, src_stats->pos.y, target.x, target.y);
 	else if (powers[power_index].visual_random)
-		haz->visual_option = rand() % powers[power_index].visual_random;
+		haz->animationKind = rand() % powers[power_index].visual_random;
 	else if (powers[power_index].visual_option)
-		haz->visual_option = powers[power_index].visual_option;
+		haz->animationKind = powers[power_index].visual_option;
 
 	haz->floor = powers[power_index].floor;
 	haz->base_speed = powers[power_index].speed;
@@ -671,9 +628,6 @@ void PowerManager::initHazard(int power_index, StatBlock *src_stats, Point targe
 	}
 	if (powers[power_index].multitarget) {
 		haz->multitarget = true;
-	}
-	if (powers[power_index].active_frame != -1) {
-		haz->active_frame = powers[power_index].active_frame;
 	}
 	if (powers[power_index].radius != 0) {
 		haz->radius = powers[power_index].radius;
@@ -897,9 +851,8 @@ void PowerManager::playSound(int power_index, StatBlock *src_stats) {
  */
 bool PowerManager::effect(int power_index, StatBlock *src_stats, Point target) {
 
-	int delay_iterator = 0;
-
 	if (powers[power_index].use_hazard) {
+		int delay_iterator = 0;
 		for (int i=0; i < powers[power_index].count; i++) {
 			Hazard *haz = new Hazard();
 			initHazard(power_index, src_stats, target, haz);
@@ -976,7 +929,7 @@ bool PowerManager::missile(int power_index, StatBlock *src_stats, Point target) 
 
 		//calculate direction based on trajectory, not actual target (UNITS_PER_TILE reduces round off error)
 		if (powers[power_index].directional)
-			haz->direction = calcDirection(
+			haz->animationKind = calcDirection(
 					src.x, src.y,
 					static_cast<int>(src.x + UNITS_PER_TILE * haz->speed.x),
 					static_cast<int>(src.y + UNITS_PER_TILE * haz->speed.y));
@@ -1036,8 +989,6 @@ bool PowerManager::repeater(int power_index, StatBlock *src_stats, Point target)
 		haz->pos.y = location_iterator.y;
 		haz->delay_frames = delay_iterator;
 		delay_iterator += powers[power_index].delay;
-
-		haz->frame = powers[power_index].start_frame; // start at bottom frame
 
 		hazards.push(haz);
 	}
@@ -1188,9 +1139,13 @@ Renderable PowerManager::renderEffects(StatBlock *src_stats) {
 	for (unsigned int j=0; j<src_stats->effects.size(); j++) {
 		for (unsigned int i=0; i<effects.size(); i++) {
 			if (src_stats->effects[j].type == effects[i].type && effects[i].gfx != NULL) {
-				if (src_stats->effects[j].frame * effects[i].ticks_per_frame == effects[i].frame_total)
+
+				// TODO: frame reset belogs in the logic phase, e.g. StatBlock::logic
+				if (src_stats->effects[j].frame >= effects[i].frame_total)
 					src_stats->effects[j].frame = 0;
+
 				r.src.x = (src_stats->effects[j].frame / effects[i].ticks_per_frame) * effects[i].frame_size.w;
+
 				r.src.y = effects[i].frame_size.y;
 				r.src.w = effects[i].frame_size.w;
 				r.src.h = effects[i].frame_size.h;
@@ -1214,10 +1169,6 @@ int PowerManager::getEffectIcon(std::string type) {
 
 PowerManager::~PowerManager() {
 
-	for (unsigned i=0; i<gfx.size(); i++) {
-		SDL_FreeSurface(gfx[i]);
-	}
-	gfx.clear();
 	gfx_filenames.clear();
 
 	for (unsigned i=0; i<sfx.size(); i++) {
@@ -1225,8 +1176,6 @@ PowerManager::~PowerManager() {
 	}
 	sfx.clear();
 	sfx_filenames.clear();
-
-	SDL_FreeSurface(runes);
 
 	for (unsigned i=0; i<effects.size(); i++) {
 		SDL_FreeSurface(effects[i].gfx);

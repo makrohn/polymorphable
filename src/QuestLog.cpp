@@ -1,5 +1,6 @@
 /*
 Copyright © 2011-2012 Clint Bellanger
+Copyright © 2012 Stefan Beller
 
 This file is part of FLARE.
 
@@ -78,7 +79,7 @@ void QuestLog::loadIndex(const std::string& filename) {
 	infile.open(filename.c_str(), ios::in);
 
 	if (infile.is_open()) {
-		while (!infile.eof()) {
+		while (infile.good()) {
 			line = getLine(infile);
 			if (line.length() > 0) {
 
@@ -97,28 +98,28 @@ void QuestLog::loadIndex(const std::string& filename) {
  * @param filename The quest file name and extension, no path
  */
 void QuestLog::load(const std::string& filename) {
-
 	FileParser infile;
+	if (!infile.open(mods->locate("quests/" + filename))) {
+		fprintf(stderr, "Unable to open quests/%s!\n", filename.c_str());
+		return;
+	}
+
 	int event_count = 0;
-
-	if (infile.open(mods->locate("quests/" + filename))) {
-		while (infile.next()) {
-			if (infile.new_section) {
-				if (infile.section == "quest") {
-					quest_count++;
-					quests.push_back(vector<Event_Component>());
-					event_count = 0;
-				}
+	while (infile.next()) {
+		if (infile.new_section) {
+			if (infile.section == "quest") {
+				quest_count++;
+				quests.push_back(vector<Event_Component>());
+				event_count = 0;
 			}
-			Event_Component ev;
-			ev.type = infile.key;
-			ev.s = msg->get(infile.val);
-			quests.back().push_back(ev);
-			event_count++;
-
 		}
-		infile.close();
-	} else fprintf(stderr, "Unable to open quests/%s!\n", filename.c_str());
+		Event_Component ev;
+		ev.type = infile.key;
+		ev.s = msg->get(infile.val);
+		quests.back().push_back(ev);
+		event_count++;
+	}
+	infile.close();
 }
 
 void QuestLog::logic() {

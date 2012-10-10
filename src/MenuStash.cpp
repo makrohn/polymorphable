@@ -85,10 +85,10 @@ void MenuStash::loadGraphics() {
 void MenuStash::update() {
 	slots_area.x += window_area.x;
 	slots_area.y += window_area.y;
-	slots_area.w = slots_cols*ICON_SIZE_SMALL;
-	slots_area.h = slots_rows*ICON_SIZE_SMALL;
+	slots_area.w = slots_cols*ICON_SIZE;
+	slots_area.h = slots_rows*ICON_SIZE;
 
-	stock.init( STASH_SLOTS, items, slots_area, ICON_SIZE_SMALL, slots_cols);
+	stock.init( STASH_SLOTS, items, slots_area, ICON_SIZE, slots_cols);
 
 	closeButton->pos.x = window_area.x+close_pos.x;
 	closeButton->pos.y = window_area.y+close_pos.y;
@@ -122,7 +122,7 @@ void MenuStash::render() {
 	// text overlay
 	if (!title.hidden) {
 		WidgetLabel label;
-		label.set(window_area.x+title.x, window_area.y+title.y, title.justify, title.valign, msg->get("Shared Stash"), color_normal);
+		label.set(window_area.x+title.x, window_area.y+title.y, title.justify, title.valign, msg->get("Shared Stash"), color_normal, title.font_style);
 		label.render();
 	}
 
@@ -166,18 +166,15 @@ void MenuStash::drop(Point mouse, ItemStack stack) {
 }
 
 void MenuStash::add(ItemStack stack, int slot) {
-	int max_quantity;
-	int quantity_added;
-	int i;
 
 	if( stack.item != 0) {
-		max_quantity = items->items[stack.item].max_quantity;
+		int max_quantity = items->items[stack.item].max_quantity;
 		if( slot > -1 && stock[slot].item != 0 && stock[slot].item != stack.item) {
 			// the proposed slot isn't available, search for another one
 			slot = -1;
 		}
 		// first search of stack to complete if the item is stackable
-		i = 0;
+		int i = 0;
 		while( max_quantity > 1 && slot == -1 && i < STASH_SLOTS) {
 			if (stock[i].item == stack.item && stock[i].quantity < max_quantity) {
 				slot = i;
@@ -194,7 +191,7 @@ void MenuStash::add(ItemStack stack, int slot) {
 		}
 		if( slot != -1) {
 			// Add
-			quantity_added = min( stack.quantity, max_quantity - stock[slot].quantity);
+			int quantity_added = min( stack.quantity, max_quantity - stock[slot].quantity);
 			stock[slot].item = stack.item;
 			stock[slot].quantity += quantity_added;
 			stack.quantity -= quantity_added;
@@ -232,7 +229,7 @@ void MenuStash::add(ItemStack stack) {
 }
 
 TooltipData MenuStash::checkTooltip(Point mouse) {
-	return stock.checkTooltip( mouse, stats, false);
+	return stock.checkTooltip( mouse, stats, PLAYER_INV);
 }
 
 bool MenuStash::full(int item) {

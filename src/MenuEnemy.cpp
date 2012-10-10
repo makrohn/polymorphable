@@ -98,6 +98,7 @@ void MenuEnemy::logic() {
 
 void MenuEnemy::render() {
 	if (enemy == NULL) return;
+	if (enemy->stats.corpse && enemy->stats.corpse_ticks == 0) return;
 
 	SDL_Rect src;
 	SDL_Rect dest;
@@ -136,7 +137,7 @@ void MenuEnemy::render() {
 		WidgetLabel label;
 
 		if (custom_text_pos) {
-			label.set(window_area.x+text_pos.x, window_area.y+text_pos.y, text_pos.justify, text_pos.valign, msg->get("%s level %d", enemy->stats.level, enemy->stats.name), color_normal);
+			label.set(window_area.x+text_pos.x, window_area.y+text_pos.y, text_pos.justify, text_pos.valign, msg->get("%s level %d", enemy->stats.level, enemy->stats.name), color_normal, text_pos.font_style);
 		} else {
 			label.set(window_area.x+bar_pos.x+bar_pos.w/2, window_area.y+bar_pos.y, JUSTIFY_CENTER, VALIGN_BOTTOM, msg->get("%s level %d", enemy->stats.level, enemy->stats.name), color_normal);
 		}

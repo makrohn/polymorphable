@@ -1,5 +1,6 @@
 /*
 Copyright © 2011-2012 Clint Bellanger
+Copyright © 2012 Stefan Beller
 
 This file is part of FLARE.
 
@@ -111,7 +112,7 @@ void CampaignManager::unsetStatus(std::string s) {
 	vector<string>::iterator it;
 	// see http://stackoverflow.com/a/223405
 	for (it = status.end(); it != status.begin();) {
-		it--;
+		--it;
 		if ((*it) == s) {
 			status.erase(it);
 			quest_update = true;
@@ -152,9 +153,10 @@ void CampaignManager::rewardCurrency(int amount) {
 	items->playCoinsSound();
 }
 
-void CampaignManager::rewardXP(int amount) {
+void CampaignManager::rewardXP(int amount, bool show_message) {
 	hero->xp += amount;
-	addMsg(msg->get("You receive %d XP.", amount));
+	hero->refresh_stats = true;
+	if (show_message) addMsg(msg->get("You receive %d XP.", amount));
 }
 
 void CampaignManager::restoreHPMP(std::string s) {

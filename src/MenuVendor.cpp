@@ -96,8 +96,8 @@ void MenuVendor::loadGraphics() {
 void MenuVendor::update() {
 	slots_area.x += window_area.x;
 	slots_area.y += window_area.y;
-	slots_area.w = slots_cols*ICON_SIZE_SMALL;
-	slots_area.h = slots_rows*ICON_SIZE_SMALL;
+	slots_area.w = slots_cols*ICON_SIZE;
+	slots_area.h = slots_rows*ICON_SIZE;
 
 	SDL_Rect tabs_area = slots_area;
 
@@ -105,8 +105,8 @@ void MenuVendor::update() {
 	tabControl->setMainArea(tabs_area.x, tabs_area.y-tabheight, tabs_area.w, tabs_area.h+tabheight);
 	tabControl->updateHeader();
 
-	stock[VENDOR_BUY].init( VENDOR_SLOTS, items, slots_area, ICON_SIZE_SMALL, slots_cols);
-	stock[VENDOR_SELL].init( VENDOR_SLOTS, items, slots_area, ICON_SIZE_SMALL, slots_cols);
+	stock[VENDOR_BUY].init( VENDOR_SLOTS, items, slots_area, ICON_SIZE, slots_cols);
+	stock[VENDOR_SELL].init( VENDOR_SLOTS, items, slots_area, ICON_SIZE, slots_cols);
 
 	closeButton->pos.x = window_area.x+close_pos.x;
 	closeButton->pos.y = window_area.y+close_pos.y;
@@ -153,7 +153,7 @@ void MenuVendor::render() {
 	// text overlay
 	if (!title.hidden) {
 		WidgetLabel label;
-		label.set(window_area.x+title.x, window_area.y+title.y, title.justify, title.valign, msg->get("Vendor") + " - " + npc->name, color_normal);
+		label.set(window_area.x+title.x, window_area.y+title.y, title.justify, title.valign, msg->get("Vendor") + " - " + npc->name, color_normal, title.font_style);
 		label.render();
 	}
 
@@ -194,7 +194,8 @@ void MenuVendor::add(ItemStack stack) {
 }
 
 TooltipData MenuVendor::checkTooltip(Point mouse) {
-	return stock[activetab].checkTooltip( mouse, stats, true);
+	int vendor_view = (activetab == VENDOR_BUY) ? VENDOR_BUY : VENDOR_SELL;
+	return stock[activetab].checkTooltip( mouse, stats, vendor_view);
 }
 
 /**
@@ -217,7 +218,7 @@ void MenuVendor::setInventory() {
  */
 void MenuVendor::saveInventory() {
 	for (int i=0; i<VENDOR_SLOTS; i++) {
-		npc->stock[i] = stock[VENDOR_BUY][i];
+		if (npc) npc->stock[i] = stock[VENDOR_BUY][i];
 		buyback_stock[i] = stock[VENDOR_SELL][i];
 	}
 

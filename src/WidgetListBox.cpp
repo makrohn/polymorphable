@@ -52,6 +52,7 @@ WidgetListBox::WidgetListBox(int amount, int height, const std::string& _fileNam
 
 	multi_select = false;
 	can_deselect = true;
+	can_select = true;
 	
 	loadArt();
 
@@ -141,7 +142,7 @@ bool WidgetListBox::checkClick(int x, int y) {
 	if (inpt->lock[MAIN1]) return false;
 
 	// main click released, so the ListBox state goes back to unpressed
-	if (pressed && !inpt->lock[MAIN1]) {
+	if (pressed && !inpt->lock[MAIN1] && can_select) {
 		pressed = false;
 		
 		for(int i=0; i<list_height; i++) {
@@ -195,7 +196,7 @@ TooltipData WidgetListBox::checkTooltip(Point mouse) {
 	for(int i=0; i<list_height; i++) {
 		if (i<list_amount) {
 			if (isWithin(rows[i], mouse) && tooltips[i+cursor] != "") {
-				_tip.lines[_tip.num_lines++] = tooltips[i+cursor];
+				_tip.addText(tooltips[i+cursor]);
 				break;
 			}
 		}
@@ -216,6 +217,16 @@ void WidgetListBox::append(std::string value, std::string tooltip) {
 			return;
 		}
 	}
+}
+
+/**
+ * Set a specific slot's value and tooltip
+ */
+void WidgetListBox::set(int index, std::string value, std::string tooltip) {
+	if (index > list_amount || index < 0) return;
+
+	values[index] = value;
+	tooltips[index] = tooltip;
 }
 
 /**
@@ -389,8 +400,8 @@ void WidgetListBox::render(SDL_Surface *target) {
 	if (has_scroll_bar)
 		scrollbar->render(target);
 
-	if (tip_new.num_lines > 0) {
-		if (tip_new.lines[0] != tip_buf.lines[0]) {
+	if (!tip_new.isEmpty()) {
+		if (!tip_new.compare(&tip_buf)) {
 			tip_buf.clear();
 			tip_buf = tip_new;
 		}

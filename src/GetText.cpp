@@ -57,7 +57,7 @@ bool GetText::next() {
 	key = "";
 	val = "";
 
-	while (!infile.eof()) {
+	while (infile.good()) {
 		line = getLine(infile);
 
 		// this is a key
@@ -69,6 +69,17 @@ bool GetText::next() {
 
 			if (key != "")
 				continue;
+			else {
+				// It is a multi-line value, unless it is the first msgid, in which case it will be empty
+				// and it will be ignored when finding the matching msgstr, so no big deal.
+				line = getLine(infile);
+				while(line.find("\"") == 0)
+				{
+					// We remove the double quotes.
+					key += line.substr(1, line.length()-2);
+					line = getLine(infile);
+				}
+			}
 		}
 
 		// this is a value

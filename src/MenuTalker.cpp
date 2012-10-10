@@ -1,5 +1,6 @@
 /*
 Copyright © 2011-2012 Clint Bellanger and morris989
+Copyright © 2012 Stefan Beller
 
 This file is part of FLARE.
 
@@ -213,6 +214,7 @@ void MenuTalker::createBuffer() {
 	// render text to back buffer
 	SDL_FreeSurface(msg_buffer);
 	msg_buffer = createAlphaSurface(text_pos.w,text_pos.h);
+	font->setFont("font_regular");
 	font->render(line, text_offset.x, text_offset.y, JUSTIFY_LEFT, msg_buffer, text_pos.w - text_offset.x*2, color_normal);
 
 }

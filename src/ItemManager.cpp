@@ -1,6 +1,7 @@
 /*
 Copyright © 2011-2012 Clint Bellanger
 Copyright © 2012 Igor Paliychuk
+Copyright © 2012 Stefan Beller
 
 This file is part of FLARE.
 
@@ -80,10 +81,10 @@ void ItemManager::loadAll() {
 			this->loadSets(test_path);
 		}
 	}
-	if (items.size() > 0) shrinkItems();
+	if (!items.empty()) shrinkItems();
 	else fprintf(stderr, "No items were found.\n");
 
-	if (item_sets.size() > 0) shrinkItemSets();
+	if (!item_sets.empty()) shrinkItemSets();
 	else printf("No item sets were found.\n");
 }
 
@@ -94,168 +95,167 @@ void ItemManager::loadAll() {
  */
 void ItemManager::load(const string& filename) {
 	FileParser infile;
+	if (!infile.open(filename)) {
+		fprintf(stderr, "Unable to open %s!\n", filename.c_str());
+		return;
+	}
+
 	int id = 0;
-	bool id_line;
-	string s;
+	bool id_line = false;
+	while (infile.next()) {
+		if (infile.key == "id") {
+			id_line = true;
+			id = toInt(infile.val);
+			if (id > 0 && id >= (int)items.size()) {
+				// *2 to amortize the resizing to O(log(n)).
+				items.resize((2*id) + 1);
+			}
+		} else id_line = false;
 
-	if (infile.open(filename)) {
-
-		while (infile.next()) {
-			if (infile.key == "id") {
-				id_line = true;
-				id = toInt(infile.val);
-				if (id > 0 && id >= (int)items.size()) {
-					// *2 to amortize the resizing to O(log(n)).
-					items.resize((2*id) + 1);
-				}
-			} else id_line = false;
-
-			if (id < 1) {
-				if (id_line) fprintf(stderr, "Item index out of bounds 1-%d, skipping\n", INT_MAX);
-				continue;
-			}
-			if (id_line) continue;
-
-			if (infile.key == "name")
-				items[id].name = msg->get(infile.val);
-			else if (infile.key == "level")
-				items[id].level = toInt(infile.val);
-			else if (infile.key == "icon") {
-				items[id].icon_small = toInt(infile.nextValue());
-				items[id].icon_large = toInt(infile.nextValue());
-			}
-			else if (infile.key == "quality") {
-				if (infile.val == "low")
-					items[id].quality = ITEM_QUALITY_LOW;
-				else if (infile.val == "high")
-					items[id].quality = ITEM_QUALITY_HIGH;
-				else if (infile.val == "epic")
-					items[id].quality = ITEM_QUALITY_EPIC;
-			}
-			else if (infile.key == "item_type") {
-					items[id].type = infile.val;
-			}
-			else if (infile.key == "dmg_melee") {
-				items[id].dmg_melee_min = toInt(infile.nextValue());
-				if (infile.val.length() > 0)
-					items[id].dmg_melee_max = toInt(infile.nextValue());
-				else
-					items[id].dmg_melee_max = items[id].dmg_melee_min;
-			}
-			else if (infile.key == "dmg_ranged") {
-				items[id].dmg_ranged_min = toInt(infile.nextValue());
-				if (infile.val.length() > 0)
-					items[id].dmg_ranged_max = toInt(infile.nextValue());
-				else
-					items[id].dmg_ranged_max = items[id].dmg_ranged_min;
-			}
-			else if (infile.key == "dmg_ment") {
-				items[id].dmg_ment_min = toInt(infile.nextValue());
-				if (infile.val.length() > 0)
-					items[id].dmg_ment_max = toInt(infile.nextValue());
-				else
-					items[id].dmg_ment_max = items[id].dmg_ment_min;
-			}
-			else if (infile.key == "abs") {
-				items[id].abs_min = toInt(infile.nextValue());
-				if (infile.val.length() > 0)
-					items[id].abs_max = toInt(infile.nextValue());
-				else
-					items[id].abs_max = items[id].abs_min;
-			}
-			else if (infile.key == "req") {
-				s = infile.nextValue();
-				if (s == "p")
-					items[id].req_stat = REQUIRES_PHYS;
-				else if (s == "m")
-					items[id].req_stat = REQUIRES_MENT;
-				else if (s == "o")
-					items[id].req_stat = REQUIRES_OFF;
-				else if (s == "d")
-					items[id].req_stat = REQUIRES_DEF;
-				items[id].req_val = toInt(infile.nextValue());
-			}
-			else if (infile.key == "bonus") {
-				items[id].bonus_stat.push_back(infile.nextValue());
-				items[id].bonus_val.push_back(toInt(infile.nextValue()));
-			}
-			else if (infile.key == "sfx") {
-				if (infile.val == "book")
-					items[id].sfx = SFX_BOOK;
-				else if (infile.val == "cloth")
-					items[id].sfx = SFX_CLOTH;
-				else if (infile.val == "coins")
-					items[id].sfx = SFX_COINS;
-				else if (infile.val == "gem")
-					items[id].sfx = SFX_GEM;
-				else if (infile.val == "leather")
-					items[id].sfx = SFX_LEATHER;
-				else if (infile.val == "metal")
-					items[id].sfx = SFX_METAL;
-				else if (infile.val == "page")
-					items[id].sfx = SFX_PAGE;
-				else if (infile.val == "maille")
-					items[id].sfx = SFX_MAILLE;
-				else if (infile.val == "object")
-					items[id].sfx = SFX_OBJECT;
-				else if (infile.val == "heavy")
-					items[id].sfx = SFX_HEAVY;
-				else if (infile.val == "wood")
-					items[id].sfx = SFX_WOOD;
-				else if (infile.val == "potion")
-					items[id].sfx = SFX_POTION;
-			}
-			else if (infile.key == "gfx")
-				items[id].gfx = infile.val;
-			else if (infile.key == "loot_animation")
-				items[id].loot_animation = infile.val;
-			else if (infile.key == "power") {
-				if (toInt(infile.val) > 0) {
-					items[id].power = toInt(infile.val);
-				}
-				else fprintf(stderr, "Power index inside item %d definition out of bounds 1-%d, skipping item\n", id, INT_MAX);
-			}
-			else if (infile.key == "power_mod")
-				items[id].power_mod = toInt(infile.val);
-			else if (infile.key == "power_desc")
-				items[id].power_desc = msg->get(infile.val);
-			else if (infile.key == "price")
-				items[id].price = toInt(infile.val);
-			else if (infile.key == "price_sell")
-				items[id].price_sell = toInt(infile.val);
-			else if (infile.key == "max_quantity")
-				items[id].max_quantity = toInt(infile.val);
-			else if (infile.key == "rand_loot")
-				items[id].rand_loot = toInt(infile.val);
-			else if (infile.key == "rand_vendor")
-				items[id].rand_vendor = toInt(infile.val);
-			else if (infile.key == "pickup_status")
-				items[id].pickup_status = infile.val;
-			else if (infile.key == "stepfx")
-				items[id].stepfx = infile.val;
-			else if (infile.key == "class") {
-				string classname = infile.nextValue();
-				while (classname != "") {
-					unsigned pos; // find the position where this classname is stored:
-					for (pos = 0; pos < item_class_names.size(); pos++) {
-						if (item_class_names[pos] == classname)
-							break;
-					}
-					// if it was not found, add it to the end.
-					// pos is already the correct index.
-					if (pos == item_class_names.size()) {
-						item_class_names.push_back(classname);
-						item_class_items.push_back(vector<unsigned int>());
-					}
-					// add item id to the item list of that class:
-					item_class_items[pos].push_back(id);
-					classname = infile.nextValue();
-				}
-			}
-
+		if (id < 1) {
+			if (id_line) fprintf(stderr, "Item index out of bounds 1-%d, skipping\n", INT_MAX);
+			continue;
 		}
-		infile.close();
-	} else fprintf(stderr, "Unable to open %s!\n", filename.c_str());
+		if (id_line) continue;
+
+		if (infile.key == "name")
+			items[id].name = msg->get(infile.val);
+		else if (infile.key == "level")
+			items[id].level = toInt(infile.val);
+		else if (infile.key == "icon") {
+			items[id].icon = toInt(infile.nextValue());
+		}
+		else if (infile.key == "quality") {
+			if (infile.val == "low")
+				items[id].quality = ITEM_QUALITY_LOW;
+			else if (infile.val == "high")
+				items[id].quality = ITEM_QUALITY_HIGH;
+			else if (infile.val == "epic")
+				items[id].quality = ITEM_QUALITY_EPIC;
+		}
+		else if (infile.key == "item_type") {
+				items[id].type = infile.val;
+		}
+		else if (infile.key == "dmg_melee") {
+			items[id].dmg_melee_min = toInt(infile.nextValue());
+			if (infile.val.length() > 0)
+				items[id].dmg_melee_max = toInt(infile.nextValue());
+			else
+				items[id].dmg_melee_max = items[id].dmg_melee_min;
+		}
+		else if (infile.key == "dmg_ranged") {
+			items[id].dmg_ranged_min = toInt(infile.nextValue());
+			if (infile.val.length() > 0)
+				items[id].dmg_ranged_max = toInt(infile.nextValue());
+			else
+				items[id].dmg_ranged_max = items[id].dmg_ranged_min;
+		}
+		else if (infile.key == "dmg_ment") {
+			items[id].dmg_ment_min = toInt(infile.nextValue());
+			if (infile.val.length() > 0)
+				items[id].dmg_ment_max = toInt(infile.nextValue());
+			else
+				items[id].dmg_ment_max = items[id].dmg_ment_min;
+		}
+		else if (infile.key == "abs") {
+			items[id].abs_min = toInt(infile.nextValue());
+			if (infile.val.length() > 0)
+				items[id].abs_max = toInt(infile.nextValue());
+			else
+				items[id].abs_max = items[id].abs_min;
+		}
+		else if (infile.key == "req") {
+			string s = infile.nextValue();
+			if (s == "p")
+				items[id].req_stat = REQUIRES_PHYS;
+			else if (s == "m")
+				items[id].req_stat = REQUIRES_MENT;
+			else if (s == "o")
+				items[id].req_stat = REQUIRES_OFF;
+			else if (s == "d")
+				items[id].req_stat = REQUIRES_DEF;
+			items[id].req_val = toInt(infile.nextValue());
+		}
+		else if (infile.key == "bonus") {
+			items[id].bonus_stat.push_back(infile.nextValue());
+			items[id].bonus_val.push_back(toInt(infile.nextValue()));
+		}
+		else if (infile.key == "sfx") {
+			if (infile.val == "book")
+				items[id].sfx = SFX_BOOK;
+			else if (infile.val == "cloth")
+				items[id].sfx = SFX_CLOTH;
+			else if (infile.val == "coins")
+				items[id].sfx = SFX_COINS;
+			else if (infile.val == "gem")
+				items[id].sfx = SFX_GEM;
+			else if (infile.val == "leather")
+				items[id].sfx = SFX_LEATHER;
+			else if (infile.val == "metal")
+				items[id].sfx = SFX_METAL;
+			else if (infile.val == "page")
+				items[id].sfx = SFX_PAGE;
+			else if (infile.val == "maille")
+				items[id].sfx = SFX_MAILLE;
+			else if (infile.val == "object")
+				items[id].sfx = SFX_OBJECT;
+			else if (infile.val == "heavy")
+				items[id].sfx = SFX_HEAVY;
+			else if (infile.val == "wood")
+				items[id].sfx = SFX_WOOD;
+			else if (infile.val == "potion")
+				items[id].sfx = SFX_POTION;
+		}
+		else if (infile.key == "gfx")
+			items[id].gfx = infile.val;
+		else if (infile.key == "loot_animation")
+			items[id].loot_animation = infile.val;
+		else if (infile.key == "power") {
+			if (toInt(infile.val) > 0) {
+				items[id].power = toInt(infile.val);
+			}
+			else fprintf(stderr, "Power index inside item %d definition out of bounds 1-%d, skipping item\n", id, INT_MAX);
+		}
+		else if (infile.key == "power_mod")
+			items[id].power_mod = toInt(infile.val);
+		else if (infile.key == "power_desc")
+			items[id].power_desc = msg->get(infile.val);
+		else if (infile.key == "price")
+			items[id].price = toInt(infile.val);
+		else if (infile.key == "price_sell")
+			items[id].price_sell = toInt(infile.val);
+		else if (infile.key == "max_quantity")
+			items[id].max_quantity = toInt(infile.val);
+		else if (infile.key == "rand_loot")
+			items[id].rand_loot = toInt(infile.val);
+		else if (infile.key == "rand_vendor")
+			items[id].rand_vendor = toInt(infile.val);
+		else if (infile.key == "pickup_status")
+			items[id].pickup_status = infile.val;
+		else if (infile.key == "stepfx")
+			items[id].stepfx = infile.val;
+		else if (infile.key == "class") {
+			string classname = infile.nextValue();
+			while (classname != "") {
+				unsigned pos; // find the position where this classname is stored:
+				for (pos = 0; pos < item_class_names.size(); pos++) {
+					if (item_class_names[pos] == classname)
+						break;
+				}
+				// if it was not found, add it to the end.
+				// pos is already the correct index.
+				if (pos == item_class_names.size()) {
+					item_class_names.push_back(classname);
+					item_class_items.push_back(vector<unsigned int>());
+				}
+				// add item id to the item list of that class:
+				item_class_items[pos].push_back(id);
+				classname = infile.nextValue();
+			}
+		}
+
+	}
+	infile.close();
 }
 
 void ItemManager::loadTypes(const string& filename) {
@@ -279,7 +279,7 @@ void ItemManager::loadTypes(const string& filename) {
 
 string ItemManager::getItemType(std::string _type) {
 	map<string,string>::iterator it,end;
-	for (it=item_types.begin(), end=item_types.end(); it!=end; it++) {
+	for (it=item_types.begin(), end=item_types.end(); it!=end; ++it) {
 		if (_type.compare(it->first) == 0) return it->second;
 	}
 	// If all else fails, return the original string
@@ -287,54 +287,57 @@ string ItemManager::getItemType(std::string _type) {
 }
 
 void ItemManager::loadSets(const string& filename) {
+	FileParser infile;
+	if (!infile.open(filename)) {
+		fprintf(stderr, "Unable to open %s!\n", filename.c_str());
+		return;
+	}
+
 	int id = 0;
 	bool id_line;
-	FileParser infile;
-	if (infile.open(filename)) {
-		while (infile.next()) {
-			if (infile.key == "id") {
-				id_line = true;
-				id = toInt(infile.val);
-				if (id > 0 && id >= (int)item_sets.size()) {
-					// *2 to amortize the resizing to O(log(n)).
-					item_sets.resize((2*id) + 1);
-				}
-			} else id_line = false;
+	while (infile.next()) {
+		if (infile.key == "id") {
+			id_line = true;
+			id = toInt(infile.val);
+			if (id > 0 && id >= (int)item_sets.size()) {
+				// *2 to amortize the resizing to O(log(n)).
+				item_sets.resize((2*id) + 1);
+			}
+		} else id_line = false;
 
-			if (id < 1) {
-				if (id_line) fprintf(stderr, "Item set index out of bounds 1-%d, skipping\n", INT_MAX);
-				continue;
-			}
-			if (id_line) continue;
+		if (id < 1) {
+			if (id_line) fprintf(stderr, "Item set index out of bounds 1-%d, skipping\n", INT_MAX);
+			continue;
+		}
+		if (id_line) continue;
 
-			if (infile.key == "name") {
-				item_sets[id].name = msg->get(infile.val);
-			}
-			else if (infile.key == "items") {
-				string item_id = infile.nextValue();
-				while (item_id != "") {
-					if (toInt(item_id) > 0) {
-						items[toInt(item_id)].set = id;
-						item_sets[id].items.push_back(toInt(item_id));
-						item_id = infile.nextValue();
-					} else fprintf(stderr, "Item index inside item set %s definition out of bounds 1-%d, skipping item\n", item_sets[id].name.c_str(), INT_MAX);
-				}
-			}
-			else if (infile.key == "color") {
-				item_sets[id].color.r = toInt(infile.nextValue());
-				item_sets[id].color.g = toInt(infile.nextValue());
-				item_sets[id].color.b = toInt(infile.nextValue());
-			}
-			else if (infile.key == "bonus") {
-				Set_bonus bonus;
-				bonus.requirement = toInt(infile.nextValue());
-				bonus.bonus_stat = infile.nextValue();
-				bonus.bonus_val = toInt(infile.nextValue());
-				item_sets[id].bonus.push_back(bonus);
+		if (infile.key == "name") {
+			item_sets[id].name = msg->get(infile.val);
+		}
+		else if (infile.key == "items") {
+			string item_id = infile.nextValue();
+			while (item_id != "") {
+				if (toInt(item_id) > 0) {
+					items[toInt(item_id)].set = id;
+					item_sets[id].items.push_back(toInt(item_id));
+					item_id = infile.nextValue();
+				} else fprintf(stderr, "Item index inside item set %s definition out of bounds 1-%d, skipping item\n", item_sets[id].name.c_str(), INT_MAX);
 			}
 		}
-		infile.close();
-	} else fprintf(stderr, "Unable to open %s!\n", filename.c_str());
+		else if (infile.key == "color") {
+			item_sets[id].color.r = toInt(infile.nextValue());
+			item_sets[id].color.g = toInt(infile.nextValue());
+			item_sets[id].color.b = toInt(infile.nextValue());
+		}
+		else if (infile.key == "bonus") {
+			Set_bonus bonus;
+			bonus.requirement = toInt(infile.nextValue());
+			bonus.bonus_stat = infile.nextValue();
+			bonus.bonus_val = toInt(infile.nextValue());
+			item_sets[id].bonus.push_back(bonus);
+		}
+	}
+	infile.close();
 }
 
 void ItemManager::loadSounds() {
@@ -361,22 +364,17 @@ void ItemManager::loadSounds() {
  */
 void ItemManager::loadIcons() {
 
-	icons_small = IMG_Load(mods->locate("images/icons/icons_small.png").c_str());
-	icons_large = IMG_Load(mods->locate("images/icons/icons_large.png").c_str());
+	icons = IMG_Load(mods->locate("images/icons/icons.png").c_str());
 
-	if(!icons_small || !icons_large) {
+	if(!icons) {
 		fprintf(stderr, "Couldn't load icons: %s\n", IMG_GetError());
 		SDL_Quit();
 		exit(1);
 	}
 
 	// optimize
-	SDL_Surface *cleanup = icons_small;
-	icons_small = SDL_DisplayFormatAlpha(icons_small);
-	SDL_FreeSurface(cleanup);
-
-	cleanup = icons_large;
-	icons_large = SDL_DisplayFormatAlpha(icons_large);
+	SDL_Surface *cleanup = icons;
+	icons = SDL_DisplayFormatAlpha(icons);
 	SDL_FreeSurface(cleanup);
 }
 
@@ -416,17 +414,12 @@ void ItemManager::renderIcon(ItemStack stack, int x, int y, int size) {
 	dest.x = x;
 	dest.y = y;
 	src.w = src.h = dest.w = dest.h = size;
-	if (size == ICON_SIZE_SMALL) {
-		columns = icons_small->w / ICON_SIZE_SMALL;
-		src.x = (items[stack.item].icon_small % columns) * size;
-		src.y = (items[stack.item].icon_small / columns) * size;
-		SDL_BlitSurface(icons_small, &src, screen, &dest);
-	}
-	else if (size == ICON_SIZE_LARGE) {
-		columns = icons_large->w / ICON_SIZE_LARGE;
-		src.x = (items[stack.item].icon_large % columns) * size;
-		src.y = (items[stack.item].icon_large / columns) * size;
-		SDL_BlitSurface(icons_large, &src, screen, &dest);
+
+	if (stack.item > 0) {
+		columns = icons->w / ICON_SIZE;
+		src.x = (items[stack.item].icon % columns) * size;
+		src.y = (items[stack.item].icon / columns) * size;
+		SDL_BlitSurface(icons, &src, screen, &dest);
 	}
 
 	if( stack.quantity > 1 || items[stack.item].max_quantity > 1) {
@@ -454,8 +447,23 @@ void ItemManager::playCoinsSound() {
 TooltipData ItemManager::getShortTooltip(ItemStack stack) {
 	stringstream ss;
 	TooltipData tip;
+	SDL_Color color = color_normal;
 
 	if (stack.item == 0) return tip;
+
+	// color quality
+	if (items[stack.item].set > 0) {
+		color = item_sets[items[stack.item].set].color;
+	}
+	else if (items[stack.item].quality == ITEM_QUALITY_LOW) {
+		color = color_low;
+	}
+	else if (items[stack.item].quality == ITEM_QUALITY_HIGH) {
+		color = color_high;
+	}
+	else if (items[stack.item].quality == ITEM_QUALITY_EPIC) {
+		color = color_epic;
+	}
 
 	// name
 	if( stack.quantity > 1) {
@@ -463,21 +471,7 @@ TooltipData ItemManager::getShortTooltip(ItemStack stack) {
 	} else {
 		ss << items[stack.item].name;
 	}
-	tip.lines[tip.num_lines++] = ss.str();
-
-	// color quality
-	if (items[stack.item].set > 0) {
-		tip.colors[0] = item_sets[items[stack.item].set].color;
-	}
-	else if (items[stack.item].quality == ITEM_QUALITY_LOW) {
-		tip.colors[0] = color_low;
-	}
-	else if (items[stack.item].quality == ITEM_QUALITY_HIGH) {
-		tip.colors[0] = color_high;
-	}
-	else if (items[stack.item].quality == ITEM_QUALITY_EPIC) {
-		tip.colors[0] = color_epic;
-	}
+	tip.addText(ss.str(), color);
 
 	return tip;
 }
@@ -485,64 +479,65 @@ TooltipData ItemManager::getShortTooltip(ItemStack stack) {
 /**
  * Create detailed tooltip showing all relevant item info
  */
-TooltipData ItemManager::getTooltip(int item, StatBlock *stats, bool vendor_view) {
+TooltipData ItemManager::getTooltip(int item, StatBlock *stats, int context) {
 	TooltipData tip;
+	SDL_Color color = color_normal;
 
 	if (item == 0) return tip;
 
-	// name
-	tip.lines[tip.num_lines++] = items[item].name;
-
 	// color quality
 	if (items[item].set > 0) {
-		tip.colors[0] = item_sets[items[item].set].color;
+		color = item_sets[items[item].set].color;
 	}
 	else if (items[item].quality == ITEM_QUALITY_LOW) {
-		tip.colors[0] = color_low;
+		color = color_low;
 	}
 	else if (items[item].quality == ITEM_QUALITY_HIGH) {
-		tip.colors[0] = color_high;
+		color = color_high;
 	}
 	else if (items[item].quality == ITEM_QUALITY_EPIC) {
-		tip.colors[0] = color_epic;
+		color = color_epic;
 	}
+
+	// name
+	tip.addText(items[item].name, color);
 
 	// level
 	if (items[item].level != 0) {
-		tip.lines[tip.num_lines++] = msg->get("Level %d", items[item].level);
+		tip.addText(msg->get("Level %d", items[item].level));
 	}
 
 	// type
 	if (items[item].type != "other") {
-		tip.lines[tip.num_lines++] = msg->get(getItemType(items[item].type));
+		tip.addText(msg->get(getItemType(items[item].type)));
 	}
 
 	// damage
 	if (items[item].dmg_melee_max > 0) {
 		if (items[item].dmg_melee_min < items[item].dmg_melee_max)
-			tip.lines[tip.num_lines++] = msg->get("Melee damage: %d-%d", items[item].dmg_melee_min, items[item].dmg_melee_max);
+			tip.addText(msg->get("Melee damage: %d-%d", items[item].dmg_melee_min, items[item].dmg_melee_max));
 		else
-			tip.lines[tip.num_lines++] = msg->get("Melee damage: %d", items[item].dmg_melee_max);
+			tip.addText(msg->get("Melee damage: %d", items[item].dmg_melee_max));
 	}
 	if (items[item].dmg_ranged_max > 0) {
 		if (items[item].dmg_ranged_min < items[item].dmg_ranged_max)
-			tip.lines[tip.num_lines++] = msg->get("Ranged damage: %d-%d", items[item].dmg_ranged_min, items[item].dmg_ranged_max);
+			tip.addText(msg->get("Ranged damage: %d-%d", items[item].dmg_ranged_min, items[item].dmg_ranged_max));
 		else
-			tip.lines[tip.num_lines++] = msg->get("Ranged damage: %d", items[item].dmg_ranged_max);
+			tip.addText(msg->get("Ranged damage: %d", items[item].dmg_ranged_max));
 	}
 	if (items[item].dmg_ment_max > 0) {
 		if (items[item].dmg_ment_min < items[item].dmg_ment_max)
-			tip.lines[tip.num_lines++] = msg->get("Mental damage: %d-%d", items[item].dmg_ment_min, items[item].dmg_ment_max);
+			tip.addText(msg->get("Mental damage: %d-%d", items[item].dmg_ment_min, items[item].dmg_ment_max));
 		else
-			tip.lines[tip.num_lines++] = msg->get("Mental damage: %d", items[item].dmg_ment_max);
+			tip.addText(msg->get("Mental damage: %d", items[item].dmg_ment_max));
 	}
 
 	// absorb
 	if (items[item].abs_max > 0) {
 		if (items[item].abs_min < items[item].abs_max)
-			tip.lines[tip.num_lines++] = msg->get("Absorb: %d-%d", items[item].abs_min, items[item].abs_max);
+			tip.addText(msg->get("Absorb: %d-%d", items[item].abs_min, items[item].abs_max));
 		else
-			tip.lines[tip.num_lines++] = msg->get("Absorb: %d", items[item].abs_max);
+			tip.addText(msg->get("Absorb: %d", items[item].abs_max));
 	}
 
 	// bonuses
@@ -554,66 +549,75 @@ TooltipData ItemManager::getTooltip(int item, StatBlock *stats, bool vendor_view
 					items[item].bonus_val[bonus_counter],
 					msg->get(items[item].bonus_stat[bonus_counter]));
 
-			tip.colors[tip.num_lines] = color_bonus;
+			color = color_bonus;
 		}
 		else {
 			modifier = msg->get("Decreases %s by %d",
 					items[item].bonus_val[bonus_counter],
 					msg->get(items[item].bonus_stat[bonus_counter]));
 
-			tip.colors[tip.num_lines] = color_penalty;
+			color = color_penalty;
 		}
-		tip.lines[tip.num_lines++] = modifier;
+		tip.addText(modifier, color);
 		bonus_counter++;
 	}
 
 	// power
 	if (items[item].power_desc != "") {
-		tip.colors[tip.num_lines] = color_bonus;
-		tip.lines[tip.num_lines++] = items[item].power_desc;
+		tip.addText(items[item].power_desc, color_bonus);
 	}
 
 	// requirement
 	if (items[item].req_val > 0) {
 		if (items[item].req_stat == REQUIRES_PHYS) {
-			if (stats->get_physical() < items[item].req_val) tip.colors[tip.num_lines] = color_requirements_not_met;
-			tip.lines[tip.num_lines++] = msg->get("Requires Physical %d", items[item].req_val);
+			if (stats->get_physical() < items[item].req_val) color = color_requirements_not_met;
+			else color = color_normal;
+			tip.addText(msg->get("Requires Physical %d", items[item].req_val), color);
 		}
 		else if (items[item].req_stat == REQUIRES_MENT) {
-			if (stats->get_mental() < items[item].req_val) tip.colors[tip.num_lines] = color_requirements_not_met;
-			tip.lines[tip.num_lines++] = msg->get("Requires Mental %d", items[item].req_val);
+			if (stats->get_mental() < items[item].req_val) color = color_requirements_not_met;
+			else color = color_normal;
+			tip.addText(msg->get("Requires Mental %d", items[item].req_val), color);
 		}
 		else if (items[item].req_stat == REQUIRES_OFF) {
-			if (stats->get_offense() < items[item].req_val) tip.colors[tip.num_lines] = color_requirements_not_met;
-			tip.lines[tip.num_lines++] = msg->get("Requires Offense %d", items[item].req_val);
+			if (stats->get_offense() < items[item].req_val) color = color_requirements_not_met;
+			else color = color_normal;
+			tip.addText(msg->get("Requires Offense %d", items[item].req_val), color);
 		}
 		else if (items[item].req_stat == REQUIRES_DEF) {
-			if (stats->get_defense() < items[item].req_val) tip.colors[tip.num_lines] = color_requirements_not_met;
-			tip.lines[tip.num_lines++] = msg->get("Requires Defense %d", items[item].req_val);
+			if (stats->get_defense() < items[item].req_val) color = color_requirements_not_met;
+			else color = color_normal;
+			tip.addText(msg->get("Requires Defense %d", items[item].req_val), color);
 		}
 	}
 
 	// buy or sell price
 	if (items[item].price > 0) {
 
-		if (vendor_view) {
-			if (stats->currency < items[item].price) tip.colors[tip.num_lines] = color_requirements_not_met;
+		int price_per_unit;
+		if (context == VENDOR_BUY) {
+			price_per_unit = items[item].price;
+			if (stats->currency < items[item].price) color = color_requirements_not_met;
+			else color = color_normal;
 			if (items[item].max_quantity <= 1)
-				tip.lines[tip.num_lines++] = msg->get("Buy Price: %d %s", items[item].price, CURRENCY);
+				tip.addText(msg->get("Buy Price: %d %s", price_per_unit, CURRENCY), color);
 			else
-				tip.lines[tip.num_lines++] = msg->get("Buy Price: %d %s each", items[item].price, CURRENCY);
-		}
-		else {
-			int price_per_unit;
-			if(items[item].price_sell != 0)
-				price_per_unit = items[item].price_sell;
+				tip.addText(msg->get("Buy Price: %d %s each", price_per_unit, CURRENCY), color);
+		} else if (context == VENDOR_SELL) {
+			price_per_unit = items[item].getSellPrice();
+			if (stats->currency < price_per_unit) color = color_requirements_not_met;
+			else color = color_normal;
+			if (items[item].max_quantity <= 1)
+				tip.addText(msg->get("Buy Price: %d %s", price_per_unit, CURRENCY), color);
 			else
-				price_per_unit = static_cast<int>(items[item].price * VENDOR_RATIO);
+				tip.addText(msg->get("Buy Price: %d %s each", price_per_unit, CURRENCY), color);
+		} else if (context == PLAYER_INV) {
+			price_per_unit = items[item].getSellPrice();
 			if (price_per_unit == 0) price_per_unit = 1;
 			if (items[item].max_quantity <= 1)
-				tip.lines[tip.num_lines++] = msg->get("Sell Price: %d %s", price_per_unit, CURRENCY);
+				tip.addText(msg->get("Sell Price: %d %s", price_per_unit, CURRENCY));
 			else
-				tip.lines[tip.num_lines++] = msg->get("Sell Price: %d %s each", price_per_unit, CURRENCY);
+				tip.addText(msg->get("Sell Price: %d %s each", price_per_unit, CURRENCY));
 		}
 	}
 
@@ -623,9 +627,7 @@ TooltipData ItemManager::getTooltip(int item, StatBlock *stats, bool vendor_view
 			bonus_counter = 0;
 			modifier = "";
 
-			tip.lines[tip.num_lines++] = "";
-			tip.colors[tip.num_lines] = set.color;
-			tip.lines[tip.num_lines++] = msg->get("Set: ") + msg->get(item_sets[items[item].set].name);
+			tip.addText("\n" + msg->get("Set: ") + msg->get(item_sets[items[item].set].name), set.color);
 
 			while (bonus_counter < set.bonus.size() && set.bonus[bonus_counter].bonus_stat != "") {
 				if (set.bonus[bonus_counter].bonus_val > 0) {
@@ -634,8 +636,7 @@ TooltipData ItemManager::getTooltip(int item, StatBlock *stats, bool vendor_view
 				else {
 					modifier = msg->get("%d items: ", set.bonus[bonus_counter].requirement) + msg->get("Decreases %s by %d", set.bonus[bonus_counter].bonus_val, msg->get(set.bonus[bonus_counter].bonus_stat));
 				}
-				tip.colors[tip.num_lines] = set.color;
-				tip.lines[tip.num_lines++] = modifier;
+				tip.addText(modifier, set.color);
 				bonus_counter++;
 			}
 	}
@@ -644,8 +645,7 @@ TooltipData ItemManager::getTooltip(int item, StatBlock *stats, bool vendor_view
 }
 
 ItemManager::~ItemManager() {
-	SDL_FreeSurface(icons_small);
-	SDL_FreeSurface(icons_large);
+	SDL_FreeSurface(icons);
 
 	if (audio) {
 		for (int i=0; i<12; i++) {
@@ -667,5 +667,16 @@ bool ItemStack::operator > (const ItemStack &param) const {
 	} else {
 		return item > param.item;
 	}
+}
+
+int Item::getSellPrice() {
+	int new_price = 0;
+	if(price_sell != 0)
+		new_price = price_sell;
+	else
+		new_price = static_cast<int>(price * VENDOR_RATIO);
+	if (new_price == 0) new_price = 1;
+
+	return new_price;
 }
 

@@ -30,55 +30,48 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 
 using namespace std;
 
+FontStyle::FontStyle() : name(""), path(""), ptsize(0), blend(true), ttfont(NULL), line_height(0), font_height(0) {
+}
 
-FontEngine::FontEngine() {
-	font_pt = 10;
-	render_blended = false;
-
+FontEngine::FontEngine()
+ : cursor_y(0)
+{
 	// Initiate SDL_ttf
 	if(!TTF_WasInit() && TTF_Init()==-1) {
 		printf("TTF_Init: %s\n", TTF_GetError());
 		exit(2);
 	}
 
-	// load the font
-	string font_path;
+	// load the fonts
 	FileParser infile;
 	if (infile.open(mods->locate("engine/font_settings.txt"))) {
 		while (infile.next()) {
-			if (infile.key == "font_regular") {
-				font_path = infile.val;
+			infile.val = infile.val + ',';
+
+			if (infile.new_section) {
+				FontStyle f;
+				f.name = infile.section;
+				font_styles.push_back(f);
 			}
-			else if (infile.key == "ptsize") {
-				font_pt = atoi(infile.val.c_str());
-			}
-			else if (infile.key == "render") {
-				if (infile.val == "blended") render_blended = true;
+
+			if (font_styles.size() < 1) continue;
+
+			FontStyle *style = &(font_styles.back());
+			if ((infile.key == "default" && style->path == "") || infile.key == LANGUAGE) {
+				style->path = eatFirstString(infile.val,',');
+				style->ptsize = eatFirstInt(infile.val,',');
+				style->blend = eatFirstInt(infile.val,',');
+				style->ttfont = TTF_OpenFont(mods->locate("fonts/" + style->path).c_str(), style->ptsize);
+				if(style->ttfont == NULL) {
+					printf("TTF_OpenFont: %s\n", TTF_GetError());
+				} else {
+					style->line_height = TTF_FontLineSkip(style->ttfont);
+					style->font_height = TTF_FontLineSkip(style->ttfont);
+				}
 			}
 		}
 		infile.close();
 	} else fprintf(stderr, "Unable to open engine/font_settings.txt!\n");
-	// Redefine font to language specific if avaliable
-	std::string local_font;
-	if (infile.open(mods->locate("engine/languages.txt"))) {
-		while (infile.next()) {
-			if (infile.key == LANGUAGE) {
-			   local_font = infile.nextValue();// Ignore full language name
-			   local_font = infile.nextValue();
-			   if (local_font != "") {
-				   font_path = local_font; font_pt = atoi(infile.nextValue().c_str());
-			   }
-			}
-		}
-		infile.close();
-	} else fprintf(stderr, "Unable to open engine/languages.txt!\n");
-	font_path = mods->locate("fonts/" + font_path);
-	ttfont = TTF_OpenFont(font_path.c_str(), font_pt);
-	if(!ttfont) printf("TTF_OpenFont: %s\n", TTF_GetError());
-
-	// calculate the optimal line height
-	line_height = TTF_FontLineSkip(ttfont);
-	font_height = TTF_FontHeight(ttfont);
 
 	// set the font colors
 	// RGB values, the last value is 'unused'. For info,
@@ -94,15 +87,32 @@ FontEngine::FontEngine() {
 		}
 		infile.close();
 	} else fprintf(stderr, "Unable to open engine/font_colors.txt!\n");
+
+	// Attempt to set the default active font
+	setFont("font_regular");
+	if (!active_font) {
+		fprintf(stderr, "Unable to determine default font!\n");
+		SDL_Quit();
+		exit(1);
+	}
 }
 
 SDL_Color FontEngine::getColor(string _color) {
 	map<string,SDL_Color>::iterator it,end;
-	for (it=color_map.begin(), end=color_map.end(); it!=end; it++) {
+	for (it=color_map.begin(), end=color_map.end(); it!=end; ++it) {
 		if (_color.compare(it->first) == 0) return it->second;
 	}
 	// If all else fails, return white;
 	return FONT_WHITE;
+}
+
+void FontEngine::setFont(string _font) {
+	for (unsigned int i=0; i<font_styles.size(); i++) {
+		if (font_styles[i].name == _font) {
+			active_font = &(font_styles[i]);
+			return;
+		}
+	}
 }
 
 /**
@@ -110,7 +120,7 @@ SDL_Color FontEngine::getColor(string _color) {
  */
 int FontEngine::calc_width(const std::string& text) {
 	int w, h;
-	TTF_SizeUTF8(ttfont, text.c_str(), &w, &h);
+	TTF_SizeUTF8(active_font->ttfont, text.c_str(), &w, &h);
 	return w;
 }
 
@@ -212,8 +222,7 @@ void FontEngine::render(const std::string& text, int x, int y, int justify, SDL_
 		dest_y = y;
 	}
 	else {
-		printf("ERROR: FontEngine::render() given unhandled 'justify=%d', assuming left\n",
-		       justify);
+		printf("ERROR: FontEngine::render() given unhandled 'justify=%d', assuming left\n",justify);
 		dest_x = x;
 		dest_y = y;
 	}
@@ -223,17 +232,17 @@ void FontEngine::render(const std::string& text, int x, int y, int justify, SDL_
 	dest_rect.x = dest_x;
 	dest_rect.y = dest_y;
 
-	if (render_blended && target != screen) {
-		ttf = TTF_RenderUTF8_Blended(ttfont, text.c_str(), color);
-		
+	if (active_font->blend && target != screen) {
+		ttf = TTF_RenderUTF8_Blended(active_font->ttfont, text.c_str(), color);
+
 		// preserve alpha transparency of text buffers
 		if (ttf != NULL) SDL_gfxBlitRGBA(ttf, NULL, target, &dest_rect);
 	}
 	else {
-		ttf = TTF_RenderUTF8_Solid(ttfont, text.c_str(), color);
+		ttf = TTF_RenderUTF8_Solid(active_font->ttfont, text.c_str(), color);
 		if (ttf != NULL) SDL_BlitSurface(ttf, NULL, target, &dest_rect);
 	}
-	
+
 	SDL_FreeSurface(ttf);
 	ttf = NULL;
 }
@@ -294,7 +303,7 @@ void FontEngine::renderShadowed(const std::string& text, int x, int y, int justi
 
 FontEngine::~FontEngine() {
 	SDL_FreeSurface(ttf);
-	TTF_CloseFont(ttfont);
+	for (unsigned int i=0; i<font_styles.size(); ++i) TTF_CloseFont(font_styles[i].ttfont);
 	TTF_Quit();
 }
 

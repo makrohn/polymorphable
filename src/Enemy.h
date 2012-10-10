@@ -1,5 +1,6 @@
 /*
 Copyright © 2011-2012 Clint Bellanger
+Copyright © 2012 Stefan Beller
 
 This file is part of FLARE.
 
@@ -43,14 +44,17 @@ class Enemy : public Entity {
 
 public:
 	Enemy(PowerManager *_powers, MapRenderer *_map);
+	Enemy(const Enemy& e);
 	~Enemy();
 	bool lineOfSight();
 	void logic();
 	int faceNextBest(int mapx, int mapy);
 	void newState(int state);
 	int getDistance(Point dest);
-	bool takeHit(Hazard h);
+	bool takeHit(const Hazard &h);
 	void doRewards();
+
+	std::string type;
 
 	virtual Renderable getRender();
 

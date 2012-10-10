@@ -1,6 +1,7 @@
 /*
 Copyright © 2011-2012 Clint Bellanger
 Copyright © 2012 Igor Paliychuk
+Copyright © 2012 Stefan Beller
 
 This file is part of FLARE.
 
@@ -206,7 +207,7 @@ void GameStatePlay::loadGame() {
 					pc->stats.mental_character < 0 || pc->stats.mental_character > pc->stats.max_points_per_stat ||
 					pc->stats.offense_character < 0 || pc->stats.offense_character > pc->stats.max_points_per_stat ||
 					pc->stats.defense_character < 0 || pc->stats.defense_character > pc->stats.max_points_per_stat) {
-					
+
 					fprintf(stderr, "Some basic stats are out of bounds, setting to zero\n");
 					pc->stats.physical_character = 0;
 					pc->stats.mental_character = 0;
@@ -226,7 +227,6 @@ void GameStatePlay::loadGame() {
 			}
 			else if (infile.key == "equipped_quantity") {
 				menu->inv->inventory[EQUIPMENT].setQuantities(infile.val);
-				menu->inv->inventory[EQUIPMENT].fillEquipmentSlots();
 			}
 			else if (infile.key == "carried") {
 				menu->inv->inventory[CARRIED].setItems(infile.val);
@@ -288,6 +288,9 @@ void GameStatePlay::loadGame() {
 		infile.close();
 	} else fprintf(stderr, "Unable to open %s!\n", ss.str().c_str());
 
+	
+	menu->inv->inventory[EQUIPMENT].fillEquipmentSlots();
+	
 	// Load stash
 	ss.str("");
 	ss << PATH_USER << "stash.txt";

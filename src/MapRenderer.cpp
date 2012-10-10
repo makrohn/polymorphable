@@ -1,5 +1,6 @@
 /*
 Copyright © 2011-2012 Clint Bellanger
+Copyright © 2012 Stefan Beller
 
 This file is part of FLARE.
 
@@ -25,12 +26,28 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 #include "UtilsFileSystem.h"
 #include "UtilsParsing.h"
 
+#include <stdint.h>
+
 #include <iostream>
 using namespace std;
 
 const int CLICK_RANGE = 3 * UNITS_PER_TILE; //for activating events
 
-MapRenderer::MapRenderer(CampaignManager *_camp) {
+MapRenderer::MapRenderer(CampaignManager *_camp)
+ : tip_pos(Point())
+ , show_tooltip(false)
+ , shakycam(Point())
+ , powers(NULL)
+ , w(0)
+ , h(0)
+ , hero_tile(Point())
+ , spawn(Point())
+ , spawn_dir(0)
+ , teleportation(false)
+ , teleport_destination(Point())
+ , respawn_point(Point())
+ , stash_pos(Point())
+{
 
 	camp = _camp;
 
@@ -126,7 +143,7 @@ void MapRenderer::push_enemy_group(Map_Group g) {
 	for(int i = 0; i < number; i++) {
 		Enemy_Level enemy_lev = EnemyGroupManager::instance().getRandomEnemy(g.category, g.levelmin, g.levelmax);
 		Map_Enemy group_member;
-		if ((enemy_lev.type != "") && (valid_locations.size() != 0)){
+		if ((enemy_lev.type != "") && (!valid_locations.empty())){
 			group_member.clear();
 			group_member.type = enemy_lev.type;
 			int index = rand() % valid_locations.size();
@@ -624,72 +641,39 @@ void MapRenderer::logic() {
 
 	// handle event cooldowns
 	vector<Map_Event>::iterator it;
-	for (it = events.begin(); it < events.end(); it++) {
+	for (it = events.begin(); it < events.end(); ++it) {
 		if ((*it).cooldown_ticks > 0) (*it).cooldown_ticks--;
 	}
 
+}
+
+bool priocompare(const Renderable &r1, const Renderable &r2) {
+	return r1.prio < r2.prio;
 }
 
 /**
  * Sort in the same order as the tiles are drawn
  * Depends upon the map implementation
  */
-bool zcompare_iso(const Renderable &r1, const Renderable &r2) {
-	const int x1 = r1.tile.x;
-	const int x2 = r2.tile.x;
-	const int z1 = r1.tile.y + x1;
-	const int z2 = r2.tile.y + x2;
-	if (z1 > z2)
-		return false;
-	else if (z1 == z2) {
-		if (x1 > x2) {
-			return false;
-		}
-		else if (x1 == x2) {
-			// same tile, sort by subtile
-			if (r1.map_pos.x + r1.map_pos.y >= r2.map_pos.x + r2.map_pos.y)
-				return false;
-		}
+void calculatePriosIso(vector<Renderable> &r) {
+	for (vector<Renderable>::iterator it = r.begin(); it != r.end(); ++it) {
+		const unsigned tilex = it->map_pos.x >> TILE_SHIFT;
+		const unsigned tiley = it->map_pos.y >> TILE_SHIFT;
+		it->prio += (((uint64_t)(tilex + tiley)) << 48) + (((uint64_t)tilex) << 32) + ((it->map_pos.x + it->map_pos.y) << 16);
 	}
-	return true;
 }
 
-bool zcompare_ortho(const Renderable &r1, const Renderable &r2) {
-	const int x1 = r1.tile.x;
-	const int x2 = r2.tile.x;
-	const int y1 = r1.tile.y;
-	const int y2 = r2.tile.y;
-	if (y1 > y2) {
-		return false;
+void calculatePriosOrtho(vector<Renderable> &r) {
+	for (vector<Renderable>::iterator it = r.begin(); it != r.end(); ++it) {
+		const unsigned tilex = it->map_pos.x >> TILE_SHIFT;
+		const unsigned tiley = it->map_pos.y >> TILE_SHIFT;
+		it->prio += (((uint64_t)tiley) << 48) + (((uint64_t)tilex) << 32) + (it->map_pos.y << 16);
 	}
-	else if (y1 == y2) {
-		if (x1 > x2) {
-			return false;
-		}
-		else if (x1 == x2) {
-			if (r1.map_pos.y >= r2.map_pos.y)
-				return false;
-			else
-				if (r1.map_pos.x >= r2.map_pos.x)
-					return false;
-		}
-	}
-	return true;
 }
 
 void MapRenderer::render(vector<Renderable> &r, vector<Renderable> &r_dead) {
 
 	vector<Renderable>::iterator it;
-	for (it = r.begin(); it != r.end(); it++) {
-		// calculate tile
-		it->tile.x = it->map_pos.x >> TILE_SHIFT;
-		it->tile.y = it->map_pos.y >> TILE_SHIFT;
-	}
-	for (it = r_dead.begin(); it != r_dead.end(); it++) {
-		// calculate tile
-		it->tile.x = it->map_pos.x >> TILE_SHIFT;
-		it->tile.y = it->map_pos.y >> TILE_SHIFT;
-	}
 
 	if (shaky_cam_ticks == 0) {
 		shakycam.x = cam.x;
@@ -701,12 +685,16 @@ void MapRenderer::render(vector<Renderable> &r, vector<Renderable> &r_dead) {
 	}
 
 	if (TILESET_ORIENTATION == TILESET_ORTHOGONAL) {
-		std::sort(r.begin(), r.end(), zcompare_ortho);
-		std::sort(r_dead.begin(), r_dead.end(), zcompare_ortho);
+		calculatePriosOrtho(r);
+		calculatePriosOrtho(r_dead);
+		std::sort(r.begin(), r.end(), priocompare);
+		std::sort(r_dead.begin(), r_dead.end(), priocompare);
 		renderOrtho(r, r_dead);
 	} else {
-		std::sort(r.begin(), r.end(), zcompare_iso);
-		std::sort(r_dead.begin(), r_dead.end(), zcompare_iso);
+		calculatePriosIso(r);
+		calculatePriosIso(r_dead);
+		std::sort(r.begin(), r.end(), priocompare);
+		std::sort(r_dead.begin(), r_dead.end(), priocompare);
 		renderIso(r, r_dead);
 	}
 }
@@ -720,11 +708,13 @@ void MapRenderer::createBackgroundSurface() {
 }
 
 void MapRenderer::drawRenderable(vector<Renderable>::iterator r_cursor) {
-	SDL_Rect dest;
-	Point p = map_to_screen(r_cursor->map_pos.x, r_cursor->map_pos.y, shakycam.x, shakycam.y);
-	dest.x = p.x - r_cursor->offset.x;
-	dest.y = p.y - r_cursor->offset.y;
-	SDL_BlitSurface(r_cursor->sprite, &r_cursor->src, screen, &dest);
+	if (r_cursor->sprite) {
+		SDL_Rect dest;
+		Point p = map_to_screen(r_cursor->map_pos.x, r_cursor->map_pos.y, shakycam.x, shakycam.y);
+		dest.x = p.x - r_cursor->offset.x;
+		dest.y = p.y - r_cursor->offset.y;
+		SDL_BlitSurface(r_cursor->sprite, &r_cursor->src, screen, &dest);
+	}
 }
 
 void MapRenderer::renderIsoLayer(SDL_Surface *wheretorender, Point offset, const unsigned short layerdata[256][256]) {
@@ -780,7 +770,7 @@ void MapRenderer::renderIsoLayer(SDL_Surface *wheretorender, Point offset, const
 
 void MapRenderer::renderIsoBackObjects(vector<Renderable> &r) {
 	vector<Renderable>::iterator it;
-	for (it = r.begin(); it != r.end(); it++)
+	for (it = r.begin(); it != r.end(); ++it)
 		drawRenderable(it);
 }
 
@@ -799,8 +789,8 @@ void MapRenderer::renderIsoFrontObjects(vector<Renderable> &r) {
 	j = upperright.y / UNITS_PER_TILE;
 	i = upperright.x / UNITS_PER_TILE - tiles_outside_of_screen;
 
-	while (r_cursor != r_end && (r_cursor->tile.x + r_cursor->tile.y < i + j || r_cursor->tile.x < i))
-		r_cursor++;
+	while (r_cursor != r_end && ((r_cursor->map_pos.x>>TILE_SHIFT) + (r_cursor->map_pos.y>>TILE_SHIFT) < i + j || (r_cursor->map_pos.x>>TILE_SHIFT) < i))
+		++r_cursor;
 
 	for (unsigned short y = max_tiles_height ; y; --y) {
 		short tiles_width = 0;
@@ -833,9 +823,9 @@ void MapRenderer::renderIsoFrontObjects(vector<Renderable> &r) {
 			}
 
 			// some renderable entities go in this layer
-			while (r_cursor != r_end && r_cursor->tile.x == i && r_cursor->tile.y == j) {
+			while (r_cursor != r_end && (r_cursor->map_pos.x>>TILE_SHIFT) == i && (r_cursor->map_pos.y>>TILE_SHIFT) == j) {
 				drawRenderable(r_cursor);
-				r_cursor++;
+				++r_cursor;
 			}
 		}
 		j += tiles_width;
@@ -844,8 +834,8 @@ void MapRenderer::renderIsoFrontObjects(vector<Renderable> &r) {
 			i++;
 		else
 			j++;
-		while (r_cursor != r_end && (r_cursor->tile.x + r_cursor->tile.y < i + j || r_cursor->tile.x <= i))
-			r_cursor++;
+		while (r_cursor != r_end && ((r_cursor->map_pos.x>>TILE_SHIFT) + (r_cursor->map_pos.y>>TILE_SHIFT) < i + j || (r_cursor->map_pos.x>>TILE_SHIFT) <= i))
+			++r_cursor;
 	}
 }
 
@@ -880,8 +870,8 @@ void MapRenderer::renderIso(vector<Renderable> &r, vector<Renderable> &r_dead) {
 		src.h = 2 * VIEW_H;
 		SDL_BlitSurface(backgroundsurface, &src, screen , 0);
 	}
-	renderIsoBackObjects(r_dead);
-	renderIsoFrontObjects(r);
+	if (object) renderIsoBackObjects(r_dead);
+	if (object) renderIsoFrontObjects(r);
 	if (foreground) renderIsoLayer(screen, nulloffset, foreground);
 	checkTooltip();
 }
@@ -911,7 +901,7 @@ void MapRenderer::renderOrthoLayer(const unsigned short layerdata[256][256]) {
 void MapRenderer::renderOrthoBackObjects(std::vector<Renderable> &r) {
 	// some renderables are drawn above the background and below the objects
 	vector<Renderable>::iterator it;
-	for (it = r.begin(); it != r.end(); it++)
+	for (it = r.begin(); it != r.end(); ++it)
 		drawRenderable(it);
 }
 
@@ -939,9 +929,9 @@ void MapRenderer::renderOrthoFrontObjects(std::vector<Renderable> &r) {
 			}
 
 			// some renderable entities go in this layer
-			while (r_cursor != r_end && r_cursor->tile.x == i && r_cursor->tile.y == j) {
+			while (r_cursor != r_end && (r_cursor->map_pos.x>>TILE_SHIFT) == i && (r_cursor->map_pos.y>>TILE_SHIFT) == j) {
 				drawRenderable(r_cursor);
-				r_cursor++;
+				++r_cursor;
 			}
 		}
 	}
@@ -950,8 +940,8 @@ void MapRenderer::renderOrthoFrontObjects(std::vector<Renderable> &r) {
 void MapRenderer::renderOrtho(vector<Renderable> &r, vector<Renderable> &r_dead) {
 	if (background) renderOrthoLayer(background);
 	if (fringe) renderOrthoLayer(fringe);
-	renderOrthoBackObjects(r_dead);
-	renderOrthoFrontObjects(r);
+	if (object) renderOrthoBackObjects(r_dead);
+	if (object) renderOrthoFrontObjects(r);
 	if (foreground) renderOrthoLayer(foreground);
 	//render event tooltips
 	checkTooltip();
@@ -962,7 +952,7 @@ void MapRenderer::executeOnLoadEvents() {
 
 	// loop in reverse because we may erase elements
 	for (it = events.end(); it != events.begin(); ) {
-		it--;
+		--it;
 
 		// skip inactive events
 		if (!isActive(*it)) continue;
@@ -983,7 +973,7 @@ void MapRenderer::checkEvents(Point loc) {
 
 	// loop in reverse because we may erase elements
 	for (it = events.end(); it != events.begin(); ) {
-		it--;
+		--it;
 
 		// skip inactive events
 		if (!isActive(*it)) continue;
@@ -1015,7 +1005,7 @@ void MapRenderer::checkHotspots() {
 	// work backwards through events because events can be erased in the loop.
 	// this prevents the iterator from becoming invalid.
 	for (it = events.end(); it != events.begin(); ) {
-		it--;
+		--it;
 
 		for (int x=it->hotspot.x; x < it->hotspot.x + it->hotspot.w; ++x) {
 			for (int y=it->hotspot.y; y < it->hotspot.y + it->hotspot.h; ++y) {
@@ -1076,27 +1066,26 @@ void MapRenderer::checkHotspots() {
 					// skip events on cooldown
 					if ((*it).cooldown_ticks != 0) continue;
 
-					if (!((abs(cam.x - (*it).location.x * UNITS_PER_TILE) < CLICK_RANGE)
-							&& (abs(cam.y - (*it).location.y * UNITS_PER_TILE) < CLICK_RANGE)))
-						continue;
-
 					// new tooltip?
 					if (!(*it).tooltip.empty())
 						show_tooltip = true;
-					if (tip_buf.lines[0] != (*it).tooltip) {
+					if (!tip_buf.compareFirstLine((*it).tooltip)) {
 						tip_buf.clear();
-						tip_buf.num_lines = 1;
-						tip_buf.lines[0] = (*it).tooltip;
+						tip_buf.addText((*it).tooltip);
 					}
 
-					// only check events if the player is clicking
-					// and allowed to click
-					if (!inpt->pressing[MAIN1]) return;
-					else if (inpt->lock[MAIN1]) return;
+					if ((abs(cam.x - (*it).location.x * UNITS_PER_TILE) < CLICK_RANGE)
+						&& (abs(cam.y - (*it).location.y * UNITS_PER_TILE) < CLICK_RANGE)) {
 
-					inpt->lock[MAIN1] = true;
-					if (executeEvent(*it))
-						events.erase(it);
+						// only check events if the player is clicking
+						// and allowed to click
+						if (!inpt->pressing[MAIN1]) return;
+						else if (inpt->lock[MAIN1]) return;
+
+						inpt->lock[MAIN1] = true;
+						if (executeEvent(*it))
+							events.erase(it);
+					}
 					return;
 				} else show_tooltip = false;
 			}
@@ -1223,7 +1212,7 @@ bool MapRenderer::executeEvent(Map_Event &ev) {
 			camp->removeItem(ec->x);
 		}
 		else if (ec->type == "reward_xp") {
-			camp->rewardXP(ec->x);
+			camp->rewardXP(ec->x, true);
 		}
 		else if (ec->type == "spawn") {
 			Point spawn_pos;

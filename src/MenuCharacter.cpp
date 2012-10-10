@@ -70,6 +70,7 @@ MenuCharacter::MenuCharacter(StatBlock *_stats) {
 
 	// stat list
 	statList = new WidgetListBox(13+stats->vulnerable.size(), 10, mods->locate("images/menus/buttons/listbox_char.png"));
+	statList->can_select = false;
 
 	// Load config settings
 	FileParser infile;
@@ -203,7 +204,7 @@ void MenuCharacter::update() {
 	closeButton->pos.y = window_area.y + close_pos.y;
 
 	// menu title
-	labelCharacter->set(window_area.x+title.x, window_area.y+title.y, title.justify, title.valign, msg->get("Character"), font->getColor("menu_normal"));
+	labelCharacter->set(window_area.x+title.x, window_area.y+title.y, title.justify, title.valign, msg->get("Character"), font->getColor("menu_normal"), title.font_style);
 
 	// upgrade buttons
 	for (int i=0; i<4; i++) {
@@ -216,12 +217,12 @@ void MenuCharacter::update() {
 	statList->pos.y = window_area.y+statlist_pos.y;
 
 	// setup static labels
-	cstat[CSTAT_NAME].label->set(window_area.x+label_pos[0].x, window_area.y+label_pos[0].y, label_pos[0].justify, label_pos[0].valign, msg->get("Name"), font->getColor("menu_normal"));
-	cstat[CSTAT_LEVEL].label->set(window_area.x+label_pos[1].x, window_area.y+label_pos[1].y, label_pos[1].justify, label_pos[1].valign, msg->get("Level"), font->getColor("menu_normal"));
-	cstat[CSTAT_PHYSICAL].label->set(window_area.x+label_pos[2].x, window_area.y+label_pos[2].y, label_pos[2].justify, label_pos[2].valign, msg->get("Physical"), font->getColor("menu_normal"));
-	cstat[CSTAT_MENTAL].label->set(window_area.x+label_pos[3].x, window_area.y+label_pos[3].y, label_pos[3].justify, label_pos[3].valign, msg->get("Mental"), font->getColor("menu_normal"));
-	cstat[CSTAT_OFFENSE].label->set(window_area.x+label_pos[4].x, window_area.y+label_pos[4].y, label_pos[4].justify, label_pos[4].valign, msg->get("Offense"), font->getColor("menu_normal"));
-	cstat[CSTAT_DEFENSE].label->set(window_area.x+label_pos[5].x, window_area.y+label_pos[5].y, label_pos[5].justify, label_pos[5].valign, msg->get("Defense"), font->getColor("menu_normal"));
+	cstat[CSTAT_NAME].label->set(window_area.x+label_pos[0].x, window_area.y+label_pos[0].y, label_pos[0].justify, label_pos[0].valign, msg->get("Name"), font->getColor("menu_normal"), label_pos[0].font_style);
+	cstat[CSTAT_LEVEL].label->set(window_area.x+label_pos[1].x, window_area.y+label_pos[1].y, label_pos[1].justify, label_pos[1].valign, msg->get("Level"), font->getColor("menu_normal"), label_pos[1].font_style);
+	cstat[CSTAT_PHYSICAL].label->set(window_area.x+label_pos[2].x, window_area.y+label_pos[2].y, label_pos[2].justify, label_pos[2].valign, msg->get("Physical"), font->getColor("menu_normal"), label_pos[2].font_style);
+	cstat[CSTAT_MENTAL].label->set(window_area.x+label_pos[3].x, window_area.y+label_pos[3].y, label_pos[3].justify, label_pos[3].valign, msg->get("Mental"), font->getColor("menu_normal"), label_pos[3].font_style);
+	cstat[CSTAT_OFFENSE].label->set(window_area.x+label_pos[4].x, window_area.y+label_pos[4].y, label_pos[4].justify, label_pos[4].valign, msg->get("Offense"), font->getColor("menu_normal"), label_pos[4].font_style);
+	cstat[CSTAT_DEFENSE].label->set(window_area.x+label_pos[5].x, window_area.y+label_pos[5].y, label_pos[5].justify, label_pos[5].valign, msg->get("Defense"), font->getColor("menu_normal"), label_pos[5].font_style);
 
 	// setup hotspot locations
 	cstat[CSTAT_NAME].setHover(window_area.x+value_pos[0].x, window_area.y+value_pos[0].y, value_pos[0].w, value_pos[0].h);
@@ -255,6 +256,8 @@ void MenuCharacter::loadGraphics() {
  */
 void MenuCharacter::refreshStats() {
 
+	stats->refresh_stats = false;
+
 	stringstream ss;
 
 	// update stat text
@@ -287,55 +290,55 @@ void MenuCharacter::refreshStats() {
 	ss.str("");
 
 	// scrolling stat list
-	statList->clear();
-	statList->refresh();
+
+	int visible_stats = 0;
 
 	if (show_stat[0]) {
 		ss.str("");
 		ss << msg->get("Max HP:") << " " << stats->maxhp;
-		statList->append(ss.str(),msg->get("Each point of Physical grants +%d HP. Each level grants +%d HP", stats->hp_per_physical, stats->hp_per_level));
+		statList->set(visible_stats++, ss.str(),msg->get("Each point of Physical grants +%d HP. Each level grants +%d HP", stats->hp_per_physical, stats->hp_per_level));
 	}
 
 	if (show_stat[1]) {
 		ss.str("");
 		ss << msg->get("HP Regen:") << " " << stats->hp_per_minute;
-		statList->append(ss.str(),msg->get("Ticks of HP regen per minute. Each point of Physical grants +%d HP regen. Each level grants +%d HP regen",stats->hp_regen_per_physical, stats->hp_regen_per_level));
+		statList->set(visible_stats++, ss.str(),msg->get("Ticks of HP regen per minute. Each point of Physical grants +%d HP regen. Each level grants +%d HP regen",stats->hp_regen_per_physical, stats->hp_regen_per_level));
 	}
 
 	if (show_stat[2]) {
 		ss.str("");
 		ss << msg->get("Max MP:") << " " << stats->maxmp;
-		statList->append(ss.str(),msg->get("Each point of Mental grants +%d MP. Each level grants +%d MP", stats->mp_per_mental, stats->mp_per_level));
+		statList->set(visible_stats++, ss.str(),msg->get("Each point of Mental grants +%d MP. Each level grants +%d MP", stats->mp_per_mental, stats->mp_per_level));
 	}
 
 	if (show_stat[3]) {
 		ss.str("");
 		ss << msg->get("MP Regen:") << " " << stats->mp_per_minute;
-		statList->append(ss.str(),msg->get("Ticks of MP regen per minute. Each point of Mental grants +%d MP regen. Each level grants +%d MP regen", stats->mp_regen_per_mental, stats->mp_regen_per_level));
+		statList->set(visible_stats++, ss.str(),msg->get("Ticks of MP regen per minute. Each point of Mental grants +%d MP regen. Each level grants +%d MP regen", stats->mp_regen_per_mental, stats->mp_regen_per_level));
 	}
 
 	if (show_stat[4]) {
 		ss.str("");
 		ss << msg->get("Accuracy (vs lvl 1):") << " " << stats->accuracy << "%";
-		statList->append(ss.str(),msg->get("Each point of Offense grants +%d accuracy. Each level grants +%d accuracy", stats->accuracy_per_offense, stats->accuracy_per_level));
+		statList->set(visible_stats++, ss.str(),msg->get("Each point of Offense grants +%d accuracy. Each level grants +%d accuracy", stats->accuracy_per_offense, stats->accuracy_per_level));
 	}
 
 	if (show_stat[5]) {
 		ss.str("");
 		ss << msg->get("Accuracy (vs lvl 5):") << " " << (stats->accuracy-20) << "%";
-		statList->append(ss.str(),msg->get("Each point of Offense grants +%d accuracy. Each level grants +%d accuracy", stats->accuracy_per_offense, stats->accuracy_per_level));
+		statList->set(visible_stats++, ss.str(),msg->get("Each point of Offense grants +%d accuracy. Each level grants +%d accuracy", stats->accuracy_per_offense, stats->accuracy_per_level));
 	}
 
 	if (show_stat[6]) {
 		ss.str("");
 		ss << msg->get("Avoidance (vs lvl 1):") << " " << stats->avoidance << "%";
-		statList->append(ss.str(),msg->get("Each point of Defense grants +%d avoidance. Each level grants +%d avoidance", stats->avoidance_per_defense, stats->avoidance_per_level));
+		statList->set(visible_stats++, ss.str(),msg->get("Each point of Defense grants +%d avoidance. Each level grants +%d avoidance", stats->avoidance_per_defense, stats->avoidance_per_level));
 	}
 
 	if (show_stat[7]) {
 		ss.str("");
 		ss << msg->get("Avoidance (vs lvl 5):") << " " << (stats->avoidance-20) << "%";
-		statList->append(ss.str(),msg->get("Each point of Defense grants +%d avoidance. Each level grants +%d avoidance", stats->avoidance_per_defense, stats->avoidance_per_level));
+		statList->set(visible_stats++, ss.str(),msg->get("Each point of Defense grants +%d avoidance. Each level grants +%d avoidance", stats->avoidance_per_defense, stats->avoidance_per_level));
 	}
 
 	int bonus;
@@ -348,7 +351,7 @@ void MenuCharacter::refreshStats() {
 			ss << stats->dmg_melee_min + bonus << "-" << stats->dmg_melee_max + bonus;
 		else
 			ss << "-";
-		statList->append(ss.str(),"");
+		statList->set(visible_stats++, ss.str(),"");
 	}
 
 	if (show_stat[9]) {
@@ -359,7 +362,7 @@ void MenuCharacter::refreshStats() {
 			ss << stats->dmg_ranged_min + bonus << "-" << stats->dmg_ranged_max + bonus;
 		else
 			ss << "-";
-		statList->append(ss.str(),"");
+		statList->set(visible_stats++, ss.str(),"");
 	}
 
 	if (show_stat[10]) {
@@ -370,13 +373,13 @@ void MenuCharacter::refreshStats() {
 			ss << stats->dmg_ment_min + bonus << "-" << stats->dmg_ment_max + bonus;
 		else
 			ss << "-";
-		statList->append(ss.str(),"");
+		statList->set(visible_stats++, ss.str(),"");
 	}
 
 	if (show_stat[11]) {
 		ss.str("");
 		ss << msg->get("Crit:") << " " << stats->crit << "%";
-		statList->append(ss.str(),"");
+		statList->set(visible_stats++, ss.str(),"");
 	}
 
 	if (show_stat[12]) {
@@ -386,45 +389,46 @@ void MenuCharacter::refreshStats() {
 			ss << stats->absorb_min;
 		else
 			ss << stats->absorb_min << "-" << stats->absorb_max;
-		statList->append(ss.str(),"");
+		statList->set(visible_stats++, ss.str(),"");
 	}
 
 	if (show_stat[13]) {
 		for (unsigned int j=0; j<stats->vulnerable.size(); j++) {
 			ss.str("");
-			ss << ELEMENTS[j].resist << ": " << (100 - stats->vulnerable[j]) << "%";
-			statList->append(ss.str(),"");
+			ss << msg->get(ELEMENTS[j].resist) << ": " << (100 - stats->vulnerable[j]) << "%";
+			statList->set(visible_stats++, ss.str(),"");
 		}
 	}
 
-	// update tool tips
-	cstat[CSTAT_NAME].tip.num_lines = 0;
-	cstat[CSTAT_NAME].tip.lines[cstat[CSTAT_NAME].tip.num_lines++] = msg->get(stats->character_class);
+	statList->refresh();
 
-	cstat[CSTAT_LEVEL].tip.num_lines = 0;
-	cstat[CSTAT_LEVEL].tip.lines[cstat[CSTAT_LEVEL].tip.num_lines++] = msg->get("XP: %d", stats->xp);
+	// update tool tips
+	cstat[CSTAT_NAME].tip.clear();
+	cstat[CSTAT_NAME].tip.addText(msg->get(stats->character_class));
+
+	cstat[CSTAT_LEVEL].tip.clear();
+	cstat[CSTAT_LEVEL].tip.addText(msg->get("XP: %d", stats->xp));
 	if (stats->level < MAX_CHARACTER_LEVEL) {
-		cstat[CSTAT_LEVEL].tip.lines[cstat[CSTAT_LEVEL].tip.num_lines++] = msg->get("Next: %d", stats->xp_table[stats->level]);
+		cstat[CSTAT_LEVEL].tip.addText(msg->get("Next: %d", stats->xp_table[stats->level]));
 	}
 
-	cstat[CSTAT_PHYSICAL].tip.num_lines = 0;
-	cstat[CSTAT_PHYSICAL].tip.lines[cstat[CSTAT_PHYSICAL].tip.num_lines++] = msg->get("Physical (P) increases melee weapon proficiency and total HP.");
-	cstat[CSTAT_PHYSICAL].tip.lines[cstat[CSTAT_PHYSICAL].tip.num_lines++] = msg->get("base (%d), bonus (%d)", stats->physical_character, stats->physical_additional);
+	cstat[CSTAT_PHYSICAL].tip.clear();
+	cstat[CSTAT_PHYSICAL].tip.addText(msg->get("Physical (P) increases melee weapon proficiency and total HP."));
+	cstat[CSTAT_PHYSICAL].tip.addText(msg->get("base (%d), bonus (%d)", stats->physical_character, stats->physical_additional));
 
-	cstat[CSTAT_MENTAL].tip.num_lines = 0;
-	cstat[CSTAT_MENTAL].tip.lines[cstat[CSTAT_MENTAL].tip.num_lines++] = msg->get("Mental (M) increases mental weapon proficiency and total MP.");
-	cstat[CSTAT_MENTAL].tip.lines[cstat[CSTAT_MENTAL].tip.num_lines++] = msg->get("base (%d), bonus (%d)", stats->mental_character, stats->mental_additional);
+	cstat[CSTAT_MENTAL].tip.clear();
+	cstat[CSTAT_MENTAL].tip.addText(msg->get("Mental (M) increases mental weapon proficiency and total MP."));
+	cstat[CSTAT_MENTAL].tip.addText(msg->get("base (%d), bonus (%d)", stats->mental_character, stats->mental_additional));
 
-	cstat[CSTAT_OFFENSE].tip.num_lines = 0;
-	cstat[CSTAT_OFFENSE].tip.lines[cstat[CSTAT_OFFENSE].tip.num_lines++] = msg->get("Offense (O) increases ranged weapon proficiency and accuracy.");
-	cstat[CSTAT_OFFENSE].tip.lines[cstat[CSTAT_OFFENSE].tip.num_lines++] = msg->get("base (%d), bonus (%d)", stats->offense_character, stats->offense_additional);
+	cstat[CSTAT_OFFENSE].tip.clear();
+	cstat[CSTAT_OFFENSE].tip.addText(msg->get("Offense (O) increases ranged weapon proficiency and accuracy."));
+	cstat[CSTAT_OFFENSE].tip.addText(msg->get("base (%d), bonus (%d)", stats->offense_character, stats->offense_additional));
 
-	cstat[CSTAT_DEFENSE].tip.num_lines = 0;
-	cstat[CSTAT_DEFENSE].tip.lines[cstat[CSTAT_DEFENSE].tip.num_lines++] = msg->get("Defense (D) increases armor proficiency and avoidance.");
-	cstat[CSTAT_DEFENSE].tip.lines[cstat[CSTAT_DEFENSE].tip.num_lines++] = msg->get("base (%d), bonus (%d)", stats->defense_character, stats->defense_additional);
+	cstat[CSTAT_DEFENSE].tip.clear();
+	cstat[CSTAT_DEFENSE].tip.addText(msg->get("Defense (D) increases armor proficiency and avoidance."));
+	cstat[CSTAT_DEFENSE].tip.addText(msg->get("base (%d), bonus (%d)", stats->defense_character, stats->defense_additional));
 
-	cstat[CSTAT_UNSPENT].tip.num_lines = 0;
-	if (skill_points) cstat[CSTAT_UNSPENT].tip.lines[cstat[CSTAT_UNSPENT].tip.num_lines++] = msg->get("Unspent attribute points");
+	if (skill_points) cstat[CSTAT_UNSPENT].tip.addText(msg->get("Unspent attribute points"));
 
 }
 
@@ -467,8 +471,7 @@ void MenuCharacter::logic() {
 
 	statList->checkClick();
 
-	// TODO: this doesn't need to be done every frame. Only call this when something has updated
-	refreshStats();
+	if (stats->refresh_stats) refreshStats();
 }
 
 
@@ -517,12 +520,11 @@ void MenuCharacter::render() {
 TooltipData MenuCharacter::checkTooltip() {
 
 	for (int i=0; i<CSTAT_COUNT; i++) {
-		if (isWithin(cstat[i].hover, inpt->mouse) && cstat[i].tip.num_lines > 0 && cstat[i].visible)
+		if (isWithin(cstat[i].hover, inpt->mouse) && !cstat[i].tip.isEmpty() && cstat[i].visible)
 			return cstat[i].tip;
 	}
 
 	TooltipData tip;
-	tip.num_lines = 0;
 	return tip;
 }
 

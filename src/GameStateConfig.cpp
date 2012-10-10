@@ -2,6 +2,7 @@
 Copyright © 2012 Clint Bellanger
 Copyright © 2012 davidriod
 Copyright © 2012 Igor Paliychuk
+Copyright © 2012 Stefan Beller
 
 This file is part of FLARE.
 
@@ -43,15 +44,15 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 using namespace std;
 
 GameStateConfig::GameStateConfig ()
-		: GameState(),
-		  video_modes(NULL),
-		  child_widget(),
-		  ok_button(NULL),
-		  defaults_button(NULL),
-		  cancel_button(NULL),
-		  imgFileName(mods->locate("images/menus/config.png"))
-
-
+	: GameState()
+	, video_modes(NULL)
+	, child_widget()
+	, ok_button(NULL)
+	, defaults_button(NULL)
+	, cancel_button(NULL)
+	, imgFileName(mods->locate("images/menus/config.png"))
+	, input_key(0)
+	, check_resolution(true)
 {
 	// Load background image
 	SDL_Surface * tmp = IMG_Load(imgFileName.c_str());
@@ -159,11 +160,12 @@ void GameStateConfig::init() {
 
 	input_confirm = new MenuConfirm("",msg->get("Assign: "));
 	defaults_confirm = new MenuConfirm(msg->get("Defaults"),msg->get("Reset ALL settings?"));
+	resolution_confirm = new MenuConfirm(msg->get("OK"),msg->get("Use this resolution?"));
 
 	// Allocate KeyBindings
 	for (unsigned int i = 0; i < 25; i++) {
 		 settings_lb[i] = new WidgetLabel();
-		 settings_lb[i]->set(msg->get(binding_name[i]));
+		 settings_lb[i]->set(inpt->binding_name[i]);
 		 settings_lb[i]->setJustify(JUSTIFY_RIGHT);
 	}
 	for (unsigned int i = 0; i < 50; i++) {
@@ -202,6 +204,12 @@ void GameStateConfig::init() {
 	}
 	child_widget.push_back(inactivemods_lstb);
 	optiontab[child_widget.size()-1] = 5;
+
+	// Save the current resolution in case we want to revert back to it
+	old_view_w = VIEW_W;
+	old_view_h = VIEW_H;
+
+	resolution_confirm_ticks = 0;
 }
 
 void GameStateConfig::readConfig () {
@@ -225,7 +233,7 @@ void GameStateConfig::readConfig () {
 			y2 = eatFirstInt(infile.val, ',');
 
 			setting_num = -1;
-			
+
 			//checkboxes
 			if (infile.key == "fullscreen") {
 				fullscreen_cb->pos.x = frame.x + x2;
@@ -247,7 +255,7 @@ void GameStateConfig::readConfig () {
 				optiontab[child_widget.size()-1] = 3;
 
 				mouse_move_lb->setX(frame.x + x1);
-				mouse_move_lb->setY(frame.y + y1);			
+				mouse_move_lb->setY(frame.y + y1);
 				mouse_move_lb->set(msg->get("Move hero using mouse"));
 				mouse_move_lb->setJustify(JUSTIFY_RIGHT);
 				child_widget.push_back(mouse_move_lb);
@@ -309,7 +317,7 @@ void GameStateConfig::readConfig () {
 			}
 			else if (infile.key == "texture_quality") {
 				texture_quality_cb->pos.x = frame.x + x2;
-				texture_quality_cb->pos.y = frame.y + y2;	
+				texture_quality_cb->pos.y = frame.y + y2;
 				child_widget.push_back(texture_quality_cb);
 				optiontab[child_widget.size()-1] = 0;
 
@@ -327,7 +335,7 @@ void GameStateConfig::readConfig () {
 				optiontab[child_widget.size()-1] = 0;
 
 				change_gamma_lb->setX(frame.x + x1);
-				change_gamma_lb->setY(frame.y + y1);				
+				change_gamma_lb->setY(frame.y + y1);
 				change_gamma_lb->set(msg->get("Allow changing gamma"));
 				change_gamma_lb->setJustify(JUSTIFY_RIGHT);
 				child_widget.push_back(change_gamma_lb);
@@ -340,7 +348,7 @@ void GameStateConfig::readConfig () {
 				optiontab[child_widget.size()-1] = 0;
 
 				animated_tiles_lb->setX(frame.x + x1);
-				animated_tiles_lb->setY(frame.y + y1);				
+				animated_tiles_lb->setY(frame.y + y1);
 				animated_tiles_lb->set(msg->get("Animated tiles"));
 				animated_tiles_lb->setJustify(JUSTIFY_RIGHT);
 				child_widget.push_back(animated_tiles_lb);
@@ -353,7 +361,7 @@ void GameStateConfig::readConfig () {
 				optiontab[child_widget.size()-1] = 3;
 
 				mouse_aim_lb->setX(frame.x + x1);
-				mouse_aim_lb->setY(frame.y + y1);				
+				mouse_aim_lb->setY(frame.y + y1);
 				mouse_aim_lb->set(msg->get("Mouse aim"));
 				mouse_aim_lb->setJustify(JUSTIFY_RIGHT);
 				child_widget.push_back(mouse_aim_lb);
@@ -366,7 +374,7 @@ void GameStateConfig::readConfig () {
 				optiontab[child_widget.size()-1] = 2;
 
 				show_fps_lb->setX(frame.x + x1);
-				show_fps_lb->setY(frame.y + y1);					
+				show_fps_lb->setY(frame.y + y1);
 				show_fps_lb->set(msg->get("Show FPS"));
 				show_fps_lb->setJustify(JUSTIFY_RIGHT);
 				child_widget.push_back(show_fps_lb);
@@ -380,7 +388,7 @@ void GameStateConfig::readConfig () {
 				optiontab[child_widget.size()-1] = 1;
 
 				music_volume_lb->setX(frame.x + x1);
-				music_volume_lb->setY(frame.y + y1);				
+				music_volume_lb->setY(frame.y + y1);
 				music_volume_lb->set(msg->get("Music Volume"));
 				music_volume_lb->setJustify(JUSTIFY_RIGHT);
 				child_widget.push_back(music_volume_lb);
@@ -388,7 +396,7 @@ void GameStateConfig::readConfig () {
 			}
 			else if (infile.key == "sound_volume") {
 				sound_volume_sl->pos.x = frame.x + x2;
-				sound_volume_sl->pos.y = frame.y + y2;	
+				sound_volume_sl->pos.y = frame.y + y2;
 				child_widget.push_back(sound_volume_sl);
 				optiontab[child_widget.size()-1] = 1;
 
@@ -415,7 +423,7 @@ void GameStateConfig::readConfig () {
 			//listboxes
 			else if (infile.key == "resolution") {
 				resolution_lstb->pos.x = frame.x + x2;
-				resolution_lstb->pos.y = frame.y + y2;				
+				resolution_lstb->pos.y = frame.y + y2;
 				child_widget.push_back(resolution_lstb);
 				optiontab[child_widget.size()-1] = 0;
 
@@ -615,6 +623,11 @@ void GameStateConfig::readConfig () {
 	defaults_confirm->align();
 	defaults_confirm->update();
 
+	resolution_confirm->window_area = menuConfirm_area;
+	resolution_confirm->alignment = menuConfirm_align;
+	resolution_confirm->align();
+	resolution_confirm->update();
+
 	// Allocate KeyBindings ScrollBox
 	input_scrollbox = new WidgetScrollBox(scrollpane.w, scrollpane.h);
 	input_scrollbox->pos.x = scrollpane.x + frame.x;
@@ -655,17 +668,20 @@ void GameStateConfig::update () {
 	else enable_joystick_cb->unCheck();
 	if (TEXTURE_QUALITY) texture_quality_cb->Check();
 	else texture_quality_cb->unCheck();
-	//if (CHANGE_GAMMA) change_gamma_cb->Check();
-	//else change_gamma_cb->unCheck();
+	if (CHANGE_GAMMA) change_gamma_cb->Check();
+	else {
+		change_gamma_cb->unCheck();
+		GAMMA = 1.0;
+	}
+	gamma_sl->set(5,20,(int)(GAMMA*10.0));
+	SDL_SetGamma(GAMMA,GAMMA,GAMMA);
+
 	if (ANIMATED_TILES) animated_tiles_cb->Check();
 	else animated_tiles_cb->unCheck();
 	if (MOUSE_AIM) mouse_aim_cb->Check();
 	else mouse_aim_cb->unCheck();
 	if (SHOW_FPS) show_fps_cb->Check();
 	else show_fps_cb->unCheck();
-
-	gamma_sl->set(5,20,(int)(GAMMA*10.0));
-	SDL_SetGamma(GAMMA,GAMMA,GAMMA);
 
 	std::stringstream list_mode;
 	unsigned int resolutions = getVideoModes();
@@ -698,7 +714,7 @@ void GameStateConfig::update () {
 
 	for (unsigned int i = 0; i < 25; i++) {
 		if (inpt->binding[i] < 8) {
-			settings_key[i]->label = mouse_button[inpt->binding[i]-1];
+			settings_key[i]->label = inpt->mouse_button[inpt->binding[i]-1];
 		} else {
 			settings_key[i]->label = SDL_GetKeyName((SDLKey)inpt->binding[i]);
 		}
@@ -706,7 +722,7 @@ void GameStateConfig::update () {
 	}
 	for (unsigned int i = 25; i < 50; i++) {
 		if (inpt->binding_alt[i-25] < 8) {
-			settings_key[i]->label = mouse_button[inpt->binding_alt[i-25]-1];
+			settings_key[i]->label = inpt->mouse_button[inpt->binding_alt[i-25]-1];
 		} else {
 			settings_key[i]->label = SDL_GetKeyName((SDLKey)inpt->binding_alt[i-25]);
 		}
@@ -748,7 +764,22 @@ void GameStateConfig::logic ()
 		}
 	}
 
-	if (!input_confirm->visible && !defaults_confirm->visible) {
+	if (resolution_confirm->visible || resolution_confirm->cancelClicked) {
+		resolution_confirm->logic();
+		resolution_confirm_ticks--;
+		if (resolution_confirm->confirmClicked) {
+			saveSettings();
+			delete requestedGameState;
+			requestedGameState = new GameStateTitle();
+		} else if (resolution_confirm->cancelClicked || resolution_confirm_ticks == 0) {
+			applyVideoSettings(screen, old_view_w, old_view_h);
+			saveSettings();
+			delete requestedGameState;
+			requestedGameState = new GameStateConfig();
+		}
+	}
+
+	if (!input_confirm->visible && !defaults_confirm->visible && !resolution_confirm->visible) {
 		tabControl->logic();
 
 		// Ok/Cancel Buttons
@@ -763,14 +794,21 @@ void GameStateConfig::logic ()
 			}
 			loadMiscSettings();
 			refreshFont();
-			applyVideoSettings(screen, width, height);
-			saveSettings();
 			if ((ENABLE_JOYSTICK) && (SDL_NumJoysticks() > 0)) {
 				SDL_JoystickClose(joy);
 				joy = SDL_JoystickOpen(JOYSTICK_DEVICE);
 			}
-			delete requestedGameState;
-			requestedGameState = new GameStateTitle();
+			applyVideoSettings(screen, width, height);
+			if (width != old_view_w || height != old_view_h) {
+				resolution_confirm->window_area = menuConfirm_area;
+				resolution_confirm->align();
+				resolution_confirm->update();
+				resolution_confirm_ticks = MAX_FRAMES_PER_SEC * 10; // 10 seconds
+			} else {
+				saveSettings();
+				delete requestedGameState;
+				requestedGameState = new GameStateTitle();
+			}
 		} else if (defaults_button->checkClick()) {
 			defaults_confirm->visible = true;
 		} else if (cancel_button->checkClick() || (inpt->pressing[CANCEL] && !inpt->lock[CANCEL])) {
@@ -803,17 +841,24 @@ void GameStateConfig::logic ()
 		} else if (texture_quality_cb->checkClick()) {
 			if (texture_quality_cb->isChecked()) TEXTURE_QUALITY=true;
 			else TEXTURE_QUALITY=false;
-		//} else if (change_gamma_cb->checkClick()) {
-		//	if (change_gamma_cb->isChecked()) CHANGE_GAMMA=true;
-		//	else CHANGE_GAMMA=false;
+		} else if (change_gamma_cb->checkClick()) {
+			if (change_gamma_cb->isChecked()) CHANGE_GAMMA=true;
+			else {
+				CHANGE_GAMMA=false;
+				GAMMA = 1.0;
+				gamma_sl->set(5,20,(int)(GAMMA*10.0));
+				SDL_SetGamma(GAMMA,GAMMA,GAMMA);
+			}
 		} else if (animated_tiles_cb->checkClick()) {
 			if (animated_tiles_cb->isChecked()) ANIMATED_TILES=true;
 			else ANIMATED_TILES=false;
 		} else if (resolution_lstb->checkClick()) {
 			value = resolution_lstb->getValue() + 'x';
-		} else if (gamma_sl->checkClick()) {
-			GAMMA=(float)(gamma_sl->getValue())*0.1;
-			SDL_SetGamma(GAMMA,GAMMA,GAMMA);
+		} else if (CHANGE_GAMMA) {
+			if (gamma_sl->checkClick()) {
+					GAMMA=(float)(gamma_sl->getValue())*0.1;
+					SDL_SetGamma(GAMMA,GAMMA,GAMMA);
+			}
 		}
 	}
 	// tab 1 (audio)
@@ -892,9 +937,9 @@ void GameStateConfig::logic ()
 					if (settings_key[i]->checkClick(mouse.x,mouse.y)) {
 						std::string confirm_msg;
 						if (i < 25)
-							confirm_msg = msg->get("Assign: ") + binding_name[i];
+							confirm_msg = msg->get("Assign: ") + inpt->binding_name[i];
 						else
-							confirm_msg = msg->get("Assign: ") + binding_name[i-25];
+							confirm_msg = msg->get("Assign: ") + inpt->binding_name[i-25];
 						delete input_confirm;
 						input_confirm = new MenuConfirm("",confirm_msg);
 						input_confirm->window_area = menuConfirm_area;
@@ -930,6 +975,11 @@ void GameStateConfig::logic ()
 
 void GameStateConfig::render ()
 {
+	if (resolution_confirm->visible) {
+		resolution_confirm->render();
+		return;
+	}
+
 	int tabheight = tabControl->getTabHeight();
 	SDL_Rect	pos;
 	pos.x = (VIEW_W-FRAME_W)/2;
@@ -1155,6 +1205,8 @@ bool GameStateConfig::applyVideoSettings(SDL_Surface *src, int width, int height
 	VIEW_H = height;
 	VIEW_H_HALF = height/2;
 
+	resolution_confirm->visible = true;
+
 	return true;
 }
 
@@ -1217,11 +1269,11 @@ bool GameStateConfig::setMods() {
  */
 void GameStateConfig::scanKey(int button) {
   if (input_confirm->visible) {
-	if (inpt->last_button != -1) {
+	if (inpt->last_button != -1 && inpt->last_button < 8) {
 		if (button < 25) inpt->binding[button] = inpt->last_button;
 		else inpt->binding_alt[button-25] = inpt->last_button;
 
-		settings_key[button]->label = mouse_button[inpt->last_button-1];
+		settings_key[button]->label = inpt->mouse_button[inpt->last_button-1];
 		input_confirm->visible = false;
 		settings_key[button]->refresh();
 		return;
@@ -1247,10 +1299,11 @@ GameStateConfig::~GameStateConfig()
 	delete input_scrollbox;
 	delete input_confirm;
 	delete defaults_confirm;
+	delete resolution_confirm;
 
 	SDL_FreeSurface(background);
 
-	for (std::vector<Widget*>::iterator iter = child_widget.begin(); iter != child_widget.end(); iter++)
+	for (std::vector<Widget*>::iterator iter = child_widget.begin(); iter != child_widget.end(); ++iter)
 	{
 		delete (*iter);
 	}

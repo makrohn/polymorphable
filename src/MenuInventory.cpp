@@ -1,6 +1,7 @@
 /*
 Copyright © 2011-2012 Clint Bellanger
 Copyright © 2012 Igor Paliychuk
+Copyright © 2012 Stefan Beller
 
 This file is part of FLARE.
 
@@ -122,11 +123,11 @@ void MenuInventory::update() {
 
 	carried_area.x += window_area.x;
 	carried_area.y += window_area.y;
-	carried_area.w = carried_cols*ICON_SIZE_SMALL;
-	carried_area.h = carried_rows*ICON_SIZE_SMALL;
+	carried_area.w = carried_cols*ICON_SIZE;
+	carried_area.h = carried_rows*ICON_SIZE;
 
 	inventory[EQUIPMENT].init(MAX_EQUIPPED, items, equipped_area, slot_type);
-	inventory[CARRIED].init(MAX_CARRIED, items, carried_area, ICON_SIZE_SMALL, carried_cols);
+	inventory[CARRIED].init(MAX_CARRIED, items, carried_area, ICON_SIZE, carried_cols);
 
 	closeButton->pos.x = window_area.x+close_pos.x;
 	closeButton->pos.y = window_area.y+close_pos.y;
@@ -148,6 +149,9 @@ void MenuInventory::logic() {
 		if (closeButton->checkClick()) {
 			visible = false;
 		}
+		if (drag_prev_src == -1) {
+			clearHighlight();
+		}
 	}
 }
 
@@ -164,11 +168,11 @@ void MenuInventory::render() {
 	// text overlay
 	WidgetLabel label;
 	if (!title.hidden) {
-		label.set(window_area.x+title.x, window_area.y+title.y, title.justify, title.valign, msg->get("Inventory"), color_normal);
+		label.set(window_area.x+title.x, window_area.y+title.y, title.justify, title.valign, msg->get("Inventory"), color_normal, title.font_style);
 		label.render();
 	}
 	if (!currency_lbl.hidden) {
-		label.set(window_area.x+currency_lbl.x, window_area.y+currency_lbl.y, currency_lbl.justify, currency_lbl.valign, msg->get("%d %s", currency, CURRENCY), color_normal);
+		label.set(window_area.x+currency_lbl.x, window_area.y+currency_lbl.y, currency_lbl.justify, currency_lbl.valign, msg->get("%d %s", currency, CURRENCY), color_normal, currency_lbl.font_style);
 		label.render();
 	}
 
@@ -199,18 +203,21 @@ TooltipData MenuInventory::checkTooltip(Point mouse) {
 	int slot;
 	TooltipData tip;
 
-	area = areaOver( mouse);
+	area = areaOver(mouse);
+	if (area == -1) {
+		if (mouse.x >= window_area.x + help_pos.x && mouse.y >= window_area.y+help_pos.y && mouse.x < window_area.x+help_pos.x+help_pos.w && mouse.y < window_area.y+help_pos.y+help_pos.h) {
+			tip.addText(msg->get("Use SHIFT to move only one item."));
+			tip.addText(msg->get("CTRL-click a carried item to sell it."));
+		}
+		return tip;
+	}
 	slot = inventory[area].slotOver(mouse);
 
-	if (area > -1 && inventory[area][slot].item > 0) {
-		tip = inventory[area].checkTooltip( mouse, stats, false);
+	if (inventory[area][slot].item > 0) {
+		tip = inventory[area].checkTooltip( mouse, stats, PLAYER_INV);
 	}
 	else if (area == EQUIPMENT && inventory[area][slot].item == 0) {
-		tip.lines[tip.num_lines++] = msg->get(slot_desc[slot]);
-	}
-	else if (mouse.x >= window_area.x + help_pos.x && mouse.y >= window_area.y+help_pos.y && mouse.x < window_area.x+help_pos.x+help_pos.w && mouse.y < window_area.y+help_pos.y+help_pos.h) {
-		tip.lines[tip.num_lines++] = msg->get("Use SHIFT to move only one item.");
-		tip.lines[tip.num_lines++] = msg->get("CTRL-click a carried item to sell it.");
+		tip.addText(msg->get(slot_desc[slot]));
 	}
 
 	return tip;
@@ -230,6 +237,8 @@ ItemStack MenuInventory::click(InputState * input) {
 		// if dragging equipment, prepare to change stats/sprites
 		if (drag_prev_src == EQUIPMENT) {
 			updateEquipment( inventory[EQUIPMENT].drag_prev_slot);
+		} else if (drag_prev_src == CARRIED && !inpt->pressing[CTRL] && !inpt->pressing[MAIN2]) {
+			inventory[EQUIPMENT].highlightMatching(items->items[item.item].type);
 		}
 	}
 
@@ -253,15 +262,17 @@ void MenuInventory::itemReturn( ItemStack stack) {
  * and equip items
  */
 void MenuInventory::drop(Point mouse, ItemStack stack) {
-	int area;
-	int slot;
-	int drag_prev_slot;
-
 	items->playSound(stack.item);
 
-	area = areaOver( mouse);
-	slot = inventory[area].slotOver(mouse);
-	drag_prev_slot = inventory[drag_prev_src].drag_prev_slot;
+	int area = areaOver(mouse);
+	if (area == -1) {
+		// not dropped into a slot. Just return it to the previous slot.
+		itemReturn(stack);
+		return;
+	}
+
+	int slot = inventory[area].slotOver(mouse);
+	int drag_prev_slot = inventory[drag_prev_src].drag_prev_slot;
 
 	if (area == EQUIPMENT) { // dropped onto equipped item
 
@@ -315,7 +326,7 @@ void MenuInventory::drop(Point mouse, ItemStack stack) {
 		else {
 			// note: equipment slots 0-3 correspond with item types 0-3
 			// also check to see if the hero meets the requirements
-			if (inventory[area][slot].item == stack.item) {
+			if (inventory[area][slot].item == stack.item || drag_prev_src == -1) {
 				// Merge the stacks
 				add( stack, area, slot);
 			}
@@ -338,9 +349,6 @@ void MenuInventory::drop(Point mouse, ItemStack stack) {
 			}
 		}
 	}
-	else {
-		itemReturn( stack); // not dropped into a slot. Just return it to the previous slot.
-	}
 
 	drag_prev_src = -1;
 }
@@ -352,7 +360,6 @@ void MenuInventory::drop(Point mouse, ItemStack stack) {
  */
 void MenuInventory::activate(InputState * input) {
 	int slot;
-	int equip_slot = -1;
 	ItemStack stack;
 	Point nullpt;
 	nullpt.x = nullpt.y = 0;
@@ -390,6 +397,7 @@ void MenuInventory::activate(InputState * input) {
 	}
 	// equip an item
 	else {
+		int equip_slot = -1;
 		// find first empty(or just first) slot for item to equip
 		for (int i = 0; i < MAX_EQUIPPED; i++) {
 			// first check for first empty
@@ -435,6 +443,8 @@ void MenuInventory::activate(InputState * input) {
 			}
 		} else fprintf(stderr, "Can't find equip slot, corresponding to type %s\n", items->items[inventory[CARRIED][slot].item].type.c_str());
 	}
+
+	drag_prev_src = -1;
 }
 
 /**
@@ -445,24 +455,20 @@ void MenuInventory::activate(InputState * input) {
  * @param slot Slot number where it will try to store the item
  */
 void MenuInventory::add(ItemStack stack, int area, int slot) {
-	int max_quantity;
-	int quantity_added;
-	int i;
-
 	items->playSound(stack.item);
 
 	if( stack.item != 0) {
 		if( area < 0) {
 			area = CARRIED;
 		}
-		max_quantity = items->items[stack.item].max_quantity;
+		int max_quantity = items->items[stack.item].max_quantity;
 		if( slot > -1 && inventory[area][slot].item != 0 && inventory[area][slot].item != stack.item) {
 			// the proposed slot isn't available, search for another one
 			slot = -1;
 		}
 		if( area == CARRIED) {
 			// first search of stack to complete if the item is stackable
-			i = 0;
+			int i = 0;
 			while( max_quantity > 1 && slot == -1 && i < MAX_CARRIED) {
 				if (inventory[area][i].item == stack.item && inventory[area][i].quantity < max_quantity) {
 					slot = i;
@@ -480,7 +486,7 @@ void MenuInventory::add(ItemStack stack, int area, int slot) {
 		}
 		if( slot != -1) {
 			// Add
-			quantity_added = min( stack.quantity, max_quantity - inventory[area][slot].quantity);
+			int quantity_added = min( stack.quantity, max_quantity - inventory[area][slot].quantity);
 			inventory[area][slot].item = stack.item;
 			inventory[area][slot].quantity += quantity_added;
 			stack.quantity -= quantity_added;
@@ -520,9 +526,12 @@ void MenuInventory::addCurrency(int count) {
  * Check if there is enough currency to buy the given stack, and if so remove it from the current total and add the stack.
  * (Handle the drop into the equipment area, but add() don't handle it well in all circonstances. MenuManager::logic() allow only into the carried area.)
  */
-bool MenuInventory::buy(ItemStack stack) {
-	int count = items->items[stack.item].price * stack.quantity;
+bool MenuInventory::buy(ItemStack stack, int tab) {
+	int value_each;
+	if (tab == VENDOR_BUY) value_each = items->items[stack.item].price;
+	else value_each = items->items[stack.item].getSellPrice();
 
+	int count = value_each * stack.quantity;
 	if( currency >= count) {
 		currency -= count;
 
@@ -541,6 +550,7 @@ bool MenuInventory::stashAdd(ItemStack stack) {
 	// items that have no price cannot be stored
 	if (items->items[stack.item].price == 0) return false;
 
+	drag_prev_src = -1;
 	return true;
 }
 /**
@@ -550,15 +560,11 @@ bool MenuInventory::sell(ItemStack stack) {
 	// items that have no price cannot be sold
 	if (items->items[stack.item].price == 0) return false;
 
-	int value_each;
-	if(items->items[stack.item].price_sell != 0)
-		value_each = items->items[stack.item].price_sell;
-	else
-		value_each = static_cast<int>(items->items[stack.item].price * VENDOR_RATIO);
-	if (value_each == 0) value_each = 1;
+	int value_each = items->items[stack.item].getSellPrice();
 	int value = value_each * stack.quantity;
 	currency += value;
 	items->playCoinsSound();
+	drag_prev_src = -1;
 	return true;
 }
 
@@ -929,6 +935,11 @@ void MenuInventory::applyItemSetBonuses(ItemStack *equipped) {
 			}
 		}
 	}
+}
+
+void MenuInventory::clearHighlight() {
+	inventory[EQUIPMENT].highlightClear();
+	inventory[CARRIED].highlightClear();
 }
 
 MenuInventory::~MenuInventory() {

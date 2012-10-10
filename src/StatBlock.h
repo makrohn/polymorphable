@@ -93,10 +93,12 @@ public:
 
 	bool alive;
 	bool corpse; // creature is dead and done animating
+	int corpse_ticks;
 	bool hero; // else, enemy or other
 	bool humanoid; // true for human, sceleton...; false for wyvern, snake...
 	bool permadeath;
 	bool transformed;
+	bool refresh_stats;
 
 	int movement_type;
 	bool flying;
@@ -105,7 +107,6 @@ public:
 
 	std::string name;
 	std::string sfx_prefix;
-	std::string gfx_prefix;
 
 	int level;
 	int xp;

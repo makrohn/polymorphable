@@ -1,5 +1,6 @@
 /*
 Copyright © 2011-2012 Clint Bellanger
+Copyright © 2012 Stefan Beller
 
 This file is part of FLARE.
 
@@ -15,11 +16,12 @@ You should have received a copy of the GNU General Public License along with
 FLARE.  If not, see http://www.gnu.org/licenses/
 */
 
-/*
- * class EnemyManager
- */
-
 #include "EnemyManager.h"
+
+#include "AnimationManager.h"
+#include "AnimationSet.h"
+#include "Animation.h"
+#include "StatBlock.h"
 #include "SharedResources.h"
 #include "EnemyBehavior.h"
 #include "BehaviorStandard.h"
@@ -38,37 +40,9 @@ EnemyManager::EnemyManager(PowerManager *_powers, MapRenderer *_map) {
 	handleNewMap();
 }
 
-
-
-/**
- * Enemies share graphic/sound resources (usually there are groups of similar enemies)
- */
-bool EnemyManager::loadGraphics(const string& type_id) {
-
-	// first check to make sure the sprite isn't already loaded
-	if (find(gfx_prefixes.begin(), gfx_prefixes.end(), type_id) != gfx_prefixes.end())
-		return true;
-
-	SDL_Surface *cleanup = IMG_Load(mods->locate("images/enemies/" + type_id + ".png").c_str());
-	if(!cleanup) {
-		fprintf(stderr, "Couldn't load image: %s\n", IMG_GetError());
-		return false;
-	}
-
-	SDL_SetColorKey(cleanup, SDL_SRCCOLORKEY, SDL_MapRGB(cleanup->format, 255, 0, 255) );
-
-	SDL_Surface *sprite = SDL_DisplayFormatAlpha(cleanup);
-	SDL_FreeSurface(cleanup);
-
-	sprites.push_back(sprite);
-	gfx_prefixes.push_back(type_id);
-
-	return true;
-}
-
 bool EnemyManager::loadSounds(const string& type_id) {
 
-	// first check to make sure the sprite isn't already loaded
+	// first check to make sure the sfx isn't already loaded
 	if (find(sfx_prefixes.begin(), sfx_prefixes.end(), type_id) != sfx_prefixes.end())
 		return true;
 
@@ -91,6 +65,47 @@ bool EnemyManager::loadSounds(const string& type_id) {
 	return true;
 }
 
+bool EnemyManager::loadAnimations(Enemy *e) {
+
+	string animationsname = "animations/enemies/"+e->stats.animations + ".txt";
+	AnimationManager::instance()->increaseCount(animationsname);
+	e->animationSet = AnimationManager::instance()->getAnimationSet(animationsname);
+	e->activeAnimation = e->animationSet->getAnimation(e->animationSet->starting_animation);
+
+	return true;
+}
+
+Enemy *EnemyManager::getEnemyPrototype(const string& type_id) {
+	for (size_t i = 0; i < prototypes.size(); i++)
+		if (prototypes[i].type == type_id) {
+			string animationsname = "animations/enemies/"+prototypes[i].stats.animations + ".txt";
+			AnimationManager::instance()->increaseCount(animationsname);
+			return new Enemy(prototypes[i]);
+		}
+
+	Enemy e = Enemy(powers, map);
+
+	e.eb = new BehaviorStandard(&e);
+	e.stats.load("enemies/" + type_id + ".txt");
+	e.type = type_id;
+
+	if (e.stats.animations == "")
+		cerr << "Warning: no animation file specified for entity: " << type_id << endl;
+	if (e.stats.sfx_prefix == "")
+		cerr << "Warning: no sfx_prefix specified for entity: " << type_id << endl;
+
+	if (!loadAnimations(&e)) {
+		cerr << "Warning: could not load animations for enemy type" << e.stats.animations << endl;
+	}
+	if (!loadSounds(e.stats.sfx_prefix)) {
+		cerr << "Warning: could not load sounds prefix: " << e.stats.sfx_prefix << endl;
+	}
+
+	prototypes.push_back(e);
+
+	return new Enemy(prototypes.back());
+}
+
 /**
  * When loading a new map, we eliminate existing enemies and load the new ones.
  * The map will have loaded Entity blocks into an array; retrieve the Enemies and init them
@@ -100,17 +115,11 @@ void EnemyManager::handleNewMap () {
 	Map_Enemy me;
 
 	// delete existing enemies
-	for (unsigned int i=0; i < enemies.size(); i++)
+	for (unsigned int i=0; i < enemies.size(); i++) {
+		AnimationManager::instance()->decreaseCount(enemies[i]->animationSet->getName());
 		delete enemies[i];
-
-	enemies.clear();
-
-	// free shared resources
-	for (unsigned j=0; j<sprites.size(); j++) {
-		SDL_FreeSurface(sprites[j]);
 	}
-	sprites.clear();
-	gfx_prefixes.clear();
+	enemies.clear();
 
 	for (unsigned j=0; j<sound_phys.size(); j++) {
 		Mix_FreeChunk(sound_phys[j]);
@@ -126,15 +135,14 @@ void EnemyManager::handleNewMap () {
 	sound_die.clear();
 	sound_critdie.clear();
 
+	prototypes.clear();
+
 	// load new enemies
 	while (!map->enemies.empty()) {
 		me = map->enemies.front();
 		map->enemies.pop();
 
-		Enemy *e = new Enemy(powers, map);
-
-		// factory
-		e->eb = new BehaviorStandard(e);
+		Enemy *e = getEnemyPrototype(me.type);
 
 		e->stats.waypoints = me.waypoints;
 		e->stats.pos.x = me.pos.x;
@@ -142,24 +150,12 @@ void EnemyManager::handleNewMap () {
 		e->stats.direction = me.direction;
 		e->stats.wander = me.wander;
 		e->stats.wander_area = me.wander_area;
-		e->stats.load("enemies/" + me.type + ".txt");
-		if (e->stats.animations != "") {
-			// load the animation file if specified
-			e->loadAnimations("animations/" + e->stats.animations + ".txt");
-		}
-		else {
-			cerr << "Warning: no animation file specified for entity: " << me.type << endl;
-		}
-		if (!loadGraphics(e->stats.gfx_prefix)) {
-			cerr << "Warning: could not load graphics prefix: " << e->stats.gfx_prefix << endl;
-			continue;
-		}
-		if (!loadSounds(e->stats.sfx_prefix)) {
-			cerr << "Warning: could not load sounds prefix: " << e->stats.sfx_prefix << endl;
-			continue;
-		}
+
 		enemies.push_back(e);
+
+		map->collider.block(me.pos.x, me.pos.y);
 	}
+	AnimationManager::instance()->cleanUp();
 }
 
 /**
@@ -184,17 +180,24 @@ void EnemyManager::handleSpawn() {
 		e->stats.load("enemies/" + espawn.type + ".txt");
 		if (e->stats.animations != "") {
 			// load the animation file if specified
-			e->loadAnimations("animations/" + e->stats.animations + ".txt");
+			string animationname = "animations/enemies/"+e->stats.animations + ".txt";
+			AnimationManager::instance()->increaseCount(animationname);
+			e->animationSet = AnimationManager::instance()->getAnimationSet(animationname);
+			if (e->animationSet)
+				e->activeAnimation = e->animationSet->getAnimation(e->animationSet->starting_animation);
+			else
+				cout << "Warning: animations file could not be loaded for " << espawn.type << endl;
 		}
 		else {
 			cout << "Warning: no animation file specified for entity: " << espawn.type << endl;
 		}
-		loadGraphics(e->stats.gfx_prefix);
 		loadSounds(e->stats.sfx_prefix);
 
 		// special animation state for spawning enemies
 		e->stats.cur_state = ENEMY_SPAWN;
 		enemies.push_back(e);
+
+		map->collider.block(espawn.pos.x, espawn.pos.y);
 	}
 }
 
@@ -207,17 +210,14 @@ void EnemyManager::logic() {
 
 	for (unsigned int i=0; i < enemies.size(); i++) {
 
-		int pref_id = -1;
-
-
 		// hazards are processed after Avatar and Enemy[]
 		// so process and clear sound effects from previous frames
 		// check sound effects
 		if (audio == true) {
 			vector<string>::iterator found = find (sfx_prefixes.begin(), sfx_prefixes.end(), enemies[i]->stats.sfx_prefix);
-			pref_id = distance(sfx_prefixes.begin(), found);
+			unsigned pref_id = distance(sfx_prefixes.begin(), found);
 
-			if (pref_id < 0 || pref_id >= static_cast<int>(sfx_prefixes.size())) {
+			if (pref_id >= sfx_prefixes.size()) {
 				cerr << "ERROR: enemy sfx_prefix doesn't match registered prefixes (enemy: '"
 					 << enemies[i]->stats.name << "', sfx_prefix: '"
 					 << enemies[i]->stats.sfx_prefix << "')" << endl;
@@ -241,6 +241,7 @@ void EnemyManager::logic() {
 		enemies[i]->stats.hero_pos = hero_pos;
 		enemies[i]->stats.hero_alive = hero_alive;
 		enemies[i]->logic();
+
 	}
 }
 
@@ -269,10 +270,10 @@ Enemy* EnemyManager::enemyFocus(Point mouse, Point cam, bool alive_only) {
 /**
  * If an enemy has died, reward the hero with experience points
  */
-void EnemyManager::checkEnemiesforXP(StatBlock *stats) {
+void EnemyManager::checkEnemiesforXP(CampaignManager *camp) {
 	for (unsigned int i=0; i < enemies.size(); i++) {
 		if (enemies[i]->reward_xp) {
-			stats->xp += enemies[i]->stats.xp;
+			camp->rewardXP(enemies[i]->stats.xp, false);
 			enemies[i]->reward_xp = false; // clear flag
 		}
 	}
@@ -282,35 +283,29 @@ void EnemyManager::checkEnemiesforXP(StatBlock *stats) {
  * addRenders()
  * Map objects need to be drawn in Z order, so we allow a parent object (GameEngine)
  * to collect all mobile sprites each frame.
- *
- * This wrapper function is necessary because EnemyManager holds shared sprites for identical-looking enemies
  */
 void EnemyManager::addRenders(vector<Renderable> &r, vector<Renderable> &r_dead) {
 	vector<Enemy*>::iterator it;
-	for (it = enemies.begin(); it != enemies.end(); it++) {
-		Renderable re = (*it)->getRender();
-		vector<string>::iterator found = find(gfx_prefixes.begin(), gfx_prefixes.end(), (*it)->stats.gfx_prefix);
-		if (found != gfx_prefixes.end()) {
-			int sprite_index = distance(gfx_prefixes.begin(), found);
-			re.sprite = sprites[sprite_index];
-		}
-
-		// draw corpses below objects so that floor loot is more visible
+	for (it = enemies.begin(); it != enemies.end(); ++it) {
 		bool dead = (*it)->stats.corpse;
-		(dead ? r_dead : r).push_back(re);
+		if (!dead || (dead && (*it)->stats.corpse_ticks > 0)) {
+			Renderable re = (*it)->getRender();
 
-		(*it)->stats.updateEffects();
-		re = powers->renderEffects(&(*it)->stats);
-		(dead ? r_dead : r).push_back(re);
+			// draw corpses below objects so that floor loot is more visible
+			(dead ? r_dead : r).push_back(re);
+
+			(*it)->stats.updateEffects();
+			re = powers->renderEffects(&(*it)->stats);
+			(dead ? r_dead : r).push_back(re);
+		}
 	}
 }
 
 EnemyManager::~EnemyManager() {
-	for (unsigned int i=0; i < enemies.size(); i++)
+	for (unsigned int i=0; i < enemies.size(); i++) {
+		AnimationManager::instance()->decreaseCount(enemies[i]->animationSet->getName());
 		delete enemies[i];
-
-	for (unsigned i=0; i<sprites.size(); i++)
-		SDL_FreeSurface(sprites[i]);
+	}
 
 	for (unsigned i=0; i<sound_phys.size(); i++) {
 		Mix_FreeChunk(sound_phys[i]);

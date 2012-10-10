@@ -1,5 +1,6 @@
 /*
 Copyright © 2011-2012 Clint Bellanger
+Copyright © 2012 Stefan Beller
 
 This file is part of FLARE.
 
@@ -27,17 +28,16 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 #include "Enemy.h"
 #include "Utils.h"
 #include "PowerManager.h"
+#include "CampaignManager.h"
 
 class EnemyManager {
 private:
 
 	MapRenderer *map;
 	PowerManager *powers;
-	bool loadGraphics(const std::string& type_id);
-	bool loadSounds(const std::string& type_id);
 
-	std::vector<std::string> gfx_prefixes;
-	std::vector<SDL_Surface*> sprites;
+	bool loadSounds(const std::string& type_id);
+	bool loadAnimations(Enemy *e);
 
 	std::vector<std::string> sfx_prefixes;
 	std::vector<Mix_Chunk*> sound_phys;
@@ -46,6 +46,16 @@ private:
 	std::vector<Mix_Chunk*> sound_die;
 	std::vector<Mix_Chunk*> sound_critdie;
 
+	std::vector<std::string> anim_prefixes;
+	std::vector<std::vector<Animation*> > anim_entities;
+
+	/**
+	 * callee is responsible for deleting returned enemy object
+	 */
+	Enemy *getEnemyPrototype(const std::string& type_id);
+
+	std::vector<Enemy> prototypes;
+
 public:
 	EnemyManager(PowerManager *_powers, MapRenderer *_map);
 	~EnemyManager();
@@ -53,7 +63,7 @@ public:
 	void handleSpawn();
 	void logic();
 	void addRenders(std::vector<Renderable> &r, std::vector<Renderable> &r_dead);
-	void checkEnemiesforXP(StatBlock *stats);
+	void checkEnemiesforXP(CampaignManager *camp);
 	Enemy *enemyFocus(Point mouse, Point cam, bool alive_only);
 
 	// vars

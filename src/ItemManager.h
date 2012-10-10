@@ -34,6 +34,10 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 #include <stdint.h>
 #include <vector>
 
+#define VENDOR_BUY 0
+#define VENDOR_SELL 1
+#define PLAYER_INV 2
+
 class StatBlock;
 
 const int REQUIRES_PHYS = 0;
@@ -80,8 +84,7 @@ public:
 	int set;              // item can be attached to item set
 	int quality;          // low, normal, high, epic; corresponds to item name color
 	std::string type;     // equipment slot or base item type
-	int icon_small;       // icon index on small pixel sheet
-	int icon_large;       // icon index on large pixel sheet (used for equippable items)
+	int icon;             // icon index on small pixel sheet
 	int dmg_melee_min;    // minimum damage amount (melee)
 	int dmg_melee_max;    // maximum damage amount (melee)
 	int dmg_ranged_min;   // minimum damage amount (ranged)
@@ -108,13 +111,14 @@ public:
 	std::string pickup_status; // when this item is picked up, set a campaign state (usually for quest items)
 	std::string stepfx;        // sound effect played when walking (armors only)
 
+	int getSellPrice();
+
 	Item() {
 		name = "";
 		level = 0;
 		set = 0;
 		quality = ITEM_QUALITY_NORMAL;
-		icon_small = 0;
-		icon_large = 0;
+		icon= 0;
 		type = "other";
 		dmg_melee_min = 0;
 		dmg_melee_max = 0;
@@ -172,8 +176,7 @@ public:
 
 class ItemManager {
 private:
-	SDL_Surface *icons_small;
-	SDL_Surface *icons_large; // item db is the only module that currently uses the 64px icons
+	SDL_Surface *icons;
 	SDL_Rect src;
 	SDL_Rect dest;
 	Mix_Chunk *sfx[12];
@@ -200,7 +203,7 @@ public:
 	void renderIcon(ItemStack stack, int x, int y, int size);
 	void playSound(int item);
 	void playCoinsSound();
-	TooltipData getTooltip(int item, StatBlock *stats, bool vendor_view);
+	TooltipData getTooltip(int item, StatBlock *stats, int context);
 	TooltipData getShortTooltip(ItemStack item);
 	std::string getItemType(std::string _type);
 

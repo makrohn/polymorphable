@@ -32,24 +32,32 @@ class TooltipData;
 
 class MenuItemStorage : public ItemStorage {
 protected:
+	void loadGraphics();
+	void renderHighlight(int x, int y, int _icon_size);
 	std::vector<SDL_Rect> area;
-	int icon_size;
+	int * icon_size;
 	int nb_cols;
 
 public:
 	void init(int _slot_number, ItemManager *_items, SDL_Rect _area, int icon_size, int nb_cols);
 	void init(int _slot_number, ItemManager *_items, std::vector<SDL_Rect> _area, std::vector<std::string> _slot_type);
+	~MenuItemStorage();
 
 	// rendering
 	void render();
 	int slotOver(Point mouse);
-	TooltipData checkTooltip(Point mouse, StatBlock *stats, bool vendor_view);
+	TooltipData checkTooltip(Point mouse, StatBlock *stats, int context);
 	ItemStack click(InputState * input);
 	void itemReturn(ItemStack stack);
 	void fillEquipmentSlots();
+	void highlightMatching(std::string type);
+	void highlightClear();
 	std::vector<std::string> slot_type;
 
 	int drag_prev_slot;
+
+	bool * highlight;
+	SDL_Surface * highlight_image;
 };
 
 #endif

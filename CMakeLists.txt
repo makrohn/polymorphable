@@ -2,29 +2,30 @@ Project (Flare)
 cmake_minimum_required (VERSION 2.6)
 
 Set (PACKAGE "FLARE")
-Set (VERSION "0.16")
+Set (VERSION "0.17")
 
 
 # Default definitions
 if (MSVC)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /wd4099 /wd4244")
 else (MSVC)
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wunused -Wshadow -Woverloaded-virtual")
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-math-errno -fno-exceptions")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wunused -Wshadow -Woverloaded-virtual -Wunreachable-code")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-math-errno -fno-exceptions -ffast-math")
+  set(CMAKE_LD_FLAGS "-fwhole-program")
 endif (MSVC)
 
 if (CMAKE_CXX_COMPILER MATCHES "clang")
   # clang needs lstdc++ linked explicitly:
-  set(CMAKE_LD_FLAGS "-lstdc++")
+  set(CMAKE_LD_FLAGS "${CMAKE_LD_FLAGS} -lstdc++")
 else (CMAKE_CXX_COMPILER MATCHES "clang")
   # assume gcc:
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-enforce-eh-specs")
 endif (CMAKE_CXX_COMPILER MATCHES "clang")
 
 if(CMAKE_BUILD_TYPE STREQUAL "Release")
-  set(CMAKE_CXX_FLAGS_RELEASE "-O2 -g0 -flto")
+  set(CMAKE_CXX_FLAGS_RELEASE "-O2 -g0")
 elseif(CMAKE_BUILD_TYPE STREQUAL "RelWithDebInfo")
-  set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "-O2 -g -flto")
+  set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "-O2 -g")
 elseif(CMAKE_BUILD_TYPE STREQUAL "MinSizeRel")
   set(CMAKE_CXX_FLAGS_MINSIZEREL "-Os -g0")
 elseif(CMAKE_BUILD_TYPE STREQUAL "Debug")
@@ -79,6 +80,8 @@ EndIf (NOT SDLTTF_FOUND)
 Set (FLARE_SOURCES
 	./src/Entity.cpp
 	./src/Animation.cpp
+	./src/AnimationManager.cpp
+	./src/AnimationSet.cpp
 	./src/AStarNode.cpp
 	./src/Avatar.cpp
 	./src/BehaviorStandard.cpp
@@ -100,6 +103,7 @@ Set (FLARE_SOURCES
 	./src/GetText.cpp
 	./src/Hazard.cpp
 	./src/HazardManager.cpp
+	./src/ImageManager.cpp
 	./src/InputState.cpp
 	./src/ItemManager.cpp
 	./src/ItemStorage.cpp

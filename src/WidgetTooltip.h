@@ -1,5 +1,6 @@
 /*
 Copyright © 2011-2012 Clint Bellanger
+Copyright © 2012 Stefan Beller
 
 This file is part of FLARE.
 
@@ -28,11 +29,10 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 #include <SDL.h>
 #include <SDL_image.h>
 
+#include <vector>
 
 const int STYLE_FLOAT = 0;
 const int STYLE_TOPLABEL = 1;
-
-const int TOOLTIP_MAX_LINES = 25;
 
 /**
  * TooltipData contains the text and line colors for one tool tip.
@@ -46,19 +46,15 @@ const int TOOLTIP_MAX_LINES = 25;
  */
 class TooltipData {
 public:
-	std::string lines[TOOLTIP_MAX_LINES];
-	SDL_Color colors[TOOLTIP_MAX_LINES];
-	int num_lines;
+	std::vector<std::string> lines;
+	std::vector<SDL_Color> colors;
 	SDL_Surface *tip_buffer;
+	SDL_Color default_color;
 
 	// Constructor
 	TooltipData() {
-		num_lines = 0;
 		tip_buffer = NULL;
-		for (int i=0; i<TOOLTIP_MAX_LINES; i++) {
-			lines[i] = "";
-			colors[i] = font->getColor("widget_normal");
-		}
+		default_color = font->getColor("widget_normal");
 	}
 
 	// Deconstructor
@@ -74,28 +70,23 @@ public:
 		// Otherwise the same buffer will be deleted twice, causing a mem error
 		tip_buffer = NULL;
 
-		num_lines = tdSource.num_lines;
-		for (int i=0; i<tdSource.num_lines; i++) {
-			lines[i] = tdSource.lines[i];
-			colors[i] = tdSource.colors[i];
+		lines.clear();
+		colors.clear();
+
+		for (unsigned int i=0; i<tdSource.lines.size(); i++) {
+			lines.push_back(tdSource.lines[i]);
+			colors.push_back(tdSource.colors[i]);
 		}
 	}
 
 	// Assignment Operator
 	TooltipData& operator= (const TooltipData &tdSource) {
 
-		// if the buffer already exists, deallocate it
-		SDL_FreeSurface(tip_buffer);
+		clear();
 
-		// DO NOT copy the buffered text render
-		// Allow the new copy to create its own buffer
-		// Otherwise the same buffer will be deleted twice, causing a mem error
-		tip_buffer = NULL;
-
-		num_lines = tdSource.num_lines;
-		for (int i=0; i<tdSource.num_lines; i++) {
-			lines[i] = tdSource.lines[i];
-			colors[i] = tdSource.colors[i];
+		for (unsigned int i=0; i<tdSource.lines.size(); i++) {
+			lines.push_back(tdSource.lines[i]);
+			colors.push_back(tdSource.colors[i]);
 		}
 
 		return *this;
@@ -103,14 +94,58 @@ public:
 
 	// clear this existing tooltipdata
 	void clear() {
-		num_lines = 0;
-		for (int i=0; i<TOOLTIP_MAX_LINES; i++) {
-			lines[i] = "";
-			colors[i] = font->getColor("widget_normal");
-		}
+		lines.clear();
+		colors.clear();
 		SDL_FreeSurface(tip_buffer);
 		tip_buffer = NULL;
+	}
 
+	// add text with support for new lines
+	void addText(std::string text, SDL_Color color) {
+		lines.push_back("");
+		colors.push_back(color);
+		for (unsigned int i=0; i<lines.size(); i++) {
+			if (lines[i] == "") {
+				colors[i] = color;
+				for (unsigned int j=0; j<text.length(); j++) {
+					if (text[j] == '\n') {
+						// insert a space so intentionally blank lines are counted
+						if (lines.back() == "") lines.back() += ' ';
+						lines.push_back("");
+						colors.push_back(color);
+					} else {
+						lines.back() += text[j];
+					}
+				}
+				break;
+			}
+		}
+	}
+
+	void addText(std::string text) {
+		addText(text,default_color);
+	}
+
+	// check if there's exisiting tooltip data
+	bool isEmpty() {
+		if (!lines.empty()) return false;
+		return true;
+	}
+
+	// compare the first line
+	bool compareFirstLine(std::string text) {
+		if (lines.empty()) return false;
+		if (lines[0] != text) return false;
+		return true;
+	}
+
+	// compare all lines
+	bool compare(TooltipData *tip) {
+		if (lines.size() != tip->lines.size()) return false;
+		for (unsigned int i=0; i<lines.size(); i++) {
+			if (lines[i] != tip->lines[i]) return false;
+		}
+		return true;
 	}
 
 };

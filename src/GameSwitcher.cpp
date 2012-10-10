@@ -1,6 +1,7 @@
 /*
 Copyright © 2011-2012 Clint Bellanger
 Copyright © 2012 Igor Paliychuk
+Copyright © 2012 Stefan Beller
 
 This file is part of FLARE.
 
@@ -120,6 +121,7 @@ void GameSwitcher::loadFPS() {
 	} else fprintf(stderr, "Unable to open menus/fps.txt!\n");
 
 	// this is a dummy string used to approximate the fps position when aligned to the right
+	font->setFont("font_regular");
 	int w = font->calc_width("00 fps");
 	int h = font->getLineHeight();
 

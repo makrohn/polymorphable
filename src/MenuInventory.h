@@ -82,7 +82,7 @@ public:
 	void add( ItemStack stack, int area = CARRIED, int slot = -1);
 	void remove(int item);
 	void addCurrency(int count);
-	bool buy(ItemStack stack);
+	bool buy(ItemStack stack, int tab);
 	bool sell(ItemStack stack);
 	bool stashAdd(ItemStack stack);
 
@@ -94,6 +94,8 @@ public:
 	void applyEquipment(ItemStack *equipped);
 	void applyItemStats(ItemStack *equipped);
 	void applyItemSetBonuses(ItemStack *equipped);
+
+	void clearHighlight();
 
 	SDL_Rect carried_area;
 	std::vector<SDL_Rect> equipped_area;

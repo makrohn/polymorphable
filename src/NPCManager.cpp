@@ -1,5 +1,6 @@
 /*
 Copyright © 2011-2012 Clint Bellanger
+Copyright © 2012 Stefan Beller
 
 This file is part of FLARE.
 
@@ -22,6 +23,7 @@ FLARE.  If not, see http://www.gnu.org/licenses/
  * Most commonly this involves vendor and conversation townspeople.
  */
 
+#include "Animation.h"
 #include "FileParser.h"
 #include "NPCManager.h"
 #include "NPC.h"
@@ -52,7 +54,7 @@ NPCManager::NPCManager(MapRenderer *_map, LootManager *_loot, ItemManager *_item
 		}
 		infile.close();
 	} else fprintf(stderr, "Unable to open engine/tooltips.txt!\n");
-	
+
 }
 
 void NPCManager::addRenders(std::vector<Renderable> &r) {
@@ -108,10 +110,11 @@ int NPCManager::checkNPCClick(Point mouse, Point cam) {
 
 		p = map_to_screen(npcs[i]->pos.x, npcs[i]->pos.y, cam.x, cam.y);
 
-		r.w = npcs[i]->render_size.x;
-		r.h = npcs[i]->render_size.y;
-		r.x = p.x - npcs[i]->render_offset.x;
-		r.y = p.y - npcs[i]->render_offset.y;
+		Renderable ren = npcs[i]->activeAnimation->getCurrentFrame(npcs[i]->direction);
+		r.w = ren.src.w;
+		r.h = ren.src.h;
+		r.x = p.x - ren.offset.x;
+		r.y = p.y - ren.offset.y;
 
 		if (isWithin(r, mouse)) {
 			return i;
@@ -131,10 +134,11 @@ void NPCManager::renderTooltips(Point cam, Point mouse) {
 
 		p = map_to_screen(npcs[i]->pos.x, npcs[i]->pos.y, cam.x, cam.y);
 
-		r.w = npcs[i]->render_size.x;
-		r.h = npcs[i]->render_size.y;
-		r.x = p.x - npcs[i]->render_offset.x;
-		r.y = p.y - npcs[i]->render_offset.y;
+		Renderable ren = npcs[i]->activeAnimation->getCurrentFrame(npcs[i]->direction);
+		r.w = ren.src.w;
+		r.h = ren.src.h;
+		r.x = p.x - ren.offset.x;
+		r.y = p.y - ren.offset.y;
 
 		if (isWithin(r, mouse)) {
 
@@ -142,10 +146,9 @@ void NPCManager::renderTooltips(Point cam, Point mouse) {
 			p.y -= tooltip_margin;
 
 			// use current tip or make a new one?
-			if (tip_buf.lines[0] != npcs[i]->name) {
+			if (!tip_buf.compareFirstLine(npcs[i]->name)) {
 				tip_buf.clear();
-				tip_buf.num_lines = 1;
-				tip_buf.lines[0] = npcs[i]->name;
+				tip_buf.addText(npcs[i]->name);
 			}
 
 			tip->render(tip_buf, p, STYLE_TOPLABEL);

@@ -1,6 +1,7 @@
 /*
 Copyright © 2011-2012 Clint Bellanger
 Copyright © 2012 Igor Paliychuk
+Copyright © 2012 Stefan Beller
 
 This file is part of FLARE.
 
@@ -44,8 +45,7 @@ extern std::string FILE_KEYBINDINGS;  // Name of the key bindings file (e.g. "ke
 extern unsigned short FRAME_W;
 extern unsigned short FRAME_H;
 
-extern unsigned short ICON_SIZE_SMALL;
-extern unsigned short ICON_SIZE_LARGE;
+extern unsigned short ICON_SIZE;
 
 // Audio and Video Settings
 extern unsigned short MUSIC_VOLUME;
@@ -61,6 +61,7 @@ extern short MIN_VIEW_W;
 extern short MIN_VIEW_H;
 extern bool DOUBLEBUF;
 extern bool HWSURFACE;
+extern bool CHANGE_GAMMA;
 extern float GAMMA;
 extern bool TEXTURE_QUALITY;
 extern bool ANIMATED_TILES;
@@ -80,6 +81,8 @@ extern std::string DEFAULT_NAME;
 extern bool SAVE_HPMP;
 extern bool ENABLE_PLAYGAME;
 extern bool SHOW_FPS;
+extern int CORPSE_TIMEOUT;
+extern bool SELL_WITHOUT_VENDOR;
 
 // Tile Settings
 extern unsigned short UNITS_PER_TILE;
@@ -121,12 +124,5 @@ bool loadSettings();
 bool saveSettings();
 bool loadDefaults();
 
-const std::string binding_name[] = {"Cancel", "Accept", "Up", "Down", "Left", "Right",
-									"Bar1", "Bar2", "Bar3", "Bar4", "Bar5", "Bar6",
-									"Bar7", "Bar8", "Bar9", "Bar0", "Character", "Inventory",
-									"Powers", "Log", "Main1", "Main2", "Ctrl",
-									"Shift", "Delete"};
-
-const std::string mouse_button[] = {"lmb", "mmb", "rmb", "wheel up", "wheel down", "mbx1", "mbx2"};
 
 #endif
