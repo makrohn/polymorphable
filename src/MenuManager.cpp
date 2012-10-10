@@ -164,7 +164,7 @@ MenuManager::MenuManager(PowerManager *_powers, StatBlock *_stats, CampaignManag
  */
 void MenuManager::loadIcons() {
 
-	icons = IMG_Load(mods->locate("images/icons/icons_small.png").c_str());
+	icons = IMG_Load(mods->locate("images/icons/icons.png").c_str());
 	if(!icons) {
 		fprintf(stderr, "Couldn't load icons: %s\n", IMG_GetError());
 		SDL_Quit();
@@ -196,9 +196,9 @@ void MenuManager::renderIcon(int icon_id, int x, int y) {
 	SDL_Rect dest;
 	dest.x = x;
 	dest.y = y;
-	src.w = src.h = dest.w = dest.h = ICON_SIZE_SMALL;
-	src.x = (icon_id % 16) * ICON_SIZE_SMALL;
-	src.y = (icon_id / 16) * ICON_SIZE_SMALL;
+	src.w = src.h = dest.w = dest.h = ICON_SIZE;
+	src.x = (icon_id % 16) * ICON_SIZE;
+	src.y = (icon_id / 16) * ICON_SIZE;
 	SDL_BlitSurface(icons, &src, screen, &dest);
 }
 
@@ -565,6 +565,7 @@ void MenuManager::logic() {
 						drop_stack = drag_stack;
 						drag_stack.item = 0;
 						drag_stack.quantity = 0;
+						inv->clearHighlight();
 					}
 					else {
 						inv->itemReturn(drag_stack);
@@ -697,20 +698,14 @@ void MenuManager::render() {
 		tip_new = act->checkTooltip(inpt->mouse);
 	}
 
-	if (tip_new.num_lines > 0) {
+	if (!tip_new.isEmpty()) {
 
 		// when we render a tooltip it buffers the rasterized text for performance.
 		// If this new tooltip is the same as the existing one, reuse.
 
-		for (int i=0; i<TOOLTIP_MAX_LINES; i++) {
-			// if both lines are empty, we can assume the tooltip has no more content
-			if (tip_new.lines[i] == "" && tip_buf.lines[i] == "") break;
-
-			if (tip_new.lines[i] != tip_buf.lines[i]) {
-				tip_buf.clear();
-				tip_buf = tip_new;
-				break;
-			}
+		if (!tip_new.compare(&tip_buf)) {
+			tip_buf.clear();
+			tip_buf = tip_new;
 		}
 		tip->render(tip_buf, inpt->mouse, STYLE_FLOAT);
 	}
@@ -718,9 +713,9 @@ void MenuManager::render() {
 	// draw icon under cursor if dragging
 	if (dragging) {
 		if (drag_src == DRAG_SRC_INVENTORY || drag_src == DRAG_SRC_VENDOR || drag_src == DRAG_SRC_STASH)
-			items->renderIcon(drag_stack, inpt->mouse.x - ICON_SIZE_SMALL/2, inpt->mouse.y - ICON_SIZE_SMALL/2, ICON_SIZE_SMALL);
+			items->renderIcon(drag_stack, inpt->mouse.x - ICON_SIZE/2, inpt->mouse.y - ICON_SIZE/2, ICON_SIZE);
 		else if (drag_src == DRAG_SRC_POWERS || drag_src == DRAG_SRC_ACTIONBAR)
-			renderIcon(powers->powers[drag_power].icon, inpt->mouse.x-ICON_SIZE_SMALL/2, inpt->mouse.y-ICON_SIZE_SMALL/2);
+			renderIcon(powers->powers[drag_power].icon, inpt->mouse.x-ICON_SIZE/2, inpt->mouse.y-ICON_SIZE/2);
 	}
 
 }

@@ -85,10 +85,10 @@ void MenuStash::loadGraphics() {
 void MenuStash::update() {
 	slots_area.x += window_area.x;
 	slots_area.y += window_area.y;
-	slots_area.w = slots_cols*ICON_SIZE_SMALL;
-	slots_area.h = slots_rows*ICON_SIZE_SMALL;
+	slots_area.w = slots_cols*ICON_SIZE;
+	slots_area.h = slots_rows*ICON_SIZE;
 
-	stock.init( STASH_SLOTS, items, slots_area, ICON_SIZE_SMALL, slots_cols);
+	stock.init( STASH_SLOTS, items, slots_area, ICON_SIZE, slots_cols);
 
 	closeButton->pos.x = window_area.x+close_pos.x;
 	closeButton->pos.y = window_area.y+close_pos.y;
@@ -229,7 +229,7 @@ void MenuStash::add(ItemStack stack) {
 }
 
 TooltipData MenuStash::checkTooltip(Point mouse) {
-	return stock.checkTooltip( mouse, stats, false);
+	return stock.checkTooltip( mouse, stats, PLAYER_INV);
 }
 
 bool MenuStash::full(int item) {
