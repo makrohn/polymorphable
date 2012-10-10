@@ -6,10 +6,10 @@ close=294,2
 help=2,2,24,24
 
 # define x,y position, slot size, slot type, slot description/name
-equipment_slot=96,48,64,main,
+equipment_slot=128,80,32,main,
 slot_name=Main Hand
 
-equipment_slot=160,48,64,body
+equipment_slot=160,80,32,body
 slot_name=Body
 
 #equipment_slot=160,48,64,off
@@ -18,9 +18,9 @@ slot_name=Body
 #equipment_slot=224,48,64,artifact
 #slot_name=Artifact
 
-carried_area=32,128
-carried_cols=8
-carried_rows=8
+carried_area=64,160
+carried_cols=6
+carried_rows=6
 
 caption=160,8,center,top
-currency=288,114,right,top
+currency=160,128,center,top
