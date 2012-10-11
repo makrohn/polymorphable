@@ -398,29 +398,32 @@ void StatBlock::recalc() {
 	mentdef = get_mental() + get_defense();
 	physment = get_physical() + get_mental();
 	offdef = get_offense() + get_defense();
-
-	int stat_sum = get_physical() + get_mental() + get_offense() + get_defense();
-
-	// TODO: These class names do. not get caught by xgettext, so figure out
-	// a way to translate them.
-	// determine class by level
-	if (xp >= 700)
-		character_class = msg->get("Therianthrope");
-	else if (xp >= 600)
-		character_class = msg->get("Metamorph");
-	else if (xp >= 500)
-		character_class = msg->get("Skinwalker");
-	else if (xp >= 400)
-		character_class = msg->get("Animagus");
-	else if (xp >= 300)
-		character_class = msg->get("Shapeshifter");
-	else if (xp >= 200)
-		character_class = msg->get("Doppelganger");
-	else if (xp >= 100)
-		character_class = msg->get("Chameleon");
-
-	// Level 1
-	else character_class = msg->get("Girl");
+	FileParser infile;
+	std::string titlename = character_class;
+	int testxp = 0;
+	bool foundTitle = false;
+	if(infile.open(mods->locate("engine/titles.txt"))) {
+		while (infile.next()) {
+			if (infile.new_section) {
+				if (foundTitle) {
+					break;
+				}
+				foundTitle = true;
+			}
+			if (infile.section == "title") {
+				if (infile.key == "xp") {
+					if (xp <= toInt(infile.val))
+						foundTitle = false;
+				}
+				else if (infile.key == "title") {
+					titlename = infile.val;
+				}
+			}
+		}
+	character_class = msg->get(titlename);
+	infile.close(); 
+	} 
+	else fprintf(stderr, "Unable to open engine/titles.txt!\n");
 }
 
 /**
