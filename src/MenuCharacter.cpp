@@ -240,14 +240,12 @@ void MenuCharacter::loadGraphics() {
 	background = IMG_Load(mods->locate("images/menus/character.png").c_str());
 	if(!background) {
 		fprintf(stderr, "Couldn't load image: %s\n", IMG_GetError());
-		SDL_Quit();
-		exit(1);
+	} else {
+		// optimize
+		SDL_Surface *cleanup = background;
+		background = SDL_DisplayFormatAlpha(background);
+		SDL_FreeSurface(cleanup);
 	}
-
-	// optimize
-	SDL_Surface *cleanup = background;
-	background = SDL_DisplayFormatAlpha(background);
-	SDL_FreeSurface(cleanup);
 
 }
 
@@ -546,7 +544,6 @@ bool MenuCharacter::checkUpgrade() {
 			newPowerNotification = true; //TODO: Only show if a NEW power is unlocked...
 			physical_up = false;
 			return true;
-			stats->check_title = true;
 		}
 		// mental
 		else if (mental_up) {
@@ -555,7 +552,6 @@ bool MenuCharacter::checkUpgrade() {
 			newPowerNotification = true;
 			mental_up = false;
 			return true;
-			stats->check_title = true;
 		}
 		// offense
 		else if (offense_up) {
@@ -564,7 +560,6 @@ bool MenuCharacter::checkUpgrade() {
 			newPowerNotification = true;
 			offense_up = false;
 			return true;
-			stats->check_title = true;
 		}
 		// defense
 		else if (defense_up) {
@@ -573,7 +568,6 @@ bool MenuCharacter::checkUpgrade() {
 			newPowerNotification = true;
 			defense_up = false;
 			return true;
-			stats->check_title = true;
 		}
 	}
 

@@ -203,6 +203,19 @@ StatBlock::StatBlock() {
 	avoidance_per_defense = 5;
 	crit_base = 5;
 	crit_per_level = 1;
+
+	ammo_arrows = 0;
+	direction = 0;
+	cur_state = 0;
+	chance_pursue = 0;
+	chance_flee = 0;
+	threat_range = 0;
+	turn_delay = 0;
+	turn_ticks = 0;
+	in_combat = 0;
+	join_combat = 0;
+	cooldown = 0;
+	activated_powerslot = 0;
 }
 
 /**
@@ -550,6 +563,8 @@ bool StatBlock::canUsePower(const Power &power, unsigned powerid) const {
 		&& (!power.requires_offense_weapon || wielding_offense)
 		&& (!power.requires_physical_weapon || wielding_physical)
 		&& mp >= power.requires_mp
+		&& (!power.sacrifice == false || hp > power.requires_hp)
+		&& (!power.sacrifice == true || hp >= power.requires_hp)
 		&& menu_powers->meetsUsageStats(powerid);
 
 }

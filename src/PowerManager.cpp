@@ -25,11 +25,11 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 #include "Animation.h"
 #include "AnimationSet.h"
 #include "AnimationManager.h"
-#include "CombatText.h"
 #include "FileParser.h"
 #include "Hazard.h"
 #include "SharedResources.h"
 #include "Settings.h"
+#include "SharedResources.h"
 #include "StatBlock.h"
 #include "MapCollision.h"
 #include "UtilsFileSystem.h"
@@ -152,6 +152,10 @@ void PowerManager::loadPowers(const std::string& filename) {
 			powers[input_id].requires_offense_weapon = toBool(infile.val);
 		else if (infile.key == "requires_mp")
 			powers[input_id].requires_mp = toInt(infile.val);
+		else if (infile.key == "requires_hp")
+			powers[input_id].requires_hp = toInt(infile.val);
+		else if (infile.key == "sacrifice")
+			powers[input_id].sacrifice = toBool(infile.val);
 		else if (infile.key == "requires_los")
 			powers[input_id].requires_los = toBool(infile.val);
 		else if (infile.key == "requires_empty_target")
@@ -708,9 +712,9 @@ void PowerManager::buff(int power_index, StatBlock *src_stats, Point target) {
 		else // avoid div by 0
 			heal_amt = heal_min;
 		if (src_stats->hero)
-			CombatText::Instance()->addMessage(msg->get("+%d HP",heal_amt), src_stats->pos, COMBAT_MESSAGE_BUFF, true);
+			comb->addMessage(msg->get("+%d HP",heal_amt), src_stats->pos, COMBAT_MESSAGE_BUFF, true);
 		else
-			CombatText::Instance()->addMessage(msg->get("+%d HP",heal_amt), src_stats->pos, COMBAT_MESSAGE_BUFF, false);
+			comb->addMessage(msg->get("+%d HP",heal_amt), src_stats->pos, COMBAT_MESSAGE_BUFF, false);
 		src_stats->hp += heal_amt;
 		if (src_stats->hp > src_stats->maxhp) src_stats->hp = src_stats->maxhp;
 	}
@@ -719,9 +723,9 @@ void PowerManager::buff(int power_index, StatBlock *src_stats, Point target) {
 	if (powers[power_index].buff_restore_hp > 0) {
 		int hp_amt = powers[power_index].buff_restore_hp;
 		if (src_stats->hero)
-			CombatText::Instance()->addMessage(msg->get("+%d HP",hp_amt), src_stats->pos, COMBAT_MESSAGE_BUFF, true);
+			comb->addMessage(msg->get("+%d HP",hp_amt), src_stats->pos, COMBAT_MESSAGE_BUFF, true);
 		else
-			CombatText::Instance()->addMessage(msg->get("+%d HP",hp_amt), src_stats->pos, COMBAT_MESSAGE_BUFF, false);
+			comb->addMessage(msg->get("+%d HP",hp_amt), src_stats->pos, COMBAT_MESSAGE_BUFF, false);
 		src_stats->hp += hp_amt;
 		if (src_stats->hp > src_stats->maxhp) src_stats->hp = src_stats->maxhp;
 	}
@@ -730,9 +734,9 @@ void PowerManager::buff(int power_index, StatBlock *src_stats, Point target) {
 	if (powers[power_index].buff_restore_mp > 0) {
 		int mp_amt = powers[power_index].buff_restore_mp;
 		if (src_stats->hero)
-			CombatText::Instance()->addMessage(msg->get("+%d MP",mp_amt), src_stats->pos, COMBAT_MESSAGE_BUFF, true);
+			comb->addMessage(msg->get("+%d MP",mp_amt), src_stats->pos, COMBAT_MESSAGE_BUFF, true);
 		else
-			CombatText::Instance()->addMessage(msg->get("+%d MP",mp_amt), src_stats->pos, COMBAT_MESSAGE_BUFF, false);
+			comb->addMessage(msg->get("+%d MP",mp_amt), src_stats->pos, COMBAT_MESSAGE_BUFF, false);
 		src_stats->mp += mp_amt;
 		if (src_stats->mp > src_stats->maxmp) src_stats->mp = src_stats->maxmp;
 	}
@@ -741,9 +745,9 @@ void PowerManager::buff(int power_index, StatBlock *src_stats, Point target) {
 	if (powers[power_index].buff_shield) {
 		int shield_amt = (int)ceil(src_stats->dmg_ment_max * powers[power_index].damage_multiplier / 100.0) + (src_stats->get_mental()*src_stats->bonus_per_mental);
 		if (src_stats->hero)
-			CombatText::Instance()->addMessage(msg->get("+%d Shield",shield_amt), src_stats->pos, COMBAT_MESSAGE_BUFF, true);
+			comb->addMessage(msg->get("+%d Shield",shield_amt), src_stats->pos, COMBAT_MESSAGE_BUFF, true);
 		else
-			CombatText::Instance()->addMessage(msg->get("+%d Shield",shield_amt), src_stats->pos, COMBAT_MESSAGE_BUFF, false);
+			comb->addMessage(msg->get("+%d Shield",shield_amt), src_stats->pos, COMBAT_MESSAGE_BUFF, false);
 		src_stats->shield_hp = src_stats->shield_hp_total = shield_amt;
 		src_stats->addEffect("shield",getEffectIcon("shield"));
 	}
@@ -1092,6 +1096,10 @@ bool PowerManager::activate(int power_index, StatBlock *src_stats, Point target)
 	if (src_stats->hero) {
 		if (powers[power_index].requires_mp > src_stats->mp)
 			return false;
+		if (powers[power_index].sacrifice == true && powers[power_index].requires_hp > src_stats->hp)
+				return false;
+		if (powers[power_index].sacrifice == false && powers[power_index].requires_hp >= src_stats->hp)
+				return false;
 	}
 
 	// logic for different types of powers are very different.  We allow these
@@ -1113,6 +1121,7 @@ bool PowerManager::activate(int power_index, StatBlock *src_stats, Point target)
 void PowerManager::payPowerCost(int power_index, StatBlock *src_stats) {
 	if (src_stats && src_stats->hero) {
 		if (powers[power_index].requires_mp > 0) src_stats->mp -= powers[power_index].requires_mp;
+		if (powers[power_index].requires_hp > 0) src_stats->hp -= powers[power_index].requires_hp;
 		if (powers[power_index].requires_item != -1) used_item = powers[power_index].requires_item;
 	}
 }
