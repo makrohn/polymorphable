@@ -216,6 +216,7 @@ multitarget=true
 cooldown=3000
 source_type=neutral
 requires_targeting=false
+sacrifice=true
 
 [power]
 id=33
