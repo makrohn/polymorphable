@@ -58,7 +58,7 @@ void BehaviorStandard::doUpkeep() {
 	e->stats.logic();
 
 	// heal rapidly while not in combat
-	if (!e->stats.in_combat && e->stats.hp_countdown_ticks == -1) {
+	if (!e->stats.in_combat) {
 		if (e->stats.alive && e->stats.hero_alive) {
 			e->stats.hp++;
 			if (e->stats.hp > e->stats.maxhp) e->stats.hp = e->stats.maxhp;

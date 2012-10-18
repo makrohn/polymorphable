@@ -117,7 +117,6 @@ StatBlock::StatBlock() {
 	blocking = false;
 	effects = vector<Effect>();
 	on_death_casted = false;
-	hp_countdown_ticks = -1;
 
 	// patrol waypoints
 	waypoint_pause = 0;
@@ -341,10 +340,6 @@ void StatBlock::load(const string& filename) {
 		else if (infile.key == "animations") animations = infile.val;
 		else if (infile.key == "animation_speed") animationSpeed = num;
 
- 	
-		// hp countdown
-		else if (infile.key == "hp_countdown_ticks") hp_countdown_ticks = num;
-
 		// hide enemy HP bar
 		else if (infile.key == "suppress_hp") suppress_hp = num;
 
@@ -422,13 +417,6 @@ void StatBlock::logic() {
 
 	// handle cooldowns
 	if (cooldown_ticks > 0) cooldown_ticks--; // global cooldown
-
-	// auto-decrease hp if set to do so
-	if (hp_countdown_ticks > 0) {
-		hp_countdown_ticks--;
-	}
-	if (hp_countdown_ticks % 30 == 0 && hp > 0) hp--;
-
 
 	for (int i=0; i<POWERSLOT_COUNT; i++) { // NPC/enemy powerslot cooldown
 		if (power_ticks[i] > 0) power_ticks[i]--;

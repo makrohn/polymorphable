@@ -274,7 +274,6 @@ public:
 	int activated_powerslot;
 	bool suppress_hp; // hide an enemy HP bar
 	bool on_death_casted;
-	int hp_countdown_ticks;
 
 	int loot_chance;
 	std::vector<std::string> item_classes; // which kind of loot is able to be dropped
