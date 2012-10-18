@@ -327,7 +327,7 @@ cooldown=6000
 
 [power]
 id=103
-name=Explode (enemy)
+name=Firebomb Explosion (enemy)
 type=effect
 icon=10
 description=Damages nearby enemies
@@ -348,6 +348,7 @@ multitarget=true
 cooldown=3000
 source_type=enemy
 requires_targeting=false
+sacrifice=true
 
 [power]
 id=104
@@ -372,6 +373,21 @@ multitarget=true
 cooldown=3000
 source_type=enemy
 requires_targeting=false
+sacrifice=true
+
+[power]
+id=105
+name=Tick
+type=effect
+icon=1
+new_state=cast
+requires_hp=1
+face=true
+use_hazard=true
+aim_assist=32
+starting_pos=melee
+allow_power_mod=true
+sacrifice=true
 
 [power]
 id=132

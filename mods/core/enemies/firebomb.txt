@@ -15,10 +15,13 @@ suppress_hp=1
 hp=3
 speed=0
 dspeed=0
-chance_pursue=0
+chance_pursue=100
+threat_range=1024
+melee_range=1024
+chance_melee_phys=100
+power_melee_phys=105
 chance_on_death=100
 power_on_death=103
-hp_countdown_ticks=60
 
 accuracy=100
 avoidance=0
