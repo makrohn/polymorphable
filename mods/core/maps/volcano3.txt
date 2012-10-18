@@ -171,122 +171,120 @@ sfx=quake.ogg
 
 [event]
 # Lava Trap
-type=run_once
+type=trap
 location=10,3,1,1
- =
+=
 power=33
 power_damage=100,100
-power_path=0,0,10,3
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=run_once
+type=trap
 location=11,3,1,1
+=
  =
 power=33
 power_damage=100,100
-power_path=0,0,11,3
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=run_once
+type=trap
 location=13,3,1,1
+=
  =
 power=33
 power_damage=100,100
-power_path=0,0,13,3
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=run_once
+type=trap
 location=12,3,1,1
+=
  =
 power=33
 power_damage=100,100
-power_path=0,0,12,3
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=run_once
+type=trap
 location=14,3,1,1
+=
  =
 power=33
 power_damage=100,100
-power_path=0,0,14,3
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=run_once
+type=trap
 location=15,3,1,1
+=
  =
 power=33
 power_damage=100,100
-power_path=0,0,15,3
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=run_once
+type=trap
 location=11,4,1,1
+=
  =
 power=33
 power_damage=100,100
-power_path=0,0,11,4
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=run_once
+type=trap
 location=10,4,1,1
- =
+=
 power=33
 power_damage=100,100
-power_path=0,0,10,4
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=run_once
+type=trap
 location=12,4,1,1
+=
  =
 power=33
 power_damage=100,100
-power_path=0,0,12,4
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=run_once
+type=trap
 location=13,4,1,1
+=
  =
 power=33
 power_damage=100,100
-power_path=0,0,13,4
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=run_once
+type=trap
 location=14,4,1,1
+=
  =
 power=33
 power_damage=100,100
-power_path=0,0,14,4
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=run_once
+type=trap
 location=15,4,1,1
+=
  =
 power=33
 power_damage=100,100
-power_path=0,0,15,4
 tooltip=Lava River
 
 [event]

@@ -176,111 +176,109 @@
     <property name="sfx" value="quake.ogg"/>
    </properties>
   </object>
-  <object name="Lava Trap" type="run_once" x="320" y="96" width="32" height="32">
+  <object name="Lava Trap" type="trap" x="320" y="96" width="32" height="32">
    <properties>
-    <property name=" " value=""/>
+    <property name="" value=""/>
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
-    <property name="power_path" value="0,0,10,3"/>
     <property name="tooltip" value="Lava River"/>
    </properties>
   </object>
-  <object name="Lava Trap" type="run_once" x="352" y="96" width="32" height="32">
+  <object name="Lava Trap" type="trap" x="352" y="96" width="32" height="32">
    <properties>
+    <property name="" value=""/>
     <property name=" " value=""/>
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
-    <property name="power_path" value="0,0,11,3"/>
     <property name="tooltip" value="Lava River"/>
    </properties>
   </object>
-  <object name="Lava Trap" type="run_once" x="416" y="96" width="32" height="32">
+  <object name="Lava Trap" type="trap" x="416" y="96" width="32" height="32">
    <properties>
+    <property name="" value=""/>
     <property name=" " value=""/>
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
-    <property name="power_path" value="0,0,13,3"/>
     <property name="tooltip" value="Lava River"/>
    </properties>
   </object>
-  <object name="Lava Trap" type="run_once" x="384" y="96" width="32" height="32">
+  <object name="Lava Trap" type="trap" x="384" y="96" width="32" height="32">
    <properties>
+    <property name="" value=""/>
     <property name=" " value=""/>
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
-    <property name="power_path" value="0,0,12,3"/>
     <property name="tooltip" value="Lava River"/>
    </properties>
   </object>
-  <object name="Lava Trap" type="run_once" x="448" y="96" width="32" height="32">
+  <object name="Lava Trap" type="trap" x="448" y="96" width="32" height="32">
    <properties>
+    <property name="" value=""/>
     <property name=" " value=""/>
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
-    <property name="power_path" value="0,0,14,3"/>
     <property name="tooltip" value="Lava River"/>
    </properties>
   </object>
-  <object name="Lava Trap" type="run_once" x="480" y="96" width="32" height="32">
+  <object name="Lava Trap" type="trap" x="480" y="96" width="32" height="32">
    <properties>
+    <property name="" value=""/>
     <property name=" " value=""/>
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
-    <property name="power_path" value="0,0,15,3"/>
     <property name="tooltip" value="Lava River"/>
    </properties>
   </object>
-  <object name="Lava Trap" type="run_once" x="352" y="128" width="32" height="32">
+  <object name="Lava Trap" type="trap" x="352" y="128" width="32" height="32">
    <properties>
+    <property name="" value=""/>
     <property name=" " value=""/>
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
-    <property name="power_path" value="0,0,11,4"/>
     <property name="tooltip" value="Lava River"/>
    </properties>
   </object>
-  <object name="Lava Trap" type="run_once" x="320" y="128" width="32" height="32">
+  <object name="Lava Trap" type="trap" x="320" y="128" width="32" height="32">
    <properties>
-    <property name=" " value=""/>
+    <property name="" value=""/>
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
-    <property name="power_path" value="0,0,10,4"/>
     <property name="tooltip" value="Lava River"/>
    </properties>
   </object>
-  <object name="Lava Trap" type="run_once" x="384" y="128" width="32" height="32">
+  <object name="Lava Trap" type="trap" x="384" y="128" width="32" height="32">
    <properties>
+    <property name="" value=""/>
     <property name=" " value=""/>
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
-    <property name="power_path" value="0,0,12,4"/>
     <property name="tooltip" value="Lava River"/>
    </properties>
   </object>
-  <object name="Lava Trap" type="run_once" x="416" y="128" width="32" height="32">
+  <object name="Lava Trap" type="trap" x="416" y="128" width="32" height="32">
    <properties>
+    <property name="" value=""/>
     <property name=" " value=""/>
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
-    <property name="power_path" value="0,0,13,4"/>
     <property name="tooltip" value="Lava River"/>
    </properties>
   </object>
-  <object name="Lava Trap" type="run_once" x="448" y="128" width="32" height="32">
+  <object name="Lava Trap" type="trap" x="448" y="128" width="32" height="32">
    <properties>
+    <property name="" value=""/>
     <property name=" " value=""/>
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
-    <property name="power_path" value="0,0,14,4"/>
     <property name="tooltip" value="Lava River"/>
    </properties>
   </object>
-  <object name="Lava Trap" type="run_once" x="480" y="128" width="32" height="32">
+  <object name="Lava Trap" type="trap" x="480" y="128" width="32" height="32">
    <properties>
+    <property name="" value=""/>
     <property name=" " value=""/>
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
-    <property name="power_path" value="0,0,15,4"/>
     <property name="tooltip" value="Lava River"/>
    </properties>
   </object>
