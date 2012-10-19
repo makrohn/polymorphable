@@ -442,6 +442,10 @@ void BehaviorStandard::updateState() {
 				e->sfx_die = true;
 				e->stats.corpse_ticks = CORPSE_TIMEOUT;
 			}
+			if (e->activeAnimation->isSecondLastFrame()) {
+				if ((rand() % 100) < e->stats.power_chance[ON_DEATH])
+					e->powers->activate(e->stats.power_index[ON_DEATH], &e->stats, e->stats.pos);
+			}
 			if (e->activeAnimation->isLastFrame()) e->stats.corpse = true; // puts renderable under object layer
 
 			if (e->stats.power_index[ON_DEATH] != -1 && !e->stats.on_death_casted) {
@@ -458,6 +462,10 @@ void BehaviorStandard::updateState() {
 			if (e->activeAnimation->isFirstFrame()) {
 				e->sfx_critdie = true;
 				e->stats.corpse_ticks = CORPSE_TIMEOUT;
+			}
+			if (e->activeAnimation->isSecondLastFrame()) {
+				if ((rand() % 100) < e->stats.power_chance[ON_DEATH])
+					e->powers->activate(e->stats.power_index[ON_DEATH], &e->stats, e->stats.pos);
 			}
 			if (e->activeAnimation->isLastFrame()) e->stats.corpse = true; // puts renderable under object layer
 
