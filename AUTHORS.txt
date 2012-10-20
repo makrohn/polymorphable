@@ -40,6 +40,10 @@ mods/core/images/powers/lightning.png
 Feature adds and bugfixes
 Menu and UI design
 
+Stacey Brimhall
+---------------
+mods/core/images/portraits
+
 --------------------------------------------------------------
 --------------------------------------------------------------
 
