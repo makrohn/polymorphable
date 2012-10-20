@@ -1,9 +1,17 @@
 [header]
 width=40
 height=32
+tilewidth=32
+tileheight=32
 music=calmtown.ogg
 tileset=interior.txt
 title=Church
+
+[tilesets]
+tileset=../../../tiled/laurelia/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/laurelia/interior_background.png,32,32,0,0
+tileset=../../../tiled/laurelia/intfurniture.png,32,64,0,0
+tileset=../../../tiled/laurelia/interiorbuildings.png,32,128,0,0
 
 [layer]
 type=background

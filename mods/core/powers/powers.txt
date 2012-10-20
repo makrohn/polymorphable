@@ -103,7 +103,7 @@ id=6
 name=Leech Strike
 type=effect
 icon=7
-description=Turn 25% of damage you deal into HP
+description=Turn 50% of damage you deal into HP
 requires_mp=1
 new_state=swing
 face=true
@@ -114,7 +114,7 @@ lifespan=1
 radius=64
 starting_pos=melee
 allow_power_mod=true
-hp_steal=25
+hp_steal=50
 
 [power]
 id=7

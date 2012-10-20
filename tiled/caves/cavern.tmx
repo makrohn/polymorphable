@@ -500,13 +500,13 @@
   </object>
   <object name="Block Passage" type="on_load" x="2400" y="2272" width="128" height="64">
    <properties>
-    <property name="mapmod" value="object,75,72,879;object,76,72,879;object,77,72,879;collision,75,72,1;collision,76,72,1;collision,77,72,1;collision,78,72,1"/>
+    <property name="mapmod" value="object,75,72,879;object,76,72,879;object,77,72,879;object,78,72,879;object,75,71,890;object,76,71,887;object,77,71,887;object,78,71,889;collision,75,72,1;collision,76,72,1;collision,77,72,1;collision,78,72,1"/>
     <property name="requires_not" value="evil_unleashed"/>
    </properties>
   </object>
   <object name="Unblock passage" type="run_once" x="2400" y="2336" width="128" height="64">
    <properties>
-    <property name="mapmod" value="object,75,72,880;object,76,72,0;object,77,72,0;object,78,72,878;collision,76,72,0;collision,77,72,0"/>
+    <property name="mapmod" value="object,75,72,880;object,76,72,0;object,77,72,0;object,78,72,878;object,75,71,885;object,76,71,0;object,77,71,0;object,78,71,883;collision,76,72,0;collision,77,72,0"/>
     <property name="requires_status" value="evil_unleashed"/>
    </properties>
   </object>

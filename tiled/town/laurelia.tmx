@@ -818,15 +818,6 @@
     <property name="intermap" value="church.txt,19,4"/>
    </properties>
   </object>
-  <object name="Eerie Gravestone" type="teleport" x="1504" y="1632" width="64" height="32">
-   <properties>
-    <property name="hotspot" value="location"/>
-    <property name="intermap" value="shadowlaurelia.txt,47,52"/>
-    <property name="msg" value="Strange sounds come from this gravestone..."/>
-    <property name="requires_status" value="exploregrave"/>
-    <property name="tooltip" value="Eerie Gravestone"/>
-   </properties>
-  </object>
   <object name="Teleport to Small House" type="teleport" x="1696" y="2400" width="32" height="32">
    <properties>
     <property name="intermap" value="smallhouse.txt,9,13"/>

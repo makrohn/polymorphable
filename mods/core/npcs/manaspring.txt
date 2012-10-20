@@ -1,9 +1,0 @@
-name=Mana Spring
-
-talker=false
-
-gfx=blank
-
-[dialog]
-him=A strange spring
-restore=mp

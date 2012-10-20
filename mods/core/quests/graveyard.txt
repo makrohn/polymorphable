@@ -1,3 +1,0 @@
-[quest]
-requires_status=exploregrave
-quest_text=Deacon Ray can't get any sleep because of the noises coming from the gravestone in the eastern end of the graveyard.  Better check it out.

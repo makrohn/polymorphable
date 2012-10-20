@@ -8,8 +8,3 @@ gfx=cleric
 restore=all
 him=Welcome to the Church!
 him=Come to the Church whenever you are wounded, and I shall heal you.
-
-[dialog]
-restore=all
-requires_status=theend
-him=I can already feel the spirits resting more easily in the graveyard.  Thank you, Daphne, for everything you've done!

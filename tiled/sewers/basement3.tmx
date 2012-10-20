@@ -247,7 +247,5 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="npc" width="32" height="32">
-  <object name="Magic Spring" type="manaspring" x="768" y="512" width="32" height="32"/>
- </objectgroup>
+ <objectgroup name="npc" width="32" height="32"/>
 </map>

@@ -1,9 +1,17 @@
 [header]
 width=32
 height=32
+tilewidth=32
+tileheight=32
 music=winds_of_stories.ogg
 tileset=sewer.txt
 title=Secret Cavern
+
+[tilesets]
+tileset=../../../tiled/sewers/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/sewers/generic_background.png,32,32,0,0
+tileset=../../../tiled/sewers/small_objects.png,32,64,0,0
+tileset=../../../tiled/sewers/sewer_objects.png,32,128,0,0
 
 [layer]
 type=background
@@ -239,9 +247,4 @@ type=beetle
 location=6,8,6,6
 level=1,1
 number=2,2
-
-[npc]
-# Magic Spring
-type=manaspring
-location=24,16,1,1
 

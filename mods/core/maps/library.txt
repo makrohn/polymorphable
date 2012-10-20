@@ -1,9 +1,17 @@
 [header]
 width=28
 height=18
+tilewidth=32
+tileheight=32
 music=calmtown.ogg
 tileset=interior.txt
 title=Library
+
+[tilesets]
+tileset=../../../tiled/laurelia/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/laurelia/interior_background.png,32,32,0,0
+tileset=../../../tiled/laurelia/intfurniture.png,32,64,0,0
+tileset=../../../tiled/laurelia/interiorbuildings.png,32,128,0,0
 
 [layer]
 type=background
@@ -78,148 +86,12 @@ location=13,16,2,1
 intermap=laurelia.txt,24,92
 
 [event]
-# Test
-type=run_once
-location=4,8,1,1
-hotspot=location
-msg=This book is a test.  Ignore it.
-tooltip=Test
-
-[event]
-# Book
-type=run_once
-location=11,8,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=10,8,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=9,8,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=8,8,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=7,8,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
 # On Ghosts
 type=run_once
 location=6,8,1,1
 hotspot=location
 msg=p.32: "Ghosts, being incorporeal, are nearly immune to heat and fire."
 tooltip=On Ghosts
-
-[event]
-# Book
-type=run_once
-location=5,8,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=12,8,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=23,8,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=22,8,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=21,8,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=20,8,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=19,8,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=18,8,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=17,8,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=16,8,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=15,8,1,1
-hotspot=location
-msg=
-tooltip=book
 
 [event]
 # History
@@ -230,138 +102,10 @@ msg=p.1:  "This small town is a seeming backwater.  However, nearly every one of
 tooltip=History of Laurelia
 
 [event]
-# Book
-type=run_once
-location=5,11,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=6,11,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=7,11,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=8,11,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=9,11,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=10,11,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=11,11,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=12,11,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=15,11,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=16,11,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
 # Demonology
 type=run_once
 location=17,11,1,1
 hotspot=location
 msg=p. 967: "Zalkas was constantly beset by paladins seeking to destroy them; he would eliminate each one by blotting out the light with flocks of bats."
 tooltip=Deomonology
-
-[event]
-# Book
-type=run_once
-location=18,11,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=19,11,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=20,11,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=21,11,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=22,11,1,1
-hotspot=location
-msg=
-tooltip=book
-
-[event]
-# Book
-type=run_once
-location=23,11,1,1
-hotspot=location
-msg=
-tooltip=book
 

@@ -1,9 +1,17 @@
 [header]
 width=100
 height=100
+tilewidth=32
+tileheight=32
 music=technophobic.ogg
 tileset=outside.txt
 title=Cavern
+
+[tilesets]
+tileset=../../../tiled/caves/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/caves/generic_background.png,32,32,0,0
+tileset=../../../tiled/caves/small_objects.png,32,64,0,0
+tileset=../../../tiled/caves/outside_objects.png,32,128,0,0
 
 [layer]
 type=background
@@ -497,14 +505,14 @@ set_status=cavernexplored
 # Block Passage
 type=on_load
 location=75,71,4,2
-mapmod=object,75,72,879;object,76,72,879;object,77,72,879;collision,75,72,1;collision,76,72,1;collision,77,72,1;collision,78,72,1
+mapmod=object,75,72,879;object,76,72,879;object,77,72,879;object,78,72,879;object,75,71,890;object,76,71,887;object,77,71,887;object,78,71,889;collision,75,72,1;collision,76,72,1;collision,77,72,1;collision,78,72,1
 requires_not=evil_unleashed
 
 [event]
 # Unblock passage
 type=run_once
 location=75,73,4,2
-mapmod=object,75,72,880;object,76,72,0;object,77,72,0;object,78,72,878;collision,76,72,0;collision,77,72,0
+mapmod=object,75,72,880;object,76,72,0;object,77,72,0;object,78,72,878;object,75,71,885;object,76,71,0;object,77,71,0;object,78,71,883;collision,76,72,0;collision,77,72,0
 requires_status=evil_unleashed
 
 [event]
