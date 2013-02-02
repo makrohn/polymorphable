@@ -21,6 +21,8 @@ FLARE.  If not, see http://www.gnu.org/licenses/
  *
  * Contains logic and rendering routines for the player avatar.
  */
+
+#pragma once
 #ifndef AVATAR_H
 #define AVATAR_H
 
@@ -55,20 +57,18 @@ enum AvatarState {
 	AVATAR_SHOOT = 7
 };
 
-struct Layer_gfx {
+class Layer_gfx {
+public:
 	std::string gfx;
 	std::string type;
-	Layer_gfx() {
-		gfx = "";
-		type = "";
-	}
+	Layer_gfx()
+	 : gfx("")
+	 , type("")
+	{}
 };
 
 class Avatar : public Entity {
 private:
-
-	PowerManager *powers;
-
 	bool lockSwing;
 	bool lockCast;
 	bool lockShoot;
@@ -94,6 +94,8 @@ private:
 public:
 	Avatar(PowerManager *_powers, MapRenderer *_map);
 	~Avatar();
+
+	PowerManager *powers;
 
 	void init();
 	void loadLayerDefinitions();
@@ -125,8 +127,11 @@ public:
 	Hazard *haz;
 	int current_power;
 	Point act_target;
+	bool attacking;
 	bool drag_walking;
 	bool newLevelNotification;
+	bool respawn;
+	bool close_menus;
 
 private:
 	void handlePower(int actionbar_power);

@@ -22,26 +22,32 @@ FLARE.  If not, see http://www.gnu.org/licenses/
  * Various utility structures, enums, function
  */
 
+#pragma once
 #ifndef UTILS_H
 #define UTILS_H
 
 #include <SDL.h>
 #include <SDL_image.h>
+#include <SDL_mixer.h>
+
 #include <string>
 #include <stdint.h>
 
-struct Point {
+class Point {
+public:
 	int x,y;
 	Point() : x(0), y(0) {}
 	Point(int _x, int _y) : x(_x), y(_y) {}
 };
 
-struct FPoint {
+class FPoint {
+public:
 	float x,y;
 };
 
 // message passing struct for various sprites rendered map inline
-struct Renderable {
+class Renderable {
+public:
 	SDL_Surface *sprite; // image to be used
 	SDL_Rect src; // location on the sprite in pixel coordinates.
 
@@ -65,10 +71,13 @@ public:
 	int y;
 	int z;
 
-	Event_Component() {
-		type = s = "";
-		x = y = z = 0;
-	}
+	Event_Component()
+		: type("")
+		, s("")
+		, x(0)
+		, y(0)
+		, z(0)
+	{}
 };
 
 // Utility Functions
@@ -105,4 +114,14 @@ SDL_Surface* createAlphaSurface(int width, int height);
  * The bright pink (rgb 0xff00ff) is set as transparent color.
  */
 SDL_Surface* createSurface(int width, int height);
+
+/**
+ * @brief loadSfx loads an sfx from the given filename
+ * @param filename the filename still to be passed to mods->locate
+ * @param errormessage an additional errormessage about where the call to loadSfx failed.
+ * @return a Mix_Chunk or NULL (on failure or if AUDIO or SOUND_VOLUME is 0)
+ */
+Mix_Chunk *loadSfx(const std::string &filename, const std::string &errormessage);
+int playSfx(Mix_Chunk *snd);
+
 #endif

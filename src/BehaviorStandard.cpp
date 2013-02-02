@@ -23,6 +23,7 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 #include "MapRenderer.h"
 #include "PowerManager.h"
 #include "StatBlock.h"
+#include "UtilsMath.h"
 
 BehaviorStandard::BehaviorStandard(Enemy *_e) : EnemyBehavior(_e) {
 	los = false;
@@ -78,16 +79,25 @@ void BehaviorStandard::doUpkeep() {
 	if (e->stats.wander_pause_ticks > 0)
 		e->stats.wander_pause_ticks--;
 
+	// check for revive
+	if (e->stats.hp <= 0 && e->stats.effects.revive) {
+		e->stats.hp = e->stats.maxhp;
+		e->stats.alive = true;
+		e->stats.corpse = false;
+		e->stats.cur_state = ENEMY_STANCE;
+	}
+
 	// check for bleeding to death
 	if (e->stats.hp <= 0 && !(e->stats.cur_state == ENEMY_DEAD || e->stats.cur_state == ENEMY_CRITDEAD)) {
 		e->doRewards();
+		e->stats.effects.triggered_death = true;
 		e->stats.cur_state = ENEMY_DEAD;
 		e->map->collider.unblock(e->stats.pos.x,e->stats.pos.y);
 	}
 
 	// TEMP: check for bleeding spurt
-	if (e->stats.effects.bleed_dmg > 0 && e->stats.hp > 0) {
-		comb->addMessage(e->stats.effects.bleed_dmg, e->stats.pos, COMBAT_MESSAGE_TAKEDMG, false);
+	if (e->stats.effects.damage > 0 && e->stats.hp > 0) {
+		comb->addMessage(e->stats.effects.damage, e->stats.pos, COMBAT_MESSAGE_TAKEDMG);
 	}
 
 	// check for teleport powers
@@ -102,13 +112,13 @@ void BehaviorStandard::doUpkeep() {
 
 		e->stats.teleportation = false;
 	}
-
 }
 
 /**
  * Locate the player and set various targeting info
  */
 void BehaviorStandard::findTarget() {
+	int stealth_threat_range = (e->stats.threat_range * (100 - e->stats.hero_stealth)) / 100;
 
 	// stunned enemies can't act
 	if (e->stats.effects.stun) return;
@@ -127,7 +137,7 @@ void BehaviorStandard::findTarget() {
 
 	// check entering combat (because the player hit the enemy)
 	if (e->stats.join_combat) {
-		if (dist <= (e->stats.threat_range *2)) {
+		if (dist <= (stealth_threat_range *2)) {
 			e->stats.join_combat = false;
 		}
 		else {
@@ -137,7 +147,7 @@ void BehaviorStandard::findTarget() {
 	}
 
 	// check entering combat (because the player got too close)
-	if (!e->stats.in_combat && los && dist < e->stats.threat_range) {
+	if (!e->stats.in_combat && los && dist < stealth_threat_range) {
 
 		if (e->stats.in_combat) e->stats.join_combat = true;
 		e->stats.in_combat = true;
@@ -201,7 +211,7 @@ void BehaviorStandard::checkPower() {
 
 		// check half dead power use
 		if (!e->stats.on_half_dead_casted && e->stats.hp <= e->stats.maxhp/2) {
-			if ((rand() % 100) < e->stats.power_chance[ON_HALF_DEAD]) {
+			if (percentChance(e->stats.power_chance[ON_HALF_DEAD])) {
 				e->newState(ENEMY_POWER);
 				e->stats.activated_powerslot = ON_HALF_DEAD;
 				return;
@@ -211,12 +221,12 @@ void BehaviorStandard::checkPower() {
 		// check ranged power use
 		if (dist > e->stats.melee_range) {
 
-			if ((rand() % 100) < e->stats.power_chance[RANGED_PHYS] && e->stats.power_ticks[RANGED_PHYS] == 0) {
+			if (percentChance(e->stats.power_chance[RANGED_PHYS]) && e->stats.power_ticks[RANGED_PHYS] == 0) {
 				e->newState(ENEMY_POWER);
 				e->stats.activated_powerslot = RANGED_PHYS;
 				return;
 			}
-			if ((rand() % 100) < e->stats.power_chance[RANGED_MENT] && e->stats.power_ticks[RANGED_MENT] == 0) {
+			if (percentChance(e->stats.power_chance[RANGED_MENT]) && e->stats.power_ticks[RANGED_MENT] == 0) {
 				e->newState(ENEMY_POWER);
 				e->stats.activated_powerslot = RANGED_MENT;
 				return;
@@ -225,12 +235,12 @@ void BehaviorStandard::checkPower() {
 		}
 		else { // check melee power use
 
-			if ((rand() % 100) < e->stats.power_chance[MELEE_PHYS] && e->stats.power_ticks[MELEE_PHYS] == 0) {
+			if (percentChance(e->stats.power_chance[MELEE_PHYS]) && e->stats.power_ticks[MELEE_PHYS] == 0) {
 				e->newState(ENEMY_POWER);
 				e->stats.activated_powerslot = MELEE_PHYS;
 				return;
 			}
-			if ((rand() % 100) < e->stats.power_chance[MELEE_MENT] && e->stats.power_ticks[MELEE_MENT] == 0) {
+			if (percentChance(e->stats.power_chance[MELEE_MENT]) && e->stats.power_ticks[MELEE_MENT] == 0) {
 				e->newState(ENEMY_POWER);
 				e->stats.activated_powerslot = MELEE_MENT;
 				return;
@@ -315,7 +325,7 @@ void BehaviorStandard::checkMove() {
 		if (dist < e->stats.melee_range) {
 			// too close, do nothing
 		}
-		else if ((rand() % 100) < e->stats.chance_pursue) {
+		else if (percentChance(e->stats.chance_pursue)) {
 
 			if (e->move()) {
 				e->newState(ENEMY_MOVE);
@@ -443,21 +453,24 @@ void BehaviorStandard::updateState() {
 		case ENEMY_HIT:
 
 			e->setAnimation("hit");
-			if (e->activeAnimation->isFirstFrame()) e->sfx_hit = true;
+			if (e->activeAnimation->isFirstFrame()) {
+				e->stats.effects.triggered_hit = true;
+			}
 			if (e->activeAnimation->isLastFrame()) e->newState(ENEMY_STANCE);
 			break;
 
 		case ENEMY_DEAD:
+			if (e->stats.effects.triggered_death) break;
 
 			e->setAnimation("die");
 			if (e->activeAnimation->isFirstFrame()) {
 				e->sfx_die = true;
 				e->stats.corpse_ticks = CORPSE_TIMEOUT;
+				e->stats.effects.clearEffects();
 			}
 			if (e->activeAnimation->isSecondLastFrame()) {
-				if ((rand() % 100) < e->stats.power_chance[ON_DEATH])
+				if (percentChance(e->stats.power_chance[ON_DEATH]))
 					e->powers->activate(e->stats.power_index[ON_DEATH], &e->stats, e->stats.pos);
-				e->stats.effects.clearEffects();
 			}
 			if (e->activeAnimation->isLastFrame()) e->stats.corpse = true; // puts renderable under object layer
 
@@ -475,11 +488,11 @@ void BehaviorStandard::updateState() {
 			if (e->activeAnimation->isFirstFrame()) {
 				e->sfx_critdie = true;
 				e->stats.corpse_ticks = CORPSE_TIMEOUT;
+				e->stats.effects.clearEffects();
 			}
 			if (e->activeAnimation->isSecondLastFrame()) {
-				if ((rand() % 100) < e->stats.power_chance[ON_DEATH])
+				if (percentChance(e->stats.power_chance[ON_DEATH]))
 					e->powers->activate(e->stats.power_index[ON_DEATH], &e->stats, e->stats.pos);
-				e->stats.effects.clearEffects();
 			}
 			if (e->activeAnimation->isLastFrame()) e->stats.corpse = true; // puts renderable under object layer
 
@@ -494,6 +507,9 @@ void BehaviorStandard::updateState() {
 		default:
 			break;
 	}
+
+	// activate all passive powers
+	if (e->stats.hp > 0 || e->stats.effects.triggered_death) e->powers->activatePassives(&e->stats);
 }
 
 

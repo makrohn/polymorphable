@@ -15,6 +15,8 @@ You should have received a copy of the GNU General Public License along with
 FLARE.  If not, see http://www.gnu.org/licenses/
 */
 
+
+#pragma once
 #ifndef GAMESTATE_H
 #define GAMESTATE_H
 
@@ -31,13 +33,13 @@ public:
 	virtual void render();
 
 	GameState* getRequestedGameState();
-	bool isExitRequested() { return exitRequested; };
+	bool isExitRequested() { return exitRequested; }
 	bool hasMusic;
 	bool reload_music;
 
 protected:
 
-	GameState* requestedGameState;	
+	GameState* requestedGameState;
 
 	bool exitRequested;
 };

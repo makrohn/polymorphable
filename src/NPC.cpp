@@ -36,26 +36,30 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 using namespace std;
 
 
-NPC::NPC(MapRenderer *_map, ItemManager *_items) : Entity(_map) {
-	items = _items;
-	direction = 0;
+ItemStorage stock;
 
-	// init general vars
-	name = "";
-	gfx = "";
-	pos.x = pos.y = 0;
+std::vector<Mix_Chunk*> vox_intro;
+std::vector<Mix_Chunk*> vox_quests;
+std::vector<std::vector<Event_Component> > dialog;
 
-	// init vendor info
-	vendor = false;
+NPC::NPC(MapRenderer *_map, ItemManager *_items)
+	: Entity(_map)
+	, items(_items)
+	, name("")
+	, gfx("")
+	, pos(Point())
+	, level(1)
+	, direction(0)
+	, portrait(NULL)
+	, talker(false)
+	, vendor(false)
+	// stock
+	, stock_count(0)
+	, vox_intro(vector<Mix_Chunk*>())
+	, vox_quests(vector<Mix_Chunk*>())
+	, dialog(vector<vector<Event_Component> >())
+{
 	stock.init(NPC_VENDOR_MAX_STOCK, _items);
-	stock_count = 0;
-	random_stock = 0;
-
-	vox_intro = vector<Mix_Chunk*>();
-
-	// init talker info
-	portrait = NULL;
-	talker = false;
 }
 
 /**
@@ -68,7 +72,6 @@ void NPC::load(const string& npc_id, int hero_level) {
 	FileParser infile;
 	ItemStack stack;
 
-	string filename_sprites = "";
 	string filename_portrait = "";
 
 	if (infile.open(mods->locate("npcs/" + npc_id + ".txt"))) {
@@ -83,6 +86,10 @@ void NPC::load(const string& npc_id, int hero_level) {
 					e.s = infile.val;
 				else if (infile.key == "requires_not")
 					e.s = infile.val;
+				else if (infile.key == "requires_level")
+					e.x = toInt(infile.val);
+				else if (infile.key == "requires_not_level")
+					e.x = toInt(infile.val);
 				else if (infile.key == "requires_item")
 					e.x = toInt(infile.val);
 				else if (infile.key == "him" || infile.key == "her")
@@ -145,9 +152,6 @@ void NPC::load(const string& npc_id, int hero_level) {
 						stock.add(stack);
 					}
 				}
-				else if (infile.key == "random_stock") {
-					random_stock = toInt(infile.val);
-				}
 
 				// handle vocals
 				else if (infile.key == "vox_intro") {
@@ -166,7 +170,7 @@ void NPC::loadGraphics(const string& filename_portrait) {
 		std::string anim_name = "animations/npcs/" + gfx + ".txt";
 		anim->increaseCount(anim_name);
 		animationSet = anim->getAnimationSet(anim_name);
-		activeAnimation = animationSet->getAnimation(animationSet->starting_animation);
+		activeAnimation = animationSet->getAnimation();
 	}
 	if (filename_portrait != "") {
 		portrait = IMG_Load(mods->locate("images/portraits/" + filename_portrait + ".png").c_str());
@@ -192,21 +196,18 @@ void NPC::loadGraphics(const string& filename_portrait) {
  */
 int NPC::loadSound(const string& filename, int type) {
 
-	if (!SOUND_VOLUME || !audio)
-		return -1;
-
-	Mix_Chunk *a = Mix_LoadWAV(mods->locate("soundfx/npcs/" + filename).c_str());
+	Mix_Chunk *a = loadSfx("soundfx/npcs/" + filename, "NPC voice");
 	if (!a)
 		return -1;
 
 	if (type == NPC_VOX_INTRO) {
 		vox_intro.push_back(a);
-		return vox_intro.size()-1;
+		return vox_intro.size() - 1;
 	}
 
 	if (type == NPC_VOX_QUEST) {
 		vox_quests.push_back(a);
-		return vox_quests.size()-1;
+		return vox_quests.size() - 1;
 	}
 	return -1;
 }
@@ -230,14 +231,14 @@ bool NPC::playSound(int type, int id) {
 		int roll;
 		if (vox_intro.empty()) return false;
 		roll = rand() % vox_intro.size();
-		Mix_PlayChannel(-1, vox_intro[roll], 0);
+		playSfx(vox_intro[roll]);
 		return true;
 	}
 	if (type == NPC_VOX_QUEST) {
 		if (id < 0 || id >= (int)vox_quests.size()) return false;
 		if (current_channel != -1) Mix_HaltChannel(current_channel);
 		Mix_ChannelFinished(&sound_ended);
-		current_channel=Mix_PlayChannel(-1, vox_quests[id], 0);
+		current_channel = playSfx(vox_quests[id]);
 		return true;
 	}
 	return false;
@@ -270,6 +271,12 @@ int NPC::chooseDialogNode() {
 			}
 			else if (dialog[i][j].type == "requires_item") {
 				if (!map->camp->checkItem(dialog[i][j].x)) break;
+			}
+			else if (dialog[i][j].type == "requires_level") {
+				if (map->camp->hero->level < dialog[i][j].x) break;
+			}
+			else if (dialog[i][j].type == "requires_not_level") {
+				if (map->camp->hero->level >= dialog[i][j].x) break;
 			}
 			else {
 				return i;

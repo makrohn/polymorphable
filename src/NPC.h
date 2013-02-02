@@ -19,6 +19,8 @@ FLARE.  If not, see http://www.gnu.org/licenses/
  * class NPC
  */
 
+
+#pragma once
 #ifndef NPC_H
 #define NPC_H
 
@@ -72,7 +74,6 @@ public:
 	bool vendor;
 	ItemStorage stock;
 	int stock_count;
-	int random_stock;
 
 	// vocals
 	std::vector<Mix_Chunk*> vox_intro;

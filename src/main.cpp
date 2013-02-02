@@ -42,37 +42,28 @@ static void init() {
 
 	setPaths();
 
-	if (!loadSettings()) {
-		fprintf(stderr, "%s",
-				("Could not load settings file: ‘" + PATH_CONF + FILE_SETTINGS + "’.\n").c_str());
-		exit(1);
-	}
-
 	// SDL Inits
 	if ( SDL_Init (SDL_INIT_VIDEO | SDL_INIT_AUDIO | SDL_INIT_JOYSTICK) < 0 ) {
 		fprintf(stderr, "Could not initialize SDL: %s\n", SDL_GetError());
 		exit(1);
 	}
 
-	Uint32 flags = 0;
-
-	if (FULLSCREEN) flags = flags | SDL_FULLSCREEN;
-	if (DOUBLEBUF) flags = flags | SDL_DOUBLEBUF;
-	if (HWSURFACE)
-		flags = flags | SDL_HWSURFACE | SDL_HWACCEL;
-	else
-		flags = flags | SDL_SWSURFACE;
-
 	// Shared Resources set-up
 
 	mods = new ModManager();
+
+	if (!loadSettings()) {
+		fprintf(stderr, "%s",
+				("Could not load settings file: ‘" + PATH_CONF + FILE_SETTINGS + "’.\n").c_str());
+		exit(1);
+	}
+
 	msg = new MessageEngine();
 	font = new FontEngine();
 	anim = new AnimationManager();
 	comb = new CombatText();
 	imag = new ImageManager();
 	inpt = new InputState();
-
 
 	// Load tileset options (must be after ModManager is initialized)
 	loadTilesetSettings();
@@ -85,6 +76,15 @@ static void init() {
 	SDL_WM_SetIcon(titlebar_icon, NULL);
 
 	// Create window
+	Uint32 flags = 0;
+
+	if (FULLSCREEN) flags = flags | SDL_FULLSCREEN;
+	if (DOUBLEBUF) flags = flags | SDL_DOUBLEBUF;
+	if (HWSURFACE)
+		flags = flags | SDL_HWSURFACE | SDL_HWACCEL;
+	else
+		flags = flags | SDL_SWSURFACE;
+
 	screen = SDL_SetVideoMode (VIEW_W, VIEW_H, 0, flags);
 	if (screen == NULL) {
 
@@ -97,11 +97,9 @@ static void init() {
 	if (CHANGE_GAMMA)
 		SDL_SetGamma(GAMMA,GAMMA,GAMMA);
 
-	audio = true;
-
-	if (Mix_OpenAudio(22050, AUDIO_S16SYS, 2, 1024)) {
+	if (AUDIO && Mix_OpenAudio(22050, AUDIO_S16SYS, 2, 1024)) {
 		fprintf (stderr, "Error during Mix_OpenAudio: %s\n", SDL_GetError());
-		audio = false;
+		AUDIO = false;
 	}
 
 	// initialize Joysticks
@@ -122,11 +120,11 @@ static void init() {
 	printf("Using joystick #%d.\n", JOYSTICK_DEVICE);
 
 	// Set sound effects volume from settings file
-	if (audio == true)
+	if (AUDIO)
 		Mix_Volume(-1, SOUND_VOLUME);
 
 	// Window title
-	const char* title = msg->get("Polymorphable").c_str();
+	const char* title = msg->get(WINDOW_TITLE).c_str();
 	SDL_WM_SetCaption(title, title);
 
 

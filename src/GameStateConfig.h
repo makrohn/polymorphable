@@ -23,11 +23,14 @@ FLARE.  If not, see http://www.gnu.org/licenses/
  * Handle game Settings Menu
  */
 
+
+#pragma once
 #ifndef GAMESTATECONFIG_H
 #define GAMESTATECONFIG_H
 
 #include <vector>
 #include "GameState.h"
+#include "WidgetTooltip.h"
 #include <string>
 
 class MenuConfirm;
@@ -40,6 +43,7 @@ class WidgetListBox;
 class WidgetScrollBox;
 class WidgetSlider;
 class WidgetTabControl;
+class WidgetTooltip;
 
 class GameStateConfig : public GameState {
 public:
@@ -136,6 +140,9 @@ private:
 	MenuConfirm         * input_confirm;
 	MenuConfirm         * defaults_confirm;
 	MenuConfirm         * resolution_confirm;
+
+	WidgetTooltip       * tip;
+	TooltipData         tip_buf;
 
 	int input_key;
 	int mods_total;

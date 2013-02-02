@@ -85,11 +85,12 @@ void MenuActiveEffects::renderIcon(int icon_id, int index, int current, int max)
 			pos.y = window_area.y;
 		} else if (orientation == 1) {
 			pos.x = window_area.x;
-			pos.y = window_area.y + (index * ICON_SIZE);;
+			pos.y = window_area.y + (index * ICON_SIZE);
 		}
-
-		src.x = (icon_id % 16) * ICON_SIZE;
-		src.y = (icon_id / 16) * ICON_SIZE;
+		
+		int columns = icons->w / ICON_SIZE;
+		src.x = (icon_id % columns) * ICON_SIZE;
+		src.y = (icon_id / columns) * ICON_SIZE;
 		src.w = src.h = ICON_SIZE;
 
 		SDL_BlitSurface(icons,&src,screen,&pos);
@@ -110,21 +111,25 @@ void MenuActiveEffects::update(StatBlock *_stats) {
 }
 
 void MenuActiveEffects::render() {
+	int count=-1;
+
 	// Step through the list of effects and render those that are active
 	for (unsigned int i=0; i<stats->effects.effect_list.size(); i++) {
 		std::string type = stats->effects.effect_list[i].type;
 		int icon = stats->effects.effect_list[i].icon;
 		int ticks = stats->effects.effect_list[i].ticks;
 		int duration = stats->effects.effect_list[i].duration;
-		int shield_hp = stats->effects.effect_list[i].shield_hp;
-		int shield_maxhp = stats->effects.effect_list[i].shield_maxhp;
+		int magnitude = stats->effects.effect_list[i].magnitude;
+		int magnitude_max = stats->effects.effect_list[i].magnitude_max;
+
+		if (icon >= 0) count++;
 
 		if (type == "shield")
-			renderIcon(icon,i,shield_hp,shield_maxhp);
-		else if (type == "block")
-			renderIcon(icon,i,0,0);
-		else if (ticks > 0 && duration > 0)
-			renderIcon(icon,i,ticks,duration);
+			renderIcon(icon,count,magnitude,magnitude_max);
+		else if (type == "heal" || type == "block")
+			renderIcon(icon,count,0,0);
+		else if (ticks >= 0 && duration >= 0)
+			renderIcon(icon,count,ticks,duration);
 	}
 }
 

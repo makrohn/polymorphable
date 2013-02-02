@@ -23,6 +23,8 @@ FLARE.  If not, see http://www.gnu.org/licenses/
  * Also handles message passing between child objects, often to avoid circular dependencies.
  */
 
+
+#pragma once
 #ifndef GAMESTATEPLAY_H
 #define GAMESTATEPLAY_H
 
@@ -48,7 +50,8 @@ class PowerManager;
 class QuestLog;
 class WidgetLabel;
 
-struct Title{
+class Title{
+public:
 	std::string title;
 	int level;
 	int power;
@@ -56,14 +59,14 @@ struct Title{
 	std::string requires_not;
 	std::string primary_stat;
 
-	Title() {
-		title = "";
-		level = 0;
-		power = 0;
-		requires_status = "";
-		requires_not = "";
-		primary_stat = "";
-	}
+	Title()
+	 : title("")
+	 , level(0)
+	 , power(0)
+	 , requires_status("")
+	 , requires_not("")
+	 , primary_stat("")
+	{}
 };
 
 class GameStatePlay : public GameState {

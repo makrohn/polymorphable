@@ -21,6 +21,8 @@ FLARE.  If not, see http://www.gnu.org/licenses/
  * Contains data for story mode
  */
 
+
+#pragma once
 #ifndef CAMPAIGN_MANAGER_H
 #define CAMPAIGN_MANAGER_H
 
@@ -28,6 +30,7 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 
 #include <string>
 
+class StatBlock;
 class MenuItemStorage;
 
 class CampaignManager {
@@ -57,7 +60,7 @@ public:
 	ItemManager *items;
 	MenuItemStorage *carried_items;
 	int *currency;
-	StatBlock * hero;
+	StatBlock *hero;
 
 	bool quest_update;
 };

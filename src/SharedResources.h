@@ -24,6 +24,8 @@ Generic objects only. Game-specific objects don't belong here.
 Created and destroyed by main.cpp
 **/
 
+
+#pragma once
 #ifndef SHARED_RESOURCES_H
 #define SHARED_RESOURCES_H
 
@@ -47,8 +49,5 @@ extern ImageManager *imag;
 extern InputState *inpt;
 extern MessageEngine *msg;
 extern ModManager *mods;
-
-
-extern bool audio;
 
 #endif

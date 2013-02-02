@@ -19,6 +19,8 @@ FLARE.  If not, see http://www.gnu.org/licenses/
  * class MenuManager
  */
 
+
+#pragma once
 #ifndef MENU_MANAGER_H
 #define MENU_MANAGER_H
 
@@ -57,28 +59,29 @@ const int DRAG_SRC_STASH = 5;
 
 class MenuManager {
 private:
-	
+
 	SDL_Surface *icons;
 
 	PowerManager *powers;
 	StatBlock *stats;
 	CampaignManager *camp;
-	
+
 	TooltipData tip_buf;
 
 	bool key_lock;
 	void loadSounds();
 	void loadIcons();
-	
+
 	bool dragging;
 	ItemStack drag_stack;
 	int drag_power;
 	int drag_src;
 
 	bool done;
-	
+
 public:
 	MenuManager(PowerManager *powers, StatBlock *stats, CampaignManager *camp, ItemManager *items);
+	MenuManager(const MenuManager &copy); // not implemented
 	~MenuManager();
 	void logic();
 	void render();
@@ -106,14 +109,14 @@ public:
 	MenuExit *exit;
 	MenuActiveEffects *effects;
 	MenuStash *stash;
-	
+
 	bool pause;
 	bool menus_open;
-	ItemStack drop_stack;	
+	ItemStack drop_stack;
 
 	Mix_Chunk *sfx_open;
 	Mix_Chunk *sfx_close;
-	
+
 	bool requestingExit() { return done; }
 };
 

@@ -20,6 +20,8 @@ FLARE.  If not, see http://www.gnu.org/licenses/
  * class MenuInventory
  */
 
+
+#pragma once
 #ifndef MENU_INVENTORY_H
 #define MENU_INVENTORY_H
 
@@ -81,6 +83,7 @@ public:
 
 	void add( ItemStack stack, int area = CARRIED, int slot = -1);
 	void remove(int item);
+	void removeEquipped(int item);
 	void addCurrency(int count);
 	bool buy(ItemStack stack, int tab);
 	bool sell(ItemStack stack);

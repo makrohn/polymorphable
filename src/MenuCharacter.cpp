@@ -48,9 +48,11 @@ MenuCharacter::MenuCharacter(StatBlock *_stats) {
 		cstat[i].hover.w = cstat[i].hover.h = 0;
 		cstat[i].visible = true;
 	}
-	for (int i=0; i<14; i++) {
+	for (int i=0; i<STATLIST_COUNT; i++) {
 		show_stat[i] = true;
 	}
+	statlist_rows = 10;
+	statlist_scrollbar_offset = 0;
 
 	closeButton = new WidgetButton(mods->locate("images/menus/buttons/button_x.png"));
 
@@ -68,9 +70,8 @@ MenuCharacter::MenuCharacter(StatBlock *_stats) {
 	// menu title
 	labelCharacter = new WidgetLabel();
 
-	// stat list
-	statList = new WidgetListBox(13+stats->vulnerable.size(), 10, mods->locate("images/menus/buttons/listbox_char.png"));
-	statList->can_select = false;
+	// unspent points
+	labelUnspent = new WidgetLabel();
 
 	// Load config settings
 	FileParser infile;
@@ -98,6 +99,10 @@ MenuCharacter::MenuCharacter(StatBlock *_stats) {
 			} else if(infile.key == "statlist") {
 				statlist_pos.x = eatFirstInt(infile.val,',');
 				statlist_pos.y = eatFirstInt(infile.val,',');
+			} else if (infile.key == "statlist_rows") {
+				statlist_rows = eatFirstInt(infile.val,',');
+			} else if (infile.key == "statlist_scrollbar_offset") {
+				statlist_scrollbar_offset = eatFirstInt(infile.val,',');
 			} else if(infile.key == "label_name") {
 				label_pos[0] = eatLabelInfo(infile.val);
 				cstat[CSTAT_NAME].visible = !label_pos[0].hidden;
@@ -147,12 +152,7 @@ MenuCharacter::MenuCharacter(StatBlock *_stats) {
 				value_pos[5].w = eatFirstInt(infile.val,',');
 				value_pos[5].h = eatFirstInt(infile.val,',');
 			} else if(infile.key == "unspent") {
-				value_pos[6].x = eatFirstInt(infile.val,',');
-				value_pos[6].y = eatFirstInt(infile.val,',');
-				value_pos[6].w = eatFirstInt(infile.val,',');
-				value_pos[6].h = eatFirstInt(infile.val,',');
-			} else if (infile.key == "show_unspent"){
-				if (eatFirstInt(infile.val,',') == 0) cstat[CSTAT_UNSPENT].visible = false;
+				unspent_pos = eatLabelInfo(infile.val);
 			} else if (infile.key == "show_upgrade_physical"){
 				if (eatFirstInt(infile.val,',') == 0) show_upgrade[0] = false;
 			} else if (infile.key == "show_upgrade_mental"){
@@ -169,30 +169,41 @@ MenuCharacter::MenuCharacter(StatBlock *_stats) {
 				if (eatFirstInt(infile.val,',') == 0) show_stat[2] = false;
 			} else if (infile.key == "show_mpregen"){
 				if (eatFirstInt(infile.val,',') == 0) show_stat[3] = false;
-			} else if (infile.key == "show_accuracy_v1"){
+			} else if (infile.key == "show_accuracy"){
 				if (eatFirstInt(infile.val,',') == 0) show_stat[4] = false;
-			} else if (infile.key == "show_accuracy_v5"){
+			} else if (infile.key == "show_avoidance"){
 				if (eatFirstInt(infile.val,',') == 0) show_stat[5] = false;
-			} else if (infile.key == "show_avoidance_v1"){
-				if (eatFirstInt(infile.val,',') == 0) show_stat[6] = false;
-			} else if (infile.key == "show_avoidance_v5"){
-				if (eatFirstInt(infile.val,',') == 0) show_stat[7] = false;
 			} else if (infile.key == "show_melee"){
-				if (eatFirstInt(infile.val,',') == 0) show_stat[8] = false;
+				if (eatFirstInt(infile.val,',') == 0) show_stat[6] = false;
 			} else if (infile.key == "show_ranged"){
-				if (eatFirstInt(infile.val,',') == 0) show_stat[9] = false;
+				if (eatFirstInt(infile.val,',') == 0) show_stat[7] = false;
 			} else if (infile.key == "show_mental"){
-				if (eatFirstInt(infile.val,',') == 0) show_stat[10] = false;
+				if (eatFirstInt(infile.val,',') == 0) show_stat[8] = false;
 			} else if (infile.key == "show_crit"){
-				if (eatFirstInt(infile.val,',') == 0) show_stat[11] = false;
+				if (eatFirstInt(infile.val,',') == 0) show_stat[9] = false;
 			} else if (infile.key == "show_absorb"){
+				if (eatFirstInt(infile.val,',') == 0) show_stat[10] = false;
+			} else if (infile.key == "show_poise"){
+				if (eatFirstInt(infile.val,',') == 0) show_stat[11] = false;
+			} else if (infile.key == "show_bonus_xp"){
 				if (eatFirstInt(infile.val,',') == 0) show_stat[12] = false;
-			} else if (infile.key == "show_resists"){
+			} else if (infile.key == "show_bonus_currency"){
 				if (eatFirstInt(infile.val,',') == 0) show_stat[13] = false;
+			} else if (infile.key == "show_bonus_itemfind"){
+				if (eatFirstInt(infile.val,',') == 0) show_stat[14] = false;
+			} else if (infile.key == "show_bonus_stealth"){
+				if (eatFirstInt(infile.val,',') == 0) show_stat[15] = false;
+			} else if (infile.key == "show_resists"){
+				if (eatFirstInt(infile.val,',') == 0) show_stat[16] = false;
 			}
 		}
 		infile.close();
 	} else fprintf(stderr, "Unable to open menus/character.txt!\n");
+
+	// stat list
+	statList = new WidgetListBox(STATLIST_COUNT-1+stats->vulnerable.size(), statlist_rows, mods->locate("images/menus/buttons/listbox_char.png"));
+	statList->can_select = false;
+	statList->scrollbar_offset = statlist_scrollbar_offset;
 
 	loadGraphics();
 }
@@ -231,8 +242,6 @@ void MenuCharacter::update() {
 	cstat[CSTAT_MENTAL].setHover(window_area.x+value_pos[3].x, window_area.y+value_pos[3].y, value_pos[3].w, value_pos[3].h);
 	cstat[CSTAT_OFFENSE].setHover(window_area.x+value_pos[4].x, window_area.y+value_pos[4].y, value_pos[4].w, value_pos[4].h);
 	cstat[CSTAT_DEFENSE].setHover(window_area.x+value_pos[5].x, window_area.y+value_pos[5].y, value_pos[5].w, value_pos[5].h);
-	cstat[CSTAT_UNSPENT].setHover(window_area.x+value_pos[6].x, window_area.y+value_pos[6].y, value_pos[6].w, value_pos[6].h);
-
 }
 
 void MenuCharacter::loadGraphics() {
@@ -284,8 +293,7 @@ void MenuCharacter::refreshStats() {
 	ss.str("");
 	if (skill_points > 0) ss << skill_points << " " << msg->get("points remaining");
 	else ss.str("");
-	cstat[CSTAT_UNSPENT].value->set(window_area.x+value_pos[6].x+value_pos[6].w/2, window_area.y+value_pos[6].y+value_pos[6].h/2, JUSTIFY_CENTER, VALIGN_CENTER, ss.str(), font->getColor("menu_bonus"));
-	ss.str("");
+	labelUnspent->set(window_area.x+unspent_pos.x, window_area.y+unspent_pos.y, unspent_pos.justify, unspent_pos.valign, ss.str(), font->getColor("menu_bonus"), unspent_pos.font_style);
 
 	// scrolling stat list
 
@@ -317,31 +325,19 @@ void MenuCharacter::refreshStats() {
 
 	if (show_stat[4]) {
 		ss.str("");
-		ss << msg->get("Accuracy (vs lvl 1):") << " " << stats->accuracy << "%";
+		ss << msg->get("Accuracy:") << " " << stats->accuracy << "%";
 		statList->set(visible_stats++, ss.str(),msg->get("Each point of Offense grants +%d accuracy. Each level grants +%d accuracy", stats->accuracy_per_offense, stats->accuracy_per_level));
 	}
 
 	if (show_stat[5]) {
 		ss.str("");
-		ss << msg->get("Accuracy (vs lvl 5):") << " " << (stats->accuracy-20) << "%";
-		statList->set(visible_stats++, ss.str(),msg->get("Each point of Offense grants +%d accuracy. Each level grants +%d accuracy", stats->accuracy_per_offense, stats->accuracy_per_level));
-	}
-
-	if (show_stat[6]) {
-		ss.str("");
-		ss << msg->get("Avoidance (vs lvl 1):") << " " << stats->avoidance << "%";
-		statList->set(visible_stats++, ss.str(),msg->get("Each point of Defense grants +%d avoidance. Each level grants +%d avoidance", stats->avoidance_per_defense, stats->avoidance_per_level));
-	}
-
-	if (show_stat[7]) {
-		ss.str("");
-		ss << msg->get("Avoidance (vs lvl 5):") << " " << (stats->avoidance-20) << "%";
+		ss << msg->get("Avoidance:") << " " << stats->avoidance << "%";
 		statList->set(visible_stats++, ss.str(),msg->get("Each point of Defense grants +%d avoidance. Each level grants +%d avoidance", stats->avoidance_per_defense, stats->avoidance_per_level));
 	}
 
 	int bonus;
 
-	if (show_stat[8]) {
+	if (show_stat[6]) {
 		bonus = stats->get_physical() * stats->bonus_per_physical;
 		ss.str("");
 		ss << msg->get("Melee Damage:") << " ";
@@ -352,7 +348,7 @@ void MenuCharacter::refreshStats() {
 		statList->set(visible_stats++, ss.str(),"");
 	}
 
-	if (show_stat[9]) {
+	if (show_stat[7]) {
 		bonus = stats->get_offense() * stats->bonus_per_offense;
 		ss.str("");
 		ss << msg->get("Ranged Damage:") << " ";
@@ -363,7 +359,7 @@ void MenuCharacter::refreshStats() {
 		statList->set(visible_stats++, ss.str(),"");
 	}
 
-	if (show_stat[10]) {
+	if (show_stat[8]) {
 		bonus = stats->get_mental() * stats->bonus_per_mental;
 		ss.str("");
 		ss << msg->get("Mental Damage:") << " ";
@@ -374,13 +370,13 @@ void MenuCharacter::refreshStats() {
 		statList->set(visible_stats++, ss.str(),"");
 	}
 
-	if (show_stat[11]) {
+	if (show_stat[9]) {
 		ss.str("");
 		ss << msg->get("Crit:") << " " << stats->crit << "%";
 		statList->set(visible_stats++, ss.str(),"");
 	}
 
-	if (show_stat[12]) {
+	if (show_stat[10]) {
 		ss.str("");
 		ss << msg->get("Absorb:") << " ";
 		if (stats->absorb_min == stats->absorb_max)
@@ -390,7 +386,37 @@ void MenuCharacter::refreshStats() {
 		statList->set(visible_stats++, ss.str(),"");
 	}
 
+	if (show_stat[11]) {
+		ss.str("");
+		ss << msg->get("Poise: ") << stats->poise << "%";
+		statList->set(visible_stats++, ss.str(),msg->get("Reduces your chance of stumbling when hit"));
+	}
+
+	if (show_stat[12]) {
+		ss.str("");
+		ss << msg->get("Bonus") << " XP: " << stats->effects.bonus_xp << "%";
+		statList->set(visible_stats++, ss.str(),msg->get("Increases the XP gained per kill"));
+	}
+
 	if (show_stat[13]) {
+		ss.str("");
+		ss << msg->get("Bonus") << " " << CURRENCY << ": " << stats->effects.bonus_currency << "%";
+		statList->set(visible_stats++, ss.str(),msg->get("Increases the %s found per drop",CURRENCY));
+	}
+
+	if (show_stat[14]) {
+		ss.str("");
+		ss << msg->get("Bonus Item Find: ") << stats->effects.bonus_item_find << "%";
+		statList->set(visible_stats++, ss.str(),msg->get("Increases the chance that an enemy will drop an item when killed"));
+	}
+
+	if (show_stat[15]) {
+		ss.str("");
+		ss << msg->get("Stealth: ") << stats->effects.bonus_stealth << "%";
+		statList->set(visible_stats++, ss.str(),msg->get("Increases your ability to move undetected"));
+	}
+
+	if (show_stat[16]) {
 		for (unsigned int j=0; j<stats->vulnerable.size(); j++) {
 			ss.str("");
 			ss << msg->get(ELEMENTS[j].resist) << ": " << (100 - stats->vulnerable[j]) << "%";
@@ -425,9 +451,6 @@ void MenuCharacter::refreshStats() {
 	cstat[CSTAT_DEFENSE].tip.clear();
 	cstat[CSTAT_DEFENSE].tip.addText(msg->get("Defense (D) increases armor proficiency and avoidance."));
 	cstat[CSTAT_DEFENSE].tip.addText(msg->get("base (%d), bonus (%d)", stats->defense_character, stats->defense_additional));
-
-	if (skill_points) cstat[CSTAT_UNSPENT].tip.addText(msg->get("Unspent attribute points"));
-
 }
 
 
@@ -453,9 +476,9 @@ void MenuCharacter::logic() {
 	}
 
 	int spent = stats->physical_character + stats->mental_character + stats->offense_character + stats->defense_character -4;
-	skill_points = stats->level - spent;
+	skill_points = (stats->level * stats->stat_points_per_level) - spent;
 
-	if (spent < stats->level && spent < stats->max_spendable_stat_points) {
+	if (stats->hp > 0 && spent < (stats->level * stats->stat_points_per_level) && spent < stats->max_spendable_stat_points) {
 		if (stats->physical_character < stats->max_points_per_stat && show_upgrade[0]) upgradeButton[0]->enabled = true;
 		if (stats->mental_character  < stats->max_points_per_stat && show_upgrade[1]) upgradeButton[1]->enabled = true;
 		if (stats->offense_character < stats->max_points_per_stat && show_upgrade[2]) upgradeButton[2]->enabled = true;
@@ -495,6 +518,9 @@ void MenuCharacter::render() {
 	// title
 	labelCharacter->render();
 
+	// unspent points
+	labelUnspent->render();
+
 	// labels and values
 	for (int i=0; i<CSTAT_COUNT; i++) {
 		if (cstat[i].visible) {
@@ -522,8 +548,7 @@ TooltipData MenuCharacter::checkTooltip() {
 			return cstat[i].tip;
 	}
 
-	TooltipData tip;
-	return tip;
+	return statList->checkTooltip(inpt->mouse);
 }
 
 /**
@@ -532,10 +557,10 @@ TooltipData MenuCharacter::checkTooltip() {
  */
 bool MenuCharacter::checkUpgrade() {
 	int spent = stats->physical_character + stats->mental_character + stats->offense_character + stats->defense_character -4;
-	skill_points = stats->level - spent;
+	skill_points = (stats->level * stats->stat_points_per_level) - spent;
 
 	// check to see if there are skill points available
-	if (spent < stats->level && spent < stats->max_spendable_stat_points) {
+	if (spent < (stats->level * stats->stat_points_per_level) && spent < stats->max_spendable_stat_points) {
 
 		// physical
 		if (physical_up) {
@@ -579,6 +604,7 @@ MenuCharacter::~MenuCharacter() {
 	delete closeButton;
 
 	delete labelCharacter;
+	delete labelUnspent;
 	for (int i=0; i<CSTAT_COUNT; i++) {
 		delete cstat[i].label;
 		delete cstat[i].value;

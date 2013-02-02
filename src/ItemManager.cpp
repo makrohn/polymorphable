@@ -30,29 +30,59 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 #include "UtilsParsing.h"
 #include "WidgetLabel.h"
 
-#include <sstream>
-#include <fstream>
-#include <cstring>
+#include <cassert>
 #include <climits>
+#include <cstring>
+#include <fstream>
+#include <sstream>
 
 using namespace std;
 
+/**
+ * Resizes vector vec, so it can fit index id.
+ */
+template <typename Ty_>
+static inline void ensureFitsId(vector<Ty_>& vec, int id)
+{
+	// id's are always greater or equal 1;
+	if (id < 1) return;
 
-ItemManager::ItemManager() {
-	items = vector<Item>();
+	typedef typename vector<Ty_>::size_type VecSz;
+
+	if (vec.size() <= VecSz(id+1))
+		vec.resize(id+1);
+}
+
+/**
+ * Trims vector allocated memory to its size.
+ *
+ * Emulates C++2011 vector::shrink_to_fit().
+ * It is sometimes also called "swap trick".
+ */
+template <typename Ty_>
+static inline void shrinkVecToFit(std::vector<Ty_>& vec)
+{
+	if (vec.capacity() != vec.size())
+		std::vector<Ty_>(vec).swap(vec);
+}
+
+ItemManager::ItemManager()
+	: color_normal(font->getColor("item_normal"))
+	, color_low(font->getColor("item_low"))
+	, color_high(font->getColor("item_high"))
+	, color_epic(font->getColor("item_epic"))
+	, color_bonus(font->getColor("item_bonus"))
+	, color_penalty(font->getColor("item_penalty"))
+	, color_requirements_not_met(font->getColor("requirements_not_met"))
+	, color_flavor(font->getColor("item_flavor"))
+{
+	// NB: 20 is arbitrary picked number, but it looks like good start.
+	items.reserve(20);
+	item_sets.reserve(5);
 
 	loadAll();
 	loadSounds();
 	loadIcons();
-
-	// font colors
-	color_normal = font->getColor("item_normal");
-	color_low = font->getColor("item_low");
-	color_high = font->getColor("item_high");
-	color_epic = font->getColor("item_epic");
-	color_bonus = font->getColor("item_bonus");
-	color_penalty = font->getColor("item_penalty");
-	color_requirements_not_met = font->getColor("requirements_not_met");
 }
 
 /**
@@ -81,11 +111,22 @@ void ItemManager::loadAll() {
 			this->loadSets(test_path);
 		}
 	}
-	if (!items.empty()) shrinkItems();
-	else fprintf(stderr, "No items were found.\n");
 
-	if (!item_sets.empty()) shrinkItemSets();
-	else printf("No item sets were found.\n");
+	/*
+	 * Shrinks the items vector to the absolute needed size.
+	 *
+	 * While loading the items, the item vector grows dynamically. To have
+	 * no much time overhead for reallocating the vector, a new reallocation
+	 * is twice as large as the needed item id, which means in the worst case
+	 * the item vector was reallocated for loading the last element, so the
+	 * vector is twice as large as needed. This memory is definitly not used,
+	 * so we can free it.
+	 */
+	shrinkVecToFit(items);
+	shrinkVecToFit(item_sets);
+
+	if (items.empty()) fprintf(stderr, "No items were found.\n");
+	if (item_sets.empty()) printf("No item sets were found.\n");
 }
 
 /**
@@ -106,10 +147,7 @@ void ItemManager::load(const string& filename) {
 		if (infile.key == "id") {
 			id_line = true;
 			id = toInt(infile.val);
-			if (id > 0 && id >= (int)items.size()) {
-				// *2 to amortize the resizing to O(log(n)).
-				items.resize((2*id) + 1);
-			}
+			ensureFitsId(items, id+1);
 		} else id_line = false;
 
 		if (id < 1) {
@@ -118,8 +156,12 @@ void ItemManager::load(const string& filename) {
 		}
 		if (id_line) continue;
 
+		assert(items.size() > std::size_t(id));
+
 		if (infile.key == "name")
 			items[id].name = msg->get(infile.val);
+		else if (infile.key == "flavor")
+			items[id].flavor = msg->get(infile.val);
 		else if (infile.key == "level")
 			items[id].level = toInt(infile.val);
 		else if (infile.key == "icon") {
@@ -299,10 +341,7 @@ void ItemManager::loadSets(const string& filename) {
 		if (infile.key == "id") {
 			id_line = true;
 			id = toInt(infile.val);
-			if (id > 0 && id >= (int)item_sets.size()) {
-				// *2 to amortize the resizing to O(log(n)).
-				item_sets.resize((2*id) + 1);
-			}
+			ensureFitsId(item_sets, id+1);
 		} else id_line = false;
 
 		if (id < 1) {
@@ -311,17 +350,24 @@ void ItemManager::loadSets(const string& filename) {
 		}
 		if (id_line) continue;
 
+		assert(item_sets.size() > std::size_t(id));
+
 		if (infile.key == "name") {
 			item_sets[id].name = msg->get(infile.val);
 		}
 		else if (infile.key == "items") {
 			string item_id = infile.nextValue();
 			while (item_id != "") {
-				if (toInt(item_id) > 0) {
-					items[toInt(item_id)].set = id;
-					item_sets[id].items.push_back(toInt(item_id));
-					item_id = infile.nextValue();
-				} else fprintf(stderr, "Item index inside item set %s definition out of bounds 1-%d, skipping item\n", item_sets[id].name.c_str(), INT_MAX);
+				int temp_id = toInt(item_id);
+				if (temp_id > 0 && temp_id < static_cast<int>(items.size())) {
+					items[temp_id].set = id;
+					item_sets[id].items.push_back(temp_id);
+				} else {
+					const int maxsize = static_cast<int>(items.size()-1);
+					const char* cname = item_sets[id].name.c_str();
+					fprintf(stderr, "Item index inside item set %s definition out of bounds 1-%d, skipping item\n", cname, maxsize);
+				}
+				item_id = infile.nextValue();
 			}
 		}
 		else if (infile.key == "color") {
@@ -343,20 +389,18 @@ void ItemManager::loadSets(const string& filename) {
 void ItemManager::loadSounds() {
 	memset(sfx, 0, sizeof(sfx));
 
-	if (audio && SOUND_VOLUME) {
-		sfx[SFX_BOOK] = Mix_LoadWAV(mods->locate("soundfx/inventory/inventory_book.ogg").c_str());
-		sfx[SFX_CLOTH] = Mix_LoadWAV(mods->locate("soundfx/inventory/inventory_cloth.ogg").c_str());
-		sfx[SFX_COINS] = Mix_LoadWAV(mods->locate("soundfx/inventory/inventory_coins.ogg").c_str());
-		sfx[SFX_GEM] = Mix_LoadWAV(mods->locate("soundfx/inventory/inventory_gem.ogg").c_str());
-		sfx[SFX_LEATHER] = Mix_LoadWAV(mods->locate("soundfx/inventory/inventory_leather.ogg").c_str());
-		sfx[SFX_METAL] = Mix_LoadWAV(mods->locate("soundfx/inventory/inventory_metal.ogg").c_str());
-		sfx[SFX_PAGE] = Mix_LoadWAV(mods->locate("soundfx/inventory/inventory_page.ogg").c_str());
-		sfx[SFX_MAILLE] = Mix_LoadWAV(mods->locate("soundfx/inventory/inventory_maille.ogg").c_str());
-		sfx[SFX_OBJECT] = Mix_LoadWAV(mods->locate("soundfx/inventory/inventory_object.ogg").c_str());
-		sfx[SFX_HEAVY] = Mix_LoadWAV(mods->locate("soundfx/inventory/inventory_heavy.ogg").c_str());
-		sfx[SFX_WOOD] = Mix_LoadWAV(mods->locate("soundfx/inventory/inventory_wood.ogg").c_str());
-		sfx[SFX_POTION] = Mix_LoadWAV(mods->locate("soundfx/inventory/inventory_potion.ogg").c_str());
-	}
+	sfx[SFX_BOOK] = loadSfx("soundfx/inventory/inventory_book.ogg","ItemManager books");
+	sfx[SFX_CLOTH] = loadSfx("soundfx/inventory/inventory_cloth.ogg", "ItemManager cloths");
+	sfx[SFX_COINS] = loadSfx("soundfx/inventory/inventory_coins.ogg", "ItemManager coins");
+	sfx[SFX_GEM] = loadSfx("soundfx/inventory/inventory_gem.ogg", "ItemManager gems");
+	sfx[SFX_LEATHER] = loadSfx("soundfx/inventory/inventory_leather.ogg", "ItemManager leather");
+	sfx[SFX_METAL] = loadSfx("soundfx/inventory/inventory_metal.ogg", "ItemManager metal");
+	sfx[SFX_PAGE] = loadSfx("soundfx/inventory/inventory_page.ogg", "ItemManager page");
+	sfx[SFX_MAILLE] = loadSfx("soundfx/inventory/inventory_maille.ogg", "ItemManager maille");
+	sfx[SFX_OBJECT] = loadSfx("soundfx/inventory/inventory_object.ogg", "ItemManager objects");
+	sfx[SFX_HEAVY] = loadSfx("soundfx/inventory/inventory_heavy.ogg", "ItemManager heavy");
+	sfx[SFX_WOOD] = loadSfx("soundfx/inventory/inventory_wood.ogg", "ItemManager wood");
+	sfx[SFX_POTION] = loadSfx("soundfx/inventory/inventory_potion.ogg", "ItemManager potions");
 }
 
 /**
@@ -366,7 +410,7 @@ void ItemManager::loadIcons() {
 
 	icons = IMG_Load(mods->locate("images/icons/icons.png").c_str());
 
-	if(!icons) {
+	if (!icons) {
 		fprintf(stderr, "Couldn't load icons: %s\n", IMG_GetError());
 	} else {
 		// optimize
@@ -374,32 +418,6 @@ void ItemManager::loadIcons() {
 		icons = SDL_DisplayFormatAlpha(icons);
 		SDL_FreeSurface(cleanup);
 	}
-}
-
-/**
- * Shrinks the items vector to the absolute needed size.
- *
- * While loading the items, the item vector grows dynamically. To have
- * no much time overhead for reallocating the vector, a new reallocation
- * is twice as large as the needed item id, which means in the worst case
- * the item vector was reallocated for loading the last element, so the
- * vector is twice as large as needed. This memory is definitly not used,
- * so we can free it.
- */
-void ItemManager::shrinkItems() {
-	unsigned i = items.size() - 1;
-	while (items[i].name == "")
-		i--;
-
-	items.resize(i + 1);
-}
-
-void ItemManager::shrinkItemSets() {
-	unsigned i = item_sets.size() - 1;
-	while (item_sets[i].name == "")
-		i--;
-
-	item_sets.resize(i + 1);
 }
 
 /**
@@ -420,7 +438,7 @@ void ItemManager::renderIcon(ItemStack stack, int x, int y, int size) {
 		SDL_BlitSurface(icons, &src, screen, &dest);
 	}
 
-	if( stack.quantity > 1 || items[stack.item].max_quantity > 1) {
+	if (stack.quantity > 1 || items[stack.item].max_quantity > 1) {
 		// stackable item : show the quantity
 		stringstream ss;
 		ss << stack.quantity;
@@ -433,13 +451,11 @@ void ItemManager::renderIcon(ItemStack stack, int x, int y, int size) {
 
 void ItemManager::playSound(int item) {
 	if (items[item].sfx != SFX_NONE)
-		if (sfx[items[item].sfx])
-			Mix_PlayChannel(-1, sfx[items[item].sfx], 0);
+		playSfx(sfx[items[item].sfx]);
 }
 
 void ItemManager::playCoinsSound() {
-	if (sfx[SFX_COINS])
-		Mix_PlayChannel(-1, sfx[SFX_COINS], 0);
+	playSfx(sfx[SFX_COINS]);
 }
 
 TooltipData ItemManager::getShortTooltip(ItemStack stack) {
@@ -464,7 +480,7 @@ TooltipData ItemManager::getShortTooltip(ItemStack stack) {
 	}
 
 	// name
-	if( stack.quantity > 1) {
+	if (stack.quantity > 1) {
 		ss << stack.quantity << " " << items[stack.item].name;
 	} else {
 		ss << items[stack.item].name;
@@ -542,19 +558,25 @@ TooltipData ItemManager::getTooltip(int item, StatBlock *stats, int context) {
 	unsigned bonus_counter = 0;
 	string modifier;
 	while (bonus_counter < items[item].bonus_val.size() && items[item].bonus_stat[bonus_counter] != "") {
-		if (items[item].bonus_val[bonus_counter] > 0) {
-			modifier = msg->get("Increases %s by %d",
-					items[item].bonus_val[bonus_counter],
-					msg->get(items[item].bonus_stat[bonus_counter]));
+		if (items[item].bonus_stat[bonus_counter] == "speed") {
+			modifier = msg->get("%d\% Speed", items[item].bonus_val[bonus_counter]);
+			if (items[item].bonus_val[bonus_counter] >= 100) color = color_bonus;
+			else color = color_penalty;
+		} else {
+			if (items[item].bonus_val[bonus_counter] > 0) {
+				modifier = msg->get("Increases %s by %d",
+						items[item].bonus_val[bonus_counter],
+						msg->get(items[item].bonus_stat[bonus_counter]));
 
-			color = color_bonus;
-		}
-		else {
-			modifier = msg->get("Decreases %s by %d",
-					items[item].bonus_val[bonus_counter],
-					msg->get(items[item].bonus_stat[bonus_counter]));
+				color = color_bonus;
+			}
+			else {
+				modifier = msg->get("Decreases %s by %d",
+						items[item].bonus_val[bonus_counter],
+						msg->get(items[item].bonus_stat[bonus_counter]));
 
-			color = color_penalty;
+				color = color_penalty;
+			}
 		}
 		tip.addText(modifier, color);
 		bonus_counter++;
@@ -587,6 +609,11 @@ TooltipData ItemManager::getTooltip(int item, StatBlock *stats, int context) {
 			else color = color_normal;
 			tip.addText(msg->get("Requires Defense %d", items[item].req_val), color);
 		}
+	}
+
+	// flavor text
+	if (items[item].flavor != "") {
+		tip.addText(items[item].flavor, color_flavor);
 	}
 
 	// buy or sell price
@@ -645,10 +672,8 @@ TooltipData ItemManager::getTooltip(int item, StatBlock *stats, int context) {
 ItemManager::~ItemManager() {
 	SDL_FreeSurface(icons);
 
-	if (audio) {
-		for (int i=0; i<12; i++) {
-			Mix_FreeChunk(sfx[i]);
-		}
+	for (int i=0; i<12; i++) {
+		Mix_FreeChunk(sfx[i]);
 	}
 }
 
@@ -669,7 +694,7 @@ bool ItemStack::operator > (const ItemStack &param) const {
 
 int Item::getSellPrice() {
 	int new_price = 0;
-	if(price_sell != 0)
+	if (price_sell != 0)
 		new_price = price_sell;
 	else
 		new_price = static_cast<int>(price * VENDOR_RATIO);

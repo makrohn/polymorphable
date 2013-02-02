@@ -22,6 +22,8 @@ FLARE.  If not, see http://www.gnu.org/licenses/
  * Handles floor loot
  */
 
+
+#pragma once
 #ifndef LOOT_MANAGER_H
 #define LOOT_MANAGER_H
 
@@ -29,6 +31,7 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 #include "AnimationSet.h"
 #include "AnimationManager.h"
 
+#include "Loot.h"
 #include "ItemManager.h"
 #include "Settings.h"
 
@@ -43,83 +46,8 @@ class MapRenderer;
 class MenuInventory;
 class WidgetTooltip;
 
-struct LootDef {
-private:
-	std::string gfx;
-
+class CurrencyRange {
 public:
-	ItemStack stack;
-	Point pos;
-	Animation *animation;
-	int currency;
-	TooltipData tip;
-
-
-	LootDef() {
-		stack.item = 0;
-		stack.quantity = 0;
-		pos.x = 0;
-		pos.y = 0;
-		animation = NULL;
-		currency = 0;
-		tip.clear();
-		gfx = "";
-	}
-
-	LootDef(const LootDef &other) {
-		stack.item = other.stack.item;
-		stack.quantity = other.stack.quantity;
-		pos.x = other.pos.x;
-		pos.y = other.pos.y;
-		loadAnimation(other.gfx);
-		animation->syncTo(other.animation);
-		currency = other.currency;
-		tip = other.tip;
-	}
-
-	// The assignment operator mainly used in internal vector managing,
-	// e.g. in vector::erase()
-	LootDef& operator= (const LootDef &other) {
-
-		delete animation;
-		loadAnimation(other.gfx);
-		animation->syncTo(other.animation);
-
-		stack.item = other.stack.item;
-		stack.quantity = other.stack.quantity;
-		pos.x = other.pos.x;
-		pos.y = other.pos.y;
-		currency = other.currency;
-		tip = other.tip;
-
-		return *this;
-	}
-
-	void loadAnimation(std::string _gfx) {
-		gfx = _gfx;
-		if (gfx != "") {
-			anim->increaseCount(gfx);
-			AnimationSet *as = anim->getAnimationSet(gfx);
-			animation = as->getAnimation(as->starting_animation);
-		}
-	}
-
-	/**
-	 * If an item is flying, it hasn't completed its "flying loot" animation.
-	 * Only allow loot to be picked up if it is grounded.
-	 */
-	bool isFlying() {
-		return !animation->isLastFrame();
-	}
-
-	~LootDef() {
-		if (gfx != "")
-			anim->decreaseCount(gfx);
-		delete animation;
-	}
-};
-
-struct CurrencyRange {
 	std::string filename;
 	int low;
 	int high;
@@ -146,18 +74,12 @@ private:
 
 	// functions
 	void loadGraphics();
-	void calcTables();
 	int lootLevel(int base_level);
 
 	Mix_Chunk *loot_flip;
 
 	// loot refers to ItemManager indices
-	std::vector<LootDef> loot;
-
-	// loot tables multiplied out
-	// currently loot can range from levels 0-20
-	int loot_table[21][1024]; // level, number.  the int is an item id
-	int loot_table_count[21]; // total number per level
+	std::vector<Loot> loot;
 
 	SDL_Rect animation_pos;
 	Point animation_offset;
@@ -169,6 +91,7 @@ private:
 public:
 	static LootManager *getInstance();
 	LootManager(ItemManager *_items, MapRenderer *_map, StatBlock *_hero);
+	LootManager(const LootManager &copy); // not implemented
 	~LootManager();
 
 	void handleNewMap();
@@ -179,9 +102,7 @@ public:
 	// called by enemy, who definitly wants to drop loot.
 	void addEnemyLoot(const Enemy *e);
 	void checkMapForLoot();
-	void determineLoot(int base_level, Point pos); // uniformly distributed within the base_level set, randomly chosen
-	void determineLootByClass(const Enemy *e, Point pos); // distributed according to enemies loot type probabilities, only from specific item class
-	int randomItem(int base_level);
+	void determineLootByEnemy(const Enemy *e, Point pos); // pick from enemy-specific loot table
 	void addLoot(ItemStack stack, Point pos);
 	void addCurrency(int count, Point pos);
 	ItemStack checkPickup(Point mouse, Point cam, Point hero_pos, int &currency, MenuInventory *inv);

@@ -24,6 +24,7 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 #include "PowerManager.h"
 #include "StatBlock.h"
 #include "UtilsFileSystem.h"
+#include "UtilsMath.h"
 #include "UtilsParsing.h"
 
 #include <stdint.h>
@@ -40,6 +41,7 @@ MapRenderer::MapRenderer(CampaignManager *_camp)
  , show_tooltip(false)
  , sfx(NULL)
  , sfx_filename("")
+ , events(vector<Map_Event>())
  , background(NULL)
  , fringe(NULL)
  , object(NULL)
@@ -47,42 +49,27 @@ MapRenderer::MapRenderer(CampaignManager *_camp)
  , collision(NULL)
  , shakycam(Point())
  , new_music(false)
+ , backgroundsurface(NULL)
  , backgroundsurfaceoffset(Point(0,0))
  , repaint_background(false)
-
  , camp(_camp)
  , powers(NULL)
  , w(0)
  , h(0)
+ , cam(Point(0,0))
  , hero_tile(Point())
  , spawn(Point())
  , spawn_dir(0)
  , map_change(false)
- , new_enemy(Map_Enemy())
- , new_group(Map_Group())
- , enemy_awaiting_queue(false)
- , group_awaiting_queue(false)
- , new_npc(Map_NPC())
- , npc_awaiting_queue(false)
  , teleportation(false)
  , teleport_destination(Point())
  , respawn_point(Point())
+ , log_msg("")
+ , shaky_cam_ticks(0)
  , stash(false)
  , stash_pos(Point())
+ , enemies_cleared(false)
 {
-	cam.x = 0;
-	cam.y = 0;
-	//~ new_music = false;
-
-	clearEvents();
-
-	log_msg = "";
-	shaky_cam_ticks = 0;
-
-	backgroundsurface = NULL;
-	//~ backgroundsurfaceoffset.x = 0;
-	//~ backgroundsurfaceoffset.y = 0;
-	//~ repaint_background = false;
 }
 
 void MapRenderer::clearEvents() {
@@ -93,13 +80,10 @@ void MapRenderer::playSFX(string filename) {
 	// only load from file if the requested soundfx isn't already loaded
 	if (filename != sfx_filename) {
 		Mix_FreeChunk(sfx);
-		sfx = NULL;
-		if (audio) {
-			sfx = Mix_LoadWAV(mods->locate(filename).c_str());
-			sfx_filename = filename;
-		}
+		sfx = loadSfx(filename, "MapRenderer background music");
+		sfx_filename = filename;
 	}
-	if (sfx) Mix_PlayChannel(-1, sfx, 0);
+	playSfx(sfx);
 }
 
 void MapRenderer::push_enemy_group(Map_Group g) {
@@ -109,57 +93,50 @@ void MapRenderer::push_enemy_group(Map_Group g) {
 		return;
 	}
 
-	// populate valid_locations
-	vector<Point> valid_locations;
-	Point pt;
-	for (int width = 0; width < g.area.x; width++) {
-		for (int height = 0; height < g.area.y; height++) {
-			pt.x = (g.pos.x + width) * UNITS_PER_TILE + UNITS_PER_TILE / 2;
-			pt.y = (g.pos.y + height) * UNITS_PER_TILE + UNITS_PER_TILE / 2;
-			if (collider.is_empty(pt.x, pt.y)) {
-				valid_locations.push_back(pt);
+	// The algorithm tries to place the enemies at random locations.
+	// However if a location is not possible (unwalkable or there is already an entity),
+	// then try again.
+	// This could result in an infinite loop if there were more enemies than
+	// actual places, so have an upper bound of tries.
+
+	// random number of enemies
+	int enemies_to_spawn = randBetween(g.numbermin, g.numbermax);
+
+	// pick an upper bound, which is definitely larger than threetimes the enemy number to spawn.
+	int allowed_misses = 3 * g.numbermax;
+
+	while (enemies_to_spawn && allowed_misses) {
+
+		int x = (g.pos.x + (rand() % g.area.x)) * UNITS_PER_TILE + UNITS_PER_TILE / 2;
+		int y = (g.pos.y + (rand() % g.area.y)) * UNITS_PER_TILE + UNITS_PER_TILE / 2;
+		bool success = false;
+
+		if (collider.is_empty(x, y)) {
+			Enemy_Level enemy_lev = EnemyGroupManager::instance().getRandomEnemy(g.category, g.levelmin, g.levelmax);
+			if (enemy_lev.type != ""){
+				Map_Enemy group_member = Map_Enemy(enemy_lev.type, Point(x, y));
+				enemies.push(group_member);
+
+				success = true;
 			}
 		}
-	}
-	//remove locations that already have an enemy on them
-	Map_Enemy test_enemy;
-	for (size_t i = 0; i < enemies.size(); i++) {
-		test_enemy = enemies.front();
-		enemies.pop();
-		enemies.push(test_enemy);
-		for (size_t j = 0; j < valid_locations.size(); j++) {
-			if ( (test_enemy.pos.x == valid_locations.at(j).x) && (test_enemy.pos.y == valid_locations.at(j).y) ) {
-				valid_locations.erase(valid_locations.begin() + j);
-			}
-		}
-	}
-
-	// spawn the appropriate number of enemies
-	int number = rand() % (g.numbermax + 1 - g.numbermin) + g.numbermin;
-
-	for(int i = 0; i < number; i++) {
-		Enemy_Level enemy_lev = EnemyGroupManager::instance().getRandomEnemy(g.category, g.levelmin, g.levelmax);
-		Map_Enemy group_member;
-		if ((enemy_lev.type != "") && (!valid_locations.empty())){
-			group_member.clear();
-			group_member.type = enemy_lev.type;
-			int index = rand() % valid_locations.size();
-			group_member.pos = valid_locations.at(index);
-			valid_locations.erase(valid_locations.begin() + index);
-			group_member.direction = rand() % 8;
-			enemies.push(group_member);
-		}
+		if (success)
+			enemies_to_spawn--;
+		else
+			allowed_misses--;
 	}
 }
 
-/**
- * load
- */
 int MapRenderer::load(string filename) {
 	FileParser infile;
 	string val;
-	string data_format;
 	maprow *cur_layer;
+	Map_Enemy new_enemy;
+	Map_Group new_group;
+	bool enemy_awaiting_queue = false;
+	bool group_awaiting_queue = false;
+	bool npc_awaiting_queue = false;
+	Map_NPC new_npc;
 
 	clearEvents();
 	clearLayers();
@@ -175,7 +152,6 @@ int MapRenderer::load(string filename) {
 
 	while (infile.next()) {
 		if (infile.new_section) {
-			data_format = "dec"; // default
 
 			if (enemy_awaiting_queue) {
 				enemies.push(new_enemy);
@@ -192,7 +168,7 @@ int MapRenderer::load(string filename) {
 
 			// for sections that are stored in collections, add a new object here
 			if (infile.section == "enemy") {
-				new_enemy.clear();
+				new_enemy = Map_Enemy();
 				enemy_awaiting_queue = true;
 			}
 			else if (infile.section == "enemygroup") {
@@ -246,7 +222,11 @@ int MapRenderer::load(string filename) {
 				else if (infile.val == "collision") collision = cur_layer;
 			}
 			else if (infile.key == "format") {
-				data_format = infile.val;
+				if (infile.val != "dec") {
+					fprintf(stderr, "ERROR: maploading: The format of a layer must be \"dec\"!\n");
+					SDL_Quit();
+					exit(1);
+				}
 			}
 			else if (infile.key == "data") {
 				// layer map data handled as a special case
@@ -254,7 +234,7 @@ int MapRenderer::load(string filename) {
 				for (int j=0; j<h; j++) {
 					val = infile.getRawLine() + ',';
 					for (int i=0; i<w; i++)
-						cur_layer[i][j] = eatFirstInt(val, ',', (data_format == "hex" ? std::hex : std::dec));
+						cur_layer[i][j] = eatFirstInt(val, ',');
 				}
 				if (cur_layer == collision)
 					collider.setmap(collision, w, h);
@@ -377,7 +357,8 @@ int MapRenderer::load(string filename) {
 			}
 			else {
 				// new event component
-				Event_Component *e = &(events.back()).components[events.back().comp_num];
+				events.back().components.push_back(Event_Component());
+				Event_Component *e = &events.back().components.back();
 				e->type = infile.key;
 
 				if (infile.key == "intermap") {
@@ -398,8 +379,8 @@ int MapRenderer::load(string filename) {
 					// add repeating mapmods
 					string repeat_val = infile.nextValue();
 					while (repeat_val != "") {
-						events.back().comp_num++;
-						e = &events.back().components[events.back().comp_num];
+						events.back().components.push_back(Event_Component());
+						e = &events.back().components.back();
 						e->type = infile.key;
 						e->s = repeat_val;
 						e->x = toInt(infile.nextValue());
@@ -421,8 +402,8 @@ int MapRenderer::load(string filename) {
 					// add repeating loot
 					string repeat_val = infile.nextValue();
 					while (repeat_val != "") {
-						events.back().comp_num++;
-						e = &events.back().components[events.back().comp_num];
+						events.back().components.push_back(Event_Component());
+						e = &events.back().components.back();
 						e->type = infile.key;
 						e->s = repeat_val;
 						e->x = toInt(infile.nextValue()) * UNITS_PER_TILE + UNITS_PER_TILE/2;
@@ -444,8 +425,8 @@ int MapRenderer::load(string filename) {
 					// add repeating requires_status
 					string repeat_val = infile.nextValue();
 					while (repeat_val != "") {
-						events.back().comp_num++;
-						e = &events.back().components[events.back().comp_num];
+						events.back().components.push_back(Event_Component());
+						e = &events.back().components.back();
 						e->type = infile.key;
 						e->s = repeat_val;
 
@@ -458,13 +439,19 @@ int MapRenderer::load(string filename) {
 					// add repeating requires_not
 					string repeat_val = infile.nextValue();
 					while (repeat_val != "") {
-						events.back().comp_num++;
-						e = &events.back().components[events.back().comp_num];
+						events.back().components.push_back(Event_Component());
+						e = &events.back().components.back();
 						e->type = infile.key;
 						e->s = repeat_val;
 
 						repeat_val = infile.nextValue();
 					}
+				}
+				else if (infile.key == "requires_level") {
+					e->x = toInt(infile.nextValue());
+				}
+				else if (infile.key == "requires_not_level") {
+					e->x = toInt(infile.nextValue());
 				}
 				else if (infile.key == "requires_item") {
 					e->x = toInt(infile.nextValue());
@@ -472,8 +459,8 @@ int MapRenderer::load(string filename) {
 					// add repeating requires_item
 					string repeat_val = infile.nextValue();
 					while (repeat_val != "") {
-						events.back().comp_num++;
-						e = &events.back().components[events.back().comp_num];
+						events.back().components.push_back(Event_Component());
+						e = &events.back().components.back();
 						e->type = infile.key;
 						e->x = toInt(repeat_val);
 
@@ -486,8 +473,8 @@ int MapRenderer::load(string filename) {
 					// add repeating set_status
 					string repeat_val = infile.nextValue();
 					while (repeat_val != "") {
-						events.back().comp_num++;
-						e = &events.back().components[events.back().comp_num];
+						events.back().components.push_back(Event_Component());
+						e = &events.back().components.back();
 						e->type = infile.key;
 						e->s = repeat_val;
 
@@ -500,8 +487,8 @@ int MapRenderer::load(string filename) {
 					// add repeating unset_status
 					string repeat_val = infile.nextValue();
 					while (repeat_val != "") {
-						events.back().comp_num++;
-						e = &events.back().components[events.back().comp_num];
+						events.back().components.push_back(Event_Component());
+						e = &events.back().components.back();
 						e->type = infile.key;
 						e->s = repeat_val;
 
@@ -514,8 +501,8 @@ int MapRenderer::load(string filename) {
 					// add repeating remove_item
 					string repeat_val = infile.nextValue();
 					while (repeat_val != "") {
-						events.back().comp_num++;
-						e = &events.back().components[events.back().comp_num];
+						events.back().components.push_back(Event_Component());
+						e = &events.back().components.back();
 						e->type = infile.key;
 						e->x = toInt(repeat_val);
 
@@ -537,8 +524,8 @@ int MapRenderer::load(string filename) {
 					// add repeating spawn
 					string repeat_val = infile.nextValue();
 					while (repeat_val != "") {
-						events.back().comp_num++;
-						e = &events.back().components[events.back().comp_num];
+						events.back().components.push_back(Event_Component());
+						e = &events.back().components.back();
 						e->type = infile.key;
 
 						e->s = repeat_val;
@@ -548,7 +535,6 @@ int MapRenderer::load(string filename) {
 						repeat_val = infile.nextValue();
 					}
 				}
-				events.back().comp_num++;
 			}
 		}
 	}
@@ -556,18 +542,14 @@ int MapRenderer::load(string filename) {
 	infile.close();
 
 	// reached end of file.  Handle any final sections.
-	if (enemy_awaiting_queue) {
+	if (enemy_awaiting_queue)
 		enemies.push(new_enemy);
-		enemy_awaiting_queue = false;
-	}
-	if (npc_awaiting_queue) {
+
+	if (npc_awaiting_queue)
 		npcs.push(new_npc);
-		npc_awaiting_queue = false;
-	}
-	if (group_awaiting_queue){
+
+	if (group_awaiting_queue)
 		push_enemy_group(new_group);
-		group_awaiting_queue = false;
-	}
 
 	if (this->new_music) {
 		loadMusic();
@@ -583,12 +565,9 @@ int MapRenderer::load(string filename) {
 }
 
 void MapRenderer::clearQueues() {
-	while(!enemies.empty())
-	  enemies.pop();
-	while(!npcs.empty())
-	  npcs.pop();
-	while(!loot.empty())
-	  loot.pop();
+	enemies = queue<Map_Enemy>();
+	npcs = queue<Map_NPC>();
+	loot = queue<Event_Component>();
 }
 
 /**
@@ -614,12 +593,12 @@ void MapRenderer::clearLayers() {
 
 void MapRenderer::loadMusic() {
 
-	if (music != NULL) {
+	if (music) {
 		Mix_HaltMusic();
 		Mix_FreeMusic(music);
 		music = NULL;
 	}
-	if (audio && MUSIC_VOLUME) {
+	if (AUDIO && MUSIC_VOLUME) {
 		music = Mix_LoadMUS(mods->locate("music/" + this->music_filename).c_str());
 		if(!music)
 			cout << "Mix_LoadMUS: "<< Mix_GetError()<<endl;
@@ -673,8 +652,6 @@ void calculatePriosOrtho(vector<Renderable> &r) {
 
 void MapRenderer::render(vector<Renderable> &r, vector<Renderable> &r_dead) {
 
-	vector<Renderable>::iterator it;
-
 	if (shaky_cam_ticks == 0) {
 		shakycam.x = cam.x;
 		shakycam.y = cam.y;
@@ -701,8 +678,9 @@ void MapRenderer::render(vector<Renderable> &r, vector<Renderable> &r_dead) {
 
 void MapRenderer::createBackgroundSurface() {
 	SDL_FreeSurface(backgroundsurface);
-	backgroundsurface = createSurface(VIEW_W + 2 * TILE_W * tset.max_size_x,
-			VIEW_H + 2 * TILE_H * tset.max_size_y);
+	backgroundsurface = createSurface(
+			VIEW_W + 2 * movedistance_to_rerender * TILE_W * tset.max_size_x,
+			VIEW_H + 2 * movedistance_to_rerender * TILE_H * tset.max_size_y);
 	// background has no alpha:
 	SDL_SetColorKey(backgroundsurface, 0, 0);
 }
@@ -878,17 +856,24 @@ void MapRenderer::renderIso(vector<Renderable> &r, vector<Renderable> &r_dead) {
 }
 
 void MapRenderer::renderOrthoLayer(const unsigned short layerdata[256][256]) {
+
+	const Point upperright = screen_to_map(0, 0, shakycam.x, shakycam.y);
+
+	short int startj = max(0, upperright.y / UNITS_PER_TILE);
+	short int starti = max(0, upperright.x / UNITS_PER_TILE);
+	const short max_tiles_width =  min(w, static_cast<short int>(starti + (VIEW_W / TILE_W) + 2 * tset.max_size_x));
+	const short max_tiles_height = min(h, static_cast<short int>(startj + (VIEW_H / TILE_H) + 2 * tset.max_size_y));
+
 	short int i;
 	short int j;
-	SDL_Rect dest;
-	unsigned short current_tile;
 
-	for (j=0; j<h; j++) {
-		for (i=0; i<w; i++) {
+	for (j = startj; j < max_tiles_height; j++) {
+		for (i = starti; i < max_tiles_width; i++) {
 
-			current_tile = layerdata[i][j];
+			unsigned short current_tile = layerdata[i][j];
 
 			if (current_tile) {
+				SDL_Rect dest;
 				Point p = map_to_screen(i * UNITS_PER_TILE, j * UNITS_PER_TILE, shakycam.x, shakycam.y);
 				p = center_tile(p);
 				dest.x = p.x - tset.tiles[current_tile].offset.x;
@@ -907,19 +892,27 @@ void MapRenderer::renderOrthoBackObjects(std::vector<Renderable> &r) {
 }
 
 void MapRenderer::renderOrthoFrontObjects(std::vector<Renderable> &r) {
+
 	short int i;
 	short int j;
 	SDL_Rect dest;
-	unsigned short current_tile;
 	vector<Renderable>::iterator r_cursor = r.begin();
 	vector<Renderable>::iterator r_end = r.end();
 
-	// TODO: trim by screen rect
-	// object layer
-	for (j=0; j<h; j++) {
-		for (i=0; i<w; i++) {
+	const Point upperright = screen_to_map(0, 0, shakycam.x, shakycam.y);
 
-			current_tile = object[i][j];
+	short int startj = max(0, upperright.y / UNITS_PER_TILE);
+	short int starti = max(0, upperright.x / UNITS_PER_TILE);
+	const short max_tiles_width =  min(w, static_cast<short int>(starti + (VIEW_W / TILE_W) + 2 * tset.max_size_x));
+	const short max_tiles_height = min(h, static_cast<short int>(startj + (VIEW_H / TILE_H) + 2 * tset.max_size_y));
+
+	while (r_cursor != r_end && (r_cursor->map_pos.y>>TILE_SHIFT) < startj)
+		++r_cursor;
+
+	for (j = startj; j<max_tiles_height; j++) {
+		for (i = starti; i<max_tiles_width; i++) {
+
+			unsigned short current_tile = object[i][j];
 
 			if (current_tile) {
 				Point p = map_to_screen(i * UNITS_PER_TILE, j * UNITS_PER_TILE, shakycam.x, shakycam.y);
@@ -929,12 +922,15 @@ void MapRenderer::renderOrthoFrontObjects(std::vector<Renderable> &r) {
 				SDL_BlitSurface(tset.sprites, &(tset.tiles[current_tile].src), screen, &dest);
 			}
 
-			// some renderable entities go in this layer
-			while (r_cursor != r_end && (r_cursor->map_pos.x>>TILE_SHIFT) == i && (r_cursor->map_pos.y>>TILE_SHIFT) == j) {
-				drawRenderable(r_cursor);
+			while (r_cursor != r_end && (r_cursor->map_pos.y>>TILE_SHIFT) == j && (r_cursor->map_pos.x>>TILE_SHIFT) < i)
 				++r_cursor;
-			}
+
+			// some renderable entities go in this layer
+			while (r_cursor != r_end && (r_cursor->map_pos.y>>TILE_SHIFT) == j && (r_cursor->map_pos.x>>TILE_SHIFT) == i)
+				drawRenderable(r_cursor++);
 		}
+		while (r_cursor != r_end && (r_cursor->map_pos.y>>TILE_SHIFT) <= j)
+			++r_cursor;
 	}
 }
 
@@ -979,7 +975,11 @@ void MapRenderer::checkEvents(Point loc) {
 		// skip inactive events
 		if (!isActive(*it)) continue;
 
-		if (maploc.x >= (*it).location.x &&
+		if ((*it).type == "on_clear") {
+			if (enemies_cleared && executeEvent(*it))
+				events.erase(it);
+		}
+		else if (maploc.x >= (*it).location.x &&
 			maploc.y >= (*it).location.y &&
 			maploc.x <= (*it).location.x + (*it).location.w-1 &&
 			maploc.y <= (*it).location.y + (*it).location.h-1) {
@@ -1095,7 +1095,7 @@ void MapRenderer::checkHotspots() {
 }
 
 bool MapRenderer::isActive(const Map_Event &e){
-	for (int i=0; i < e.comp_num; i++) {
+	for (unsigned i=0; i < e.components.size(); i++) {
 		if (e.components[i].type == "requires_not") {
 			if (camp->checkStatus(e.components[i].s)) {
 				return false;
@@ -1108,6 +1108,16 @@ bool MapRenderer::isActive(const Map_Event &e){
 		}
 		else if (e.components[i].type == "requires_item") {
 			if (!camp->checkItem(e.components[i].x)) {
+				return false;
+			}
+		}
+		else if (e.components[i].type == "requires_level") {
+			if (camp->hero->level < e.components[i].x) {
+				return false;
+			}
+		}
+		else if (e.components[i].type == "requires_not_level") {
+			if (camp->hero->level >= e.components[i].x) {
 				return false;
 			}
 		}
@@ -1138,19 +1148,8 @@ bool MapRenderer::executeEvent(Map_Event &ev) {
 	const Event_Component *ec;
 	bool destroy_event = false;
 
-	for (int i=0; i<ev.comp_num; i++) {
+	for (unsigned i=0; i<ev.components.size(); i++) {
 		ec = &ev.components[i];
-
-		// requirements should be checked by isActive() before calling executeEvent()
-		//if (ec->type == "requires_status") {
-		//	if (!camp->checkStatus(ec->s)) return false;
-		//}
-		//else if (ec->type == "requires_not") {
-		//	if (camp->checkStatus(ec->s)) return false;
-		//}
-		//else if (ec->type == "requires_item") {
-		//	if (!camp->checkItem(ec->x)) return false;
-		//}
 
 		if (ec->type == "set_status") {
 			camp->setStatus(ec->s);
@@ -1271,7 +1270,7 @@ bool MapRenderer::executeEvent(Map_Event &ev) {
 			stash_pos.y = ev.location.y * UNITS_PER_TILE + UNITS_PER_TILE/2;
 		}
 	}
-	if (ev.type == "run_once" || ev.type == "on_load" || destroy_event)
+	if (ev.type == "run_once" || ev.type == "on_load" || ev.type == "on_clear" || destroy_event)
 		return true;
 	else
 		return false;
@@ -1284,7 +1283,6 @@ MapRenderer::~MapRenderer() {
 	}
 	Mix_FreeChunk(sfx);
 
-	SDL_FreeSurface(backgroundsurface);
 	tip_buf.clear();
 	clearLayers();
 	clearEvents();

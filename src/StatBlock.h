@@ -22,6 +22,8 @@ FLARE.  If not, see http://www.gnu.org/licenses/
  * Character stats and calculations
  */
 
+
+#pragma once
 #ifndef STAT_BLOCK_H
 #define STAT_BLOCK_H
 
@@ -59,14 +61,24 @@ const int ENEMY_HIT = 10;
 const int ENEMY_DEAD = 11;
 const int ENEMY_CRITDEAD = 12;
 const int ENEMY_HALF_DEAD = 13;
-const int ENEMY_DEBUFF = 14;
-const int ENEMY_JOIN_COMBAT = 15;
+const int ENEMY_JOIN_COMBAT = 14;
 
 // final shared states
-const int ENEMY_POWER = 16; // enemy performing a power. anim/sfx based on power
+const int ENEMY_POWER = 15; // enemy performing a power. anim/sfx based on power
 
 
 const int MAX_CHARACTER_LEVEL = 32;
+
+class EnemyLoot {
+public:
+	int id;
+	int chance;
+
+	EnemyLoot()
+		: id(0)
+		, chance(0)
+	{}
+};
 
 class StatBlock {
 private:
@@ -80,6 +92,7 @@ public:
 	void load(const std::string& filename);
 	void takeDamage(int dmg);
 	void recalc();
+	void recalc_alt();
 	void logic();
 
 	bool alive;
@@ -104,6 +117,8 @@ public:
 	int xp_table[MAX_CHARACTER_LEVEL+1];
 	bool level_up;
 	bool check_title;
+	int stat_points_per_level;
+	int power_points_per_level;
 
 	// base stats ("attributes")
 	int offense_character;
@@ -171,6 +186,7 @@ public:
 	int dmg_ranged_max_default;
 	int absorb_min_default;
 	int absorb_max_default;
+
 	int speed_default;
 	int dspeed_default;
 
@@ -183,33 +199,36 @@ public:
 	int dmg_ranged_max;
 	int absorb_min;
 	int absorb_max;
+
+	int speed;
+	int dspeed;
+
 	bool wielding_physical;
 	bool wielding_mental;
 	bool wielding_offense;
-	bool ammo_arrows;
 	std::vector<int> vulnerable;
 
 	// buff and debuff stats
 	int transform_duration;
 	int transform_duration_total;
 	bool manual_untransform;
-	bool blocking;
 	EffectManager effects;
 
-	int speed;
-	int dspeed;
 	Point pos;
 	Point forced_speed;
 	char direction;
 	std::vector<int> hero_cooldown;
 
+	int poise;
+	int poise_base;
+
 	// state
 	int cur_state;
 
-    // waypoint patrolling
-    std::queue<Point> waypoints;
-    int waypoint_pause;
-    int waypoint_pause_ticks;
+	// waypoint patrolling
+	std::queue<Point> waypoints;
+	int waypoint_pause;
+	int waypoint_pause_ticks;
 
 	// wandering area
 	bool wander;
@@ -221,10 +240,12 @@ public:
 	int chance_pursue;
 	int chance_flee;
 
-	int power_chance[POWERSLOT_COUNT];
-	int power_index[POWERSLOT_COUNT];
-	int power_cooldown[POWERSLOT_COUNT];
-	int power_ticks[POWERSLOT_COUNT];
+	std::vector<int> powers_list;
+	std::vector<int> powers_list_items;
+	std::vector<int> power_chance;
+	std::vector<int> power_index;
+	std::vector<int> power_cooldown;
+	std::vector<int> power_ticks;
 
 	bool canUsePower(const Power &power, unsigned powerid) const;
 
@@ -232,11 +253,12 @@ public:
 	int threat_range;
 	Point hero_pos;
 	bool hero_alive;
+	int hero_stealth;
 	Point last_seen;
 	int turn_delay;
 	int turn_ticks;
 	bool in_combat;
-    bool join_combat;
+	bool join_combat;
 	int cooldown_ticks;
 	int cooldown; // min. # of frames between abilities
 	int activated_powerslot;
@@ -244,11 +266,7 @@ public:
 	bool suppress_hp; // hide an enemy HP bar
 	bool on_death_casted;
 
-	int loot_chance;
-	std::vector<std::string> item_classes; // which kind of loot is able to be dropped
-	// the strings given in item_class correspond to the item class
-	std::vector<int> item_class_prob;      // weights for each kind of drop.
-	int item_class_prob_sum;               // sum of all loot_prob entries.
+	std::vector<EnemyLoot> loot;
 
 	// for the teleport spell
 	bool teleportation;

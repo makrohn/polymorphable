@@ -20,6 +20,8 @@ FLARE.  If not, see http://www.gnu.org/licenses/
  * class MenuItemStorage
  */
 
+
+#pragma once
 #ifndef MENU_ITEM_STORAGE_H
 #define MENU_ITEM_STORAGE_H
 
@@ -39,6 +41,7 @@ protected:
 	int nb_cols;
 
 public:
+	MenuItemStorage();
 	void init(int _slot_number, ItemManager *_items, SDL_Rect _area, int icon_size, int nb_cols);
 	void init(int _slot_number, ItemManager *_items, std::vector<SDL_Rect> _area, std::vector<std::string> _slot_type);
 	~MenuItemStorage();

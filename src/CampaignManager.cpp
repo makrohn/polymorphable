@@ -33,22 +33,16 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 
 using namespace std;
 
-
-CampaignManager::CampaignManager() {
-
-	drop_stack.item = 0;
-	drop_stack.quantity = 0;
-
-	items = NULL;
-	carried_items = NULL;
-	currency = NULL;
-	hero = NULL;
-
-	log_msg = "";
-	quest_update = true;
-
-	clearAll();
-}
+CampaignManager::CampaignManager()
+	: status(vector<string>())
+	, log_msg("")
+	, drop_stack(ItemStack())
+	, items(NULL)
+	, carried_items(NULL)
+	, currency(NULL)
+	, hero(NULL)
+	, quest_update(true)
+{}
 
 void CampaignManager::clearAll() {
 	// clear campaign data
@@ -118,7 +112,7 @@ void CampaignManager::unsetStatus(std::string s) {
 			status.erase(it);
 			quest_update = true;
 			return;
-		}	
+		}
 		hero->check_title = true;
 	}
 }
@@ -156,7 +150,7 @@ void CampaignManager::rewardCurrency(int amount) {
 }
 
 void CampaignManager::rewardXP(int amount, bool show_message) {
-	hero->xp += amount;
+	hero->xp += (amount * (100 + hero->effects.bonus_xp)) / 100;
 	hero->refresh_stats = true;
 	if (show_message) addMsg(msg->get("You receive %d XP.", amount));
 }

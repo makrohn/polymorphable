@@ -302,6 +302,11 @@ void GameStatePlay::checkCancel() {
  */
 void GameStatePlay::checkLog() {
 
+	// If the player has just respawned, we want to clear the HUD log
+	if (pc->respawn) {
+		menu->hudlog->clear();
+	}
+
 	// Map events can create messages
 	if (map->log_msg != "") {
 		menu->log->add(map->log_msg, LOG_TYPE_MESSAGES);
@@ -368,21 +373,21 @@ void GameStatePlay::checkTitle() {
 		if (titles[i].title == "") continue;
 
 		if (titles[i].level > 0 && pc->stats.level < titles[i].level) continue;
-		if (titles[i].power > 0 && find(menu->pow->powers_list.begin(), menu->pow->powers_list.end(), titles[i].power) == menu->pow->powers_list.end()) continue;
+		if (titles[i].power > 0 && find(pc->stats.powers_list.begin(), pc->stats.powers_list.end(), titles[i].power) == pc->stats.powers_list.end()) continue;
 		if (titles[i].requires_status != "" && !camp->checkStatus(titles[i].requires_status)) continue;
 		if (titles[i].requires_not != "" && camp->checkStatus(titles[i].requires_not)) continue;
 		if (titles[i].primary_stat != "") {
 			if (titles[i].primary_stat == "physical") {
-				if (pc->stats.get_physical() <= pc->stats.get_mental()+1 || pc->stats.get_physical() <= pc->stats.get_offense()+1 || pc->stats.get_physical() <= pc->stats.get_defense()+1)
+				if (pc->stats.get_physical() <= pc->stats.get_mental() || pc->stats.get_physical() <= pc->stats.get_offense() || pc->stats.get_physical() <= pc->stats.get_defense())
 					continue;
 			} else if (titles[i].primary_stat == "offense") {
-				if (pc->stats.get_offense() <= pc->stats.get_mental()+1 || pc->stats.get_offense() <= pc->stats.get_physical()+1 || pc->stats.get_offense() <= pc->stats.get_defense()+1)
+				if (pc->stats.get_offense() <= pc->stats.get_mental() || pc->stats.get_offense() <= pc->stats.get_physical() || pc->stats.get_offense() <= pc->stats.get_defense())
 					continue;
 			} else if (titles[i].primary_stat == "mental") {
-				if (pc->stats.get_mental() <= pc->stats.get_physical()+1 || pc->stats.get_mental() <= pc->stats.get_offense()+1 || pc->stats.get_mental() <= pc->stats.get_defense()+1)
+				if (pc->stats.get_mental() <= pc->stats.get_physical() || pc->stats.get_mental() <= pc->stats.get_offense() || pc->stats.get_mental() <= pc->stats.get_defense())
 					continue;
 			} else if (titles[i].primary_stat == "defense") {
-				if (pc->stats.get_defense() <= pc->stats.get_mental()+1 || pc->stats.get_defense() <= pc->stats.get_offense()+1 || pc->stats.get_defense() <= pc->stats.get_physical()+1)
+				if (pc->stats.get_defense() <= pc->stats.get_mental() || pc->stats.get_defense() <= pc->stats.get_offense() || pc->stats.get_defense() <= pc->stats.get_physical())
 					continue;
 			} else if (titles[i].primary_stat == "physoff") {
 				if (pc->stats.physoff <= pc->stats.physdef || pc->stats.physoff <= pc->stats.mentoff || pc->stats.physoff <= pc->stats.mentdef || pc->stats.physoff <= pc->stats.physment || pc->stats.physoff <= pc->stats.offdef)
@@ -472,12 +477,16 @@ void GameStatePlay::checkLootDrop() {
  * When a consumable-based power is used, we need to remove it from the inventory.
  */
 void GameStatePlay::checkConsumable() {
-	if (powers->used_item != -1) {
-		if (menu->items->items[powers->used_item].type == "consumable") {
-			menu->inv->remove(powers->used_item);
-			powers->used_item = -1;
+	for (unsigned i=0; i<powers->used_items.size(); i++) {
+		if (menu->items->items[powers->used_items[i]].type == "consumable") {
+			menu->inv->remove(powers->used_items[i]);
 		}
 	}
+	for (unsigned i=0; i<powers->used_equipped_items.size(); i++) {
+		menu->inv->removeEquipped(powers->used_equipped_items[i]);
+	}
+	powers->used_items.clear();
+	powers->used_equipped_items.clear();
 }
 
 /**
@@ -508,6 +517,7 @@ void GameStatePlay::checkNotifications() {
  * If an NPC is giving a reward, process it
  */
 void GameStatePlay::checkNPCInteraction() {
+	if (pc->attacking) return;
 
 	int npc_click = -1;
 	int max_interact_distance = UNITS_PER_TILE * 4;
@@ -557,12 +567,12 @@ void GameStatePlay::checkNPCInteraction() {
 			// if this vendor has voice-over, play it
 			if (!npcs->npcs[npc_id]->talker) {
 				if (!npcs->npcs[npc_id]->playSound(NPC_VOX_INTRO)) {
-					Mix_PlayChannel(-1, menu->sfx_open, 0);
+					playSfx(menu->sfx_open);
 				}
 			}
 			else {
 				// unless the vendor has dialog; then they've already given their vox intro
-				Mix_PlayChannel(-1, menu->sfx_open, 0);
+				playSfx(menu->sfx_open);
 			}
 
 			menu->talker->vendor_visible = false;
@@ -655,6 +665,8 @@ void GameStatePlay::logic() {
 		// transfer hero data to enemies, for AI use
 		enemies->hero_pos = pc->stats.pos;
 		enemies->hero_alive = pc->stats.alive;
+		if (pc->stats.effects.bonus_stealth > 100) enemies->hero_stealth = 100;
+		else enemies->hero_stealth = pc->stats.effects.bonus_stealth;
 
 		enemies->logic();
 		hazards->logic();
@@ -662,6 +674,12 @@ void GameStatePlay::logic() {
 		enemies->checkEnemiesforXP(camp);
 		npcs->logic();
 
+	}
+
+	// close menus when the player dies, but still allow them to be reopened
+	if (pc->close_menus) {
+		pc->close_menus = false;
+		menu->closeAll(false);
 	}
 
 	// these actions occur whether the game is paused or not.
@@ -675,6 +693,7 @@ void GameStatePlay::logic() {
 	checkCancel();
 
 	map->logic();
+	map->enemies_cleared = enemies->isCleared();
 	quests->logic();
 
 
@@ -711,6 +730,18 @@ void GameStatePlay::logic() {
 			menu->act->hotkeys[i] = menu->act->actionbar[i];
 			menu->act->locked[i] = false;
 		}
+	}
+
+	// when the hero (re)spawns, reapply equipment & passive effects
+	if (pc->respawn) {
+		pc->stats.alive = true;
+		pc->stats.corpse = false;
+		pc->stats.cur_state = AVATAR_STANCE;
+		menu->inv->applyEquipment(menu->inv->inventory[EQUIPMENT].storage);
+		pc->powers->activatePassives(&pc->stats);
+		pc->stats.logic();
+		pc->stats.recalc();
+		pc->respawn = false;
 	}
 }
 

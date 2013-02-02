@@ -21,6 +21,8 @@ FLARE.  If not, see http://www.gnu.org/licenses/
  * class MenuPowers
  */
 
+
+#pragma once
 #ifndef MENU_POWERS_H
 #define MENU_POWERS_H
 
@@ -39,7 +41,8 @@ class PowerManager;
 class StatBlock;
 class TooltipData;
 
-struct Power_Menu_Cell {
+class Power_Menu_Cell {
+public:
 	short id;
 	short tab;
 	Point pos;
@@ -99,7 +102,7 @@ private:
 
 	WidgetLabel label_powers;
 	WidgetLabel stat_up;
-	WidgetTabControl * tabControl;
+	WidgetTabControl *tabControl;
 
 	void loadGraphics();
 	void displayBuild(int power_id);
@@ -127,7 +130,6 @@ public:
 	short getUnspent() { return points_left; }
 
 	std::vector<SDL_Rect> slots; // the location of power slots
-	std::vector<int> powers_list;
 
 };
 extern MenuPowers *menuPowers;

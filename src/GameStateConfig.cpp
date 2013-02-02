@@ -1,8 +1,8 @@
 /*
-Copyright © 2012 Clint Bellanger
-Copyright © 2012 davidriod
-Copyright © 2012 Igor Paliychuk
-Copyright © 2012 Stefan Beller
+Copyright Â© 2012 Clint Bellanger
+Copyright Â© 2012 davidriod
+Copyright Â© 2012 Igor Paliychuk
+Copyright Â© 2012 Stefan Beller
 
 This file is part of FLARE.
 
@@ -51,6 +51,7 @@ GameStateConfig::GameStateConfig ()
 	, defaults_button(NULL)
 	, cancel_button(NULL)
 	, imgFileName(mods->locate("images/menus/config.png"))
+	, tip_buf(TooltipData())
 	, input_key(0)
 	, check_resolution(true)
 {
@@ -68,6 +69,8 @@ GameStateConfig::GameStateConfig ()
 }
 
 void GameStateConfig::init() {
+
+	tip = new WidgetTooltip();
 
 	ok_button = new WidgetButton(mods->locate("images/menus/buttons/button_default.png"));
 	defaults_button = new WidgetButton(mods->locate("images/menus/buttons/button_default.png"));
@@ -232,8 +235,15 @@ void GameStateConfig::readConfig () {
 
 			setting_num = -1;
 
+			if (infile.key == "listbox_scrollbar_offset") {
+				activemods_lstb->scrollbar_offset = x1;
+				inactivemods_lstb->scrollbar_offset = x1;
+				joystick_device_lstb->scrollbar_offset = x1;
+				resolution_lstb->scrollbar_offset = x1;
+				language_lstb->scrollbar_offset = x1;
+			}
 			//checkboxes
-			if (infile.key == "fullscreen") {
+			else if (infile.key == "fullscreen") {
 				fullscreen_cb->pos.x = frame.x + x2;
 				fullscreen_cb->pos.y = frame.y + y2;
 				child_widget.push_back(fullscreen_cb);
@@ -645,7 +655,7 @@ void GameStateConfig::readConfig () {
 void GameStateConfig::update () {
 	if (FULLSCREEN) fullscreen_cb->Check();
 	else fullscreen_cb->unCheck();
-	if (audio) {
+	if (AUDIO) {
 		music_volume_sl->set(0,128,MUSIC_VOLUME);
 		Mix_VolumeMusic(MUSIC_VOLUME);
 		sound_volume_sl->set(0,128,SOUND_VOLUME);
@@ -733,11 +743,10 @@ void GameStateConfig::logic ()
 {
 	check_resolution = true;
 
-	// Initialize resolution value
-	std::string value;
-	value = resolution_lstb->getValue() + 'x';
-	int width = eatFirstInt(value, 'x');
-	int height = eatFirstInt(value, 'x');
+	std::string resolution_value;
+	resolution_value = resolution_lstb->getValue() + 'x'; // add x to have last element readable
+	int width = eatFirstInt(resolution_value, 'x');
+	int height = eatFirstInt(resolution_value, 'x');
 
 	// In case of a custom resolution, the listbox might have nothing selected
 	// So we just use whatever the current view area is
@@ -851,7 +860,7 @@ void GameStateConfig::logic ()
 			if (animated_tiles_cb->isChecked()) ANIMATED_TILES=true;
 			else ANIMATED_TILES=false;
 		} else if (resolution_lstb->checkClick()) {
-			value = resolution_lstb->getValue() + 'x';
+			; // nothing to do here: resolution value changes next frame.
 		} else if (CHANGE_GAMMA) {
 			if (gamma_sl->checkClick()) {
 					GAMMA=(gamma_sl->getValue())*0.1f;
@@ -861,7 +870,7 @@ void GameStateConfig::logic ()
 	}
 	// tab 1 (audio)
 	else if (active_tab == 1 && !defaults_confirm->visible) {
-		if (audio) {
+		if (AUDIO) {
 			if (music_volume_sl->checkClick()) {
 				if (MUSIC_VOLUME == 0)
 					reload_music = true;
@@ -1012,6 +1021,25 @@ void GameStateConfig::render ()
 
 	if (input_confirm->visible) input_confirm->render();
 	if (defaults_confirm->visible) defaults_confirm->render();
+
+	// Get tooltips for listboxes
+	// This isn't very elegant right now
+	// In the future, we'll want to get tooltips for all widget types
+	TooltipData tip_new;
+	if (active_tab == 0 && tip_new.isEmpty()) tip_new = resolution_lstb->checkTooltip(inpt->mouse);
+	if (active_tab == 2 && tip_new.isEmpty()) tip_new = language_lstb->checkTooltip(inpt->mouse);
+	if (active_tab == 3 && tip_new.isEmpty()) tip_new = joystick_device_lstb->checkTooltip(inpt->mouse);
+	if (active_tab == 5 && tip_new.isEmpty()) tip_new = activemods_lstb->checkTooltip(inpt->mouse);
+	if (active_tab == 5 && tip_new.isEmpty()) tip_new = inactivemods_lstb->checkTooltip(inpt->mouse);
+
+	if (!tip_new.isEmpty()) {
+		if (!tip_new.compare(&tip_buf)) {
+			tip_buf.clear();
+			tip_buf = tip_new;
+		}
+		tip->render(tip_buf, inpt->mouse, STYLE_FLOAT);
+	}
+
 }
 
 int GameStateConfig::getVideoModes()
@@ -1073,7 +1101,7 @@ int GameStateConfig::getVideoModes()
 	}
 
 	if (video_modes)
-		delete video_modes;
+		free(video_modes);
 	/* Combine the detected modes and the common modes */
 	video_modes = (SDL_Rect*)calloc(modes,sizeof(SDL_Rect));
 	int k = 0;
@@ -1290,6 +1318,8 @@ void GameStateConfig::scanKey(int button) {
 
 GameStateConfig::~GameStateConfig()
 {
+	tip_buf.clear();
+	delete tip;
 	delete tabControl;
 	delete ok_button;
 	delete defaults_button;
@@ -1318,6 +1348,6 @@ GameStateConfig::~GameStateConfig()
 	language_full.clear();
 
 	if (video_modes)
-		delete video_modes;
+		free(video_modes);
 }
 
