@@ -11,6 +11,7 @@ aim_assist=true
 base_damage=melee
 lifespan=1
 radius=64
+type=fixed
 starting_pos=melee
 allow_power_mod=true
 
@@ -30,7 +31,8 @@ lifespan=1
 radius=64
 starting_pos=melee
 allow_power_mod=true
-forced_move=10,30
+post_effect=232,30,30
+type=fixed
 
 [power]
 id=3
@@ -43,7 +45,6 @@ new_state=cast
 animation=lightning.txt
 sfx=shock.ogg
 use_hazard=true
-base_damage=mental
 lifespan=11
 radius=96
 floor=false
@@ -53,6 +54,8 @@ multitarget=true
 target_neighbor=1
 count=3
 damage_multiplier=200
+type=fixed
+base_damage=ment
 
 [power]
 id=11
@@ -63,8 +66,10 @@ description=Create a force field that absorbs damage
 new_state=cast
 requires_mp=1
 sfx=shield.ogg
-buff_shield=true
+post_effect=227,500,0
 cooldown=10000
+type=fixed
+buff=true
 damage_multiplier=500
 
 [power]
@@ -73,10 +78,11 @@ name=Haste
 icon=12
 description=Double run and attack speed for 8 seconds
 requires_mp=1
-type=effect
+type=fixed
 new_state=cast
 face=false
-haste_duration=240
+buff=true
+post_effect=229,200,240
 
 [power]
 id=5
@@ -95,6 +101,7 @@ lifespan=1
 radius=96
 starting_pos=melee
 allow_power_mod=true
+type=fixed
 
 [power]
 id=6
@@ -113,6 +120,7 @@ radius=64
 starting_pos=melee
 allow_power_mod=true
 hp_steal=50
+type=fixed
 
 [power]
 id=7
@@ -130,7 +138,8 @@ lifespan=1
 radius=64
 starting_pos=melee
 allow_power_mod=true
-stun_duration=30
+post_effect=203,0,30
+type=fixed
 
 [power]
 id=8
@@ -151,8 +160,9 @@ trait_elemental=water
 visual_option=2
 starting_pos=source
 multitarget=true
-slow_duration=150
+post_effect=202,50,150
 #cooldown=3000
+type=fixed
 
 [power]
 id=30
@@ -207,6 +217,7 @@ cooldown=3000
 source_type=neutral
 requires_targeting=false
 sacrifice=true
+type=fixed
 
 [power]
 id=33
@@ -279,7 +290,7 @@ name=Carrot
 sfx=chomp.ogg
 new_state=instant
 requires_item=1
-buff_restore_hp=8
+post_effect=230,8,1
 cooldown=600
 
 [power]
@@ -290,8 +301,10 @@ name=Watermelon
 sfx=chomp.ogg
 new_state=instant
 requires_item=2
-buff_restore_mp=4
+post_effect=231,4,1
 cooldown=600
+type=fixed
+buff=true
 
 [power]
 id=102
@@ -387,8 +400,262 @@ spawn_type=untransform
 description=Transform back to human
 sfx=quake.ogg
 
+########################################
+#Effects
+########################################
 [power]
 id=200
+name=Bleeding
+type=effect
+icon=25
+effect_type=damage
+animation=spark_red_loop.txt
+
+[power]
+id=201
+name=Immobilized
+type=effect
+icon=24
+effect_type=speed
+
+[power]
+id=202
+name=Slowed
+type=effect
+icon=24
+effect_type=speed
+
+[power]
+id=203
+name=Stunned
+type=effect
+icon=26
+effect_type=stun
+
+[power]
+id=210
+name=HP (bonus)
+tag=HP
+type=effect
+effect_type=hp
+effect_additive=true
+
+[power]
+id=211
+name=HP Regen (bonus)
+tag=HP regen
+type=effect
+effect_type=hp_regen
+effect_additive=true
+
+[power]
+id=212
+name=MP (bonus)
+tag=MP
+type=effect
+effect_type=mp
+effect_additive=true
+
+[power]
+id=213
+name=MP Regen (bonus)
+tag=MP regen
+type=effect
+effect_type=mp_regen
+effect_additive=true
+
+[power]
+id=214
+name=Accuracy (bonus)
+tag=accuracy
+type=effect
+effect_type=accuracy
+effect_additive=true
+
+[power]
+id=215
+name=Avoidance (bonus)
+tag=avoidance
+type=effect
+effect_type=avoidance
+effect_additive=true
+
+[power]
+id=216
+name=Crit (bonus)
+tag=crit
+type=effect
+effect_type=crit
+effect_additive=true
+
+[power]
+id=217
+name=Speed (bonus)
+tag=speed
+type=effect
+effect_type=speed
+
+[power]
+id=218
+name=Offense (bonus)
+tag=offense
+type=effect
+effect_type=offense
+effect_additive=true
+
+[power]
+id=219
+name=Defense (bonus)
+tag=defense
+type=effect
+effect_type=defense
+effect_additive=true
+
+[power]
+id=220
+name=Physical (bonus)
+tag=physical
+type=effect
+effect_type=physical
+effect_additive=true
+
+[power]
+id=221
+name=Mental (bonus)
+tag=mental
+type=effect
+effect_type=mental
+effect_additive=true
+
+[power]
+id=222
+name=XP(bonus)
+tag=XP gain
+type=effect
+effect_type=xp
+effect_additive=true
+
+[power]
+id=223
+name=Gold (bonus)
+tag=gold find
+type=effect
+effect_type=currency
+effect_additive=true
+
+[power]
+id=224
+name=Fire Resistance (bonus)
+tag=fire resist
+type=effect
+effect_type=fire_resist
+effect_additive=true
+
+[power]
+id=225
+name=Ice Resistance (bonus)
+tag=ice resist
+type=effect
+effect_type=ice_resist
+effect_additive=true
+
+[power]
+id=226
+name=Immunity
+type=effect
+icon=12
+effect_type=immunity
+
+[power]
+id=227
+name=Shield
+type=effect
+icon=11
+effect_type=shield
+animation=shield.txt
+
+[power]
+id=228
+name=Heal
+type=effect
+effect_type=heal
+animation=heal.txt
+
+[power]
+id=229
+name=Haste
+icon=12
+type=effect
+effect_type=speed
+
+[power]
+id=230
+name=HP over time
+type=effect
+effect_type=hpot
+
+[power]
+id=231
+name=MP over time
+type=effect
+effect_type=mpot
+
+[power]
+id=232
+name=Knockback
+type=effect
+effect_type=forced_move
+
+[power]
+id=233
+name=Earth Resistance (bonus)
+tag=ice resist
+type=effect
+effect_type=earth_resist
+effect_additive=true
+
+[power]
+id=234
+name=Wind Resistance (bonus)
+tag=ice resist
+type=effect
+effect_type=wind_resist
+effect_additive=true
+
+[power]
+id=235
+name=Holy Resistance (bonus)
+tag=ice resist
+type=effect
+effect_type=holy_resist
+effect_additive=true
+
+[power]
+id=236
+name=Dark Resistance (bonus)
+tag=ice resist
+type=effect
+effect_type=dark_resist
+effect_additive=true
+
+[power]
+id=237
+name=HP Percent (bonus)
+tag=HPperc
+type=effect
+effect_type=hp_percent
+effect_additive=true
+
+[power]
+id=238
+name=MP Percent (bonus)
+tag=MPperc
+type=effect
+effect_type=mp_percent
+effect_additive=true
+
+[power]
+id=303
 name=Transform into Bat
 type=transform
 new_state=cast
