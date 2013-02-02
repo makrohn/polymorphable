@@ -9,7 +9,10 @@ animations=zalkaz
 animation_speed=30
 defeat_status=theend
 
-loot_chance=100
+loot=1,25
+loot=2,13
+loot=3,5
+loot=currency,33
 
 # combat stats
 hp=20

@@ -63,18 +63,6 @@ gfx=leather
 loot_animation=leather_armor
 
 [item]
-id=52
-name=Chain Armor
-level=10
-quality=normal
-item_type=body
-abs=2,2
-icon=113
-sfx=cloth
-gfx=chain
-loot_animation=leather_armor
-
-[item]
 id=100
 name=Sword
 level=10

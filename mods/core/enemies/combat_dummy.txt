@@ -8,7 +8,10 @@ sfx_prefix=combat_dummy
 animations=combat_dummy
 animation_speed=60
 
-loot_chance=0
+loot=1,25
+loot=2,13
+loot=3,5
+loot=currency,33
 suppress_hp=1
 
 # combat stats

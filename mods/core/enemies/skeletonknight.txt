@@ -8,7 +8,10 @@ sfx_prefix=skeleton
 animations=skeletonknight
 animation_speed=60
 
-loot_chance=200
+loot=1,25
+loot=2,13
+loot=3,5
+loot=currency,33
 
 # combat stats
 hp=6
