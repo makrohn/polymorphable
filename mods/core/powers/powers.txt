@@ -292,6 +292,8 @@ new_state=instant
 requires_item=1
 post_effect=230,8,1
 cooldown=600
+type=fixed
+buff=true
 
 [power]
 id=101
