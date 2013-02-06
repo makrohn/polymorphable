@@ -5,9 +5,7 @@ rarity=common
 xp=0
 
 sfx_prefix=skeleton
-gfx_prefix=skeleton
 animations=skeleton
-animation_speed=75
 
 loot=1,25
 loot=2,13

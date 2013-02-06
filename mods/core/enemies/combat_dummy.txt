@@ -6,7 +6,6 @@ xp=0
 
 sfx_prefix=combat_dummy
 animations=combat_dummy
-animation_speed=60
 
 loot=1,25
 loot=2,13

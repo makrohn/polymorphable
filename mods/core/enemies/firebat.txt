@@ -6,7 +6,6 @@ xp=0
 
 sfx_prefix=bat
 animations=firebat
-animation_speed=30
 
 loot=1,25
 loot=2,13

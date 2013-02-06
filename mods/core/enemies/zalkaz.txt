@@ -6,7 +6,6 @@ xp=0
 
 sfx_prefix=bat
 animations=zalkaz
-animation_speed=30
 defeat_status=theend
 
 loot=1,25

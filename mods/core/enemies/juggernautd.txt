@@ -7,7 +7,6 @@ xp=0
 
 sfx_prefix=juggernaut
 animations=juggernaut
-animation_speed=60
 
 loot=1,25
 loot=2,13

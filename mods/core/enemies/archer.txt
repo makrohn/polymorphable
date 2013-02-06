@@ -6,7 +6,6 @@ xp=0
 
 sfx_prefix=archer
 animations=archer
-animation_speed=75
 
 loot=1,25
 loot=2,13

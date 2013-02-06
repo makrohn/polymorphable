@@ -6,7 +6,6 @@ xp=0
 
 sfx_prefix=ghost
 animations=ghost
-animation_speed=30
 
 loot=1,25
 loot=2,13

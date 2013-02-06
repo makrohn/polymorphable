@@ -6,7 +6,6 @@ xp=0
 
 sfx_prefix=bomb
 animations=bomb
-animation_speed=30
 
 suppress_hp=1
 

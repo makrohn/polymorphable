@@ -6,7 +6,6 @@ xp=0
 
 sfx_prefix=monk
 animations=brawler
-animation_speed=50
 
 loot=1,25
 loot=2,13
