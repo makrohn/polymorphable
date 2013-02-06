@@ -616,7 +616,7 @@ effect_type=forced_move
 [power]
 id=233
 name=Earth Resistance (bonus)
-tag=ice resist
+tag=earth resist
 type=effect
 effect_type=earth_resist
 effect_additive=true
@@ -624,7 +624,7 @@ effect_additive=true
 [power]
 id=234
 name=Wind Resistance (bonus)
-tag=ice resist
+tag=wind resist
 type=effect
 effect_type=wind_resist
 effect_additive=true
@@ -632,7 +632,7 @@ effect_additive=true
 [power]
 id=235
 name=Holy Resistance (bonus)
-tag=ice resist
+tag=holy resist
 type=effect
 effect_type=holy_resist
 effect_additive=true
@@ -640,7 +640,7 @@ effect_additive=true
 [power]
 id=236
 name=Dark Resistance (bonus)
-tag=ice resist
+tag=dark resist
 type=effect
 effect_type=dark_resist
 effect_additive=true
