@@ -239,6 +239,7 @@ cooldown=3000
 source_type=neutral
 requires_targeting=false
 sacrifice=true
+type=fixed
 
 [power]
 id=34
@@ -269,6 +270,7 @@ visual_option=2
 starting_pos=source
 multitarget=true
 cooldown=10000
+type=fixed
 
 [power]
 id=36
@@ -342,6 +344,7 @@ cooldown=3000
 source_type=enemy
 requires_targeting=false
 sacrifice=true
+type=fixed
 
 [power]
 id=104
@@ -364,6 +367,7 @@ cooldown=3000
 source_type=enemy
 requires_targeting=false
 sacrifice=true
+type=fixed
 
 [power]
 id=105
@@ -378,6 +382,7 @@ aim_assist=true
 starting_pos=melee
 allow_power_mod=true
 sacrifice=true
+type=fixed
 
 [power]
 id=132
