@@ -407,6 +407,14 @@ spawn_type=untransform
 description=Transform back to human
 sfx=quake.ogg
 
+[power]
+id=137
+name=Fire Immunity
+type=fixed
+buff=true
+post_effect=224,100,0
+passive=true
+
 ########################################
 #Effects
 ########################################

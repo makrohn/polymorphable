@@ -6,6 +6,7 @@ xp=0
 
 sfx_prefix=ghost
 animations=ghost
+humanoid=true
 
 loot=1,25
 loot=2,13
@@ -25,7 +26,7 @@ chance_melee_ment=0
 power_beacon=132
 power_melee_ment=136
 power_melee_phys=1
-vulnerable_fire=0
+passive_powers=137
 
 accuracy=100
 avoidance=0
