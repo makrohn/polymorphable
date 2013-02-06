@@ -1,3 +1,4 @@
 [class]
 name=Adventurer
 actionbar=0,0,0,0,0,0,0,0,0,0,1,0
+equipment=100

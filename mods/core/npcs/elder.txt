@@ -57,16 +57,13 @@ him=Have you found the Fairy Flower yet?
 [dialog]
 requires_not=elderintro
 set_status=elderintro
-reward_item=100
 him=Ah, Daphne!  It's good to see you this morning.  You turn sixteen tomorrow, but it seems like just yesterday that I found you in a basket at my door.
 you=Sixteen long years of doing pointless chores for you, Thomas.
 him=Come now, you wound an old man!  Tomorrow you shall be released from my endless tasks, but today, I need you to do one more.
 you=Joy of joys.  Where are you sending me today?
 him=I need you to find the Fairy Flower in the forests.  It's the last ingredient I need to create the wreath to hang in your new home.
 you=A housewarming present I have to fetch myself?  Awww, you shouldn't have.
-him=Ha!  You're my girl.  The Fairy Flower is found north of town, across the river.  Here's a sword just in case you find trouble.
-you=Aww, thanks.  All the years of learning swordplay from Clara shouldn't go to waste, then, if I run into any vicious logs.
-him=You never know!
+him=Ha!  You're my girl.  The Fairy Flower is found north of town, across the river.
 
 [dialog]
 requires_status=theend
