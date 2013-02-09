@@ -48,9 +48,9 @@ AnimationManager::~AnimationManager()
 // NDEBUG is used by posix to disable assertions, so use the same MACRO.
 #ifndef NDEBUG
 	if (!names.empty()) {
-		cout << "ImageManager still holding these images:" << endl;
-		for (vector<string>::iterator it=names.begin(); it != names.end(); ++it)
-			cout << *it << endl;
+		cout << "AnimationManager still holding these animations:" << endl;
+		for (unsigned i = 0; i < names.size(); i++)
+			fprintf(stderr, "%s %d\n", names[i].c_str(), counts[i]);
 	}
 	assert(names.size() == 0);
 #endif

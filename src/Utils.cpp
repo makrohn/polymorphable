@@ -1,6 +1,7 @@
 /*
 Copyright © 2011-2012 Clint Bellanger
 Copyright © 2012 Stefan Beller
+Copyright © 2013 Henrik Andersson
 
 This file is part of FLARE.
 
@@ -17,6 +18,7 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 */
 
 #include "Settings.h"
+#include "SharedResources.h"
 #include "Utils.h"
 
 #include <cmath>
@@ -48,8 +50,8 @@ Point screen_to_map(int x, int y, int camx, int camy) {
 		r.y = (cy * scry) - (cx * scrx) + camy;
 	}
 	else {
-		r.x = x - VIEW_W_HALF + camx;
-		r.y = y - VIEW_H_HALF + camy;
+		r.x = (x - VIEW_W_HALF) * (UNITS_PER_PIXEL_X ) + camx;
+		r.y = (y - VIEW_H_HALF) * (UNITS_PER_PIXEL_Y ) + camy;
 	}
 	return r;
 }
@@ -210,7 +212,7 @@ void drawPixel(SDL_Surface *surface, int x, int y, Uint32 pixel)
  * draw line to the screen
  * from http://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm#Simplification
  */
-void drawLine(SDL_Surface *screen, int x0, int y0, int x1, int y1, Uint32 color) {
+void drawLine(SDL_Surface *surface, int x0, int y0, int x1, int y1, Uint32 color) {
 	const int dx = abs(x1-x0);
 	const int dy = abs(y1-y0);
 	const int sx = x0 < x1 ? 1 : -1;
@@ -220,7 +222,7 @@ void drawLine(SDL_Surface *screen, int x0, int y0, int x1, int y1, Uint32 color)
 	do {
 		//skip draw if outside screen
 		if (x0 > 0 && y0 > 0 && x0 < VIEW_W && y0 < VIEW_H)
-			drawPixel(screen,x0,y0,color);
+			drawPixel(surface,x0,y0,color);
 
 		int e2 = 2*err;
 		if (e2 > -dy) {
@@ -234,8 +236,8 @@ void drawLine(SDL_Surface *screen, int x0, int y0, int x1, int y1, Uint32 color)
 	} while(x0 != x1 || y0 != y1);
 }
 
-void drawLine(SDL_Surface *screen, Point pos0, Point pos1, Uint32 color) {
-	drawLine(screen, pos0.x, pos0.y, pos1.x, pos1.y, color);
+void drawLine(SDL_Surface *surface, Point pos0, Point pos1, Uint32 color) {
+	drawLine(surface, pos0.x, pos0.y, pos1.x, pos1.y, color);
 }
 
 void setSDL_RGBA(Uint32 *rmask, Uint32 *gmask, Uint32 *bmask, Uint32 *amask) {
@@ -360,4 +362,26 @@ bool checkPixel(Point px, SDL_Surface *surface) {
 	SDL_UnlockSurface(surface);
 
 	return true;
+}
+
+Mix_Chunk *loadSfx(const string &filename, const string &errormessage)
+{
+	if (AUDIO && SOUND_VOLUME) {
+		const string realfilename = mods->locate(filename);
+		Mix_Chunk * sound = Mix_LoadWAV(realfilename.c_str());
+		if (!sound)
+			fprintf(stderr, "%s: Loading sound %s (%s) failed: %s \n", errormessage.c_str(), realfilename.c_str(), filename.c_str(), Mix_GetError());
+		return sound;
+	} else {
+		return NULL;
+	}
+}
+
+int playSfx(Mix_Chunk *sfx)
+{
+	if (AUDIO && SOUND_VOLUME && sfx) {
+		return Mix_PlayChannel(-1, sfx, 0);
+	} else {
+		return -1;
+	}
 }

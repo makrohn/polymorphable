@@ -35,78 +35,142 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 
 using namespace std;
 
-
-StatBlock::StatBlock() {
-
-	name = "";
-	alive = true;
-	corpse = false;
-	corpse_ticks = 0;
-	hero = false;
-	humanoid = false;
-	hero_pos.x = hero_pos.y = -1;
-	hero_alive = true;
-	permadeath = false;
-	transform_type = "";
-	transformed = false;
-	refresh_stats = false;
-
-	movement_type = MOVEMENT_NORMAL;
-	flying = false;
-	intangible = false;
-	facing = true;
-	suppress_hp = false;
-
-	// core stats
-	offense_character = defense_character = physical_character = mental_character = 0;
-	offense_additional = defense_additional = physical_additional = mental_additional = 0;
-	bonus_per_offense = bonus_per_defense = bonus_per_physical = bonus_per_mental = 0;
-	physoff = physdef = mentoff = mentdef = 0;
-	physment = offdef = 0;
-	character_class="";
-	level = 0;
-	hp = maxhp = hp_per_minute = hp_ticker = 0;
-	mp = maxmp = mp_per_minute = mp_ticker = 0;
-	xp = 0;
-	accuracy = 75;
-	avoidance = 25;
-	crit = 0;
-	level_up = false;
-	check_title = false;
-
-
-	// equipment stats
-	dmg_melee_min = dmg_melee_min_default = 1;
-	dmg_melee_max = dmg_melee_max_default = 4;
-	dmg_ment_min = dmg_ment_min_default = 1;
-	dmg_ment_max = dmg_ment_max_default = 4;
-	dmg_ranged_min = dmg_ranged_min_default = 1;
-	dmg_ranged_max = dmg_ranged_max_default = 4;
-	absorb_min = absorb_min_default = 0;
-	absorb_max = absorb_max_default = 0;
-	speed = speed_default = 14;
-	dspeed = dspeed_default = 10;
-	wielding_physical = false;
-	wielding_mental = false;
-	wielding_offense = false;
-
-	// buff and debuff stats
-	transform_duration = 0;
-	transform_duration_total = 0;
-	manual_untransform = false;
-	cooldown_ticks = 0;
-	blocking = false;
-	effects = EffectManager();
-
-	// patrol waypoints
-	waypoint_pause = 0;
-	waypoint_pause_ticks = 0;
-
-	// wandering
-	wander= false;
-	wander_ticks = 0;
-	wander_pause_ticks = 0;
-
+StatBlock::StatBlock()
+	: statsLoaded(false)
+	, alive(true)
+	, corpse(false)
+	, corpse_ticks(0)
+	, hero(false)
+	, humanoid(false)
+	, permadeath(false)
+	, transformed(false)
+	, refresh_stats(false)
+	, movement_type(MOVEMENT_NORMAL)
+	, flying(false)
+	, intangible(false)
+	, facing(true)
+	, name("")
+	, sfx_prefix("")
+	, level(0)
+	, xp(0)
+	//int xp_table[MAX_CHARACTER_LEVEL+1];
+	, level_up(false)
+	, check_title(false)
+	, stat_points_per_level(1)
+	, power_points_per_level(1)
+	, offense_character(0)
+	, defense_character(0)
+	, physical_character(0)
+	, mental_character(0)
+	, offense_additional(0)
+	, defense_additional(0)
+	, physical_additional(0)
+	, mental_additional(0)
+	, bonus_per_physical(0)
+	, bonus_per_mental(0)
+	, bonus_per_offense(0)
+	, bonus_per_defense(0)
+	, physoff(0)
+	, physdef(0)
+	, mentoff(0)
+	, mentdef(0)
+	, physment(0)
+	, offdef(0)
+	, character_class("")
+	, hp(0)
+	, maxhp(0)
+	, hp_per_minute(0)
+	, hp_ticker(0)
+	, mp(0)
+	, maxmp(0)
+	, mp_per_minute(0)
+	, mp_ticker(0)
+	, accuracy(75)
+	, avoidance(0)
+	, crit(0)
+	, dmg_melee_min_default(1)
+	, dmg_melee_max_default(4)
+	, dmg_ment_min_default(1)
+	, dmg_ment_max_default(4)
+	, dmg_ranged_min_default(1)
+	, dmg_ranged_max_default(4)
+	, absorb_min_default(0)
+	, absorb_max_default(0)
+	, speed_default(14)
+	, dspeed_default(10)
+	, dmg_melee_min(1)
+	, dmg_melee_max(4)
+	, dmg_ment_min(1)
+	, dmg_ment_max(4)
+	, dmg_ranged_min(1)
+	, dmg_ranged_max(4)
+	, absorb_min(0)
+	, absorb_max(0)
+	, speed(14)
+	, dspeed(10)
+	, wielding_physical(false)
+	, wielding_mental(false)
+	, wielding_offense(false)
+	, transform_duration(0)
+	, transform_duration_total(0)
+	, manual_untransform(false)
+	, effects(EffectManager())
+	, pos(Point())
+	, forced_speed(Point())
+	, direction(0)
+	, hero_cooldown(vector<int>(POWER_COUNT, 0)) // hero only
+	, poise(0)
+	, poise_base(0)
+	, cur_state(0)
+	, waypoints(queue<Point>())		// enemy only
+	, waypoint_pause(0)				// enemy only
+	, waypoint_pause_ticks(0)		// enemy only
+	, wander(false)					// enemy only
+	, wander_area(SDL_Rect())		// enemy only
+	, wander_ticks(0)				// enemy only
+	, wander_pause_ticks(0)			// enemy only
+	, chance_pursue(0)
+	, chance_flee(0)				// read in, but unused in formulas.
+	, powers_list(vector<int>(POWERSLOT_COUNT, 0))	// hero only
+	, powers_list_items(vector<int>(0))	// hero only
+	, power_chance(vector<int>(POWERSLOT_COUNT, 0))		// enemy only
+	, power_index(vector<int>(POWERSLOT_COUNT, 0))		// both
+	, power_cooldown(vector<int>(POWERSLOT_COUNT, 0))	// enemy only
+	, power_ticks(vector<int>(POWERSLOT_COUNT, 0))		// enemy only
+	, melee_range(64) //both
+	, threat_range(0)  // enemy
+	, hero_pos(Point(-1, -1))
+	, hero_alive(true)
+	, hero_stealth(0)
+	, last_seen(Point(-1, -1))  // no effects to gameplay?
+	, turn_delay(0)
+	, turn_ticks(0)
+	, in_combat(false)  //enemy only
+	, join_combat(false)
+	, cooldown_ticks(0)
+	, cooldown(0)
+	, activated_powerslot(0)// enemy only
+	, on_half_dead_casted(false) // enemy only
+	, suppress_hp(false)
+	, teleportation(false)
+	, teleport_destination(Point())
+	, melee_weapon_power(0)
+	, mental_weapon_power(0)
+	, ranged_weapon_power(0)
+	, currency(0)
+	, death_penalty(false)
+	, defeat_status("")			// enemy only
+	, quest_loot_requires("")	// enemy only
+	, quest_loot_not("")		// enemy only
+	, quest_loot_id(0)			// enemy only
+	, first_defeat_loot(0)		// enemy only
+	, base("male")
+	, head("head_short")
+	, portrait("male01")
+	, transform_type("")
+	, animations("")
+	, sfx_step("cloth")
+{
 	max_spendable_stat_points = 0;
 	max_points_per_stat = 0;
 
@@ -116,48 +180,8 @@ StatBlock::StatBlock() {
 		xp_table[i] = std::numeric_limits<int>::max();
 	}
 
-	loot_chance = 50;
-	item_classes = vector<string>();
-	item_class_prob = vector<int>();
-	item_class_prob_sum = 0;
-	teleportation = false;
-
-	for (int i=0; i<POWERSLOT_COUNT; i++) {
-		power_chance[i] = 0;
-		power_index[i] = 0;
-		power_cooldown[i] = 0;
-		power_ticks[i] = 0;
-	}
-	melee_range = 64;
-
-	melee_weapon_power = 0;
-	ranged_weapon_power = 0;
-	mental_weapon_power = 0;
-
 	vulnerable = std::vector<int>(ELEMENTS.size(), 100);
 
-	currency = 0;
-	death_penalty = false;
-
-	// campaign status interaction
-	defeat_status = "";
-	quest_loot_requires = "";
-	quest_loot_not = "";
-	quest_loot_id = 0;
-	first_defeat_loot = 0;
-
-	// default hero base/option
-	base="female";
-	head="head_long";
-	portrait="female01";
-
-	// default animations
-	animations = "";
-
-	// default step sound
-	sfx_step = "cloth";
-
-	statsLoaded = false;
 	// formula numbers. Used only for hero
 	hp_base = 10;
 	hp_per_level = 2;
@@ -180,19 +204,12 @@ StatBlock::StatBlock() {
 	crit_base = 5;
 	crit_per_level = 1;
 
-	ammo_arrows = 0;
-	direction = 0;
-	cur_state = 0;
-	chance_pursue = 0;
-	chance_flee = 0;
-	threat_range = 0;
-	turn_delay = 0;
-	turn_ticks = 0;
-	in_combat = 0;
-	join_combat = 0;
-	cooldown = 0;
 	activated_powerslot = 0;
 	on_half_dead_casted = false;
+}
+
+bool sortLoot(const EnemyLoot &a, const EnemyLoot &b) {
+	return a.chance < b.chance;
 }
 
 /**
@@ -208,6 +225,14 @@ void StatBlock::load(const string& filename) {
 	int num = 0;
 	while (infile.next()) {
 		if (isInt(infile.val)) num = toInt(infile.val);
+		bool valid = false;
+
+		for (unsigned int i=0; i<ELEMENTS.size(); i++) {
+			if (infile.key == "vulnerable_" + ELEMENTS[i].name) {
+				vulnerable[i] = num;
+				valid = true;
+			}
+		}
 
 		if (infile.key == "name") name = msg->get(infile.val);
 		else if (infile.key == "humanoid") {
@@ -219,21 +244,21 @@ void StatBlock::load(const string& filename) {
 
 		// enemy death rewards and events
 		else if (infile.key == "xp") xp = num;
-		else if (infile.key == "loot_chance") loot_chance = num;
-		else if (infile.key == "item_class") {
-			string str;
-			while ((str = infile.nextValue()) != "") {
-				if (!isInt(str)) {
-					item_classes.push_back(str);
-					item_class_prob.push_back(1);
-					item_class_prob_sum++;
-				}
-				else {
-					num = toInt(str);
-					item_class_prob[item_classes.size()-1] = num;
-					item_class_prob_sum += num - 1; // one was already added, so add one less
-				}
-			}
+		else if (infile.key == "loot") {
+
+			// loot entries format:
+			// loot=[id],[percent_chance]
+
+			EnemyLoot el;
+			std::string loot_id = infile.nextValue();
+
+			// id 0 means currency. The keyword "currency" can also be used.
+			if (loot_id == "currency")
+				el.id = 0;
+			else
+				el.id = toInt(loot_id);
+			el.chance = toInt(infile.nextValue());
+			loot.push_back(el);
 		}
 		else if (infile.key == "defeat_status") defeat_status = infile.val;
 		else if (infile.key == "first_defeat_loot") first_defeat_loot = num;
@@ -243,17 +268,11 @@ void StatBlock::load(const string& filename) {
 			quest_loot_id = toInt(infile.nextValue());
 		}
 		// combat stats
-		else if (infile.key == "hp") {
-			hp = num;
-			maxhp = num;
-		}
-		else if (infile.key == "mp") {
-			mp = num;
-			maxmp = num;
-		}
+		else if (infile.key == "hp") hp = hp_base = maxhp = num;
+		else if (infile.key == "mp") mp = mp_base = maxmp = num;
 		else if (infile.key == "cooldown") cooldown = num;
-		else if (infile.key == "accuracy") accuracy = num;
-		else if (infile.key == "avoidance") avoidance = num;
+		else if (infile.key == "accuracy") accuracy = accuracy_base = num;
+		else if (infile.key == "avoidance") avoidance = avoidance_base = num;
 		else if (infile.key == "dmg_melee_min") dmg_melee_min = num;
 		else if (infile.key == "dmg_melee_max") dmg_melee_max = num;
 		else if (infile.key == "dmg_ment_min") dmg_ment_min = num;
@@ -262,6 +281,7 @@ void StatBlock::load(const string& filename) {
 		else if (infile.key == "dmg_ranged_max") dmg_ranged_max = num;
 		else if (infile.key == "absorb_min") absorb_min = num;
 		else if (infile.key == "absorb_max") absorb_max = num;
+		else if (infile.key == "poise") poise = poise_base = num;
 
 		// behavior stats
 		else if (infile.key == "flying") {
@@ -276,8 +296,8 @@ void StatBlock::load(const string& filename) {
 
 		else if (infile.key == "waypoint_pause") waypoint_pause = num;
 
-		else if (infile.key == "speed") speed = num;
-		else if (infile.key == "dspeed") dspeed = num;
+		else if (infile.key == "speed") speed = speed_default = num;
+		else if (infile.key == "dspeed") dspeed = dspeed_default = num;
 		else if (infile.key == "turn_delay") turn_delay = num;
 		else if (infile.key == "chance_pursue") chance_pursue = num;
 		else if (infile.key == "chance_flee") chance_flee = num;
@@ -306,6 +326,13 @@ void StatBlock::load(const string& filename) {
 		else if (infile.key == "chance_on_debuff") power_chance[ON_DEBUFF] = num;
 		else if (infile.key == "chance_on_join_combat") power_chance[ON_JOIN_COMBAT] = num;
 
+		else if (infile.key == "passive_powers") {
+			std::string p = infile.nextValue();
+			while (p != "") {
+				powers_list.push_back(toInt(p));
+				p = infile.nextValue();
+			}
+		}
 
 		else if (infile.key == "melee_range") melee_range = num;
 		else if (infile.key == "threat_range") threat_range = num;
@@ -323,15 +350,21 @@ void StatBlock::load(const string& filename) {
 				suppress_hp = true;
 			else
 				suppress_hp = false;
-		} else {
-			fprintf(stderr, "%s=%s not a valid StatBlock parameter\n", infile.key.c_str(), infile.val.c_str());
 		}
 
-		for (unsigned int i=0; i<ELEMENTS.size(); i++) {
-			if (infile.key == "vulnerable_" + ELEMENTS[i].name) vulnerable[i] = num;
+		// these are only used for EnemyGroupManager
+		// we check for them here so that we don't get an error saying they are invalid
+		else if (infile.key == "categories") valid = true;
+		else if (infile.key == "rarity") valid = true;
+
+		else if (!valid) {
+			fprintf(stderr, "%s=%s not a valid StatBlock parameter\n", infile.key.c_str(), infile.val.c_str());
 		}
 	}
 	infile.close();
+
+	// sort loot table
+	std::sort(loot.begin(), loot.end(), sortLoot);
 }
 
 
@@ -342,12 +375,12 @@ void StatBlock::takeDamage(int dmg) {
 	hp -= effects.damageShields(dmg);
 	if (hp <= 0) {
 		hp = 0;
-		alive = false;
 	}
 }
 
 /**
- * Recalc derived stats from base stats
+ * Recalc level and stats
+ * Refill HP/MP
  * Creatures might skip these formulas.
  */
 void StatBlock::recalc() {
@@ -363,32 +396,78 @@ void StatBlock::recalc() {
 			check_title = true;
 	}
 
+	recalc_alt();
+
+	hp = maxhp;
+	mp = maxmp;
+}
+
+/**
+ * Recalc derived stats from base stats + effect bonuses
+ */
+void StatBlock::recalc_alt() {
+
 	int lev0 = level -1;
-	int phys0 = get_physical() -1;
-	int ment0 = get_mental() -1;
-	int off0 = get_offense() -1;
-	int def0 = get_defense() -1;
 
-	hp = maxhp = hp_base + (hp_per_level * lev0) + (hp_per_physical * phys0);
-	mp = maxmp = mp_base + (mp_per_level * lev0) + (mp_per_mental * ment0);
-	hp_per_minute = hp_regen_base + (hp_regen_per_level * lev0) + (hp_regen_per_physical * phys0);
-	mp_per_minute = mp_regen_base + (mp_regen_per_level * lev0) + (mp_regen_per_mental * ment0);
-	accuracy = accuracy_base + (accuracy_per_level * lev0) + (accuracy_per_offense * off0);
-	avoidance = avoidance_base + (avoidance_per_level * lev0) + (avoidance_per_defense * def0);
-	crit = crit_base + (crit_per_level * lev0);
+	if (hero) {
+		// calculate primary stats
+		offense_additional = effects.bonus_offense;
+		defense_additional = effects.bonus_defense;
+		physical_additional = effects.bonus_physical;
+		mental_additional = effects.bonus_mental;
+		int phys0 = get_physical() -1;
+		int ment0 = get_mental() -1;
+		int off0 = get_offense() -1;
+		int def0 = get_defense() -1;
 
-	physoff = get_physical() + get_offense();
-	physdef = get_physical() + get_defense();
-	mentoff = get_mental() + get_offense();
-	mentdef = get_mental() + get_defense();
-	physment = get_physical() + get_mental();
-	offdef = get_offense() + get_defense();
+		// calculate compound primary stats
+		physoff = get_physical() + get_offense();
+		physdef = get_physical() + get_defense();
+		mentoff = get_mental() + get_offense();
+		mentdef = get_mental() + get_defense();
+		physment = get_physical() + get_mental();
+		offdef = get_offense() + get_defense();
+
+		// calculate other stats
+		maxhp = hp_base + (hp_per_level * lev0) + (hp_per_physical * phys0) + effects.bonus_hp + (effects.bonus_hp_percent * (hp_base + (hp_per_level * lev0) + (hp_per_physical * phys0)) / 100);
+		maxmp = mp_base + (mp_per_level * lev0) + (mp_per_mental * ment0) + effects.bonus_mp + (effects.bonus_mp_percent * (mp_base + (mp_per_level * lev0) + (mp_per_mental * phys0)) / 100);
+		hp_per_minute = hp_regen_base + (hp_regen_per_level * lev0) + (hp_regen_per_physical * phys0) + effects.bonus_hp_regen;
+		mp_per_minute = mp_regen_base + (mp_regen_per_level * lev0) + (mp_regen_per_mental * ment0) + effects.bonus_mp_regen;
+		accuracy = accuracy_base + (accuracy_per_level * lev0) + (accuracy_per_offense * off0) + effects.bonus_accuracy;
+		avoidance = avoidance_base + (avoidance_per_level * lev0) + (avoidance_per_defense * def0) + effects.bonus_avoidance;
+		crit = crit_base + (crit_per_level * lev0) + effects.bonus_crit;
+	} else {
+		maxhp = hp_base + effects.bonus_hp;
+		maxmp = mp_base + effects.bonus_mp;
+		accuracy = accuracy_base + effects.bonus_accuracy;
+		avoidance = avoidance_base + effects.bonus_avoidance;
+	}
+
+	speed = speed_default;
+	dspeed = dspeed_default;
+
+	poise = poise_base + effects.bonus_poise;
+
+	for (unsigned i=0; i<effects.bonus_resist.size(); i++) {
+		vulnerable[i] = 100 - effects.bonus_resist[i];
+	}
+
+	if (hp > maxhp) hp = maxhp;
+	if (mp > maxmp) mp = maxmp;
 }
 
 /**
  * Process per-frame actions
  */
 void StatBlock::logic() {
+	if (hp <= 0 && !effects.triggered_death && !effects.revive) alive = false;
+	else alive = true;
+
+	// handle effect timers
+	effects.logic();
+
+	// apply bonuses from items/effects to base stats
+	recalc_alt();
 
 	// handle cooldowns
 	if (cooldown_ticks > 0) cooldown_ticks--; // global cooldown
@@ -420,25 +499,27 @@ void StatBlock::logic() {
 		transform_duration--;
 
 	// apply bleed
-	if (effects.bleed_dmg > 0) {
-		takeDamage(effects.bleed_dmg);
+	if (effects.damage > 0) {
+		takeDamage(effects.damage);
 	}
 
 	// apply healing over time
 	if (effects.hpot > 0) {
+		comb->addMessage(msg->get("+%d HP",effects.hpot), pos, COMBAT_MESSAGE_BUFF);
 		hp += effects.hpot;
 		if (hp > maxhp) hp = maxhp;
 	}
-
-	// handle effect timers
-	effects.logic();
+	if (effects.mpot > 0) {
+		comb->addMessage(msg->get("+%d MP",effects.mpot), pos, COMBAT_MESSAGE_BUFF);
+		mp += effects.mpot;
+		if (mp > maxmp) mp = maxmp;
+	}
 
 	// set movement type
 	// some creatures may shift between movement types
 	if (intangible) movement_type = MOVEMENT_INTANGIBLE;
 	else if (flying) movement_type = MOVEMENT_FLYING;
 	else movement_type = MOVEMENT_NORMAL;
-
 }
 
 StatBlock::~StatBlock() {
@@ -458,7 +539,8 @@ bool StatBlock::canUsePower(const Power &power, unsigned powerid) const {
 		&& (!power.requires_physical_weapon || wielding_physical)
 		&& mp >= power.requires_mp
 		&& (!power.sacrifice == false || hp > power.requires_hp)
-		&& menu_powers->meetsUsageStats(powerid);
+		&& menu_powers->meetsUsageStats(powerid)
+		&& !power.passive;
 
 }
 
@@ -545,6 +627,10 @@ void StatBlock::loadHeroStats() {
 			bonus_per_defense = value;
 		} else if (infile.key == "sfx_step") {
 			sfx_step = infile.val;
+		} else if (infile.key == "stat_points_per_level") {
+			stat_points_per_level = value;
+		} else if (infile.key == "power_points_per_level") {
+			power_points_per_level = value;
 		}
 	}
 	infile.close();
@@ -559,7 +645,7 @@ void StatBlock::loadHeroStats() {
 	while(infile.next()) {
 		xp_table[toInt(infile.key) - 1] = toInt(infile.val);
 	}
-	max_spendable_stat_points = toInt(infile.key);
+	max_spendable_stat_points = toInt(infile.key) * stat_points_per_level;
 	infile.close();
 }
 

@@ -15,6 +15,8 @@ You should have received a copy of the GNU General Public License along with
 FLARE.  If not, see http://www.gnu.org/licenses/
 */
 
+
+#pragma once
 #ifndef INPUT_STATE_H
 #define INPUT_STATE_H
 
@@ -60,6 +62,12 @@ const int CTRL = 22;
 const int SHIFT = 23;
 const int DEL = 24;
 
+// Joystick buttons enum
+const int JOY_MAIN1 = 0;
+const int JOY_MAIN2 = 1;
+const int JOY_ACCEPT = 2;
+const int JOY_CANCEL = 3;
+
 /**
  * class InputState
  *
@@ -69,11 +77,11 @@ const int DEL = 24;
 class InputState {
 public:
 	static const int key_count = 25;
-	static const int joy_key_count = 2;
+	static const int joy_key_count = 4;
 	int binding[key_count];
 	int binding_alt[key_count];
 	int joy_binding[joy_key_count];
-	
+
 	std::string binding_name[25];
 	std::string mouse_button[7];
 
@@ -89,7 +97,8 @@ public:
 	bool pressing[key_count];
 	bool lock[key_count];
 	bool joy_pressing[joy_key_count];
-	
+	bool joy_lock[joy_key_count];
+
 	bool done;
 	Point mouse;
 	std::string inkeys;

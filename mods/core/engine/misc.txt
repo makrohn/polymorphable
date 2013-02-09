@@ -1,5 +1,0 @@
-# Miscellaneous engine settings
-
-save_hpmp=1
-default_name=Daphne
-aim_assist=32

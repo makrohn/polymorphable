@@ -1,0 +1,32 @@
+name=Cultist Knight
+level=2
+categories=cultist,knight,melee
+rarity=common
+xp=0
+
+sfx_prefix=cultist
+animations=knight
+
+loot=1,25
+loot=2,13
+loot=3,5
+loot=currency,33
+
+# combat stats
+hp=6
+speed=6
+dspeed=4
+melee_range=64
+threat_range=512
+turn_delay=12
+chance_pursue=20
+chance_melee_phys=10
+power_beacon=132
+power_melee_phys=2
+
+accuracy=100
+avoidance=0
+
+dmg_melee_min=2
+dmg_melee_max=2
+cooldown=30

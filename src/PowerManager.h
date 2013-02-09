@@ -23,6 +23,8 @@ FLARE.  If not, see http://www.gnu.org/licenses/
  * Special code for handling spells, special powers, item effects, etc.
  */
 
+
+#pragma once
 #ifndef POWER_MANAGER_H
 #define POWER_MANAGER_H
 
@@ -71,8 +73,24 @@ const int STARTING_POS_SOURCE = 0;
 const int STARTING_POS_TARGET = 1;
 const int STARTING_POS_MELEE = 2;
 
-// TODO: maybe move this to an effect?
-const int POWER_SPARK_BLOOD = 127;
+const int TRIGGER_BLOCK = 0;
+const int TRIGGER_HIT = 1;
+const int TRIGGER_HALFDEATH = 2;
+const int TRIGGER_JOINCOMBAT = 3;
+const int TRIGGER_DEATH = 4;
+
+class PostEffect {
+public:
+	int id;
+	int magnitude;
+	int duration;
+
+	PostEffect() {
+		id = 0;
+		magnitude = 0;
+		duration = 0;
+	}
+};
 
 class Power {
 public:
@@ -80,12 +98,15 @@ public:
 	int type; // what kind of activate() this is
 	std::string name;
 	std::string description;
+	std::string tag; // optional unique name used to get power id
 	int icon; // just the number.  The caller menu will have access to the surface.
 	int new_state; // when using this power the user (avatar/enemy) starts a new state
 	bool face; // does the user turn to face the mouse cursor when using this power?
 	int source_type; //hero, neutral, or enemy
 	bool beacon; //true if it's just an ememy calling its allies
 	int count; // number of hazards/effects or spawns created
+	bool passive; // if unlocked when the user spawns, automatically cast it
+	int passive_trigger; // only activate passive powers under certain conditions (block, hit, death, etc)
 
 	// power requirements
 	bool requires_physical_weapon;
@@ -97,6 +118,7 @@ public:
 	bool requires_los; // line of sight
 	bool requires_empty_target; // target square must be empty
 	int requires_item;
+	int requires_equipped_item;
 	bool consumable;
 	bool requires_targeting; // power only makes sense when using click-to-target
 	int cooldown; // milliseconds before you can use the power again
@@ -144,15 +166,12 @@ public:
 
 	// special effects
 	bool buff;
-	bool buff_heal;
 	bool buff_teleport;
-	int buff_restore_hp;
-	int buff_restore_mp;
 
-	int post_effect;
-	int effect_duration;
-	int effect_magnitude;
+	std::vector<PostEffect> post_effects;
 	std::string effect_type;
+	bool effect_additive;
+	bool effect_render_above;
 
 	int post_power;
 	int wall_power;
@@ -166,12 +185,15 @@ public:
 		: type(-1)
 		, name("")
 		, description("")
+		, tag("")
 		, icon(-1)
 		, new_state(-1)
 		, face(false)
 		, source_type(-1)
 		, beacon(false)
 		, count(1)
+		, passive(false)
+		, passive_trigger(-1)
 
 		, requires_physical_weapon(false)
 		, requires_offense_weapon(false)
@@ -183,6 +205,7 @@ public:
 		, requires_los(false)
 		, requires_empty_target(false)
 		, requires_item(-1)
+		, requires_equipped_item(-1)
 		, consumable(false)
 		, requires_targeting(false)
 		, cooldown(0)
@@ -224,15 +247,11 @@ public:
 		, manual_untransform(false)
 
 		, buff(false)
-		, buff_heal(false)
 		, buff_teleport(false)
-		, buff_restore_hp(0)
-		, buff_restore_mp(0)
 
-		, post_effect(0)
-		, effect_duration(0)
-		, effect_magnitude(0)
 		, effect_type("")
+		, effect_additive(false)
+		, effect_render_above(false)
 
 		, post_power(0)
 		, wall_power(0)
@@ -285,6 +304,9 @@ public:
 	bool hasValidTarget(int power_index, StatBlock *src_stats, Point target);
 	bool spawn(const std::string& enemy_type, Point target);
 	bool effect(StatBlock *src_stats, int power_index);
+	void activatePassives(StatBlock *src_stats);
+	void activateSinglePassive(StatBlock *src_stats, int id);
+	int getIdFromTag(std::string tag);
 
 	std::vector<Power> powers;
 	std::queue<Hazard *> hazards; // output; read by HazardManager
@@ -293,7 +315,8 @@ public:
 	// shared sounds for power special effects
 	std::vector<Mix_Chunk*> sfx;
 
-	int used_item;
+	std::vector<int> used_items;
+	std::vector<int> used_equipped_items;
 };
 
 #endif

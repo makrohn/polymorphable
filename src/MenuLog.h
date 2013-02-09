@@ -19,6 +19,8 @@ FLARE.  If not, see http://www.gnu.org/licenses/
  * class MenuLog
  */
 
+
+#pragma once
 #ifndef MENU_LOG_H
 #define MENU_LOG_H
 
@@ -39,10 +41,9 @@ class WidgetTabControl;
 
 const unsigned int MAX_LOG_MESSAGES = 32;
 
-const int LOG_TYPE_COUNT = 3;
+const int LOG_TYPE_COUNT = 2;
 const int LOG_TYPE_QUESTS = 0;
 const int LOG_TYPE_MESSAGES = 1;
-const int LOG_TYPE_STATISTICS = 2;
 
 class MenuLog : public Menu {
 private:
@@ -73,7 +74,6 @@ public:
 
 	void update();
 	void logic();
-	void tabsLogic();
 	void render();
 	void refresh(int log_type);
 	void add(const std::string& s, int log_type);

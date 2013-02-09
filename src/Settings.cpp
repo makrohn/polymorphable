@@ -39,8 +39,9 @@ using namespace std;
 #define log2(x)	logf(x)/logf(2)
 #endif
 
-struct ConfigEntry
+class ConfigEntry
 {
+public:
 	const char * name;
 	const type_info * type;
 	const char * default_val;
@@ -52,6 +53,7 @@ ConfigEntry config[] = {
 	{ "fullscreen",       &typeid(FULLSCREEN),      "0",   &FULLSCREEN,      "fullscreen mode. 1 enable, 0 disable."},
 	{ "resolution_w",     &typeid(VIEW_W),          "640", &VIEW_W,          "display resolution. 640x480 minimum."},
 	{ "resolution_h",     &typeid(VIEW_H),          "480", &VIEW_H,          NULL},
+	{ "audio",            &typeid(AUDIO),           "1",   &AUDIO,           "Enable music and sound subsystem."},
 	{ "music_volume",     &typeid(MUSIC_VOLUME),    "96",  &MUSIC_VOLUME,    "music and sound volume (0 = silent, 128 = max)"},
 	{ "sound_volume",     &typeid(SOUND_VOLUME),    "128", &SOUND_VOLUME,    NULL},
 	{ "combat_text",      &typeid(COMBAT_TEXT),     "0",   &COMBAT_TEXT,     "display floating damage text. 1 enable, 0 disable."},
@@ -116,6 +118,7 @@ bool TEXTURE_QUALITY;
 bool ANIMATED_TILES;
 
 // Audio Settings
+bool AUDIO;
 unsigned short MUSIC_VOLUME;
 unsigned short SOUND_VOLUME;
 
@@ -160,6 +163,7 @@ bool SHOW_FPS = false;
 int CORPSE_TIMEOUT = 1800;
 bool SELL_WITHOUT_VENDOR = true;
 int AIM_ASSIST = 0;
+std::string WINDOW_TITLE = "Flare";
 
 
 /**
@@ -347,10 +351,8 @@ void loadMiscSettings() {
 			if (infile.key == "save_hpmp") {
 				if (toInt(infile.val) == 1)
 					SAVE_HPMP = true;
-				else
-					SAVE_HPMP = false;
 			} else if (infile.key == "default_name") {
-				DEFAULT_NAME = infile.val.c_str();
+				DEFAULT_NAME = infile.val;
 			} else if (infile.key == "corpse_timeout") {
 				CORPSE_TIMEOUT = toInt(infile.val);
 			} else if (infile.key == "sell_without_vendor") {
@@ -360,7 +362,10 @@ void loadMiscSettings() {
 					SELL_WITHOUT_VENDOR = false;
 			} else if (infile.key == "aim_assist") {
 				AIM_ASSIST = toInt(infile.val);
+			} else if (infile.key == "window_title") {
+				WINDOW_TITLE = infile.val;
 			}
+
 		}
 		infile.close();
 	} else fprintf(stderr, "Unable to open engine/misc.txt!\n");
@@ -458,6 +463,12 @@ void loadMiscSettings() {
 						HERO_CLASSES.back().powers.push_back(toInt(power));
 					}
 				}
+				else if (infile.key == "campaign") {
+					string status;
+					while ( (status = infile.nextValue()) != "") {
+						HERO_CLASSES.back().statuses.push_back(status);
+					}
+				}
 			}
 		}
 		infile.close();
@@ -482,21 +493,22 @@ bool loadSettings() {
 
 	// try read from file
 	FileParser infile;
-	if (infile.open(PATH_CONF + FILE_SETTINGS)) {
+	if (!infile.open(PATH_CONF + FILE_SETTINGS)) {
+		if (!infile.open(mods->locate("engine/default_settings.txt").c_str())) {
+			saveSettings();
+			return true;
+		} else saveSettings();
+	}
 
-		while (infile.next()) {
+	while (infile.next()) {
 
-			ConfigEntry * entry = getConfigEntry(infile.key);
-			if (entry) {
-				// TODO: handle errors
-				tryParseValue(*entry->type, infile.val, entry->storage);
-			}
+		ConfigEntry * entry = getConfigEntry(infile.key);
+		if (entry) {
+			// TODO: handle errors
+			tryParseValue(*entry->type, infile.val, entry->storage);
 		}
-		infile.close();
 	}
-	else {
-		saveSettings(); // write the default settings
-	}
+	infile.close();
 
 	return true;
 }
@@ -548,4 +560,3 @@ bool loadDefaults() {
 
 	return true;
 }
-

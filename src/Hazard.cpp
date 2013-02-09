@@ -65,7 +65,7 @@ Hazard::Hazard(MapCollision *_collider)
 	, trait_elemental(-1)
 	, post_power(0)
 	, wall_power(0)
-	, equipment_modified(false)
+	, mod_power(0)
 {
 }
 
@@ -117,7 +117,7 @@ void Hazard::loadAnimation(std::string &s) {
 	if (animation_name != "") {
 		anim->increaseCount(animation_name);
 		AnimationSet *animationSet = anim->getAnimationSet(animation_name);
-		activeAnimation = animationSet->getAnimation(animationSet->starting_animation);
+		activeAnimation = animationSet->getAnimation();
 	}
 }
 

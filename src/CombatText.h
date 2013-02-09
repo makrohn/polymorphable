@@ -24,6 +24,8 @@ FLARE.  If not, see http://www.gnu.org/licenses/
  *
  */
 
+
+#pragma once
 #ifndef COMBAT_TEXT_H
 #define COMBAT_TEXT_H
 
@@ -39,17 +41,21 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 #define COMBAT_MESSAGE_MISS 3
 #define COMBAT_MESSAGE_BUFF 4
 
+// TODO: move this to the combat text engine file
+// Map positions are between the feet of the entity at the floor level.
+// This offset starts combat text "above" the common enemy height.
+#define COMBAT_TEXT_STARTING_OFFSET 48;
+
 class WidgetLabel;
 
-struct Combat_Text_Item {
+class Combat_Text_Item {
+public:
 	WidgetLabel *label;
 	int lifespan;
 	Point pos;
-	Point src_pos;
+	int floating_offset;
 	std::string text;
 	int displaytype;
-	int ydelta;
-	bool from_hero;
 };
 
 class CombatText {
@@ -57,8 +63,8 @@ public:
 	CombatText();
 
 	void render();
-	void addMessage(std::string message, Point location, int displaytype, bool from_hero);
-	void addMessage(int num, Point location, int displaytype, bool from_hero);
+	void addMessage(std::string message, Point location, int displaytype);
+	void addMessage(int num, Point location, int displaytype);
 	void setCam(Point location);
 
 private:

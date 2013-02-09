@@ -1,0 +1,32 @@
+name=Cultist Archer
+level=2
+categories=cultist,archer,ranged
+rarity=common
+xp=0
+
+sfx_prefix=archer
+animations=archer
+
+loot=1,25
+loot=2,13
+loot=3,5
+loot=currency,33
+
+# combat stats
+hp=4
+speed=14
+dspeed=10
+melee_range=32
+threat_range=512
+turn_delay=12
+chance_pursue=20
+chance_ranged_phys=5
+power_beacon=132
+power_ranged_phys=30
+
+accuracy=100
+avoidance=0
+
+dmg_ranged_min=3
+dmg_ranged_max=3
+cooldown=30

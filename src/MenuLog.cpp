@@ -77,7 +77,6 @@ MenuLog::MenuLog() {
 	// Define the header.
 	tabControl->setTabTitle(LOG_TYPE_MESSAGES, msg->get("Notes"));
 	tabControl->setTabTitle(LOG_TYPE_QUESTS, msg->get("Quests"));
-	tabControl->setTabTitle(LOG_TYPE_STATISTICS, msg->get("Stats"));
 
 	font->setFont("font_regular");
 	paragraph_spacing = font->getLineHeight()/2;
@@ -126,22 +125,10 @@ void MenuLog::logic() {
 		visible = false;
 	}
 
-	for (int i=0; i<LOG_TYPE_COUNT; i++) {
-		msg_buffer[i]->refresh();
-	}
-
+	tabControl->logic();
 	int active_log = tabControl->getActiveTab();
 	msg_buffer[active_log]->logic();
 }
-
-/**
- * Run the logic for the tabs control.
- */
-void MenuLog::tabsLogic()
-{
-	tabControl->logic();
-}
-
 
 /**
  * Render graphics for this frame when the menu is open
@@ -179,14 +166,16 @@ void MenuLog::render() {
 	int active_log = tabControl->getActiveTab();
 
 	if (msg_buffer[active_log]->update) {
+		msg_buffer[active_log]->refresh();
 		font->setFont("font_regular");
-		for (unsigned int i=log_msg[active_log].size(); i>0; i--) {
+		for (unsigned int i = log_msg[active_log].size(); i > 0; i--) {
 			int widthLimit = tabControl->getContentArea().w;
 			Point size = font->calc_size(log_msg[active_log][i-1], widthLimit);
 			font->renderShadowed(log_msg[active_log][i-1], tab_content_indent, total_size, JUSTIFY_LEFT, msg_buffer[active_log]->contents, widthLimit, color_normal);
 			total_size+=size.y+paragraph_spacing;
 		}
 	}
+	msg_buffer[active_log]->update = false;
 
 	msg_buffer[active_log]->render();
 }

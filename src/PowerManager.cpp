@@ -33,6 +33,7 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 #include "StatBlock.h"
 #include "MapCollision.h"
 #include "UtilsFileSystem.h"
+#include "UtilsMath.h"
 #include "UtilsParsing.h"
 
 #include <cmath>
@@ -44,12 +45,12 @@ using namespace std;
 /**
  * PowerManager constructor
  */
-PowerManager::PowerManager() {
-
-	used_item=-1;
-
-	log_msg = "";
-
+PowerManager::PowerManager()
+	: collider(NULL)
+	, log_msg("")
+	, used_items(std::vector<int>())
+	, used_equipped_items(std::vector<int>())
+{
 	loadAll();
 }
 
@@ -68,9 +69,7 @@ void PowerManager::loadAll() {
 		if (fileExists(test_path)) {
 			this->loadPowers(test_path);
 		}
-
 	}
-
 }
 
 
@@ -117,6 +116,8 @@ void PowerManager::loadPowers(const std::string& filename) {
 			powers[input_id].name = msg->get(infile.val);
 		else if (infile.key == "description")
 			powers[input_id].description = msg->get(infile.val);
+		else if (infile.key == "tag")
+			powers[input_id].tag = infile.val;
 		else if (infile.key == "icon")
 			powers[input_id].icon = toInt(infile.val);
 		else if (infile.key == "new_state") {
@@ -139,6 +140,16 @@ void PowerManager::loadPowers(const std::string& filename) {
 			powers[input_id].beacon = toBool(infile.val);
 		else if (infile.key == "count")
 			powers[input_id].count = toInt(infile.val);
+		else if (infile.key == "passive")
+			powers[input_id].passive = toBool(infile.val);
+		else if (infile.key == "passive_trigger") {
+			if (infile.val == "on_block") powers[input_id].passive_trigger = TRIGGER_BLOCK;
+			else if (infile.val == "on_hit") powers[input_id].passive_trigger = TRIGGER_HIT;
+			else if (infile.val == "on_halfdeath") powers[input_id].passive_trigger = TRIGGER_HALFDEATH;
+			else if (infile.val == "on_joincombat") powers[input_id].passive_trigger = TRIGGER_JOINCOMBAT;
+			else if (infile.val == "on_death") powers[input_id].passive_trigger = TRIGGER_DEATH;
+			else fprintf(stderr, "unknown passive trigger %s\n", infile.val.c_str());
+		}
 		// power requirements
 		else if (infile.key == "requires_physical_weapon")
 			powers[input_id].requires_physical_weapon = toBool(infile.val);
@@ -158,6 +169,8 @@ void PowerManager::loadPowers(const std::string& filename) {
 			powers[input_id].requires_empty_target = toBool(infile.val);
 		else if (infile.key == "requires_item")
 			powers[input_id].requires_item = toInt(infile.val);
+		else if (infile.key == "requires_equipped_item")
+			powers[input_id].requires_equipped_item = toInt(infile.val);
 		else if (infile.key == "requires_targeting")
 			powers[input_id].requires_targeting = toBool(infile.val);
 		else if (infile.key == "cooldown")
@@ -241,22 +254,22 @@ void PowerManager::loadPowers(const std::string& filename) {
 		// buffs
 		else if (infile.key == "buff")
 			powers[input_id].buff= toBool(infile.val);
-		else if (infile.key == "buff_heal")
-			powers[input_id].buff_heal = toBool(infile.val);
 		else if (infile.key == "buff_teleport")
 			powers[input_id].buff_teleport = toBool(infile.val);
-		else if (infile.key == "buff_restore_hp")
-			powers[input_id].buff_restore_hp = toInt(infile.val);
-		else if (infile.key == "buff_restore_mp")
-			powers[input_id].buff_restore_mp = toInt(infile.val);
-		else if (infile.key == "post_effect")
-			powers[input_id].post_effect = toInt(infile.val);
-		else if (infile.key == "effect_duration")
-			powers[input_id].effect_duration = toInt(infile.val);
-		else if (infile.key == "effect_magnitude")
-			powers[input_id].effect_magnitude = toInt(infile.val);
+		else if (infile.key == "post_effect") {
+			infile.val = infile.val + ',';
+			PostEffect pe;
+			pe.id = eatFirstInt(infile.val, ',');
+			pe.magnitude = eatFirstInt(infile.val, ',');
+			pe.duration = eatFirstInt(infile.val, ',');
+			powers[input_id].post_effects.push_back(pe);
+		}
 		else if (infile.key == "effect_type")
 			powers[input_id].effect_type = infile.val;
+		else if (infile.key == "effect_additive")
+			powers[input_id].effect_additive = toBool(infile.val);
+		else if (infile.key == "effect_render_above")
+			powers[input_id].effect_render_above = toBool(infile.val);
 		// pre and post power effects
 		else if (infile.key == "post_power")
 			powers[input_id].post_power = toInt(infile.val);
@@ -291,16 +304,7 @@ int PowerManager::loadSFX(const string& filename) {
 		}
 
 		// we don't already have this sound loaded, so load it
-		Mix_Chunk* sound;
-		if (audio && SOUND_VOLUME) {
-			sound = Mix_LoadWAV(mods->locate("soundfx/powers/" + filename).c_str());
-			if(!sound) {
-				cerr << "Couldn't load power soundfx: " << filename << endl;
-				return -1;
-			}
-		} else {
-			sound = NULL;
-		}
+		Mix_Chunk* sound = loadSfx("soundfx/powers/" + filename, "PowerManager sfx");
 
 		// success; perform record-keeping
 		sfx_filenames.push_back(filename);
@@ -577,17 +581,17 @@ void PowerManager::initHazard(int power_index, StatBlock *src_stats, Point targe
 	}
 
 	// if equipment has special powers, apply it here (if it hasn't already been applied)
-	if (!haz->equipment_modified && powers[power_index].allow_power_mod) {
+	if (haz->mod_power == 0 && powers[power_index].allow_power_mod) {
 		if (powers[power_index].base_damage == BASE_DAMAGE_MELEE && src_stats->melee_weapon_power != 0) {
-			haz->equipment_modified = true;
+			haz->mod_power = power_index;
 			initHazard(src_stats->melee_weapon_power, src_stats, target, haz);
 		}
 		else if (powers[power_index].base_damage == BASE_DAMAGE_MENT && src_stats->mental_weapon_power != 0) {
-			haz->equipment_modified = true;
+			haz->mod_power = power_index;
 			initHazard(src_stats->mental_weapon_power, src_stats, target, haz);
 		}
 		else if (powers[power_index].base_damage == BASE_DAMAGE_RANGED && src_stats->ranged_weapon_power != 0) {
-			haz->equipment_modified = true;
+			haz->mod_power = power_index;
 			initHazard(src_stats->ranged_weapon_power, src_stats, target, haz);
 		}
 	}
@@ -598,45 +602,6 @@ void PowerManager::initHazard(int power_index, StatBlock *src_stats, Point targe
  * Self-enhancements (buffs) are handled by this function.
  */
 void PowerManager::buff(int power_index, StatBlock *src_stats, Point target) {
-
-	// heal for ment weapon damage * damage multiplier
-	if (powers[power_index].buff_heal) {
-		int heal_amt = 0;
-		int heal_max = (int)ceil(src_stats->dmg_ment_max * powers[power_index].damage_multiplier / 100.0) + (src_stats->get_mental()*src_stats->bonus_per_mental);
-		int heal_min = (int)ceil(src_stats->dmg_ment_min * powers[power_index].damage_multiplier / 100.0) + (src_stats->get_mental()*src_stats->bonus_per_mental);
-		if (heal_max > heal_min)
-			heal_amt = rand() % (heal_max - heal_min) + heal_min;
-		else // avoid div by 0
-			heal_amt = heal_min;
-		if (src_stats->hero)
-			comb->addMessage(msg->get("+%d HP",heal_amt), src_stats->pos, COMBAT_MESSAGE_BUFF, true);
-		else
-			comb->addMessage(msg->get("+%d HP",heal_amt), src_stats->pos, COMBAT_MESSAGE_BUFF, false);
-		src_stats->hp += heal_amt;
-		if (src_stats->hp > src_stats->maxhp) src_stats->hp = src_stats->maxhp;
-	}
-
-	// hp restore
-	if (powers[power_index].buff_restore_hp > 0) {
-		int hp_amt = powers[power_index].buff_restore_hp;
-		if (src_stats->hero)
-			comb->addMessage(msg->get("+%d HP",hp_amt), src_stats->pos, COMBAT_MESSAGE_BUFF, true);
-		else
-			comb->addMessage(msg->get("+%d HP",hp_amt), src_stats->pos, COMBAT_MESSAGE_BUFF, false);
-		src_stats->hp += hp_amt;
-		if (src_stats->hp > src_stats->maxhp) src_stats->hp = src_stats->maxhp;
-	}
-
-	// mp restore
-	if (powers[power_index].buff_restore_mp > 0) {
-		int mp_amt = powers[power_index].buff_restore_mp;
-		if (src_stats->hero)
-			comb->addMessage(msg->get("+%d MP",mp_amt), src_stats->pos, COMBAT_MESSAGE_BUFF, true);
-		else
-			comb->addMessage(msg->get("+%d MP",mp_amt), src_stats->pos, COMBAT_MESSAGE_BUFF, false);
-		src_stats->mp += mp_amt;
-		if (src_stats->mp > src_stats->maxmp) src_stats->mp = src_stats->maxmp;
-	}
 
 	// teleport to the target location
 	if (powers[power_index].buff_teleport) {
@@ -673,52 +638,54 @@ void PowerManager::playSound(int power_index, StatBlock *src_stats) {
 	if (powers[power_index].allow_power_mod) {
 		if (powers[power_index].base_damage == BASE_DAMAGE_MELEE && src_stats->melee_weapon_power != 0
 				&& powers[src_stats->melee_weapon_power].sfx_index != -1) {
-			if (sfx[powers[src_stats->melee_weapon_power].sfx_index])
-				Mix_PlayChannel(-1,sfx[powers[src_stats->melee_weapon_power].sfx_index],0);
+				playSfx(sfx[powers[src_stats->melee_weapon_power].sfx_index]);
 		}
 		else if (powers[power_index].base_damage == BASE_DAMAGE_MENT && src_stats->mental_weapon_power != 0
 				&& powers[src_stats->mental_weapon_power].sfx_index != -1) {
-			if (sfx[powers[src_stats->mental_weapon_power].sfx_index])
-				Mix_PlayChannel(-1,sfx[powers[src_stats->mental_weapon_power].sfx_index],0);
+				playSfx(sfx[powers[src_stats->mental_weapon_power].sfx_index]);
 		}
 		else if (powers[power_index].base_damage == BASE_DAMAGE_RANGED && src_stats->ranged_weapon_power != 0
 				&& powers[src_stats->ranged_weapon_power].sfx_index != -1) {
-			if (sfx[powers[src_stats->ranged_weapon_power].sfx_index])
-				Mix_PlayChannel(-1,sfx[powers[src_stats->ranged_weapon_power].sfx_index],0);
+				playSfx(sfx[powers[src_stats->ranged_weapon_power].sfx_index]);
 		}
 		else play_base_sound = true;
 	}
 	else play_base_sound = true;
 
-	if (play_base_sound && powers[power_index].sfx_index != -1) {
-		if (sfx[powers[power_index].sfx_index])
-			Mix_PlayChannel(-1,sfx[powers[power_index].sfx_index],0);
-	}
+	if (play_base_sound && powers[power_index].sfx_index != -1)
+		playSfx(sfx[powers[power_index].sfx_index]);
 }
 
 bool PowerManager::effect(StatBlock *src_stats, int power_index) {
-	int shield_amt = 0;
-	int effect_index = 0;
+	for (unsigned i=0; i<powers[power_index].post_effects.size(); i++) {
 
-	if (powers[power_index].type == POWTYPE_EFFECT) effect_index = power_index;
-	else effect_index = powers[power_index].post_effect;
+		int effect_index = powers[power_index].post_effects[i].id;
+		int magnitude = powers[power_index].post_effects[i].magnitude;
+		int duration = powers[power_index].post_effects[i].duration;
 
-	if (effect_index > 0) {
-		if (powers[effect_index].effect_type == "shield") {
-			// charge shield to max ment weapon damage * damage multiplier
-			shield_amt = (int)ceil(src_stats->dmg_ment_max * powers[power_index].damage_multiplier / 100.0) + (src_stats->get_mental()*src_stats->bonus_per_mental);
-			if (src_stats->hero)
-				comb->addMessage(msg->get("+%d Shield",shield_amt), src_stats->pos, COMBAT_MESSAGE_BUFF, true);
-			else
-				comb->addMessage(msg->get("+%d Shield",shield_amt), src_stats->pos, COMBAT_MESSAGE_BUFF, false);
+		if (effect_index > 0) {
+			if (powers[effect_index].effect_type == "shield") {
+				// charge shield to max ment weapon damage * damage multiplier
+				magnitude = (int)ceil(src_stats->dmg_ment_max * powers[power_index].damage_multiplier / 100.0) + (src_stats->get_mental()*src_stats->bonus_per_mental);
+				comb->addMessage(msg->get("+%d Shield",magnitude), src_stats->pos, COMBAT_MESSAGE_BUFF);
+			} else if (powers[effect_index].effect_type == "heal") {
+				// heal for ment weapon damage * damage multiplier
+				int heal_max = (int)ceil(src_stats->dmg_ment_max * powers[power_index].damage_multiplier / 100.0) + (src_stats->get_mental()*src_stats->bonus_per_mental);
+				int heal_min = (int)ceil(src_stats->dmg_ment_min * powers[power_index].damage_multiplier / 100.0) + (src_stats->get_mental()*src_stats->bonus_per_mental);
+				magnitude = randBetween(heal_min, heal_max-1);
+
+				comb->addMessage(msg->get("+%d HP",magnitude), src_stats->pos, COMBAT_MESSAGE_BUFF);
+				src_stats->hp += magnitude;
+				if (src_stats->hp > src_stats->maxhp) src_stats->hp = src_stats->maxhp;
+			}
+
+			src_stats->effects.addEffect(effect_index, powers[effect_index].icon, duration, magnitude, powers[effect_index].effect_type, powers[effect_index].animation_name, powers[effect_index].effect_additive, false, powers[power_index].passive_trigger, powers[effect_index].effect_render_above);
 		}
-		src_stats->effects.addEffect(effect_index, powers[effect_index].icon, powers[power_index].effect_duration, shield_amt, powers[power_index].effect_magnitude, powers[effect_index].effect_type, powers[effect_index].animation_name);
+
+		// If there's a sound effect, play it here
+		playSound(power_index, src_stats);
 	}
 
-	// If there's a sound effect, play it here
-	playSound(power_index, src_stats);
-
-	payPowerCost(power_index, src_stats);
 	return true;
 }
 
@@ -958,8 +925,13 @@ bool PowerManager::transform(int power_index, StatBlock *src_stats, Point target
 		src_stats->transform_type = "untransform"; // untransform() is called only if type !=""
 	}
 	else {
-		// permanent transformation
-		if (powers[power_index].transform_duration == 0) src_stats->transform_duration = -1;
+		if (powers[power_index].transform_duration == 0) {
+			// permanent transformation
+			src_stats->transform_duration = -1;
+		} else if (powers[power_index].transform_duration > 0) {
+			// timed transformation
+			src_stats->transform_duration = powers[power_index].transform_duration;
+		}
 
 		src_stats->transform_type = powers[power_index].spawn_type;
 	}
@@ -980,20 +952,18 @@ bool PowerManager::activate(int power_index, StatBlock *src_stats, Point target)
 			return false;
 	}
 
-	if (src_stats) {
-		if (src_stats->hp > 0 && powers[power_index].sacrifice == false && powers[power_index].requires_hp >= src_stats->hp)
-			return false;
-	}
+	if (src_stats->hp > 0 && powers[power_index].sacrifice == false && powers[power_index].requires_hp >= src_stats->hp)
+		return false;
 
 	// logic for different types of powers are very different.  We allow these
 	// separate functions to handle the details.
+	// POWTYPE_EFFECT is never cast as itself, so it is ignored
 	switch(powers[power_index].type) {
 		case POWTYPE_FIXED:     return fixed(power_index, src_stats, target);
 		case POWTYPE_MISSILE:   return missile(power_index, src_stats, target);
 		case POWTYPE_REPEATER:  return repeater(power_index, src_stats, target);
 		case POWTYPE_SPAWN:     return spawn(power_index, src_stats, target);
 		case POWTYPE_TRANSFORM: return transform(power_index, src_stats, target);
-		case POWTYPE_EFFECT:    return effect(src_stats, power_index);
 	}
 
 	return false;
@@ -1005,15 +975,106 @@ bool PowerManager::activate(int power_index, StatBlock *src_stats, Point target)
 void PowerManager::payPowerCost(int power_index, StatBlock *src_stats) {
 	if (src_stats) {
 		if (src_stats->hero) {
-			if (powers[power_index].requires_mp > 0) src_stats->mp -= 
-				powers[power_index].requires_mp;
-			if (powers[power_index].requires_item != -1) used_item = 
-				powers[power_index].requires_item;
+			src_stats->mp -= powers[power_index].requires_mp;
+			if (powers[power_index].requires_item != -1)
+				used_items.push_back(powers[power_index].requires_item);
+			if (powers[power_index].requires_equipped_item != -1)
+				used_equipped_items.push_back(powers[power_index].requires_equipped_item);
 		}
-		if (powers[power_index].requires_hp <= src_stats->hp) src_stats->hp -= 
-			powers[power_index].requires_hp;
-		else if (powers[power_index].requires_hp > src_stats->hp) src_stats->hp -= src_stats->hp;
+		src_stats->hp -= powers[power_index].requires_hp;
+		src_stats->hp = (src_stats->hp < 0 ? 0 : src_stats->hp);
 	}
+}
+
+/**
+ * Activate an entity's passive powers
+ */
+void PowerManager::activatePassives(StatBlock *src_stats) {
+	bool triggered_others = false;
+	int trigger = -1;
+	// unlocked powers
+	for (unsigned i=0; i<src_stats->powers_list.size(); i++) {
+		if (powers[src_stats->powers_list[i]].passive) {
+			trigger = powers[src_stats->powers_list[i]].passive_trigger;
+
+			if (trigger == -1) {
+				if (src_stats->effects.triggered_others) continue;
+				else triggered_others = true;
+			}
+			else if (trigger == TRIGGER_BLOCK && !src_stats->effects.triggered_block) continue;
+			else if (trigger == TRIGGER_HIT && !src_stats->effects.triggered_hit) continue;
+			else if (trigger == TRIGGER_HALFDEATH && !src_stats->effects.triggered_halfdeath) {
+				if (src_stats->hp > src_stats->maxhp/2) continue;
+				else src_stats->effects.triggered_halfdeath = true;
+			}
+			else if (trigger == TRIGGER_JOINCOMBAT && !src_stats->effects.triggered_joincombat) {
+				if (!src_stats->in_combat) continue;
+				else src_stats->effects.triggered_joincombat = true;
+			}
+			else if (trigger == TRIGGER_DEATH && !src_stats->effects.triggered_death) continue;
+
+			activate(src_stats->powers_list[i], src_stats, src_stats->pos);
+			src_stats->refresh_stats = true;
+		}
+	}
+	// item powers
+	for (unsigned i=0; i<src_stats->powers_list_items.size(); i++) {
+		if (powers[src_stats->powers_list_items[i]].passive) {
+			trigger = powers[src_stats->powers_list_items[i]].passive_trigger;
+
+			if (trigger == -1) {
+				if (src_stats->effects.triggered_others) continue;
+				else triggered_others = true;
+			}
+			else if (trigger == TRIGGER_BLOCK && !src_stats->effects.triggered_block) continue;
+			else if (trigger == TRIGGER_HIT && !src_stats->effects.triggered_hit) continue;
+			else if (trigger == TRIGGER_HALFDEATH && !src_stats->effects.triggered_halfdeath) {
+				if (src_stats->hp > src_stats->maxhp/2) continue;
+				else src_stats->effects.triggered_halfdeath = true;
+			}
+			else if (trigger == TRIGGER_JOINCOMBAT && !src_stats->effects.triggered_joincombat) {
+				if (!src_stats->in_combat) continue;
+				else src_stats->effects.triggered_joincombat = true;
+			}
+			else if (trigger == TRIGGER_DEATH && !src_stats->effects.triggered_death) continue;
+
+			activate(src_stats->powers_list_items[i], src_stats, src_stats->pos);
+			src_stats->refresh_stats = true;
+		}
+	}
+	// Only trigger normal passives once
+	if (triggered_others) src_stats->effects.triggered_others = true;
+
+	// the hit/death triggers can be triggered more than once, so reset them here
+	// the block trigger is handled in the Avatar class
+	src_stats->effects.triggered_hit = false;
+	src_stats->effects.triggered_death = false;
+}
+
+/**
+ * Activate a single passive
+ * this is used when unlocking powers in MenuPowers
+ */
+void PowerManager::activateSinglePassive(StatBlock *src_stats, int id) {
+	if (!powers[id].passive) return;
+
+	if (powers[id].passive_trigger == -1) {
+		activate(id, src_stats, src_stats->pos);
+		src_stats->refresh_stats = true;
+		src_stats->effects.triggered_others = true;
+	}
+}
+
+/**
+ * Find the first power id for a given tag
+ * returns 0 if no tag is found
+ */
+int PowerManager::getIdFromTag(std::string tag) {
+	if (tag == "") return 0;
+	for (unsigned i=1; i<powers.size(); i++) {
+		if (powers[i].tag == tag) return i;
+	}
+	return 0;
 }
 
 PowerManager::~PowerManager() {

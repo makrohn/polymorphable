@@ -19,6 +19,8 @@ FLARE.  If not, see http://www.gnu.org/licenses/
  * class MenuTalker
  */
 
+
+#pragma once
 #ifndef MENU_TALKER_H
 #define MENU_TALKER_H
 
@@ -74,8 +76,6 @@ public:
 
 	bool vendor_visible;
 	bool has_vendor_button;
-
-	bool accept_lock;
 
 	WidgetButton *advanceButton;
 	WidgetButton *closeButton;

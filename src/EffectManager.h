@@ -21,6 +21,8 @@ FLARE.  If not, see http://www.gnu.org/licenses/
  * Holds the collection of hazards (active attacks, spells, etc) and handles group operations
  */
 
+
+#pragma once
 #ifndef EFFECT_MANAGER_H
 #define EFFECT_MANAGER_H
 
@@ -37,30 +39,35 @@ class Hazard;
 class MapCollision;
 class PowerManager;
 
-struct Effect{
+class Effect{
+public:
 	int id;
 	int icon;
 	int ticks;
 	int duration;
 	std::string type;
-	int shield_hp;
-	int shield_maxhp;
 	int magnitude;
+	int magnitude_max;
 	std::string animation_name;
 	Animation* animation;
+	bool item;
+	int trigger;
+	bool render_above;
 
-	Effect() {
-		id = 0;
-		icon = -1;
-		ticks = 0;
-		duration = -1;
-		type = "";
-		shield_hp = 0;
-		shield_maxhp = 0;
-		magnitude = 0;
-		animation_name = "";
-		animation = NULL;
-	}
+	Effect()
+	 : id(0)
+	 , icon(-1)
+	 , ticks(0)
+	 , duration(-1)
+	 , type("")
+	 , magnitude(0)
+	 , magnitude_max(0)
+	 , animation_name("")
+	 , animation(NULL)
+	 , item(false)
+	 , trigger(-1)
+	 , render_above(false)
+	{}
 
 	~Effect() {
 	}
@@ -70,30 +77,60 @@ struct Effect{
 class EffectManager {
 private:
 	Animation* loadAnimation(std::string &s);
-	void removeEffect(int _id);
-	void removeAnimation(int _id);
+	void removeEffect(int id);
+	void removeAnimation(int id);
 
 public:
 	EffectManager();
 	~EffectManager();
+	void clearStatus();
 	void logic();
-	void addEffect(int _id, int _icon, int _duration, int _shield_hp, int _magnitude, std::string _type, std::string _animation);
-	void removeEffectType(std::string _type);
+	void addEffect(int id, int icon, int duration, int magnitude, std::string type, std::string animation, bool additive, bool item, int trigger, bool render_above);
+	void removeEffectType(std::string type);
 	void clearEffects();
 	void clearNegativeEffects();
-	int damageShields(int _dmg);
+	void clearItemEffects();
+	void clearTriggerEffects(int trigger);
+	int damageShields(int dmg);
 
 	std::vector<Effect> effect_list;
 
-	int bleed_dmg;
+	int damage;
 	int hpot;
-	int forced_speed;
+	int mpot;
+	int speed;
 	bool immunity;
-	bool slow;
 	bool stun;
-	bool immobilize;
-	bool haste;
+	int forced_speed;
 	bool forced_move;
+	bool revive;
+
+	int bonus_hp;
+	int bonus_hp_regen;
+	int bonus_hp_percent;
+	int bonus_mp;
+	int bonus_mp_regen;
+	int bonus_mp_percent;
+	int bonus_accuracy;
+	int bonus_avoidance;
+	int bonus_crit;
+	int bonus_offense;
+	int bonus_defense;
+	int bonus_physical;
+	int bonus_mental;
+	int bonus_xp;
+	int bonus_currency;
+	int bonus_item_find;
+	int bonus_stealth;
+	int bonus_poise;
+	std::vector<int> bonus_resist;
+
+	bool triggered_others;
+	bool triggered_block;
+	bool triggered_hit;
+	bool triggered_halfdeath;
+	bool triggered_joincombat;
+	bool triggered_death;
 };
 
 #endif

@@ -31,6 +31,7 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 #include "MapRenderer.h"
 #include "LootManager.h"
 #include "StatBlock.h"
+#include <limits>
 
 using namespace std;
 
@@ -81,13 +82,6 @@ void NPCManager::handleNewMap() {
 		npc->pos.x = mn.pos.x;
 		npc->pos.y = mn.pos.y;
 
-		// if this NPC needs randomized items
-		while (npc->random_stock > 0 && npc->stock_count < NPC_VENDOR_MAX_STOCK) {
-			item_roll.item = loot->randomItem(npc->level);
-			item_roll.quantity = rand() % items->items[item_roll.item].rand_vendor + 1;
-			npc->stock.add(item_roll);
-			npc->random_stock--;
-		}
 		npc->stock.sort();
 		npcs.push_back(npc);
 	}
@@ -118,6 +112,21 @@ int NPCManager::checkNPCClick(Point mouse, Point cam) {
 		}
 	}
 	return -1;
+}
+
+int NPCManager::getNearestNPC(Point pos) {
+	int nearest = -1;
+	int best_distance = std::numeric_limits<int>::max();
+
+	for (unsigned i=0; i<npcs.size(); i++) {
+		int distance = (int)calcDist(pos, npcs[i]->pos);
+		if (distance < best_distance) {
+			best_distance = distance;
+			nearest = i;
+		}
+	}
+
+	return nearest;
 }
 
 /**

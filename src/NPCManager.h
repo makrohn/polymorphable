@@ -22,6 +22,8 @@ FLARE.  If not, see http://www.gnu.org/licenses/
  * Most commonly this involves vendor and conversation townspeople.
  */
 
+
+#pragma once
 #ifndef NPC_MANAGER_H
 #define NPC_MANAGER_H
 
@@ -55,6 +57,7 @@ public:
 	void logic();
 	void addRenders(std::vector<Renderable> &r);
 	int checkNPCClick(Point mouse, Point cam);
+	int getNearestNPC(Point pos);
 	void renderTooltips(Point cam, Point mouse);
 };
 

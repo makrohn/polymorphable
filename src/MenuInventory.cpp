@@ -211,6 +211,9 @@ TooltipData MenuInventory::checkTooltip(Point mouse) {
 	}
 	slot = inventory[area].slotOver(mouse);
 
+	if (slot == -1)
+		return tip;
+
 	if (inventory[area][slot].item > 0) {
 		tip = inventory[area].checkTooltip( mouse, stats, PLAYER_INV);
 	}
@@ -247,10 +250,11 @@ ItemStack MenuInventory::click(InputState * input) {
  * Return dragged item to previous slot
  */
 void MenuInventory::itemReturn( ItemStack stack) {
+	if (drag_prev_src == -1) return;
 	inventory[drag_prev_src].itemReturn( stack);
 	// if returning equipment, prepare to change stats/sprites
 	if (drag_prev_src == EQUIPMENT) {
-		updateEquipment( inventory[EQUIPMENT].drag_prev_slot);
+		updateEquipment(inventory[EQUIPMENT].drag_prev_slot);
 	}
 	drag_prev_src = -1;
 }
@@ -270,6 +274,12 @@ void MenuInventory::drop(Point mouse, ItemStack stack) {
 	}
 
 	int slot = inventory[area].slotOver(mouse);
+	if (slot == -1) {
+		// not dropped into a slot. Just return it to the previous slot.
+		itemReturn(stack);
+		return;
+	}
+
 	int drag_prev_slot = inventory[drag_prev_src].drag_prev_slot;
 
 	if (area == EQUIPMENT) { // dropped onto equipped item
@@ -357,13 +367,14 @@ void MenuInventory::drop(Point mouse, ItemStack stack) {
  * e.g. equip an item
  */
 void MenuInventory::activate(InputState * input) {
-	int slot;
 	ItemStack stack;
 	Point nullpt;
 	nullpt.x = nullpt.y = 0;
 
 	// clicked a carried item
-	slot = inventory[CARRIED].slotOver(input->mouse);
+	int slot = inventory[CARRIED].slotOver(input->mouse);
+	if (slot == -1)
+		return;
 
 	// can't interact with quest items
 	if (items->items[inventory[CARRIED][slot].item].type == "quest") {
@@ -382,9 +393,12 @@ void MenuInventory::activate(InputState * input) {
 		// if this item requires targeting it can't be used this way
 		if (!powers->powers[items->items[inventory[CARRIED][slot].item].power].requires_targeting) {
 
+			unsigned used_item_count = powers->used_items.size();
+			unsigned used_equipped_item_count = powers->used_equipped_items.size();
 			powers->activate(items->items[inventory[CARRIED][slot].item].power, stats, nullpt);
-			// intercept used_item flag.  We will destroy the item here.
-			powers->used_item = -1;
+			// Remove any used items from the queue of items to be removed. We will destroy the items here.
+			if (used_item_count < powers->used_items.size()) powers->used_items.pop_back();
+			if (used_equipped_item_count < powers->used_equipped_items.size()) powers->used_equipped_items.pop_back();
 			inventory[CARRIED].substract(slot);
 		}
 		else {
@@ -455,34 +469,36 @@ void MenuInventory::activate(InputState * input) {
 void MenuInventory::add(ItemStack stack, int area, int slot) {
 	items->playSound(stack.item);
 
-	if( stack.item != 0) {
-		if( area < 0) {
+	if (stack.item != 0) {
+		if (area < 0) {
 			area = CARRIED;
 		}
 		int max_quantity = items->items[stack.item].max_quantity;
-		if( slot > -1 && inventory[area][slot].item != 0 && inventory[area][slot].item != stack.item) {
+		if (slot > -1 && inventory[area][slot].item != 0 && inventory[area][slot].item != stack.item) {
 			// the proposed slot isn't available, search for another one
 			slot = -1;
 		}
-		if( area == CARRIED) {
+		if (area == CARRIED) {
 			// first search of stack to complete if the item is stackable
-			int i = 0;
-			while( max_quantity > 1 && slot == -1 && i < MAX_CARRIED) {
-				if (inventory[area][i].item == stack.item && inventory[area][i].quantity < max_quantity) {
+			if (slot == -1 && max_quantity > 1) {
+				int i = 0;
+				while ((inventory[area][i].item != stack.item
+						|| inventory[area][i].quantity >= max_quantity)
+						&& i < MAX_CARRIED)
+					++i;
+				if (i < MAX_CARRIED)
 					slot = i;
-				}
-				i++;
 			}
 			// then an empty slot
-			i = 0;
-			while( slot == -1 && i < MAX_CARRIED) {
-				if (inventory[area][i].item == 0) {
+			if (slot == -1) {
+				int i = 0;
+				while (inventory[area][i].item != 0 && i < MAX_CARRIED)
+					i++;
+				if (i < MAX_CARRIED)
 					slot = i;
-				}
-				i++;
 			}
 		}
-		if( slot != -1) {
+		if (slot != -1) {
 			// Add
 			int quantity_added = min( stack.quantity, max_quantity - inventory[area][slot].quantity);
 			inventory[area][slot].item = stack.item;
@@ -507,9 +523,18 @@ void MenuInventory::add(ItemStack stack, int area, int slot) {
  * Remove one given item from the player's inventory.
  */
 void MenuInventory::remove(int item) {
-	if( ! inventory[CARRIED].remove(item)) {
+	if( !inventory[CARRIED].remove(item)) {
 		inventory[EQUIPMENT].remove(item);
+		applyEquipment(inventory[EQUIPMENT].storage);
 	}
+}
+
+/**
+ * Remove an equipped item from the player's inventory.
+ */
+void MenuInventory::removeEquipped(int item) {
+	inventory[EQUIPMENT].remove(item);
+	applyEquipment(inventory[EQUIPMENT].storage);
 }
 
 /**
@@ -630,9 +655,6 @@ void MenuInventory::applyEquipment(ItemStack *equipped) {
 
 	unsigned bonus_counter;
 
-	int prev_hp = stats->hp;
-	int prev_mp = stats->mp;
-
 	const vector<Item> &pc_items = items->items;
 	int item_id;
 
@@ -717,13 +739,8 @@ void MenuInventory::applyEquipment(ItemStack *equipped) {
 	}
 
 	// defaults
-	stats->recalc();
-	stats->offense_additional = stats->defense_additional = stats->physical_additional = stats->mental_additional = 0;
-	stats->speed = stats->speed_default;
-	stats->dspeed = stats->dspeed_default;
-	for (unsigned int i=0; i<stats->vulnerable.size(); i++) {
-		stats->vulnerable[i] = 100;
-	}
+	stats->recalc_alt();
+	stats->powers_list_items.clear();
 
 	// the default for weapons/absorb are not added to equipped items
 	// later this function they are applied if the defaults aren't met
@@ -737,6 +754,8 @@ void MenuInventory::applyEquipment(ItemStack *equipped) {
 	stats->wielding_mental = false;
 	stats->wielding_offense = false;
 
+	// remove all effects and bonuses added by items
+	stats->effects.clearItemEffects();
 
 	applyItemStats(equipped);
 	applyItemSetBonuses(equipped);
@@ -759,17 +778,8 @@ void MenuInventory::applyEquipment(ItemStack *equipped) {
 	if (stats->absorb_max < stats->absorb_max_default)
 		stats->absorb_max = stats->absorb_max_default;
 
-	// apply previous hp/mp
-	if (prev_hp < stats->maxhp)
-		stats->hp = prev_hp;
-	else
-		stats->hp = stats->maxhp;
-
-	if (prev_mp < stats->maxmp)
-		stats->mp = prev_mp;
-	else
-		stats->mp = stats->maxmp;
-
+	// update stat display
+	stats->refresh_stats = true;
 }
 
 void MenuInventory::applyItemStats(ItemStack *equipped) {
@@ -819,49 +829,16 @@ void MenuInventory::applyItemStats(ItemStack *equipped) {
 		// apply various bonuses
 		bonus_counter = 0;
 		while (bonus_counter < item.bonus_stat.size() && item.bonus_stat[bonus_counter] != "") {
+			int id = powers->getIdFromTag(item.bonus_stat[bonus_counter]);
 
-			if (item.bonus_stat[bonus_counter] == "HP")
-				stats->maxhp += item.bonus_val[bonus_counter];
-			else if (item.bonus_stat[bonus_counter] == "HP regen")
-				stats->hp_per_minute += item.bonus_val[bonus_counter];
-			else if (item.bonus_stat[bonus_counter] == "MP")
-				stats->maxmp += item.bonus_val[bonus_counter];
-			else if (item.bonus_stat[bonus_counter] == "MP regen")
-				stats->mp_per_minute += item.bonus_val[bonus_counter];
-			else if (item.bonus_stat[bonus_counter] == "accuracy")
-				stats->accuracy += item.bonus_val[bonus_counter];
-			else if (item.bonus_stat[bonus_counter] == "avoidance")
-				stats->avoidance += item.bonus_val[bonus_counter];
-			else if (item.bonus_stat[bonus_counter] == "crit")
-				stats->crit += item.bonus_val[bonus_counter];
-			else if (item.bonus_stat[bonus_counter] == "speed") {
-				stats->speed += item.bonus_val[bonus_counter];
-				// speed bonuses are in multiples of 3
-				// 3 ordinal, 2 diagonal is rounding pythagorus
-				stats->dspeed += ((item.bonus_val[bonus_counter]) * 2) /3;
-			}
-			else if (item.bonus_stat[bonus_counter] == "offense")
-				stats->offense_additional += item.bonus_val[bonus_counter];
-			else if (item.bonus_stat[bonus_counter] == "defense")
-				stats->defense_additional += item.bonus_val[bonus_counter];
-			else if (item.bonus_stat[bonus_counter] == "physical")
-				stats->physical_additional += item.bonus_val[bonus_counter];
-			else if (item.bonus_stat[bonus_counter] == "mental")
-				stats->mental_additional += item.bonus_val[bonus_counter];
-			else if (item.bonus_stat[bonus_counter] == "all basic stats") {
-				stats->offense_additional += item.bonus_val[bonus_counter];
-				stats->defense_additional += item.bonus_val[bonus_counter];
-				stats->physical_additional += item.bonus_val[bonus_counter];
-				stats->mental_additional += item.bonus_val[bonus_counter];
-			}
-
-			for (unsigned int j=0; j<ELEMENTS.size(); j++) {
-				if (item.bonus_stat[bonus_counter] == ELEMENTS[j].name + " resist")
-					stats->vulnerable[j] -= item.bonus_val[bonus_counter];
-			}
+			if (id > 0)
+				stats->effects.addEffect(id, powers->powers[id].icon, 0, item.bonus_val[bonus_counter], powers->powers[id].effect_type, powers->powers[id].animation_name, powers->powers[id].effect_additive, true, -1, powers->powers[id].effect_render_above);
 
 			bonus_counter++;
 		}
+
+		// add item powers
+		if (item.power > 0) stats->powers_list_items.push_back(item.power);
 
 	}
 }
@@ -892,45 +869,10 @@ void MenuInventory::applyItemSetBonuses(ItemStack *equipped) {
 		for (bonus_counter=0; bonus_counter<temp_set.bonus.size(); bonus_counter++) {
 			if (temp_set.bonus[bonus_counter].requirement != quantity[k]) continue;
 
-			if (temp_set.bonus[bonus_counter].bonus_stat == "HP")
-				stats->maxhp += temp_set.bonus[bonus_counter].bonus_val;
-			else if (temp_set.bonus[bonus_counter].bonus_stat == "HP regen")
-				stats->hp_per_minute += temp_set.bonus[bonus_counter].bonus_val;
-			else if (temp_set.bonus[bonus_counter].bonus_stat == "MP")
-				stats->maxmp += temp_set.bonus[bonus_counter].bonus_val;
-			else if (temp_set.bonus[bonus_counter].bonus_stat == "MP regen")
-				stats->mp_per_minute += temp_set.bonus[bonus_counter].bonus_val;
-			else if (temp_set.bonus[bonus_counter].bonus_stat == "accuracy")
-				stats->accuracy += temp_set.bonus[bonus_counter].bonus_val;
-			else if (temp_set.bonus[bonus_counter].bonus_stat == "avoidance")
-				stats->avoidance += temp_set.bonus[bonus_counter].bonus_val;
-			else if (temp_set.bonus[bonus_counter].bonus_stat == "crit")
-				stats->crit += temp_set.bonus[bonus_counter].bonus_val;
-			else if (temp_set.bonus[bonus_counter].bonus_stat == "speed") {
-				stats->speed += temp_set.bonus[bonus_counter].bonus_val;
-				// speed bonuses are in multiples of 3
-				// 3 ordinal, 2 diagonal is rounding pythagorus
-				stats->dspeed += ((temp_set.bonus[bonus_counter].bonus_val) * 2) /3;
-			}
-			else if (temp_set.bonus[bonus_counter].bonus_stat == "offense")
-				stats->offense_additional += temp_set.bonus[bonus_counter].bonus_val;
-			else if (temp_set.bonus[bonus_counter].bonus_stat == "defense")
-				stats->defense_additional += temp_set.bonus[bonus_counter].bonus_val;
-			else if (temp_set.bonus[bonus_counter].bonus_stat == "physical")
-				stats->physical_additional += temp_set.bonus[bonus_counter].bonus_val;
-			else if (temp_set.bonus[bonus_counter].bonus_stat == "mental")
-				stats->mental_additional += temp_set.bonus[bonus_counter].bonus_val;
-			else if (temp_set.bonus[bonus_counter].bonus_stat == "all basic stats") {
-				stats->offense_additional += temp_set.bonus[bonus_counter].bonus_val;
-				stats->defense_additional += temp_set.bonus[bonus_counter].bonus_val;
-				stats->physical_additional += temp_set.bonus[bonus_counter].bonus_val;
-				stats->mental_additional += temp_set.bonus[bonus_counter].bonus_val;
-			}
+			int id = powers->getIdFromTag(temp_set.bonus[bonus_counter].bonus_stat);
 
-			for (unsigned int j=0; j<ELEMENTS.size(); j++) {
-				if (temp_set.bonus[bonus_counter].bonus_stat == ELEMENTS[j].name + " resist")
-					stats->vulnerable[j] -= temp_set.bonus[bonus_counter].bonus_val;
-			}
+			if (id > 0)
+				stats->effects.addEffect(id, powers->powers[id].icon, 0, temp_set.bonus[bonus_counter].bonus_val, powers->powers[id].effect_type, powers->powers[id].animation_name, powers->powers[id].effect_additive, true, -1, powers->powers[id].effect_render_above);
 		}
 	}
 }

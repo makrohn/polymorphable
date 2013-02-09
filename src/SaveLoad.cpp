@@ -35,7 +35,6 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 #include "MenuCharacter.h"
 #include "MenuInventory.h"
 #include "MenuManager.h"
-#include "MenuPowers.h"
 #include "MenuStash.h"
 #include "MenuTalker.h"
 #include "PowerManager.h"
@@ -116,9 +115,9 @@ void GameStatePlay::saveGame() {
 
 		// enabled powers
 		outfile << "powers=";
-		for (unsigned int i=0; i<menu->pow->powers_list.size(); i++) {
-			if (i == 0) outfile << menu->pow->powers_list[i];
-			else outfile << "," << menu->pow->powers_list[i];
+		for (unsigned int i=0; i<pc->stats.powers_list.size(); i++) {
+			if (i == 0) outfile << pc->stats.powers_list[i];
+			else outfile << "," << pc->stats.powers_list[i];
 		}
 		outfile << "\n";
 
@@ -199,13 +198,6 @@ void GameStatePlay::loadGame() {
 			else if (infile.key == "hpmp") {
 				saved_hp = toInt(infile.nextValue());
 				saved_mp = toInt(infile.nextValue());
-				if (saved_hp < 0 || saved_hp > pc->stats.maxhp ||
-					saved_mp < 0 || saved_mp > pc->stats.maxmp) {
-
-					fprintf(stderr, "MP/HP value is out of bounds, setting to maximum\n");
-					saved_hp = pc->stats.maxhp;
-					saved_mp = pc->stats.maxmp;
-				}
 			}
 			else if (infile.key == "build") {
 				pc->stats.physical_character = toInt(infile.nextValue());
@@ -288,7 +280,7 @@ void GameStatePlay::loadGame() {
 			else if (infile.key == "powers") {
 				string power;
 				while ( (power = infile.nextValue()) != "") {
-					menu->pow->powers_list.push_back(toInt(power));
+					pc->stats.powers_list.push_back(toInt(power));
 				}
 			}
 			else if (infile.key == "campaign") camp->setAll(infile.val);
@@ -297,9 +289,9 @@ void GameStatePlay::loadGame() {
 		infile.close();
 	} else fprintf(stderr, "Unable to open %s!\n", ss.str().c_str());
 
-	
+
 	menu->inv->inventory[EQUIPMENT].fillEquipmentSlots();
-	
+
 	// Load stash
 	ss.str("");
 	ss << PATH_USER << "stash.txt";
@@ -319,10 +311,23 @@ void GameStatePlay::loadGame() {
 	// initialize vars
 	pc->stats.recalc();
 	menu->inv->applyEquipment(menu->inv->inventory[EQUIPMENT].storage);
+	// trigger passive effects here? Saved HP/MP values might depend on passively boosted HP/MP
+	// powers->activatePassives(pc->stats);
+	pc->stats.logic(); // run stat logic once to apply items bonuses
 	if (SAVE_HPMP) {
-		pc->stats.hp = saved_hp;
-		pc->stats.mp = saved_mp;
-	} else {
+		if (saved_hp < 0 || saved_hp > pc->stats.maxhp) {
+			fprintf(stderr, "HP value is out of bounds, setting to maximum\n");
+			pc->stats.hp = pc->stats.maxhp;
+		}
+		else pc->stats.hp = saved_hp;
+
+		if (saved_mp < 0 || saved_mp > pc->stats.maxmp) {
+			fprintf(stderr, "MP value is out of bounds, setting to maximum\n");
+			pc->stats.mp = pc->stats.maxmp;
+		}
+		else pc->stats.mp = saved_mp;
+	}
+	else {
 		pc->stats.hp = pc->stats.maxhp;
 		pc->stats.mp = pc->stats.maxmp;
 	}
@@ -338,7 +343,6 @@ void GameStatePlay::loadGame() {
 
 	// load sounds (gender specific)
 	pc->loadSounds();
-
 }
 
 /**
@@ -356,12 +360,15 @@ void GameStatePlay::loadClass(int index) {
 	menu->inv->currency += HERO_CLASSES[index].currency;
 	menu->inv->inventory[EQUIPMENT].setItems(HERO_CLASSES[index].equipment);
 	for (unsigned i=0; i<HERO_CLASSES[index].powers.size(); i++) {
-		menu->pow->powers_list.push_back(HERO_CLASSES[index].powers[i]);
+		pc->stats.powers_list.push_back(HERO_CLASSES[index].powers[i]);
+	}
+	for (unsigned i=0; i<HERO_CLASSES[index].statuses.size(); i++) {
+		camp->setStatus(HERO_CLASSES[index].statuses[i]);
 	}
 	menu->act->set(HERO_CLASSES[index].hotkeys);
-	
+
 	menu->inv->inventory[EQUIPMENT].fillEquipmentSlots();
-	
+
 	// initialize vars
 	pc->stats.recalc();
 	menu->inv->applyEquipment(menu->inv->inventory[EQUIPMENT].storage);

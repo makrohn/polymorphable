@@ -43,13 +43,43 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 #include "PowerManager.h"
 #include "SharedResources.h"
 
-MenuManager::MenuManager(PowerManager *_powers, StatBlock *_stats, CampaignManager *_camp, ItemManager *_items) {
-	powers = _powers;
-	stats = _stats;
-	powers = _powers;
-	camp = _camp;
-	items = _items;
-
+MenuManager::MenuManager(PowerManager *_powers, StatBlock *_stats, CampaignManager *_camp, ItemManager *_items)
+	: icons(NULL)
+	, powers(_powers)
+	, stats(_stats)
+	, camp(_camp)
+	, tip_buf(TooltipData())
+	, key_lock(false)
+	, dragging(0)
+	, drag_stack(ItemStack())
+	, drag_power(0)
+	, drag_src(0)
+	, done(false)
+	/*std::vector<Menu*> menus;*/
+	, items(_items)
+	, inv(NULL)
+	, pow(NULL)
+	, chr(NULL)
+	, log(NULL)
+	, hudlog(NULL)
+	, act(NULL)
+	, hp(NULL)
+	, mp(NULL)
+	, xp(NULL)
+	, tip(NULL)
+	, mini(NULL)
+	, enemy(NULL)
+	, vendor(NULL)
+	, talker(NULL)
+	, exit(NULL)
+	, effects(NULL)
+	, stash(NULL)
+	, pause(false)
+	, menus_open(false)
+	, drop_stack(ItemStack())
+	, sfx_open(NULL)
+	, sfx_close(NULL)
+{
 	loadIcons();
 
 	hp = new MenuStatBar("hp");
@@ -165,7 +195,7 @@ MenuManager::MenuManager(PowerManager *_powers, StatBlock *_stats, CampaignManag
 void MenuManager::loadIcons() {
 
 	icons = IMG_Load(mods->locate("images/icons/icons.png").c_str());
-	if(!icons) {
+	if (!icons) {
 		fprintf(stderr, "Couldn't load icons: %s\n", IMG_GetError());
 	} else {
 		// optimize
@@ -176,16 +206,8 @@ void MenuManager::loadIcons() {
 }
 
 void MenuManager::loadSounds() {
-	if (audio && SOUND_VOLUME) {
-		sfx_open = Mix_LoadWAV(mods->locate("soundfx/inventory/inventory_page.ogg").c_str());
-		sfx_close = Mix_LoadWAV(mods->locate("soundfx/inventory/inventory_book.ogg").c_str());
-
-		if (!sfx_open || !sfx_close)
-			fprintf(stderr, "Mix_LoadWAV: %s\n", Mix_GetError());
-	} else {
-		sfx_open = NULL;
-		sfx_close = NULL;
-	}
+	sfx_open = loadSfx("soundfx/inventory/inventory_page.ogg", "MenuManager open tab");
+	sfx_close = loadSfx("soundfx/inventory/inventory_book.ogg", "MenuManager close tab");
 }
 
 
@@ -195,8 +217,11 @@ void MenuManager::renderIcon(int icon_id, int x, int y) {
 	dest.x = x;
 	dest.y = y;
 	src.w = src.h = dest.w = dest.h = ICON_SIZE;
-	src.x = (icon_id % 16) * ICON_SIZE;
-	src.y = (icon_id / 16) * ICON_SIZE;
+
+	int columns = icons->w / ICON_SIZE;
+	src.x = (icon_id % columns) * ICON_SIZE;
+	src.y = (icon_id / columns) * ICON_SIZE;
+
 	SDL_BlitSurface(icons, &src, screen, &dest);
 }
 
@@ -252,14 +277,22 @@ void MenuManager::logic() {
 	}
 
 	// exit menu toggle
-	if ((inpt->pressing[CANCEL] && !inpt->lock[CANCEL] && !key_lock && !dragging) && !(stats->corpse && stats->permadeath) && stats->transform_duration < 1) {
-		inpt->lock[CANCEL] = true;
-		key_lock = true;
-		if (menus_open) {
-			closeAll(true);
+	if ((!key_lock && !dragging) && !(stats->corpse && stats->permadeath) && stats->transform_duration < 1) {
+		if (inpt->pressing[CANCEL] && !inpt->lock[CANCEL]) {
+			inpt->lock[CANCEL] = true;
+			key_lock = true;
+			if (menus_open) {
+				closeAll(true);
+			}
+			else {
+				exit->visible = !exit->visible;
+			}
 		}
-		else {
-			exit->visible = !exit->visible;
+		else if (inpt->joy_pressing[JOY_CANCEL] && !inpt->joy_lock[JOY_CANCEL]) {
+			inpt->joy_lock[JOY_CANCEL] = true;
+			if (menus_open) {
+				closeAll(true);
+			}
 		}
 	}
 
@@ -273,8 +306,7 @@ void MenuManager::logic() {
 			closeRight(false);
 			act->requires_attention[MENU_INVENTORY] = false;
 			inv->visible = true;
-			if (sfx_open)
-				Mix_PlayChannel(-1, sfx_open, 0);
+			playSfx(sfx_open);
 		}
 
 	}
@@ -289,8 +321,7 @@ void MenuManager::logic() {
 			closeRight(false);
 			act->requires_attention[MENU_POWERS] = false;
 			pow->visible = true;
-			if (sfx_open)
-				Mix_PlayChannel(-1, sfx_open, 0);
+			playSfx(sfx_open);
 		}
 	}
 	act->requires_attention[MENU_POWERS] = pow->getUnspent() > 0;
@@ -305,8 +336,7 @@ void MenuManager::logic() {
 			closeLeft(false);
 			act->requires_attention[MENU_CHARACTER] = false;
 			chr->visible = true;
-			if (sfx_open)
-				Mix_PlayChannel(-1, sfx_open, 0);
+			playSfx(sfx_open);
 			// Make sure the stat list isn't scrolled when we open the character menu
 			inpt->resetScroll();
 		}
@@ -323,8 +353,7 @@ void MenuManager::logic() {
 			closeLeft(false);
 			act->requires_attention[MENU_LOG] = false;
 			log->visible = true;
-			if (sfx_open)
-				Mix_PlayChannel(-1, sfx_open, 0);
+			playSfx(sfx_open);
 			// Make sure the log isn't scrolled when we open the log menu
 			inpt->resetScroll();
 		}
@@ -371,12 +400,12 @@ void MenuManager::logic() {
 					// buy item from a vendor
 					stack = vendor->click(inpt);
 					if (stack.item > 0) {
-						if( ! inv->buy(stack,vendor->getTab())) {
+						if (!inv->buy(stack,vendor->getTab())) {
 							log->add(msg->get("Not enough money."), LOG_TYPE_MESSAGES);
 							hudlog->add(msg->get("Not enough money."));
 							vendor->itemReturn( stack);
 						} else {
-							if( inv->full(stack.item)) {
+							if (inv->full(stack.item)) {
 								log->add(msg->get("Inventory is full."), LOG_TYPE_MESSAGES);
 								hudlog->add(msg->get("Inventory is full."));
 								drop_stack = stack;
@@ -401,7 +430,7 @@ void MenuManager::logic() {
 					// take an item from the stash
 					stack = stash->click(inpt);
 					if (stack.item > 0) {
-						if( inv->full(stack.item)) {
+						if (inv->full(stack.item)) {
 							log->add(msg->get("Inventory is full."), LOG_TYPE_MESSAGES);
 							hudlog->add(msg->get("Inventory is full."));
 							drop_stack = stack;
@@ -420,9 +449,8 @@ void MenuManager::logic() {
 				}
 			}
 
-			if(log->visible && isWithin(log->window_area,inpt->mouse)) {
+			if (log->visible && isWithin(log->window_area,inpt->mouse)) {
 				inpt->lock[MAIN1] = true;
-				log->tabsLogic();
 			}
 
 			// pick up an inventory item
@@ -430,7 +458,7 @@ void MenuManager::logic() {
 				if (inpt->pressing[CTRL]) {
 					inpt->lock[MAIN1] = true;
 					stack = inv->click(inpt);
-					if( stack.item > 0) {
+					if (stack.item > 0) {
 						if (stash->visible) {
 							if (inv->stashAdd(stack) && !stash->full(stack.item)) {
 								stash->add(stack);
@@ -576,12 +604,12 @@ void MenuManager::logic() {
 
 				// dropping an item from vendor (we only allow to drop into the carried area)
 				if (inv->visible && isWithin( inv->carried_area, inpt->mouse)) {
-					if( ! inv->buy(drag_stack,vendor->getTab())) {
+					if (!inv->buy(drag_stack,vendor->getTab())) {
 						log->add(msg->get("Not enough money."), LOG_TYPE_MESSAGES);
 						hudlog->add(msg->get("Not enough money."));
 						vendor->itemReturn( drag_stack);
 					} else {
-						if( inv->full(drag_stack.item)) {
+						if (inv->full(drag_stack.item)) {
 							log->add(msg->get("Inventory is full."), LOG_TYPE_MESSAGES);
 							hudlog->add(msg->get("Inventory is full."));
 							drop_stack = drag_stack;
@@ -601,7 +629,7 @@ void MenuManager::logic() {
 
 				// dropping an item from stash (we only allow to drop into the carried area)
 				if (inv->visible && isWithin( inv->carried_area, inpt->mouse)) {
-					if( inv->full(drag_stack.item)) {
+					if (inv->full(drag_stack.item)) {
 						log->add(msg->get("Inventory is full."), LOG_TYPE_MESSAGES);
 						hudlog->add(msg->get("Inventory is full."));
 						// quest items cannot be dropped
@@ -629,13 +657,14 @@ void MenuManager::logic() {
 		}
 
 	} else {
-		if (drag_src == DRAG_SRC_VENDOR) vendor->itemReturn(drag_stack);
-		else if (drag_src == DRAG_SRC_STASH) stash->itemReturn(drag_stack);
-		else if (drag_src == DRAG_SRC_INVENTORY) inv->itemReturn(drag_stack);
-		else if (drag_src == DRAG_SRC_ACTIONBAR) act->actionReturn(drag_power);
-		drag_src = -1;
-		dragging = false;
-		closeAll(false);
+		if (dragging) {
+			if (drag_src == DRAG_SRC_VENDOR) vendor->itemReturn(drag_stack);
+			else if (drag_src == DRAG_SRC_STASH) stash->itemReturn(drag_stack);
+			else if (drag_src == DRAG_SRC_INVENTORY) inv->itemReturn(drag_stack);
+			else if (drag_src == DRAG_SRC_ACTIONBAR) act->actionReturn(drag_power);
+			drag_src = -1;
+			dragging = false;
+		}
 	}
 
 	// handle equipment changes affecting hero stats
@@ -736,9 +765,7 @@ void MenuManager::closeLeft(bool play_sound) {
 		exit->visible = false;
 		stash->visible = false;
 
-		if (sfx_close)
-			if (play_sound) Mix_PlayChannel(-1, sfx_close, 0);
-
+		if (play_sound) playSfx(sfx_close);
 	}
 }
 
@@ -749,8 +776,7 @@ void MenuManager::closeRight(bool play_sound) {
 		talker->visible = false;
 		exit->visible = false;
 
-		if (sfx_close)
-			if (play_sound) Mix_PlayChannel(-1, sfx_close, 0);
+		if (play_sound) playSfx(sfx_close);
 	}
 }
 

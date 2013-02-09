@@ -1,0 +1,32 @@
+name=Skeleton Mage
+level=2
+categories=skeleton,skeletonmage
+rarity=common
+xp=0
+
+sfx_prefix=skeleton
+animations=skeletonmage
+
+loot=1,25
+loot=2,13
+loot=3,5
+loot=currency,33
+
+# combat stats
+hp=3
+speed=8
+dspeed=6
+melee_range=32
+threat_range=512
+turn_delay=12
+chance_pursue=20
+chance_ranged_ment=2
+power_beacon=132
+power_ranged_ment=301
+
+accuracy=100
+avoidance=0
+
+dmg_ranged_min=3
+dmg_ranged_max=3
+cooldown=30

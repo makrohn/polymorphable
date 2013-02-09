@@ -27,26 +27,26 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 using namespace std;
 
 WidgetButton::WidgetButton(const std::string& _fileName)
-	: fileName(_fileName) {
-
-	buttons = NULL;
-	click = NULL;
-	label = "";
-	tooltip = "";
+	: Widget()
+	, fileName(_fileName)
+	, buttons(NULL)
+	, click(NULL)
+	, wlabel()
+	, color_normal(font->getColor("widget_normal"))
+	, color_disabled(font->getColor("widget_disabled"))
+	, tip_buf(TooltipData())
+	, tip_new(TooltipData())
+	, tip(new WidgetTooltip())
+	, label("")
+	, tooltip("")
+	, enabled(true)
+	, pressed(false)
+	, hover(false)
+{
 	pos.x = pos.y = pos.w = pos.h = 0;
-	enabled = true;
-	pressed = false;
-	hover = false;
-	render_to_alpha = false;
-	tip = new WidgetTooltip();
-
 	loadArt();
-
 	pos.w = buttons->w;
 	pos.h = (buttons->h / 4); //height of one button
-
-	color_normal = font->getColor("widget_normal");
-	color_disabled = font->getColor("widget_disabled");
 }
 
 void WidgetButton::loadArt() {
@@ -152,6 +152,7 @@ void WidgetButton::render(SDL_Surface *target) {
 	wlabel.render(target);
 
 	// render the tooltip
+	// TODO move this to menu rendering
 	if (!tip_new.isEmpty()) {
 		if (!tip_new.compare(&tip_buf)) {
 			tip_buf.clear();

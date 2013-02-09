@@ -20,6 +20,8 @@ FLARE.  If not, see http://www.gnu.org/licenses/
  * class Enemy
  */
 
+
+#pragma once
 #ifndef ENEMY_H
 #define ENEMY_H
 
@@ -37,7 +39,6 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 class EnemyBehavior;
 class Hazard;
 class PowerManager;
-class StatBlock;
 class MapRenderer;
 
 class Enemy : public Entity {

@@ -21,7 +21,6 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 #include "AnimationManager.h"
 #include "AnimationSet.h"
 #include "Animation.h"
-#include "StatBlock.h"
 #include "SharedResources.h"
 #include "EnemyBehavior.h"
 #include "BehaviorStandard.h"
@@ -31,27 +30,29 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 
 using namespace std;
 
-EnemyManager::EnemyManager(PowerManager *_powers, MapRenderer *_map) {
-	powers = _powers;
-	map = _map;
-	enemies = vector<Enemy*>();
+EnemyManager::EnemyManager(PowerManager *_powers, MapRenderer *_map)
+	: map(_map)
+	, powers(_powers)
+	, enemies(vector<Enemy*>())
+	, hero_alive(true)
+	, hero_stealth(0)
+{
 	hero_pos.x = hero_pos.y = -1;
-	hero_alive = true;
 	handleNewMap();
 }
 
-bool EnemyManager::loadSounds(const string& type_id) {
+void EnemyManager::loadSounds(const string& type_id) {
 
 	// first check to make sure the sfx isn't already loaded
 	if (find(sfx_prefixes.begin(), sfx_prefixes.end(), type_id) != sfx_prefixes.end())
-		return true;
+		return;
 
-	if (audio && SOUND_VOLUME) {
-		sound_phys.push_back(Mix_LoadWAV(mods->locate("soundfx/enemies/" + type_id + "_phys.ogg").c_str()));
-		sound_ment.push_back(Mix_LoadWAV(mods->locate("soundfx/enemies/" + type_id + "_ment.ogg").c_str()));
-		sound_hit.push_back(Mix_LoadWAV(mods->locate("soundfx/enemies/" + type_id + "_hit.ogg").c_str()));
-		sound_die.push_back(Mix_LoadWAV(mods->locate("soundfx/enemies/" + type_id + "_die.ogg").c_str()));
-		sound_critdie.push_back(Mix_LoadWAV(mods->locate("soundfx/enemies/" + type_id + "_critdie.ogg").c_str()));
+	if (type_id != "none") {
+		sound_phys.push_back(loadSfx("soundfx/enemies/" + type_id + "_phys.ogg", "EnemyManager physical attack sound"));
+		sound_ment.push_back(loadSfx("soundfx/enemies/" + type_id + "_ment.ogg", "EnemyManager mental attack sound"));
+		sound_hit.push_back(loadSfx("soundfx/enemies/" + type_id + "_hit.ogg", "EnemyManager physical hit sound"));
+		sound_die.push_back(loadSfx("soundfx/enemies/" + type_id + "_die.ogg", "EnemyManager die sound"));
+		sound_critdie.push_back(loadSfx("soundfx/enemies/" + type_id + "_critdie.ogg", "EnemyManager critdeath sound"));
 	} else {
 		sound_phys.push_back(NULL);
 		sound_ment.push_back(NULL);
@@ -61,18 +62,13 @@ bool EnemyManager::loadSounds(const string& type_id) {
 	}
 
 	sfx_prefixes.push_back(type_id);
-
-	return true;
 }
 
-bool EnemyManager::loadAnimations(Enemy *e) {
-
+void EnemyManager::loadAnimations(Enemy *e) {
 	string animationsname = "animations/enemies/"+e->stats.animations + ".txt";
 	anim->increaseCount(animationsname);
 	e->animationSet = anim->getAnimationSet(animationsname);
-	e->activeAnimation = e->animationSet->getAnimation(e->animationSet->starting_animation);
-
-	return true;
+	e->activeAnimation = e->animationSet->getAnimation();
 }
 
 Enemy *EnemyManager::getEnemyPrototype(const string& type_id) {
@@ -94,12 +90,8 @@ Enemy *EnemyManager::getEnemyPrototype(const string& type_id) {
 	if (e.stats.sfx_prefix == "")
 		cerr << "Warning: no sfx_prefix specified for entity: " << type_id << endl;
 
-	if (!loadAnimations(&e)) {
-		cerr << "Warning: could not load animations for enemy type" << e.stats.animations << endl;
-	}
-	if (!loadSounds(e.stats.sfx_prefix)) {
-		cerr << "Warning: could not load sounds prefix: " << e.stats.sfx_prefix << endl;
-	}
+	loadAnimations(&e);
+	loadSounds(e.stats.sfx_prefix);
 
 	prototypes.push_back(e);
 
@@ -184,7 +176,7 @@ void EnemyManager::handleSpawn() {
 			anim->increaseCount(animationname);
 			e->animationSet = anim->getAnimationSet(animationname);
 			if (e->animationSet)
-				e->activeAnimation = e->animationSet->getAnimation(e->animationSet->starting_animation);
+				e->activeAnimation = e->animationSet->getAnimation();
 			else
 				cout << "Warning: animations file could not be loaded for " << espawn.type << endl;
 		}
@@ -213,7 +205,7 @@ void EnemyManager::logic() {
 		// hazards are processed after Avatar and Enemy[]
 		// so process and clear sound effects from previous frames
 		// check sound effects
-		if (audio == true) {
+		if (AUDIO) {
 			vector<string>::iterator found = find (sfx_prefixes.begin(), sfx_prefixes.end(), enemies[i]->stats.sfx_prefix);
 			unsigned pref_id = distance(sfx_prefixes.begin(), found);
 
@@ -222,11 +214,11 @@ void EnemyManager::logic() {
 					 << enemies[i]->stats.name << "', sfx_prefix: '"
 					 << enemies[i]->stats.sfx_prefix << "')" << endl;
 			} else {
-				if (enemies[i]->sfx_phys) Mix_PlayChannel(-1, sound_phys[pref_id], 0);
-				if (enemies[i]->sfx_ment) Mix_PlayChannel(-1, sound_ment[pref_id], 0);
-				if (enemies[i]->sfx_hit) Mix_PlayChannel(-1, sound_hit[pref_id], 0);
-				if (enemies[i]->sfx_die) Mix_PlayChannel(-1, sound_die[pref_id], 0);
-				if (enemies[i]->sfx_critdie) Mix_PlayChannel(-1, sound_critdie[pref_id], 0);
+				if (enemies[i]->sfx_phys) playSfx(sound_phys[pref_id]);
+				if (enemies[i]->sfx_ment) playSfx(sound_ment[pref_id]);
+				if (enemies[i]->sfx_hit) playSfx(sound_hit[pref_id]);
+				if (enemies[i]->sfx_die) playSfx(sound_die[pref_id]);
+				if (enemies[i]->sfx_critdie) playSfx(sound_critdie[pref_id]);
 			}
 
 			// clear sound flags
@@ -240,6 +232,7 @@ void EnemyManager::logic() {
 		// new actions this round
 		enemies[i]->stats.hero_pos = hero_pos;
 		enemies[i]->stats.hero_alive = hero_alive;
+		enemies[i]->stats.hero_stealth = hero_stealth;
 		enemies[i]->logic();
 
 	}
@@ -279,6 +272,16 @@ void EnemyManager::checkEnemiesforXP(CampaignManager *camp) {
 	}
 }
 
+bool EnemyManager::isCleared() {
+	if (enemies.empty()) return true;
+
+	for (unsigned int i=0; i < enemies.size(); i++) {
+		if (enemies[i]->stats.alive) return false;
+	}
+
+	return true;
+}
+
 /**
  * addRenders()
  * Map objects need to be drawn in Z order, so we allow a parent object (GameEngine)
@@ -290,6 +293,7 @@ void EnemyManager::addRenders(vector<Renderable> &r, vector<Renderable> &r_dead)
 		bool dead = (*it)->stats.corpse;
 		if (!dead || (dead && (*it)->stats.corpse_ticks > 0)) {
 			Renderable re = (*it)->getRender();
+			re.prio = 1;
 
 			// draw corpses below objects so that floor loot is more visible
 			(dead ? r_dead : r).push_back(re);
@@ -299,6 +303,8 @@ void EnemyManager::addRenders(vector<Renderable> &r, vector<Renderable> &r_dead)
 				if ((*it)->stats.effects.effect_list[i].animation) {
 					Renderable ren = (*it)->stats.effects.effect_list[i].animation->getCurrentFrame(0);
 					ren.map_pos = (*it)->stats.pos;
+					if ((*it)->stats.effects.effect_list[i].render_above) ren.prio = 2;
+					else ren.prio = 0;
 					r.push_back(ren);
 				}
 			}

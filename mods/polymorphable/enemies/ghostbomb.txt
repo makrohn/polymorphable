@@ -1,0 +1,28 @@
+name=Ghost Bomb
+level=1
+categories=ghostbomb
+rarity=common
+xp=0
+
+sfx_prefix=bomb
+animations=bomb
+
+suppress_hp=1
+
+# combat stats
+hp=1
+speed=0
+dspeed=0
+melee_range=64
+threat_range=144
+turn_delay=12
+chance_pursue=20
+chance_ranged_phys=100
+power_ranged_phys=104
+
+accuracy=100
+avoidance=0
+
+dmg_ment_min=100
+dmg_ment_max=100
+cooldown=30

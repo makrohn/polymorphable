@@ -1,0 +1,10 @@
+name=Captain Tam
+
+talker=true
+
+gfx=captain
+
+[dialog]
+him=Good afternoon.
+you=Slow day?
+him=Very slow...  that new recruit keeps getting hit by the combat dummy, though, so that's good for a laugh.

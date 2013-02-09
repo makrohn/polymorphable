@@ -52,6 +52,7 @@ InputState::InputState(void)
 	for (int key=0; key<joy_key_count; key++) {
 		joy_binding[key] = key;
 		joy_pressing[key] = false;
+		joy_lock[key] = false;
 	}
 
 	loadKeyBindings();
@@ -147,8 +148,10 @@ void InputState::loadKeyBindings() {
 	int cursor;
 
 	if (!infile.open(PATH_CONF + FILE_KEYBINDINGS)) {
-		saveKeyBindings();
-		return;
+		if (!infile.open(mods->locate("engine/default_keybindings.txt").c_str())) {
+			saveKeyBindings();
+			return;
+		} else saveKeyBindings();
 	}
 
 	while (infile.next()) {
@@ -420,6 +423,7 @@ void InputState::handle(bool dump_event) {
 					for (int key=0; key<joy_key_count; key++) {
 						if (event.jbutton.button == joy_binding[key]) {
 							joy_pressing[key] = false;
+							joy_lock[key] = false;
 						}
 					}
 				}

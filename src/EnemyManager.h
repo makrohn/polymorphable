@@ -20,6 +20,8 @@ FLARE.  If not, see http://www.gnu.org/licenses/
  * class EnemyManager
  */
 
+
+#pragma once
 #ifndef ENEMY_MANAGER_H
 #define ENEMY_MANAGER_H
 
@@ -36,8 +38,8 @@ private:
 	MapRenderer *map;
 	PowerManager *powers;
 
-	bool loadSounds(const std::string& type_id);
-	bool loadAnimations(Enemy *e);
+	void loadSounds(const std::string& type_id);
+	void loadAnimations(Enemy *e);
 
 	std::vector<std::string> sfx_prefixes;
 	std::vector<Mix_Chunk*> sound_phys;
@@ -64,12 +66,14 @@ public:
 	void logic();
 	void addRenders(std::vector<Renderable> &r, std::vector<Renderable> &r_dead);
 	void checkEnemiesforXP(CampaignManager *camp);
+	bool isCleared();
 	Enemy *enemyFocus(Point mouse, Point cam, bool alive_only);
 
 	// vars
 	std::vector<Enemy*> enemies;
 	Point hero_pos;
 	bool hero_alive;
+	int hero_stealth;
 };
 
 

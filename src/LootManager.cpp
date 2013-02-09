@@ -36,6 +36,7 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 
 #include <sstream>
 #include <iostream>
+#include <limits>
 
 using namespace std;
 
@@ -95,18 +96,9 @@ LootManager::LootManager(ItemManager *_items, MapRenderer *_map, StatBlock *_her
 	// reset current map loot
 	loot.clear();
 
-	// reset loot table
-	for (int lvl=0; lvl<15; lvl++) {
-		loot_table_count[lvl] = 0;
-		for (int num=0; num<256; num++) {
-			loot_table[lvl][num] = 0;
-		}
-	}
-
 	loadGraphics();
-	calcTables();
-	if (audio && SOUND_VOLUME)
-		loot_flip = Mix_LoadWAV(mods->locate("soundfx/flying_loot.ogg").c_str());
+	loot_flip = loadSfx("soundfx/flying_loot.ogg", "LootManager dropping loot");
+
 	full_msg = false;
 
 	if (!lootManager)
@@ -129,58 +121,12 @@ void LootManager::loadGraphics() {
 
 		string animationname = "animations/loot/" + anim_id + ".txt";
 		anim->increaseCount(animationname);
-		// get the Animation set once to make sure it is loaded, so no loading times during gameplay.
-		anim->getAnimationSet(animationname)->load();
 	}
 
 	// currency
 	for (unsigned int i=0; i<currency_range.size(); i++) {
 		string animationname = "animations/loot/" + currency_range[i].filename + ".txt";
-
 		anim->increaseCount(animationname);
-		// get the Animation set once to make sure it is loaded, so no loading times during gameplay.
-		anim->getAnimationSet(animationname)->load();
-	}
-}
-
-/**
- * Each item has a level, roughly associated with what level monsters drop that item.
- * Each item also has a quality which affects how often it drops.
- * Here we calculate loot probability by level so that when loot drops we
- * can quickly choose what loot should drop.
- */
-void LootManager::calcTables() {
-
-	int level;
-
-	for (unsigned int i=0; i<items->items.size(); i++) {
-		level = items->items[i].level;
-		if (level > 0) {
-			if (items->items[i].quality == ITEM_QUALITY_LOW) {
-				for (int j=0; j<RARITY_LOW; j++) {
-					loot_table[level][loot_table_count[level]] = i;
-					loot_table_count[level]++;
-				}
-			}
-			if (items->items[i].quality == ITEM_QUALITY_NORMAL) {
-				for (int j=0; j<RARITY_NORMAL; j++) {
-					loot_table[level][loot_table_count[level]] = i;
-					loot_table_count[level]++;
-				}
-			}
-			if (items->items[i].quality == ITEM_QUALITY_HIGH) {
-				for (int j=0; j<RARITY_HIGH; j++) {
-					loot_table[level][loot_table_count[level]] = i;
-					loot_table_count[level]++;
-				}
-			}
-			if (items->items[i].quality == ITEM_QUALITY_EPIC) {
-				for (int j=0; j<RARITY_EPIC; j++) {
-					loot_table[level][loot_table_count[level]] = i;
-					loot_table_count[level]++;
-				}
-			}
-		}
 	}
 }
 
@@ -189,7 +135,7 @@ void LootManager::handleNewMap() {
 }
 
 void LootManager::logic() {
-	vector<LootDef>::iterator it;
+	vector<Loot>::iterator it;
 	for (it = loot.begin(); it != loot.end(); ++it) {
 
 		// animate flying loot
@@ -214,7 +160,7 @@ void LootManager::renderTooltips(Point cam) {
 	Point dest;
 	stringstream ss;
 
-	vector<LootDef>::iterator it;
+	vector<Loot>::iterator it;
 	for (it = loot.begin(); it != loot.end(); ++it) {
 		if (it->animation->isLastFrame()) {
 			Point p = map_to_screen(it->pos.x, it->pos.y, cam.x, cam.y);
@@ -263,11 +209,7 @@ void LootManager::checkEnemiesForLoot() {
 			if (map->collider.is_valid_position(e->stats.pos.x, e->stats.pos.y, MOVEMENT_NORMAL))
 				pos = e->stats.pos;
 
-			// if no probability density function  is given, do a random loot
-			if (e->stats.item_classes.empty())
-				determineLoot(e->stats.level, pos);
-			else
-				determineLootByClass(e, pos);
+			determineLootByEnemy(e, pos);
 		}
 	}
 	enemiesDroppingLoot.clear();
@@ -291,10 +233,7 @@ void LootManager::checkMapForLoot() {
 		p.x = ec->x;
 		p.y = ec->y;
 
-		if (ec->s == "random") {
-			determineLoot(ec->z, p);
-		}
-		else if (ec->s == "id") {
+		if (ec->s == "id") {
 			new_loot.item = ec->z;
 			new_loot.quantity = 1;
 			addLoot(new_loot, p);
@@ -333,87 +272,55 @@ int LootManager::lootLevel(int base_level) {
 
 /**
  * This function is called when there definitely is a piece of loot dropping
- * base_level represents the average quality of this loot
  * calls addLoot()
  */
-void LootManager::determineLoot(int base_level, Point pos) {
-	int level = lootLevel(base_level);
+void LootManager::determineLootByEnemy(const Enemy *e, Point pos) {
 	ItemStack new_loot;
+	std::vector<int> possible_ids;
+	int common_chance = -1;
 
-	if (level > 0 && loot_table_count[level] > 0) {
+	int chance = rand() % 100;
 
-		// coin flip whether the treasure is cash or items
-		if (rand() % 2 == 0) {
-			int roll = rand() % loot_table_count[level];
-			new_loot.item = loot_table[level][roll];
-			new_loot.quantity = rand() % items->items[new_loot.item].rand_loot + 1;
-			addLoot(new_loot, pos);
-		}
-		else {
-			// currency range is level to 3x level
-			addCurrency(rand() % (level * 2) + level, pos);
+	for (unsigned i=0; i<e->stats.loot.size(); i++) {
+		if (possible_ids.empty()) {
+			// find the rarest loot less than the chance roll
+			if (chance < (e->stats.loot[i].chance * (hero->effects.bonus_item_find + 100)) / 100) {
+				possible_ids.push_back(e->stats.loot[i].id);
+				common_chance = e->stats.loot[i].chance;
+				i=-1; // start searching from the beginning
+				continue;
+			}
+		} else {
+			// include loot with identical chances
+			if (e->stats.loot[i].chance == common_chance)
+				possible_ids.push_back(e->stats.loot[i].id);
 		}
 	}
-}
 
-void LootManager::determineLootByClass(const Enemy *e, Point pos) {
-	// quality level of loot
-	int level = lootLevel(e->stats.level);
-	if (level <= 0)
-		return;
+	if (!possible_ids.empty()) {
+		// if there was more than one item with the same chance, randomly pick one of them
+		if (possible_ids.size() == 1) new_loot.item = possible_ids[0];
+		else new_loot.item = possible_ids[rand() % (possible_ids.size()-1) + 1];
+		new_loot.quantity = 1;
 
-	// roll a dice to select the type
-	int typeSelector = rand() % e->stats.item_class_prob_sum;
-	int typeSelectorIndex = 0;
+		// an item id of 0 means we should drop currency instead
+		if (new_loot.item == 0) {
+			int level = e->stats.level;
+			if (level == 0) level = 1; // avoid div/0 if enemy level is not specified
 
-	// look up type hit by dice with correct probabilities
-	while (typeSelector >= e->stats.item_class_prob[typeSelectorIndex]) {
-		typeSelector -= e->stats.item_class_prob[typeSelectorIndex];
-		typeSelectorIndex++;
-	}
-	string item_class = e->stats.item_classes[typeSelectorIndex];
-
-	if (item_class == "currency")
-		addCurrency(rand() % (level * 2) + level, pos);
-	else {
-		// search for the itemclass
-		unsigned int index;
-		for (index = 0; index < items->item_class_names.size(); index++) {
-			if (items->item_class_names[index] == item_class)
-				break;
-		}
-		if (index == items->item_class_names.size()) {
-			// item class name not found:
-			cout << "item class " << item_class << " has no items." << endl;
-			return;
-		}
-
-		if (level > 0 && items->item_class_items[index].size() > 0) {
-			int roll = rand() % items->item_class_items[index].size();
-			ItemStack new_loot;
-			new_loot.item = items->item_class_items[index][roll];
-			new_loot.quantity = rand() % items->items[new_loot.item].rand_loot + 1;
+			// TODO: move gold drop amounts to engine/loot.txt
+			int currency = rand() % (level * 2) + level;
+			currency = (currency * (100 + hero->effects.bonus_currency)) / 100;
+			addCurrency(currency, pos);
+		} else {
 			addLoot(new_loot, pos);
 		}
 	}
-}
-
-/**
- * Choose a random item.
- * Useful for filling in a Vendor's wares.
- */
-int LootManager::randomItem(int base_level) {
-	int level = lootLevel(base_level);
-	if (level > 0 && loot_table_count[level] > 0 && loot_table_count[level] < 1024) {
-		int roll = rand() % loot_table_count[level];
-		return loot_table[level][roll];
-	}
-	return 0;
 }
 
 void LootManager::addLoot(ItemStack stack, Point pos) {
 	// TODO: z-sort insert?
-	LootDef ld;
+	Loot ld;
 	ld.stack = stack;
 	ld.pos.x = pos.x;
 	ld.pos.y = pos.y;
@@ -423,11 +330,11 @@ void LootManager::addLoot(ItemStack stack, Point pos) {
 	ld.loadAnimation(animationname);
 	ld.currency = 0;
 	loot.push_back(ld);
-	if (loot_flip) Mix_PlayChannel(-1, loot_flip, 0);
+	playSfx(loot_flip);
 }
 
 void LootManager::addCurrency(int count, Point pos) {
-	LootDef ld;
+	Loot ld;
 	ld.stack.item = 0;
 	ld.stack.quantity = 0;
 	ld.pos.x = pos.x;
@@ -446,7 +353,7 @@ void LootManager::addCurrency(int count, Point pos) {
 
 	ld.currency = count;
 	loot.push_back(ld);
-	if (loot_flip) Mix_PlayChannel(-1, loot_flip, 0);
+	playSfx(loot_flip);
 }
 
 /**
@@ -465,7 +372,7 @@ ItemStack LootManager::checkPickup(Point mouse, Point cam, Point hero_pos, int &
 	// I'm starting at the end of the loot list so that more recently-dropped
 	// loot is picked up first.  If a player drops several loot in the same
 	// location, picking it back up will work like a stack.
-	vector<LootDef>::iterator it;
+	vector<Loot>::iterator it;
 	for (it = loot.end(); it != loot.begin(); ) {
 		--it;
 
@@ -513,7 +420,7 @@ ItemStack LootManager::checkAutoPickup(Point hero_pos, int &currency) {
 	loot_stack.item = 0;
 	loot_stack.quantity = 0;
 
-	vector<LootDef>::iterator it;
+	vector<Loot>::iterator it;
 	for (it = loot.end(); it != loot.begin(); ) {
 		--it;
 		if (abs(hero_pos.x - it->pos.x) < AUTOPICKUP_RANGE && abs(hero_pos.y - it->pos.y) < AUTOPICKUP_RANGE && !it->isFlying()) {
@@ -527,8 +434,49 @@ ItemStack LootManager::checkAutoPickup(Point hero_pos, int &currency) {
 	return loot_stack;
 }
 
+ItemStack LootManager::checkNearestPickup(Point hero_pos, int &currency, MenuInventory *inv) {
+	ItemStack loot_stack;
+	currency = 0;
+	loot_stack.item = 0;
+	loot_stack.quantity = 0;
+
+	int best_distance = std::numeric_limits<int>::max();
+
+	vector<Loot>::iterator it;
+	vector<Loot>::iterator nearest;
+
+	for (it = loot.end(); it != loot.begin(); ) {
+		--it;
+
+		int distance = (int)calcDist(hero_pos,it->pos);
+		if (distance < LOOT_RANGE && distance < best_distance) {
+			best_distance = distance;
+			nearest = it;
+		}
+	}
+
+	if (&(*nearest) != NULL) {
+		if (nearest->stack.item > 0 && !(inv->full(nearest->stack.item))) {
+			loot_stack = nearest->stack;
+			loot.erase(nearest);
+			return loot_stack;
+		}
+		else if (nearest->stack.item > 0) {
+			full_msg = true;
+		}
+		else if (nearest->currency > 0) {
+			currency = nearest->currency;
+			loot.erase(nearest);
+
+			return loot_stack;
+		}
+	}
+
+	return loot_stack;
+}
+
 void LootManager::addRenders(vector<Renderable> &ren, vector<Renderable> &ren_dead) {
-	vector<LootDef>::iterator it;
+	vector<Loot>::iterator it;
 	for (it = loot.begin(); it != loot.end(); ++it) {
 		Renderable r = it->animation->getCurrentFrame(0);
 		r.map_pos.x = it->pos.x;
@@ -553,7 +501,7 @@ LootManager::~LootManager() {
 		anim->decreaseCount(animationname);
 	}
 
-	// remove items, so LootDefs get destroyed!
+	// remove items, so Loots get destroyed!
 	loot.clear();
 
 	anim->cleanUp();

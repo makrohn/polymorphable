@@ -23,6 +23,8 @@ FLARE.  If not, see http://www.gnu.org/licenses/
  * This class is capable of rendering isometric and orthogonal maps.
  */
 
+
+#pragma once
 #ifndef MAP_RENDERER_H
 #define MAP_RENDERER_H
 
@@ -86,8 +88,7 @@ class Map_Event {
 public:
 	std::string type;
 	SDL_Rect location;
-	Event_Component components[256];
-	int comp_num;
+	std::vector<Event_Component> components;
 	SDL_Rect hotspot;
 	std::string tooltip;
 	int cooldown; // events that run multiple times pause this long in frames
@@ -100,29 +101,20 @@ public:
 	int damagemax;
 	int cooldown_ticks;
 
-	Map_Event() {
-		type = "";
-		location.x = 0;
-		location.y = 0;
-		location.w = 0;
-		location.h = 0;
-		comp_num = 0;
-		tooltip = "";
-		hotspot.x = hotspot.y = 0;
-		hotspot.h = hotspot.w = 0;
-		cooldown = 0;
-		for (int j=0; j<256; j++) {
-			components[j].type = "";
-			components[j].s = "";
-			components[j].x = 0;
-			components[j].y = 0;
-			components[j].z = 0;
-		}
+	Map_Event()
+	 : type("")
+	 , components(std::vector<Event_Component>())
+	 , tooltip("")
+	 , cooldown(0)
+	 , targetHero(false)
+	 , damagemin(0)
+	 , damagemax(0)
+	 , cooldown_ticks(0)
+	{
+		location.x = location.y = location.w = location.h = 0;
+		hotspot.x = hotspot.y = hotspot.w = hotspot.h = 0;
 		power_src.x = power_src.y = 0;
 		power_dest.x = power_dest.y = 0;
-		targetHero = false;
-		damagemin = damagemax = 0;
-		cooldown_ticks = 0;
 	}
 };
 
@@ -135,15 +127,13 @@ public:
 	bool wander;
 	SDL_Rect wander_area;
 
-	void clear() {
-		pos.x = 0;
-		pos.y = 0;
-		// enemies face a random direction unless otherwise specified
-		direction = rand() % 8;
-		type = "";
-		std::queue<Point> empty;
-		waypoints = empty;
-		wander = false;
+	Map_Enemy(std::string _type="", Point _pos=Point())
+	 : type(_type)
+	 , pos(_pos)
+	 , direction(rand() % 8)
+	 , waypoints(std::queue<Point>())
+	 , wander(false)
+	{
 		wander_area.x = 0;
 		wander_area.y = 0;
 		wander_area.w = 0;
@@ -247,6 +237,7 @@ public:
 	void clearEvents();
 	void checkEvents(Point loc);
 	void checkHotspots();
+	void checkNearestEvent(Point loc);
 	void checkTooltip();
 
 	// vars
@@ -269,15 +260,9 @@ public:
 
 	// enemy load handling
 	std::queue<Map_Enemy> enemies;
-	Map_Enemy new_enemy;
-	Map_Group new_group;
-	bool enemy_awaiting_queue;
-	bool group_awaiting_queue;
 
 	// npc load handling
 	std::queue<Map_NPC> npcs;
-	Map_NPC new_npc;
-	bool npc_awaiting_queue;
 
 	// event-created loot or items
 	std::queue<Event_Component> loot;
@@ -298,6 +283,9 @@ public:
 	// stash handling
 	bool stash;
 	Point stash_pos;
+
+	// enemy clear
+	bool enemies_cleared;
 };
 
 

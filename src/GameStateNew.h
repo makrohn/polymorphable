@@ -22,6 +22,8 @@ FLARE.  If not, see http://www.gnu.org/licenses/
  * (e.g. character appearance)
  */
 
+
+#pragma once
 #ifndef GAMESTATENEW_H
 #define GAMESTATENEW_H
 
@@ -35,6 +37,8 @@ FLARE.  If not, see http://www.gnu.org/licenses/
 #include <string>
 #include <sstream>
 #include <vector>
+
+#include "WidgetTooltip.h"
 
 class WidgetButton;
 class WidgetCheckBox;
@@ -69,6 +73,7 @@ private:
 	WidgetLabel *label_permadeath;
 	WidgetLabel *label_classlist;
 	WidgetListBox *class_list;
+	WidgetTooltip *tip;
 
 	Point name;
 	LabelInfo portrait_label;
@@ -77,6 +82,7 @@ private:
 	LabelInfo classlist_label;
 	SDL_Rect portrait_pos;
 	bool show_classlist;
+	TooltipData tip_buf;
 
 	SDL_Color color_normal;
 

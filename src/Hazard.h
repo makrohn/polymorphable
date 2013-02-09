@@ -22,6 +22,8 @@ FLARE.  If not, see http://www.gnu.org/licenses/
  * These are generated whenever something makes any attack
  */
 
+
+#pragma once
 #ifndef HAZARD_H
 #define HAZARD_H
 
@@ -111,8 +113,7 @@ public:
 	// pre/post power effects
 	int post_power;
 	int wall_power;
-
-	bool equipment_modified;
+	int mod_power;
 
 };
 

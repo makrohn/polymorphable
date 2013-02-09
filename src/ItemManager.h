@@ -20,6 +20,8 @@ FLARE.  If not, see http://www.gnu.org/licenses/
  * class ItemManager
  */
 
+
+#pragma once
 #ifndef ITEM_MANAGER_H
 #define ITEM_MANAGER_H
 
@@ -66,20 +68,22 @@ const int ITEM_QUALITY_EPIC = 3;
 
 const int ITEM_MAX_BONUSES = 8;
 
-struct Set_bonus {
+class Set_bonus {
+public:
 	int requirement;
 	std::string bonus_stat;
 	int bonus_val;
-	Set_bonus() {
-		requirement = 0;
-		bonus_stat = "";
-		bonus_val = 0;
-	}
+	Set_bonus()
+		: requirement(0)
+		, bonus_stat("")
+		, bonus_val(0)
+	{}
 };
 
 class Item {
 public:
 	std::string name;     // item name displayed on long and short tool tips
+	std::string flavor;   // optional flavor text describing the item
 	int level;            // rough estimate of quality, used in the loot algorithm
 	int set;              // item can be attached to item set
 	int quality;          // low, normal, high, epic; corresponds to item name color
@@ -113,39 +117,40 @@ public:
 
 	int getSellPrice();
 
-	Item() {
-		name = "";
-		level = 0;
-		set = 0;
-		quality = ITEM_QUALITY_NORMAL;
-		icon= 0;
-		type = "other";
-		dmg_melee_min = 0;
-		dmg_melee_max = 0;
-		dmg_ranged_min = 0;
-		dmg_ranged_max = 0;
-		dmg_ment_min = 0;
-		dmg_ment_max = 0;
-		abs_min = 0;
-		abs_max = 0;
-		req_stat = 0;
-		req_val = 0;
-		sfx = SFX_NONE;
-		gfx = "";
-		loot_animation = "";
-		power = 0;
-		power_mod = 0;
-		power_desc = "";
-		price = 0;
-		price_sell = 0;
-		max_quantity = 1;
-		rand_loot = 1;
-		rand_vendor = 1;
-		pickup_status = "";
-		stepfx = "";
-	}
-	~Item() {
+	Item()
+	: name("")
+	, flavor("")
+	, level(0)
+	, set(0)
+	, quality(ITEM_QUALITY_NORMAL)
+	, type("other")
+	, icon(0)
+	, dmg_melee_min(0)
+	, dmg_melee_max(0)
+	, dmg_ranged_min(0)
+	, dmg_ranged_max(0)
+	, dmg_ment_min(0)
+	, dmg_ment_max(0)
+	, abs_min(0)
+	, abs_max(0)
+	, req_stat(0)
+	, req_val(0)
+	, sfx(SFX_NONE)
+	, gfx("")
+	, loot_animation("")
+	, power(0)
+	, power_mod(0)
+	, power_desc("")
+	, price(0)
+	, price_sell(0)
+	, max_quantity(1)
+	, rand_loot(1)
+	, rand_vendor(1)
+	, pickup_status("")
+	, stepfx("")
+	{}
 
+	~Item() {
 	}
 };
 
@@ -156,19 +161,25 @@ public:
 	std::vector<Set_bonus> bonus;// vector with stats to increase/decrease
 	SDL_Color color;
 
-	ItemSet() {
-		name = "";
+	ItemSet()
+	: name("")
+	{
 		color.r = 255;
 		color.g = 255;
 		color.b = 255;
 	}
-	~ItemSet() {
 
+	~ItemSet() {
 	}
 };
 
 class ItemStack {
 public:
+	ItemStack()
+		: item(0)
+		, quantity(0)
+	{}
+	~ItemStack() {}
 	int item;
 	int quantity;
 	bool operator > (const ItemStack &param) const;
@@ -187,8 +198,6 @@ private:
 	void loadAll();
 	void loadSounds();
 	void loadIcons();
-	void shrinkItems();
-	void shrinkItemSets();
 
 	SDL_Color color_normal;
 	SDL_Color color_low;
@@ -197,6 +206,8 @@ private:
 	SDL_Color color_bonus;
 	SDL_Color color_penalty;
 	SDL_Color color_requirements_not_met;
+	SDL_Color color_flavor;
+
 public:
 	ItemManager();
 	~ItemManager();
