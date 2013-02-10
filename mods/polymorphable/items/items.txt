@@ -40,17 +40,6 @@ max_quantity=25
 price=15
 
 [item]
-id=50
-name=Robes
-level=10
-quality=normal
-item_type=body
-icon=112
-sfx=cloth
-gfx=clothes
-loot_animation=clothes
-
-[item]
 id=51
 name=Leather Armor
 level=10
@@ -90,51 +79,6 @@ gfx=saber
 power_desc=The sword of the ancient hero
 price=100
 loot_animation=saber
-
-[item]
-id=102
-name=Dream Sword
-level=10
-quality=normal
-item_type=main
-icon=97
-dmg_melee=2,2
-dmg_mental=3,3
-gfx=sword
-power_desc=the sword of the ancient hero
-loot_animation=sword
-
-[item]
-id=136
-name=Reversion Talisman
-level=10
-quality=normal
-item_type=quest
-icon=98
-power=136
-power_desc=Use if you find yourself unable to revert to human
-loot_animation=gem
-
-[item]
-id=196
-name=Gem of Illusion
-level=10
-quality=normal
-item_type=quest
-icon=98
-loot_animation=gem
-power_desc=Looking into this gem, you wonder if there's another world inside...
-
-[item]
-id=197
-name=Shiny Rock
-level=10
-quality=normal
-item_type=quest
-icon=38
-loot_animation=gem
-power_desc=A shiny rock
-pickup_status=shiny_rock
 
 [item]
 id=198
@@ -242,14 +186,3 @@ item_type=quest
 power=500
 loot_animation=gem
 power_desc=Transform into a mighty juggernaut
-
-[item]
-id=600
-name=Squirrel Talisman
-level=10
-quality=normal
-icon=101
-item_type=quest
-power=600
-loot_animation=gem
-power_desc=Transform into a Squirrel at a shrine
