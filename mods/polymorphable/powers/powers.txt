@@ -415,6 +415,23 @@ buff=true
 post_effect=224,100,0
 passive=true
 
+[power]
+id=138
+name=Swing
+type=effect
+icon=1
+description=Basic melee attack
+new_state=swing
+face=true
+use_hazard=true
+aim_assist=true
+base_damage=melee
+lifespan=1
+radius=128
+type=fixed
+starting_pos=melee
+allow_power_mod=true
+
 ########################################
 #Effects
 ########################################

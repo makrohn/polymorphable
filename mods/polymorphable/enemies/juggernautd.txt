@@ -25,7 +25,7 @@ chance_melee_phys=2
 chance_melee_ment=0
 power_beacon=132
 power_ranged_ment=136
-power_melee_phys=1
+power_melee_phys=138
 power_ranged_phys=35
 
 accuracy=100
