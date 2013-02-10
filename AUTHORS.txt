@@ -14,7 +14,7 @@ Asset attribution:
 Thane Brimhall (AKA Pennomi)
 ----------------------------
 art_src/menus/frame.xcf
-mods/core/images/avatar/female/clothes.png
+mods/core/images/avatar/female/default_body.png
 mods/core/images/avatar/female/head_long.png
 mods/core/images/menus (except where otherwise noted)
 Tilset compilation
@@ -177,12 +177,10 @@ Luke Mehl
 His work was adapted into the following:
 mods/core/images/enemies/brawler.png
 mods/core/images/enemies/caster.png
-mods/core/images/avatar/female/clothes.png
 mods/core/images/npcs/innkeep.png
 mods/core/images/npcs/blacksmith.png
 mods/core/images/npcs/brewmaster.png
 mods/core/images/npcs/cleric.png
-mods/core/images/portraits/female01.png
 
 Johnathan Roatch
 ----------------
