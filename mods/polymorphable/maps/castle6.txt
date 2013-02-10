@@ -1,9 +1,19 @@
 [header]
 width=32
 height=32
+tilewidth=32
+tileheight=32
 music=mysticaltheme.ogg
 tileset=town.txt
 title=Castle Balcony
+
+[tilesets]
+tileset=../../../tiled/castle/outside/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/castle/outside/generic_background.png,32,32,0,0
+tileset=../../../tiled/castle/outside/small_objects.png,32,64,0,0
+tileset=../../../tiled/castle/outside/town_buildings.png,32,128,0,0
+tileset=../../../tiled/castle/outside/bldgleft.png,32,128,16,0
+tileset=../../../tiled/castle/outside/bldgright.png,32,128,-16,0
 
 [layer]
 type=background
@@ -185,11 +195,6 @@ data=
 4,4,4,4,1,1,1,1,1,1,1,1,0,0,0,0,1,1,1,1,1,1,1,1,1,1,2,4,4,4,4,4,
 4,4,4,4,1,1,1,1,1,1,1,1,0,0,0,0,1,1,1,1,1,1,1,1,1,1,2,4,4,4,4,4
 
-[enemy]
-# Giant Ghost
-type=giantghost
-location=13,14,1,1
-
 [event]
 # Teleport to Castle5
 type=teleport
@@ -202,4 +207,12 @@ requires_status=2ndjugg
 type=run_once
 location=12,30,4,1
 msg=TRAPPED!
+requires_not=2ndjugg
+
+[event]
+# Giant Ghost
+type=on_load
+location=13,14,1,1
+requires_not=2ndjugg
+spawn=giantghost,13,14
 

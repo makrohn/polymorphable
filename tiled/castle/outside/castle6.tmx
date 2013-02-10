@@ -206,9 +206,7 @@
 </data>
  </layer>
  <objectgroup name="enemygroup" width="32" height="32"/>
- <objectgroup name="enemy" width="32" height="32">
-  <object name="Giant Ghost" type="giantghost" x="416" y="448" width="32" height="32"/>
- </objectgroup>
+ <objectgroup name="enemy" width="32" height="32"/>
  <objectgroup name="event" width="32" height="32">
   <object name="Teleport to Castle5" type="teleport" x="384" y="992" width="128" height="32">
    <properties>
@@ -219,6 +217,13 @@
   <object name="Alert" type="run_once" x="384" y="960" width="128" height="32">
    <properties>
     <property name="msg" value="TRAPPED!"/>
+    <property name="requires_not" value="2ndjugg"/>
+   </properties>
+  </object>
+  <object name="Giant Ghost" type="on_load" x="416" y="448" width="32" height="32">
+   <properties>
+    <property name="requires_not" value="2ndjugg"/>
+    <property name="spawn" value="giantghost,13,14"/>
    </properties>
   </object>
  </objectgroup>

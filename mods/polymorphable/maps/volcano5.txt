@@ -1,9 +1,15 @@
 [header]
 width=32
 height=32
+tilewidth=32
+tileheight=32
 music=evil_temple.ogg
 tileset=volcano.txt
 title=Volcano
+
+[tilesets]
+tileset=../../../tiled/volcano/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/volcano/generic_background.png,32,32,0,0
 
 [layer]
 type=background
@@ -149,16 +155,12 @@ data=
 0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 
-[enemy]
-# Giant Fire Skeleton
-type=giantfireskeleton
-location=12,18,1,1
-
 [event]
 # Alert
 type=run_once
 location=10,30,6,1
 msg=TRAPPED!
+requires_not=1stjugg
 sfx=quake.ogg
 
 [event]
@@ -167,4 +169,11 @@ type=teleport
 location=10,31,6,1
 intermap=volcano3.txt,12,1
 requires_status=1stjugg
+
+[event]
+# Giant Fire Skeleton
+type=on_load
+location=12,18,1,1
+requires_not=1stjugg
+spawn=giantfireskeleton,12,18
 
