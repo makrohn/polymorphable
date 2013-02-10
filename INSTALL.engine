@@ -20,28 +20,17 @@ Installing dependencies on debian based systems (debian, Ubuntu, Kubuntu, etc):
     # for development you'll also need:
     sudo apt-get install cmake make g++ git
 
-There is also a flare build in the Ubuntu (universe), which actually is flare-game.
-http://packages.ubuntu.com/source/precise/flare
-
 ### Arch Linux
 
 Installing dependencies on Arch Linux:
 
     pacman -S --asdeps sdl sdl_image sdl_mixer libogg libvorbis hicolor-icon-theme python sdl_ttf
 
-There is also a flare-rpg-git pkgbuild at the arch user repository:
-https://aur.archlinux.org/packages.php?ID=57522
-
 ### OpenSuse
 
 Installing dependencies on openSUSE:
 
     sudo zypper in make cmake gcc gcc-c++ libSDL-devel libSDL_image-devel libSDL_mixer-devel libSDL_ttf-devel python
-
-There is also a flare build at the openSUSE games repo:
-http://software.opensuse.org/download.html?project=games&package=flare
-
-
 
 ## Building from Source
 
@@ -72,11 +61,11 @@ If you prefer building directly with C++, the command will be something like thi
 
 Windows plus MinGW (depending on where your SDL dev headers are)
 
-    g++ -I C:\MinGW\include\SDL src\*.cpp src\*.c -o flare.exe -lmingw32 -lSDLmain -lSDL -lSDL_image -lSDL_mixer -lSDL_ttf
+    g++ -I C:\MinGW\include\SDL src\*.cpp src\*.c -o polymorphable.exe -lmingw32 -lSDLmain -lSDL -lSDL_image -lSDL_mixer -lSDL_ttf
 
 Linux (depending on where your SDL includes are)
 
-    g++ -I /usr/include/SDL src/*.cpp src/*.c -o flare -lSDL -lSDL_image -lSDL_mixer -lSDL_ttf
+    g++ -I /usr/include/SDL src/*.cpp src/*.c -o polymorphable -lSDL -lSDL_image -lSDL_mixer -lSDL_ttf
 
 ### Optimizing your build
 

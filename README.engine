@@ -20,6 +20,8 @@ Flare's source code is released under the GNU GPL v3. Later versions are permitt
 Flare's default mod (includes engine translations) is released under GNU GPL v3 and CC-BY-SA 3.0. Later versions are permitted.
 The default mod contains the Liberation Sans font which is released under the SIL Open Font License, Version 1.1.
 
+Most of Polymorphable's data files are released under CC-BY-SA 3.0. Later versions are permitted.  See the AUTHORS file for more information regarding individual assets.
+
 
 
 ## Links
@@ -31,6 +33,11 @@ The following links are specific to the engine
 * Forums    http://opengameart.org/forums/flare
 * Email     clintbellanger@gmail.com
 
+The following links are specific to the Polymorphable mod
+
+* Source    https://github.com/makrohn/polymorphable
+* Email     makrohn@gmail.com
+
 ## Games made with flare
 
 * flare-game    A medival fantasy game. In the first days of the engine this game influenced most design decisions a lot. The art is 3d rendered 64x32 px isometric perspective.
@@ -39,15 +46,15 @@ The following links are specific to the engine
 
 ## Running Flare
 
-If the program is installing system-wide (i.e., you typed 'make install' and it worked), you can run it just by executing the 'flare' command. The command name may be changed in mods and will likely be called as the game.
+If the program is installing system-wide (i.e., you typed 'make install' and it worked), you can run it just by executing the 'polymorphable' command. The command name may be changed in mods and will likely be called as the game.
 
 If you did not perform the installation step, you should find the binary in in the top directory, and run it from there, like this:
 
-    ./flare
+    ./polymorphable
 
 Also, in newer versions, the game can be launched from an icon in your main menu in your GUI environment (KDE, GNOME, etc.).
 
-If you're running flare from your operating system's gui file browser (e.g. Windows Explorer or OSX Finder), you'll want to use one of the provided launchers.  This helps the flare executable use its own working directory, so it can see all those data folders.
+If you're running flare from your operating system's gui file browser (e.g. Windows Explorer or OSX Finder), you'll want to use one of the provided launchers.  This helps the polymorphable executable use its own working directory, so it can see all those data folders.
 
 
 
