@@ -1,48 +1,45 @@
-Code authors:
+Authors:
 =============
-This program was written by the following people:
 
+This game mod was written by the following people:
 Thane Brimhall
 Matthew Krohn
+
+The engine was developed by:
+FLARE dev team https://github.com/clintbellanger/flare-engine/wiki/Credits
+
+With special thanks to:
 Justin Jacobs
 Igor Paliychuk
-FLARE dev team https://github.com/clintbellanger/flare-engine/wiki/Credits
+
 
 Asset attribution:
 ==================
 
 Thane Brimhall (AKA Pennomi)
 ----------------------------
-art_src/menus/frame.xcf
-mods/core/images/avatar/female/default_body.png
-mods/core/images/avatar/female/head_long.png
-mods/core/images/menus (except where otherwise noted)
+mods/polymorphable/images/avatar/female/default_body.png
+mods/polymorphable/images/menus (except where otherwise noted)
 Tilset compilation
-Features and bugfixes
 Town map
 Power design
 
 Matthew Krohn (AKA makrohn)
 ---------------------------
-mods/core/images/enemies/bomb.png
-mods/core/images/enemies/firebomb.png
+mods/polymorphable/images/enemies/bomb.png
+mods/polymorphable/images/enemies/firebomb.png
 Dungeon maps
 Enemy, item,  design
 Character, dialogue, quest and story design
 
-Igor Paliychuk (AKA igorko)
----------------------------
-Feature adds and bugfixes
-
 Justin Jacobs (AKA dorkster)
 ----------------------------
-mods/core/images/powers/lightning.png
-Feature adds and bugfixes
+mods/polymorphable/images/powers/lightning.png
 Menu and UI design
 
 Stacey Brimhall
 ---------------
-mods/core/images/portraits
+mods/polymorphable/images/portraits
 
 --------------------------------------------------------------
 --------------------------------------------------------------
@@ -91,19 +88,21 @@ waterfall.png
 watergrass.png
 water.png
 co-author of LPC background cup image
+mods/polymorphable/images/avatar/female/head_long.png
+mods/polymorphable/images/npcs/jeweler.png
 
 Charles Sanchez (AKA CharlesGabriel)
 ------------------------------------
 His work was adapted into the following:
-mods/core/images/enemies/bat.png
-mods/core/images/enemies/bat_large.png
-mods/core/images/enemies/firebat.png
-mods/core/images/enemies/venombat.png
-mods/core/images/enemies/zalkaz.png
-mods/core/images/enemies/ghost.png
-mods/core/images/enemies/giantghost.png
-mods/core/images/enemies/snake.png
-mods/core/images/npcs/ghost.png
+mods/polymorphable/images/enemies/bat.png
+mods/polymorphable/images/enemies/firebat.png
+mods/polymorphable/images/enemies/venombat.png
+mods/polymorphable/images/enemies/zalkaz.png
+mods/polymorphable/images/enemies/ghost.png
+mods/polymorphable/images/enemies/giantghost.png
+mods/polymorphable/images/enemies/snake.png
+mods/polymorphable/images/npcs/ghost.png
+mods/polymorphable/images/enemies/rubysnake.png
 
 Stephen Challener (AKA Redshrike)
 ---------------------------------
@@ -133,79 +132,72 @@ castle_lightsources.png
 
 Johannes Sjölund
 ----------------
-mods/core/images/npcs/combat_dummy.png
+mods/polymorphable/images/npcs/combat_dummy.png
+mods/polymorphable/images/enemies/combat_dummy.png
 His work was adapted into the following:
-mods/core/images/enemies/archer.png
-mods/core/images/enemies/fireskeleton.png
-mods/core/images/enemies/giantfireskeleton.png
-mods/core/images/enemies/juggernaut.png
-mods/core/images/enemies/knight.png
-mods/core/images/enemies/skeletonknight.png
-mods/core/images/enemies/skeletonmage.png
-mods/core/images/enemies/skeleton.png
-mods/core/images/enemies/pumpking.png
-mods/core/images/enemies/slime.png
-mods/core/images/enemies/bee.png
-mods/core/images/enemies/big_worm.png
-mods/core/images/enemies/man_eater_flower.png
-mods/core/images/avatar/female/leather.png
-mods/core/images/npcs/gardener.png
-mods/core/images/npcs/guard.png
-mods/core/images/npcs/elder.png
-mods/core/images/npcs/makrohn.png
-mods/core/images/npcs/hunter.png
-mods/core/images/npcs/vacationerb.png
-mods/core/images/portraits/makrohn.png
-mods/core/images/powers/arrow.png
-
+mods/polymorphable/images/enemies/archer.png
+mods/polymorphable/images/enemies/fireskeleton.png
+mods/polymorphable/images/enemies/giantfireskeleton.png
+mods/polymorphable/images/enemies/juggernaut.png
+mods/polymorphable/images/enemies/knight.png
+mods/polymorphable/images/enemies/skeletonknight.png
+mods/polymorphable/images/enemies/skeletonmage.png
+mods/polymorphable/images/enemies/skeleton.png
+mods/polymorphable/images/enemies/slime.png
+mods/polymorphable/images/enemies/bee.png
+mods/polymorphable/images/avatar/female/leather.png
+mods/polymorphable/images/npcs/gardener.png
+mods/polymorphable/images/npcs/guard.png
+mods/polymorphable/images/npcs/elder.png
+mods/polymorphable/images/npcs/hunter.png
+mods/polymorphable/images/npcs/vacationerb.png
+mods/polymorphable/images/npcs/deacon.png
+mods/polymorphable/images/npcs/trainee.png
+mods/polymorphable/images/npcs/captain.png
+mods/polymorphable/images/npcs/barman.png
+mods/polymorphable/images/npcs/quartermaster.png
+mods/polymorphable/images/npcs/apprentice.png
+mods/polymorphable/images/powers/arrow.png
+mods/polymorphable/images/avatar/female/dagger.png
 
 Lorc
 ----
 His icons, with color added by Matthew Krohn, was adapted into the following:
-mods/core/images/icons/icons64.png
-mods/core/images/icons/icons32.png
+mods/polymorphable/images/icons/icons.png
 
 Joshua Taylor
 -------------
 His work was adapted into the following:
-mods/core/images/loot/watermelon.png
-mods/core/images/loot/carrot.png
-mods/core/images/icons/icons32.png
+mods/polymorphable/images/loot/watermelon.png
+mods/polymorphable/images/loot/carrot.png
+mods/polymorphable/images/icons/icons.png
 
 Luke Mehl
 ---------
 His work was adapted into the following:
-mods/core/images/enemies/brawler.png
-mods/core/images/enemies/caster.png
-mods/core/images/npcs/innkeep.png
-mods/core/images/npcs/blacksmith.png
-mods/core/images/npcs/brewmaster.png
-mods/core/images/npcs/cleric.png
+mods/polymorphable/images/enemies/brawler.png
+mods/polymorphable/images/enemies/caster.png
+mods/polymorphable/images/npcs/innkeep.png
+mods/polymorphable/images/npcs/blacksmith.png
+mods/polymorphable/images/npcs/brewmaster.png
+mods/polymorphable/images/npcs/cleric.png
 
 Johnathan Roatch
 ----------------
-mods/core/soundfx/powers/chomp.ogg
+mods/polymorphable/soundfx/powers/chomp.ogg
 
 Nelson James Gatlin
 -------------------
-mods/core/music/ambient_slow_guitar.ogg
-mods/core/music/ambient_sea_dungeon.ogg
-mods/core/music/choir_loop.ogg
-mods/core/music/farm_theme.ogg
-mods/core/music/magic_bells.ogg
-mods/core/music/ocarina.ogg
-mods/core/music/playful_theme.ogg
-mods/core/music/slow_brass_loop.ogg
-mods/core/music/title_theme.ogg
+mods/polymorphable/music/title_theme.ogg
 
 Brandon
 -------
-mods/core/music/calmtown.ogg
+mods/polymorphable/music/calmtown.ogg
 
 Artur Reterski
 ---------------
 His work was adapted into the following:
-mods/core/images/icons/icons64.png
+mods/polymorphable/images/icons/icons.png
 
 Casper Nilsson
 ---------------
@@ -214,6 +206,7 @@ Tombstones and Iron Fences
 Daniel Eddeland
 ----------------
 Vegetables, Market and Farming Tiles
+mods/polymorphable/images/avatar/female/saber.png
 
 Johann C
 ---------
@@ -221,8 +214,8 @@ Rocks for outdoor tileset
 
 Marcel van de Steeg
 -------------------
-mods/core/images/npcs/daughter.png
-mods/core/images/npcs/vacationera.png
+mods/polymorphable/images/npcs/daughter.png
+mods/polymorphable/images/npcs/vacationera.png
 
 Mark Weyer
 ----------
@@ -237,84 +230,59 @@ Clint Bellanger
 License: GPL 3.0 and CC-BY-SA 3.0
 art_src/Flare.ico
 art_src/flare_logo.svg
-mods/core/images/logo/icon.png
-mods/core/images/loot/clothes.png
-mods/core/images/loot/coins5.png
-mods/core/images/loot/coins25.png
-mods/core/images/loot/coins100.png
-mods/core/images/loot/gem.png
-mods/core/images/loot/hp_potion.png
-mods/core/images/loot/leather_armor.png
-mods/core/images/loot/mp_potion.png
-mods/core/images/powers/quake.png
-mods/core/images/powers/runes.png
-mods/core/images/powers/shield.png
-mods/core/images/menus/buttons/upgrade.png
-mods/core/images/menus/powers_unlock.png
-mods/core/images/menus/attention_glow.png
+mods/polymorphable/images/loot/coins5.png
+mods/polymorphable/images/loot/coins25.png
+mods/polymorphable/images/loot/coins100.png
+mods/polymorphable/images/loot/gem.png
+mods/polymorphable/images/loot/hp_potion.png
+mods/polymorphable/images/powers/quake.png
+mods/polymorphable/images/powers/shield.png
+mods/polymorphable/images/menus/buttons/upgrade.png
+mods/polymorphable/images/menus/powers_unlock.png
+mods/polymorphable/images/menus/attention_glow.png
+mods/polymorphable/images/powers/fireball.png
 
 His work was adapted into the following:
-mods/core/images/powers/venom.png
+mods/polymorphable/images/powers/venom.png
 
 Sound Effects Artist - remaxim
 ------------------------------
 License: CC-BY-SA 3.0
-/mods/core/soundfx/female_hit.ogg
-/mods/core/soundfx/female_die.ogg
+mods/polymorphable/soundfx/female_hit.ogg
+mods/polymorphable/soundfx/female_die.ogg
 
 Sound Effects Artist - Iwan "qubodup" Gabovitch
 -----------------------------------------------
 License: Public Domain, CC0
-/mods/core/soundfx/flying_loot.ogg
+mods/polymorphable/soundfx/flying_loot.ogg
 
 Sound Effects Artist - Brandon Morris (Augmentality)
 ----------------------------------------------------
 License: CC-BY 3.0
-/mods/core/soundfx/powers/shock.ogg
-/mods/core/soundfx/powers/block.ogg
-/mods/core/soundfx/powers/quake.ogg
-/mods/core/soundfx/powers/shield.ogg
-/mods/core/soundfx/level_up.ogg
-mods/core/music/evil_temple.ogg
+mods/polymorphable/soundfx/powers/shock.ogg
+mods/polymorphable/soundfx/powers/block.ogg
+mods/polymorphable/soundfx/powers/quake.ogg
+mods/polymorphable/soundfx/powers/shield.ogg
+mods/polymorphable/soundfx/level_up.ogg
+mods/polymorphable/music/evil_temple.ogg
 
 Sound Effects Artist - Bart K
 -----------------------------
 License: CC-BY-SA 3.0
 You must include a link to OpenGameArt.org when crediting this to Bart K
-/mods/core/soundfx/freeze.ogg
-
-Sound Effects Artist - Mike Koenig
-----------------------------------
-License: CC-BY 3.0
-/mods/core/soundfx/inventory/inventory_wood.ogg
-
-Sound Effects Artist - Cori Samuel
-----------------------------------
-License: Public Domain, CC0
-/mods/core/soundfx/inventory/inventory_book.ogg
+mods/polymorphable/soundfx/freeze.ogg
 
 Sound Effects Artist - artisticdude
 -----------------------------------
 License: Public Domain, CC-BY 3.0
-/mods/core/soundfx/inventory/inventory_page.ogg 
-/mods/core/soundfx/inventory/inventory_cloth.ogg 
-/mods/core/soundfx/inventory/inventory_leather.ogg 
-/mods/core/soundfx/inventory/inventory_gem.ogg 
-/mods/core/soundfx/inventory/inventory_metal.ogg 
-/mods/core/soundfx/inventory/inventory_coins.ogg 
+mods/polymorphable/soundfx/inventory/inventory_cloth.ogg 
+mods/polymorphable/soundfx/inventory/inventory_gem.ogg 
+mods/polymorphable/soundfx/inventory/inventory_coins.ogg 
 
 Sound Effects Artist - Stephan
 ------------------------------
 License: Public Domain, CC0
-/mods/core/soundfx/wood_open.ogg 
-/mods/core/soundfx/inventory/inventory_potion.ogg 
-
-Sound Effects Artist - Michel Baradari
---------------------------------------
-License: CC-BY 3.0
-/mods/core/soundfx/inventory/inventory_object.ogg 
-/mods/core/soundfx/inventory/inventory_maille.ogg 
-/mods/core/soundfx/inventory/inventory_heavy.ogg 
+mods/polymorphable/soundfx/wood_open.ogg 
 
 --------------------------------------------------------------
 --------------------------------------------------------------
@@ -324,31 +292,25 @@ From other sources on OpenGameArt
 Alexandr Zhelanov
 -----------------
 License: CC-BY 3.0
-mods/core/music/mysticaltheme.ogg
+mods/polymorphable/music/mysticaltheme.ogg
 
 Technophobic Android
 --------------------
 License: CC-BY 3.0
-mods/core/music/technophobic.ogg
+mods/polymorphable/music/technophobic.ogg
 
 Telaron
 -------
 License: GPL 2.0 & GPL 3.0
-mods/core/music/snow_about_a_castle.ogg
-
-Joseph Gilbert
---------------
-License:  CC-BY-SA 3.0
-mods/core/music/apricot_milk.ogg
-
-Eliot Corley
-------------
-License:  CC-BY-SA 3.0
-mods/core/music/dream.ogg
+mods/polymorphable/music/snow_about_a_castle.ogg
 
 HorrorPen
 ---------
 License:  CC-BY-SA 3.0
-mods/core/music/spiritwaltz.ogg
-mods/core/music/winds_of_stories.ogg
+mods/polymorphable/music/winds_of_stories.ogg
+
+
+--------------------------------------------------------------------
+There may be assets credited in this file which are no longer in the mod.  When in doubt, I have left it in.
+--------------------------------------------------------------------
 
