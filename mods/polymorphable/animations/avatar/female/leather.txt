@@ -244,7 +244,7 @@ frame=5,7,973,0,34,35,15,30
 
 [melee]
 frames=6
-duration=3
+duration=2
 type=play_once
 frame=0,0,725,0,20,47,9,43
 frame=0,1,725,0,20,47,9,43

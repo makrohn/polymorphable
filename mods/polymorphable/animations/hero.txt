@@ -16,7 +16,7 @@ type=looped
 [melee]
 position=9
 frames=6
-duration=3
+duration=2
 type=play_once
 
 [ment]
