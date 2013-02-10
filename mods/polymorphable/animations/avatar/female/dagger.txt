@@ -1,4 +1,4 @@
-image=images/avatar/female/default_body.png
+image=images/avatar/female/dagger.png
 render_size=64,64
 render_offset=32,58
 

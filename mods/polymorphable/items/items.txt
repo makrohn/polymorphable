@@ -64,7 +64,7 @@ loot_animation=leather_armor
 
 [item]
 id=100
-name=Sword
+name=Knife
 level=10
 quality=normal
 item_type=main
@@ -72,9 +72,9 @@ icon=96
 dmg_melee=1,1
 dmg_ment=1,1
 sfx=
-gfx=sword
-power_desc=Just a normal sword
-loot_animation=sword
+gfx=dagger
+power_desc=Just a kitchen knife
+loot_animation=dagger
 
 [item]
 id=101
@@ -86,10 +86,10 @@ icon=97
 dmg_melee=2,2
 dmg_ment=2,2
 sfx=
-gfx=sword
+gfx=saber
 power_desc=The sword of the ancient hero
 price=100
-loot_animation=sword
+loot_animation=saber
 
 [item]
 id=102
