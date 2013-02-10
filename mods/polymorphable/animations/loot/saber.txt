@@ -1,4 +1,4 @@
-image=images/loot/leather_armor.png
+image=images/loot/saber.png
 render_size=64,64
 render_offset=32,38
 

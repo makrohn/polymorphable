@@ -74,7 +74,7 @@ dmg_ment=1,1
 sfx=
 gfx=dagger
 power_desc=Just a kitchen knife
-loot_animation=dagger
+loot_animation=sword
 
 [item]
 id=101
