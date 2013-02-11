@@ -4,7 +4,7 @@ categories=slime,sewer
 rarity=common
 xp=0
 
-sfx_prefix=slime
+sfx_prefix=none
 animations=slime
 
 loot=1,25

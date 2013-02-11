@@ -4,7 +4,7 @@ categories=skeleton,skeletonknight
 rarity=common
 xp=0
 
-sfx_prefix=skeleton
+sfx_prefix=none
 animations=skeletonknight
 
 loot=1,25

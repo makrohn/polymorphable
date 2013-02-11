@@ -4,7 +4,7 @@ categories=cultist,caster,ranged
 rarity=common
 xp=0
 
-sfx_prefix=caster
+sfx_prefix=none
 animations=caster
 
 loot=1,25

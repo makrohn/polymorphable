@@ -4,7 +4,7 @@ categories=cultist,knight,melee
 rarity=common
 xp=0
 
-sfx_prefix=cultist
+sfx_prefix=none
 animations=knight
 
 loot=1,25

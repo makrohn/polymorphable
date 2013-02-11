@@ -4,7 +4,7 @@ categories=firebomb
 rarity=common
 xp=0
 
-sfx_prefix=bomb
+sfx_prefix=none
 animations=firebomb
 
 suppress_hp=1

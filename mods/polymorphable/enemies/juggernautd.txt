@@ -5,7 +5,7 @@ categories=juggernaut
 rarity=commons
 xp=0
 
-sfx_prefix=juggernaut
+sfx_prefix=none
 animations=juggernaut
 
 loot=1,25

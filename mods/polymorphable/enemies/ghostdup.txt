@@ -5,7 +5,7 @@ categories=ghostd
 rarity=common
 xp=0
 
-sfx_prefix=ghost
+sfx_prefix=none
 animations=ghostdup
 
 loot=1,25

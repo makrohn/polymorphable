@@ -4,7 +4,7 @@ categories=skeleton,fireskeleton
 rarity=common
 xp=0
 
-sfx_prefix=skeleton
+sfx_prefix=none
 animations=fireskeleton
 
 loot=1,25

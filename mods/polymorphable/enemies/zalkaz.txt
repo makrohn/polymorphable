@@ -4,7 +4,7 @@ categories=bat
 rarity=common
 xp=0
 
-sfx_prefix=bat
+sfx_prefix=none
 animations=zalkaz
 defeat_status=theend
 

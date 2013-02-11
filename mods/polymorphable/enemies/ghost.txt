@@ -4,7 +4,7 @@ categories=ghost
 rarity=common
 xp=0
 
-sfx_prefix=ghost
+sfx_prefix=none
 animations=ghost
 
 loot=1,25
