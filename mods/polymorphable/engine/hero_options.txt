@@ -3,7 +3,7 @@
 # head is the png in /images/avatar/[base]
 # portrait is the png in /images/portraits
 
-option=female,head_long,female01
+option=female,head_long,female01,Daphne
 
 layer=0,body,main,head
 layer=1,body,main,head

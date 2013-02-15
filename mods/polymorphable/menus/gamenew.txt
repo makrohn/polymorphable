@@ -2,6 +2,7 @@
 # the first two values are x,y positions
 # some items have two more values, width and height
 show_classlist=0
+classlist_label=-5000,-5000
 
 button_prev=136,216
 button_next=480,216
