@@ -205,3 +205,4 @@ install(FILES
   "${CMAKE_CURRENT_SOURCE_DIR}/distribution/flare_logo.svg"
   DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/scalable/apps
   RENAME flare.svg)
+
