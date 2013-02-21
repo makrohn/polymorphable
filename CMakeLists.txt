@@ -39,7 +39,7 @@ else()
 endif()
 
 set(BINDIR  "games"             CACHE STRING "Directory from CMAKE_INSTALL_PREFIX where game executable will be installed.")
-set(DATADIR "share/games/polymorphable" CACHE STRING "Directory from CMAKE_INSTALL_PREFIX where game data files will be installed.")
+set(DATADIR "share/games/flare" CACHE STRING "Directory from CMAKE_INSTALL_PREFIX where game data files will be installed.")
 
 If(NOT IS_ABSOLUTE "${DATADIR}")
 	add_definitions(-DDATA_INSTALL_DIR="${CMAKE_INSTALL_PREFIX}/${DATADIR}")
@@ -172,34 +172,34 @@ IF (WIN32)
     )
 ENDIF (WIN32)
 
-Add_Executable (polymorphable ${FLARE_SOURCES})
+Add_Executable (flare ${FLARE_SOURCES})
 
 # libSDLMain comes with libSDL if needed on certain platforms
 If (NOT SDLMAIN_LIBRARY)
   Set (SDLMAIN_LIBRARY "")
 EndIf (NOT SDLMAIN_LIBRARY)
 
-Target_Link_Libraries (polymorphable ${CMAKE_LD_FLAGS} ${SDL_LIBRARY} ${SDLMIXER_LIBRARY} ${SDLIMAGE_LIBRARY} ${SDLTTF_LIBRARY} ${SDLMAIN_LIBRARY})
+Target_Link_Libraries (flare ${CMAKE_LD_FLAGS} ${SDL_LIBRARY} ${SDLMIXER_LIBRARY} ${SDLIMAGE_LIBRARY} ${SDLTTF_LIBRARY} ${SDLMAIN_LIBRARY})
 
 
 # desktop file
 If(NOT IS_ABSOLUTE "${BINDIR}")
-	set(FLARE_EXECUTABLE_PATH ${CMAKE_INSTALL_PREFIX}/${BINDIR}/polymorphable)
+	set(FLARE_EXECUTABLE_PATH ${CMAKE_INSTALL_PREFIX}/${BINDIR}/flare)
 Else(NOT IS_ABSOLUTE "${BINDIR}")
-	set(FLARE_EXECUTABLE_PATH ${BINDIR}/polymorphable)
+	set(FLARE_EXECUTABLE_PATH ${BINDIR}/flare)
 EndIf(NOT IS_ABSOLUTE "${BINDIR}")
-configure_file("${CMAKE_CURRENT_SOURCE_DIR}/distribution/polymorphable.desktop.in" "${CMAKE_CURRENT_BINARY_DIR}/polymorphable.desktop")
+configure_file("${CMAKE_CURRENT_SOURCE_DIR}/distribution/flare.desktop.in" "${CMAKE_CURRENT_BINARY_DIR}/flare.desktop")
 
 
 # installing to the proper places
 install(PROGRAMS
-  ${CMAKE_CURRENT_BINARY_DIR}/polymorphable
+  ${CMAKE_CURRENT_BINARY_DIR}/flare
   DESTINATION ${BINDIR})
 install(DIRECTORY
   "${CMAKE_CURRENT_SOURCE_DIR}/mods"
   DESTINATION ${DATADIR})
 install(FILES
-  "${CMAKE_CURRENT_BINARY_DIR}/polymorphable.desktop"
+  "${CMAKE_CURRENT_BINARY_DIR}/flare.desktop"
   DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)
 install(FILES
   "${CMAKE_CURRENT_SOURCE_DIR}/distribution/flare_logo.svg"
