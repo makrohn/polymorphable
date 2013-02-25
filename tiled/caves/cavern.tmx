@@ -504,10 +504,14 @@
     <property name="requires_not" value="evil_unleashed"/>
    </properties>
   </object>
-  <object name="Unblock passage" type="run_once" x="2400" y="2336" width="128" height="64">
+  <object name="Unblock passage" type="run_once" x="2432" y="2400" width="64" height="32">
    <properties>
+    <property name="hotspot" value="location"/>
     <property name="mapmod" value="object,75,72,880;object,76,72,0;object,77,72,0;object,78,72,878;object,75,71,885;object,76,71,0;object,77,71,0;object,78,71,883;collision,76,72,0;collision,77,72,0"/>
-    <property name="requires_status" value="evil_unleashed"/>
+    <property name="npc" value="gravestone"/>
+    <property name="requires_not" value="evil_unleashed"/>
+    <property name="set_status" value="evil_unleashed"/>
+    <property name="tooltip" value="Unmarked Grave"/>
    </properties>
   </object>
   <object name="Carrots" type="run_once" x="2400" y="3104" width="32" height="32">
@@ -520,8 +524,7 @@
   </object>
  </objectgroup>
  <objectgroup name="npc" width="100" height="100">
-  <object name="Gravestone" type="gravestone" x="2432" y="2400" width="32" height="32"/>
-  <object name="Gravestone" type="gravestone" x="2464" y="2400" width="32" height="32"/>
+  <object name="Gravestone" type="gravestone" x="32" y="32" width="32" height="32"/>
  </objectgroup>
  <objectgroup name="enemygroup" width="100" height="100">
   <object name="2 Snakes" type="snake" x="1408" y="1312" width="256" height="128">

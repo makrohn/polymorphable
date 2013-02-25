@@ -511,9 +511,13 @@ requires_not=evil_unleashed
 [event]
 # Unblock passage
 type=run_once
-location=75,73,4,2
+location=76,75,2,1
+hotspot=location
 mapmod=object,75,72,880;object,76,72,0;object,77,72,0;object,78,72,878;object,75,71,885;object,76,71,0;object,77,71,0;object,78,71,883;collision,76,72,0;collision,77,72,0
-requires_status=evil_unleashed
+npc=gravestone
+requires_not=evil_unleashed
+set_status=evil_unleashed
+tooltip=Unmarked Grave
 
 [event]
 # Carrots
@@ -527,12 +531,7 @@ tooltip=Carrots
 [npc]
 # Gravestone
 type=gravestone
-location=76,75,1,1
-
-[npc]
-# Gravestone
-type=gravestone
-location=77,75,1,1
+location=1,1,1,1
 
 [enemygroup]
 # 2 Snakes

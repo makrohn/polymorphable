@@ -5,8 +5,7 @@ talker=true
 gfx=blank
 
 [dialog]
-requires_not=evil_unleashed
-set_status=evil_unleashed
+topic=Examine Tombstone
 him=As you gaze upon the tombstone, you hear a voice coming from the walls.
 him=I knew it was just a matter of time until someone stumbled upon my tomb!
 him=But never in the wildest dreams did I believe it would be the daughter of my captors!
