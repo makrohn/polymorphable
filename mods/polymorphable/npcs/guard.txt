@@ -5,10 +5,12 @@ talker=true
 gfx=guard
 
 [dialog]
+topic=Chat
 him=Careful on the roads out there, strange things have been afoot in the kingdom lately.
 him=The king sent me to help out if there any trouble, but honestly...
 him=I'm a little scared, and you have a sword.  Can't you take care of it?
 
 [dialog]
+topic=Chat
 requires_status=theend
 him=The King sends his highest regards, and hopes you'll come to the palace soon!

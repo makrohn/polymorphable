@@ -5,10 +5,12 @@ talker=true
 gfx=elder
 
 [dialog]
+topic=Chat
 him=Oh, no, I'm not the Elder, I'm just his twin brother!
 him=Younger by an hour, but he gets to be the village elder.
 him=Let me know if you need to look anything up, maps or the like.
 
 [dialog]
+topic=Chat
 requires_status=theend
 him=I'm already writing down your story for future generations!

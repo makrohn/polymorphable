@@ -5,14 +5,17 @@ talker=true
 gfx=ghost
 
 [dialog]
+topic=Death of the Shade
 requires_status=ghostupgrade
 him=Ah, I can rest now...  if you wish, read the books beside me for history of these ruins...
 
 [dialog]
+topic=The Shade
 requires_not=shadowdefeated
 him=I cannot rest!  Look into the fountain...  and defeat your shadow there!
 
 [dialog]
+topic=Death of the Shade
 requires_status=shadowdefeated
 requires_not=ghostupgrade
 set_status=ghostupgrade

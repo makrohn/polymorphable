@@ -5,6 +5,7 @@ talker=true
 gfx=vacationerb
 
 [dialog]
+topic=Chat
 him=Ah, the vacation life!
 him=I hear there's some great spelunking to the north, and skiing to the south.
 him=Do you know where I rent some skis around here?

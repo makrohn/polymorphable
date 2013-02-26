@@ -5,4 +5,5 @@ talker=true
 gfx=quartermaster
 
 [dialog]
+topic=Chat
 him=We're stocking up the granary for the winter.

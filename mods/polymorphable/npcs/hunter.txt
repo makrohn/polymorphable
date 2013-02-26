@@ -5,10 +5,12 @@ talker=true
 gfx=hunter
 
 [dialog]
+topic=Chat
 him=This bow is the best ever seen in this village.
 him=what?  No, of course you can't have it!
 
 [dialog]
+topic=Armor
 requires_status=1stjugg
 requires_not=lareceived
 reward_item=51
@@ -22,6 +24,7 @@ you=Ew, it smells like wet socks.
 him=No, that's just the smell o' tha woods!  Don't look a gift horse in the mouth!
 
 [dialog]
+topic=Chat
 requires_status=theend
 him=Ah, hey, you kill Zalkaz!  I would have done it myself, but you know how it is.
 you=How is it exactly?

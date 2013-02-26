@@ -5,10 +5,12 @@ talker=true
 gfx=guard
 
 [dialog]
+topic=Chat
 him=Lots of unsavory types locked up here!
 him=Aw, who am I kidding?  We haven't had an inmate in fifty years.
 him=I think I still have the keys around here somewhere, though...
 
 [dialog]
+topic=Chat
 requires_status=theend
 him=Maybe you should be our new Sherriff!  Not that we've anyone around to imprison, still.

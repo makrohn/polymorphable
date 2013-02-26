@@ -5,8 +5,10 @@ talker=true
 gfx=innkeep
 
 [dialog]
+topic=Chat
 him=Welcome to the tavern.  Would you like some chicken wings?
 
 [dialog]
+topic=Chat
 requires_status=theend
 him=I expect suitors will soon be coming to town looking for you.  Ah, to be young again.

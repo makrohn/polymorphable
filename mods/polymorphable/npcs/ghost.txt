@@ -5,9 +5,11 @@ talker=true
 gfx=ghost
 
 [dialog]
+topic=River of Flames
 him=Be careful not to traverse the river of flames...
 
 [dialog]
+topic=Parents
 requires_status=juggsearch
 requires_not=ghost_intro
 set_status=ghost_intro

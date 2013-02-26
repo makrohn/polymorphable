@@ -5,14 +5,18 @@ talker=true
 gfx=elder
 
 [dialog]
+topic=Chat
 him=Daphne, you must save the world from Zalkaz!
 
 [dialog]
+topic=The Juggernaut Talisman
+requires_status=flowerfound
 requires_not=juggsearch
 set_status=juggsearch
 him=You must find the Juggernaut Talisman!
 
 [dialog]
+topic=The Juggernaut Talisman
 requires_item=498
 requires_item=499
 reward_item=500
@@ -28,6 +32,7 @@ you=Does he have a sled to come back down on?
 him=Of course not!  He's a bat!  Be prepared for anything.
 
 [dialog]
+topic=The Juggernaut Talisman
 requires_status=1stjugg
 requires_not=1stjuggfound
 set_status=1stjuggfound
@@ -36,6 +41,7 @@ him=You've found the first half of the Talisman, wonderful!  The second half is 
 him=You may also want to speak with Robin the Hunter on your way over.  I told him to give you some of his equipment.
 
 [dialog]
+topic=Zalkaz
 requires_item=199
 set_status=juggsearch
 remove_item=199
@@ -51,10 +57,12 @@ him=You must find what they never could: both halves of the Juggernaut Talisman.
 him=Go east, and use your bat talisman to fly over the ruined bridge, and seek the first half of the Juggernaut Talisman in the volcano.
 
 [dialog]
+topic=The Fairy Flower
 requires_not=flowerfound
 him=Have you found the Fairy Flower yet?
 
 [dialog]
+topic=Chat
 requires_not=elderintro
 set_status=elderintro
 him=Ah, Daphne!  It's good to see you this morning.  You turn sixteen tomorrow, but it seems like just yesterday that I found you in a basket at my door.
@@ -66,6 +74,7 @@ you=A housewarming present I have to fetch myself?  Awww, you shouldn't have.
 him=Ha!  You're my girl.  The Fairy Flower is found north of town, across the river.
 
 [dialog]
+topic=Chat
 requires_status=theend
 him=I know your parents will rest much better knowing that their work is finished.
 you=May they rest in peace...  Thank you, Thomas.

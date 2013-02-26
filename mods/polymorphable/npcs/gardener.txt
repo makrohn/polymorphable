@@ -7,9 +7,11 @@ constant_stock=1,1,1,1,1,2,2,2,2,2
 gfx=gardener
 
 [dialog]
+topic=Chat
 him=Oh, I have some fresh carrots and watermelons, they're good for what ails you!
 
 [dialog]
+topic=Chat
 requires_status=theend
 him=Thanks for saving the village!
 him=Now that we're so famous, maybe soon some more vendors will come to town.

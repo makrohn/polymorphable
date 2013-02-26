@@ -5,6 +5,7 @@ talker=true
 gfx=apprentice
 
 [dialog]
+topic=Good Morning
 him=Good morning Daphne.
 you=Good morning Wot!  Clara working you hard?
 him=It's miserable.  I've forged three swords and two helms this morning, but she says it's still not enough.

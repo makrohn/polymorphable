@@ -5,11 +5,13 @@ talker=true
 gfx=vacationera
 
 [dialog]
+topic=Chat
 him=We're getting away for a few days.  Castle life is just so hectic!
 him=Don't tell Harry, but I'm really interested in going to the volcano - there might even be some obsidian there!
 him=Only trouble is, it's too hot to get close enough.  If only there was a way to traverse the lava.
 
 [dialog]
+topic=Chat
 requires_status=theend
 him=We're almost ready to go back home to the castle, but I still haven't been to the volcano.
 you=I'd let you borrow this charm, but apparently they only work for Laurelians,

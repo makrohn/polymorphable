@@ -7,4 +7,5 @@ constant_stock=1,1,1,1,1,2,2,2,2,2,3,3,3,3,3
 gfx=blank
 
 [dialog]
+topic=Read Note
 him=If we're not in right now, feel free to leave the money in the chest.  Honor system!

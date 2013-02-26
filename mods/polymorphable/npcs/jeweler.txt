@@ -5,5 +5,6 @@ talker=true
 gfx=jeweler
 
 [dialog]
+topic=Chat
 her=I came here all the way from the Castle Keradon to sell the jewels my family mines, but nobody here is buying!
 her=Hopefully there's more money to be made at my next stop in Haladria.

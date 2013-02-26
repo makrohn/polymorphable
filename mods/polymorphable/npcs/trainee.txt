@@ -5,4 +5,5 @@ talker=true
 gfx=trainee
 
 [dialog]
+topic=Chat
 him=Don't break my concentration, or that thing will send me sprawling!

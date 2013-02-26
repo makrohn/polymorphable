@@ -5,6 +5,7 @@ talker=true
 gfx=daughter
 
 [dialog]
+topic=Chat
 him=Hey Daphne, out and about today?
 you=It's beautiful, plus I have a couple errands to do for Elder Thomas.  Will you be coming to my sixteenth birthday ceremony tomorrow?
 him=Of course!  There's no place else in the village I'd rather.

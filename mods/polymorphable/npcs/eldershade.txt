@@ -5,6 +5,7 @@ talker=true
 gfx=elder
 
 [dialog]
+topic=Zalkaz
 him=Daphne, I'm projecting to you via telepathy!
 him=I was reading my brother's ancient scrolls, and discovered that Zalkaz has the power to summon hordes of bats.
 him=Do not face him without polymorphing into a juggernaut first!

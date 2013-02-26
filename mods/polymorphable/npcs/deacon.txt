@@ -5,6 +5,7 @@ talker=true
 gfx=deacon
 
 [dialog]
+topic=Chat
 him=Hi Daphne, it's bee a while.  You don't see anything weird around here, do you?
 you=Should I?
 him=No, uh, no.  It's just that there's been weird sounds from the graveyard at night lately.
