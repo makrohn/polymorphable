@@ -1,0 +1,2 @@
+vendor_label=Shop
+cancel_label=Cancel
