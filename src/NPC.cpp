@@ -201,9 +201,10 @@ void NPC::loadGraphics(const string& filename_portrait) {
  * returns -1 if not loaded or error.
  * returns index in specific vector where to be found.
  */
-int NPC::loadSound(const string& filename, int type) {
+int NPC::loadSound(const string& fname, int type) {
 
-        SoundManager::SoundID a = snd->load("soundfx/npcs/" + filename, "NPC voice");
+	SoundManager::SoundID a = snd->load("soundfx/npcs/" + fname, "NPC voice");
+
 	if (!a)
 		return -1;
 
@@ -235,7 +236,7 @@ bool NPC::playSound(int type, int id) {
 		return true;
 	}
 	if (type == NPC_VOX_QUEST) {
-		if (id < 0 || id >= (int)vox_quests.size()) return false;		
+		if (id < 0 || id >= (int)vox_quests.size()) return false;
 		snd->play(vox_quests[id], "NPC_VOX");
 		return true;
 	}
@@ -267,7 +268,7 @@ void NPC::getDialogNodes(std::vector<int> &result) {
 				break;
 			}
 			else if (dialog[i][j].type == "requires_not") {
-				if (!map->camp->checkStatus(dialog[i][j].s)) 
+				if (!map->camp->checkStatus(dialog[i][j].s))
 					continue;
 				is_available = false;
 				break;
@@ -285,7 +286,7 @@ void NPC::getDialogNodes(std::vector<int> &result) {
 				break;
 			}
 			else if (dialog[i][j].type == "requires_not_level") {
-				if (!map->camp->hero->level >= dialog[i][j].x) 
+				if (!map->camp->hero->level >= dialog[i][j].x)
 					continue;
 				is_available = false;
 				break;
@@ -307,7 +308,7 @@ void NPC::getDialogNodes(std::vector<int> &result) {
 				}
 				else
 					it->second.push_back(i);
-						
+
 			}
 		}
 	}
@@ -324,7 +325,7 @@ void NPC::getDialogNodes(std::vector<int> &result) {
 		result.push_back(di);
 		it++;
 	}
-	
+
 
 }
 
