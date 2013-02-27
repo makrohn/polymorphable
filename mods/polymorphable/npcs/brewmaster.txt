@@ -10,6 +10,6 @@ him=Good evening!  Have you come to try one of my latest creations?
 him=I promise tonight's oatmeal stout is the best batch I've ever made.
 
 [dialog]
-topic=Chat
+topic=The End
 requires_status=theend
 him=Let's raise a glass to your good health!

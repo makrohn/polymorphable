@@ -5,7 +5,8 @@ talker=true
 gfx=elder
 
 [dialog]
-topic=Chat
+topic=Zalkaz
+requires_status=evil_unleashed
 him=Daphne, you must save the world from Zalkaz!
 
 [dialog]
@@ -46,6 +47,7 @@ requires_item=199
 set_status=juggsearch
 remove_item=199
 reward_xp=100
+requires_not=juggsearch
 him=Ah, the Fairy Flower!  Did you run into any trouble in the forest?
 you=Yes, I did.  I suppose I ought to thank you for the sword.
 him=Snarks?  Grumpkins?
@@ -59,6 +61,7 @@ him=Go east, and use your bat talisman to fly over the ruined bridge, and seek t
 [dialog]
 topic=The Fairy Flower
 requires_not=flowerfound
+requires_status=elderintro
 him=Have you found the Fairy Flower yet?
 
 [dialog]
@@ -74,7 +77,7 @@ you=A housewarming present I have to fetch myself?  Awww, you shouldn't have.
 him=Ha!  You're my girl.  The Fairy Flower is found north of town, across the river.
 
 [dialog]
-topic=Chat
+topic=The End
 requires_status=theend
 him=I know your parents will rest much better knowing that their work is finished.
 you=May they rest in peace...  Thank you, Thomas.

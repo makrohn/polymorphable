@@ -11,7 +11,7 @@ him=Don't tell Harry, but I'm really interested in going to the volcano - there 
 him=Only trouble is, it's too hot to get close enough.  If only there was a way to traverse the lava.
 
 [dialog]
-topic=Chat
+topic=The End
 requires_status=theend
 him=We're almost ready to go back home to the castle, but I still haven't been to the volcano.
 you=I'd let you borrow this charm, but apparently they only work for Laurelians,

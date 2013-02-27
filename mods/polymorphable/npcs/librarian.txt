@@ -11,6 +11,6 @@ him=Younger by an hour, but he gets to be the village elder.
 him=Let me know if you need to look anything up, maps or the like.
 
 [dialog]
-topic=Chat
+topic=The End
 requires_status=theend
 him=I'm already writing down your story for future generations!

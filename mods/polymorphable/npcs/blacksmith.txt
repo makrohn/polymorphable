@@ -8,6 +8,7 @@ gfx=blacksmith
 
 [dialog]
 topic=Weapons
+requires_status=evil_unleashed
 him=Ah, so you need a better sword to beat the Evil One?
 him=I've got this one that I made last night, but I'm feeling pretty attached to it.
 him=It'll cost ya 100 gold.  Sound like a deal?
@@ -28,7 +29,7 @@ requires_not=evil_unleashed
 him=Good morning!  I just finished some work on a new sword last night, and I'm showing it off to anyone who comes by.
 
 [dialog]
-topic=Chat
+topic=The End
 requires_status=theend
 him=Daphne, you've destroyed Zalkaz!  I'm proud of you for putting that sword to good use.
 you=So that means I'll get a refund?  Come on, this is like free advertising.
