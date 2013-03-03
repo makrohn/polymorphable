@@ -47,7 +47,7 @@ quality=normal
 item_type=body
 abs=1,1
 icon=113
-sfx=soundfx/inventory/cloth.ogg
+soundfx=soundfx/inventory/cloth.ogg
 gfx=leather
 loot_animation=leather_armor
 
@@ -158,7 +158,7 @@ icon=99
 power=499
 power_desc=Bring to the Village Elder to create the Juggernaut Talisman
 loot_animation=gem
-sfx=soundfx/inventory/gem.ogg
+soundfx=soundfx/inventory/gem.ogg
 pickup_status=1stjugg
 
 [item]
@@ -171,7 +171,7 @@ icon=98
 power=499
 power_desc=Bring to the Village Elder to create the Juggernaut Talisman
 loot_animation=gem
-sfx=soundfx/inventory/gem.ogg
+soundfx=soundfx/inventory/gem.ogg
 pickup_status=2ndjugg
 
 [item]
