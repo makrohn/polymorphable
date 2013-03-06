@@ -145,9 +145,9 @@ void LootManager::logic() {
 
 		if (it->animation->isSecondLastFrame()) {
 			if (it->stack.item > 0)
-				items->playSound(it->stack.item);
+			  items->playSound(it->stack.item, it->pos);
 			else
-				playCurrencySound();
+				playCurrencySound(it->pos);
 		}
 	}
 
@@ -229,22 +229,48 @@ void LootManager::checkMapForLoot() {
 	Point p;
 	Event_Component *ec;
 	ItemStack new_loot;
+	std::vector<int> possible_ids;
+	int common_chance = -1;
 
-	while (!map->loot.empty()) {
-		ec = &map->loot.front();
+	int chance = rand() % 100;
+
+	for (unsigned i = map->loot.size(); i > 0; i--) {
+		ec = &map->loot[i-1];
+
+		if (possible_ids.empty()) {
+			// find the rarest loot less than the chance roll
+			if (chance < (ec->w * (hero->effects.bonus_item_find + 100)) / 100) {
+				possible_ids.push_back(i-1);
+				common_chance = ec->w;
+				i=map->loot.size(); // start searching from the beginning
+				continue;
+			}
+		} else {
+			// include loot with identical chances
+			if (ec->w == common_chance)
+				possible_ids.push_back(i-1);
+		}
+	}
+	if (!possible_ids.empty()) {
+		// if there was more than one item with the same chance, randomly pick one of them
+		int chosen_loot = 0;
+		if (possible_ids.size() > 1) chosen_loot = rand() % possible_ids.size();
+
+		ec = &map->loot[chosen_loot];
 		p.x = ec->x;
 		p.y = ec->y;
 
-		if (ec->s == "id") {
-			new_loot.item = ec->z;
-			new_loot.quantity = 1;
+		// an item id of 0 means we should drop currency instead
+		if (ec->s == "currency" || toInt(ec->s) == 0) {
+			addCurrency(ec->z, p);
+		} else {
+			new_loot.item = toInt(ec->s);
+			new_loot.quantity = ec->z;
 			addLoot(new_loot, p);
 		}
-		else if (ec->s == "currency") {
-			addCurrency(ec->z, p);
-		}
-		map->loot.pop();
 	}
+
+	map->loot.clear();
 }
 
 /**
@@ -277,7 +303,7 @@ void LootManager::determineLootByEnemy(const Enemy *e, Point pos) {
 	if (!possible_ids.empty()) {
 		// if there was more than one item with the same chance, randomly pick one of them
 		if (possible_ids.size() == 1) new_loot.item = possible_ids[0];
-		else new_loot.item = possible_ids[rand() % (possible_ids.size()-1) + 1];
+		else new_loot.item = possible_ids[rand() % possible_ids.size()];
 		new_loot.quantity = 1;
 
 		// an item id of 0 means we should drop currency instead
@@ -307,7 +333,7 @@ void LootManager::addLoot(ItemStack stack, Point pos) {
 	ld.loadAnimation(animationname);
 	ld.currency = 0;
 	loot.push_back(ld);
-	snd->play(sfx_loot);
+	snd->play(sfx_loot, GLOBAL_VIRTUAL_CHANNEL, pos, false);
 }
 
 void LootManager::addCurrency(int count, Point pos) {
@@ -330,7 +356,7 @@ void LootManager::addCurrency(int count, Point pos) {
 
 	ld.currency = count;
 	loot.push_back(ld);
-	snd->play(sfx_loot);
+	snd->play(sfx_loot, GLOBAL_VIRTUAL_CHANNEL, pos, false);
 }
 
 /**
@@ -463,8 +489,8 @@ void LootManager::addRenders(vector<Renderable> &ren, vector<Renderable> &ren_de
 	}
 }
 
-void LootManager::playCurrencySound() {
-	snd->play(sfx_currency);
+void LootManager::playCurrencySound(Point pos) {
+  snd->play(sfx_currency, GLOBAL_VIRTUAL_CHANNEL, pos, false);
 }
 
 LootManager::~LootManager() {
