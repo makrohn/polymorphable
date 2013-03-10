@@ -1,9 +1,15 @@
 [header]
 width=32
 height=32
+tilewidth=32
+tileheight=32
 music=evil_temple.ogg
 tileset=volcano.txt
 title=Volcano
+
+[tilesets]
+tileset=../../../tiled/volcano/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/volcano/generic_background.png,32,32,0,0
 
 [layer]
 type=background
@@ -174,7 +180,7 @@ intermap=volcano3.txt,30,9
 type=run_once
 location=23,7,1,1
 hotspot=location
-loot=id,24,6,400
+loot=400,24,6,1,100
 msg=Someone has scrawled here: "The fire skeleton's bombs killed my friend instantly!  If I wasn't a ghost already, I'd have died, too."
 requires_not=ghosttalis
 tooltip=Altar

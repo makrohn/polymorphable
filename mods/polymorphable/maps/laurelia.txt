@@ -834,11 +834,6 @@ location=0,103,1,6
 intermap=castlepath.txt,30,14
 
 [event]
-type=run_once
-location=5,100,6,6
-npc=hunter
-
-[event]
 # Teleport to Snow1
 type=teleport
 location=71,143,7,1

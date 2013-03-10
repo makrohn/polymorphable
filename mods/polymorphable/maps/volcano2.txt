@@ -166,7 +166,7 @@ intermap=volcano1.txt,1,16
 type=run_once
 location=4,19,1,1
 hotspot=location
-loot=id,5,19,198
+loot=198,5,19,1,100
 requires_not=skelkey
 tooltip=Anvil
 

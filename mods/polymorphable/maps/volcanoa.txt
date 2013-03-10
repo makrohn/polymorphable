@@ -172,7 +172,7 @@ number=2,2
 type=run_once
 location=15,13,1,1
 hotspot=location
-loot=id,16,13,1
+loot=1,16,13,1,100
 mapmod=object,15,13,206
 tooltip=Chest
 
@@ -181,7 +181,7 @@ tooltip=Chest
 type=run_once
 location=23,13,1,1
 hotspot=location
-loot=id,22,13,2
+loot=2,22,13,1,100
 mapmod=object,23,13,206
 tooltip=Chest
 
@@ -190,7 +190,7 @@ tooltip=Chest
 type=run_once
 location=25,16,1,1
 hotspot=location
-loot=currency,25,17,20
+loot=0,25,17,20,100
 mapmod=object,25,16,206
 tooltip=Chest
 
@@ -199,7 +199,7 @@ tooltip=Chest
 type=run_once
 location=24,21,1,1
 hotspot=location
-loot=currency,24,22,20
+loot=0,24,22,20,100
 mapmod=object,24,21,206
 tooltip=Chest
 
@@ -208,7 +208,7 @@ tooltip=Chest
 type=run_once
 location=19,21,1,1
 hotspot=location
-loot=id,20,21,1
+loot=1,20,21,1,100
 mapmod=object,19,21,206
 tooltip=Chest
 

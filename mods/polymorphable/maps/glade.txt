@@ -1,9 +1,17 @@
 [header]
 width=32
 height=32
+tilewidth=32
+tileheight=32
 music=calmtown.ogg
 tileset=outside.txt
 title=Glade
+
+[tilesets]
+tileset=../../../tiled/caves/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/caves/generic_background.png,32,32,0,0
+tileset=../../../tiled/caves/small_objects.png,32,64,0,0
+tileset=../../../tiled/caves/outside_objects.png,32,128,0,0
 
 [layer]
 type=background
@@ -160,7 +168,7 @@ intermap=laurelia.txt,91,2
 type=run_once
 location=14,15,1,2
 hotspot=location
-loot=id,14,16,199
+loot=199,14,16,1,100
 requires_not=flowerfound
 requires_status=elderintro
 tooltip=Fairy Flower
