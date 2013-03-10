@@ -11,7 +11,7 @@ him=Daphne, you must save the world from Zalkaz!
 
 [dialog]
 topic=The Juggernaut Talisman
-requires_status=flowerfound
+requires_status=juggsearch
 requires_not=juggsearch
 set_status=juggsearch
 him=You must find the Juggernaut Talisman!
