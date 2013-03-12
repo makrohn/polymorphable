@@ -1,9 +1,17 @@
 [header]
 width=32
 height=32
+tilewidth=32
+tileheight=32
 music=winds_of_stories.ogg
 tileset=sewer.txt
 title=Underground Lake
+
+[tilesets]
+tileset=../../../tiled/sewers/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/sewers/generic_background.png,32,32,0,0
+tileset=../../../tiled/sewers/small_objects.png,32,64,0,0
+tileset=../../../tiled/sewers/sewer_objects.png,32,128,0,0
 
 [layer]
 type=background
@@ -186,16 +194,6 @@ data=
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 
 [event]
-# Shiny rock
-type=run_once
-location=5,22,1,1
-hotspot=location
-loot=id,5,24,197
-msg=Something in the water sparkles...
-requires_not=shiny_rock
-tooltip=Something Shiny
-
-[event]
 # Teleport to Basement 6
 type=teleport
 location=27,3,2,1
@@ -206,7 +204,7 @@ intermap=basement6.txt,11,28
 type=run_once
 location=28,25,1,1
 hotspot=location
-loot=currency,28,26,50
+loot=0,28,26,50
 mapmod=object,28,25,206
 msg=Ambushed!
 spawn=fireskeleton,23,23;fireskeleton,24,23

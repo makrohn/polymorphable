@@ -29,7 +29,7 @@
  </layer>
  <layer name="object" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFQwUcYmZgOExFfISZNPuPkageG9jJjMBHB8B+ZDCU7ceXFgjF63Og/Asqh/9fJgaGf0wQNrHm0ir8R+3HFNtMBfuJTXO08j8hAAufoWQ/JWX6IbTwJ8d+kJ73pHsVrx2k2k8OoDTsYJgS+6kBRu0ftX/U/lH7CQFRNHUjzf/D1f6TUHNIrctI7bvhAgDJnXxj
+   eJxjYBgFQwUcYmZgOExFfISZNPuPkageG9jJjMBHB8B+ZDCU7ceXFgjF63Og/Asqh/9fJgaGf0wQNrHm0ir8R+2njf3Epjla2U8IwMJnKNlPSZl+CC38ybEfpOc96V7Fawep9pMDKA07GKbEfmqAUftH7R+1f9R+QkAUTd1I8/9wtf8k1BxS6zJS+264AAC6bHuw
   </data>
  </layer>
  <layer name="foreground" width="32" height="32">
@@ -39,7 +39,7 @@
  </layer>
  <layer name="collision" width="32" height="32">
   <data encoding="base64" compression="zlib">
-   eJztldEOgCAIRS39/2/uJTZ2N1MUUNO78dAijhdNQjhaRZdBSPlSJXiOLDz4mvW0+Br+e/bWov9Uk6+tp15P/ix8PPvefK6YyZPya85cqf/3G1b/cw0/OfL5OSDvKdT1s+U+//JPbOS3es29k/BbNGoGcr6GsE7pzqAcK771d6vycV9283/4Y/k4v3fz/3e+19xCPdoAAQI=
+   eJztlUsOgCAMRFG4/5nd2KSZRIH+EGGSLog4z4EKKW3NosOhevm9KjDOrCL4ln5WfIv8mr31WH/y5N+m8dPM/wofez+ab+WHvrWeq/HPu7z+5xZ+CeTzPqDsJbWtp+Q8f8tPbORLsz496+FLNOoO5HwLoU/tzKA5Xnzv92bl476sln/zx/IzjFfL/3d+1L2FugC7uAD/
   </data>
  </layer>
  <objectgroup name="event" width="32" height="32">
@@ -84,14 +84,6 @@
     <property name="hotspot" value="location"/>
     <property name="msg" value="King Hestian will not let us live in the open unless we share with him the secret of immortality.  If only we actually held that secret, as he believes!"/>
     <property name="tooltip" value="Yellowed Diary"/>
-   </properties>
-  </object>
-  <object name="Strange Chest" type="run_once" x="832" y="352" width="32" height="32">
-   <properties>
-    <property name="hotspot" value="location"/>
-    <property name="msg" value="This chest has no keyhole."/>
-    <property name="requires_not" value="acidflask"/>
-    <property name="tooltip" value="Enchanted Chest"/>
    </properties>
   </object>
  </objectgroup>

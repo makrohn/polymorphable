@@ -198,15 +198,6 @@
 </data>
  </layer>
  <objectgroup name="event" width="32" height="32">
-  <object name="Shiny rock" type="run_once" x="160" y="704" width="32" height="32">
-   <properties>
-    <property name="hotspot" value="location"/>
-    <property name="loot" value="id,5,24,197"/>
-    <property name="msg" value="Something in the water sparkles..."/>
-    <property name="requires_not" value="shiny_rock"/>
-    <property name="tooltip" value="Something Shiny"/>
-   </properties>
-  </object>
   <object name="Teleport to Basement 6" type="teleport" x="864" y="96" width="64" height="32">
    <properties>
     <property name="intermap" value="basement6.txt,11,28"/>
@@ -215,7 +206,7 @@
   <object name="Chest" type="run_once" x="896" y="800" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="loot" value="currency,28,26,50"/>
+    <property name="loot" value="0,28,26,50"/>
     <property name="mapmod" value="object,28,25,206"/>
     <property name="msg" value="Ambushed!"/>
     <property name="spawn" value="fireskeleton,23,23;fireskeleton,24,23"/>

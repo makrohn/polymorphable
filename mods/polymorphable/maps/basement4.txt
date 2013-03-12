@@ -229,7 +229,7 @@ tooltip=Chest
 type=run_once
 location=30,23,1,1
 hotspot=location
-loot=currency,29,23,50
+loot=0,29,23,50,100
 mapmod=object,30,23,206
 tooltip=Chest
 
