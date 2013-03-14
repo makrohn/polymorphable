@@ -6,7 +6,7 @@ gfx=elder
 
 [dialog]
 topic=Zalkaz
-requires_status=evil_unleashed
+requires_status=juggsearch
 him=Daphne, you must save the world from Zalkaz!
 
 [dialog]
