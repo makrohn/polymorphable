@@ -10,7 +10,7 @@ animations=skeletonknight
 loot=1,25
 loot=2,13
 loot=3,5
-loot=currency,33
+loot=0,33,8,12
 
 # combat stats
 hp=6

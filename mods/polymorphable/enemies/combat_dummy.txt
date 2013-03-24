@@ -7,10 +7,6 @@ xp=0
 sfx_prefix=none
 animations=combat_dummy
 
-loot=1,25
-loot=2,13
-loot=3,5
-loot=currency,33
 suppress_hp=1
 
 # combat stats

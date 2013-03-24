@@ -10,7 +10,7 @@ animations=skeleton
 loot=1,25
 loot=2,13
 loot=3,5
-loot=currency,33
+loot=0,33,4,6
 
 # combat stats
 hp=4
