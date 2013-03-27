@@ -216,7 +216,7 @@
   <object name="Chest" type="run_once" x="736" y="128" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="loot" value="3,23,5,1,100"/>
+    <property name="loot" value="3,23,5,fixed,1"/>
     <property name="mapmod" value="object,23,4,206"/>
     <property name="tooltip" value="Chest"/>
    </properties>
@@ -224,7 +224,7 @@
   <object name="Chest" type="run_once" x="800" y="192" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="loot" value="1,25,7,2,100"/>
+    <property name="loot" value="1,25,7,fixed,2"/>
     <property name="mapmod" value="object,25,6,206"/>
     <property name="tooltip" value="Chest"/>
    </properties>

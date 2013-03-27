@@ -180,7 +180,7 @@
   <object name="Chest" type="run_once" x="704" y="480" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="loot" value="300,22,16,1,100"/>
+    <property name="loot" value="300,22,16,fixed,1"/>
     <property name="mapmod" value="object,22,15,206"/>
     <property name="requires_not" value="snaketalis"/>
     <property name="tooltip" value="Chest"/>

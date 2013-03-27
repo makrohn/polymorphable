@@ -206,7 +206,7 @@
   <object name="Chest" type="run_once" x="896" y="800" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="loot" value="0,28,26,50"/>
+    <property name="loot" value="0,28,26,fixed,25,50"/>
     <property name="mapmod" value="object,28,25,206"/>
     <property name="msg" value="Ambushed!"/>
     <property name="spawn" value="fireskeleton,23,23;fireskeleton,24,23"/>

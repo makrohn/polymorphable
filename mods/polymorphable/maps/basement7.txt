@@ -298,7 +298,7 @@ tooltip=Strange Rock
 type=run_once
 location=9,2,1,1
 hotspot=location
-loot=1,10,2,2,100
+loot=1,10,2,fixed,2
 mapmod=object,9,2,206
 tooltip=Chest
 
@@ -307,7 +307,7 @@ tooltip=Chest
 type=run_once
 location=9,3,1,1
 hotspot=location
-loot=2,10,3,2,100
+loot=2,10,3,fixed,2
 mapmod=object,9,3,206
 tooltip=Chest
 

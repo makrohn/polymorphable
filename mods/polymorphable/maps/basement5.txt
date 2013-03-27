@@ -240,7 +240,7 @@ tooltip=Strange Rock
 type=run_once
 location=29,8,1,1
 hotspot=location
-loot=1,28,8,2,100
+loot=1,28,8,fixed,2
 mapmod=object,29,8,0;collision,29,8,0
 tooltip=Carrot
 
