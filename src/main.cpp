@@ -180,7 +180,6 @@ static void cleanup() {
 	delete msg;
 	delete snd;
 
-	SDL_FreeSurface(screen);
 	SDL_FreeSurface(titlebar_icon);
 
 	Mix_CloseAudio();
