@@ -7,6 +7,7 @@ gfx=elder
 [dialog]
 topic=Zalkaz
 requires_status=juggsearch
+requires_not=theend
 him=Daphne, you must save the world from Zalkaz!
 
 [dialog]
