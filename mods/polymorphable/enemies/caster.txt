@@ -21,8 +21,10 @@ threat_range=512
 turn_delay=12
 chance_pursue=20
 chance_ranged_ment=5
+chance_melee_ment=10
 power_beacon=132
 power_ranged_ment=301
+power_melee_ment=301
 cooldown_hit=4
 
 accuracy=100
