@@ -13,16 +13,17 @@ loot=3,5
 loot=0,33,4,6
 
 # combat stats
-hp=4
+hp=40
 speed=8
 dspeed=6
 melee_range=64
 threat_range=512
 turn_delay=12
 chance_pursue=20
-chance_melee_phys=2
+chance_melee_phys=20
 power_beacon=132
 power_melee_phys=1
+cooldown_hit=4
 
 accuracy=100
 avoidance=0

@@ -39,4 +39,6 @@ dmg_ranged_max=0
 #bonus_per_offense=0
 #bonus_per_defense=0
 
+cooldown_hit=4
+
 #sfx_step=cloth

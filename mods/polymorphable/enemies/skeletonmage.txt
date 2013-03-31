@@ -23,6 +23,7 @@ chance_pursue=20
 chance_ranged_ment=2
 power_beacon=132
 power_ranged_ment=301
+cooldown_hit=4
 
 accuracy=100
 avoidance=0

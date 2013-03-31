@@ -18,6 +18,7 @@ threat_range=0
 turn_delay=12
 chance_pursue=20
 chance_ranged_phys=5
+cooldown_hit=4
 
 accuracy=100
 avoidance=0

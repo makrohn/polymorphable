@@ -40,7 +40,7 @@ type=play_once
 [hit]
 position=22
 frames=3
-duration=1
+duration=2
 type=back_forth
 
 [die]

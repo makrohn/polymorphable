@@ -297,7 +297,7 @@ frame=5,7,129,47,34,47,12,43
 
 [hit]
 frames=3
-duration=1
+duration=2
 type=back_forth
 frame=0,0,466,94,21,47,10,43
 frame=0,1,466,94,21,47,10,43

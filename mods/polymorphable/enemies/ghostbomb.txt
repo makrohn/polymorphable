@@ -19,6 +19,7 @@ turn_delay=12
 chance_pursue=20
 chance_ranged_phys=100
 power_ranged_phys=104
+cooldown_hit=4
 
 accuracy=100
 avoidance=0

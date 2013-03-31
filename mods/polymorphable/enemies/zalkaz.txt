@@ -27,6 +27,7 @@ power_beacon=132
 power_ranged_phys=36
 power_melee_phys=2
 flying=1
+cooldown_hit=4
 
 accuracy=100
 avoidance=0

@@ -23,6 +23,7 @@ chance_pursue=20
 chance_melee_phys=10
 power_beacon=132
 power_melee_phys=2
+cooldown_hit=4
 
 accuracy=100
 avoidance=0
