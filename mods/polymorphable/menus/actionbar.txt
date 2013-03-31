@@ -22,8 +22,6 @@ inv_menu=512,3,32,32
 powers_menu=544,3,32,32
 log_menu=576,3,32,32
 
-# screen areas occupied by the three main sections
-# TODO maybe we should calculate them
 # x,width,height. There is no y, it's taken from menus.txt 
 numberArea=32,320,32
 mouseArea=384,64,32

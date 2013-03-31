@@ -309,6 +309,14 @@ HorrorPen
 License:  CC-BY-SA 3.0
 mods/polymorphable/music/winds_of_stories.ogg
 
+-------------------------------
+The Android Open Source Project
+-------------------------------
+Licensed under Apache 2.0
+http://www.apache.org/licenses/LICENSE-2.0
+mods/polymorphable/fonts/DroidSans.ttf
+mods/polymorphable/fonts/DroidSansMono.ttf
+mods/polymorphable/fonts/DroidSans-Bold.ttf
 
 --------------------------------------------------------------------
 There may be assets credited in this file which are no longer in the mod.  When in doubt, I have left it in.

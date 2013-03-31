@@ -1,9 +1,5 @@
 # Settings for the PowersMenu display
 # Use next requirements for powers to unlock
-# Physical + Offense grants melee and ranged attacks
-# Physical + Defense grants melee protection
-# Mental + Offense grants elemental spell attacks
-# Mental + Defense grants healing and magical protection
 
 caption=160,8,center,top
 close=294,2

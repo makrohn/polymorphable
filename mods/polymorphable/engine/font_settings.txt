@@ -2,6 +2,9 @@
 # The font must be placed in /fonts
 [font_regular]
 default=DroidSansMono.ttf,12,1
-# NOT YET IMPLEMENTED
-#font_italic=LiberationSans-Italic.ttf
-#font_bold=LiberationSans-Bold.ttf
+
+[font_bold]
+default=DroidSans-Bold.ttf,14,1
+
+[font_talker]
+default=DroidSans.ttf,13,1

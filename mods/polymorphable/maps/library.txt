@@ -106,6 +106,6 @@ tooltip=History of Laurelia
 type=run_once
 location=17,11,1,1
 hotspot=location
-msg=p. 967: "Zalkas was constantly beset by paladins seeking to destroy them; he would eliminate each one by blotting out the light with flocks of bats."
-tooltip=Deomonology
+msg=p. 967: "Zalkaz was constantly beset by paladins seeking to destroy him; he would eliminate each one by blotting out the light with hordes of bats."
+tooltip=Demonology
 
