@@ -726,6 +726,7 @@ speed=30
 trait_elemental=water
 post_power=126
 wall_power=126
+cooldown=1s
 
 [power]
 id=302

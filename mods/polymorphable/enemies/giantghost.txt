@@ -14,8 +14,8 @@ loot=0,100,20,30
 
 # combat stats
 hp=15
-speed=4
-dspeed=3
+speed=10
+dspeed=7
 melee_range=96
 threat_range=512
 turn_delay=12
@@ -24,7 +24,7 @@ chance_melee_phys=100
 power_beacon=132
 power_melee_phys=2
 quest_loot=1stjugg,2ndjugg,499
-cooldown_hit=4
+cooldown_hit=30
 
 accuracy=100
 avoidance=0
