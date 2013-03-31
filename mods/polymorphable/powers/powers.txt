@@ -316,12 +316,10 @@ name=Fire Bomb (enemy)
 type=spawn
 icon=20
 description=Drop a bomb that does 10 damage when it explodes to the whole screen.
-requires_mp=1
 spawn_type=firebomb
 new_state=cast
 starting_pos=source
-source_type=hero
-cooldown=1800
+cooldown=180s
 
 [power]
 id=103
