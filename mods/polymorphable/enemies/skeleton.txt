@@ -13,7 +13,7 @@ loot=3,5
 loot=0,33,4,6
 
 # combat stats
-hp=40
+hp=4
 speed=8
 dspeed=6
 melee_range=64
