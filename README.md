@@ -9,6 +9,23 @@ The core mechanic in Polymorphable is using different talismans to polymorph int
 
 Outdated binary downloads for Mac and Windows can be found at http://cinnamonroll.blogsite.org/polymorphable
 
+Installation and Use
+====================
+
+Polymorphable is a total conversion mod based upon the Flare engine, v0.18.  If you'd like to play Polymorphable, install Flare v0.18, and then put the mods/polymorphable folder into Flare's mod folder.
+
+Mac OSX and Windows
+-A pre-packaged Polymorphable binary with Flare 0.18 Engine can be found here: https://sourceforge.net/projects/polymorphable/files/?source=navbar
+
+Linux
+-Install Flare 0.18 using your favorite package manager, or compile from source from https://github.com/clintbellanger/flare-engine/tree/branch0.18
+-Copy the entire mods/polymorphable folder into the Flare mods/ directory.
+
+All distributions
+-At the Flare launch screen, enter "Configuration"
+-Click the "Mods" tabs
+-Make sure that "polymorphable" is the only item in the right-hand column
+
 Savefile Change!
 ================
 
