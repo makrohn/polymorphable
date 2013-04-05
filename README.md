@@ -30,3 +30,16 @@ Savefile Change!
 ================
 
 On 2/21/2013, the savefile mechanic was changed.  If you want to use your old savefiles from before the change, copy them from your Polymorphable save directory to your Flare save directory, and rename them from save#.txt to poly_save#.txt
+
+Packaging and Distributing
+==========================
+
+If you are packaging Polymorphable for release (e.g. on an operating system's software repo), we suggest creating two packages.
+
+* flare-engine the package that contains the single engine reused by several games
+* polymorphable, a package that requires flare-engine that only contains this game data
+
+When distributing flare-game you may elect to omit these folders which are not used at runtime.
+
+* art_src contains the raw files (e.g. Blender files) used to generate Flare's art.
+* tiled contains the Tiled-native map files used to export Flare's maps
