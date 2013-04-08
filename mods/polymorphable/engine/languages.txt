@@ -1,5 +1,6 @@
 # If default font should be overriden, specify it's filename and ptsize
 en=English
+de=Deutsch
 #be=Belarusian
 #fi=Finnish
 #fr=French
