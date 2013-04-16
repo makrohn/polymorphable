@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-08 17:23+\n"
+"POT-Creation-Date: 2013-04-16 22:20+\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1000,7 +1000,7 @@ msgid "Explore the village of Laurelia"
 msgstr ""
 
 #: ../quests/downahole.txt:8
-msgid "Find the Fairy Flower noth of town, over the river."
+msgid "Find the Fairy Flower north of town, over the river."
 msgstr ""
 
 #: ../quests/downahole.txt:13
