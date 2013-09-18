@@ -7,7 +7,7 @@ Laurelia's Polymorphable Citizen (or just Polymorphable for short) is an action-
 
 The core mechanic in Polymorphable is using different talismans to polymorph into different forms so you can reach different areas. Imagine being blocked by a pit, so you transform into a bat to fly across. Or perhaps there's a wall of fire in front of you, so you turn into ghost form to phase right through.
 
-Outdated binary downloads for Mac and Windows can be found at http://cinnamonroll.blogsite.org/polymorphable
+Outdated binary downloads for Mac and Windows can be found at https://cinnamonroll.blogsite.org/polymorphable
 
 Installation and Use
 ====================
