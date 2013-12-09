@@ -195,7 +195,7 @@ data=
 
 [event]
 # Teleport to Basement 6
-type=teleport
+type=on_trigger
 location=27,3,2,1
 intermap=basement6.txt,11,28
 

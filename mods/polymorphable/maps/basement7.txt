@@ -313,13 +313,13 @@ tooltip=Chest
 
 [event]
 # Teleport to Basement8
-type=teleport
+type=on_trigger
 location=26,0,2,1
 intermap=basement8.txt,12,30
 
 [event]
 # Teleport to Basement6
-type=teleport
+type=on_trigger
 location=28,30,2,1
 intermap=basement6.txt,7,4
 

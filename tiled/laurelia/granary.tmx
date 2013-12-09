@@ -99,7 +99,7 @@
 </data>
  </layer>
  <objectgroup name="event" width="24" height="23">
-  <object name="Teleport to Laurelia" type="teleport" x="192" y="320" width="64" height="32">
+  <object name="Teleport to Laurelia" type="on_trigger" x="192" y="320" width="64" height="32">
    <properties>
     <property name="intermap" value="laurelia.txt,91,100"/>
    </properties>

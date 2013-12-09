@@ -151,7 +151,7 @@ data=
 
 [event]
 # Teleport to Snow6
-type=teleport
+type=on_trigger
 location=17,31,3,1
 intermap=snow6.txt,24,20
 

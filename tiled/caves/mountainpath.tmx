@@ -161,12 +161,12 @@
 </data>
  </layer>
  <objectgroup name="event" width="32" height="32">
-  <object name="Teleport to Volcano" type="teleport" x="480" y="0" width="128" height="32">
+  <object name="Teleport to Volcano" type="on_trigger" x="480" y="0" width="128" height="32">
    <properties>
     <property name="intermap" value="volcano1.txt,16,30"/>
    </properties>
   </object>
-  <object name="Teleport to Laurelia" type="teleport" x="0" y="512" width="32" height="160">
+  <object name="Teleport to Laurelia" type="on_trigger" x="0" y="512" width="32" height="160">
    <properties>
     <property name="intermap" value="laurelia.txt,176,71"/>
    </properties>

@@ -183,7 +183,7 @@
  </objectgroup>
  <objectgroup name="enemy" width="32" height="32"/>
  <objectgroup name="event" width="32" height="32">
-  <object name="Teleport to SnowC" type="teleport" x="768" y="576" width="64" height="64">
+  <object name="Teleport to SnowC" type="on_trigger" x="768" y="576" width="64" height="64">
    <properties>
     <property name="intermap" value="snowc.txt,18,30"/>
    </properties>
@@ -195,12 +195,12 @@
     <property name="tooltip" value="Sign"/>
    </properties>
   </object>
-  <object name="Teleport to Snow7" type="teleport" x="256" y="0" width="32" height="32">
+  <object name="Teleport to Snow7" type="on_trigger" x="256" y="0" width="32" height="32">
    <properties>
     <property name="intermap" value="snow7.txt,22,46"/>
    </properties>
   </object>
-  <object name="Teleport to Snow5" type="teleport" x="0" y="128" width="32" height="32">
+  <object name="Teleport to Snow5" type="on_trigger" x="0" y="128" width="32" height="32">
    <properties>
     <property name="intermap" value="snow5.txt,30,12"/>
    </properties>

@@ -759,7 +759,7 @@
  </layer>
  <objectgroup name="enemy" width="178" height="144"/>
  <objectgroup name="event" width="178" height="144">
-  <object name="Teleport to Laurelia" type="teleport" x="1504" y="1632" width="64" height="32">
+  <object name="Teleport to Laurelia" type="on_trigger" x="1504" y="1632" width="64" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="intermap" value="laurelia.txt,48,52"/>

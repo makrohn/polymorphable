@@ -205,19 +205,19 @@ location=16,14,1,1
 
 [event]
 # Teleport to Castle3
-type=teleport
+type=on_trigger
 location=31,25,1,4
 intermap=castle3.txt,1,22
 
 [event]
 # Teleport to Castle6
-type=teleport
+type=on_trigger
 location=15,0,4,1
 intermap=castle6.txt,14,30
 
 [event]
 # Teleport to CastleC
-type=teleport
+type=on_trigger
 location=0,9,1,4
 intermap=castlec.txt,30,12
 

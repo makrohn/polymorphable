@@ -159,7 +159,7 @@ data=
 
 [event]
 # Teleport to Laurelia
-type=teleport
+type=on_trigger
 location=11,31,6,1
 intermap=laurelia.txt,91,2
 
@@ -175,7 +175,7 @@ tooltip=Fairy Flower
 
 [event]
 # Teleport to Cavern
-type=teleport
+type=on_trigger
 location=14,12,2,2
 intermap=cavern.txt,61,36
 requires_status=cavernexplored

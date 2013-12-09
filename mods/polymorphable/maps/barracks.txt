@@ -115,25 +115,25 @@ data=
 
 [event]
 # Teleport to Laurelia
-type=teleport
+type=on_trigger
 location=40,18,2,1
 intermap=laurelia.txt,120,68
 
 [event]
 # Teleport to Laurelia
-type=teleport
+type=on_trigger
 location=10,12,2,1
 intermap=laurelia.txt,105,65
 
 [event]
 # Teleport to Laurelia
-type=teleport
+type=on_trigger
 location=26,12,2,1
 intermap=laurelia.txt,113,65
 
 [event]
 # Teleport to Laurelia
-type=teleport
+type=on_trigger
 location=18,12,2,1
 intermap=laurelia.txt,109,65
 

@@ -107,13 +107,13 @@ data=
 
 [event]
 # Teleport to Laurelia
-type=teleport
+type=on_trigger
 location=18,18,2,1
 intermap=laurelia.txt,69,98
 
 [event]
 # Teleport for Basement
-type=teleport
+type=on_trigger
 location=3,8,1,1
 intermap=marketbasement.txt,3,8
 

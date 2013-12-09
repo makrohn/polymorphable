@@ -156,7 +156,7 @@
 </data>
  </layer>
  <objectgroup name="event" width="32" height="32">
-  <object name="Teleport to Volcano1" type="teleport" x="992" y="800" width="32" height="160">
+  <object name="Teleport to Volcano1" type="on_trigger" x="992" y="800" width="32" height="160">
    <properties>
     <property name="intermap" value="volcano1.txt,1,16"/>
    </properties>
@@ -169,7 +169,7 @@
     <property name="tooltip" value="Anvil"/>
    </properties>
   </object>
-  <object name="Teleport to VolcanoA" type="teleport" x="160" y="0" width="352" height="32">
+  <object name="Teleport to VolcanoA" type="on_trigger" x="160" y="0" width="352" height="32">
    <properties>
     <property name="intermap" value="volcanoa.txt,5,30"/>
    </properties>

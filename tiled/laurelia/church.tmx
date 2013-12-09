@@ -165,12 +165,12 @@
   <object name="Deacon" type="deacon" x="256" y="416" width="32" height="32"/>
  </objectgroup>
  <objectgroup name="event" width="40" height="32">
-  <object name="Teleport to Graveyard" type="teleport" x="608" y="96" width="64" height="32">
+  <object name="Teleport to Graveyard" type="on_trigger" x="608" y="96" width="64" height="32">
    <properties>
     <property name="intermap" value="laurelia.txt,35,63"/>
    </properties>
   </object>
-  <object name="Teleport to road" type="teleport" x="544" y="800" width="192" height="32">
+  <object name="Teleport to road" type="on_trigger" x="544" y="800" width="192" height="32">
    <properties>
     <property name="intermap" value="laurelia.txt,35,77"/>
    </properties>

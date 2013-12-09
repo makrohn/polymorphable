@@ -158,19 +158,19 @@ number=1,1
 
 [event]
 # Teleport to Laurelia
-type=teleport
+type=on_trigger
 location=0,0,7,1
 intermap=laurelia.txt,74,142
 
 [event]
 # Teleport to Snow2
-type=teleport
+type=on_trigger
 location=31,9,1,1
 intermap=snow2.txt,1,9
 
 [event]
 # Require Juggernaut Talisman
-type=teleport
+type=on_trigger
 location=24,14,1,1
 intramap=24,24
 msg=You need the Juggernaut Talisman to proceed!

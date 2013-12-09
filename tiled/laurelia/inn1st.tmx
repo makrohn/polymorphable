@@ -198,17 +198,17 @@
 </data>
  </layer>
  <objectgroup name="event" width="32" height="32">
-  <object name="Teleport to inn2nd" type="teleport" x="832" y="608" width="32" height="32">
+  <object name="Teleport to inn2nd" type="on_trigger" x="832" y="608" width="32" height="32">
    <properties>
     <property name="intermap" value="inn2nd.txt,26,16"/>
    </properties>
   </object>
-  <object name="Teleport to inn2nd" type="teleport" x="160" y="608" width="32" height="32">
+  <object name="Teleport to inn2nd" type="on_trigger" x="160" y="608" width="32" height="32">
    <properties>
     <property name="intermap" value="inn2nd.txt,5,16"/>
    </properties>
   </object>
-  <object name="Teleport to Laurelia" type="teleport" x="448" y="960" width="128" height="32">
+  <object name="Teleport to Laurelia" type="on_trigger" x="448" y="960" width="128" height="32">
    <properties>
     <property name="intermap" value="laurelia.txt,101,84"/>
    </properties>

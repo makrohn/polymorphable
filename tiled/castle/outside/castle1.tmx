@@ -211,7 +211,7 @@
   <object name="Ghost" type="ghost" x="736" y="544" width="32" height="32"/>
  </objectgroup>
  <objectgroup name="event" width="32" height="32">
-  <object name="Teleport to Castle Path" type="teleport" x="992" y="352" width="32" height="160">
+  <object name="Teleport to Castle Path" type="on_trigger" x="992" y="352" width="32" height="160">
    <properties>
     <property name="intermap" value="castlepath.txt,1,19"/>
    </properties>
@@ -258,7 +258,7 @@
     <property name="power_path" value="0,0,13,3"/>
    </properties>
   </object>
-  <object name="Teleport to Castle 2" type="teleport" x="448" y="64" width="32" height="32">
+  <object name="Teleport to Castle 2" type="on_trigger" x="448" y="64" width="32" height="32">
    <properties>
     <property name="intermap" value="castle2.txt,13,29"/>
    </properties>

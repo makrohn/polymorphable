@@ -198,12 +198,12 @@
 </data>
  </layer>
  <objectgroup name="event" width="32" height="32">
-  <object name="Teleport to Elder's House" type="teleport" x="416" y="992" width="64" height="32">
+  <object name="Teleport to Elder's House" type="on_trigger" x="416" y="992" width="64" height="32">
    <properties>
     <property name="intermap" value="eldershouse.txt,18,5"/>
    </properties>
   </object>
-  <object name="Teleport to Basement2" type="teleport" x="256" y="448" width="32" height="32">
+  <object name="Teleport to Basement2" type="on_trigger" x="256" y="448" width="32" height="32">
    <properties>
     <property name="intermap" value="basement2.txt,2,7"/>
    </properties>

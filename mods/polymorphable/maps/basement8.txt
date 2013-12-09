@@ -187,14 +187,14 @@ data=
 
 [event]
 # Teleport to Elder's House
-type=teleport
+type=on_trigger
 location=15,13,1,1
 intermap=laurelia.txt,69,51
 requires_status=ghostupgrade
 
 [event]
 # Teleport to Basement7
-type=teleport
+type=on_trigger
 location=11,31,2,1
 intermap=basement7.txt,27,1
 

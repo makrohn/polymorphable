@@ -53,17 +53,17 @@
  </objectgroup>
  <objectgroup name="enemy" width="32" height="32"/>
  <objectgroup name="event" width="32" height="32">
-  <object name="Teleport to Snow3" type="teleport" x="32" y="992" width="96" height="32">
+  <object name="Teleport to Snow3" type="on_trigger" x="32" y="992" width="96" height="32">
    <properties>
     <property name="intermap" value="snow3.txt,21,15"/>
    </properties>
   </object>
-  <object name="Teleport to Snow5" type="teleport" x="896" y="992" width="96" height="32">
+  <object name="Teleport to Snow5" type="on_trigger" x="896" y="992" width="96" height="32">
    <properties>
     <property name="intermap" value="snow5.txt,4,27"/>
    </properties>
   </object>
-  <object name="Teleport to SnowA" type="teleport" x="416" y="0" width="64" height="32">
+  <object name="Teleport to SnowA" type="on_trigger" x="416" y="0" width="64" height="32">
    <properties>
     <property name="intermap" value="snowa.txt,14,30"/>
    </properties>

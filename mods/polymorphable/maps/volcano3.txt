@@ -158,7 +158,7 @@ number=2,2
 
 [event]
 # Teleport to Volcano1
-type=teleport
+type=on_trigger
 location=0,11,1,6
 intermap=volcano1.txt,30,18
 
@@ -289,13 +289,13 @@ tooltip=Lava River
 
 [event]
 # Teleport to Volcano 4
-type=teleport
+type=on_trigger
 location=31,8,1,8
 intermap=volcano4.txt,1,23
 
 [event]
 # Teleport to Volcano5
-type=teleport
+type=on_trigger
 location=10,0,6,1
 intermap=volcano5.txt,12,30
 

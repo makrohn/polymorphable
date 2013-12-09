@@ -214,7 +214,7 @@ tooltip=Chest
 
 [event]
 # Teleport to Volcano2
-type=teleport
+type=on_trigger
 location=3,31,10,1
 intermap=volcano2.txt,7,1
 

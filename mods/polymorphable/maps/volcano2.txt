@@ -157,7 +157,7 @@ data=
 
 [event]
 # Teleport to Volcano1
-type=teleport
+type=on_trigger
 location=31,25,1,5
 intermap=volcano1.txt,1,16
 
@@ -172,7 +172,7 @@ tooltip=Anvil
 
 [event]
 # Teleport to VolcanoA
-type=teleport
+type=on_trigger
 location=5,0,11,1
 intermap=volcanoa.txt,5,30
 

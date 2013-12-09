@@ -197,7 +197,7 @@ location=23,17,1,1
 
 [event]
 # Teleport to Castle Path
-type=teleport
+type=on_trigger
 location=31,11,1,5
 intermap=castlepath.txt,1,19
 
@@ -251,7 +251,7 @@ power_path=0,0,13,3
 
 [event]
 # Teleport to Castle 2
-type=teleport
+type=on_trigger
 location=14,2,1,1
 intermap=castle2.txt,13,29
 

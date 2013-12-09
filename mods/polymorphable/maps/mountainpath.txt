@@ -150,13 +150,13 @@ data=
 
 [event]
 # Teleport to Volcano
-type=teleport
+type=on_trigger
 location=15,0,4,1
 intermap=volcano1.txt,16,30
 
 [event]
 # Teleport to Laurelia
-type=teleport
+type=on_trigger
 location=0,16,1,5
 intermap=laurelia.txt,176,71
 

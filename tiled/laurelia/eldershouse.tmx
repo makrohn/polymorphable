@@ -110,12 +110,12 @@
 </data>
  </layer>
  <objectgroup name="event" width="38" height="19" visible="0">
-  <object name="Teleport to Laurelia" type="teleport" x="576" y="384" width="64" height="32">
+  <object name="Teleport to Laurelia" type="on_trigger" x="576" y="384" width="64" height="32">
    <properties>
     <property name="intermap" value="laurelia.txt,69,59"/>
    </properties>
   </object>
-  <object name="Fireplace" type="teleport" x="576" y="128" width="64" height="32">
+  <object name="Fireplace" type="on_trigger" x="576" y="128" width="64" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="intermap" value="basement1.txt,13,30"/>

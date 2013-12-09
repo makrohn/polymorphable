@@ -187,13 +187,13 @@ data=
 
 [event]
 # Teleport to Basement5
-type=teleport
+type=on_trigger
 location=31,28,1,3
 intermap=basement5.txt,1,7
 
 [event]
 # Teleport to Basement B
-type=teleport
+type=on_trigger
 location=10,29,2,1
 intermap=basementb.txt,28,4
 
@@ -207,7 +207,7 @@ tooltip=Sign
 
 [event]
 # Teleport to Basement7
-type=teleport
+type=on_trigger
 location=6,3,2,1
 intermap=basement7.txt,29,29
 

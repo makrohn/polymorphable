@@ -165,7 +165,7 @@ sfx=quake.ogg
 
 [event]
 # Teleport to Volcano3
-type=teleport
+type=on_trigger
 location=10,31,6,1
 intermap=volcano3.txt,12,1
 requires_status=1stjugg

@@ -51,12 +51,12 @@
     <property name="tooltip" value="Suspicious Barrel"/>
    </properties>
   </object>
-  <object name="Teleport to Basement 4" type="teleport" x="0" y="96" width="32" height="96">
+  <object name="Teleport to Basement 4" type="on_trigger" x="0" y="96" width="32" height="96">
    <properties>
     <property name="intermap" value="basement3.txt,30,28"/>
    </properties>
   </object>
-  <object name="Teleport to Basement A" type="teleport" x="928" y="32" width="32" height="32">
+  <object name="Teleport to Basement A" type="on_trigger" x="928" y="32" width="32" height="32">
    <properties>
     <property name="intermap" value="basementa.txt,1,30"/>
    </properties>

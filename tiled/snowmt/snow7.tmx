@@ -230,7 +230,7 @@
   <object name="Zalkaz" type="zalkaz" x="672" y="544" width="32" height="32"/>
  </objectgroup>
  <objectgroup name="event" width="48" height="48">
-  <object name="Teleport to Laurelia" type="teleport" x="704" y="1504" width="32" height="32">
+  <object name="Teleport to Laurelia" type="on_trigger" x="704" y="1504" width="32" height="32">
    <properties>
     <property name="intermap" value="laurelia.txt,20,81"/>
     <property name="msg" value="You're home!"/>

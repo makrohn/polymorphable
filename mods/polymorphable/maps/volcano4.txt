@@ -171,7 +171,7 @@ number=3,3
 
 [event]
 # Teleport to Volcano3
-type=teleport
+type=on_trigger
 location=0,22,1,8
 intermap=volcano3.txt,30,9
 

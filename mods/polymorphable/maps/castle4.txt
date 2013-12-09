@@ -183,13 +183,13 @@ tooltip=Chest
 
 [event]
 # Teleport to Castle3
-type=teleport
+type=on_trigger
 location=15,31,2,1
 intermap=castle3.txt,14,11
 
 [event]
 # Teleport to CastleB
-type=teleport
+type=on_trigger
 location=0,15,1,4
 intermap=castleb.txt,30,11
 

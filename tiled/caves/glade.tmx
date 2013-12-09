@@ -162,7 +162,7 @@
 </data>
  </layer>
  <objectgroup name="event" width="32" height="32">
-  <object name="Teleport to Laurelia" type="teleport" x="352" y="992" width="192" height="32">
+  <object name="Teleport to Laurelia" type="on_trigger" x="352" y="992" width="192" height="32">
    <properties>
     <property name="intermap" value="laurelia.txt,91,2"/>
    </properties>
@@ -176,7 +176,7 @@
     <property name="tooltip" value="Fairy Flower"/>
    </properties>
   </object>
-  <object name="Teleport to Cavern" type="teleport" x="448" y="384" width="64" height="64">
+  <object name="Teleport to Cavern" type="on_trigger" x="448" y="384" width="64" height="64">
    <properties>
     <property name="intermap" value="cavern.txt,61,36"/>
     <property name="requires_status" value="cavernexplored"/>

@@ -174,7 +174,7 @@ tooltip=Chest
 
 [event]
 # Teleport to Snow4
-type=teleport
+type=on_trigger
 location=14,31,1,1
 intermap=snow4.txt,14,1
 

@@ -82,7 +82,7 @@ data=
 
 [event]
 # Teleport to Market
-type=teleport
+type=on_trigger
 location=3,7,1,1
 intermap=market.txt,3,7
 

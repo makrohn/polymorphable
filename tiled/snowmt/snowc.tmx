@@ -40,7 +40,7 @@
  <objectgroup name="enemygroup" width="32" height="32"/>
  <objectgroup name="enemy" width="32" height="32"/>
  <objectgroup name="event" width="32" height="32">
-  <object name="Teleport to Snow6" type="teleport" x="544" y="992" width="96" height="32">
+  <object name="Teleport to Snow6" type="on_trigger" x="544" y="992" width="96" height="32">
    <properties>
     <property name="intermap" value="snow6.txt,24,20"/>
    </properties>

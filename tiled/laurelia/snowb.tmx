@@ -167,7 +167,7 @@
   <object name="Shopkeep" type="skeleton" x="544" y="768" width="32" height="32"/>
  </objectgroup>
  <objectgroup name="event" width="32" height="32">
-  <object name="Teleport to Snow5" type="teleport" x="544" y="992" width="32" height="32">
+  <object name="Teleport to Snow5" type="on_trigger" x="544" y="992" width="32" height="32">
    <properties>
     <property name="intermap" value="snow5.txt,13,22"/>
    </properties>

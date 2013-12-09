@@ -70,7 +70,7 @@ data=
 
 [event]
 # Teleport to Laurelia
-type=teleport
+type=on_trigger
 location=14,12,2,1
 intermap=laurelia.txt,83,81
 

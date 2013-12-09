@@ -118,12 +118,12 @@
 </data>
  </layer>
  <objectgroup name="event" width="18" height="21">
-  <object name="Teleport to Barracks" type="teleport" x="448" y="288" width="32" height="32">
+  <object name="Teleport to Barracks" type="on_trigger" x="448" y="288" width="32" height="32">
    <properties>
     <property name="intermap" value="barracks.txt,46,7"/>
    </properties>
   </object>
-  <object name="Teleport to waterway" type="teleport" x="288" y="0" width="32" height="32">
+  <object name="Teleport to waterway" type="on_trigger" x="288" y="0" width="32" height="32">
    <properties>
     <property name="intermap" value="waterway.txt"/>
    </properties>

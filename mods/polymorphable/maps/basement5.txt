@@ -215,13 +215,13 @@ tooltip=Strange Rock
 
 [event]
 # Teleport to Basement3
-type=teleport
+type=on_trigger
 location=26,24,2,1
 intermap=basement3.txt,8,3
 
 [event]
 # Teleport to Basement6
-type=teleport
+type=on_trigger
 location=0,7,1,3
 intermap=basement6.txt,30,28
 

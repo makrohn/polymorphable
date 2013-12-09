@@ -164,13 +164,13 @@ location=8,13,1,1
 
 [event]
 # Teleport to Graveyard
-type=teleport
+type=on_trigger
 location=19,3,2,1
 intermap=laurelia.txt,35,63
 
 [event]
 # Teleport to road
-type=teleport
+type=on_trigger
 location=17,25,6,1
 intermap=laurelia.txt,35,77
 

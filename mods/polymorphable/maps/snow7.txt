@@ -220,7 +220,7 @@ location=21,17,1,1
 
 [event]
 # Teleport to Laurelia
-type=teleport
+type=on_trigger
 location=22,47,1,1
 intermap=laurelia.txt,20,81
 msg=You're home!

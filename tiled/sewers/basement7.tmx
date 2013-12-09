@@ -303,12 +303,12 @@
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>
-  <object name="Teleport to Basement8" type="teleport" x="832" y="0" width="64" height="32">
+  <object name="Teleport to Basement8" type="on_trigger" x="832" y="0" width="64" height="32">
    <properties>
     <property name="intermap" value="basement8.txt,12,30"/>
    </properties>
   </object>
-  <object name="Teleport to Basement6" type="teleport" x="896" y="960" width="64" height="32">
+  <object name="Teleport to Basement6" type="on_trigger" x="896" y="960" width="64" height="32">
    <properties>
     <property name="intermap" value="basement6.txt,7,4"/>
    </properties>

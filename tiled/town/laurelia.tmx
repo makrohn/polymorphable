@@ -779,18 +779,18 @@
  </objectgroup>
  <objectgroup name="enemy" width="178" height="144"/>
  <objectgroup name="event" width="178" height="144">
-  <object name="Teleport to Mt Path" type="teleport" x="5664" y="2208" width="32" height="160">
+  <object name="Teleport to Mt Path" type="on_trigger" x="5664" y="2208" width="32" height="160">
    <properties>
     <property name="intermap" value="mountainpath.txt,1,18"/>
    </properties>
   </object>
-  <object name="Teleport to Glade" type="teleport" x="2816" y="0" width="192" height="32">
+  <object name="Teleport to Glade" type="on_trigger" x="2816" y="0" width="192" height="32">
    <properties>
     <property name="intermap" value="glade.txt,13,30"/>
     <property name="requires_status" value="cavernexplored"/>
    </properties>
   </object>
-  <object name="Fall to Cavern" type="teleport" x="2752" y="448" width="192" height="32">
+  <object name="Fall to Cavern" type="on_trigger" x="2752" y="448" width="192" height="32">
    <properties>
     <property name="intermap" value="cavern.txt,98,98"/>
     <property name="msg" value="You've fallen in a hole!"/>
@@ -798,102 +798,102 @@
     <property name="requires_status" value="elderintro"/>
    </properties>
   </object>
-  <object name="Teleport to Castle Path" type="teleport" x="0" y="3296" width="32" height="192">
+  <object name="Teleport to Castle Path" type="on_trigger" x="0" y="3296" width="32" height="192">
    <properties>
     <property name="intermap" value="castlepath.txt,30,14"/>
    </properties>
   </object>
-  <object name="Teleport to Snow1" type="teleport" x="2272" y="4576" width="224" height="32">
+  <object name="Teleport to Snow1" type="on_trigger" x="2272" y="4576" width="224" height="32">
    <properties>
     <property name="intermap" value="snow1.txt,3,1"/>
    </properties>
   </object>
-  <object name="Teleport to church" type="teleport" x="1088" y="2432" width="96" height="32">
+  <object name="Teleport to church" type="on_trigger" x="1088" y="2432" width="96" height="32">
    <properties>
     <property name="intermap" value="church.txt,19,24"/>
    </properties>
   </object>
-  <object name="Teleport to backchurch" type="teleport" x="1088" y="2144" width="96" height="32">
+  <object name="Teleport to backchurch" type="on_trigger" x="1088" y="2144" width="96" height="32">
    <properties>
     <property name="intermap" value="church.txt,19,4"/>
    </properties>
   </object>
-  <object name="Teleport to Small House" type="teleport" x="1696" y="2400" width="32" height="32">
+  <object name="Teleport to Small House" type="on_trigger" x="1696" y="2400" width="32" height="32">
    <properties>
     <property name="intermap" value="smallhouse.txt,9,13"/>
    </properties>
   </object>
-  <object name="Teleport to Smallhouse1" type="teleport" x="2848" y="1952" width="32" height="32">
+  <object name="Teleport to Smallhouse1" type="on_trigger" x="2848" y="1952" width="32" height="32">
    <properties>
     <property name="intermap" value="smallhouse1.txt,9,13"/>
    </properties>
   </object>
-  <object name="Teleport to Smallhouse2" type="teleport" x="3424" y="1632" width="32" height="32">
+  <object name="Teleport to Smallhouse2" type="on_trigger" x="3424" y="1632" width="32" height="32">
    <properties>
     <property name="intermap" value="smallhouse2.txt,9,13"/>
    </properties>
   </object>
-  <object name="Teleport to Inn" type="teleport" x="3232" y="2656" width="64" height="32">
+  <object name="Teleport to Inn" type="on_trigger" x="3232" y="2656" width="64" height="32">
    <properties>
     <property name="intermap" value="inn1st.txt,15,28"/>
    </properties>
   </object>
-  <object name="Teleport to Library" type="teleport" x="768" y="2912" width="32" height="32">
+  <object name="Teleport to Library" type="on_trigger" x="768" y="2912" width="32" height="32">
    <properties>
     <property name="intermap" value="library.txt,13,15"/>
    </properties>
   </object>
-  <object name="Teleport to Smithy" type="teleport" x="1664" y="2848" width="32" height="32">
+  <object name="Teleport to Smithy" type="on_trigger" x="1664" y="2848" width="32" height="32">
    <properties>
     <property name="intermap" value="smithy.txt,11,14"/>
    </properties>
   </object>
-  <object name="Teleport to Market" type="teleport" x="2208" y="3104" width="32" height="32">
+  <object name="Teleport to Market" type="on_trigger" x="2208" y="3104" width="32" height="32">
    <properties>
     <property name="intermap" value="market.txt,18,17"/>
    </properties>
   </object>
-  <object name="Teleport to Granary" type="teleport" x="2912" y="3168" width="32" height="32">
+  <object name="Teleport to Granary" type="on_trigger" x="2912" y="3168" width="32" height="32">
    <properties>
     <property name="intermap" value="granary.txt,7,9"/>
    </properties>
   </object>
-  <object name="Teleport to Barracks" type="teleport" x="3360" y="2048" width="32" height="32">
+  <object name="Teleport to Barracks" type="on_trigger" x="3360" y="2048" width="32" height="32">
    <properties>
     <property name="intermap" value="barracks.txt,10,11"/>
    </properties>
   </object>
-  <object name="Teleport to Barracks" type="teleport" x="3840" y="2144" width="32" height="32">
+  <object name="Teleport to Barracks" type="on_trigger" x="3840" y="2144" width="32" height="32">
    <properties>
     <property name="intermap" value="barracks.txt,40,17"/>
    </properties>
   </object>
-  <object name="Teleport to Barracks" type="teleport" x="3616" y="2048" width="32" height="32">
+  <object name="Teleport to Barracks" type="on_trigger" x="3616" y="2048" width="32" height="32">
    <properties>
     <property name="intermap" value="barracks.txt,26,11"/>
    </properties>
   </object>
-  <object name="Teleport to Barracks" type="teleport" x="3488" y="2048" width="32" height="32">
+  <object name="Teleport to Barracks" type="on_trigger" x="3488" y="2048" width="32" height="32">
    <properties>
     <property name="intermap" value="barracks.txt,18,11"/>
    </properties>
   </object>
-  <object name="Teleport to Elder's House" type="teleport" x="2208" y="1856" width="32" height="32">
+  <object name="Teleport to Elder's House" type="on_trigger" x="2208" y="1856" width="32" height="32">
    <properties>
     <property name="intermap" value="eldershouse.txt,18,11"/>
    </properties>
   </object>
-  <object name="Teleport to Daphne's House" type="teleport" x="640" y="2560" width="32" height="32">
+  <object name="Teleport to Daphne's House" type="on_trigger" x="640" y="2560" width="32" height="32">
    <properties>
     <property name="intermap" value="daphneshouse.txt,9,13"/>
    </properties>
   </object>
-  <object name="Teleport to Tavern" type="teleport" x="2656" y="2560" width="32" height="32">
+  <object name="Teleport to Tavern" type="on_trigger" x="2656" y="2560" width="32" height="32">
    <properties>
     <property name="intermap" value="tavern.txt,15,11"/>
    </properties>
   </object>
-  <object name="teleport to Basement8" type="teleport" x="2208" y="1664" width="32" height="32">
+  <object name="teleport to Basement8" type="on_trigger" x="2208" y="1664" width="32" height="32">
    <properties>
     <property name="intermap" value="basement8.txt,15,14"/>
     <property name="requires_status" value="ghostupgrade"/>

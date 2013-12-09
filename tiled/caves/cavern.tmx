@@ -492,7 +492,7 @@
     <property name="tooltip" value="Carrots"/>
    </properties>
   </object>
-  <object name="Teleport to Glade" type="teleport" x="1984" y="1152" width="32" height="64">
+  <object name="Teleport to Glade" type="on_trigger" x="1984" y="1152" width="32" height="64">
    <properties>
     <property name="intermap" value="glade.txt,15,14"/>
     <property name="set_status" value="cavernexplored"/>
