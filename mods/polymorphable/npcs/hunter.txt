@@ -2,7 +2,7 @@ name=Robin the Hunter
 
 talker=true
 
-gfx=hunter
+gfx=animations/npcs/hunter.txt
 
 [dialog]
 topic=Chat

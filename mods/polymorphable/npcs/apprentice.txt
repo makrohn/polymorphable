@@ -2,7 +2,7 @@ name=Wot the Apprentice
 
 talker=true
 
-gfx=apprentice
+gfx=animations/npcs/apprentice.txt
 
 [dialog]
 topic=Good Morning

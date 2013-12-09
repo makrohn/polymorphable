@@ -2,7 +2,7 @@ name=Shandra's Daughter, Kelsey
 
 talker=true
 
-gfx=daughter
+gfx=animations/npcs/daughter.txt
 
 [dialog]
 topic=Chat

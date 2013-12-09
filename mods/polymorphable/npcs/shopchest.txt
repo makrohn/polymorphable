@@ -4,7 +4,7 @@ talker=true
 vendor=true
 constant_stock=1,1,1,1,1,2,2,2,2,2,3,3,3,3,3
 
-gfx=blank
+gfx=animations/npcs/blank.txt
 
 [dialog]
 topic=Read Note

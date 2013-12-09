@@ -2,7 +2,7 @@ name=Barman Insel
 
 talker=true
 
-gfx=barman
+gfx=animations/npcs/barman.txt
 
 [dialog]
 topic=Chat

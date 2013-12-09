@@ -2,7 +2,7 @@ name=Brewmistress Waka
 
 talker=true
 
-gfx=brewmaster
+gfx=animations/npcs/brewmaster.txt
 
 [dialog]
 topic=Chat

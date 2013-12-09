@@ -2,7 +2,7 @@ name=Altea, Keeper of the Faith
 
 talker=true
 
-gfx=cleric
+gfx=animations/npcs/cleric.txt
 
 [dialog]
 topic=Restore

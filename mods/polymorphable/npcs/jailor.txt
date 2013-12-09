@@ -2,7 +2,7 @@ name=Jailor
 
 talker=true
 
-gfx=guard
+gfx=animations/npcs/guard.txt
 
 [dialog]
 topic=Chat

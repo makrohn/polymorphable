@@ -2,7 +2,7 @@ name=Harry
 
 talker=true
 
-gfx=vacationerb
+gfx=animations/npcs/vacationerb.txt
 
 [dialog]
 topic=Chat

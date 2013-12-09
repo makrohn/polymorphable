@@ -2,7 +2,7 @@ name=King's knight
 
 talker=true
 
-gfx=guard
+gfx=animations/npcs/guard.txt
 
 [dialog]
 topic=Chat

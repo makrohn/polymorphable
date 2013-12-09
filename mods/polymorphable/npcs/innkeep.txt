@@ -2,7 +2,7 @@ name=Shandra the Innkeep
 
 talker=true
 
-gfx=innkeep
+gfx=animations/npcs/innkeep.txt
 
 [dialog]
 topic=Chat

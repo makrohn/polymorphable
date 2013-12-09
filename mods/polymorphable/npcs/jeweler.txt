@@ -2,7 +2,7 @@ name=Celade the Jeweler
 
 talker=true
 
-gfx=jeweler
+gfx=animations/npcs/jeweler.txt
 
 [dialog]
 topic=Chat

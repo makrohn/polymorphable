@@ -2,7 +2,7 @@ name=Gaspar
 
 talker=true
 
-gfx=ghost
+gfx=animations/npcs/ghost.txt
 
 [dialog]
 topic=River of Flames

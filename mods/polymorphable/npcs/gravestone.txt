@@ -2,7 +2,7 @@ name=Ancient Tombstone
 
 talker=true
 
-gfx=blank
+gfx=animations/npcs/blank.txt
 
 [dialog]
 topic=Examine Tombstone

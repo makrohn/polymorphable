@@ -2,7 +2,7 @@ name=Shade of Elder Thomas
 
 talker=true
 
-gfx=elder
+gfx=animations/npcs/elder.txt
 
 [dialog]
 topic=Zalkaz

@@ -2,7 +2,7 @@ name=Deacon Ray
 
 talker=true
 
-gfx=deacon
+gfx=animations/npcs/deacon.txt
 
 [dialog]
 topic=Chat

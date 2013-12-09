@@ -2,7 +2,7 @@ name=Captain Tam
 
 talker=true
 
-gfx=captain
+gfx=animations/npcs/captain.txt
 
 [dialog]
 topic=Chat

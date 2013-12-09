@@ -2,7 +2,7 @@ name=Librarian Joe
 
 talker=true
 
-gfx=elder
+gfx=animations/npcs/elder.txt
 
 [dialog]
 topic=Chat

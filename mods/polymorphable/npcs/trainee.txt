@@ -2,7 +2,7 @@ name=PFC Xavier
 
 talker=true
 
-gfx=trainee
+gfx=animations/npcs/trainee.txt
 
 [dialog]
 topic=Chat

@@ -2,7 +2,7 @@ name=Sally
 
 talker=true
 
-gfx=vacationera
+gfx=animations/npcs/vacationera.txt
 
 [dialog]
 topic=Chat

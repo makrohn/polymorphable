@@ -4,7 +4,7 @@ talker=true
 vendor=true
 constant_stock=101
 
-gfx=blacksmith
+gfx=animations/npcs/blacksmith.txt
 
 [dialog]
 topic=Weapons

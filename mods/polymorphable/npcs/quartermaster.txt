@@ -2,7 +2,7 @@ name=Quartermaster Fenton
 
 talker=true
 
-gfx=quartermaster
+gfx=animations/npcs/quartermaster.txt
 
 [dialog]
 topic=Chat

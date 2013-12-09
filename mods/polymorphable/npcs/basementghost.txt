@@ -2,7 +2,7 @@ name=Balthasar
 
 talker=true
 
-gfx=ghost
+gfx=animations/npcs/ghost.txt
 
 [dialog]
 topic=Death of the Shade
