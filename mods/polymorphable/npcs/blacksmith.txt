@@ -25,7 +25,7 @@ him=Could be.
 
 [dialog]
 topic=Chat
-requires_not=evil_unleashed
+requires_not_status=evil_unleashed
 him=Good morning!  I just finished some work on a new sword last night, and I'm showing it off to anyone who comes by.
 
 [dialog]

@@ -7,13 +7,13 @@ gfx=animations/npcs/elder.txt
 [dialog]
 topic=Zalkaz
 requires_status=juggsearch
-requires_not=theend
+requires_not_status=theend
 him=Daphne, you must save the world from Zalkaz!
 
 [dialog]
 topic=The Juggernaut Talisman
 requires_status=juggsearch
-requires_not=juggsearch
+requires_not_status=juggsearch
 set_status=juggsearch
 him=You must find the Juggernaut Talisman!
 
@@ -36,7 +36,7 @@ him=Of course not!  He's a bat!  Be prepared for anything.
 [dialog]
 topic=The Juggernaut Talisman
 requires_status=1stjugg
-requires_not=1stjuggfound
+requires_not_status=1stjuggfound
 set_status=1stjuggfound
 reward_xp=100
 him=You've found the first half of the Talisman, wonderful!  The second half is in a ruined castle to the west.
@@ -48,7 +48,7 @@ requires_item=199
 set_status=juggsearch
 remove_item=199
 reward_xp=100
-requires_not=juggsearch
+requires_not_status=juggsearch
 him=Ah, the Fairy Flower!  Did you run into any trouble in the forest?
 you=Yes, I did.  I suppose I ought to thank you for the sword.
 him=Snarks?  Grumpkins?
@@ -61,13 +61,13 @@ him=Go east, and use your bat talisman to fly over the ruined bridge, and seek t
 
 [dialog]
 topic=The Fairy Flower
-requires_not=flowerfound
+requires_not_status=flowerfound
 requires_status=elderintro
 him=Have you found the Fairy Flower yet?
 
 [dialog]
 topic=Chat
-requires_not=elderintro
+requires_not_status=elderintro
 set_status=elderintro
 him=Ah, Daphne!  It's good to see you this morning.  You turn sixteen tomorrow, but it seems like just yesterday that I found you in a basket at my door.
 you=Sixteen long years of doing pointless chores for you, Thomas.

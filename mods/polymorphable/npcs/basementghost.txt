@@ -11,13 +11,13 @@ him=Ah, I can rest now...  if you wish, read the books beside me for history of 
 
 [dialog]
 topic=The Shade
-requires_not=shadowdefeated
+requires_not_status=shadowdefeated
 him=I cannot rest!  Look into the fountain...  and defeat your shadow there!
 
 [dialog]
 topic=Death of the Shade
 requires_status=shadowdefeated
-requires_not=ghostupgrade
+requires_not_status=ghostupgrade
 set_status=ghostupgrade
 remove_item=400
 reward_item=401

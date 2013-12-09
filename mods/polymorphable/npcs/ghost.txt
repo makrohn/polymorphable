@@ -11,7 +11,7 @@ him=Be careful not to traverse the river of flames...
 [dialog]
 topic=Parents
 requires_status=juggsearch
-requires_not=ghost_intro
+requires_not_status=ghost_intro
 set_status=ghost_intro
 him=Hello, Daphne.
 her=How do you know my name?  Why aren't you attacking me?

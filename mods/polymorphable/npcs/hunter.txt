@@ -12,7 +12,7 @@ him=What?  No, of course you can't have it!
 [dialog]
 topic=Armor
 requires_status=1stjugg
-requires_not=lareceived
+requires_not_status=lareceived
 reward_item=51
 set_status=lareceived
 him=I talked to the Elder...  he wants me to give you something.
