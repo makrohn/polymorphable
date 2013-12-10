@@ -15,8 +15,7 @@ loot=0,100,30,40
 
 # combat stats
 hp=20
-speed=3
-dspeed=2
+speed=2
 melee_range=64
 threat_range=512
 turn_delay=12

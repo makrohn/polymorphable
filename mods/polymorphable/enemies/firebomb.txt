@@ -12,7 +12,6 @@ suppress_hp=1
 # combat stats
 hp=3
 speed=0
-dspeed=0
 chance_pursue=100
 threat_range=1024
 melee_range=1024

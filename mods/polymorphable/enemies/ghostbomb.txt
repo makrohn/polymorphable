@@ -12,7 +12,6 @@ suppress_hp=1
 # combat stats
 hp=1
 speed=0
-dspeed=0
 melee_range=64
 threat_range=144
 turn_delay=12

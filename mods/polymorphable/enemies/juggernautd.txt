@@ -15,8 +15,7 @@ loot=currency,33
 
 # combat stats
 hp=10
-speed=10
-dspeed=7
+speed=5
 melee_range=32
 threat_range=512
 turn_delay=12
