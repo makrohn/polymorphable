@@ -6,7 +6,7 @@ rarity=common
 xp=0
 
 sfx_prefix=none
-animations=ghostdup
+animations=animations/enemies/ghostdup.txt
 
 loot=1,25
 loot=2,13

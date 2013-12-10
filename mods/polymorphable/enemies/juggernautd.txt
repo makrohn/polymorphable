@@ -6,7 +6,7 @@ rarity=commons
 xp=0
 
 sfx_prefix=none
-animations=juggernaut
+animations=animations/enemies/juggernaut.txt
 
 loot=1,25
 loot=2,13

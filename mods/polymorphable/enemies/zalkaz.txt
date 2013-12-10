@@ -5,7 +5,7 @@ rarity=common
 xp=0
 
 sfx_prefix=none
-animations=zalkaz
+animations=animations/enemies/zalkaz.txt
 defeat_status=theend
 
 loot=1,25

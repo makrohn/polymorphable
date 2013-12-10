@@ -5,7 +5,7 @@ rarity=common
 xp=0
 
 sfx_prefix=none
-animations=giantghost
+animations=animations/enemies/giantghost.txt
 
 loot=1,25
 loot=2,13

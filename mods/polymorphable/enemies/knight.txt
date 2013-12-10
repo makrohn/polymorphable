@@ -5,7 +5,7 @@ rarity=common
 xp=0
 
 sfx_prefix=none
-animations=knight
+animations=animations/enemies/knight.txt
 
 loot=1,25
 loot=2,13

@@ -5,7 +5,7 @@ rarity=common
 xp=0
 
 sfx_prefix=none
-animations=venombat
+animations=animations/enemies/venombat.txt
 
 loot=1,25
 loot=2,13

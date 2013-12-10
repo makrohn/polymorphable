@@ -5,7 +5,7 @@ rarity=common
 xp=0
 
 sfx_prefix=none
-animations=combat_dummy
+animations=animations/enemies/combat_dummy.txt
 
 suppress_hp=1
 

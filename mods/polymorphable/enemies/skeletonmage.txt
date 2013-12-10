@@ -5,7 +5,7 @@ rarity=common
 xp=0
 
 sfx_prefix=none
-animations=skeletonmage
+animations=animations/enemies/skeletonmage.txt
 
 loot=1,25
 loot=2,13
