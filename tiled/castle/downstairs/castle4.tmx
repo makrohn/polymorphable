@@ -182,7 +182,7 @@
     <property name="hotspot" value="location"/>
     <property name="loot" value="300,22,16,fixed,1"/>
     <property name="mapmod" value="object,22,15,206"/>
-    <property name="requires_not" value="snaketalis"/>
+    <property name="requires_not_status" value="snaketalis"/>
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>

@@ -169,7 +169,7 @@ type=run_once
 location=14,15,1,2
 hotspot=location
 loot=199,14,16,fixed,1
-requires_not=flowerfound
+requires_not_status=flowerfound
 requires_status=elderintro
 tooltip=Fairy Flower
 

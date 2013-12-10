@@ -204,7 +204,7 @@ type=run_once
 location=7,16,1,1
 hotspot=location
 msg=You must defeat your shadow!
-requires_not=ghostupgrade
+requires_not_status=ghostupgrade
 spawn=dshadow,14,25
 tooltip=Fountain
 

@@ -207,12 +207,12 @@ requires_status=2ndjugg
 type=run_once
 location=12,30,4,1
 msg=TRAPPED!
-requires_not=2ndjugg
+requires_not_status=2ndjugg
 
 [event]
 # Giant Ghost
 type=on_load
 location=13,14,1,1
-requires_not=2ndjugg
+requires_not_status=2ndjugg
 spawn=giantghost,13,14
 

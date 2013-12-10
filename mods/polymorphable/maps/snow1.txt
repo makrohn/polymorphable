@@ -174,5 +174,5 @@ type=on_trigger
 location=24,14,1,1
 intramap=24,24
 msg=You need the Juggernaut Talisman to proceed!
-requires_not=fulljugg
+requires_not_status=fulljugg
 

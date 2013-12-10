@@ -213,7 +213,7 @@
    <properties>
     <property name="hotspot" value="location"/>
     <property name="msg" value="You must defeat your shadow!"/>
-    <property name="requires_not" value="ghostupgrade"/>
+    <property name="requires_not_status" value="ghostupgrade"/>
     <property name="spawn" value="dshadow,14,25"/>
     <property name="tooltip" value="Fountain"/>
    </properties>

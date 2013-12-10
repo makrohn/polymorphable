@@ -207,7 +207,7 @@ type=run_once
 location=29,17,1,1
 hotspot=location
 msg=There is a strange groove in this rock
-requires_not=switch_key
+requires_not_status=switch_key
 tooltip=Strange Rock
 
 [event]
@@ -216,7 +216,7 @@ type=run_once
 location=16,25,1,1
 hotspot=location
 msg=There is a strange groove in this rock
-requires_not=switch_key
+requires_not_status=switch_key
 tooltip=Strange Rock
 
 [event]
@@ -225,7 +225,7 @@ type=run_once
 location=8,28,1,1
 hotspot=location
 msg=There is a strange groove in this rock
-requires_not=switch_key
+requires_not_status=switch_key
 tooltip=Strange Rock
 
 [event]
@@ -234,7 +234,7 @@ type=run_once
 location=3,8,1,1
 hotspot=location
 msg=There is a strange groove in this rock
-requires_not=switch_key
+requires_not_status=switch_key
 tooltip=Strange Rock
 
 [event]
@@ -243,7 +243,7 @@ type=run_once
 location=29,8,1,1
 hotspot=location
 msg=There is a strange groove in this rock
-requires_not=switch_key
+requires_not_status=switch_key
 tooltip=Strange Rock
 
 [event]

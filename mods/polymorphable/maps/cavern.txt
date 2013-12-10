@@ -437,7 +437,7 @@ hotspot=location
 loot=200,58,47,fixed,1
 mapmod=object,57,47,206
 msg=Drag to actionbar to use.
-requires_not=battalisfound
+requires_not_status=battalisfound
 tooltip=Chest
 
 [event]
@@ -506,7 +506,7 @@ set_status=cavernexplored
 type=on_load
 location=75,71,4,2
 mapmod=object,75,72,879;object,76,72,879;object,77,72,879;object,78,72,879;object,75,71,890;object,76,71,887;object,77,71,887;object,78,71,889;collision,75,72,1;collision,76,72,1;collision,77,72,1;collision,78,72,1
-requires_not=evil_unleashed
+requires_not_status=evil_unleashed
 
 [event]
 # Unblock passage
@@ -515,7 +515,7 @@ location=76,75,2,1
 hotspot=location
 mapmod=object,75,72,880;object,76,72,0;object,77,72,0;object,78,72,878;object,75,71,885;object,76,71,0;object,77,71,0;object,78,71,883;collision,76,72,0;collision,77,72,0
 npc=gravestone
-requires_not=evil_unleashed
+requires_not_status=evil_unleashed
 set_status=evil_unleashed
 tooltip=Unmarked Grave
 

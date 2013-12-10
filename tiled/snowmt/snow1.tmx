@@ -61,7 +61,7 @@
    <properties>
     <property name="intramap" value="24,24"/>
     <property name="msg" value="You need the Juggernaut Talisman to proceed!"/>
-    <property name="requires_not" value="fulljugg"/>
+    <property name="requires_not_status" value="fulljugg"/>
    </properties>
   </object>
  </objectgroup>

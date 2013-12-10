@@ -199,7 +199,7 @@ type=run_once
 location=1,16,1,1
 hotspot=location
 msg=There's a key-shaped hole in this rock.
-requires_not=switch_key
+requires_not_status=switch_key
 tooltip=Strange Rock
 
 [event]

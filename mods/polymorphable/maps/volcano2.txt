@@ -167,7 +167,7 @@ type=run_once
 location=4,19,1,1
 hotspot=location
 loot=198,5,19,fixed,1
-requires_not=skelkey
+requires_not_status=skelkey
 tooltip=Anvil
 
 [event]

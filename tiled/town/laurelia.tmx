@@ -794,7 +794,7 @@
    <properties>
     <property name="intermap" value="cavern.txt,98,98"/>
     <property name="msg" value="You've fallen in a hole!"/>
-    <property name="requires_not" value="cavernexplored"/>
+    <property name="requires_not_status" value="cavernexplored"/>
     <property name="requires_status" value="elderintro"/>
    </properties>
   </object>

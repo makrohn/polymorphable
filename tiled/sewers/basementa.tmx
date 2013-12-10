@@ -47,7 +47,7 @@
    <properties>
     <property name="hotspot" value="location"/>
     <property name="msg" value="There's a key-shaped hole in this rock."/>
-    <property name="requires_not" value="switch_key"/>
+    <property name="requires_not_status" value="switch_key"/>
     <property name="tooltip" value="Strange Rock"/>
    </properties>
   </object>

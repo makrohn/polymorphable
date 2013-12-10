@@ -182,6 +182,6 @@ location=23,7,1,1
 hotspot=location
 loot=400,24,6,fixed,1
 msg=Someone has scrawled here: "The fire skeleton's bombs killed my friend instantly!  If I wasn't a ghost already, I'd have died, too."
-requires_not=ghosttalis
+requires_not_status=ghosttalis
 tooltip=Altar
 
