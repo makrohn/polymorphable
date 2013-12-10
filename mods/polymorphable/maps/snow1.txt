@@ -1,8 +1,8 @@
 [header]
 width=32
 height=32
-music=snow_about_a_castle.ogg
-tileset=snowmt.txt
+music=music/snow_about_a_castle.ogg
+tileset=tilesetdefs/snowmt.txt
 title=Snow Mountain
 
 [layer]

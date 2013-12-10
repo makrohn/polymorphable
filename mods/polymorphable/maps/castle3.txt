@@ -1,8 +1,8 @@
 [header]
 width=32
 height=32
-music=mysticaltheme.ogg
-tileset=interior.txt
+music=music/mysticaltheme.ogg
+tileset=tilesetdefs/interior.txt
 title=Castle Hall
 
 [layer]

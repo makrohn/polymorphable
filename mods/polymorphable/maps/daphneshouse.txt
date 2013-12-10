@@ -1,8 +1,8 @@
 [header]
 width=20
 height=20
-music=calmtown.ogg
-tileset=interior.txt
+music=music/calmtown.ogg
+tileset=tilesetdefs/interior.txt
 title=Daphne's House
 
 [layer]

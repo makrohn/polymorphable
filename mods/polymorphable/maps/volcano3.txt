@@ -1,8 +1,8 @@
 [header]
 width=32
 height=32
-music=evil_temple.ogg
-tileset=volcano.txt
+music=music/evil_temple.ogg
+tileset=tilesetdefs/volcano.txt
 title=Volcano
 
 [layer]

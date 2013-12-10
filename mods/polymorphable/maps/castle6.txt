@@ -3,17 +3,17 @@ width=32
 height=32
 tilewidth=32
 tileheight=32
-music=mysticaltheme.ogg
-tileset=town.txt
+music=music/mysticaltheme.ogg
+tileset=tilesetdefs/town.txt
 title=Castle Balcony
 
 [tilesets]
-tileset=../../../tiled/castle/outside/tiled_collision.png,32,32,0,0
-tileset=../../../tiled/castle/outside/generic_background.png,32,32,0,0
-tileset=../../../tiled/castle/outside/small_objects.png,32,64,0,0
-tileset=../../../tiled/castle/outside/town_buildings.png,32,128,0,0
-tileset=../../../tiled/castle/outside/bldgleft.png,32,128,16,0
-tileset=../../../tiled/castle/outside/bldgright.png,32,128,-16,0
+tileset=tilesetdefs/../../../tiled/castle/outside/tiled_collision.png,32,32,0,0
+tileset=tilesetdefs/../../../tiled/castle/outside/generic_background.png,32,32,0,0
+tileset=tilesetdefs/../../../tiled/castle/outside/small_objects.png,32,64,0,0
+tileset=tilesetdefs/../../../tiled/castle/outside/town_buildings.png,32,128,0,0
+tileset=tilesetdefs/../../../tiled/castle/outside/bldgleft.png,32,128,16,0
+tileset=tilesetdefs/../../../tiled/castle/outside/bldgright.png,32,128,-16,0
 
 [layer]
 type=background

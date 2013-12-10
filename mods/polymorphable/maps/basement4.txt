@@ -3,15 +3,15 @@ width=32
 height=32
 tilewidth=32
 tileheight=32
-music=winds_of_stories.ogg
-tileset=sewer.txt
+music=music/winds_of_stories.ogg
+tileset=tilesetdefs/sewer.txt
 title=Hidden Waterway
 
 [tilesets]
-tileset=../../../tiled/sewers/tiled_collision.png,32,32,0,0
-tileset=../../../tiled/sewers/generic_background.png,32,32,0,0
-tileset=../../../tiled/sewers/small_objects.png,32,64,0,0
-tileset=../../../tiled/sewers/sewer_objects.png,32,128,0,0
+tileset=tilesetdefs/../../../tiled/sewers/tiled_collision.png,32,32,0,0
+tileset=tilesetdefs/../../../tiled/sewers/generic_background.png,32,32,0,0
+tileset=tilesetdefs/../../../tiled/sewers/small_objects.png,32,64,0,0
+tileset=tilesetdefs/../../../tiled/sewers/sewer_objects.png,32,128,0,0
 
 [layer]
 type=background

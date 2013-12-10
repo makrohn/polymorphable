@@ -1,8 +1,8 @@
 [header]
 width=38
 height=19
-music=calmtown.ogg
-tileset=interior.txt
+music=music/calmtown.ogg
+tileset=tilesetdefs/interior.txt
 title=Elder's House
 
 [layer]

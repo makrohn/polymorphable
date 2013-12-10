@@ -3,15 +3,15 @@ width=32
 height=32
 tilewidth=32
 tileheight=32
-music=mysticaltheme.ogg
-tileset=interior.txt
+music=music/mysticaltheme.ogg
+tileset=tilesetdefs/interior.txt
 title=Castle Atrium
 
 [tilesets]
-tileset=../../../tiled/castle/tiled_collision.png,32,32,0,0
-tileset=../../../tiled/castle/interior_background.png,32,32,0,0
-tileset=../../../tiled/castle/intfurniture.png,32,64,0,0
-tileset=../../../tiled/castle/interiorbuildings.png,32,128,0,0
+tileset=tilesetdefs/../../../tiled/castle/tiled_collision.png,32,32,0,0
+tileset=tilesetdefs/../../../tiled/castle/interior_background.png,32,32,0,0
+tileset=tilesetdefs/../../../tiled/castle/intfurniture.png,32,64,0,0
+tileset=tilesetdefs/../../../tiled/castle/interiorbuildings.png,32,128,0,0
 
 [layer]
 type=background

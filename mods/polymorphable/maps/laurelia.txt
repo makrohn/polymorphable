@@ -3,17 +3,17 @@ width=178
 height=144
 tilewidth=32
 tileheight=32
-music=calmtown.ogg
-tileset=town.txt
+music=music/calmtown.ogg
+tileset=tilesetdefs/town.txt
 title=Laurelia
 
 [tilesets]
-tileset=../../../tiled/town/tiled_collision.png,32,32,0,0
-tileset=../../../tiled/town/generic_background.png,32,32,0,0
-tileset=../../../tiled/town/small_objects.png,32,64,0,0
-tileset=../../../tiled/town/town_buildings.png,32,128,0,0
-tileset=../../../tiled/town/bldgleft.png,32,128,16,0
-tileset=../../../tiled/town/bldgright.png,32,128,-16,0
+tileset=tilesetdefs/../../../tiled/town/tiled_collision.png,32,32,0,0
+tileset=tilesetdefs/../../../tiled/town/generic_background.png,32,32,0,0
+tileset=tilesetdefs/../../../tiled/town/small_objects.png,32,64,0,0
+tileset=tilesetdefs/../../../tiled/town/town_buildings.png,32,128,0,0
+tileset=tilesetdefs/../../../tiled/town/bldgleft.png,32,128,16,0
+tileset=tilesetdefs/../../../tiled/town/bldgright.png,32,128,-16,0
 
 [layer]
 type=background

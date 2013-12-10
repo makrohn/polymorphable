@@ -1,8 +1,8 @@
 [header]
 width=24
 height=23
-music=calmtown.ogg
-tileset=interior.txt
+music=music/calmtown.ogg
+tileset=tilesetdefs/interior.txt
 title=Granary
 
 [layer]

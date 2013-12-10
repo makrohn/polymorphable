@@ -1,8 +1,8 @@
 [header]
 width=26
 height=21
-music=calmtown.ogg
-tileset=interior.txt
+music=music/calmtown.ogg
+tileset=tilesetdefs/interior.txt
 title=Market
 
 [layer]

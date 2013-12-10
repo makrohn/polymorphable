@@ -3,15 +3,15 @@ width=28
 height=18
 tilewidth=32
 tileheight=32
-music=calmtown.ogg
-tileset=interior.txt
+music=music/calmtown.ogg
+tileset=tilesetdefs/interior.txt
 title=Library
 
 [tilesets]
-tileset=../../../tiled/laurelia/tiled_collision.png,32,32,0,0
-tileset=../../../tiled/laurelia/interior_background.png,32,32,0,0
-tileset=../../../tiled/laurelia/intfurniture.png,32,64,0,0
-tileset=../../../tiled/laurelia/interiorbuildings.png,32,128,0,0
+tileset=tilesetdefs/../../../tiled/laurelia/tiled_collision.png,32,32,0,0
+tileset=tilesetdefs/../../../tiled/laurelia/interior_background.png,32,32,0,0
+tileset=tilesetdefs/../../../tiled/laurelia/intfurniture.png,32,64,0,0
+tileset=tilesetdefs/../../../tiled/laurelia/interiorbuildings.png,32,128,0,0
 
 [layer]
 type=background

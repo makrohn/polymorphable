@@ -1,8 +1,8 @@
 [header]
 width=32
 height=32
-music=mysticaltheme.ogg
-tileset=town.txt
+music=music/mysticaltheme.ogg
+tileset=tilesetdefs/town.txt
 title=Castle Entry
 
 [layer]
