@@ -72,7 +72,7 @@ frame=2,5,268,0,32,44,17,38
 frame=2,6,268,0,32,44,17,38
 frame=2,7,232,0,36,44,18,38
 
-[ranged]
+[shoot]
 frames=3
 duration=3
 type=back_forth
@@ -101,7 +101,7 @@ frame=2,5,268,0,32,44,17,38
 frame=2,6,268,0,32,44,17,38
 frame=2,7,232,0,36,44,18,38
 
-[ment]
+[cast]
 frames=3
 duration=3
 type=back_forth
@@ -159,7 +159,7 @@ frame=2,5,268,44,36,38,18,34
 frame=2,6,236,88,36,38,18,34
 frame=2,7,268,44,36,38,18,34
 
-[melee]
+[swing]
 frames=3
 duration=3
 type=back_forth
