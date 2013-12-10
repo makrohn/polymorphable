@@ -1,7 +1,7 @@
 [power]
 id=1
 name=Swing
-type=effect
+type=fixed
 icon=1
 description=Basic melee attack
 new_state=swing
@@ -18,7 +18,7 @@ allow_power_mod=true
 [power]
 id=2
 name=Crush
-type=effect
+type=fixed
 icon=5
 description=Knock your enemy back
 requires_mp=1
@@ -37,13 +37,13 @@ type=fixed
 [power]
 id=3
 name=Lightning Storm
-type=effect
+type=fixed
 icon=6
 description=Three lightning bolts strike randomly around you
 requires_mp=1
 new_state=cast
 animation=lightning.txt
-soundfx=shock.ogg
+soundfx=soundfx/powers/shock.ogg
 use_hazard=true
 lifespan=11
 radius=96
@@ -53,24 +53,24 @@ starting_pos=source
 multitarget=true
 target_neighbor=1
 count=3
-damage_multiplier=200
+modifier_damage=multiply,200,0
 type=fixed
 base_damage=ment
 
 [power]
 id=11
 name=Shield
-type=effect
+type=fixed
 icon=11
 description=Create a force field that absorbs damage
 new_state=cast
 requires_mp=2
-soundfx=shield.ogg
+soundfx=soundfx/powers/shield.ogg
 post_effect=227,500,0
 cooldown=300
 type=fixed
 buff=true
-damage_multiplier=500
+modifier_damage=multiply,500,0
 
 [power]
 id=4
@@ -87,7 +87,7 @@ post_effect=229,200,240
 [power]
 id=5
 name=Cleave
-type=effect
+type=fixed
 icon=13
 description=Attack all enemies in a wide arc
 requires_mp=2
@@ -106,7 +106,7 @@ type=fixed
 [power]
 id=6
 name=Leech Strike
-type=effect
+type=fixed
 icon=7
 description=Turn 50% of damage you deal into HP
 requires_mp=1
@@ -125,7 +125,7 @@ type=fixed
 [power]
 id=7
 name=Stun Strike
-type=effect
+type=fixed
 icon=10
 description=Stun an enemy for 3 seconds
 requires_mp=2
@@ -144,13 +144,13 @@ type=fixed
 [power]
 id=8
 name=Ice Blast
-type=effect
+type=fixed
 icon=14
 description=Slow nearby enemies for 5 seconds
 requires_mp=1
 new_state=cast
 animation=quake.txt
-soundfx=freeze.ogg
+soundfx=soundfx/powers/freeze.ogg
 use_hazard=true
 base_damage=none
 lifespan=12
@@ -174,7 +174,7 @@ face=true
 directional=true
 requires_los=true
 animation=arrow.txt
-soundfx=shock.ogg
+soundfx=soundfx/powers/shock.ogg
 use_hazard=true
 aim_assist=true
 base_damage=ranged
@@ -199,12 +199,12 @@ source_type=hero
 [power]
 id=32
 name=Explode (npc)
-type=effect
+type=fixed
 icon=10
 description=Damages nearby enemies
 new_state=cast
 animation=quake.txt
-soundfx=quake.ogg
+soundfx=soundfx/powers/quake.ogg
 use_hazard=true
 base_damage=ment
 lifespan=12
@@ -222,11 +222,11 @@ type=fixed
 [power]
 id=33
 name=flametrap (trap)
-type=effect
+type=fixed
 icon=10
 description=Damages nearby enemies
 new_state=cast
-soundfx=quake.ogg
+soundfx=soundfx/powers/quake.ogg
 use_hazard=true
 base_damage=ment
 lifespan=12
@@ -256,7 +256,7 @@ requires_item=3
 [power]
 id=35
 name=Holy Sword
-type=effect
+type=fixed
 icon=8
 description=Deal two damage to all enemies on-screen
 new_state=swing
@@ -286,10 +286,10 @@ cooldown=3000
 
 [power]
 id=100
-type=effect
+type=fixed
 icon=32
 name=Carrot
-soundfx=chomp.ogg
+soundfx=soundfx/powers/chomp.ogg
 new_state=instant
 requires_item=1
 post_effect=230,4,1
@@ -299,10 +299,10 @@ buff=true
 
 [power]
 id=101
-type=effect
+type=fixed
 icon=33
 name=Watermelon
-soundfx=chomp.ogg
+soundfx=soundfx/powers/chomp.ogg
 new_state=instant
 requires_item=2
 post_effect=231,4,1
@@ -324,12 +324,12 @@ cooldown=180s
 [power]
 id=103
 name=Firebomb Explosion (enemy)
-type=effect
+type=fixed
 icon=10
 description=Damages nearby enemies
 new_state=cast
 animation=quake.txt
-soundfx=quake.ogg
+soundfx=soundfx/powers/quake.ogg
 use_hazard=true
 base_damage=ment
 lifespan=12
@@ -347,12 +347,12 @@ type=fixed
 [power]
 id=104
 name=Explode (enemy)
-type=effect
+type=fixed
 icon=10
 description=Damages nearby enemies
 new_state=cast
 animation=quake.txt
-soundfx=quake.ogg
+soundfx=soundfx/powers/quake.ogg
 use_hazard=true
 base_damage=ment
 lifespan=12
@@ -370,7 +370,7 @@ type=fixed
 [power]
 id=105
 name=Tick
-type=effect
+type=fixed
 icon=1
 new_state=cast
 requires_hp=1
@@ -386,7 +386,7 @@ type=fixed
 id=132
 name=Enemy Beacon
 description=Bring other enemies into the fight with a dummy attack
-type=effect
+type=fixed
 icon=20
 use_hazard=true
 lifespan=1
@@ -403,7 +403,7 @@ icon=22
 new_state=cast
 spawn_type=untransform
 description=Transform back to human
-soundfx=quake.ogg
+soundfx=soundfx/powers/quake.ogg
 
 [power]
 id=137
@@ -416,7 +416,7 @@ passive=true
 [power]
 id=138
 name=Swing
-type=effect
+type=fixed
 icon=1
 description=Basic melee attack
 new_state=swing
@@ -429,260 +429,6 @@ radius=128
 type=fixed
 starting_pos=melee
 allow_power_mod=true
-
-########################################
-#Effects
-########################################
-[power]
-id=200
-name=Bleeding
-type=effect
-icon=25
-effect_type=damage
-animation=spark_red_loop.txt
-
-[power]
-id=201
-name=Immobilized
-type=effect
-icon=24
-effect_type=speed
-
-[power]
-id=202
-name=Slowed
-type=effect
-icon=24
-effect_type=speed
-
-[power]
-id=203
-name=Stunned
-type=effect
-icon=26
-effect_type=stun
-
-[power]
-id=210
-name=HP (bonus)
-tag=HP
-type=effect
-effect_type=hp
-effect_additive=true
-
-[power]
-id=211
-name=HP Regen (bonus)
-tag=HP regen
-type=effect
-effect_type=hp_regen
-effect_additive=true
-
-[power]
-id=212
-name=MP (bonus)
-tag=MP
-type=effect
-effect_type=mp
-effect_additive=true
-
-[power]
-id=213
-name=MP Regen (bonus)
-tag=MP regen
-type=effect
-effect_type=mp_regen
-effect_additive=true
-
-[power]
-id=214
-name=Accuracy (bonus)
-tag=accuracy
-type=effect
-effect_type=accuracy
-effect_additive=true
-
-[power]
-id=215
-name=Avoidance (bonus)
-tag=avoidance
-type=effect
-effect_type=avoidance
-effect_additive=true
-
-[power]
-id=216
-name=Crit (bonus)
-tag=crit
-type=effect
-effect_type=crit
-effect_additive=true
-
-[power]
-id=217
-name=Speed (bonus)
-tag=speed
-type=effect
-effect_type=speed
-
-[power]
-id=218
-name=Offense (bonus)
-tag=offense
-type=effect
-effect_type=offense
-effect_additive=true
-
-[power]
-id=219
-name=Defense (bonus)
-tag=defense
-type=effect
-effect_type=defense
-effect_additive=true
-
-[power]
-id=220
-name=Physical (bonus)
-tag=physical
-type=effect
-effect_type=physical
-effect_additive=true
-
-[power]
-id=221
-name=Mental (bonus)
-tag=mental
-type=effect
-effect_type=mental
-effect_additive=true
-
-[power]
-id=222
-name=XP(bonus)
-tag=XP gain
-type=effect
-effect_type=xp
-effect_additive=true
-
-[power]
-id=223
-name=Gold (bonus)
-tag=gold find
-type=effect
-effect_type=currency
-effect_additive=true
-
-[power]
-id=224
-name=Fire Resistance (bonus)
-tag=fire resist
-type=effect
-effect_type=fire_resist
-effect_additive=true
-
-[power]
-id=225
-name=Ice Resistance (bonus)
-tag=ice resist
-type=effect
-effect_type=ice_resist
-effect_additive=true
-
-[power]
-id=226
-name=Immunity
-type=effect
-icon=12
-effect_type=immunity
-
-[power]
-id=227
-name=Shield
-type=effect
-icon=11
-effect_type=shield
-animation=shield.txt
-
-[power]
-id=228
-name=Heal
-type=effect
-effect_type=heal
-animation=heal.txt
-
-[power]
-id=229
-name=Haste
-icon=12
-type=effect
-effect_type=speed
-
-[power]
-id=230
-name=HP over time
-type=effect
-effect_type=hpot
-
-[power]
-id=231
-name=MP over time
-type=effect
-effect_type=mpot
-
-[power]
-id=232
-name=Knockback
-type=effect
-effect_type=forced_move
-
-[power]
-id=233
-name=Earth Resistance (bonus)
-tag=earth resist
-type=effect
-effect_type=earth_resist
-effect_additive=true
-
-[power]
-id=234
-name=Wind Resistance (bonus)
-tag=wind resist
-type=effect
-effect_type=wind_resist
-effect_additive=true
-
-[power]
-id=235
-name=Holy Resistance (bonus)
-tag=holy resist
-type=effect
-effect_type=holy_resist
-effect_additive=true
-
-[power]
-id=236
-name=Dark Resistance (bonus)
-tag=dark resist
-type=effect
-effect_type=dark_resist
-effect_additive=true
-
-[power]
-id=237
-name=HP Percent (bonus)
-tag=HPperc
-type=effect
-effect_type=hp_percent
-effect_additive=true
-
-[power]
-id=238
-name=MP Percent (bonus)
-tag=MPperc
-type=effect
-effect_type=mp_percent
-effect_additive=true
 
 [power]
 id=303
@@ -714,7 +460,7 @@ face=true
 directional=true
 requires_los=false
 animation=venom.txt
-soundfx=shock.ogg
+soundfx=soundfx/powers/shock.ogg
 use_hazard=false
 aim_assist=true
 base_damage=ranged
@@ -736,7 +482,7 @@ face=true
 directional=true
 requires_los=false
 animation=fireball.txt
-soundfx=shock.ogg
+soundfx=soundfx/powers/shock.ogg
 use_hazard=false
 aim_assist=true
 base_damage=ranged
