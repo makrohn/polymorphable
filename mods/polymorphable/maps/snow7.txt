@@ -228,13 +228,15 @@ requires_status=theend
 
 [event]
 # Alert
-type=run_once
+type=on_trigger
+repeat=false
 location=22,46,1,1
 msg=TRAPPED!
 
 [event]
 # Dialog
-type=run_once
+type=on_trigger
+repeat=false
 location=22,44,1,1
 msg=Prepare to die!
 

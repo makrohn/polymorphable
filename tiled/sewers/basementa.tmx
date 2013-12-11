@@ -43,7 +43,7 @@
   </data>
  </layer>
  <objectgroup name="event" width="32" height="32">
-  <object name="Strange Rock" type="run_once" x="32" y="512" width="32" height="32">
+  <object name="Strange Rock" type="on_trigger" x="32" y="512" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="msg" value="There's a key-shaped hole in this rock."/>
@@ -51,7 +51,7 @@
     <property name="tooltip" value="Strange Rock"/>
    </properties>
   </object>
-  <object name="Strange Rock" type="run_once" x="32" y="512" width="32" height="32">
+  <object name="Strange Rock" type="on_trigger" x="32" y="512" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="mapmod" value="foreground,15,13,0;foreground,15,14,0;foreground,15,15,0;foreground,15,16,0;foreground,15,17,0;object,14,16,0;object,14,17,0;collision,14,16,0"/>
@@ -65,21 +65,21 @@
     <property name="intermap" value="basement4.txt,29,2"/>
    </properties>
   </object>
-  <object name="Book" type="run_once" x="896" y="96" width="32" height="32">
+  <object name="Book" type="on_trigger" x="896" y="96" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="msg" value="It has been a long journey from Castle Hestian, but we have finally found a safe glade away from prying eyes.  We shall found our village here, among the laurel trees."/>
     <property name="tooltip" value="Dusty Diary"/>
    </properties>
   </object>
-  <object name="Book" type="run_once" x="928" y="96" width="32" height="32">
+  <object name="Book" type="on_trigger" x="928" y="96" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="msg" value="It has been a hundred years now since King Hestian's decree to burn all the &quot;skinchangers.&quot;  We must go into hiding or he'll destroy us all."/>
     <property name="tooltip" value="Moldy Diary"/>
    </properties>
   </object>
-  <object name="Book" type="run_once" x="960" y="96" width="32" height="32">
+  <object name="Book" type="on_trigger" x="960" y="96" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="msg" value="King Hestian will not let us live in the open unless we share with him the secret of immortality.  If only we actually held that secret, as he believes!"/>

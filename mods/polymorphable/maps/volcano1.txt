@@ -177,7 +177,8 @@ intermap=volcano3.txt,1,15
 
 [event]
 # Locked door
-type=run_once
+type=on_trigger
+repeat=false
 location=19,17,1,1
 hotspot=location
 mapmod=object,19,17,0;collision,19,17,0

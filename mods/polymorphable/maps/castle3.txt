@@ -158,7 +158,8 @@ number=3,3
 
 [event]
 # Fake chest
-type=run_once
+type=on_trigger
+repeat=false
 location=14,13,1,1
 hotspot=location
 mapmod=object,14,13,206

@@ -178,7 +178,8 @@ intermap=snowc.txt,18,30
 
 [event]
 # Alert
-type=run_once
+type=on_trigger
+repeat=false
 location=9,3,1,1
 hotspot=location
 msg=Bring ssssacrifices for Zalkaz here!

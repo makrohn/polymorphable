@@ -169,7 +169,8 @@ number=2,2
 
 [event]
 # Chest
-type=run_once
+type=on_trigger
+repeat=false
 location=15,13,1,1
 hotspot=location
 loot=1,16,13,fixed,1
@@ -178,7 +179,8 @@ tooltip=Chest
 
 [event]
 # Chest
-type=run_once
+type=on_trigger
+repeat=false
 location=23,13,1,1
 hotspot=location
 loot=2,22,13,fixed,1
@@ -187,7 +189,8 @@ tooltip=Chest
 
 [event]
 # Chest
-type=run_once
+type=on_trigger
+repeat=false
 location=25,16,1,1
 hotspot=location
 loot=0,25,17,fixed,5,20
@@ -196,7 +199,8 @@ tooltip=Chest
 
 [event]
 # Chest
-type=run_once
+type=on_trigger
+repeat=false
 location=24,21,1,1
 hotspot=location
 loot=0,24,22,fixed,5,20
@@ -205,7 +209,8 @@ tooltip=Chest
 
 [event]
 # Chest
-type=run_once
+type=on_trigger
+repeat=false
 location=19,21,1,1
 hotspot=location
 loot=1,20,21,fixed,1

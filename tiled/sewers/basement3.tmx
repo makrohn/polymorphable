@@ -213,7 +213,7 @@
     <property name="intermap" value="basement5.txt,27,23"/>
    </properties>
   </object>
-  <object name="Chest" type="run_once" x="736" y="128" width="32" height="32">
+  <object name="Chest" type="on_trigger" x="736" y="128" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="loot" value="3,23,5,fixed,1"/>
@@ -221,7 +221,7 @@
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>
-  <object name="Chest" type="run_once" x="800" y="192" width="32" height="32">
+  <object name="Chest" type="on_trigger" x="800" y="192" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="loot" value="1,25,7,fixed,2"/>

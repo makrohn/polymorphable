@@ -157,7 +157,7 @@
  </layer>
  <objectgroup name="enemy" width="32" height="32"/>
  <objectgroup name="event" width="32" height="32">
-  <object name="Alert" type="run_once" x="320" y="960" width="192" height="32">
+  <object name="Alert" type="on_trigger" x="320" y="960" width="192" height="32">
    <properties>
     <property name="msg" value="TRAPPED!"/>
     <property name="requires_not_status" value="1stjugg"/>

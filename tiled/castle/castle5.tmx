@@ -201,12 +201,12 @@
     <property name="intermap" value="castlec.txt,30,12"/>
    </properties>
   </object>
-  <object name="Alert" type="run_once" x="864" y="800" width="32" height="128">
+  <object name="Alert" type="on_trigger" x="864" y="800" width="32" height="128">
    <properties>
     <property name="msg" value="Violent bombs ahead!"/>
    </properties>
   </object>
-  <object name="Alert" type="run_once" x="608" y="800" width="32" height="128">
+  <object name="Alert" type="on_trigger" x="608" y="800" width="32" height="128">
    <properties>
     <property name="msg" value="Destroy them from afar to defuse them!"/>
    </properties>

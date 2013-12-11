@@ -201,7 +201,8 @@ intermap=basement6.txt,11,28
 
 [event]
 # Chest
-type=run_once
+type=on_trigger
+repeat=false
 location=28,25,1,1
 hotspot=location
 loot=0,28,26,fixed,25,50

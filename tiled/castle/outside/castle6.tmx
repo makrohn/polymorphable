@@ -214,7 +214,7 @@
     <property name="requires_status" value="2ndjugg"/>
    </properties>
   </object>
-  <object name="Alert" type="run_once" x="384" y="960" width="128" height="32">
+  <object name="Alert" type="on_trigger" x="384" y="960" width="128" height="32">
    <properties>
     <property name="msg" value="TRAPPED!"/>
     <property name="requires_not_status" value="2ndjugg"/>

@@ -176,7 +176,7 @@
     <property name="intermap" value="volcano3.txt,30,9"/>
    </properties>
   </object>
-  <object name="Ghost Talisman" type="run_once" x="736" y="224" width="32" height="32">
+  <object name="Ghost Talisman" type="on_trigger" x="736" y="224" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="loot" value="400,24,6,fixed,1"/>

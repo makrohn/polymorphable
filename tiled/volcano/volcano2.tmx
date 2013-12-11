@@ -161,7 +161,7 @@
     <property name="intermap" value="volcano1.txt,1,16"/>
    </properties>
   </object>
-  <object name="Forge" type="run_once" x="128" y="608" width="32" height="32">
+  <object name="Forge" type="on_trigger" x="128" y="608" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="loot" value="198,5,19,fixed,1"/>

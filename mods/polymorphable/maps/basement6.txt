@@ -199,7 +199,8 @@ intermap=basementb.txt,28,4
 
 [event]
 # Alert
-type=run_once
+type=on_trigger
+repeat=false
 location=10,18,1,1
 hotspot=location
 msg="Leftover material from blasting is unstable due to cave-ins!  Do not approach!"

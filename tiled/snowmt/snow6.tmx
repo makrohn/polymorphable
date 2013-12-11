@@ -188,7 +188,7 @@
     <property name="intermap" value="snowc.txt,18,30"/>
    </properties>
   </object>
-  <object name="Alert" type="run_once" x="288" y="96" width="32" height="32">
+  <object name="Alert" type="on_trigger" x="288" y="96" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="msg" value="Bring ssssacrifices for Zalkaz here!"/>

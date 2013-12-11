@@ -204,7 +204,8 @@ requires_status=2ndjugg
 
 [event]
 # Alert
-type=run_once
+type=on_trigger
+repeat=false
 location=12,30,4,1
 msg=TRAPPED!
 requires_not_status=2ndjugg

@@ -203,7 +203,7 @@
     <property name="intermap" value="basement6.txt,11,28"/>
    </properties>
   </object>
-  <object name="Chest" type="run_once" x="896" y="800" width="32" height="32">
+  <object name="Chest" type="on_trigger" x="896" y="800" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="loot" value="0,28,26,fixed,25,50"/>

@@ -434,7 +434,7 @@
 </data>
  </layer>
  <objectgroup name="event" width="100" height="100">
-  <object name="Bat Talisman Chest" type="run_once" x="1824" y="1504" width="32" height="32">
+  <object name="Bat Talisman Chest" type="on_trigger" x="1824" y="1504" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="loot" value="200,58,47,fixed,1"/>
@@ -444,7 +444,7 @@
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>
-  <object name="Chest" type="run_once" x="3008" y="1984" width="32" height="32">
+  <object name="Chest" type="on_trigger" x="3008" y="1984" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="loot" value="0,94,63,fixed,5,15"/>
@@ -452,7 +452,7 @@
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>
-  <object name="Chest" type="run_once" x="2816" y="1344" width="32" height="32">
+  <object name="Chest" type="on_trigger" x="2816" y="1344" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="loot" value="0,87,42,fixed,2,10"/>
@@ -460,7 +460,7 @@
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>
-  <object name="Chest" type="run_once" x="2752" y="1312" width="32" height="32">
+  <object name="Chest" type="on_trigger" x="2752" y="1312" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="loot" value="0,86,42,fixed,2,10"/>
@@ -468,7 +468,7 @@
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>
-  <object name="Chest" type="run_once" x="2528" y="1312" width="32" height="32">
+  <object name="Chest" type="on_trigger" x="2528" y="1312" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="loot" value="0,79,40,fixed,2,10"/>
@@ -476,7 +476,7 @@
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>
-  <object name="Carrots" type="run_once" x="3104" y="2336" width="32" height="32">
+  <object name="Carrots" type="on_trigger" x="3104" y="2336" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="loot" value="1,97,74,fixed,2"/>
@@ -484,7 +484,7 @@
     <property name="tooltip" value="Carrots"/>
    </properties>
   </object>
-  <object name="Carrots" type="run_once" x="3040" y="2720" width="32" height="32">
+  <object name="Carrots" type="on_trigger" x="3040" y="2720" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="loot" value="1,95,85,fixed,2"/>
@@ -504,7 +504,7 @@
     <property name="requires_not_status" value="evil_unleashed"/>
    </properties>
   </object>
-  <object name="Unblock passage" type="run_once" x="2432" y="2400" width="64" height="32">
+  <object name="Unblock passage" type="on_trigger" x="2432" y="2400" width="64" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="mapmod" value="object,75,72,880;object,76,72,0;object,77,72,0;object,78,72,878;object,75,71,885;object,76,71,0;object,77,71,0;object,78,71,883;collision,76,72,0;collision,77,72,0"/>
@@ -514,7 +514,7 @@
     <property name="tooltip" value="Unmarked Grave"/>
    </properties>
   </object>
-  <object name="Carrots" type="run_once" x="2400" y="3104" width="32" height="32">
+  <object name="Carrots" type="on_trigger" x="2400" y="3104" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="loot" value="1,75,98,fixed,2"/>

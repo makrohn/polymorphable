@@ -208,7 +208,7 @@
     <property name="intermap" value="basementb.txt,28,4"/>
    </properties>
   </object>
-  <object name="Alert" type="run_once" x="320" y="576" width="32" height="32">
+  <object name="Alert" type="on_trigger" x="320" y="576" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="msg" value="&quot;Leftover material from blasting is unstable due to cave-ins!  Do not approach!&quot;"/>

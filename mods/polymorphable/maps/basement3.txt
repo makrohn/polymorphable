@@ -213,7 +213,8 @@ intermap=basement5.txt,27,23
 
 [event]
 # Chest
-type=run_once
+type=on_trigger
+repeat=false
 location=23,4,1,1
 hotspot=location
 loot=3,23,5,fixed,1
@@ -222,7 +223,8 @@ tooltip=Chest
 
 [event]
 # Chest
-type=run_once
+type=on_trigger
+repeat=false
 location=25,6,1,1
 hotspot=location
 loot=1,25,7,fixed,2

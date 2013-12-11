@@ -209,7 +209,7 @@
     <property name="intermap" value="basement7.txt,27,1"/>
    </properties>
   </object>
-  <object name="Spawn Daphne's Shadow" type="run_once" x="224" y="512" width="32" height="32">
+  <object name="Spawn Daphne's Shadow" type="on_trigger" x="224" y="512" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="msg" value="You must defeat your shadow!"/>

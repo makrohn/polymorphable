@@ -157,7 +157,8 @@ data=
 
 [event]
 # Alert
-type=run_once
+type=on_trigger
+repeat=false
 location=10,30,6,1
 msg=TRAPPED!
 requires_not_status=1stjugg

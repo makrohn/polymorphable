@@ -173,7 +173,8 @@ number=2,2
 
 [event]
 # Chest
-type=run_once
+type=on_trigger
+repeat=false
 location=22,15,1,1
 hotspot=location
 loot=300,22,16,fixed,1

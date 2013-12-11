@@ -195,7 +195,8 @@ data=
 
 [event]
 # Strange Rock
-type=run_once
+type=on_trigger
+repeat=false
 location=1,16,1,1
 hotspot=location
 msg=There's a key-shaped hole in this rock.
@@ -204,7 +205,8 @@ tooltip=Strange Rock
 
 [event]
 # Strange Rock
-type=run_once
+type=on_trigger
+repeat=false
 location=1,16,1,1
 hotspot=location
 mapmod=foreground,15,13,0;foreground,15,14,0;foreground,15,15,0;foreground,15,16,0;foreground,15,17,0;object,14,16,0;object,14,17,0;collision,14,16,0
@@ -220,7 +222,8 @@ intermap=basement4.txt,29,2
 
 [event]
 # Book
-type=run_once
+type=on_trigger
+repeat=false
 location=28,3,1,1
 hotspot=location
 msg=It has been a long journey from Castle Hestian, but we have finally found a safe glade away from prying eyes.  We shall found our village here, among the laurel trees.
@@ -228,7 +231,8 @@ tooltip=Dusty Diary
 
 [event]
 # Book
-type=run_once
+type=on_trigger
+repeat=false
 location=29,3,1,1
 hotspot=location
 msg=It has been a hundred years now since King Hestian's decree to burn all the "skinchangers."  We must go into hiding or he'll destroy us all.
@@ -236,7 +240,8 @@ tooltip=Moldy Diary
 
 [event]
 # Book
-type=run_once
+type=on_trigger
+repeat=false
 location=30,3,1,1
 hotspot=location
 msg=King Hestian will not let us live in the open unless we share with him the secret of immortality.  If only we actually held that secret, as he believes!

@@ -200,7 +200,8 @@ intermap=basement7.txt,27,1
 
 [event]
 # Spawn Daphne's Shadow
-type=run_once
+type=on_trigger
+repeat=false
 location=7,16,1,1
 hotspot=location
 msg=You must defeat your shadow!

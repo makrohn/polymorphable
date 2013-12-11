@@ -195,7 +195,8 @@ data=
 
 [event]
 # Barrel
-type=run_once
+type=on_trigger
+repeat=false
 location=12,21,1,1
 hotspot=location
 msg=You found the switch key in a barrel!
@@ -216,7 +217,8 @@ intermap=basementa.txt,1,30
 
 [event]
 # Trick Chest
-type=run_once
+type=on_trigger
+repeat=false
 location=30,4,1,1
 hotspot=location
 mapmod=object,30,4,206
@@ -226,7 +228,8 @@ tooltip=Chest
 
 [event]
 # Chest
-type=run_once
+type=on_trigger
+repeat=false
 location=30,23,1,1
 hotspot=location
 loot=0,29,23,fixed,25,50

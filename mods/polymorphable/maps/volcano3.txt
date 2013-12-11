@@ -164,7 +164,8 @@ intermap=volcano1.txt,30,18
 
 [event]
 # Fire alert
-type=run_once
+type=on_trigger
+repeat=false
 location=10,5,6,3
 msg=There might be a way to cross that small gap, but it looks deadly.
 sfx=quake.ogg

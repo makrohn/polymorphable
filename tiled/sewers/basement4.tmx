@@ -43,7 +43,7 @@
   </data>
  </layer>
  <objectgroup name="event" width="32" height="32">
-  <object name="Barrel" type="run_once" x="384" y="672" width="32" height="32">
+  <object name="Barrel" type="on_trigger" x="384" y="672" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="msg" value="You found the switch key in a barrel!"/>
@@ -61,7 +61,7 @@
     <property name="intermap" value="basementa.txt,1,30"/>
    </properties>
   </object>
-  <object name="Trick Chest" type="run_once" x="960" y="128" width="32" height="32">
+  <object name="Trick Chest" type="on_trigger" x="960" y="128" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="mapmod" value="object,30,4,206"/>
@@ -70,7 +70,7 @@
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>
-  <object name="Chest" type="run_once" x="960" y="736" width="32" height="32">
+  <object name="Chest" type="on_trigger" x="960" y="736" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="loot" value="0,29,23,fixed,25,50"/>

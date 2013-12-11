@@ -171,7 +171,7 @@
  </objectgroup>
  <objectgroup name="enemy" width="32" height="32"/>
  <objectgroup name="event" width="32" height="32">
-  <object name="Fake chest" type="run_once" x="448" y="416" width="32" height="32">
+  <object name="Fake chest" type="on_trigger" x="448" y="416" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="mapmod" value="object,14,13,206"/>

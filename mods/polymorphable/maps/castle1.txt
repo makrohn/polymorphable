@@ -203,7 +203,8 @@ intermap=castlepath.txt,1,19
 
 [event]
 # Fire Trap
-type=run_once
+type=on_trigger
+repeat=false
 location=14,3,1,1
 power=33
 power_damage=100,100
@@ -211,7 +212,8 @@ power_path=0,0,14,3
 
 [event]
 # Fire Trap
-type=run_once
+type=on_trigger
+repeat=false
 location=15,4,1,1
 power=33
 power_damage=100,100
@@ -219,7 +221,8 @@ power_path=0,0,15,4
 
 [event]
 # Fire Trap
-type=run_once
+type=on_trigger
+repeat=false
 location=14,4,1,1
 power=33
 power_damage=100,100
@@ -227,7 +230,8 @@ power_path=0,0,14,4
 
 [event]
 # Fire Trap
-type=run_once
+type=on_trigger
+repeat=false
 location=13,4,1,1
 power=33
 power_damage=100,100
@@ -235,7 +239,8 @@ power_path=0,0,13,4
 
 [event]
 # Fire Trap
-type=run_once
+type=on_trigger
+repeat=false
 location=15,3,1,1
 power=33
 power_damage=100,100
@@ -243,7 +248,8 @@ power_path=0,0,15,3
 
 [event]
 # Fire Trap
-type=run_once
+type=on_trigger
+repeat=false
 location=13,3,1,1
 power=33
 power_damage=100,100

@@ -175,7 +175,7 @@
     <property name="intermap" value="volcano3.txt,1,15"/>
    </properties>
   </object>
-  <object name="Locked door" type="run_once" x="608" y="544" width="32" height="32">
+  <object name="Locked door" type="on_trigger" x="608" y="544" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="mapmod" value="object,19,17,0;collision,19,17,0"/>

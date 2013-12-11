@@ -165,7 +165,8 @@ intermap=laurelia.txt,91,2
 
 [event]
 # Fairy Flower
-type=run_once
+type=on_trigger
+repeat=false
 location=14,15,1,2
 hotspot=location
 loot=199,14,16,fixed,1

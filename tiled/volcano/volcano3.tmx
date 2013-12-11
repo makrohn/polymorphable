@@ -170,7 +170,7 @@
     <property name="intermap" value="volcano1.txt,30,18"/>
    </properties>
   </object>
-  <object name="Fire alert" type="run_once" x="320" y="160" width="192" height="96">
+  <object name="Fire alert" type="on_trigger" x="320" y="160" width="192" height="96">
    <properties>
     <property name="msg" value="There might be a way to cross that small gap, but it looks deadly."/>
     <property name="sfx" value="quake.ogg"/>
