@@ -16,8 +16,8 @@ loot=currency,33
 # combat stats
 hp=10
 speed=5
-melee_range=32
-threat_range=512
+melee_range=1
+threat_range=16
 turn_delay=12
 chance_pursue=20
 chance_melee_phys=2

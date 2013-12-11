@@ -12,8 +12,8 @@ suppress_hp=1
 # combat stats
 hp=1
 speed=0
-melee_range=64
-threat_range=144
+melee_range=2
+threat_range=5
 turn_delay=12
 chance_pursue=20
 chance_ranged_phys=100

@@ -15,8 +15,8 @@ loot=0,33,3,5
 # combat stats
 hp=4
 speed=4
-melee_range=32
-threat_range=512
+melee_range=1
+threat_range=16
 turn_delay=12
 chance_pursue=20
 chance_melee_phys=20
