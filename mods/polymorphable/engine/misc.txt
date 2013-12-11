@@ -4,3 +4,4 @@ save_hpmp=1
 aim_assist=32
 window_title=Polymorphable
 game_prefix=poly
+currency_id=4
