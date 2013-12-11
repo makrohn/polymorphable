@@ -7,7 +7,7 @@ icon=32
 power=100
 power_desc=Restore 4 HP
 item_type=consumable
-loot_animation=carrot
+loot_animation=animations/loot/carrot.txt
 rand_vendor=3
 max_quantity=25
 price=5
@@ -21,7 +21,7 @@ icon=33
 power=101
 power_desc=Restore 4 MP
 item_type=consumable
-loot_animation=watermelon
+loot_animation=animations/loot/watermelon.txt
 rand_vendor=3
 max_quantity=25
 price=5
@@ -35,7 +35,7 @@ icon=20
 power=34
 power_desc=Plant a 3-second bomb
 item_type=consumable
-loot_animation=hp_potion
+loot_animation=animations/loot/hp_potion.txt
 max_quantity=25
 price=15
 
@@ -49,7 +49,7 @@ abs=1,1
 icon=113
 soundfx=soundfx/inventory/cloth.ogg
 gfx=leather
-loot_animation=leather_armor
+loot_animation=animations/loot/leather_armor.txt
 
 [item]
 id=100
@@ -62,7 +62,7 @@ dmg_melee=1,1
 dmg_ment=1,1
 gfx=dagger
 power_desc=Just a kitchen knife
-loot_animation=sword
+loot_animation=animations/loot/sword.txt
 
 [item]
 id=101
@@ -76,7 +76,7 @@ dmg_ment=2,2
 gfx=saber
 power_desc=The sword of the ancient hero
 price=100
-loot_animation=saber
+loot_animation=animations/loot/saber.txt
 
 [item]
 id=198
@@ -85,7 +85,7 @@ level=10
 quality=normal
 item_type=quest
 icon=102,2
-loot_animation=gem
+loot_animation=animations/loot/gem.txt
 power_desc=Unlocks a door in the Volcano
 pickup_status=skelkey
 
@@ -96,7 +96,7 @@ level=10
 quality=normal
 item_type=quest
 icon=103,2
-loot_animation=gem
+loot_animation=animations/loot/gem.txt
 power_desc=Return this flower to Elder Thomas
 pickup_status=flowerfound
 
@@ -109,7 +109,7 @@ item_type=quest
 icon=114
 power=303
 power_desc=Use to transform into a bat and fly
-loot_animation=gem
+loot_animation=animations/loot/gem.txt
 pickup_status=battalisfound
 
 [item]
@@ -121,7 +121,7 @@ item_type=quest
 icon=115
 power=300
 power_desc=Use to transform into a snake and spit acid at enemies and switches
-loot_animation=gem
+loot_animation=animations/loot/gem.txt
 pickup_status=snaketalis
 
 [item]
@@ -133,7 +133,7 @@ item_type=quest
 icon=116
 power=400
 power_desc=Use to transform into a ghost and pass through flame
-loot_animation=gem
+loot_animation=animations/loot/gem.txt
 pickup_status=ghosttalis
 
 [item]
@@ -145,7 +145,7 @@ item_type=quest
 icon=116
 power=401
 power_desc=Use to transform into a ghost and pass through flame
-loot_animation=gem
+loot_animation=animations/loot/gem.txt
 pickup_status=ghostupgrade
 
 [item]
@@ -157,7 +157,7 @@ item_type=quest
 icon=99
 power=499
 power_desc=Bring to the Village Elder to create the Juggernaut Talisman
-loot_animation=gem
+loot_animation=animations/loot/gem.txt
 soundfx=soundfx/inventory/gem.ogg
 pickup_status=1stjugg
 
@@ -170,7 +170,7 @@ quality=normal
 icon=98
 power=499
 power_desc=Bring to the Village Elder to create the Juggernaut Talisman
-loot_animation=gem
+loot_animation=animations/loot/gem.txt
 soundfx=soundfx/inventory/gem.ogg
 pickup_status=2ndjugg
 
@@ -182,5 +182,5 @@ quality=normal
 icon=101
 item_type=quest
 power=500
-loot_animation=gem
+loot_animation=animations/loot/gem.txt
 power_desc=Transform into a mighty juggernaut

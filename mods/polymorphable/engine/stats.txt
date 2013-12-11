@@ -23,18 +23,18 @@ avoidance_per_defense=0
 crit=0
 crit_per_level=0
 
-dmg_melee_min=0
-dmg_melee_max=0
+dmg_melee_min=1
+dmg_melee_max=1
 dmg_melee_min_per_physical=0
 dmg_melee_max_per_physical=0
 
-dmg_ment_min=0
-dmg_ment_max=0
+dmg_ment_min=1
+dmg_ment_max=1
 dmg_ment_min_per_mental=0
 dmg_ment_max_per_mental=0
 
-dmg_ranged_min=0
-dmg_ranged_max=0
+dmg_ranged_min=1
+dmg_ranged_max=1
 dmg_ranged_min_per_offense=0
 dmg_ranged_max_per_offense=0
 
