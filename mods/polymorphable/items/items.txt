@@ -50,6 +50,7 @@ price_sell=1
 loot_animation=animations/loot/coins5.txt,0,24
 loot_animation=animations/loot/coins25.txt,25,99
 loot_animation=animations/loot/coins100.txt,1000
+max_quantity=50000
 
 
 [item]
