@@ -30,7 +30,7 @@ lifespan=1
 radius=2
 starting_pos=melee
 allow_power_mod=true
-post_effect=232,30,30
+post_effect=Knockback,30,30
 type=fixed
 
 [power]
@@ -65,7 +65,7 @@ description=Create a force field that absorbs damage
 new_state=cast
 requires_mp=2
 soundfx=soundfx/powers/shield.ogg
-post_effect=227,500,0
+post_effect=Shield,500,0
 cooldown=300
 type=fixed
 buff=true
@@ -81,7 +81,7 @@ type=fixed
 new_state=cast
 face=false
 buff=true
-post_effect=229,200,240
+post_effect=Haste,200,240
 
 [power]
 id=5
@@ -137,7 +137,7 @@ lifespan=1
 radius=2
 starting_pos=melee
 allow_power_mod=true
-post_effect=203,0,30
+post_effect=Stunned,0,30
 type=fixed
 
 [power]
@@ -159,7 +159,7 @@ trait_elemental=water
 visual_option=2
 starting_pos=source
 multitarget=true
-post_effect=202,50,150
+post_effect=Immobilized,50,150
 #cooldown=3000
 type=fixed
 
@@ -409,7 +409,7 @@ id=137
 name=Fire Immunity
 type=fixed
 buff=true
-post_effect=224,100,0
+post_effect=Fire Resistance,100,0
 passive=true
 
 [power]

@@ -23,61 +23,61 @@ icon=26
 type=stun
 
 [effect]
-name=HP (bonus)
+name=HP
 type=hp
 additive=true
 
 [effect]
-name=HP Regen (bonus)
+name=HP Regen
 type=hp_regen
 additive=true
 
 [effect]
-name=MP (bonus)
+name=MP
 type=mp
 additive=true
 
 [effect]
-name=MP Regen (bonus)
+name=MP Regen
 type=mp_regen
 additive=true
 
 [effect]
-name=Accuracy (bonus)
+name=Accuracy
 type=accuracy
 additive=true
 
 [effect]
-name=Avoidance (bonus)
+name=Avoidance
 type=avoidance
 additive=true
 
 [effect]
-name=Crit (bonus)
+name=Crit
 type=crit
 additive=true
 
 [effect]
-name=Speed (bonus)
+name=Speed
 type=speed
 
 [effect]
-name=Offense (bonus)
+name=Offense
 type=offense
 additive=true
 
 [effect]
-name=Defense (bonus)
+name=Defense
 type=defense
 additive=true
 
 [effect]
-name=Physical (bonus)
+name=Physical
 type=physical
 additive=true
 
 [effect]
-name=Mental (bonus)
+name=Mental
 type=mental
 additive=true
 
@@ -87,17 +87,17 @@ type=xp
 additive=true
 
 [effect]
-name=Gold (bonus)
+name=Gold
 type=currency
 additive=true
 
 [effect]
-name=Fire Resistance (bonus)
+name=Fire Resistance
 type=fire_resist
 additive=true
 
 [effect]
-name=Ice Resistance (bonus)
+name=Ice Resistance
 type=ice_resist
 additive=true
 
@@ -135,31 +135,31 @@ name=Knockback
 type=forced_move
 
 [effect]
-name=Earth Resistance (bonus)
+name=Earth Resistance
 type=earth_resist
 additive=true
 
 [effect]
-name=Wind Resistance (bonus)
+name=Wind Resistance
 type=wind_resist
 additive=true
 
 [effect]
-name=Holy Resistance (bonus)
+name=Holy Resistance
 type=holy_resist
 additive=true
 
 [effect]
-name=Dark Resistance (bonus)
+name=Dark Resistance
 type=dark_resist
 additive=true
 
 [effect]
-name=HP Percent (bonus)
+name=HP Percent
 type=hp_percent
 additive=true
 
 [effect]
-name=MP Percent (bonus)
+name=MP Percent
 type=mp_percent
 additive=true
