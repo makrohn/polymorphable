@@ -822,6 +822,7 @@ requires_status=cavernexplored
 # Fall to Cavern
 type=on_trigger
 location=86,14,6,1
+cutscene=pit.txt
 intermap=cavern.txt,98,98
 msg=You've fallen in a hole!
 requires_not_status=cavernexplored

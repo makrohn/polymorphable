@@ -1,0 +1,6 @@
+scale_gfx=true
+
+[scene]
+image=cutscenes/openpit.png
+caption=A pit opens beneath your feet, and you fall into a dank cave!
+pause=300
