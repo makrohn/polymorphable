@@ -10,7 +10,7 @@ animations=animations/enemies/giantfireskeleton.txt
 loot=1,25
 loot=2,13
 loot=3,5
-loot=0,100,15,25
+loot=currency,100,15,25
 
 # combat stats
 hp=10

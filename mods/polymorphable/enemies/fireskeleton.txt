@@ -10,7 +10,7 @@ animations=animations/enemies/fireskeleton.txt
 loot=1,25
 loot=2,13
 loot=3,5
-loot=0,33,5,10
+loot=currency,33,5,10
 
 # combat stats
 hp=7

@@ -11,7 +11,7 @@ defeat_status=theend
 loot=1,25
 loot=2,13
 loot=3,5
-loot=0,100,30,40
+loot=currency,100,30,40
 
 # combat stats
 hp=20

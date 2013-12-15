@@ -10,7 +10,7 @@ animations=animations/enemies/firebat.txt
 loot=1,25
 loot=2,13
 loot=3,5
-loot=0,33,3,5
+loot=currency,33,3,5
 
 # combat stats
 hp=4
