@@ -1,23 +1,25 @@
 # Copyright (C) 2011 Clint Bellanger
 # This file is distributed under the same license as the FLARE package.
-#
 # Martin Quinson <martin.quinson@loria.fr>, 2014.
+# Martin Quinson <Martin.Quinson@loria.fr>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-09 15:08+\n"
-"PO-Revision-Date: 2014-01-09 15:25+0100\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2014-01-30 18:00+0200\n"
+"Last-Translator: Martin Quinson <Martin.Quinson@loria.fr>\n"
+"Language-Team: Martin.quinson@loria.fr\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
 
 #: ../items/items.txt:3
 msgid "Carrot"
-msgstr "Carrote"
+msgstr "Carotte"
 
 #: ../items/items.txt:8
 msgid "Restore 4 HP"
@@ -73,7 +75,7 @@ msgstr "Juste un couteau de cuisine"
 
 #: ../items/items.txt:83
 msgid "Hero's Sword"
-msgstr "Épée héroique"
+msgstr "Épée héroïque"
 
 #: ../items/items.txt:91
 msgid "The sword of the ancient hero"
@@ -89,11 +91,11 @@ msgstr "quête"
 
 #: ../items/items.txt:103
 msgid "Unlocks a door in the Volcano"
-msgstr "Dévérouille une porte dans le volcan"
+msgstr "Déverrouille une porte dans le volcan"
 
 #: ../items/items.txt:108
 msgid "Fairy Flower"
-msgstr "Fleur féérique"
+msgstr "Fleur féerique"
 
 #: ../items/items.txt:114
 msgid "Return this flower to Elder Thomas"
@@ -113,15 +115,17 @@ msgstr "Talisman de serpent"
 
 #: ../items/items.txt:137
 msgid "Use to transform into a snake and spit acid at enemies and switches"
-msgstr "Permet de se changer en serpent et cracher de l'acide sur les ennemis et interrupteurs "
+msgstr ""
+"Permet de se changer en serpent et cracher de l'acide sur les ennemis et "
+"interrupteurs"
 
 #: ../items/items.txt:143
 msgid "Ghost Talisman"
-msgstr "Talisman de fantome"
+msgstr "Talisman de fantôme"
 
 #: ../items/items.txt:149
 msgid "Use to transform into a ghost and pass through flame"
-msgstr "Permet de se changer en fantome et passer à travers les flammes"
+msgstr "Permet de se changer en fantôme et passer à travers les flammes"
 
 #: ../items/items.txt:167
 msgid "Half of Juggernaut Talisman"
@@ -129,7 +133,7 @@ msgstr "Talisman du demi-fléau"
 
 #: ../items/items.txt:173
 msgid "Bring to the Village Elder to create the Juggernaut Talisman"
-msgstr "Apportez ceci à l'ancien du vilage pour créer le Talisman du Fléau"
+msgstr "Apportez ceci à l'ancien du village pour créer le Talisman du Fléau"
 
 #: ../items/items.txt:193
 msgid "Juggernaut Talisman"
@@ -165,11 +169,11 @@ msgstr "Quêtes"
 
 #: ../powers/powers.txt:3
 msgid "Swing"
-msgstr ""
+msgstr "Swing"
 
 #: ../powers/powers.txt:6
 msgid "Basic melee attack"
-msgstr "Attaque de mélée classique"
+msgstr "Attaque de mêlée classique"
 
 #: ../powers/powers.txt:19
 msgid "Crush"
@@ -229,43 +233,43 @@ msgstr "Assomme un ennemi pour 3 secondes"
 
 #: ../powers/powers.txt:145
 msgid "Ice Blast"
-msgstr ""
+msgstr "Souffle glacé"
 
 #: ../powers/powers.txt:148
 msgid "Slow nearby enemies for 5 seconds"
-msgstr ""
+msgstr "Ralentie les ennemis proches pour 5 secondes"
 
 #: ../powers/powers.txt:168
 msgid "Shoot (enemy)"
-msgstr ""
+msgstr "Tir (ennemi)"
 
 #: ../powers/powers.txt:191
 msgid "Drop a bomb that does 5 damage when it explodes."
-msgstr ""
+msgstr "Pose une bombe infligeant 5 dommages en explosant."
 
 #: ../powers/powers.txt:200
 msgid "Explode (npc)"
-msgstr ""
+msgstr "Explose (pnj)"
 
 #: ../powers/powers.txt:203
 msgid "Damages nearby enemies"
-msgstr ""
+msgstr "Blesse les ennemis proches"
 
 #: ../powers/powers.txt:223
 msgid "flametrap (trap)"
-msgstr ""
+msgstr "piège à feu (piège)"
 
 #: ../powers/powers.txt:248
 msgid "Plant a 3-second bomb."
-msgstr ""
+msgstr "Pose une bombe de 3 secondes."
 
 #: ../powers/powers.txt:257
 msgid "Holy Sword"
-msgstr ""
+msgstr "Épée sacrée"
 
 #: ../powers/powers.txt:260
 msgid "Deal two damage to all enemies on-screen"
-msgstr ""
+msgstr "Inflige deux dommages à tous les ennemis à l'écran"
 
 #: ../powers/powers.txt:276
 msgid "Summon Bat (enemy)"
@@ -273,131 +277,132 @@ msgstr ""
 
 #: ../powers/powers.txt:314
 msgid "Fire Bomb (enemy)"
-msgstr ""
+msgstr "Bombe de feu (ennemi)"
 
 #: ../powers/powers.txt:317
 msgid "Drop a bomb that does 10 damage when it explodes to the whole screen."
 msgstr ""
+"Pose une bombe infligeant 10 dommages à tout l'écran quand elle explose."
 
 #: ../powers/powers.txt:325
 msgid "Firebomb Explosion (enemy)"
-msgstr ""
+msgstr "Explosion de la bombe de feu (ennemi)"
 
 #: ../powers/powers.txt:348
 msgid "Explode (enemy)"
-msgstr ""
+msgstr "Explose (ennemi)"
 
 #: ../powers/powers.txt:371
 msgid "Tick"
-msgstr ""
+msgstr "Tic"
 
 #: ../powers/powers.txt:386
 msgid "Enemy Beacon"
-msgstr ""
+msgstr "Appât"
 
 #: ../powers/powers.txt:387
 msgid "Bring other enemies into the fight with a dummy attack"
-msgstr ""
+msgstr "Attire d'autres ennemis dans le combat avec une fausse attaque"
 
 #: ../powers/powers.txt:399
 msgid "Disenchant"
-msgstr ""
+msgstr "Désenchantement"
 
 #: ../powers/powers.txt:404
 msgid "Transform back to human"
-msgstr ""
+msgstr "Permet de reprendre une forme humaine"
 
 #: ../powers/powers.txt:409
 msgid "Fire Immunity"
-msgstr ""
+msgstr "Immunité au feu"
 
 #: ../powers/powers.txt:434
 msgid "Transform into Bat"
-msgstr ""
+msgstr "Transformer en chauve-souris"
 
 #: ../powers/powers.txt:439
 msgid "Turn into a bat"
-msgstr ""
+msgstr "Changer en chauve-souris"
 
 #: ../powers/powers.txt:444
 msgid "Transform into Snake"
-msgstr ""
+msgstr "Transformer en serpent"
 
 #: ../powers/powers.txt:449
 msgid "Turn into a spitting snake"
-msgstr ""
+msgstr "Changer en serpent cracheur"
 
 #: ../powers/powers.txt:454
 msgid "Spit Acid"
-msgstr ""
+msgstr "Cracher de l'acide"
 
 #: ../powers/powers.txt:476
 msgid "Spit Fire"
-msgstr ""
+msgstr "Cracher du feu"
 
 #: ../powers/powers.txt:497
 msgid "Transform into Ghost"
-msgstr ""
+msgstr "Transformer en fantôme"
 
 #: ../powers/powers.txt:502
 msgid "Turn into a ghost"
-msgstr ""
+msgstr "Changer en fantôme"
 
 #: ../powers/powers.txt:517
 msgid "Transform into Juggernaut"
-msgstr ""
+msgstr "Transformer en Fléau"
 
 #: ../powers/powers.txt:523
 msgid "Turn into a powerful knight for a short time"
-msgstr ""
+msgstr "Changer en un guerrier puissant pour un court instant"
 
 #: ../powers/powers.txt:528
 msgid "Transform into Squirrel"
-msgstr ""
+msgstr "Transformer en écureuil"
 
 #: ../powers/powers.txt:533
 msgid "Turn into a squirrel"
-msgstr ""
+msgstr "Changer en écureuil"
 
 #: ../engine/elements.txt:2
 msgid "fire"
-msgstr ""
+msgstr "feu"
 
 #: ../engine/elements.txt:3
 msgid "Fire Resistance"
-msgstr ""
+msgstr "Résistance au feu"
 
 #: ../engine/elements.txt:6
 msgid "ice"
-msgstr ""
+msgstr "glace"
 
 #: ../engine/elements.txt:7
 msgid "Ice Resistance"
-msgstr ""
+msgstr "Résistance à la glace"
 
 #: ../engine/elements.txt:10
 msgid "earth"
-msgstr ""
+msgstr "terre"
 
 #: ../engine/elements.txt:11
 msgid "Earth Resistance"
-msgstr ""
+msgstr "Résistance à la terre"
 
 #: ../engine/elements.txt:14
 msgid "wind"
-msgstr ""
+msgstr "vent"
 
 #: ../engine/elements.txt:15
 msgid "Wind Resistance"
-msgstr ""
+msgstr "Résistance au vent"
 
 #: ../engine/classes.txt:2
 msgid "Adventurer"
-msgstr ""
+msgstr "Aventurier"
 
 #: ../engine/hero_options.txt:6
 msgid "Daphne"
-msgstr ""
+msgstr "Daphné"
 
 #: ../engine/titles.txt:2
 msgid "Therianthrope"
@@ -405,7 +410,7 @@ msgstr ""
 
 #: ../engine/titles.txt:6
 msgid "Metamorph"
-msgstr ""
+msgstr "Métamorphe"
 
 #: ../engine/titles.txt:10
 msgid "Skinwalker"
@@ -413,11 +418,11 @@ msgstr ""
 
 #: ../engine/titles.txt:14
 msgid "Animagus"
-msgstr ""
+msgstr "Animage"
 
 #: ../engine/titles.txt:18
 msgid "Shapeshifter"
-msgstr ""
+msgstr "Change-forme"
 
 #: ../engine/titles.txt:22
 msgid "Doppelganger"
@@ -425,311 +430,322 @@ msgstr ""
 
 #: ../engine/titles.txt:26
 msgid "Chameleon"
-msgstr ""
+msgstr "Caméléon"
 
 #: ../engine/titles.txt:30
 msgid "Girl"
-msgstr ""
+msgstr "Fille"
 
 #: ../enemies/archer.txt:1
 msgid "Cultist Archer"
-msgstr ""
+msgstr "Archer sectaire"
 
 #: ../enemies/bat.txt:1
 msgid "Bat"
-msgstr ""
+msgstr "Chauve-souris"
 
 #: ../enemies/beetle.txt:1
 msgid "Beetle"
-msgstr ""
+msgstr "Scarabée"
 
 #: ../enemies/caster.txt:1
 msgid "Cultist Mage"
-msgstr ""
+msgstr "Mage sectaire"
 
 #: ../enemies/combat_dummy.txt:1
 msgid "Combat Dummy"
-msgstr ""
+msgstr "Mannequin de combat"
 
 #: ../enemies/dshadow.txt:1
 msgid "Daphne's Shadow"
-msgstr ""
+msgstr "Ombre de Daphné"
 
 #: ../enemies/firebat.txt:1
 msgid "Firebat"
-msgstr ""
+msgstr "Chauve-souris de feu"
 
 #: ../enemies/firebomb.txt:1
 msgid "Fire Bomb"
-msgstr ""
+msgstr "Bombe de feu"
 
 #: ../enemies/fireskeleton.txt:1
 msgid "Fire Skeleton"
-msgstr ""
+msgstr "Squelette de feu"
 
 #: ../enemies/ghost.txt:1
 msgid "Ghost"
-msgstr ""
+msgstr "Fantôme"
 
 #: ../enemies/ghostbomb.txt:1
 msgid "Ghost Bomb"
-msgstr ""
+msgstr "Bombe fantôme"
 
 #: ../enemies/giantfireskeleton.txt:1
 msgid "Giant Fire Skeleton"
-msgstr ""
+msgstr "Squelette géant de feu"
 
 #: ../enemies/giantghost.txt:1
 msgid "Giant Ghost"
-msgstr ""
+msgstr "Fantôme géant"
 
 #: ../enemies/juggernautd.txt:1
 msgid "Juggernaut"
-msgstr ""
+msgstr "Fléau"
 
 #: ../enemies/knight.txt:1
 msgid "Cultist Knight"
-msgstr ""
+msgstr "Chevalier sectaire"
 
 #: ../enemies/monk.txt:1
 msgid "Cultist Monk"
-msgstr ""
+msgstr "Moine sectaire"
 
 #: ../enemies/rubysnake.txt:1
 msgid "Ruby Snake"
-msgstr ""
+msgstr "Serpent vermeille"
 
 #: ../enemies/skeleton.txt:1
 msgid "Skeleton"
-msgstr ""
+msgstr "Squelette"
 
 #: ../enemies/skeletonknight.txt:1
 msgid "Skeleton Knight"
-msgstr ""
+msgstr "Chevalier squelette"
 
 #: ../enemies/skeletonmage.txt:1
 msgid "Skeleton Mage"
-msgstr ""
+msgstr "Mage squelette"
 
 #: ../enemies/slime.txt:1
 msgid "Slime"
-msgstr ""
+msgstr "Moisissure"
 
 #: ../enemies/snake.txt:1
 msgid "Snake"
-msgstr ""
+msgstr "Serpent"
 
 #: ../enemies/venombat.txt:1
 msgid "Venom Bat"
-msgstr ""
+msgstr "Chauve-souris venimeuse"
 
 #: ../enemies/zalkaz.txt:1
 msgid "Zalkaz, Bane of Laurelia"
-msgstr ""
+msgstr "Zalkaz, peste de Laurelia"
 
 #: ../maps/barracks.txt:8
 msgid "Barracks"
-msgstr ""
+msgstr "Baraquements"
 
 #: ../maps/basement1.txt:6
 msgid "Secret Basement"
-msgstr ""
+msgstr "Base secrète"
 
 #: ../maps/basement3.txt:8
 msgid "Secret Cavern"
-msgstr ""
+msgstr "Caverne secrète"
 
 #: ../maps/basement3.txt:222
 msgid "Chest"
-msgstr ""
+msgstr "Coffre"
 
 #: ../maps/basement4.txt:8
 msgid "Hidden Waterway"
-msgstr ""
+msgstr "Canal caché"
 
 #: ../maps/basement4.txt:202
 msgid "You found the switch key in a barrel!"
-msgstr ""
+msgstr "Vous avez trouvé la clé dans le tonneau !"
 
 #: ../maps/basement4.txt:204
 msgid "Suspicious Barrel"
-msgstr ""
+msgstr "Tonneau bizarre"
 
 #: ../maps/basement4.txt:225
 msgid "An empty chest!"
-msgstr ""
+msgstr "Un coffre vide !"
 
 #: ../maps/basement5.txt:203
 msgid "There's a key-shaped hole in this rock."
-msgstr ""
+msgstr "Il y a un trou en forme de clé dans ce rocher."
 
 #: ../maps/basement5.txt:205
 msgid "Strange Rock"
-msgstr ""
+msgstr "Rocher étrange"
 
 #: ../maps/basement6.txt:206
 msgid "\"Leftover material from blasting is unstable due to cave-ins!  Do not approach!\""
 msgstr ""
+"« Restes d'explosion instables risquant de s'effondrer ! Ne pas approcher ! "
+"»"
 
 #: ../maps/basement6.txt:207
 msgid "Sign"
-msgstr ""
+msgstr "Panneau"
 
 #: ../maps/basement7.txt:8
 msgid "Sewer"
-msgstr ""
+msgstr "Égout"
 
 #: ../maps/basement7.txt:202
 msgid "FENCES ARE FOR YOUR PROTECTION.  DO NOT OPEN GATES."
-msgstr ""
+msgstr "GRILLES PLACÉES POUR VOTRE PROTECTION.  NE PAS OUVRIR LES GRILLES."
 
 #: ../maps/basement7.txt:203
 msgid "Signpost"
-msgstr ""
+msgstr "Poteau indicateur"
 
 #: ../maps/basement7.txt:211
 msgid "There is a strange groove in this rock"
-msgstr ""
+msgstr "Cette roche porte une rainure étrange"
 
 #: ../maps/basement8.txt:6
 msgid "Sanctuary"
-msgstr ""
+msgstr "Sanctuaire"
 
 #: ../maps/basement8.txt:207
 msgid "You must defeat your shadow!"
-msgstr ""
+msgstr "Vous devez battre votre ombre !"
 
 #: ../maps/basement8.txt:210
 msgid "Fountain"
-msgstr ""
+msgstr "Fontaine"
 
 #: ../maps/basementa.txt:213
 msgid "The switch key fits into the hole in this rock!"
-msgstr ""
+msgstr "La clé rentre dans le trou de ce rocher !"
 
 #: ../maps/basementa.txt:229
 msgid "It has been a long journey from Castle Hestian, but we have finally found a safe glade away from prying eyes.  We shall found our village here, among the laurel trees."
 msgstr ""
+"Ce fût un long voyage depuis le château Hestian, mais vous avez enfin trouvé "
+"une clairière sure, loin des regards accusateurs. On y trouve notre "
+"village, entre les lauriers."
 
 #: ../maps/basementa.txt:230
 msgid "Dusty Diary"
-msgstr ""
+msgstr "Journal intime poussiéreux"
 
 #: ../maps/basementa.txt:238
 msgid "It has been a hundred years now since King Hestian's decree to burn all the \"skinchangers.\"  We must go into hiding or he'll destroy us all."
 msgstr ""
+"Cela fait un siècle maintenant que le décret du roi Hestian demande de "
+"brûler tous les «change-formes». Nous devons nous cacher, ou il nous "
+"détruira tous."
 
 #: ../maps/basementa.txt:239
 msgid "Moldy Diary"
-msgstr ""
+msgstr "Journal intime moisi"
 
 #: ../maps/basementa.txt:247
 msgid "King Hestian will not let us live in the open unless we share with him the secret of immortality.  If only we actually held that secret, as he believes!"
 msgstr ""
+"Le roi Hestian ne nous laissera pas en paix avant que nous ne lui donnions "
+"le secret de l'immortalité. Si seulement nous pouvions avoir ce secret comme "
+"il le croit !"
 
 #: ../maps/basementa.txt:248
 msgid "Yellowed Diary"
-msgstr ""
+msgstr "Journal intime jauni"
 
 #: ../maps/basementb.txt:8
 msgid "Underground Lake"
-msgstr ""
+msgstr "Lac sous-terrain"
 
 #: ../maps/basementb.txt:210
 msgid "Ambushed!"
-msgstr ""
+msgstr "Embusqué !"
 
 #: ../maps/castle1.txt:6
 msgid "Castle Entry"
-msgstr ""
+msgstr "Entrée du château"
 
 #: ../maps/castle2.txt:8
 msgid "Castle Atrium"
-msgstr ""
+msgstr "Atrium du château"
 
 #: ../maps/castle3.txt:6
 msgid "Castle Hall"
-msgstr ""
+msgstr "Hall du château"
 
 #: ../maps/castle4.txt:8
 msgid "Castle Basement"
-msgstr ""
+msgstr "Cave du château"
 
 #: ../maps/castle5.txt:229
 msgid "Violent bombs ahead!"
-msgstr ""
+msgstr "Explosions violentes devant !"
 
 #: ../maps/castle5.txt:236
 msgid "Destroy them from afar to defuse them!"
-msgstr ""
+msgstr "Détruisez-les à distance pour les désamorcer !"
 
 #: ../maps/castle6.txt:8
 msgid "Castle Balcony"
-msgstr ""
+msgstr "Balcon du château"
 
 #: ../maps/castle6.txt:210
 msgid "TRAPPED!"
-msgstr ""
+msgstr "PIÉGÉ !"
 
 #: ../maps/castlea.txt:8
 msgid "Castle Ballroom"
-msgstr ""
+msgstr "Salle de bal du château"
 
 #: ../maps/castleb.txt:8
 msgid "Castle Sewer"
-msgstr ""
+msgstr "Égout du château"
 
 #: ../maps/castlepath.txt:6
 msgid "Castle Path"
-msgstr ""
+msgstr "Chemin du château"
 
 #: ../maps/cavern.txt:8
 msgid "Cavern"
-msgstr ""
+msgstr "Caverne"
 
 #: ../maps/cavern.txt:440
 msgid "Drag to actionbar to use."
-msgstr ""
+msgstr "Placer-le sur la barre d'action pour l'utiliser."
 
 #: ../maps/cavern.txt:492
 msgid "Carrots"
-msgstr ""
+msgstr "Carottes"
 
 #: ../maps/cavern.txt:528
 msgid "Unmarked Grave"
-msgstr ""
+msgstr "Tombe anonyme"
 
 #: ../maps/church.txt:8
 msgid "Church"
-msgstr ""
+msgstr "Église"
 
 #: ../maps/daphneshouse.txt:6
 msgid "Daphne's House"
-msgstr ""
+msgstr "Maison de Daphné"
 
 #: ../maps/eldershouse.txt:6
 msgid "Elder's House"
-msgstr ""
+msgstr "Maison de l'ancien"
 
 #: ../maps/eldershouse.txt:112
 msgid "A secret passage!"
-msgstr ""
+msgstr "Un passage secret !"
 
 #: ../maps/glade.txt:8
 msgid "Glade"
-msgstr ""
+msgstr "Clairière"
 
 #: ../maps/granary.txt:6
 msgid "Granary"
-msgstr ""
+msgstr "Grenier"
 
 #: ../maps/inn1st.txt:8
 msgid "Inn, 1st Floor"
-msgstr ""
+msgstr "Auberge, premier étage"
 
 #: ../maps/inn2nd.txt:6
 msgid "Inn, 2nd Floor"
-msgstr ""
+msgstr "Auberge, deuxième étage"
 
 #: ../maps/laurelia.txt:8
 msgid "Laurelia"
@@ -737,19 +753,21 @@ msgstr ""
 
 #: ../maps/laurelia.txt:827
 msgid "You've fallen in a hole!"
-msgstr ""
+msgstr "Vous êtes tombé dans un trou !"
 
 #: ../maps/library.txt:8
 msgid "Library"
-msgstr ""
+msgstr "Bibliothèque"
 
 #: ../maps/library.txt:94
 msgid "p.32: \"Ghosts, being incorporeal, are nearly immune to heat and fire.\""
 msgstr ""
+"p.32 : « Les fantômes étant incorporels, ils sont pratiquement immunisés "
+"contre la chaleur et le feu »"
 
 #: ../maps/library.txt:95
 msgid "On Ghosts"
-msgstr ""
+msgstr "À propos des fantômes"
 
 #: ../maps/library.txt:103
 msgid "p.1:  \"This small town is a seeming backwater.  However, nearly every one of it's citizens has the ability to polymorph into another creature.\"  Better put it back on the top shelf where the tourists can't find it."
@@ -1670,4 +1688,3 @@ msgstr ""
 #: ../npcs/vacationerb.txt:13
 msgid "Darn.  Our castle is way more impressive than your ruined one here, I'll bet you could get skis there."
 msgstr ""
-
