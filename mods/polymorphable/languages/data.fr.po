@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-09 15:08+\n"
-"PO-Revision-Date: 2014-01-30 18:00+0200\n"
+"PO-Revision-Date: 2014-01-30 18:25+0200\n"
 "Last-Translator: Martin Quinson <Martin.Quinson@loria.fr>\n"
 "Language-Team: Martin.quinson@loria.fr\n"
 "Language: fr\n"
@@ -772,206 +772,237 @@ msgstr "À propos des fantômes"
 #: ../maps/library.txt:103
 msgid "p.1:  \"This small town is a seeming backwater.  However, nearly every one of it's citizens has the ability to polymorph into another creature.\"  Better put it back on the top shelf where the tourists can't find it."
 msgstr ""
+"p.1 : « Cette petite ville semble paisible au premier abord, mais presque "
+"tous ses habitants peuvent se transformer en une autre créature. » Il vaut "
+"mieux reposer ce livre sur l'étagère du haut où les touristes ne le "
+"trouveront pas."
 
 #: ../maps/library.txt:104
 msgid "History of Laurelia"
-msgstr ""
+msgstr "Histoire de Laurelia"
 
 #: ../maps/library.txt:112
 msgid "p. 967: \"Zalkaz was constantly beset by paladins seeking to destroy him; he would eliminate each one by blotting out the light with hordes of bats.\""
 msgstr ""
+"p. 967 : « Zalkaz était constamment assailli par des paladins cherchant à le "
+"détruire, mais il les éliminait les uns après les autres en masquant la "
+"lumière avec des hordes de chauves-souris. »"
 
 #: ../maps/library.txt:113
 msgid "Demonology"
-msgstr ""
+msgstr "Démonologie"
 
 #: ../maps/market.txt:6
 msgid "Market"
-msgstr ""
+msgstr "Marché"
 
 #: ../maps/marketbasement.txt:6
 msgid "Market Basement"
-msgstr ""
+msgstr "Cave du marché"
 
 #: ../maps/mountainpath.txt:5
 msgid "Mountain Path"
-msgstr ""
+msgstr "Chemin de la montagne"
 
 #: ../maps/smallhouse.txt:6
 msgid "Small House"
-msgstr ""
+msgstr "Petite maison"
 
 #: ../maps/smithy.txt:6
 msgid "Smithy"
-msgstr ""
+msgstr "Forge"
 
 #: ../maps/snow1.txt:6
 msgid "Snow Mountain"
-msgstr ""
+msgstr "Montagne enneigée"
 
 #: ../maps/snow1.txt:176
 msgid "You need the Juggernaut Talisman to proceed!"
-msgstr ""
+msgstr "Il vous faut le talisman du Fléau pour continuer !"
 
 #: ../maps/snow4.txt:6
 msgid "Mountain Cave"
-msgstr ""
+msgstr "Grotte"
 
 #: ../maps/snow6.txt:185
 msgid "Bring ssssacrifices for Zalkaz here!"
-msgstr ""
+msgstr "Apportez les sssssacrifices de Zalkaz isssssi !"
 
 #: ../maps/snow7.txt:6
 msgid "Zalkaz's Lair"
-msgstr ""
+msgstr "Repère de Zalkaz"
 
 #: ../maps/snow7.txt:226
 msgid "You're home!"
-msgstr ""
+msgstr "Vous êtes comme chez vous !"
 
 #: ../maps/snow7.txt:241
 msgid "Prepare to die!"
-msgstr ""
+msgstr "Préparez vous à mourir !"
 
 #: ../maps/snowa.txt:6
 msgid "Mountain Mine"
-msgstr ""
+msgstr "Mine de la montagne"
 
 #: ../maps/snowa.txt:173
 msgid "Empty..."
-msgstr ""
+msgstr "Vide..."
 
 #: ../maps/snowb.txt:6
 msgid "Mountain Shop"
-msgstr ""
+msgstr "Magasin de la montagne"
 
 #: ../maps/snowc.txt:6
 msgid "Safe Room"
-msgstr ""
+msgstr "Pièce sure"
 
 #: ../maps/tavern.txt:6
 msgid "Tavern"
-msgstr ""
+msgstr "Taverne"
 
 #: ../maps/volcano1.txt:8
 msgid "Volcano"
-msgstr ""
+msgstr "Volcan"
 
 #: ../maps/volcano1.txt:186
 msgid "Locked Gate"
-msgstr ""
+msgstr "Portail verrouillé"
 
 #: ../maps/volcano2.txt:172
 msgid "Anvil"
-msgstr ""
+msgstr "Enclume"
 
 #: ../maps/volcano3.txt:170
 msgid "There might be a way to cross that small gap, but it looks deadly."
 msgstr ""
+"Il y a peut-être un passage pour traverser le petit espace, mais il semble "
+"mortel."
 
 #: ../maps/volcano3.txt:179
 msgid "Lava River"
-msgstr ""
+msgstr "Rivière de lave"
 
 #: ../maps/volcano4.txt:185
 msgid "Someone has scrawled here: \"The fire skeleton's bombs killed my friend instantly!  If I wasn't a ghost already, I'd have died, too.\""
 msgstr ""
+"Quelqu'un a gravé ici : « les bombes du squelette de feu ont tué mon ami "
+"instantanément ! Si je n'étais pas déjà un fantôme, je serais mort moi "
+"aussi. »"
 
 #: ../maps/volcano4.txt:187
 msgid "Altar"
-msgstr ""
+msgstr "Autel"
 
 #: ../quests/basement.txt:4
 msgid "Explore the strange basement you've found underneath the Elder's house."
 msgstr ""
+"Explorez l'étrange sous-sol que vous avez trouvé sous la maison de l'ancien."
 
 #: ../quests/basement.txt:9
 msgid "You've found a strange key, but what on earth could it be used for?"
-msgstr ""
+msgstr "Vous avez trouvé une étrange clé, mais à quoi diable peut-elle servir ?"
 
 #: ../quests/basement.txt:14
 msgid "Speak with the ghost in the basement."
-msgstr ""
+msgstr "Parlez avec le fantôme du sous-sol."
 
 #: ../quests/downahole.txt:3
 msgid "Explore the village of Laurelia"
-msgstr ""
+msgstr "Explorez le village de Laurelia"
 
 #: ../quests/downahole.txt:8
 msgid "Find the Fairy Flower north of town, over the river."
-msgstr ""
+msgstr "Trouvez la fleur féerique au nord de la ville, après la rivière."
 
 #: ../quests/downahole.txt:13
 msgid "You found the Fairy Flower!  Now to bring it home to the Elder, and to explain what you saw in the cave."
 msgstr ""
+"Vous avez trouvé la fleur féerique ! Rapportez-la maintenant à la maison de "
+"l'ancien, et expliquez ce que vous avez vu dans la grotte."
 
 #: ../quests/juggernaut.txt:4
 msgid "You have been tasked with finding the Juggernaut Talisman.  Go east to find the first half in the volcano."
 msgstr ""
+"On vous a demandé de trouver le Talisman du Fléau. Allez à l'est pour "
+"trouver la première moitié dans le volcan."
 
 #: ../quests/juggernaut.txt:9
 msgid "You have found the first half of the Juggernaut Talisman.  Go to the volcano to the west to find the second half."
 msgstr ""
+"Vous avez trouvé la première moitié du talisman du Fléau. Allez au volcan de "
+"l'ouest pour trouver la seconde moitié."
 
 #: ../quests/juggernaut.txt:14
 msgid "You have found the 2nd half of the Juggernaut Talisman.  Bring it to the village elder to have him combine the halves."
 msgstr ""
+"Vous avez trouvé les deux moitiés du talisman du Fléau. Apportez-les à "
+"l'ancien du village pour qu'il les combine."
 
 #: ../quests/snowmountain.txt:4
 msgid "Scale Snow Mountain, south of Laurelia, to put an end to Zalkaz once and for all."
 msgstr ""
+"Escaladez la montagne enneigée au sud de Laurelia, pour mettre fin à Zalkaz "
+"une bonne fois pour toute."
 
 #: ../quests/snowmountain.txt:8
 msgid "Leave Zalkaz's Lair, and return to Laurelia to talk to the townsfolk.  Congratulations, you've beaten Laurelia's Polymorphable Citizens!"
 msgstr ""
+"Quittez le repaire de Zalkaz et retournez parler aux habitants de Laurelia. "
+"Bravo, vous avez vaincu les citoyens changeforme de Laurelia !"
 
 #: ../npcs/apprentice.txt:1
 msgid "Wot the Apprentice"
-msgstr ""
+msgstr "Wot l'apprenti"
 
 #: ../npcs/apprentice.txt:8
 msgid "Good Morning"
-msgstr ""
+msgstr "Bonjour"
 
 #: ../npcs/apprentice.txt:9
 msgid "Good morning Daphne."
-msgstr ""
+msgstr "Bonjour, Daphné."
 
 #: ../npcs/apprentice.txt:10
 msgid "Good morning Wot!  Clara working you hard?"
-msgstr ""
+msgstr "Bonjour, Wot ! Clara te fait travailler dur ?"
 
 #: ../npcs/apprentice.txt:11
 msgid "It's miserable.  I've forged three swords and two helms this morning, but she says it's still not enough."
 msgstr ""
+"C'est terrible. J'ai forgé trois épées et deux casques ce matin, mais ce "
+"n'est pas encore assez pour elle."
 
 #: ../npcs/apprentice.txt:12
 msgid "Keep at it!  One of these days, maybe you'll be as good a smith as she is!"
-msgstr ""
+msgstr "Courage ! Un de ces jours, tu seras aussi bon forgeron qu'elle !"
 
 #: ../npcs/apprentice.txt:13
 msgid "I hope so, but I suppose I can always join the King's knights if this doesn't pan out."
 msgstr ""
+"J'espère, mais je suppose que je peux toujours rejoindre les chevaliers du "
+"roi si jamais ça ne marche pas."
 
 #: ../npcs/apprentice.txt:14
 msgid "Oh, don't be silly - you couldn't leave this village.  I've seen how Waka looks at you!"
 msgstr ""
+"Oh, ne sois pas bête. Tu ne pourrais pas quitter ce village. J'ai vu comment "
+"Waka te regarde !"
 
 #: ../npcs/apprentice.txt:15
 msgid "Wait, what?  She's never said anything!"
-msgstr ""
+msgstr "Quoi? Attend. Elle ne m'a jamais rien dit !"
 
 #: ../npcs/apprentice.txt:16
 msgid "Oh, I see her staring."
-msgstr ""
+msgstr "Je la vois bien te dévisager."
 
 #: ../npcs/apprentice.txt:17
 msgid "*Wot blushes*"
-msgstr ""
+msgstr "*Wot rougit*"
 
 #: ../npcs/apprentice.txt:18
 msgid "See you around!"
-msgstr ""
+msgstr "À la prochaine !"
 
 #: ../npcs/barman.txt:1
 msgid "Barman Insel"
