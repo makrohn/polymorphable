@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-16 22:20+\n"
+"POT-Creation-Date: 2014-09-22 21:03+\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,90 +44,98 @@ msgid "Plant a 3-second bomb"
 msgstr ""
 
 #: ../items/items.txt:44
-msgid "Leather Armor"
+msgid "Gold"
 msgstr ""
 
 #: ../items/items.txt:47
+msgid "other"
+msgstr ""
+
+#: ../items/items.txt:58
+msgid "Leather Armor"
+msgstr ""
+
+#: ../items/items.txt:61
 msgid "body"
 msgstr ""
 
-#: ../items/items.txt:56
+#: ../items/items.txt:70
 msgid "Knife"
 msgstr ""
 
-#: ../items/items.txt:59
+#: ../items/items.txt:73
 msgid "main"
 msgstr ""
 
-#: ../items/items.txt:64
+#: ../items/items.txt:78
 msgid "Just a kitchen knife"
 msgstr ""
 
-#: ../items/items.txt:69
+#: ../items/items.txt:83
 msgid "Hero's Sword"
 msgstr ""
 
-#: ../items/items.txt:77
+#: ../items/items.txt:91
 msgid "The sword of the ancient hero"
 msgstr ""
 
-#: ../items/items.txt:83
+#: ../items/items.txt:97
 msgid "Skeleton Key"
 msgstr ""
 
-#: ../items/items.txt:86
+#: ../items/items.txt:100
 msgid "quest"
 msgstr ""
 
-#: ../items/items.txt:89
+#: ../items/items.txt:103
 msgid "Unlocks a door in the Volcano"
 msgstr ""
 
-#: ../items/items.txt:94
+#: ../items/items.txt:108
 msgid "Fairy Flower"
 msgstr ""
 
-#: ../items/items.txt:100
+#: ../items/items.txt:114
 msgid "Return this flower to Elder Thomas"
 msgstr ""
 
-#: ../items/items.txt:105
+#: ../items/items.txt:119
 msgid "Bat Talisman"
 msgstr ""
 
-#: ../items/items.txt:111
+#: ../items/items.txt:125
 msgid "Use to transform into a bat and fly"
 msgstr ""
 
-#: ../items/items.txt:117
+#: ../items/items.txt:131
 msgid "Snake Talisman"
 msgstr ""
 
-#: ../items/items.txt:123
+#: ../items/items.txt:137
 msgid "Use to transform into a snake and spit acid at enemies and switches"
 msgstr ""
 
-#: ../items/items.txt:129
+#: ../items/items.txt:143
 msgid "Ghost Talisman"
 msgstr ""
 
-#: ../items/items.txt:135
+#: ../items/items.txt:149
 msgid "Use to transform into a ghost and pass through flame"
 msgstr ""
 
-#: ../items/items.txt:153
+#: ../items/items.txt:167
 msgid "Half of Juggernaut Talisman"
 msgstr ""
 
-#: ../items/items.txt:159
+#: ../items/items.txt:173
 msgid "Bring to the Village Elder to create the Juggernaut Talisman"
 msgstr ""
 
-#: ../items/items.txt:179
+#: ../items/items.txt:193
 msgid "Juggernaut Talisman"
 msgstr ""
 
-#: ../items/items.txt:186
+#: ../items/items.txt:200
 msgid "Transform into a mighty juggernaut"
 msgstr ""
 
@@ -163,315 +171,191 @@ msgstr ""
 msgid "Basic melee attack"
 msgstr ""
 
-#: ../powers/powers.txt:20
+#: ../powers/powers.txt:19
 msgid "Crush"
 msgstr ""
 
-#: ../powers/powers.txt:23
+#: ../powers/powers.txt:22
 msgid "Knock your enemy back"
 msgstr ""
 
-#: ../powers/powers.txt:39
+#: ../powers/powers.txt:38
 msgid "Lightning Storm"
 msgstr ""
 
-#: ../powers/powers.txt:42
+#: ../powers/powers.txt:41
 msgid "Three lightning bolts strike randomly around you"
 msgstr ""
 
-#: ../powers/powers.txt:62
+#: ../powers/powers.txt:61
 msgid "Shield"
 msgstr ""
 
-#: ../powers/powers.txt:65
+#: ../powers/powers.txt:64
 msgid "Create a force field that absorbs damage"
 msgstr ""
 
-#: ../powers/powers.txt:77
+#: ../powers/powers.txt:76
 msgid "Haste"
 msgstr ""
 
-#: ../powers/powers.txt:79
+#: ../powers/powers.txt:78
 msgid "Double run and attack speed for 8 seconds"
 msgstr ""
 
-#: ../powers/powers.txt:89
+#: ../powers/powers.txt:88
 msgid "Cleave"
 msgstr ""
 
-#: ../powers/powers.txt:92
+#: ../powers/powers.txt:91
 msgid "Attack all enemies in a wide arc"
 msgstr ""
 
-#: ../powers/powers.txt:108
+#: ../powers/powers.txt:107
 msgid "Leech Strike"
 msgstr ""
 
-#: ../powers/powers.txt:111
+#: ../powers/powers.txt:110
 msgid "Turn 50% of damage you deal into HP"
 msgstr ""
 
-#: ../powers/powers.txt:127
+#: ../powers/powers.txt:126
 msgid "Stun Strike"
 msgstr ""
 
-#: ../powers/powers.txt:130
+#: ../powers/powers.txt:129
 msgid "Stun an enemy for 3 seconds"
 msgstr ""
 
-#: ../powers/powers.txt:146
+#: ../powers/powers.txt:145
 msgid "Ice Blast"
 msgstr ""
 
-#: ../powers/powers.txt:149
+#: ../powers/powers.txt:148
 msgid "Slow nearby enemies for 5 seconds"
 msgstr ""
 
-#: ../powers/powers.txt:169
+#: ../powers/powers.txt:168
 msgid "Shoot (enemy)"
 msgstr ""
 
-#: ../powers/powers.txt:192
+#: ../powers/powers.txt:191
 msgid "Drop a bomb that does 5 damage when it explodes."
 msgstr ""
 
-#: ../powers/powers.txt:201
+#: ../powers/powers.txt:200
 msgid "Explode (npc)"
 msgstr ""
 
-#: ../powers/powers.txt:204
+#: ../powers/powers.txt:203
 msgid "Damages nearby enemies"
 msgstr ""
 
-#: ../powers/powers.txt:224
+#: ../powers/powers.txt:223
 msgid "flametrap (trap)"
 msgstr ""
 
-#: ../powers/powers.txt:249
+#: ../powers/powers.txt:248
 msgid "Plant a 3-second bomb."
 msgstr ""
 
-#: ../powers/powers.txt:258
+#: ../powers/powers.txt:257
 msgid "Holy Sword"
 msgstr ""
 
-#: ../powers/powers.txt:261
+#: ../powers/powers.txt:260
 msgid "Deal two damage to all enemies on-screen"
 msgstr ""
 
-#: ../powers/powers.txt:277
+#: ../powers/powers.txt:276
 msgid "Summon Bat (enemy)"
 msgstr ""
 
-#: ../powers/powers.txt:315
+#: ../powers/powers.txt:314
 msgid "Fire Bomb (enemy)"
 msgstr ""
 
-#: ../powers/powers.txt:318
+#: ../powers/powers.txt:317
 msgid "Drop a bomb that does 10 damage when it explodes to the whole screen."
 msgstr ""
 
-#: ../powers/powers.txt:326
+#: ../powers/powers.txt:325
 msgid "Firebomb Explosion (enemy)"
 msgstr ""
 
-#: ../powers/powers.txt:349
+#: ../powers/powers.txt:348
 msgid "Explode (enemy)"
 msgstr ""
 
-#: ../powers/powers.txt:372
+#: ../powers/powers.txt:371
 msgid "Tick"
 msgstr ""
 
-#: ../powers/powers.txt:387
+#: ../powers/powers.txt:386
 msgid "Enemy Beacon"
 msgstr ""
 
-#: ../powers/powers.txt:388
+#: ../powers/powers.txt:387
 msgid "Bring other enemies into the fight with a dummy attack"
 msgstr ""
 
-#: ../powers/powers.txt:400
+#: ../powers/powers.txt:399
 msgid "Disenchant"
 msgstr ""
 
-#: ../powers/powers.txt:405
+#: ../powers/powers.txt:404
 msgid "Transform back to human"
 msgstr ""
 
-#: ../powers/powers.txt:410
+#: ../powers/powers.txt:409
 msgid "Fire Immunity"
 msgstr ""
 
-#: ../powers/powers.txt:438
-msgid "Bleeding"
-msgstr ""
-
-#: ../powers/powers.txt:446
-msgid "Immobilized"
-msgstr ""
-
-#: ../powers/powers.txt:453
-msgid "Slowed"
-msgstr ""
-
-#: ../powers/powers.txt:460
-msgid "Stunned"
-msgstr ""
-
-#: ../powers/powers.txt:467
-msgid "HP (bonus)"
-msgstr ""
-
-#: ../powers/powers.txt:475
-msgid "HP Regen (bonus)"
-msgstr ""
-
-#: ../powers/powers.txt:483
-msgid "MP (bonus)"
-msgstr ""
-
-#: ../powers/powers.txt:491
-msgid "MP Regen (bonus)"
-msgstr ""
-
-#: ../powers/powers.txt:499
-msgid "Accuracy (bonus)"
-msgstr ""
-
-#: ../powers/powers.txt:507
-msgid "Avoidance (bonus)"
-msgstr ""
-
-#: ../powers/powers.txt:515
-msgid "Crit (bonus)"
-msgstr ""
-
-#: ../powers/powers.txt:523
-msgid "Speed (bonus)"
-msgstr ""
-
-#: ../powers/powers.txt:530
-msgid "Offense (bonus)"
-msgstr ""
-
-#: ../powers/powers.txt:538
-msgid "Defense (bonus)"
-msgstr ""
-
-#: ../powers/powers.txt:546
-msgid "Physical (bonus)"
-msgstr ""
-
-#: ../powers/powers.txt:554
-msgid "Mental (bonus)"
-msgstr ""
-
-#: ../powers/powers.txt:562
-msgid "XP(bonus)"
-msgstr ""
-
-#: ../powers/powers.txt:570
-msgid "Gold (bonus)"
-msgstr ""
-
-#: ../powers/powers.txt:578
-msgid "Fire Resistance (bonus)"
-msgstr ""
-
-#: ../powers/powers.txt:586
-msgid "Ice Resistance (bonus)"
-msgstr ""
-
-#: ../powers/powers.txt:594
-msgid "Immunity"
-msgstr ""
-
-#: ../powers/powers.txt:609
-msgid "Heal"
-msgstr ""
-
-#: ../powers/powers.txt:623
-msgid "HP over time"
-msgstr ""
-
-#: ../powers/powers.txt:629
-msgid "MP over time"
-msgstr ""
-
-#: ../powers/powers.txt:635
-msgid "Knockback"
-msgstr ""
-
-#: ../powers/powers.txt:641
-msgid "Earth Resistance (bonus)"
-msgstr ""
-
-#: ../powers/powers.txt:649
-msgid "Wind Resistance (bonus)"
-msgstr ""
-
-#: ../powers/powers.txt:657
-msgid "Holy Resistance (bonus)"
-msgstr ""
-
-#: ../powers/powers.txt:665
-msgid "Dark Resistance (bonus)"
-msgstr ""
-
-#: ../powers/powers.txt:673
-msgid "HP Percent (bonus)"
-msgstr ""
-
-#: ../powers/powers.txt:681
-msgid "MP Percent (bonus)"
-msgstr ""
-
-#: ../powers/powers.txt:689
+#: ../powers/powers.txt:434
 msgid "Transform into Bat"
 msgstr ""
 
-#: ../powers/powers.txt:694
+#: ../powers/powers.txt:439
 msgid "Turn into a bat"
 msgstr ""
 
-#: ../powers/powers.txt:699
+#: ../powers/powers.txt:444
 msgid "Transform into Snake"
 msgstr ""
 
-#: ../powers/powers.txt:704
+#: ../powers/powers.txt:449
 msgid "Turn into a spitting snake"
 msgstr ""
 
-#: ../powers/powers.txt:709
+#: ../powers/powers.txt:454
 msgid "Spit Acid"
 msgstr ""
 
-#: ../powers/powers.txt:731
+#: ../powers/powers.txt:476
 msgid "Spit Fire"
 msgstr ""
 
-#: ../powers/powers.txt:752
+#: ../powers/powers.txt:497
 msgid "Transform into Ghost"
 msgstr ""
 
-#: ../powers/powers.txt:757
+#: ../powers/powers.txt:502
 msgid "Turn into a ghost"
 msgstr ""
 
-#: ../powers/powers.txt:772
+#: ../powers/powers.txt:517
 msgid "Transform into Juggernaut"
 msgstr ""
 
-#: ../powers/powers.txt:778
+#: ../powers/powers.txt:523
 msgid "Turn into a powerful knight for a short time"
 msgstr ""
 
-#: ../powers/powers.txt:783
+#: ../powers/powers.txt:528
 msgid "Transform into Squirrel"
 msgstr ""
 
-#: ../powers/powers.txt:788
+#: ../powers/powers.txt:533
 msgid "Turn into a squirrel"
 msgstr ""
 
@@ -505,10 +389,6 @@ msgstr ""
 
 #: ../engine/elements.txt:15
 msgid "Wind Resistance"
-msgstr ""
-
-#: ../engine/loot.txt:15
-msgid "Gold"
 msgstr ""
 
 #: ../engine/classes.txt:2
@@ -659,7 +539,7 @@ msgstr ""
 msgid "Secret Cavern"
 msgstr ""
 
-#: ../maps/basement3.txt:221
+#: ../maps/basement3.txt:222
 msgid "Chest"
 msgstr ""
 
@@ -667,31 +547,31 @@ msgstr ""
 msgid "Hidden Waterway"
 msgstr ""
 
-#: ../maps/basement4.txt:201
+#: ../maps/basement4.txt:202
 msgid "You found the switch key in a barrel!"
 msgstr ""
 
-#: ../maps/basement4.txt:203
+#: ../maps/basement4.txt:204
 msgid "Suspicious Barrel"
 msgstr ""
 
-#: ../maps/basement4.txt:223
+#: ../maps/basement4.txt:225
 msgid "An empty chest!"
 msgstr ""
 
-#: ../maps/basement5.txt:202
+#: ../maps/basement5.txt:203
 msgid "There's a key-shaped hole in this rock."
 msgstr ""
 
-#: ../maps/basement5.txt:204
+#: ../maps/basement5.txt:205
 msgid "Strange Rock"
 msgstr ""
 
-#: ../maps/basement6.txt:205
+#: ../maps/basement6.txt:206
 msgid "\"Leftover material from blasting is unstable due to cave-ins!  Do not approach!\""
 msgstr ""
 
-#: ../maps/basement6.txt:206
+#: ../maps/basement6.txt:207
 msgid "Sign"
 msgstr ""
 
@@ -699,15 +579,15 @@ msgstr ""
 msgid "Sewer"
 msgstr ""
 
-#: ../maps/basement7.txt:201
+#: ../maps/basement7.txt:202
 msgid "FENCES ARE FOR YOUR PROTECTION.  DO NOT OPEN GATES."
 msgstr ""
 
-#: ../maps/basement7.txt:202
+#: ../maps/basement7.txt:203
 msgid "Signpost"
 msgstr ""
 
-#: ../maps/basement7.txt:209
+#: ../maps/basement7.txt:211
 msgid "There is a strange groove in this rock"
 msgstr ""
 
@@ -715,39 +595,39 @@ msgstr ""
 msgid "Sanctuary"
 msgstr ""
 
-#: ../maps/basement8.txt:206
+#: ../maps/basement8.txt:207
 msgid "You must defeat your shadow!"
 msgstr ""
 
-#: ../maps/basement8.txt:209
+#: ../maps/basement8.txt:210
 msgid "Fountain"
 msgstr ""
 
-#: ../maps/basementa.txt:211
+#: ../maps/basementa.txt:213
 msgid "The switch key fits into the hole in this rock!"
 msgstr ""
 
-#: ../maps/basementa.txt:226
+#: ../maps/basementa.txt:229
 msgid "It has been a long journey from Castle Hestian, but we have finally found a safe glade away from prying eyes.  We shall found our village here, among the laurel trees."
 msgstr ""
 
-#: ../maps/basementa.txt:227
+#: ../maps/basementa.txt:230
 msgid "Dusty Diary"
 msgstr ""
 
-#: ../maps/basementa.txt:234
+#: ../maps/basementa.txt:238
 msgid "It has been a hundred years now since King Hestian's decree to burn all the \"skinchangers.\"  We must go into hiding or he'll destroy us all."
 msgstr ""
 
-#: ../maps/basementa.txt:235
+#: ../maps/basementa.txt:239
 msgid "Moldy Diary"
 msgstr ""
 
-#: ../maps/basementa.txt:242
+#: ../maps/basementa.txt:247
 msgid "King Hestian will not let us live in the open unless we share with him the secret of immortality.  If only we actually held that secret, as he believes!"
 msgstr ""
 
-#: ../maps/basementa.txt:243
+#: ../maps/basementa.txt:248
 msgid "Yellowed Diary"
 msgstr ""
 
@@ -755,7 +635,7 @@ msgstr ""
 msgid "Underground Lake"
 msgstr ""
 
-#: ../maps/basementb.txt:209
+#: ../maps/basementb.txt:210
 msgid "Ambushed!"
 msgstr ""
 
@@ -775,11 +655,11 @@ msgstr ""
 msgid "Castle Basement"
 msgstr ""
 
-#: ../maps/castle5.txt:228
+#: ../maps/castle5.txt:229
 msgid "Violent bombs ahead!"
 msgstr ""
 
-#: ../maps/castle5.txt:234
+#: ../maps/castle5.txt:236
 msgid "Destroy them from afar to defuse them!"
 msgstr ""
 
@@ -787,7 +667,7 @@ msgstr ""
 msgid "Castle Balcony"
 msgstr ""
 
-#: ../maps/castle6.txt:209
+#: ../maps/castle6.txt:210
 msgid "TRAPPED!"
 msgstr ""
 
@@ -807,15 +687,15 @@ msgstr ""
 msgid "Cavern"
 msgstr ""
 
-#: ../maps/cavern.txt:439
+#: ../maps/cavern.txt:440
 msgid "Drag to actionbar to use."
 msgstr ""
 
-#: ../maps/cavern.txt:486
+#: ../maps/cavern.txt:492
 msgid "Carrots"
 msgstr ""
 
-#: ../maps/cavern.txt:520
+#: ../maps/cavern.txt:528
 msgid "Unmarked Grave"
 msgstr ""
 
@@ -855,7 +735,7 @@ msgstr ""
 msgid "Laurelia"
 msgstr ""
 
-#: ../maps/laurelia.txt:826
+#: ../maps/laurelia.txt:827
 msgid "You've fallen in a hole!"
 msgstr ""
 
@@ -863,27 +743,27 @@ msgstr ""
 msgid "Library"
 msgstr ""
 
-#: ../maps/library.txt:93
+#: ../maps/library.txt:94
 msgid "p.32: \"Ghosts, being incorporeal, are nearly immune to heat and fire.\""
 msgstr ""
 
-#: ../maps/library.txt:94
+#: ../maps/library.txt:95
 msgid "On Ghosts"
 msgstr ""
 
-#: ../maps/library.txt:101
+#: ../maps/library.txt:103
 msgid "p.1:  \"This small town is a seeming backwater.  However, nearly every one of it's citizens has the ability to polymorph into another creature.\"  Better put it back on the top shelf where the tourists can't find it."
 msgstr ""
 
-#: ../maps/library.txt:102
+#: ../maps/library.txt:104
 msgid "History of Laurelia"
 msgstr ""
 
-#: ../maps/library.txt:109
+#: ../maps/library.txt:112
 msgid "p. 967: \"Zalkaz was constantly beset by paladins seeking to destroy him; he would eliminate each one by blotting out the light with hordes of bats.\""
 msgstr ""
 
-#: ../maps/library.txt:110
+#: ../maps/library.txt:113
 msgid "Demonology"
 msgstr ""
 
@@ -919,7 +799,7 @@ msgstr ""
 msgid "Mountain Cave"
 msgstr ""
 
-#: ../maps/snow6.txt:184
+#: ../maps/snow6.txt:185
 msgid "Bring ssssacrifices for Zalkaz here!"
 msgstr ""
 
@@ -931,7 +811,7 @@ msgstr ""
 msgid "You're home!"
 msgstr ""
 
-#: ../maps/snow7.txt:239
+#: ../maps/snow7.txt:241
 msgid "Prepare to die!"
 msgstr ""
 
@@ -939,7 +819,7 @@ msgstr ""
 msgid "Mountain Mine"
 msgstr ""
 
-#: ../maps/snowa.txt:172
+#: ../maps/snowa.txt:173
 msgid "Empty..."
 msgstr ""
 
@@ -963,11 +843,11 @@ msgstr ""
 msgid "Locked Gate"
 msgstr ""
 
-#: ../maps/volcano2.txt:171
+#: ../maps/volcano2.txt:172
 msgid "Anvil"
 msgstr ""
 
-#: ../maps/volcano3.txt:169
+#: ../maps/volcano3.txt:170
 msgid "There might be a way to cross that small gap, but it looks deadly."
 msgstr ""
 
@@ -975,11 +855,11 @@ msgstr ""
 msgid "Lava River"
 msgstr ""
 
-#: ../maps/volcano4.txt:184
+#: ../maps/volcano4.txt:185
 msgid "Someone has scrawled here: \"The fire skeleton's bombs killed my friend instantly!  If I wasn't a ghost already, I'd have died, too.\""
 msgstr ""
 
-#: ../maps/volcano4.txt:186
+#: ../maps/volcano4.txt:187
 msgid "Altar"
 msgstr ""
 
