@@ -1,6 +1,6 @@
 # laurelia
 
-img=town.png
+img=images/tilesets/town.png
 
 # background 27w x 26h
 # objects    20w x 16h

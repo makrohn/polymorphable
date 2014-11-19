@@ -1,7 +1,8 @@
 # Settings for actionbar menu
 # pos is x,y,width,height
 
-default_M1_power=1
+pos=0,0,640,35
+align=bottom
 
 slot1=32,3,32,32
 slot2=64,3,32,32

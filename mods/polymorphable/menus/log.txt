@@ -2,11 +2,12 @@
 # the first two values are x,y positions
 # some items have two more values, width and height
 
-caption=160,8,center,top
+pos=0,0,320,416
+align=left
+soundfx_open=soundfx/inventory/inventory_page.ogg
+soundfx_close=soundfx/inventory/inventory_book.ogg
+
+label_title=160,8,center,top
 close=294,2
 
 tab_area=32,30,241,336
-tab_bg_color=147,168,169
-
-# TODO: remove this and replace relavant code with tab height
-tab_content_offset=18

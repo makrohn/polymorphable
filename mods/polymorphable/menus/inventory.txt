@@ -2,6 +2,11 @@
 # the first two values are x,y positions
 # some items have two more values, width and height
 
+pos=0,0,320,416
+align=right
+soundfx_open=soundfx/inventory/inventory_page.ogg
+soundfx_close=soundfx/inventory/inventory_book.ogg
+
 close=294,2
 help=2,2,24,24
 
@@ -22,5 +27,5 @@ carried_area=64,160
 carried_cols=6
 carried_rows=6
 
-caption=160,8,center,top
+label_title=160,8,center,top
 currency=160,128,center,top

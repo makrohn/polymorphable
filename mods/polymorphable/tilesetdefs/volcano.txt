@@ -1,6 +1,6 @@
 # laurelia
 
-img=volcano.png
+img=images/tilesets/volcano.png
 
 # background 27w x 26h
 # objects    20w x 16h

@@ -1,6 +1,6 @@
 # laurelia
 
-img=interior.png
+img=images/tilesets/interior.png
 
 # background 27w x 26h
 # objects    20w x 16h

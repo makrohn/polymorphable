@@ -3,17 +3,18 @@ width=178
 height=144
 tilewidth=32
 tileheight=32
+orientation=orthogonal
 music=music/calmtown.ogg
 tileset=tilesetdefs/town.txt
 title=Laurelia
 
 [tilesets]
-tileset=tilesetdefs/../../../tiled/town/tiled_collision.png,32,32,0,0
-tileset=tilesetdefs/../../../tiled/town/generic_background.png,32,32,0,0
-tileset=tilesetdefs/../../../tiled/town/small_objects.png,32,64,0,0
-tileset=tilesetdefs/../../../tiled/town/town_buildings.png,32,128,0,0
-tileset=tilesetdefs/../../../tiled/town/bldgleft.png,32,128,16,0
-tileset=tilesetdefs/../../../tiled/town/bldgright.png,32,128,-16,0
+tileset=../../../tiled/town/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/town/generic_background.png,32,32,0,0
+tileset=../../../tiled/town/small_objects.png,32,64,0,0
+tileset=../../../tiled/town/town_buildings.png,32,128,0,0
+tileset=../../../tiled/town/bldgleft.png,32,128,16,0
+tileset=../../../tiled/town/bldgright.png,32,128,-16,0
 
 [layer]
 type=background
@@ -757,52 +758,52 @@ data=
 
 [npc]
 # Gardener
-type=gardener
+type=npcs/gardener.txt
 location=114,99,1,1
 
 [npc]
 # Blacksmith
-type=blacksmith
+type=npcs/blacksmith.txt
 location=53,91,1,1
 
 [npc]
 # Jailor
-type=jailor
+type=npcs/jailor.txt
 location=121,68,1,1
 
 [npc]
 # Brewmaster
-type=brewmaster
+type=npcs/brewmaster.txt
 location=85,81,1,1
 
 [npc]
 # Cleric
-type=cleric
+type=npcs/cleric.txt
 location=36,77,1,1
 
 [npc]
 # Librarian
-type=librarian
+type=npcs/librarian.txt
 location=25,92,1,1
 
 [npc]
 # Innkeep
-type=innkeep
+type=npcs/innkeep.txt
 location=101,85,1,1
 
 [npc]
 # Elder
-type=elder
+type=npcs/elder.txt
 location=69,60,1,1
 
 [npc]
 # Hunter
-type=hunter
+type=npcs/hunter.txt
 location=22,106,1,1
 
 [npc]
 # Jeweler
-type=jeweler
+type=npcs/jeweler.txt
 location=61,109,1,1
 
 [event]
@@ -822,7 +823,6 @@ requires_status=cavernexplored
 # Fall to Cavern
 type=on_trigger
 location=86,14,6,1
-cutscene=pit.txt
 intermap=cavern.txt,98,98
 msg=You've fallen in a hole!
 requires_not_status=cavernexplored

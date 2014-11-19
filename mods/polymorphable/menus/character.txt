@@ -2,8 +2,13 @@
 # the first two values are x,y positions
 # some items have two more values, width and height
 
+pos=0,0,320,416
+align=left
+soundfx_open=soundfx/inventory/inventory_page.ogg
+soundfx_close=soundfx/inventory/inventory_book.ogg
+
 close=294,2
-caption=160,8,center,top
+label_title=160,8,center,top
 
 upgrade_physical=110,64
 upgrade_mental=110,88
@@ -36,13 +41,6 @@ unspent=96,106,120,16
 # item visibility
 # these are boolean. 0 to hide, 1 to show
 
-show_name=1
-show_level=1
-show_physical=1
-show_mental=1
-show_offense=0
-show_defense=0
-show_unspent=1
 show_upgrade_physical=1
 show_upgrade_mental=1
 show_upgrade_offense=0
@@ -52,10 +50,6 @@ show_maxhp=1
 show_hpregen=0
 show_maxmp=1
 show_mpregen=0
-show_accuracy_v1=0
-show_accuracy_v5=0
-show_avoidance_v1=0
-show_avoidance_v5=0
 show_melee=1
 show_ranged=0
 show_mental=0

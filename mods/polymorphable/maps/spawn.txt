@@ -9,4 +9,4 @@ location=0,0,3
 [event]
 type=on_trigger
 location=0,0,1,1
-intermap=laurelia.txt,21,81
+intermap=maps/laurelia.txt,21,81

@@ -6,160 +6,151 @@ name=Bleeding
 icon=25
 type=damage
 animation=animations/powers/spark_red_loop.txt
+can_stack=false
 
 [effect]
 name=Immobilized
 icon=24
 type=speed
+can_stack=false
 
 [effect]
 name=Slowed
 icon=24
 type=speed
+can_stack=false
 
 [effect]
 name=Stunned
 icon=26
 type=stun
+can_stack=false
 
 [effect]
 name=HP
 type=hp
-additive=true
 
 [effect]
 name=HP Regen
 type=hp_regen
-additive=true
 
 [effect]
 name=MP
 type=mp
-additive=true
 
 [effect]
 name=MP Regen
 type=mp_regen
-additive=true
 
 [effect]
 name=Accuracy
 type=accuracy
-additive=true
 
 [effect]
 name=Avoidance
 type=avoidance
-additive=true
 
 [effect]
 name=Crit
 type=crit
-additive=true
 
 [effect]
 name=Speed
 type=speed
+can_stack=false
 
 [effect]
 name=Offense
 type=offense
-additive=true
 
 [effect]
 name=Defense
 type=defense
-additive=true
 
 [effect]
 name=Physical
 type=physical
-additive=true
 
 [effect]
 name=Mental
 type=mental
-additive=true
 
 [effect]
 name=XP(bonus)
 type=xp
-additive=true
 
 [effect]
 name=Gold
 type=currency
-additive=true
 
 [effect]
 name=Fire Resistance
 type=fire_resist
-additive=true
 
 [effect]
 name=Ice Resistance
 type=ice_resist
-additive=true
 
 [effect]
 name=Immunity
 icon=12
 type=immunity
+can_stack=false
 
 [effect]
 name=Shield
 icon=11
 type=shield
 animation=animations/powers/shield.txt
+can_stack=false
 
 [effect]
 name=Heal
 type=heal
 animation=animations/powers/heal.txt
+can_stack=false
 
 [effect]
 name=Haste
 icon=12
 type=speed
+can_stack=false
 
 [effect]
 name=HP over time
 type=hpot
+can_stack=false
 
 [effect]
 name=MP over time
 type=mpot
+can_stack=false
 
 [effect]
 name=Knockback
 type=forced_move
+can_stack=false
 
 [effect]
 name=Earth Resistance
 type=earth_resist
-additive=true
 
 [effect]
 name=Wind Resistance
 type=wind_resist
-additive=true
 
 [effect]
 name=Holy Resistance
 type=holy_resist
-additive=true
 
 [effect]
 name=Dark Resistance
 type=dark_resist
-additive=true
 
 [effect]
 name=HP Percent
 type=hp_percent
-additive=true
 
 [effect]
 name=MP Percent
 type=mp_percent
-additive=true

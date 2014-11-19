@@ -1,6 +1,6 @@
 # outside
 
-img=outside.png
+img=images/tilesets/outside.png
 
 # background 27w x 26h
 # objects    20w x 16h
