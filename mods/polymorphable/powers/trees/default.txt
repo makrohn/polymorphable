@@ -1,3 +1,5 @@
+background=images/menus/powers_tree.png
+
 [power]
 id=1
 position=144,64
