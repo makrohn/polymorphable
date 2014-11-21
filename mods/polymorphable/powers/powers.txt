@@ -12,7 +12,6 @@ base_damage=melee
 lifespan=1
 radius=2
 starting_pos=melee
-allow_power_mod=true
 
 [power]
 id=2
@@ -29,7 +28,6 @@ base_damage=melee
 lifespan=1
 radius=2
 starting_pos=melee
-allow_power_mod=true
 post_effect=Knockback,30,30
 type=fixed
 
@@ -99,7 +97,6 @@ base_damage=melee
 lifespan=1
 radius=3
 starting_pos=melee
-allow_power_mod=true
 type=fixed
 
 [power]
@@ -117,7 +114,6 @@ base_damage=melee
 lifespan=1
 radius=2
 starting_pos=melee
-allow_power_mod=true
 hp_steal=50
 type=fixed
 
@@ -136,7 +132,6 @@ base_damage=melee
 lifespan=1
 radius=2
 starting_pos=melee
-allow_power_mod=true
 post_effect=Stunned,0,30
 type=fixed
 
@@ -377,7 +372,6 @@ face=true
 use_hazard=true
 aim_assist=true
 starting_pos=melee
-allow_power_mod=true
 sacrifice=true
 type=fixed
 
@@ -427,7 +421,6 @@ lifespan=1
 radius=4
 type=fixed
 starting_pos=melee
-allow_power_mod=true
 
 [power]
 id=303
