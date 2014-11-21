@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32">
  <properties>
-  <property name="music" value="winds_of_stories.ogg"/>
-  <property name="tileset" value="sewer.txt"/>
+  <property name="music" value="music/winds_of_stories.ogg"/>
+  <property name="tileset" value="tilesetdefs/sewer.txt"/>
   <property name="title" value="Secret Basement"/>
  </properties>
  <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
@@ -197,7 +197,7 @@
 0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup name="event" width="32" height="32">
+ <objectgroup name="event">
   <object name="Teleport to Elder's House" type="on_trigger" x="416" y="992" width="64" height="32">
    <properties>
     <property name="intermap" value="eldershouse.txt,18,5"/>
@@ -209,9 +209,8 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="enemy" width="32" height="32">
+ <objectgroup name="enemy">
   <object name="Bat" type="bat" x="576" y="480" width="32" height="32"/>
   <object name="Bat" type="bat" x="256" y="704" width="32" height="32"/>
  </objectgroup>
- <objectgroup name="enemygroup" width="32" height="32"/>
 </map>

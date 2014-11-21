@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="100" height="100" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="32" tileheight="32">
  <properties>
-  <property name="music" value="technophobic.ogg"/>
-  <property name="tileset" value="outside.txt"/>
+  <property name="music" value="music/technophobic.ogg"/>
+  <property name="tileset" value="tilesetdefs/outside.txt"/>
   <property name="title" value="Cavern"/>
  </properties>
  <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
@@ -433,7 +433,7 @@
 3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,1,1,1,1,1,1,1,3,3,3,3,3,3,3,3,3,3,3,3,3,3,1,1,1,1,1
 </data>
  </layer>
- <objectgroup name="event" width="100" height="100">
+ <objectgroup name="event">
   <object name="Bat Talisman Chest" type="on_trigger" x="1824" y="1504" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
@@ -508,7 +508,7 @@
    <properties>
     <property name="hotspot" value="location"/>
     <property name="mapmod" value="object,75,72,880;object,76,72,0;object,77,72,0;object,78,72,878;object,75,71,885;object,76,71,0;object,77,71,0;object,78,71,883;collision,76,72,0;collision,77,72,0"/>
-    <property name="npc" value="gravestone"/>
+    <property name="npc" value="npcs/gravestone.txt"/>
     <property name="requires_not_status" value="evil_unleashed"/>
     <property name="set_status" value="evil_unleashed"/>
     <property name="tooltip" value="Unmarked Grave"/>
@@ -523,10 +523,10 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="npc" width="100" height="100">
+ <objectgroup name="npc">
   <object name="Gravestone" type="gravestone" x="32" y="32" width="32" height="32"/>
  </objectgroup>
- <objectgroup name="enemygroup" width="100" height="100" visible="0">
+ <objectgroup name="enemy" visible="0">
   <object name="2 Snakes" type="snake" x="1408" y="1312" width="256" height="128">
    <properties>
     <property name="level" value="1,3"/>

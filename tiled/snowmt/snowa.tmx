@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32">
  <properties>
-  <property name="music" value="snow_about_a_castle.ogg"/>
-  <property name="tileset" value="snowmt.txt"/>
+  <property name="music" value="music/snow_about_a_castle.ogg"/>
+  <property name="tileset" value="tilesetdefs/snowmt.txt"/>
   <property name="title" value="Mountain Mine"/>
  </properties>
  <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
@@ -37,7 +37,7 @@
    eJztlNEKABAMRSf//89epdWYYeWckif3aDYiAAAAkJniXJH+Fepjv/cMfvxajpV1cv5mciJrjT+ff+ypk3+9dZd+v83Pfu39d2hG+wBB
   </data>
  </layer>
- <objectgroup name="enemygroup" width="32" height="32">
+ <objectgroup name="enemy">
   <object name="2 Ranged Cultists" type="ranged" x="384" y="512" width="256" height="96">
    <properties>
     <property name="level" value="2,2"/>
@@ -51,8 +51,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="enemy" width="32" height="32"/>
- <objectgroup name="event" width="32" height="32">
+ <objectgroup name="event">
   <object name="Chest" type="on_trigger" x="736" y="512" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>

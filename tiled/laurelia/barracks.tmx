@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="50" height="21" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="21" tilewidth="32" tileheight="32">
  <properties>
-  <property name="music" value="calmtown.ogg"/>
-  <property name="tileset" value="interior.txt"/>
+  <property name="music" value="music/calmtown.ogg"/>
+  <property name="tileset" value="tilesetdefs/interior.txt"/>
   <property name="title" value="Barracks"/>
  </properties>
  <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
@@ -117,7 +117,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup name="event" width="50" height="21">
+ <objectgroup name="event">
   <object name="Teleport to Laurelia" type="on_trigger" x="1280" y="576" width="64" height="32">
    <properties>
     <property name="intermap" value="laurelia.txt,120,68"/>
@@ -139,12 +139,12 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="npc" width="50" height="21">
+ <objectgroup name="npc">
   <object name="Combat Dummy" type="combat_dummy" x="128" y="256" width="32" height="32"/>
   <object name="Trainee" type="trainee" x="192" y="256" width="32" height="32"/>
   <object name="Captain" type="captain" x="1152" y="192" width="32" height="32"/>
  </objectgroup>
- <objectgroup name="enemy" width="50" height="21">
+ <objectgroup name="enemy">
   <object name="Combat Dummy" type="combat_dummy" x="1024" y="256" width="32" height="32"/>
  </objectgroup>
 </map>

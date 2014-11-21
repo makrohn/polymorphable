@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32">
  <properties>
-  <property name="music" value="snow_about_a_castle.ogg"/>
-  <property name="tileset" value="snowmt.txt"/>
+  <property name="music" value="music/snow_about_a_castle.ogg"/>
+  <property name="tileset" value="tilesetdefs/snowmt.txt"/>
   <property name="title" value="Snow Mountain"/>
  </properties>
  <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
@@ -37,7 +37,7 @@
    eJzt0sENACAIBEHsv2ka4GEEPIw7ie8NghkA5K2DV91X2ulPmb/jr+jH+71x+/Rn7J++tq++v5/7AN7i9+4AZA==
   </data>
  </layer>
- <objectgroup name="enemygroup" width="32" height="32">
+ <objectgroup name="enemy">
   <object name="Cultist" type="cultist" x="224" y="352" width="32" height="32">
    <properties>
     <property name="level" value="2,2"/>
@@ -45,8 +45,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="enemy" width="32" height="32"/>
- <objectgroup name="event" width="32" height="32">
+ <objectgroup name="event">
   <object name="Teleport to Laurelia" type="on_trigger" x="0" y="0" width="224" height="32">
    <properties>
     <property name="intermap" value="laurelia.txt,74,142"/>

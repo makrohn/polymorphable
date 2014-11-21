@@ -3,15 +3,16 @@ width=32
 height=32
 tilewidth=32
 tileheight=32
+orientation=orthogonal
 music=music/calmtown.ogg
 tileset=tilesetdefs/outside.txt
 title=Glade
 
 [tilesets]
-tileset=tilesetdefs/../../../tiled/caves/tiled_collision.png,32,32,0,0
-tileset=tilesetdefs/../../../tiled/caves/generic_background.png,32,32,0,0
-tileset=tilesetdefs/../../../tiled/caves/small_objects.png,32,64,0,0
-tileset=tilesetdefs/../../../tiled/caves/outside_objects.png,32,128,0,0
+tileset=../../../tiled/caves/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/caves/generic_background.png,32,32,0,0
+tileset=../../../tiled/caves/small_objects.png,32,64,0,0
+tileset=../../../tiled/caves/outside_objects.png,32,128,0,0
 
 [layer]
 type=background
@@ -166,7 +167,6 @@ intermap=laurelia.txt,91,2
 [event]
 # Fairy Flower
 type=on_trigger
-repeat=false
 location=14,15,1,2
 hotspot=location
 loot=199,14,16,fixed,1

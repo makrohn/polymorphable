@@ -1,9 +1,18 @@
 [header]
 width=32
 height=32
+tilewidth=32
+tileheight=32
+orientation=orthogonal
 music=music/snow_about_a_castle.ogg
 tileset=tilesetdefs/snowmt.txt
 title=Mountain Mine
+
+[tilesets]
+tileset=../../../tiled/snowmt/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/snowmt/generic_background.png,32,32,0,0
+tileset=../../../tiled/snowmt/small_objects.png,32,64,0,0
+tileset=../../../tiled/snowmt/outside_objects.png,32,128,0,0
 
 [layer]
 type=background
@@ -149,14 +158,14 @@ data=
 0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 
-[enemygroup]
+[enemy]
 # 2 Ranged Cultists
 type=ranged
 location=12,16,8,3
 level=2,2
 number=2,2
 
-[enemygroup]
+[enemy]
 # 2 Cultist Knights
 type=knight
 location=12,19,6,4
@@ -166,7 +175,6 @@ number=2,2
 [event]
 # Chest
 type=on_trigger
-repeat=false
 location=23,16,1,1
 hotspot=location
 mapmod=object,23,16,206

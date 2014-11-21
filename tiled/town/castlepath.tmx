@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32">
  <properties>
-  <property name="music" value="mysticaltheme.ogg"/>
-  <property name="tileset" value="town.txt"/>
+  <property name="music" value="music/mysticaltheme.ogg"/>
+  <property name="tileset" value="tilesetdefs/town.txt"/>
   <property name="title" value="Castle Path"/>
  </properties>
  <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
@@ -161,7 +161,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup name="event" width="32" height="32">
+ <objectgroup name="event">
   <object name="Teleport to Laurelia" type="on_trigger" x="992" y="416" width="32" height="192">
    <properties>
     <property name="intermap" value="laurelia.txt,1,104"/>
@@ -173,7 +173,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="enemy" width="32" height="32">
+ <objectgroup name="enemy">
   <object name="Bat" type="bat" x="576" y="128" width="32" height="32"/>
   <object name="Bat" type="bat" x="576" y="768" width="32" height="32"/>
  </objectgroup>

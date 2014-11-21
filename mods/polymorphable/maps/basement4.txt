@@ -3,15 +3,16 @@ width=32
 height=32
 tilewidth=32
 tileheight=32
+orientation=orthogonal
 music=music/winds_of_stories.ogg
 tileset=tilesetdefs/sewer.txt
 title=Hidden Waterway
 
 [tilesets]
-tileset=tilesetdefs/../../../tiled/sewers/tiled_collision.png,32,32,0,0
-tileset=tilesetdefs/../../../tiled/sewers/generic_background.png,32,32,0,0
-tileset=tilesetdefs/../../../tiled/sewers/small_objects.png,32,64,0,0
-tileset=tilesetdefs/../../../tiled/sewers/sewer_objects.png,32,128,0,0
+tileset=../../../tiled/sewers/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/sewers/generic_background.png,32,32,0,0
+tileset=../../../tiled/sewers/small_objects.png,32,64,0,0
+tileset=../../../tiled/sewers/sewer_objects.png,32,128,0,0
 
 [layer]
 type=background
@@ -196,7 +197,6 @@ data=
 [event]
 # Barrel
 type=on_trigger
-repeat=false
 location=12,21,1,1
 hotspot=location
 msg=You found the switch key in a barrel!
@@ -218,7 +218,6 @@ intermap=basementa.txt,1,30
 [event]
 # Trick Chest
 type=on_trigger
-repeat=false
 location=30,4,1,1
 hotspot=location
 mapmod=object,30,4,206
@@ -229,7 +228,6 @@ tooltip=Chest
 [event]
 # Chest
 type=on_trigger
-repeat=false
 location=30,23,1,1
 hotspot=location
 loot=0,29,23,fixed,25,50
@@ -241,21 +239,21 @@ tooltip=Chest
 type=beetle
 location=11,26,1,1
 
-[enemygroup]
+[enemy]
 # 3 Beetles
 type=beetle
 location=24,2,6,7
 level=1,1
 number=3,3
 
-[enemygroup]
+[enemy]
 # 2 Slimes
 type=slime
 location=9,7,4,7
 level=1,1
 number=2,2
 
-[enemygroup]
+[enemy]
 # 2 Ruby Snakes
 type=rubysnake
 location=24,16,7,6

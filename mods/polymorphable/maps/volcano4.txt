@@ -3,13 +3,14 @@ width=32
 height=32
 tilewidth=32
 tileheight=32
+orientation=orthogonal
 music=music/evil_temple.ogg
 tileset=tilesetdefs/volcano.txt
 title=Volcano
 
 [tilesets]
-tileset=tilesetdefs/../../../tiled/volcano/tiled_collision.png,32,32,0,0
-tileset=tilesetdefs/../../../tiled/volcano/generic_background.png,32,32,0,0
+tileset=../../../tiled/volcano/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/volcano/generic_background.png,32,32,0,0
 
 [layer]
 type=background
@@ -155,14 +156,14 @@ data=
 1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 
-[enemygroup]
+[enemy]
 # 2 Skeleton Mages
 type=skeletonmage
 location=21,9,6,2
 level=2,2
 number=2,2
 
-[enemygroup]
+[enemy]
 # 3 Firebats
 type=firebat
 location=14,20,5,5
@@ -178,7 +179,6 @@ intermap=volcano3.txt,30,9
 [event]
 # Ghost Talisman
 type=on_trigger
-repeat=false
 location=23,7,1,1
 hotspot=location
 loot=400,24,6,fixed,1

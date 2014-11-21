@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32">
  <properties>
-  <property name="music" value="evil_temple.ogg"/>
-  <property name="tileset" value="volcano.txt"/>
+  <property name="music" value="music/evil_temple.ogg"/>
+  <property name="tileset" value="tilesetdefs/volcano.txt"/>
   <property name="title" value="Volcano"/>
  </properties>
  <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
@@ -155,8 +155,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup name="enemy" width="32" height="32"/>
- <objectgroup name="enemygroup" width="32" height="32">
+ <objectgroup name="enemy">
   <object name="2 Skeleton Knights" type="skeletonknight" x="416" y="288" width="128" height="192">
    <properties>
     <property name="level" value="2,2"/>
@@ -164,7 +163,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="event" width="32" height="32">
+ <objectgroup name="event">
   <object name="Teleport to Volcano1" type="on_trigger" x="0" y="352" width="32" height="192">
    <properties>
     <property name="intermap" value="volcano1.txt,30,18"/>

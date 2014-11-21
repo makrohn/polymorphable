@@ -1,9 +1,16 @@
 [header]
 width=32
 height=32
+tilewidth=32
+tileheight=32
+orientation=orthogonal
 music=music/evil_temple.ogg
 tileset=tilesetdefs/volcano.txt
 title=Volcano
+
+[tilesets]
+tileset=../../../tiled/volcano/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/volcano/generic_background.png,32,32,0,0
 
 [layer]
 type=background
@@ -149,7 +156,7 @@ data=
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 
-[enemygroup]
+[enemy]
 # 2 Skeleton Knights
 type=skeletonknight
 location=13,9,4,6
@@ -165,103 +172,124 @@ intermap=volcano1.txt,30,18
 [event]
 # Fire alert
 type=on_trigger
-repeat=false
 location=10,5,6,3
 msg=There might be a way to cross that small gap, but it looks deadly.
 sfx=quake.ogg
 
 [event]
 # Lava Trap
-type=on_trigger
+type=trap
 location=10,3,1,1
+=
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=on_trigger
+type=trap
 location=11,3,1,1
+=
+ =
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=on_trigger
+type=trap
 location=13,3,1,1
+=
+ =
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=on_trigger
+type=trap
 location=12,3,1,1
+=
+ =
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=on_trigger
+type=trap
 location=14,3,1,1
+=
+ =
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=on_trigger
+type=trap
 location=15,3,1,1
+=
+ =
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=on_trigger
+type=trap
 location=11,4,1,1
+=
+ =
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=on_trigger
+type=trap
 location=10,4,1,1
+=
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=on_trigger
+type=trap
 location=12,4,1,1
+=
+ =
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=on_trigger
+type=trap
 location=13,4,1,1
+=
+ =
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=on_trigger
+type=trap
 location=14,4,1,1
+=
+ =
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=on_trigger
+type=trap
 location=15,4,1,1
+=
+ =
 power=33
 power_damage=100,100
 tooltip=Lava River

@@ -3,14 +3,15 @@ width=32
 height=32
 tilewidth=32
 tileheight=32
+orientation=orthogonal
 music=music/evil_temple.ogg
 tileset=tilesetdefs/volcano.txt
 title=Volcano
 
 [tilesets]
-tileset=tilesetdefs/../../../tiled/volcano/tiled_collision.png,32,32,0,0
-tileset=tilesetdefs/../../../tiled/volcano/generic_background.png,32,32,0,0
-tileset=tilesetdefs/../../../tiled/volcano/small_objects.png,32,64,0,0
+tileset=../../../tiled/volcano/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/volcano/generic_background.png,32,32,0,0
+tileset=../../../tiled/volcano/small_objects.png,32,64,0,0
 
 [layer]
 type=background
@@ -172,12 +173,12 @@ intermap=volcano2.txt,30,28
 # Teleport to Volcano3
 type=on_trigger
 location=31,14,1,6
+=
 intermap=volcano3.txt,1,15
 
 [event]
 # Locked door
 type=on_trigger
-repeat=false
 location=19,17,1,1
 hotspot=location
 mapmod=object,19,17,0;collision,19,17,0

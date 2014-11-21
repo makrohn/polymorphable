@@ -1,9 +1,20 @@
 [header]
 width=32
 height=32
+tilewidth=32
+tileheight=32
+orientation=orthogonal
 music=music/mysticaltheme.ogg
 tileset=tilesetdefs/town.txt
 title=Castle Balcony
+
+[tilesets]
+tileset=../../../tiled/castle/outside/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/castle/outside/generic_background.png,32,32,0,0
+tileset=../../../tiled/castle/outside/small_objects.png,32,64,0,0
+tileset=../../../tiled/castle/outside/town_buildings.png,32,128,0,0
+tileset=../../../tiled/castle/outside/bldgleft.png,32,128,16,0
+tileset=../../../tiled/castle/outside/bldgright.png,32,128,-16,0
 
 [layer]
 type=background
@@ -185,7 +196,7 @@ data=
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 
-[enemygroup]
+[enemy]
 # 3 venombats
 type=venombat
 location=9,14,6,6

@@ -3,15 +3,16 @@ width=28
 height=18
 tilewidth=32
 tileheight=32
+orientation=orthogonal
 music=music/calmtown.ogg
 tileset=tilesetdefs/interior.txt
 title=Library
 
 [tilesets]
-tileset=tilesetdefs/../../../tiled/laurelia/tiled_collision.png,32,32,0,0
-tileset=tilesetdefs/../../../tiled/laurelia/interior_background.png,32,32,0,0
-tileset=tilesetdefs/../../../tiled/laurelia/intfurniture.png,32,64,0,0
-tileset=tilesetdefs/../../../tiled/laurelia/interiorbuildings.png,32,128,0,0
+tileset=../../../tiled/laurelia/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/laurelia/interior_background.png,32,32,0,0
+tileset=../../../tiled/laurelia/intfurniture.png,32,64,0,0
+tileset=../../../tiled/laurelia/interiorbuildings.png,32,128,0,0
 
 [layer]
 type=background
@@ -88,7 +89,6 @@ intermap=laurelia.txt,24,92
 [event]
 # On Ghosts
 type=on_trigger
-repeat=false
 location=6,8,1,1
 hotspot=location
 msg=p.32: "Ghosts, being incorporeal, are nearly immune to heat and fire."
@@ -97,7 +97,6 @@ tooltip=On Ghosts
 [event]
 # History
 type=on_trigger
-repeat=false
 location=4,11,1,1
 hotspot=location
 msg=p.1:  "This small town is a seeming backwater.  However, nearly every one of it's citizens has the ability to polymorph into another creature."  Better put it back on the top shelf where the tourists can't find it.
@@ -106,9 +105,8 @@ tooltip=History of Laurelia
 [event]
 # Demonology
 type=on_trigger
-repeat=false
 location=17,11,1,1
 hotspot=location
-msg=p. 967: "Zalkaz was constantly beset by paladins seeking to destroy him; he would eliminate each one by blotting out the light with hordes of bats."
-tooltip=Demonology
+msg=p. 967: "Zalkas was constantly beset by paladins seeking to destroy them; he would eliminate each one by blotting out the light with flocks of bats."
+tooltip=Deomonology
 

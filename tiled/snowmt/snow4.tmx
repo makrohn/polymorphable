@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32">
  <properties>
-  <property name="music" value="snow_about_a_castle.ogg"/>
-  <property name="tileset" value="snowmt.txt"/>
+  <property name="music" value="music/snow_about_a_castle.ogg"/>
+  <property name="tileset" value="tilesetdefs/snowmt.txt"/>
   <property name="title" value="Mountain Cave"/>
  </properties>
  <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
@@ -37,7 +37,7 @@
    eJztlNsOgDAIQ93//7SPGsOlpd2eJDEaBzsdA66Ls5V8n7Kf/3AX+OzQwPi6NbBn23VPaO5P1clpPlprTj7Kc/TApJ/c7Gmc2neOO1PP77BpLtgZy9akwu/iEB+UP92/0q3wUQ1VTBTL9rpaU9lapeUbt4v/1hD9i2pT4Wd7VPdU6ZrwK3/Et1tD+FF+WT6iL+vH7I3yOw3ZDHDyK58stxWfnb+dRoY/NQdf0aDyVQ0MP5pnXw1oHXQ1gsxOZpaytRmxbhypAQY=
   </data>
  </layer>
- <objectgroup name="enemygroup" width="32" height="32">
+ <objectgroup name="enemy">
   <object name="1 Skeleton Mage" type="skeletonmage" x="416" y="704" width="192" height="32">
    <properties>
     <property name="level" value="2,2"/>
@@ -51,8 +51,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="enemy" width="32" height="32"/>
- <objectgroup name="event" width="32" height="32">
+ <objectgroup name="event">
   <object name="Teleport to Snow3" type="on_trigger" x="32" y="992" width="96" height="32">
    <properties>
     <property name="intermap" value="snow3.txt,21,15"/>

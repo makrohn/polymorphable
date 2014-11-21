@@ -3,13 +3,14 @@ width=32
 height=32
 tilewidth=32
 tileheight=32
+orientation=orthogonal
 music=music/evil_temple.ogg
 tileset=tilesetdefs/volcano.txt
 title=Volcano
 
 [tilesets]
-tileset=tilesetdefs/../../../tiled/volcano/tiled_collision.png,32,32,0,0
-tileset=tilesetdefs/../../../tiled/volcano/generic_background.png,32,32,0,0
+tileset=../../../tiled/volcano/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/volcano/generic_background.png,32,32,0,0
 
 [layer]
 type=background
@@ -158,7 +159,6 @@ data=
 [event]
 # Alert
 type=on_trigger
-repeat=false
 location=10,30,6,1
 msg=TRAPPED!
 requires_not_status=1stjugg

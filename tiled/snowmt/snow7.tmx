@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="48" height="48" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="48" tilewidth="32" tileheight="32">
  <properties>
-  <property name="music" value="snow_about_a_castle.ogg"/>
-  <property name="tileset" value="snowmt.txt"/>
+  <property name="music" value="music/snow_about_a_castle.ogg"/>
+  <property name="tileset" value="tilesetdefs/snowmt.txt"/>
   <property name="title" value="Zalkaz's Lair"/>
  </properties>
  <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
@@ -225,11 +225,10 @@
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,2,0,2,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
 </data>
  </layer>
- <objectgroup name="enemygroup" width="48" height="48"/>
- <objectgroup name="enemy" width="48" height="48">
+ <objectgroup name="enemy">
   <object name="Zalkaz" type="zalkaz" x="672" y="544" width="32" height="32"/>
  </objectgroup>
- <objectgroup name="event" width="48" height="48">
+ <objectgroup name="event">
   <object name="Teleport to Laurelia" type="on_trigger" x="704" y="1504" width="32" height="32">
    <properties>
     <property name="intermap" value="laurelia.txt,20,81"/>

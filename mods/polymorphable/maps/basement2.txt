@@ -1,9 +1,18 @@
 [header]
 width=32
 height=32
+tilewidth=32
+tileheight=32
+orientation=orthogonal
 music=music/winds_of_stories.ogg
 tileset=tilesetdefs/sewer.txt
 title=Secret Basement
+
+[tilesets]
+tileset=../../../tiled/sewers/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/sewers/generic_background.png,32,32,0,0
+tileset=../../../tiled/sewers/small_objects.png,32,64,0,0
+tileset=../../../tiled/sewers/sewer_objects.png,32,128,0,0
 
 [layer]
 type=background
@@ -197,7 +206,7 @@ type=on_trigger
 location=27,9,1,1
 intermap=basement3.txt,28,13
 
-[enemygroup]
+[enemy]
 # 2 Ruby Snakes
 type=rubysnake
 location=21,8,4,6
