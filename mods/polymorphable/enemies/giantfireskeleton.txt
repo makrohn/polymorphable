@@ -26,7 +26,7 @@ power_melee_phys=1
 power_ranged_phys=102
 power_ranged_ment=302
 quest_loot=juggsearch,1stjugg,498
-cooldown_hit=30
+cooldown_hit=1s
 
 accuracy=100
 avoidance=0

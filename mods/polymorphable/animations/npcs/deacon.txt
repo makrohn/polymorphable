@@ -3,6 +3,6 @@ image=images/npcs/deacon.png
 
 [stance]
 frames=1
-duration=60
+duration=2s
 type=looped
 frame=0,0,0,0,23,47,12,43

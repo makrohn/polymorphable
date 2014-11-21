@@ -3,6 +3,6 @@ image=images/npcs/quartermaster.png
 
 [stance]
 frames=1
-duration=60
+duration=2s
 type=looped
 frame=0,0,0,0,36,51,14,47

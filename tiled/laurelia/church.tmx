@@ -162,7 +162,7 @@
 </data>
  </layer>
  <objectgroup name="npc">
-  <object name="Deacon" type="deacon" x="256" y="416" width="32" height="32"/>
+  <object name="Deacon" type="npcs/deacon.txt" x="256" y="416" width="32" height="32"/>
  </objectgroup>
  <objectgroup name="event">
   <object name="Teleport to Graveyard" type="on_trigger" x="608" y="96" width="64" height="32">

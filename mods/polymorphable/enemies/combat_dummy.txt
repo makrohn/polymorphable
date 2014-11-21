@@ -17,11 +17,11 @@ threat_range=0
 turn_delay=12
 chance_pursue=20
 chance_ranged_phys=5
-cooldown_hit=4
+cooldown_hit=133ms
 
 accuracy=100
 avoidance=0
 
 dmg_ranged_min=0
 dmg_ranged_max=0
-cooldown=30
+cooldown=1s

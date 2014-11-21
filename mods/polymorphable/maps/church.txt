@@ -160,7 +160,7 @@ data=
 
 [npc]
 # Deacon
-type=deacon
+type=npcs/deacon.txt
 location=8,13,1,1
 
 [event]

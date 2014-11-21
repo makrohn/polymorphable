@@ -3,6 +3,6 @@ image=images/npcs/vacationerb.png
 
 [stance]
 frames=1
-duration=60
+duration=2s
 type=looped
 frame=0,0,0,0,30,49,15,43
