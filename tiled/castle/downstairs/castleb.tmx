@@ -161,7 +161,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup name="enemygroup">
+ <objectgroup name="enemy">
   <object name="2 snakes" type="snake" x="128" y="160" width="32" height="160">
    <properties>
     <property name="level" value="1,1"/>
@@ -175,7 +175,6 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="enemy"/>
  <objectgroup name="event">
   <object name="Chest" type="on_trigger" x="64" y="160" width="32" height="32">
    <properties>

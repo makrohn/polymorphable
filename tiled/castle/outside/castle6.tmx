@@ -205,7 +205,6 @@
 4,4,4,4,1,1,1,1,1,1,1,1,0,0,0,0,1,1,1,1,1,1,1,1,1,1,2,4,4,4,4,4
 </data>
  </layer>
- <objectgroup name="enemygroup"/>
  <objectgroup name="enemy"/>
  <objectgroup name="event">
   <object name="Teleport to Castle5" type="on_trigger" x="384" y="992" width="128" height="32">

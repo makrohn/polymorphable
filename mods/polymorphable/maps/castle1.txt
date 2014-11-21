@@ -1,9 +1,20 @@
 [header]
 width=32
 height=32
+tilewidth=32
+tileheight=32
+orientation=orthogonal
 music=music/mysticaltheme.ogg
 tileset=tilesetdefs/town.txt
 title=Castle Entry
+
+[tilesets]
+tileset=../../../tiled/castle/outside/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/castle/outside/generic_background.png,32,32,0,0
+tileset=../../../tiled/castle/outside/small_objects.png,32,64,0,0
+tileset=../../../tiled/castle/outside/town_buildings.png,32,128,0,0
+tileset=../../../tiled/castle/outside/bldgleft.png,32,128,16,0
+tileset=../../../tiled/castle/outside/bldgright.png,32,128,-16,0
 
 [layer]
 type=background
@@ -204,7 +215,6 @@ intermap=castlepath.txt,1,19
 [event]
 # Fire Trap
 type=on_trigger
-repeat=false
 location=14,3,1,1
 power=33
 power_damage=100,100
@@ -213,7 +223,6 @@ power_path=0,0,14,3
 [event]
 # Fire Trap
 type=on_trigger
-repeat=false
 location=15,4,1,1
 power=33
 power_damage=100,100
@@ -222,7 +231,6 @@ power_path=0,0,15,4
 [event]
 # Fire Trap
 type=on_trigger
-repeat=false
 location=14,4,1,1
 power=33
 power_damage=100,100
@@ -231,7 +239,6 @@ power_path=0,0,14,4
 [event]
 # Fire Trap
 type=on_trigger
-repeat=false
 location=13,4,1,1
 power=33
 power_damage=100,100
@@ -240,7 +247,6 @@ power_path=0,0,13,4
 [event]
 # Fire Trap
 type=on_trigger
-repeat=false
 location=15,3,1,1
 power=33
 power_damage=100,100
@@ -249,7 +255,6 @@ power_path=0,0,15,3
 [event]
 # Fire Trap
 type=on_trigger
-repeat=false
 location=13,3,1,1
 power=33
 power_damage=100,100

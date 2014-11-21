@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
   <image source="tiled_collision.png" width="480" height="32"/>
  </tileset>
@@ -192,8 +192,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup name="event" width="32" height="32"/>
- <objectgroup name="enemy" width="32" height="32"/>
- <objectgroup name="enemygroup" width="32" height="32"/>
- <objectgroup name="npc" width="32" height="32"/>
+ <objectgroup name="event"/>
+ <objectgroup name="enemy"/>
+ <objectgroup name="npc"/>
 </map>
