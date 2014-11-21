@@ -176,17 +176,17 @@ number=2,2
 # Teleport to Snow4
 type=on_trigger
 location=3,25,2,2
-intermap=snow4.txt,29,30
+intermap=maps/snow4.txt,29,30
 
 [event]
 # Teleport to Snow6
 type=on_trigger
 location=31,12,1,1
-intermap=snow6.txt,1,4
+intermap=maps/snow6.txt,1,4
 
 [event]
 # Teleport to SnowB
 type=on_trigger
 location=13,20,2,2
-intermap=snowb.txt,17,30
+intermap=maps/snowb.txt,17,30
 

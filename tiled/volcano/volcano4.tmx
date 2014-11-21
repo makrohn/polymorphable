@@ -172,7 +172,7 @@
  <objectgroup name="event">
   <object name="Teleport to Volcano3" type="on_trigger" x="0" y="704" width="32" height="256">
    <properties>
-    <property name="intermap" value="volcano3.txt,30,9"/>
+    <property name="intermap" value="maps/volcano3.txt,30,9"/>
    </properties>
   </object>
   <object name="Ghost Talisman" type="on_trigger" x="736" y="224" width="32" height="32">

@@ -95,7 +95,7 @@
  <objectgroup name="event">
   <object name="Teleport to Market" type="on_trigger" x="96" y="224" width="32" height="32">
    <properties>
-    <property name="intermap" value="market.txt,3,7"/>
+    <property name="intermap" value="maps/market.txt,3,7"/>
    </properties>
   </object>
  </objectgroup>

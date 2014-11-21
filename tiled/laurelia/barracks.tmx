@@ -120,22 +120,22 @@
  <objectgroup name="event">
   <object name="Teleport to Laurelia" type="on_trigger" x="1280" y="576" width="64" height="32">
    <properties>
-    <property name="intermap" value="laurelia.txt,120,68"/>
+    <property name="intermap" value="maps/laurelia.txt,120,68"/>
    </properties>
   </object>
   <object name="Teleport to Laurelia" type="on_trigger" x="320" y="384" width="64" height="32">
    <properties>
-    <property name="intermap" value="laurelia.txt,105,65"/>
+    <property name="intermap" value="maps/laurelia.txt,105,65"/>
    </properties>
   </object>
   <object name="Teleport to Laurelia" type="on_trigger" x="832" y="384" width="64" height="32">
    <properties>
-    <property name="intermap" value="laurelia.txt,113,65"/>
+    <property name="intermap" value="maps/laurelia.txt,113,65"/>
    </properties>
   </object>
   <object name="Teleport to Laurelia" type="on_trigger" x="576" y="384" width="64" height="32">
    <properties>
-    <property name="intermap" value="laurelia.txt,109,65"/>
+    <property name="intermap" value="maps/laurelia.txt,109,65"/>
    </properties>
   </object>
  </objectgroup>

@@ -166,7 +166,7 @@
   </object>
   <object name="Teleport to Volcano3" type="on_trigger" x="320" y="992" width="192" height="32">
    <properties>
-    <property name="intermap" value="volcano3.txt,12,1"/>
+    <property name="intermap" value="maps/volcano3.txt,12,1"/>
     <property name="requires_status" value="1stjugg"/>
    </properties>
   </object>

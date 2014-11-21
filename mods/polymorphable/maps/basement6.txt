@@ -198,13 +198,13 @@ data=
 # Teleport to Basement5
 type=on_trigger
 location=31,28,1,3
-intermap=basement5.txt,1,7
+intermap=maps/basement5.txt,1,7
 
 [event]
 # Teleport to Basement B
 type=on_trigger
 location=10,29,2,1
-intermap=basementb.txt,28,4
+intermap=maps/basementb.txt,28,4
 
 [event]
 # Alert
@@ -218,7 +218,7 @@ tooltip=Sign
 # Teleport to Basement7
 type=on_trigger
 location=6,3,2,1
-intermap=basement7.txt,29,29
+intermap=maps/basement7.txt,29,29
 
 [enemy]
 # bomb

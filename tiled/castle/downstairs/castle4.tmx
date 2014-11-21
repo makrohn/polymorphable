@@ -187,12 +187,12 @@
   </object>
   <object name="Teleport to Castle3" type="on_trigger" x="480" y="992" width="64" height="32">
    <properties>
-    <property name="intermap" value="castle3.txt,14,11"/>
+    <property name="intermap" value="maps/castle3.txt,14,11"/>
    </properties>
   </object>
   <object name="Teleport to CastleB" type="on_trigger" x="0" y="480" width="32" height="128">
    <properties>
-    <property name="intermap" value="castleb.txt,30,11"/>
+    <property name="intermap" value="maps/castleb.txt,30,11"/>
    </properties>
   </object>
  </objectgroup>

@@ -178,17 +178,17 @@
  <objectgroup name="event">
   <object name="Teleport to Snow4" type="on_trigger" x="96" y="800" width="64" height="64">
    <properties>
-    <property name="intermap" value="snow4.txt,29,30"/>
+    <property name="intermap" value="maps/snow4.txt,29,30"/>
    </properties>
   </object>
   <object name="Teleport to Snow6" type="on_trigger" x="992" y="384" width="32" height="32">
    <properties>
-    <property name="intermap" value="snow6.txt,1,4"/>
+    <property name="intermap" value="maps/snow6.txt,1,4"/>
    </properties>
   </object>
   <object name="Teleport to SnowB" type="on_trigger" x="416" y="640" width="64" height="64">
    <properties>
-    <property name="intermap" value="snowb.txt,17,30"/>
+    <property name="intermap" value="maps/snowb.txt,17,30"/>
    </properties>
   </object>
  </objectgroup>

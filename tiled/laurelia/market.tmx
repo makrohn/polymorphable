@@ -120,12 +120,12 @@
  <objectgroup name="event">
   <object name="Teleport to Laurelia" type="on_trigger" x="576" y="576" width="64" height="32">
    <properties>
-    <property name="intermap" value="laurelia.txt,69,98"/>
+    <property name="intermap" value="maps/laurelia.txt,69,98"/>
    </properties>
   </object>
   <object name="Teleport for Basement" type="on_trigger" x="96" y="256" width="32" height="32">
    <properties>
-    <property name="intermap" value="marketbasement.txt,3,8"/>
+    <property name="intermap" value="maps/marketbasement.txt,3,8"/>
    </properties>
   </object>
  </objectgroup>

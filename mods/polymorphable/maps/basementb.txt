@@ -198,7 +198,7 @@ data=
 # Teleport to Basement 6
 type=on_trigger
 location=27,3,2,1
-intermap=basement6.txt,11,28
+intermap=maps/basement6.txt,11,28
 
 [event]
 # Chest

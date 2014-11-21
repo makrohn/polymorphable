@@ -207,5 +207,5 @@ number=3,3
 # Teleport to Castle5
 type=on_trigger
 location=31,12,1,4
-intermap=castle5.txt,1,9
+intermap=maps/castle5.txt,1,9
 

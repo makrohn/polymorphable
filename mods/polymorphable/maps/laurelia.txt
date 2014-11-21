@@ -810,20 +810,20 @@ location=61,109,1,1
 # Teleport to Mt Path
 type=on_trigger
 location=177,69,1,5
-intermap=mountainpath.txt,1,18
+intermap=maps/mountainpath.txt,1,18
 
 [event]
 # Teleport to Glade
 type=on_trigger
 location=88,0,6,1
-intermap=glade.txt,13,30
+intermap=maps/glade.txt,13,30
 requires_status=cavernexplored
 
 [event]
 # Fall to Cavern
 type=on_trigger
 location=86,14,6,1
-intermap=cavern.txt,98,98
+intermap=maps/cavern.txt,98,98
 msg=You've fallen in a hole!
 requires_not_status=cavernexplored
 requires_status=elderintro
@@ -832,121 +832,121 @@ requires_status=elderintro
 # Teleport to Castle Path
 type=on_trigger
 location=0,103,1,6
-intermap=castlepath.txt,30,14
+intermap=maps/castlepath.txt,30,14
 
 [event]
 # Teleport to Snow1
 type=on_trigger
 location=71,143,7,1
-intermap=snow1.txt,3,1
+intermap=maps/snow1.txt,3,1
 
 [event]
 # Teleport to church
 type=on_trigger
 location=34,76,3,1
-intermap=church.txt,19,24
+intermap=maps/church.txt,19,24
 
 [event]
 # Teleport to backchurch
 type=on_trigger
 location=34,67,3,1
-intermap=church.txt,19,4
+intermap=maps/church.txt,19,4
 
 [event]
 # Teleport to Small House
 type=on_trigger
 location=53,75,1,1
-intermap=smallhouse.txt,9,13
+intermap=maps/smallhouse.txt,9,13
 
 [event]
 # Teleport to Smallhouse1
 type=on_trigger
 location=89,61,1,1
-intermap=smallhouse1.txt,9,13
+intermap=maps/smallhouse1.txt,9,13
 
 [event]
 # Teleport to Smallhouse2
 type=on_trigger
 location=107,51,1,1
-intermap=smallhouse2.txt,9,13
+intermap=maps/smallhouse2.txt,9,13
 
 [event]
 # Teleport to Inn
 type=on_trigger
 location=101,83,2,1
-intermap=inn1st.txt,15,28
+intermap=maps/inn1st.txt,15,28
 
 [event]
 # Teleport to Library
 type=on_trigger
 location=24,91,1,1
-intermap=library.txt,13,15
+intermap=maps/library.txt,13,15
 
 [event]
 # Teleport to Smithy
 type=on_trigger
 location=52,89,1,1
-intermap=smithy.txt,11,14
+intermap=maps/smithy.txt,11,14
 
 [event]
 # Teleport to Market
 type=on_trigger
 location=69,97,1,1
-intermap=market.txt,18,17
+intermap=maps/market.txt,18,17
 
 [event]
 # Teleport to Granary
 type=on_trigger
 location=91,99,1,1
-intermap=granary.txt,7,9
+intermap=maps/granary.txt,7,9
 
 [event]
 # Teleport to Barracks
 type=on_trigger
 location=105,64,1,1
-intermap=barracks.txt,10,11
+intermap=maps/barracks.txt,10,11
 
 [event]
 # Teleport to Barracks
 type=on_trigger
 location=120,67,1,1
-intermap=barracks.txt,40,17
+intermap=maps/barracks.txt,40,17
 
 [event]
 # Teleport to Barracks
 type=on_trigger
 location=113,64,1,1
-intermap=barracks.txt,26,11
+intermap=maps/barracks.txt,26,11
 
 [event]
 # Teleport to Barracks
 type=on_trigger
 location=109,64,1,1
-intermap=barracks.txt,18,11
+intermap=maps/barracks.txt,18,11
 
 [event]
 # Teleport to Elder's House
 type=on_trigger
 location=69,58,1,1
-intermap=eldershouse.txt,18,11
+intermap=maps/eldershouse.txt,18,11
 
 [event]
 # Teleport to Daphne's House
 type=on_trigger
 location=20,80,1,1
-intermap=daphneshouse.txt,9,13
+intermap=maps/daphneshouse.txt,9,13
 
 [event]
 # Teleport to Tavern
 type=on_trigger
 location=83,80,1,1
-intermap=tavern.txt,15,11
+intermap=maps/tavern.txt,15,11
 
 [event]
 # teleport to Basement8
 type=on_trigger
 location=69,52,1,1
-intermap=basement8.txt,15,14
+intermap=maps/basement8.txt,15,14
 requires_status=ghostupgrade
 
 [event]

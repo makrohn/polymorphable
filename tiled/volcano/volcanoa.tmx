@@ -207,7 +207,7 @@
   </object>
   <object name="Teleport to Volcano2" type="on_trigger" x="96" y="992" width="320" height="32">
    <properties>
-    <property name="intermap" value="volcano2.txt,7,1"/>
+    <property name="intermap" value="maps/volcano2.txt,7,1"/>
    </properties>
   </object>
  </objectgroup>

@@ -316,13 +316,13 @@ tooltip=Chest
 # Teleport to Basement8
 type=on_trigger
 location=26,0,2,1
-intermap=basement8.txt,12,30
+intermap=maps/basement8.txt,12,30
 
 [event]
 # Teleport to Basement6
 type=on_trigger
 location=28,30,2,1
-intermap=basement6.txt,7,4
+intermap=maps/basement6.txt,7,4
 
 [enemy]
 # Venombat

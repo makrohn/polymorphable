@@ -158,7 +158,7 @@
  <objectgroup name="event">
   <object name="Teleport to Volcano1" type="on_trigger" x="992" y="800" width="32" height="160">
    <properties>
-    <property name="intermap" value="volcano1.txt,1,16"/>
+    <property name="intermap" value="maps/volcano1.txt,1,16"/>
    </properties>
   </object>
   <object name="Forge" type="on_trigger" x="128" y="608" width="32" height="32">
@@ -171,7 +171,7 @@
   </object>
   <object name="Teleport to VolcanoA" type="on_trigger" x="160" y="0" width="352" height="32">
    <properties>
-    <property name="intermap" value="volcanoa.txt,5,30"/>
+    <property name="intermap" value="maps/volcanoa.txt,5,30"/>
    </properties>
   </object>
  </objectgroup>

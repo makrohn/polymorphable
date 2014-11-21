@@ -172,7 +172,7 @@ location=17,24,1,1
 # Teleport to Snow5
 type=on_trigger
 location=17,31,1,1
-intermap=snow5.txt,13,22
+intermap=maps/snow5.txt,13,22
 
 [npc]
 # Shop Chest

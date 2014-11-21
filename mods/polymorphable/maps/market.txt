@@ -118,11 +118,11 @@ data=
 # Teleport to Laurelia
 type=on_trigger
 location=18,18,2,1
-intermap=laurelia.txt,69,98
+intermap=maps/laurelia.txt,69,98
 
 [event]
 # Teleport for Basement
 type=on_trigger
 location=3,8,1,1
-intermap=marketbasement.txt,3,8
+intermap=maps/marketbasement.txt,3,8
 

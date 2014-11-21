@@ -198,19 +198,19 @@ data=
 # Teleport to Basement4
 type=on_trigger
 location=31,28,1,3
-intermap=basement4.txt,1,3
+intermap=maps/basement4.txt,1,3
 
 [event]
 # Teleport to Basement 2
 type=on_trigger
 location=28,12,1,1
-intermap=basement2.txt,27,8
+intermap=maps/basement2.txt,27,8
 
 [event]
 # Teleport to Basement 5
 type=on_trigger
 location=7,2,2,1
-intermap=basement5.txt,27,23
+intermap=maps/basement5.txt,27,23
 
 [event]
 # Chest

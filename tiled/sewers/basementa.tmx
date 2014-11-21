@@ -62,7 +62,7 @@
   </object>
   <object name="Teleport to Basement4" type="on_trigger" x="32" y="992" width="32" height="32">
    <properties>
-    <property name="intermap" value="basement4.txt,29,2"/>
+    <property name="intermap" value="maps/basement4.txt,29,2"/>
    </properties>
   </object>
   <object name="Book" type="on_trigger" x="896" y="96" width="32" height="32">

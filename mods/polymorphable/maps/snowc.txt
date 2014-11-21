@@ -162,7 +162,7 @@ data=
 # Teleport to Snow6
 type=on_trigger
 location=17,31,3,1
-intermap=snow6.txt,24,20
+intermap=maps/snow6.txt,24,20
 
 [npc]
 # Shade of Elder Thomas

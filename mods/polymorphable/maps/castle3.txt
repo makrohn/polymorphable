@@ -178,17 +178,17 @@ tooltip=Chest
 # Teleport to Castle2
 type=on_trigger
 location=31,22,1,4
-intermap=castle2.txt,3,20
+intermap=maps/castle2.txt,3,20
 
 [event]
 # Teleport to Castle5
 type=on_trigger
 location=0,22,1,4
-intermap=castle5.txt,30,25
+intermap=maps/castle5.txt,30,25
 
 [event]
 # Teleport to Castle4
 type=on_trigger
 location=14,10,1,1
-intermap=castle4.txt,15,30
+intermap=maps/castle4.txt,15,30
 

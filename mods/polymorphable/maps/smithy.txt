@@ -102,7 +102,7 @@ data=
 # Teleport to Laurelia
 type=on_trigger
 location=11,15,2,1
-intermap=laurelia.txt,52,90
+intermap=maps/laurelia.txt,52,90
 
 [npc]
 # Apprentice

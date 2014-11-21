@@ -217,7 +217,7 @@ tooltip=Strange Rock
 # Teleport to Basement4
 type=on_trigger
 location=1,31,1,1
-intermap=basement4.txt,29,2
+intermap=maps/basement4.txt,29,2
 
 [event]
 # Book

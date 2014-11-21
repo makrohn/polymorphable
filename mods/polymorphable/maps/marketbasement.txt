@@ -93,5 +93,5 @@ data=
 # Teleport to Market
 type=on_trigger
 location=3,7,1,1
-intermap=market.txt,3,7
+intermap=maps/market.txt,3,7
 

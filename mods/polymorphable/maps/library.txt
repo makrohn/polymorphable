@@ -84,7 +84,7 @@ data=
 # Teleport to Laurelia
 type=on_trigger
 location=13,16,2,1
-intermap=laurelia.txt,24,92
+intermap=maps/laurelia.txt,24,92
 
 [event]
 # On Ghosts

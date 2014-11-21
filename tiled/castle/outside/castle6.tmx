@@ -209,7 +209,7 @@
  <objectgroup name="event">
   <object name="Teleport to Castle5" type="on_trigger" x="384" y="992" width="128" height="32">
    <properties>
-    <property name="intermap" value="castle5.txt,17,1"/>
+    <property name="intermap" value="maps/castle5.txt,17,1"/>
     <property name="requires_status" value="2ndjugg"/>
    </properties>
   </object>

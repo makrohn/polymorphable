@@ -231,7 +231,7 @@ location=21,17,1,1
 # Teleport to Laurelia
 type=on_trigger
 location=22,47,1,1
-intermap=laurelia.txt,20,81
+intermap=maps/laurelia.txt,20,81
 msg=You're home!
 requires_status=theend
 
