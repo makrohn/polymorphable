@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32">
  <properties>
-  <property name="music" value="winds_of_stories.ogg"/>
-  <property name="tileset" value="sewer.txt"/>
+  <property name="music" value="music/winds_of_stories.ogg"/>
+  <property name="tileset" value="tilesetdefs/sewer.txt"/>
   <property name="title" value="Sewer"/>
  </properties>
  <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
@@ -197,7 +197,7 @@
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,1,3,3,3,3,1
 </data>
  </layer>
- <objectgroup name="event" width="32" height="32">
+ <objectgroup name="event">
   <object name="Alert" type="on_trigger" x="960" y="864" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
@@ -314,10 +314,8 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="enemy" width="32" height="32">
+ <objectgroup name="enemy">
   <object name="Venombat" type="venombat" x="160" y="128" width="32" height="32"/>
- </objectgroup>
- <objectgroup name="enemygroup" width="32" height="32">
   <object name="2 Firebats" type="bat" x="416" y="928" width="96" height="64">
    <properties>
     <property name="level" value="2,2"/>
@@ -349,5 +347,5 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="npc" width="32" height="32"/>
+ <objectgroup name="npc"/>
 </map>

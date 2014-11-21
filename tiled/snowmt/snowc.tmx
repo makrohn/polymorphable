@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32">
  <properties>
-  <property name="music" value="snow_about_a_castle.ogg"/>
-  <property name="tileset" value="snowmt.txt"/>
+  <property name="music" value="music/snow_about_a_castle.ogg"/>
+  <property name="tileset" value="tilesetdefs/snowmt.txt"/>
   <property name="title" value="Safe Room"/>
  </properties>
  <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
@@ -37,16 +37,15 @@
    eJzt1bEJACAMBEDdf2kHEIyGaOMdpBHyb5fWAABmvXCy/RX066/ai7IyOydZL3P06/+9f/em3bh/0b+it5UBJjcARA==
   </data>
  </layer>
- <objectgroup name="enemygroup" width="32" height="32"/>
- <objectgroup name="enemy" width="32" height="32"/>
- <objectgroup name="event" width="32" height="32">
+ <objectgroup name="enemy"/>
+ <objectgroup name="event">
   <object name="Teleport to Snow6" type="on_trigger" x="544" y="992" width="96" height="32">
    <properties>
     <property name="intermap" value="snow6.txt,24,20"/>
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="npc" width="32" height="32">
+ <objectgroup name="npc">
   <object name="Shade of Elder Thomas" type="eldershade" x="576" y="608" width="32" height="32"/>
  </objectgroup>
 </map>

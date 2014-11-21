@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="18" height="21" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="18" height="21" tilewidth="32" tileheight="32">
  <properties>
-  <property name="music" value="calmtown.ogg"/>
-  <property name="tileset" value="outside.txt"/>
+  <property name="music" value="music/calmtown.ogg"/>
+  <property name="tileset" value="tilesetdefs/outside.txt"/>
   <property name="title" value="Jail"/>
  </properties>
  <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
@@ -92,12 +92,12 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup name="event" width="18" height="21">
+ <objectgroup name="event">
   <object name="Teleport to Barracks" type="on_trigger" x="448" y="288" width="32" height="32">
    <properties>
     <property name="intermap" value="barracks.txt,46,7"/>
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="npc" width="18" height="21"/>
+ <objectgroup name="npc"/>
 </map>

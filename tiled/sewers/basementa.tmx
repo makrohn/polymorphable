@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32">
  <properties>
-  <property name="music" value="winds_of_stories.ogg"/>
-  <property name="tileset" value="sewer.txt"/>
+  <property name="music" value="music/winds_of_stories.ogg"/>
+  <property name="tileset" value="tilesetdefs/sewer.txt"/>
   <property name="title" value="Hidden Waterway"/>
  </properties>
  <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
@@ -42,7 +42,7 @@
    eJztlUsOgCAMRFG4/5nd2KSZRIH+EGGSLog4z4EKKW3NosOhevm9KjDOrCL4ln5WfIv8mr31WH/y5N+m8dPM/wofez+ab+WHvrWeq/HPu7z+5xZ+CeTzPqDsJbWtp+Q8f8tPbORLsz496+FLNOoO5HwLoU/tzKA5Xnzv92bl476sln/zx/IzjFfL/3d+1L2FugC7uAD/
   </data>
  </layer>
- <objectgroup name="event" width="32" height="32">
+ <objectgroup name="event">
   <object name="Strange Rock" type="on_trigger" x="32" y="512" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
@@ -87,8 +87,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="enemy" width="32" height="32"/>
- <objectgroup name="enemygroup" width="32" height="32">
+ <objectgroup name="enemy">
   <object name="2 Skeletons" type="skeleton" x="800" y="192" width="96" height="96">
    <properties>
     <property name="level" value="2,2"/>
@@ -108,5 +107,5 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="npc" width="32" height="32"/>
+ <objectgroup name="npc"/>
 </map>

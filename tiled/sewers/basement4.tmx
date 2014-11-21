@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32">
  <properties>
-  <property name="music" value="winds_of_stories.ogg"/>
-  <property name="tileset" value="sewer.txt"/>
+  <property name="music" value="music/winds_of_stories.ogg"/>
+  <property name="tileset" value="tilesetdefs/sewer.txt"/>
   <property name="title" value="Hidden Waterway"/>
  </properties>
  <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
@@ -42,7 +42,7 @@
    eJztlksOwyAMRM3n/mduNygpGuNxbKq0ykizAZxngwURiau83SeXxdpCznuM+JotzlCjqhepgF+JOG0PvLLq8PI7GGP3glVb8L2qileaeyTKj5z/HfiRHDL638Of+1Pja30wxgsYY/JG35v5q304rxf5vMOy+Ez9Y66AuAy+pXP/sbl/g4/ysIxi0T0687X3K2q2/h1sD38H+x/4V/55svnozW9yvN0Pn+P3RD4Ty9Rv1ZDBv3JvZvGjvhO/Ae/mR87u8e/4BeDpB9o=
   </data>
  </layer>
- <objectgroup name="event" width="32" height="32">
+ <objectgroup name="event">
   <object name="Barrel" type="on_trigger" x="384" y="672" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
@@ -79,10 +79,8 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="enemy" width="32" height="32">
+ <objectgroup name="enemy">
   <object name="Beetle" type="beetle" x="352" y="832" width="32" height="32"/>
- </objectgroup>
- <objectgroup name="enemygroup" width="32" height="32">
   <object name="3 Beetles" type="beetle" x="768" y="64" width="192" height="224">
    <properties>
     <property name="level" value="1,1"/>
@@ -102,5 +100,5 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="npc" width="32" height="32"/>
+ <objectgroup name="npc"/>
 </map>

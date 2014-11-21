@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="38" height="19" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="38" height="19" tilewidth="32" tileheight="32">
  <properties>
-  <property name="music" value="calmtown.ogg"/>
-  <property name="tileset" value="interior.txt"/>
+  <property name="music" value="music/calmtown.ogg"/>
+  <property name="tileset" value="tilesetdefs/interior.txt"/>
   <property name="title" value="Elder's House"/>
  </properties>
  <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
@@ -109,7 +109,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup name="event" width="38" height="19" visible="0">
+ <objectgroup name="event" visible="0">
   <object name="Teleport to Laurelia" type="on_trigger" x="576" y="384" width="64" height="32">
    <properties>
     <property name="intermap" value="laurelia.txt,69,59"/>
@@ -125,5 +125,5 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="npc" width="38" height="19"/>
+ <objectgroup name="npc"/>
 </map>

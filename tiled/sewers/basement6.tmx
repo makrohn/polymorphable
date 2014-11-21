@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32">
  <properties>
-  <property name="music" value="winds_of_stories.ogg"/>
-  <property name="tileset" value="sewer.txt"/>
+  <property name="music" value="music/winds_of_stories.ogg"/>
+  <property name="tileset" value="tilesetdefs/sewer.txt"/>
   <property name="title" value="Hidden Waterway"/>
  </properties>
  <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
@@ -197,7 +197,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1
 </data>
  </layer>
- <objectgroup name="event" width="32" height="32">
+ <objectgroup name="event">
   <object name="Teleport to Basement5" type="on_trigger" x="992" y="896" width="32" height="96">
    <properties>
     <property name="intermap" value="basement5.txt,1,7"/>
@@ -221,11 +221,9 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="enemy" width="32" height="32">
+ <objectgroup name="enemy">
   <object name="bomb" type="ghostbomb" x="320" y="736" width="32" height="32"/>
   <object name="bomb" type="ghostbomb" x="352" y="736" width="32" height="32"/>
- </objectgroup>
- <objectgroup name="enemygroup" width="32" height="32">
   <object name="3 Skeletons" type="skeleton" x="704" y="192" width="96" height="128">
    <properties>
     <property name="level" value="2,2"/>
@@ -245,5 +243,5 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="npc" width="32" height="32"/>
+ <objectgroup name="npc"/>
 </map>
