@@ -1,9 +1,18 @@
 [header]
 width=20
 height=20
+tilewidth=32
+tileheight=32
+orientation=orthogonal
 music=music/calmtown.ogg
 tileset=tilesetdefs/interior.txt
 title=Daphne's House
+
+[tilesets]
+tileset=../../../tiled/laurelia/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/laurelia/interior_background.png,32,32,0,0
+tileset=../../../tiled/laurelia/intfurniture.png,32,64,0,0
+tileset=../../../tiled/laurelia/interiorbuildings.png,32,128,0,0
 
 [layer]
 type=background

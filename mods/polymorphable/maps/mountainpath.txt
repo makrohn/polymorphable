@@ -1,8 +1,17 @@
 [header]
 width=32
 height=32
+tilewidth=32
+tileheight=32
+orientation=orthogonal
 tileset=tilesetdefs/outside.txt
 title=Mountain Path
+
+[tilesets]
+tileset=../../../tiled/caves/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/caves/generic_background.png,32,32,0,0
+tileset=../../../tiled/caves/small_objects.png,32,64,0,0
+tileset=../../../tiled/caves/outside_objects.png,32,128,0,0
 
 [layer]
 type=background

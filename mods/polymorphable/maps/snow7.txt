@@ -1,9 +1,18 @@
 [header]
 width=48
 height=48
+tilewidth=32
+tileheight=32
+orientation=orthogonal
 music=music/snow_about_a_castle.ogg
 tileset=tilesetdefs/snowmt.txt
 title=Zalkaz's Lair
+
+[tilesets]
+tileset=../../../tiled/snowmt/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/snowmt/generic_background.png,32,32,0,0
+tileset=../../../tiled/snowmt/small_objects.png,32,64,0,0
+tileset=../../../tiled/snowmt/outside_objects.png,32,128,0,0
 
 [layer]
 type=background
@@ -229,14 +238,12 @@ requires_status=theend
 [event]
 # Alert
 type=on_trigger
-repeat=false
 location=22,46,1,1
 msg=TRAPPED!
 
 [event]
 # Dialog
 type=on_trigger
-repeat=false
 location=22,44,1,1
 msg=Prepare to die!
 

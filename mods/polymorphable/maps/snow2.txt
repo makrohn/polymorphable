@@ -1,9 +1,18 @@
 [header]
 width=32
 height=32
+tilewidth=32
+tileheight=32
+orientation=orthogonal
 music=music/snow_about_a_castle.ogg
 tileset=tilesetdefs/snowmt.txt
 title=Snow Mountain
+
+[tilesets]
+tileset=../../../tiled/snowmt/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/snowmt/generic_background.png,32,32,0,0
+tileset=../../../tiled/snowmt/small_objects.png,32,64,0,0
+tileset=../../../tiled/snowmt/outside_objects.png,32,128,0,0
 
 [layer]
 type=background
@@ -149,14 +158,14 @@ data=
 0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
 
-[enemygroup]
+[enemy]
 # 2 Skeletons
 type=skeleton
 location=8,5,5,9
 level=1,1
 number=2,2
 
-[enemygroup]
+[enemy]
 # 2 Skeleton Mages
 type=skeletonmage
 location=22,5,6,10

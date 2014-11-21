@@ -1,9 +1,18 @@
 [header]
 width=32
 height=32
+tilewidth=32
+tileheight=32
+orientation=orthogonal
 music=music/mysticaltheme.ogg
 tileset=tilesetdefs/interior.txt
 title=Castle Hall
+
+[tilesets]
+tileset=../../../tiled/castle/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/castle/interior_background.png,32,32,0,0
+tileset=../../../tiled/castle/intfurniture.png,32,64,0,0
+tileset=../../../tiled/castle/interiorbuildings.png,32,128,0,0
 
 [layer]
 type=background
@@ -149,14 +158,14 @@ data=
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 
-[enemygroup]
+[enemy]
 # 2 ghosts
 type=ghost
 location=15,16,4,2
 level=1,1
 number=2,2
 
-[enemygroup]
+[enemy]
 # 2 Venom bats
 type=venombat
 location=15,5,4,2
@@ -224,14 +233,12 @@ intermap=castlec.txt,30,12
 [event]
 # Alert
 type=on_trigger
-repeat=false
 location=27,25,1,4
 msg=Violent bombs ahead!
 
 [event]
 # Alert
 type=on_trigger
-repeat=false
 location=19,25,1,4
 msg=Destroy them from afar to defuse them!
 

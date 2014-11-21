@@ -3,15 +3,16 @@ width=100
 height=100
 tilewidth=32
 tileheight=32
+orientation=orthogonal
 music=music/technophobic.ogg
 tileset=tilesetdefs/outside.txt
 title=Cavern
 
 [tilesets]
-tileset=tilesetdefs/../../../tiled/caves/tiled_collision.png,32,32,0,0
-tileset=tilesetdefs/../../../tiled/caves/generic_background.png,32,32,0,0
-tileset=tilesetdefs/../../../tiled/caves/small_objects.png,32,64,0,0
-tileset=tilesetdefs/../../../tiled/caves/outside_objects.png,32,128,0,0
+tileset=../../../tiled/caves/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/caves/generic_background.png,32,32,0,0
+tileset=../../../tiled/caves/small_objects.png,32,64,0,0
+tileset=../../../tiled/caves/outside_objects.png,32,128,0,0
 
 [layer]
 type=background
@@ -432,7 +433,6 @@ data=
 [event]
 # Bat Talisman Chest
 type=on_trigger
-repeat=false
 location=57,47,1,1
 hotspot=location
 loot=200,58,47,fixed,1
@@ -444,7 +444,6 @@ tooltip=Chest
 [event]
 # Chest
 type=on_trigger
-repeat=false
 location=94,62,1,1
 hotspot=location
 loot=0,94,63,fixed,5,15
@@ -454,7 +453,6 @@ tooltip=Chest
 [event]
 # Chest
 type=on_trigger
-repeat=false
 location=88,42,1,1
 hotspot=location
 loot=0,87,42,fixed,2,10
@@ -464,7 +462,6 @@ tooltip=Chest
 [event]
 # Chest
 type=on_trigger
-repeat=false
 location=86,41,1,1
 hotspot=location
 loot=0,86,42,fixed,2,10
@@ -474,7 +471,6 @@ tooltip=Chest
 [event]
 # Chest
 type=on_trigger
-repeat=false
 location=79,41,1,1
 hotspot=location
 loot=0,79,40,fixed,2,10
@@ -484,7 +480,6 @@ tooltip=Chest
 [event]
 # Carrots
 type=on_trigger
-repeat=false
 location=97,73,1,1
 hotspot=location
 loot=1,97,74,fixed,2
@@ -494,7 +489,6 @@ tooltip=Carrots
 [event]
 # Carrots
 type=on_trigger
-repeat=false
 location=95,85,1,1
 hotspot=location
 loot=1,95,85,fixed,2
@@ -518,11 +512,10 @@ requires_not_status=evil_unleashed
 [event]
 # Unblock passage
 type=on_trigger
-repeat=false
 location=76,75,2,1
 hotspot=location
 mapmod=object,75,72,880;object,76,72,0;object,77,72,0;object,78,72,878;object,75,71,885;object,76,71,0;object,77,71,0;object,78,71,883;collision,76,72,0;collision,77,72,0
-npc=gravestone
+npc=npcs/gravestone.txt
 requires_not_status=evil_unleashed
 set_status=evil_unleashed
 tooltip=Unmarked Grave
@@ -530,7 +523,6 @@ tooltip=Unmarked Grave
 [event]
 # Carrots
 type=on_trigger
-repeat=false
 location=75,97,1,1
 hotspot=location
 loot=1,75,98,fixed,2
@@ -542,56 +534,56 @@ tooltip=Carrots
 type=gravestone
 location=1,1,1,1
 
-[enemygroup]
+[enemy]
 # 2 Snakes
 type=snake
 location=44,41,8,4
 level=1,3
 number=2,2
 
-[enemygroup]
+[enemy]
 # 2 Bats
 type=bat
 location=44,47,8,7
 level=1,1
 number=2,2
 
-[enemygroup]
+[enemy]
 # 4-5 Bats
 type=bat
 location=77,42,12,8
 level=1,1
 number=4,5
 
-[enemygroup]
+[enemy]
 # 1 snake
 type=snake
 location=91,63,5,4
 level=1,1
 number=1,1
 
-[enemygroup]
+[enemy]
 # 1 Bat
 type=bat
 location=62,52,10,6
 level=1,1
 number=1,1
 
-[enemygroup]
+[enemy]
 # 2 bats
 type=bat
 location=75,76,3,2
 level=1,1
 number=2,2
 
-[enemygroup]
+[enemy]
 # 2 bats
 type=bat
 location=83,85,12,5
 level=1,1
 number=2,2
 
-[enemygroup]
+[enemy]
 # 1 bat
 type=bat
 location=76,95,4,3

@@ -3,15 +3,16 @@ width=32
 height=32
 tilewidth=32
 tileheight=32
+orientation=orthogonal
 music=music/winds_of_stories.ogg
 tileset=tilesetdefs/sewer.txt
 title=Underground Lake
 
 [tilesets]
-tileset=tilesetdefs/../../../tiled/sewers/tiled_collision.png,32,32,0,0
-tileset=tilesetdefs/../../../tiled/sewers/generic_background.png,32,32,0,0
-tileset=tilesetdefs/../../../tiled/sewers/small_objects.png,32,64,0,0
-tileset=tilesetdefs/../../../tiled/sewers/sewer_objects.png,32,128,0,0
+tileset=../../../tiled/sewers/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/sewers/generic_background.png,32,32,0,0
+tileset=../../../tiled/sewers/small_objects.png,32,64,0,0
+tileset=../../../tiled/sewers/sewer_objects.png,32,128,0,0
 
 [layer]
 type=background
@@ -202,7 +203,6 @@ intermap=basement6.txt,11,28
 [event]
 # Chest
 type=on_trigger
-repeat=false
 location=28,25,1,1
 hotspot=location
 loot=0,28,26,fixed,25,50
@@ -211,21 +211,21 @@ msg=Ambushed!
 spawn=fireskeleton,23,23;fireskeleton,24,23
 tooltip=Chest
 
-[enemygroup]
+[enemy]
 # 6 bats
 type=bat
 location=11,11,9,12
 level=2,2
 type=6,6
 
-[enemygroup]
+[enemy]
 # 3 Skeletons
 type=skeleton
 location=7,20,2,5
 level=2,2
 number=3,3
 
-[enemygroup]
+[enemy]
 # 3 beetles or goos
 type=sewer
 location=1,9,3,3

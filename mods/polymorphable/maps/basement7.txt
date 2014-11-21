@@ -3,15 +3,16 @@ width=32
 height=32
 tilewidth=32
 tileheight=32
+orientation=orthogonal
 music=music/winds_of_stories.ogg
 tileset=tilesetdefs/sewer.txt
 title=Sewer
 
 [tilesets]
-tileset=tilesetdefs/../../../tiled/sewers/tiled_collision.png,32,32,0,0
-tileset=tilesetdefs/../../../tiled/sewers/generic_background.png,32,32,0,0
-tileset=tilesetdefs/../../../tiled/sewers/small_objects.png,32,64,0,0
-tileset=tilesetdefs/../../../tiled/sewers/sewer_objects.png,32,128,0,0
+tileset=../../../tiled/sewers/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/sewers/generic_background.png,32,32,0,0
+tileset=../../../tiled/sewers/small_objects.png,32,64,0,0
+tileset=../../../tiled/sewers/sewer_objects.png,32,128,0,0
 
 [layer]
 type=background
@@ -196,7 +197,6 @@ data=
 [event]
 # Alert
 type=on_trigger
-repeat=false
 location=30,27,1,1
 hotspot=location
 msg=FENCES ARE FOR YOUR PROTECTION.  DO NOT OPEN GATES.
@@ -205,7 +205,6 @@ tooltip=Signpost
 [event]
 # Switch
 type=on_trigger
-repeat=false
 location=29,17,1,1
 hotspot=location
 msg=There is a strange groove in this rock
@@ -215,7 +214,6 @@ tooltip=Strange Rock
 [event]
 # Switch
 type=on_trigger
-repeat=false
 location=16,25,1,1
 hotspot=location
 msg=There is a strange groove in this rock
@@ -225,7 +223,6 @@ tooltip=Strange Rock
 [event]
 # Switch
 type=on_trigger
-repeat=false
 location=8,28,1,1
 hotspot=location
 msg=There is a strange groove in this rock
@@ -235,7 +232,6 @@ tooltip=Strange Rock
 [event]
 # Switch
 type=on_trigger
-repeat=false
 location=3,8,1,1
 hotspot=location
 msg=There is a strange groove in this rock
@@ -245,7 +241,6 @@ tooltip=Strange Rock
 [event]
 # Switch
 type=on_trigger
-repeat=false
 location=29,8,1,1
 hotspot=location
 msg=There is a strange groove in this rock
@@ -255,7 +250,6 @@ tooltip=Strange Rock
 [event]
 # Switch
 type=on_trigger
-repeat=false
 location=3,8,1,1
 hotspot=location
 mapmod=object,4,17,0;object,4,12,0;collision,4,17,0;collision,4,12,0;object,10,1,0;collision,10,1,0
@@ -265,7 +259,6 @@ tooltip=Strange Rock
 [event]
 # Switch
 type=on_trigger
-repeat=false
 location=29,17,1,1
 hotspot=location
 mapmod=collision,23,21,0;collision,17,21,0;object,23,21,0;object,17,21,0;
@@ -275,7 +268,6 @@ tooltip=Strange Rock
 [event]
 # Switch
 type=on_trigger
-repeat=false
 location=16,25,1,1
 hotspot=location
 mapmod=object,2,25,0;object,11,25,0;collision,2,25,0;collision,11,25,0
@@ -286,7 +278,6 @@ tooltip=Strange Rock
 [event]
 # Switch
 type=on_trigger
-repeat=false
 location=29,8,1,1
 hotspot=location
 mapmod=object,16,8,0;object,22,8,0;object,2,11,0;collision,16,8,0;collision,22,8,0;collision,2,11,0
@@ -297,7 +288,6 @@ tooltip=Strange Rock
 [event]
 # Switch
 type=on_trigger
-repeat=false
 location=8,28,1,1
 hotspot=location
 mapmod=object,28,9,0;object,26,16,0;collision,28,9,0;collision,26,16,0,object,14,26,0;collision,14,26,0
@@ -307,7 +297,6 @@ tooltip=Strange Rock
 [event]
 # Chest
 type=on_trigger
-repeat=false
 location=9,2,1,1
 hotspot=location
 loot=1,10,2,fixed,2
@@ -317,7 +306,6 @@ tooltip=Chest
 [event]
 # Chest
 type=on_trigger
-repeat=false
 location=9,3,1,1
 hotspot=location
 loot=2,10,3,fixed,2
@@ -341,35 +329,35 @@ intermap=basement6.txt,7,4
 type=venombat
 location=5,4,1,1
 
-[enemygroup]
+[enemy]
 # 2 Firebats
 type=bat
 location=13,29,3,2
 level=2,2
 number=2,2
 
-[enemygroup]
+[enemy]
 # 2 Skeletons
 type=skeleton
 location=3,19,3,2
 level=2,2
 number=2,2
 
-[enemygroup]
+[enemy]
 # 3 Beetles
 type=beetle
 location=4,8,3,4
 level=1,1
 number=3,3
 
-[enemygroup]
+[enemy]
 # 3 Bats
 type=bat
 location=25,13,4,2
 level=1,1
 number=3,3
 
-[enemygroup]
+[enemy]
 # 3 Ruby Snakes
 type=rubysnake
 location=24,3,5,3

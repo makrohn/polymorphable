@@ -1,9 +1,18 @@
 [header]
 width=32
 height=32
+tilewidth=32
+tileheight=32
+orientation=orthogonal
 music=music/mysticaltheme.ogg
 tileset=tilesetdefs/interior.txt
 title=Castle Hall
+
+[tilesets]
+tileset=../../../tiled/castle/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/castle/interior_background.png,32,32,0,0
+tileset=../../../tiled/castle/intfurniture.png,32,64,0,0
+tileset=../../../tiled/castle/interiorbuildings.png,32,128,0,0
 
 [layer]
 type=background
@@ -149,7 +158,7 @@ data=
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 
-[enemygroup]
+[enemy]
 # 3 snakes
 type=snake
 location=12,20,5,3
@@ -159,7 +168,6 @@ number=3,3
 [event]
 # Fake chest
 type=on_trigger
-repeat=false
 location=14,13,1,1
 hotspot=location
 mapmod=object,14,13,206

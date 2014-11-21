@@ -3,15 +3,16 @@ width=32
 height=32
 tilewidth=32
 tileheight=32
+orientation=orthogonal
 music=music/mysticaltheme.ogg
 tileset=tilesetdefs/interior.txt
 title=Castle Atrium
 
 [tilesets]
-tileset=tilesetdefs/../../../tiled/castle/tiled_collision.png,32,32,0,0
-tileset=tilesetdefs/../../../tiled/castle/interior_background.png,32,32,0,0
-tileset=tilesetdefs/../../../tiled/castle/intfurniture.png,32,64,0,0
-tileset=tilesetdefs/../../../tiled/castle/interiorbuildings.png,32,128,0,0
+tileset=../../../tiled/castle/tiled_collision.png,32,32,0,0
+tileset=../../../tiled/castle/interior_background.png,32,32,0,0
+tileset=../../../tiled/castle/intfurniture.png,32,64,0,0
+tileset=../../../tiled/castle/interiorbuildings.png,32,128,0,0
 
 [layer]
 type=background
@@ -193,7 +194,7 @@ data=
 0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,
 0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0
 
-[enemygroup]
+[enemy]
 # 2 Venom Bats
 type=venombat
 location=9,19,9,3
