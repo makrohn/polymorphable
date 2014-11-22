@@ -198,13 +198,13 @@ data=
 # Teleport to inn1st
 type=on_trigger
 location=25,16,1,1
-intermap=inn1st.txt,25,19
+intermap=maps/inn1st.txt,25,19
 
 [event]
 # Teleport to inn1st
 type=on_trigger
 location=6,16,1,1
-intermap=inn1st.txt,6,19
+intermap=maps/inn1st.txt,6,19
 
 [npc]
 # Vacationera

@@ -134,7 +134,7 @@
  <objectgroup name="event">
   <object name="Teleport to Castle2" type="on_trigger" x="384" y="992" width="96" height="32">
    <properties>
-    <property name="intermap" value="castle2.txt,25,1"/>
+    <property name="intermap" value="maps/castle2.txt,25,1"/>
    </properties>
   </object>
   <object name="Chest" type="on_trigger" x="416" y="448" width="32" height="32">

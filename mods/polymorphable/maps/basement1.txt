@@ -198,13 +198,13 @@ data=
 # Teleport to Elder's House
 type=on_trigger
 location=13,31,2,1
-intermap=eldershouse.txt,18,5
+intermap=maps/eldershouse.txt,18,5
 
 [event]
 # Teleport to Basement2
 type=on_trigger
 location=8,14,1,1
-intermap=basement2.txt,2,7
+intermap=maps/basement2.txt,2,7
 
 [enemy]
 # Bat

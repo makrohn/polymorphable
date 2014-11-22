@@ -62,7 +62,7 @@
   </object>
   <object name="Teleport to Snow4" type="on_trigger" x="448" y="992" width="32" height="32">
    <properties>
-    <property name="intermap" value="snow4.txt,14,1"/>
+    <property name="intermap" value="maps/snow4.txt,14,1"/>
    </properties>
   </object>
  </objectgroup>

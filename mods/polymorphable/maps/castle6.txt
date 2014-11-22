@@ -200,7 +200,7 @@ data=
 # Teleport to Castle5
 type=on_trigger
 location=12,31,4,1
-intermap=castle5.txt,17,1
+intermap=maps/castle5.txt,17,1
 requires_status=2ndjugg
 
 [event]

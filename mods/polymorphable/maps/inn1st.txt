@@ -198,19 +198,19 @@ data=
 # Teleport to inn2nd
 type=on_trigger
 location=26,19,1,1
-intermap=inn2nd.txt,26,16
+intermap=maps/inn2nd.txt,26,16
 
 [event]
 # Teleport to inn2nd
 type=on_trigger
 location=5,19,1,1
-intermap=inn2nd.txt,5,16
+intermap=maps/inn2nd.txt,5,16
 
 [event]
 # Teleport to Laurelia
 type=on_trigger
 location=14,30,4,1
-intermap=laurelia.txt,101,84
+intermap=maps/laurelia.txt,101,84
 
 [npc]
 # Inkeep's daughter

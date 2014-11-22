@@ -183,7 +183,7 @@ number=2,2
 # Teleport to SnowC
 type=on_trigger
 location=24,18,2,2
-intermap=snowc.txt,18,30
+intermap=maps/snowc.txt,18,30
 
 [event]
 # Alert
@@ -197,11 +197,11 @@ tooltip=Sign
 # Teleport to Snow7
 type=on_trigger
 location=8,0,1,1
-intermap=snow7.txt,22,46
+intermap=maps/snow7.txt,22,46
 
 [event]
 # Teleport to Snow5
 type=on_trigger
 location=0,4,1,1
-intermap=snow5.txt,30,12
+intermap=maps/snow5.txt,30,12
 

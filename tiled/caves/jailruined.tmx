@@ -120,12 +120,12 @@
  <objectgroup name="event">
   <object name="Teleport to Barracks" type="on_trigger" x="448" y="288" width="32" height="32">
    <properties>
-    <property name="intermap" value="barracks.txt,46,7"/>
+    <property name="intermap" value="maps/barracks.txt,46,7"/>
    </properties>
   </object>
   <object name="Teleport to waterway" type="on_trigger" x="288" y="0" width="32" height="32">
    <properties>
-    <property name="intermap" value="waterway.txt"/>
+    <property name="intermap" value="maps/waterway.txt"/>
    </properties>
   </object>
  </objectgroup>

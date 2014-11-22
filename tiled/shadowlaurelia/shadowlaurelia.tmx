@@ -762,7 +762,7 @@
   <object name="Teleport to Laurelia" type="on_trigger" x="1504" y="1632" width="64" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="intermap" value="laurelia.txt,48,52"/>
+    <property name="intermap" value="maps/laurelia.txt,48,52"/>
    </properties>
   </object>
  </objectgroup>

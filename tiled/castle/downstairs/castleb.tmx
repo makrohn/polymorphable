@@ -194,7 +194,7 @@
   </object>
   <object name="Teleport to Castle4" type="on_trigger" x="992" y="320" width="32" height="128">
    <properties>
-    <property name="intermap" value="castle4.txt,1,16"/>
+    <property name="intermap" value="maps/castle4.txt,1,16"/>
    </properties>
   </object>
  </objectgroup>

@@ -110,14 +110,14 @@ data=
 # Teleport to Laurelia
 type=on_trigger
 location=18,12,2,1
-intermap=laurelia.txt,69,59
+intermap=maps/laurelia.txt,69,59
 
 [event]
 # Fireplace
 type=on_trigger
 location=18,4,2,1
 hotspot=location
-intermap=basement1.txt,13,30
+intermap=maps/basement1.txt,13,30
 msg=A secret passage!
 requires_status=ghosttalis
 set_status=explorebasement

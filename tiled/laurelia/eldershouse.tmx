@@ -112,13 +112,13 @@
  <objectgroup name="event" visible="0">
   <object name="Teleport to Laurelia" type="on_trigger" x="576" y="384" width="64" height="32">
    <properties>
-    <property name="intermap" value="laurelia.txt,69,59"/>
+    <property name="intermap" value="maps/laurelia.txt,69,59"/>
    </properties>
   </object>
   <object name="Fireplace" type="on_trigger" x="576" y="128" width="64" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="intermap" value="basement1.txt,13,30"/>
+    <property name="intermap" value="maps/basement1.txt,13,30"/>
     <property name="msg" value="A secret passage!"/>
     <property name="requires_status" value="ghosttalis"/>
     <property name="set_status" value="explorebasement"/>

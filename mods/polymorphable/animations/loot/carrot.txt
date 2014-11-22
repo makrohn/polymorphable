@@ -3,7 +3,7 @@ image=images/loot/carrot.png
 
 [power]
 frames=6
-duration=3
+duration=100ms
 type=play_once
 frame=0,0,30,68,36,49,11,60
 frame=1,0,0,65,30,53,1,74

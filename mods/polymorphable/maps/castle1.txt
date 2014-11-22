@@ -210,7 +210,7 @@ location=23,17,1,1
 # Teleport to Castle Path
 type=on_trigger
 location=31,11,1,5
-intermap=castlepath.txt,1,19
+intermap=maps/castlepath.txt,1,19
 
 [event]
 # Fire Trap
@@ -264,7 +264,7 @@ power_path=0,0,13,3
 # Teleport to Castle 2
 type=on_trigger
 location=14,2,1,1
-intermap=castle2.txt,13,29
+intermap=maps/castle2.txt,13,29
 
 [npc]
 # Gaspar the Ghost

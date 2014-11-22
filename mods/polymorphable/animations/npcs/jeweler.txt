@@ -3,6 +3,6 @@ image=images/npcs/jeweler.png
 
 [stance]
 frames=1
-duration=60
+duration=2s
 type=looped
 frame=0,0,0,0,25,49,13,43

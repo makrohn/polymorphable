@@ -218,12 +218,12 @@
   </object>
   <object name="Teleport to Basement3" type="on_trigger" x="832" y="768" width="64" height="32">
    <properties>
-    <property name="intermap" value="basement3.txt,8,3"/>
+    <property name="intermap" value="maps/basement3.txt,8,3"/>
    </properties>
   </object>
   <object name="Teleport to Basement6" type="on_trigger" x="0" y="224" width="32" height="96">
    <properties>
-    <property name="intermap" value="basement6.txt,30,28"/>
+    <property name="intermap" value="maps/basement6.txt,30,28"/>
    </properties>
   </object>
   <object name="Switch" type="on_trigger" x="928" y="96" width="32" height="32">

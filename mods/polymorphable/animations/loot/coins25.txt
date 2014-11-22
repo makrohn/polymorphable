@@ -3,7 +3,7 @@ image=images/loot/coins25.png
 
 [power]
 frames=6
-duration=3
+duration=100ms
 type=play_once
 frame=0,0,113,0,39,52,10,71
 frame=1,0,72,0,41,61,9,85

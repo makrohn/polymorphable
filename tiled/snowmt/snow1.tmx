@@ -48,12 +48,12 @@
  <objectgroup name="event">
   <object name="Teleport to Laurelia" type="on_trigger" x="0" y="0" width="224" height="32">
    <properties>
-    <property name="intermap" value="laurelia.txt,74,142"/>
+    <property name="intermap" value="maps/laurelia.txt,74,142"/>
    </properties>
   </object>
   <object name="Teleport to Snow2" type="on_trigger" x="992" y="288" width="32" height="32">
    <properties>
-    <property name="intermap" value="snow2.txt,1,9"/>
+    <property name="intermap" value="maps/snow2.txt,1,9"/>
    </properties>
   </object>
   <object name="Require Juggernaut Talisman" type="on_trigger" x="768" y="448" width="32" height="32">

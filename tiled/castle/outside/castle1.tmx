@@ -212,7 +212,7 @@
  <objectgroup name="event">
   <object name="Teleport to Castle Path" type="on_trigger" x="992" y="352" width="32" height="160">
    <properties>
-    <property name="intermap" value="castlepath.txt,1,19"/>
+    <property name="intermap" value="maps/castlepath.txt,1,19"/>
    </properties>
   </object>
   <object name="Fire Trap" type="on_trigger" x="448" y="96" width="32" height="32">
@@ -259,7 +259,7 @@
   </object>
   <object name="Teleport to Castle 2" type="on_trigger" x="448" y="64" width="32" height="32">
    <properties>
-    <property name="intermap" value="castle2.txt,13,29"/>
+    <property name="intermap" value="maps/castle2.txt,13,29"/>
    </properties>
   </object>
  </objectgroup>

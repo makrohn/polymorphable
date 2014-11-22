@@ -24,11 +24,11 @@ chance_melee_phys=10
 power_beacon=132
 power_ranged_phys=301
 power_melee_phys=301
-cooldown_hit=4
+cooldown_hit=133ms
 
 accuracy=100
 avoidance=0
 
 dmg_ranged_min=2
 dmg_ranged_max=2
-cooldown=30
+cooldown=1s

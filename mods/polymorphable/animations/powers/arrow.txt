@@ -3,7 +3,7 @@ image=images/powers/arrow.png
 
 [power]
 frames=4
-duration=3
+duration=100ms
 type=play_once
 active_frame=all
 frame=0,0,20,20,32,20,18,26

@@ -101,7 +101,7 @@
  <objectgroup name="event">
   <object name="Teleport to Laurelia" type="on_trigger" x="192" y="320" width="64" height="32">
    <properties>
-    <property name="intermap" value="laurelia.txt,91,100"/>
+    <property name="intermap" value="maps/laurelia.txt,91,100"/>
    </properties>
   </object>
  </objectgroup>

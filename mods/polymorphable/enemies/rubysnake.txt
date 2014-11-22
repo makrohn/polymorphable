@@ -25,11 +25,11 @@ power_beacon=132
 power_ranged_phys=302
 power_melee_phys=302
 vulnerable_fire=0
-cooldown_hit=4
+cooldown_hit=133ms
 
 accuracy=100
 avoidance=0
 
 dmg_ranged_min=3
 dmg_ranged_max=3
-cooldown=30
+cooldown=1s

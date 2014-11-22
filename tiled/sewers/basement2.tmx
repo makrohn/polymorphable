@@ -200,12 +200,12 @@
  <objectgroup name="event">
   <object name="Teleport to Basement1" type="on_trigger" x="64" y="192" width="32" height="32">
    <properties>
-    <property name="intermap" value="basement1.txt,8,13"/>
+    <property name="intermap" value="maps/basement1.txt,8,13"/>
    </properties>
   </object>
   <object name="Teleport to Basement3" type="on_trigger" x="864" y="288" width="32" height="32">
    <properties>
-    <property name="intermap" value="basement3.txt,28,13"/>
+    <property name="intermap" value="maps/basement3.txt,28,13"/>
    </properties>
   </object>
  </objectgroup>

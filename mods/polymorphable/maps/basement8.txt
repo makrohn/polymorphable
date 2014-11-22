@@ -198,14 +198,14 @@ data=
 # Teleport to Elder's House
 type=on_trigger
 location=15,13,1,1
-intermap=laurelia.txt,69,51
+intermap=maps/laurelia.txt,69,51
 requires_status=ghostupgrade
 
 [event]
 # Teleport to Basement7
 type=on_trigger
 location=11,31,2,1
-intermap=basement7.txt,27,1
+intermap=maps/basement7.txt,27,1
 
 [event]
 # Spawn Daphne's Shadow

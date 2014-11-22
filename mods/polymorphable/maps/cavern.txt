@@ -499,7 +499,7 @@ tooltip=Carrots
 # Teleport to Glade
 type=on_trigger
 location=62,36,1,2
-intermap=glade.txt,15,14
+intermap=maps/glade.txt,15,14
 set_status=cavernexplored
 
 [event]

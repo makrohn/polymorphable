@@ -200,13 +200,13 @@
  <objectgroup name="event">
   <object name="Teleport to Elder's House" type="on_trigger" x="480" y="416" width="32" height="32">
    <properties>
-    <property name="intermap" value="laurelia.txt,69,51"/>
+    <property name="intermap" value="maps/laurelia.txt,69,51"/>
     <property name="requires_status" value="ghostupgrade"/>
    </properties>
   </object>
   <object name="Teleport to Basement7" type="on_trigger" x="352" y="992" width="64" height="32">
    <properties>
-    <property name="intermap" value="basement7.txt,27,1"/>
+    <property name="intermap" value="maps/basement7.txt,27,1"/>
    </properties>
   </object>
   <object name="Spawn Daphne's Shadow" type="on_trigger" x="224" y="512" width="32" height="32">

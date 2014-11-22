@@ -41,7 +41,7 @@
  <objectgroup name="event">
   <object name="Teleport to Snow6" type="on_trigger" x="544" y="992" width="96" height="32">
    <properties>
-    <property name="intermap" value="snow6.txt,24,20"/>
+    <property name="intermap" value="maps/snow6.txt,24,20"/>
    </properties>
   </object>
  </objectgroup>

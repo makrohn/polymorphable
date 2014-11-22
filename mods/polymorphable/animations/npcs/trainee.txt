@@ -3,7 +3,7 @@ image=images/npcs/trainee.png
 
 [stance]
 frames=8
-duration=4
+duration=133ms
 type=looped
 frame=0,0,378,0,51,48,29,44
 frame=1,0,0,0,54,48,26,44
