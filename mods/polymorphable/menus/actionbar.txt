@@ -24,6 +24,6 @@ powers_menu=544,3,32,32
 log_menu=576,3,32,32
 
 # x,width,height. There is no y, it's taken from menus.txt 
-numberArea=32,320,32
-mouseArea=384,64,32
-menuArea=480,128,32
+numberArea=32,0,320,32
+mouseArea=384,0,64,32
+menuArea=480,0,128,32
