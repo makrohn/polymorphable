@@ -81,7 +81,7 @@ frame=0,7,0,0,59,55,30,53
 
 [hit]
 frames=8
-duration=100ms
+duration=800ms
 type=play_once
 frame=0,0,0,0,59,55,30,53
 frame=0,1,0,0,59,55,30,53

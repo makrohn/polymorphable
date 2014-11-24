@@ -16,7 +16,7 @@ frame=0,7,304,67,28,51,14,45
 
 [shoot]
 frames=5
-duration=100ms
+duration=500ms
 type=play_once
 frame=0,0,85,247,34,51,21,45
 frame=0,1,85,247,34,51,21,45
@@ -61,7 +61,7 @@ frame=4,7,333,249,26,51,14,45
 
 [run]
 frames=8
-duration=100ms
+duration=800ms
 type=looped
 frame=0,0,281,300,26,48,13,44
 frame=0,1,281,300,26,48,13,44
@@ -130,7 +130,7 @@ frame=7,7,190,250,28,51,14,45
 
 [die]
 frames=6
-duration=100ms
+duration=600ms
 type=play_once
 frame=0,0,420,100,28,50,14,44
 frame=0,1,420,100,28,50,14,44
@@ -183,7 +183,7 @@ frame=5,7,332,103,34,36,15,30
 
 [cast]
 frames=7
-duration=100ms
+duration=700ms
 type=play_once
 frame=0,0,305,199,24,50,11,45
 frame=0,1,305,199,24,50,11,45
@@ -244,7 +244,7 @@ frame=6,7,154,349,32,51,16,45
 
 [swing]
 frames=6
-duration=100ms
+duration=600ms
 type=play_once
 frame=0,0,0,200,56,52,43,45
 frame=0,1,0,200,56,52,43,45
@@ -297,7 +297,7 @@ frame=5,7,260,0,72,67,12,45
 
 [hit]
 frames=3
-duration=33ms
+duration=100ms
 type=back_forth
 frame=0,0,305,199,24,50,11,45
 frame=0,1,305,199,24,50,11,45
@@ -326,7 +326,7 @@ frame=2,7,333,300,26,51,13,45
 
 [block]
 frames=2
-duration=100ms
+duration=200ms
 type=play_once
 frame=0,0,305,199,24,50,11,45
 frame=0,1,305,199,24,50,11,45

@@ -3,7 +3,7 @@ image=images/powers/lightning.png
 
 [power]
 frames=11
-duration=100ms
+duration=1100ms
 type=play_once
 active_frame=8
 frame=0,0,32,472,16,11,8,44

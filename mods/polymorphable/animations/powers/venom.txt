@@ -3,7 +3,7 @@ image=images/powers/venom.png
 
 [power]
 frames=4
-duration=100ms
+duration=400ms
 type=play_once
 active_frame=all
 frame=0,0,119,29,51,27,24,29

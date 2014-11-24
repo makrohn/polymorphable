@@ -3,7 +3,7 @@ image=images/loot/watermelon.png
 
 [power]
 frames=6
-duration=100ms
+duration=600ms
 type=play_once
 frame=0,0,0,75,41,46,9,62
 frame=1,0,36,0,40,68,12,80
