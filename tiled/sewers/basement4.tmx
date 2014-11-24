@@ -17,12 +17,12 @@
  <tileset firstgid="878" name="sewer_objects" tilewidth="32" tileheight="128">
   <image source="sewer_objects.png" width="672" height="768"/>
  </tileset>
- <layer name="background" width="32" height="32" visible="0">
+ <layer name="background" width="32" height="32">
   <data encoding="base64" compression="zlib">
    eJy9le0JwkAMhk/QOfSvKwhuYUVwCcElRNvrBp3VFjwIr/m6DxUeEPH6JLkkDSGE60rnYnCa6YCz49xCaOR/Fvotd8v8Y4Ffco4Z/qEif88zHgKe2Gtrr+Wvxezpv+XD3Znm75n6a8+YghyDJ/fS+YvEv9Bl+mOlH/Pn/N7+k/x3B9SfsGqQYhkV/3bmQNh/OABT+D7L+ceVnj/uv/XMjZD89LeX4O8Yf0n/HR2k2mP8Cc07GH5P7JyT4ukha/5r/NgvHLuM/HEXWf5Skj/1LTe/UTgr9YJG6fu/Ra6vjPrjLNMzPfmO84tsnPUvzZ+b30i+czNHa8H5uR4ojR/9vXA+NvLj3Ej5W/HjHpf6COfHs3Nb378Wu8fv2Z2t7h/B96/Er/wanv2W6+d2UA3W/eXkj7Pp+a91f9w7L9fVgpq6/ztWjjf2m2aQ
   </data>
  </layer>
- <layer name="fringe" width="32" height="32" visible="0">
+ <layer name="fringe" width="32" height="32">
   <data encoding="base64" compression="zlib">
    eJxjYCAMYhjxy9thkQ8noIcUQG37DzMPrP2kAC6gOeV4zMphxG1/HpluYEbSR8jv7XjkO6kQBoTsX4TH/0vw6GUmwm2Ewh4GaBX/hPxOTfu5sahXBYo50sn/UUD1r5kwxbGFAXrcYbO/CEmMF8jmg2J+HO4qBYqXMWKGAzFxgM1+ZKCBJK9FQG3UANtfCg2DV0yU2W+DJOYMZLtAsSsR5sHiomyA8x+xoASH/cSUMbQC9PT/qP3Dz34bAvoJlTmU2k9If+QQsp+ccmCo+79ogO2nFIx0+wnFH7Y6bxQMPQAALPMioA==
   </data>
@@ -75,7 +75,7 @@
   <object name="Chest" type="on_trigger" x="960" y="736" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="loot" value="0,29,23,fixed,25,50"/>
+    <property name="loot" value="currency,fixed,25,50"/>
     <property name="mapmod" value="object,30,23,206"/>
     <property name="repeat" value="false"/>
     <property name="tooltip" value="Chest"/>

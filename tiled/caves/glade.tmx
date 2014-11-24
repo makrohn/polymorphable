@@ -170,7 +170,7 @@
   <object name="Fairy Flower" type="on_trigger" x="448" y="480" width="32" height="64">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="loot" value="199,14,16,fixed,1"/>
+    <property name="loot" value="199,fixed,1"/>
     <property name="repeat" value="false"/>
     <property name="requires_not_status" value="flowerfound"/>
     <property name="requires_status" value="elderintro"/>

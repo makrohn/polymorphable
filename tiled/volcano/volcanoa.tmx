@@ -168,7 +168,7 @@
   <object name="Chest" type="on_trigger" x="480" y="416" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="loot" value="1,16,13,fixed,1"/>
+    <property name="loot" value="1,fixed,1"/>
     <property name="mapmod" value="object,15,13,206"/>
     <property name="repeat" value="false"/>
     <property name="tooltip" value="Chest"/>
@@ -177,7 +177,7 @@
   <object name="Chest" type="on_trigger" x="736" y="416" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="loot" value="2,22,13,fixed,1"/>
+    <property name="loot" value="2,fixed,1"/>
     <property name="mapmod" value="object,23,13,206"/>
     <property name="repeat" value="false"/>
     <property name="tooltip" value="Chest"/>
@@ -186,7 +186,7 @@
   <object name="Chest" type="on_trigger" x="800" y="512" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="loot" value="0,25,17,fixed,5,20"/>
+    <property name="loot" value="currency,fixed,5,20"/>
     <property name="mapmod" value="object,25,16,206"/>
     <property name="repeat" value="false"/>
     <property name="tooltip" value="Chest"/>
@@ -195,7 +195,7 @@
   <object name="Chest" type="on_trigger" x="768" y="672" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="loot" value="0,24,22,fixed,5,20"/>
+    <property name="loot" value="currency,fixed,5,20"/>
     <property name="mapmod" value="object,24,21,206"/>
     <property name="repeat" value="false"/>
     <property name="tooltip" value="Chest"/>
@@ -204,7 +204,7 @@
   <object name="Chest" type="on_trigger" x="608" y="672" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="loot" value="1,20,21,fixed,1"/>
+    <property name="loot" value="1,fixed,1"/>
     <property name="mapmod" value="object,19,21,206"/>
     <property name="repeat" value="false"/>
     <property name="tooltip" value="Chest"/>

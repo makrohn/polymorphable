@@ -216,7 +216,7 @@
   <object name="Chest" type="on_trigger" x="736" y="128" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="loot" value="3,23,5,fixed,1"/>
+    <property name="loot" value="3,fixed,1"/>
     <property name="mapmod" value="object,23,4,206"/>
     <property name="repeat" value="false"/>
     <property name="tooltip" value="Chest"/>
@@ -225,7 +225,7 @@
   <object name="Chest" type="on_trigger" x="800" y="192" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="loot" value="1,25,7,fixed,2"/>
+    <property name="loot" value="1,fixed,2"/>
     <property name="mapmod" value="object,25,6,206"/>
     <property name="repeat" value="false"/>
     <property name="tooltip" value="Chest"/>
