@@ -219,6 +219,7 @@ location=23,4,1,1
 hotspot=location
 loot=3,23,5,fixed,1
 mapmod=object,23,4,206
+repeat=false
 tooltip=Chest
 
 [event]
@@ -228,6 +229,7 @@ location=25,6,1,1
 hotspot=location
 loot=1,25,7,fixed,2
 mapmod=object,25,6,206
+repeat=false
 tooltip=Chest
 
 [enemy]

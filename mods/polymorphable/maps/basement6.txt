@@ -212,6 +212,7 @@ type=on_trigger
 location=10,18,1,1
 hotspot=location
 msg="Leftover material from blasting is unstable due to cave-ins!  Do not approach!"
+repeat=false
 tooltip=Sign
 
 [event]

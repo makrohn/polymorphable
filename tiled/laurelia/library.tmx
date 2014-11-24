@@ -93,6 +93,7 @@
    <properties>
     <property name="hotspot" value="location"/>
     <property name="msg" value="p.32: &quot;Ghosts, being incorporeal, are nearly immune to heat and fire.&quot;"/>
+    <property name="repeat" value="false"/>
     <property name="tooltip" value="On Ghosts"/>
    </properties>
   </object>
@@ -100,6 +101,7 @@
    <properties>
     <property name="hotspot" value="location"/>
     <property name="msg" value="p.1:  &quot;This small town is a seeming backwater.  However, nearly every one of it's citizens has the ability to polymorph into another creature.&quot;  Better put it back on the top shelf where the tourists can't find it."/>
+    <property name="repeat" value="false"/>
     <property name="tooltip" value="History of Laurelia"/>
    </properties>
   </object>
@@ -107,6 +109,7 @@
    <properties>
     <property name="hotspot" value="location"/>
     <property name="msg" value="p. 967: &quot;Zalkas was constantly beset by paladins seeking to destroy them; he would eliminate each one by blotting out the light with flocks of bats.&quot;"/>
+    <property name="repeat" value="false"/>
     <property name="tooltip" value="Deomonology"/>
    </properties>
   </object>

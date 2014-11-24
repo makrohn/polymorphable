@@ -179,6 +179,7 @@
    <properties>
     <property name="hotspot" value="location"/>
     <property name="mapmod" value="object,19,17,0;collision,19,17,0"/>
+    <property name="repeat" value="false"/>
     <property name="requires_status" value="skelkey"/>
     <property name="tooltip" value="Locked Gate"/>
    </properties>

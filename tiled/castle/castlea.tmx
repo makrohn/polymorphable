@@ -142,6 +142,7 @@
     <property name="hotspot" value="location"/>
     <property name="loot" value="0,13,15,fixed,15,35"/>
     <property name="mapmod" value="object,13,14,206"/>
+    <property name="repeat" value="false"/>
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>
@@ -150,6 +151,7 @@
     <property name="hotspot" value="location"/>
     <property name="loot" value="1,4,12,fixed,1"/>
     <property name="mapmod" value="object,4,11,206"/>
+    <property name="repeat" value="false"/>
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>
@@ -158,6 +160,7 @@
     <property name="hotspot" value="location"/>
     <property name="loot" value="1,22,20,fixed,1"/>
     <property name="mapmod" value="object,22,19,206"/>
+    <property name="repeat" value="false"/>
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>
@@ -166,6 +169,7 @@
     <property name="hotspot" value="location"/>
     <property name="loot" value="id,22,12,2"/>
     <property name="mapmod" value="object,22,11,206"/>
+    <property name="repeat" value="false"/>
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>
@@ -174,6 +178,7 @@
     <property name="hotspot" value="location"/>
     <property name="loot" value="2,4,20,fixed,1"/>
     <property name="mapmod" value="object,4,19,206"/>
+    <property name="repeat" value="false"/>
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>
@@ -182,6 +187,7 @@
     <property name="hotspot" value="location"/>
     <property name="loot" value="2,22,12,fixed,1"/>
     <property name="mapmod" value="object,22,11,206"/>
+    <property name="repeat" value="false"/>
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>

@@ -235,10 +235,12 @@ intermap=maps/castlec.txt,30,12
 type=on_trigger
 location=27,25,1,4
 msg=Violent bombs ahead!
+repeat=false
 
 [event]
 # Alert
 type=on_trigger
 location=19,25,1,4
 msg=Destroy them from afar to defuse them!
+repeat=false
 

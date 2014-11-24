@@ -211,6 +211,7 @@ location=28,13,1,1
 hotspot=location
 mapmod=object,25,26,890;object,26,26,887;object,27,26,887;object,28,26,889;collision,26,24,1;collision,27,24,1;object,14,12,0;object,15,12,0;collision,15,12,0
 msg=There's a key-shaped hole in this rock.
+repeat=false
 requires_status=switch_key
 tooltip=Strange Rock
 
@@ -233,6 +234,7 @@ location=29,3,1,1
 hotspot=location
 mapmod=object,25,26,885;object,26,26,0;object,27,26,0;object,28,26,883;collision,26,24,0;collision,27,24,0;object,14,12,0;object,15,12,0;collision,14,12,0;collision,15,12,0
 msg=There's a key-shaped hole in this rock.
+repeat=false
 requires_status=switch_key
 tooltip=Strange Rock
 
@@ -243,6 +245,7 @@ location=29,8,1,1
 hotspot=location
 loot=1,28,8,fixed,2
 mapmod=object,29,8,0;collision,29,8,0
+repeat=false
 tooltip=Carrot
 
 [enemy]

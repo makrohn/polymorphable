@@ -175,6 +175,7 @@ location=15,13,1,1
 hotspot=location
 loot=1,16,13,fixed,1
 mapmod=object,15,13,206
+repeat=false
 tooltip=Chest
 
 [event]
@@ -184,6 +185,7 @@ location=23,13,1,1
 hotspot=location
 loot=2,22,13,fixed,1
 mapmod=object,23,13,206
+repeat=false
 tooltip=Chest
 
 [event]
@@ -193,6 +195,7 @@ location=25,16,1,1
 hotspot=location
 loot=0,25,17,fixed,5,20
 mapmod=object,25,16,206
+repeat=false
 tooltip=Chest
 
 [event]
@@ -202,6 +205,7 @@ location=24,21,1,1
 hotspot=location
 loot=0,24,22,fixed,5,20
 mapmod=object,24,21,206
+repeat=false
 tooltip=Chest
 
 [event]
@@ -211,6 +215,7 @@ location=19,21,1,1
 hotspot=location
 loot=1,20,21,fixed,1
 mapmod=object,19,21,206
+repeat=false
 tooltip=Chest
 
 [event]

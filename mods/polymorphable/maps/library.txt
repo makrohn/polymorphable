@@ -92,6 +92,7 @@ type=on_trigger
 location=6,8,1,1
 hotspot=location
 msg=p.32: "Ghosts, being incorporeal, are nearly immune to heat and fire."
+repeat=false
 tooltip=On Ghosts
 
 [event]
@@ -100,6 +101,7 @@ type=on_trigger
 location=4,11,1,1
 hotspot=location
 msg=p.1:  "This small town is a seeming backwater.  However, nearly every one of it's citizens has the ability to polymorph into another creature."  Better put it back on the top shelf where the tourists can't find it.
+repeat=false
 tooltip=History of Laurelia
 
 [event]
@@ -108,5 +110,6 @@ type=on_trigger
 location=17,11,1,1
 hotspot=location
 msg=p. 967: "Zalkas was constantly beset by paladins seeking to destroy them; he would eliminate each one by blotting out the light with flocks of bats."
+repeat=false
 tooltip=Deomonology
 

@@ -165,6 +165,7 @@
    <properties>
     <property name="hotspot" value="location"/>
     <property name="loot" value="198,5,19,fixed,1"/>
+    <property name="repeat" value="false"/>
     <property name="requires_not_status" value="skelkey"/>
     <property name="tooltip" value="Anvil"/>
    </properties>

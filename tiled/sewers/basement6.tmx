@@ -212,6 +212,7 @@
    <properties>
     <property name="hotspot" value="location"/>
     <property name="msg" value="&quot;Leftover material from blasting is unstable due to cave-ins!  Do not approach!&quot;"/>
+    <property name="repeat" value="false"/>
     <property name="tooltip" value="Sign"/>
    </properties>
   </object>

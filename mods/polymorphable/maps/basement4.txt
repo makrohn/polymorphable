@@ -200,6 +200,7 @@ type=on_trigger
 location=12,21,1,1
 hotspot=location
 msg=You found the switch key in a barrel!
+repeat=false
 set_status=switch_key
 tooltip=Suspicious Barrel
 
@@ -222,6 +223,7 @@ location=30,4,1,1
 hotspot=location
 mapmod=object,30,4,206
 msg=An empty chest!
+repeat=false
 spawn=skeleton,30,3;ghost,29,5
 tooltip=Chest
 
@@ -232,6 +234,7 @@ location=30,23,1,1
 hotspot=location
 loot=0,29,23,fixed,25,50
 mapmod=object,30,23,206
+repeat=false
 tooltip=Chest
 
 [enemy]

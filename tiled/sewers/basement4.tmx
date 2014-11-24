@@ -47,6 +47,7 @@
    <properties>
     <property name="hotspot" value="location"/>
     <property name="msg" value="You found the switch key in a barrel!"/>
+    <property name="repeat" value="false"/>
     <property name="set_status" value="switch_key"/>
     <property name="tooltip" value="Suspicious Barrel"/>
    </properties>
@@ -66,6 +67,7 @@
     <property name="hotspot" value="location"/>
     <property name="mapmod" value="object,30,4,206"/>
     <property name="msg" value="An empty chest!"/>
+    <property name="repeat" value="false"/>
     <property name="spawn" value="skeleton,30,3;ghost,29,5"/>
     <property name="tooltip" value="Chest"/>
    </properties>
@@ -75,6 +77,7 @@
     <property name="hotspot" value="location"/>
     <property name="loot" value="0,29,23,fixed,25,50"/>
     <property name="mapmod" value="object,30,23,206"/>
+    <property name="repeat" value="false"/>
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>

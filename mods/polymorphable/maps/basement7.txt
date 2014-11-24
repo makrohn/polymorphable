@@ -200,6 +200,7 @@ type=on_trigger
 location=30,27,1,1
 hotspot=location
 msg=FENCES ARE FOR YOUR PROTECTION.  DO NOT OPEN GATES.
+repeat=false
 tooltip=Signpost
 
 [event]
@@ -208,6 +209,7 @@ type=on_trigger
 location=29,17,1,1
 hotspot=location
 msg=There is a strange groove in this rock
+repeat=false
 requires_not_status=switch_key
 tooltip=Strange Rock
 
@@ -217,6 +219,7 @@ type=on_trigger
 location=16,25,1,1
 hotspot=location
 msg=There is a strange groove in this rock
+repeat=false
 requires_not_status=switch_key
 tooltip=Strange Rock
 
@@ -226,6 +229,7 @@ type=on_trigger
 location=8,28,1,1
 hotspot=location
 msg=There is a strange groove in this rock
+repeat=false
 requires_not_status=switch_key
 tooltip=Strange Rock
 
@@ -235,6 +239,7 @@ type=on_trigger
 location=3,8,1,1
 hotspot=location
 msg=There is a strange groove in this rock
+repeat=false
 requires_not_status=switch_key
 tooltip=Strange Rock
 
@@ -244,6 +249,7 @@ type=on_trigger
 location=29,8,1,1
 hotspot=location
 msg=There is a strange groove in this rock
+repeat=false
 requires_not_status=switch_key
 tooltip=Strange Rock
 
@@ -253,6 +259,7 @@ type=on_trigger
 location=3,8,1,1
 hotspot=location
 mapmod=object,4,17,0;object,4,12,0;collision,4,17,0;collision,4,12,0;object,10,1,0;collision,10,1,0
+repeat=false
 requires_status=switch_key
 tooltip=Strange Rock
 
@@ -262,6 +269,7 @@ type=on_trigger
 location=29,17,1,1
 hotspot=location
 mapmod=collision,23,21,0;collision,17,21,0;object,23,21,0;object,17,21,0;
+repeat=false
 requires_status=switch_key
 tooltip=Strange Rock
 
@@ -271,6 +279,7 @@ type=on_trigger
 location=16,25,1,1
 hotspot=location
 mapmod=object,2,25,0;object,11,25,0;collision,2,25,0;collision,11,25,0
+repeat=false
 requires_status=switch_key
 spawn=ghost,12,21
 tooltip=Strange Rock
@@ -281,6 +290,7 @@ type=on_trigger
 location=29,8,1,1
 hotspot=location
 mapmod=object,16,8,0;object,22,8,0;object,2,11,0;collision,16,8,0;collision,22,8,0;collision,2,11,0
+repeat=false
 requires_status=switch_key
 spawn=fireskeleton,29,3
 tooltip=Strange Rock
@@ -291,6 +301,7 @@ type=on_trigger
 location=8,28,1,1
 hotspot=location
 mapmod=object,28,9,0;object,26,16,0;collision,28,9,0;collision,26,16,0,object,14,26,0;collision,14,26,0
+repeat=false
 requires_status=switch_key
 tooltip=Strange Rock
 
@@ -301,6 +312,7 @@ location=9,2,1,1
 hotspot=location
 loot=1,10,2,fixed,2
 mapmod=object,9,2,206
+repeat=false
 tooltip=Chest
 
 [event]
@@ -310,6 +322,7 @@ location=9,3,1,1
 hotspot=location
 loot=2,10,3,fixed,2
 mapmod=object,9,3,206
+repeat=false
 tooltip=Chest
 
 [event]

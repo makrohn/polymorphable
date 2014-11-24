@@ -438,6 +438,7 @@ hotspot=location
 loot=200,58,47,fixed,1
 mapmod=object,57,47,206
 msg=Drag to actionbar to use.
+repeat=false
 requires_not_status=battalisfound
 tooltip=Chest
 
@@ -448,6 +449,7 @@ location=94,62,1,1
 hotspot=location
 loot=0,94,63,fixed,5,15
 mapmod=object,94,62,206
+repeat=false
 tooltip=Chest
 
 [event]
@@ -457,6 +459,7 @@ location=88,42,1,1
 hotspot=location
 loot=0,87,42,fixed,2,10
 mapmod=object,88,42,206
+repeat=false
 tooltip=Chest
 
 [event]
@@ -466,6 +469,7 @@ location=86,41,1,1
 hotspot=location
 loot=0,86,42,fixed,2,10
 mapmod=object,86,41,206
+repeat=false
 tooltip=Chest
 
 [event]
@@ -475,6 +479,7 @@ location=79,41,1,1
 hotspot=location
 loot=0,79,40,fixed,2,10
 mapmod=object,79,41,206
+repeat=false
 tooltip=Chest
 
 [event]
@@ -484,6 +489,7 @@ location=97,73,1,1
 hotspot=location
 loot=1,97,74,fixed,2
 mapmod=object,97,73,0;collision,97,73,0
+repeat=false
 tooltip=Carrots
 
 [event]
@@ -493,6 +499,7 @@ location=95,85,1,1
 hotspot=location
 loot=1,95,85,fixed,2
 mapmod=object,95,85,0;collision,95,85,0
+repeat=false
 tooltip=Carrots
 
 [event]
@@ -516,6 +523,7 @@ location=76,75,2,1
 hotspot=location
 mapmod=object,75,72,880;object,76,72,0;object,77,72,0;object,78,72,878;object,75,71,885;object,76,71,0;object,77,71,0;object,78,71,883;collision,76,72,0;collision,77,72,0
 npc=npcs/gravestone.txt
+repeat=false
 requires_not_status=evil_unleashed
 set_status=evil_unleashed
 tooltip=Unmarked Grave
@@ -527,6 +535,7 @@ location=75,97,1,1
 hotspot=location
 loot=1,75,98,fixed,2
 mapmod=object,75,97,0;collision,75,97,0
+repeat=false
 tooltip=Carrots
 
 [npc]

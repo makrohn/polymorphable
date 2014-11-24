@@ -220,6 +220,7 @@
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
     <property name="power_path" value="0,0,14,3"/>
+    <property name="repeat" value="false"/>
    </properties>
   </object>
   <object name="Fire Trap" type="on_trigger" x="480" y="128" width="32" height="32">
@@ -227,6 +228,7 @@
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
     <property name="power_path" value="0,0,15,4"/>
+    <property name="repeat" value="false"/>
    </properties>
   </object>
   <object name="Fire Trap" type="on_trigger" x="448" y="128" width="32" height="32">
@@ -234,6 +236,7 @@
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
     <property name="power_path" value="0,0,14,4"/>
+    <property name="repeat" value="false"/>
    </properties>
   </object>
   <object name="Fire Trap" type="on_trigger" x="416" y="128" width="32" height="32">
@@ -241,6 +244,7 @@
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
     <property name="power_path" value="0,0,13,4"/>
+    <property name="repeat" value="false"/>
    </properties>
   </object>
   <object name="Fire Trap" type="on_trigger" x="480" y="96" width="32" height="32">
@@ -248,6 +252,7 @@
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
     <property name="power_path" value="0,0,15,3"/>
+    <property name="repeat" value="false"/>
    </properties>
   </object>
   <object name="Fire Trap" type="on_trigger" x="416" y="96" width="32" height="32">
@@ -255,6 +260,7 @@
     <property name="power" value="33"/>
     <property name="power_damage" value="100,100"/>
     <property name="power_path" value="0,0,13,3"/>
+    <property name="repeat" value="false"/>
    </properties>
   </object>
   <object name="Teleport to Castle 2" type="on_trigger" x="448" y="64" width="32" height="32">

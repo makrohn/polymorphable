@@ -57,6 +57,7 @@
     <property name="hotspot" value="location"/>
     <property name="mapmod" value="object,23,16,206"/>
     <property name="msg" value="Empty..."/>
+    <property name="repeat" value="false"/>
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>

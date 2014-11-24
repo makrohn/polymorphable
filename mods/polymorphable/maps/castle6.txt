@@ -208,6 +208,7 @@ requires_status=2ndjugg
 type=on_trigger
 location=12,30,4,1
 msg=TRAPPED!
+repeat=false
 requires_not_status=2ndjugg
 
 [event]

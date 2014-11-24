@@ -240,10 +240,12 @@ requires_status=theend
 type=on_trigger
 location=22,46,1,1
 msg=TRAPPED!
+repeat=false
 
 [event]
 # Dialog
 type=on_trigger
 location=22,44,1,1
 msg=Prepare to die!
+repeat=false
 
