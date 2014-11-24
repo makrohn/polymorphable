@@ -1,0 +1,4 @@
+APPEND
+
+scrollpane=0,4,600,350
+keybinds_bg_color=118,138,157
