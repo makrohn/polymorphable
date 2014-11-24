@@ -109,6 +109,6 @@
   </object>
  </objectgroup>
  <objectgroup name="npc">
-  <object name="Apprentice" type="apprentice" x="160" y="224" width="32" height="32"/>
+  <object name="Apprentice" type="npcs/apprentice.txt" x="160" y="224" width="32" height="32"/>
  </objectgroup>
 </map>

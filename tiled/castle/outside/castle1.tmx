@@ -270,6 +270,6 @@
   </object>
  </objectgroup>
  <objectgroup name="npc">
-  <object name="Gaspar the Ghost" type="ghost" x="480" y="224" width="32" height="32"/>
+  <object name="Gaspar the Ghost" type="npcs/ghost.txt" x="480" y="224" width="32" height="32"/>
  </objectgroup>
 </map>

@@ -208,16 +208,16 @@ intermap=maps/inn1st.txt,6,19
 
 [npc]
 # Vacationera
-type=vacationera
+type=npcs/vacationera.txt
 location=7,21,1,1
 
 [npc]
 # Guard
-type=guard
+type=npcs/guard.txt
 location=24,21,1,1
 
 [npc]
 # Vacationer B
-type=vacationerb
+type=npcs/vacationerb.txt
 location=8,21,1,1
 

@@ -88,6 +88,6 @@
   </object>
  </objectgroup>
  <objectgroup name="npc">
-  <object name="Barman" type="barman" x="768" y="288" width="32" height="32"/>
+  <object name="Barman" type="npcs/barman.txt" x="768" y="288" width="32" height="32"/>
  </objectgroup>
 </map>

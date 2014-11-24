@@ -210,8 +210,8 @@
   </object>
  </objectgroup>
  <objectgroup name="npc">
-  <object name="Vacationera" type="vacationera" x="224" y="672" width="32" height="32"/>
-  <object name="Guard" type="guard" x="768" y="672" width="32" height="32"/>
-  <object name="Vacationer B" type="vacationerb" x="256" y="672" width="32" height="32"/>
+  <object name="Vacationera" type="npcs/vacationera.txt" x="224" y="672" width="32" height="32"/>
+  <object name="Guard" type="npcs/guard.txt" x="768" y="672" width="32" height="32"/>
+  <object name="Vacationer B" type="npcs/vacationerb.txt" x="256" y="672" width="32" height="32"/>
  </objectgroup>
 </map>

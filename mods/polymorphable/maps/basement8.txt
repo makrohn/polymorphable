@@ -220,6 +220,6 @@ tooltip=Fountain
 
 [npc]
 # Strange Ghost
-type=basementghost
+type=npcs/basementghost.txt
 location=11,14,1,1
 

@@ -106,6 +106,6 @@ intermap=maps/laurelia.txt,52,90
 
 [npc]
 # Apprentice
-type=apprentice
+type=npcs/apprentice.txt
 location=5,7,1,1
 

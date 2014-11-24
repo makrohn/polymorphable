@@ -222,6 +222,6 @@
  </objectgroup>
  <objectgroup name="enemy"/>
  <objectgroup name="npc">
-  <object name="Strange Ghost" type="basementghost" x="352" y="448" width="32" height="32"/>
+  <object name="Strange Ghost" type="npcs/basementghost.txt" x="352" y="448" width="32" height="32"/>
  </objectgroup>
 </map>

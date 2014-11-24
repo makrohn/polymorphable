@@ -540,7 +540,7 @@ tooltip=Carrots
 
 [npc]
 # Gravestone
-type=gravestone
+type=npcs/gravestone.txt
 location=1,1,1,1
 
 [enemy]

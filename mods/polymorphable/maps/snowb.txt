@@ -176,7 +176,7 @@ intermap=maps/snow5.txt,13,22
 
 [npc]
 # Shop Chest
-type=shopchest
+type=npcs/shopchest.txt
 location=12,22,1,1
 =
 

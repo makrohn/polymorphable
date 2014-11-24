@@ -85,6 +85,6 @@ intermap=maps/laurelia.txt,83,81
 
 [npc]
 # Barman
-type=barman
+type=npcs/barman.txt
 location=24,9,1,1
 

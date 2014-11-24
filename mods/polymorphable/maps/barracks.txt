@@ -140,17 +140,17 @@ intermap=maps/laurelia.txt,109,65
 
 [npc]
 # Combat Dummy
-type=combat_dummy
+type=npcs/combat_dummy.txt
 location=4,8,1,1
 
 [npc]
 # Trainee
-type=trainee
+type=npcs/trainee.txt
 location=6,8,1,1
 
 [npc]
 # Captain
-type=captain
+type=npcs/captain.txt
 location=36,6,1,1
 
 [enemy]

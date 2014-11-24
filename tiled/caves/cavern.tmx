@@ -533,7 +533,7 @@
   </object>
  </objectgroup>
  <objectgroup name="npc">
-  <object name="Gravestone" type="gravestone" x="32" y="32" width="32" height="32"/>
+  <object name="Gravestone" type="npcs/gravestone.txt" x="32" y="32" width="32" height="32"/>
  </objectgroup>
  <objectgroup name="enemy" visible="0">
   <object name="2 Snakes" type="snake" x="1408" y="1312" width="256" height="128">

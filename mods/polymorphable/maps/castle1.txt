@@ -274,6 +274,6 @@ intermap=maps/castle2.txt,13,29
 
 [npc]
 # Gaspar the Ghost
-type=ghost
+type=npcs/ghost.txt
 location=15,7,1,1
 

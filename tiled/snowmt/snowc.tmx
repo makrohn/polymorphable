@@ -46,6 +46,6 @@
   </object>
  </objectgroup>
  <objectgroup name="npc">
-  <object name="Shade of Elder Thomas" type="eldershade" x="576" y="608" width="32" height="32"/>
+  <object name="Shade of Elder Thomas" type="npcs/eldershade.txt" x="576" y="608" width="32" height="32"/>
  </objectgroup>
 </map>
