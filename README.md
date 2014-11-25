@@ -7,18 +7,16 @@ Laurelia's Polymorphable Citizen (or just Polymorphable for short) is an action-
 
 The core mechanic in Polymorphable is using different talismans to polymorph into different forms so you can reach different areas. Imagine being blocked by a pit, so you transform into a bat to fly across. Or perhaps there's a wall of fire in front of you, so you turn into ghost form to phase right through.
 
-Outdated binary downloads for Mac and Windows can be found at https://cinnamonroll.blogsite.org/polymorphable
-
 Installation and Use
 ====================
 
-Polymorphable is a total conversion mod based upon the Flare engine, v0.18.  If you'd like to play Polymorphable, install Flare v0.18, and then put the mods/polymorphable folder into Flare's mod folder.
+Polymorphable is a total conversion mod based upon the Flare engine, v1.x.  If you'd like to play Polymorphable, install Flare v1.x, and then put the mods/polymorphable folder into Flare's mod folder.
 
 Mac OSX and Windows
 - A pre-packaged Polymorphable binary with Flare 0.18 Engine can be found here: https://sourceforge.net/projects/polymorphable/files/?source=navbar
 
 Linux
-- Install Flare 0.18 using your favorite package manager, or compile from source from https://github.com/clintbellanger/flare-engine/tree/branch0.18
+- Install Flare v1.x using your favorite package manager, or compile from source from https://github.com/clintbellanger/flare-engine/tree/master
 - Copy the entire mods/polymorphable folder into the Flare mods/ directory.
 
 All distributions
