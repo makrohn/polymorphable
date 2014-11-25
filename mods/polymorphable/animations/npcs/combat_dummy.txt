@@ -3,7 +3,7 @@ image=images/npcs/combat_dummy.png
 
 [stance]
 frames=8
-duration=2
+duration=533ms
 type=looped
 frame=0,0,0,0,59,55,30,53
 frame=1,0,59,0,46,54,22,52

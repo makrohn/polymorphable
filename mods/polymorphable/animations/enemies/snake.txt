@@ -3,7 +3,7 @@ image=images/enemies/snake.png
 
 [stance]
 frames=3
-duration=100ms
+duration=300ms
 type=back_forth
 frame=0,0,32,0,30,24,14,20
 frame=0,1,32,0,30,24,14,20
@@ -32,7 +32,7 @@ frame=2,7,51,72,13,29,6,23
 
 [shoot]
 frames=3
-duration=100ms
+duration=300ms
 type=back_forth
 frame=0,0,32,0,30,24,14,20
 frame=0,1,32,0,30,24,14,20
@@ -61,7 +61,7 @@ frame=2,7,51,72,13,29,6,23
 
 [run]
 frames=3
-duration=100ms
+duration=300ms
 type=back_forth
 frame=0,0,32,0,30,24,14,20
 frame=0,1,32,0,30,24,14,20
@@ -90,7 +90,7 @@ frame=2,7,51,72,13,29,6,23
 
 [die]
 frames=3
-duration=100ms
+duration=300ms
 type=play_once
 frame=0,0,0,36,30,24,14,20
 frame=0,1,0,36,30,24,14,20
@@ -119,7 +119,7 @@ frame=2,7,81,96,13,29,6,25
 
 [critdie]
 frames=3
-duration=100ms
+duration=300ms
 type=play_once
 frame=0,0,0,36,30,24,14,20
 frame=0,1,0,36,30,24,14,20
@@ -148,7 +148,7 @@ frame=2,7,81,96,13,29,6,25
 
 [cast]
 frames=3
-duration=100ms
+duration=300ms
 type=back_forth
 frame=0,0,32,0,30,24,14,20
 frame=0,1,32,0,30,24,14,20
@@ -177,7 +177,7 @@ frame=2,7,51,72,13,29,6,23
 
 [swing]
 frames=3
-duration=100ms
+duration=300ms
 type=back_forth
 frame=0,0,32,0,30,24,14,20
 frame=0,1,32,0,30,24,14,20
@@ -219,7 +219,7 @@ frame=0,7,25,90,13,30,7,26
 
 [block]
 frames=3
-duration=100ms
+duration=300ms
 type=back_forth
 frame=0,0,32,0,30,24,14,20
 frame=0,1,32,0,30,24,14,20

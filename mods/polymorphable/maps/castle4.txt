@@ -177,8 +177,9 @@ number=2,2
 type=on_trigger
 location=22,15,1,1
 hotspot=location
-loot=300,22,16,fixed,1
+loot=300,fixed,1
 mapmod=object,22,15,206
+repeat=false
 requires_not_status=snaketalis
 tooltip=Chest
 

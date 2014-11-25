@@ -1,6 +1,6 @@
 [quest]
 requires_status=fulljugg
-requires_not=theend
+requires_not_status=theend
 quest_text=Scale Snow Mountain, south of Laurelia, to put an end to Zalkaz once and for all.
 
 [quest]

@@ -160,6 +160,7 @@
   <object name="Alert" type="on_trigger" x="320" y="960" width="192" height="32">
    <properties>
     <property name="msg" value="TRAPPED!"/>
+    <property name="repeat" value="false"/>
     <property name="requires_not_status" value="1stjugg"/>
     <property name="sfx" value="quake.ogg"/>
    </properties>

@@ -140,9 +140,9 @@
   </object>
  </objectgroup>
  <objectgroup name="npc">
-  <object name="Combat Dummy" type="combat_dummy" x="128" y="256" width="32" height="32"/>
-  <object name="Trainee" type="trainee" x="192" y="256" width="32" height="32"/>
-  <object name="Captain" type="captain" x="1152" y="192" width="32" height="32"/>
+  <object name="Combat Dummy" type="npcs/combat_dummy.txt" x="128" y="256" width="32" height="32"/>
+  <object name="Trainee" type="npcs/trainee.txt" x="192" y="256" width="32" height="32"/>
+  <object name="Captain" type="npcs/captain.txt" x="1152" y="192" width="32" height="32"/>
  </objectgroup>
  <objectgroup name="enemy">
   <object name="Combat Dummy" type="combat_dummy" x="1024" y="256" width="32" height="32"/>

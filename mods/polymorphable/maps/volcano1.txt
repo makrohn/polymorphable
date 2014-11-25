@@ -182,6 +182,7 @@ type=on_trigger
 location=19,17,1,1
 hotspot=location
 mapmod=object,19,17,0;collision,19,17,0
+repeat=false
 requires_status=skelkey
 tooltip=Locked Gate
 

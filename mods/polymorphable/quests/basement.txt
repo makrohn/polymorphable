@@ -1,14 +1,14 @@
 [quest]
 requires_status=explorebasement
-requires_not=switch_key
+requires_not_status=switch_key
 quest_text=Explore the strange basement you've found underneath the Elder's house.
 
 [quest]
 requires_status=switch_key
-requires_not=shadowdefeated
+requires_not_status=shadowdefeated
 quest_text=You've found a strange key, but what on earth could it be used for?
 
 [quest]
 requires_status=shadowdefeated
-requires_not=ghostupgrade
+requires_not_status=ghostupgrade
 quest_text=Speak with the ghost in the basement.

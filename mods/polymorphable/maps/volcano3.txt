@@ -174,122 +174,101 @@ intermap=maps/volcano1.txt,30,18
 type=on_trigger
 location=10,5,6,3
 msg=There might be a way to cross that small gap, but it looks deadly.
+repeat=false
 sfx=quake.ogg
 
 [event]
 # Lava Trap
-type=trap
+type=on_trigger
 location=10,3,1,1
-=
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=trap
+type=on_trigger
 location=11,3,1,1
-=
- =
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=trap
+type=on_trigger
 location=13,3,1,1
-=
- =
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=trap
+type=on_trigger
 location=12,3,1,1
-=
- =
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=trap
+type=on_trigger
 location=14,3,1,1
-=
- =
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=trap
+type=on_trigger
 location=15,3,1,1
-=
- =
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=trap
+type=on_trigger
 location=11,4,1,1
-=
- =
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=trap
+type=on_trigger
 location=10,4,1,1
-=
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=trap
+type=on_trigger
 location=12,4,1,1
-=
- =
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=trap
+type=on_trigger
 location=13,4,1,1
-=
- =
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=trap
+type=on_trigger
 location=14,4,1,1
-=
- =
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=trap
+type=on_trigger
 location=15,4,1,1
-=
- =
 power=33
 power_damage=100,100
 tooltip=Lava River

@@ -214,6 +214,6 @@ intermap=maps/laurelia.txt,101,84
 
 [npc]
 # Inkeep's daughter
-type=daughter
+type=npcs/daughter.txt
 location=19,25,1,1
 

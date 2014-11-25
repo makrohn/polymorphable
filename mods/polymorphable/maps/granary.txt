@@ -103,6 +103,6 @@ intermap=maps/laurelia.txt,91,100
 
 [npc]
 # Quartermaster
-type=quartermaster
+type=npcs/quartermaster.txt
 location=17,11,1,1
 

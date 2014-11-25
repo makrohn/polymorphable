@@ -437,9 +437,10 @@
   <object name="Bat Talisman Chest" type="on_trigger" x="1824" y="1504" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="loot" value="200,58,47,fixed,1"/>
+    <property name="loot" value="200,fixed,1"/>
     <property name="mapmod" value="object,57,47,206"/>
     <property name="msg" value="Drag to actionbar to use."/>
+    <property name="repeat" value="false"/>
     <property name="requires_not_status" value="battalisfound"/>
     <property name="tooltip" value="Chest"/>
    </properties>
@@ -447,48 +448,54 @@
   <object name="Chest" type="on_trigger" x="3008" y="1984" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="loot" value="0,94,63,fixed,5,15"/>
+    <property name="loot" value="currency,fixed,5,15"/>
     <property name="mapmod" value="object,94,62,206"/>
+    <property name="repeat" value="false"/>
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>
   <object name="Chest" type="on_trigger" x="2816" y="1344" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="loot" value="0,87,42,fixed,2,10"/>
+    <property name="loot" value="currency,fixed,2,10"/>
     <property name="mapmod" value="object,88,42,206"/>
+    <property name="repeat" value="false"/>
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>
   <object name="Chest" type="on_trigger" x="2752" y="1312" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="loot" value="0,86,42,fixed,2,10"/>
+    <property name="loot" value="currency,fixed,2,10"/>
     <property name="mapmod" value="object,86,41,206"/>
+    <property name="repeat" value="false"/>
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>
   <object name="Chest" type="on_trigger" x="2528" y="1312" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="loot" value="0,79,40,fixed,2,10"/>
+    <property name="loot" value="currency,fixed,2,10"/>
     <property name="mapmod" value="object,79,41,206"/>
+    <property name="repeat" value="false"/>
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>
   <object name="Carrots" type="on_trigger" x="3104" y="2336" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="loot" value="1,97,74,fixed,2"/>
+    <property name="loot" value="1,fixed,2"/>
     <property name="mapmod" value="object,97,73,0;collision,97,73,0"/>
+    <property name="repeat" value="false"/>
     <property name="tooltip" value="Carrots"/>
    </properties>
   </object>
   <object name="Carrots" type="on_trigger" x="3040" y="2720" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="loot" value="1,95,85,fixed,2"/>
+    <property name="loot" value="1,fixed,2"/>
     <property name="mapmod" value="object,95,85,0;collision,95,85,0"/>
+    <property name="repeat" value="false"/>
     <property name="tooltip" value="Carrots"/>
    </properties>
   </object>
@@ -509,6 +516,7 @@
     <property name="hotspot" value="location"/>
     <property name="mapmod" value="object,75,72,880;object,76,72,0;object,77,72,0;object,78,72,878;object,75,71,885;object,76,71,0;object,77,71,0;object,78,71,883;collision,76,72,0;collision,77,72,0"/>
     <property name="npc" value="npcs/gravestone.txt"/>
+    <property name="repeat" value="false"/>
     <property name="requires_not_status" value="evil_unleashed"/>
     <property name="set_status" value="evil_unleashed"/>
     <property name="tooltip" value="Unmarked Grave"/>
@@ -517,14 +525,15 @@
   <object name="Carrots" type="on_trigger" x="2400" y="3104" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="loot" value="1,75,98,fixed,2"/>
+    <property name="loot" value="1,fixed,2"/>
     <property name="mapmod" value="object,75,97,0;collision,75,97,0"/>
+    <property name="repeat" value="false"/>
     <property name="tooltip" value="Carrots"/>
    </properties>
   </object>
  </objectgroup>
  <objectgroup name="npc">
-  <object name="Gravestone" type="gravestone" x="32" y="32" width="32" height="32"/>
+  <object name="Gravestone" type="npcs/gravestone.txt" x="32" y="32" width="32" height="32"/>
  </objectgroup>
  <objectgroup name="enemy" visible="0">
   <object name="2 Snakes" type="snake" x="1408" y="1312" width="256" height="128">

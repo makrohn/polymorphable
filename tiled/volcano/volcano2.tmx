@@ -164,7 +164,8 @@
   <object name="Forge" type="on_trigger" x="128" y="608" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="loot" value="198,5,19,fixed,1"/>
+    <property name="loot" value="198,fixed,1"/>
+    <property name="repeat" value="false"/>
     <property name="requires_not_status" value="skelkey"/>
     <property name="tooltip" value="Anvil"/>
    </properties>

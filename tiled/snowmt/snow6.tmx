@@ -191,6 +191,7 @@
    <properties>
     <property name="hotspot" value="location"/>
     <property name="msg" value="Bring ssssacrifices for Zalkaz here!"/>
+    <property name="repeat" value="false"/>
     <property name="tooltip" value="Sign"/>
    </properties>
   </object>

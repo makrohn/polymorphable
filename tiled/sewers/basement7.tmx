@@ -202,6 +202,7 @@
    <properties>
     <property name="hotspot" value="location"/>
     <property name="msg" value="FENCES ARE FOR YOUR PROTECTION.  DO NOT OPEN GATES."/>
+    <property name="repeat" value="false"/>
     <property name="tooltip" value="Signpost"/>
    </properties>
   </object>
@@ -209,6 +210,7 @@
    <properties>
     <property name="hotspot" value="location"/>
     <property name="msg" value="There is a strange groove in this rock"/>
+    <property name="repeat" value="false"/>
     <property name="requires_not_status" value="switch_key"/>
     <property name="tooltip" value="Strange Rock"/>
    </properties>
@@ -217,6 +219,7 @@
    <properties>
     <property name="hotspot" value="location"/>
     <property name="msg" value="There is a strange groove in this rock"/>
+    <property name="repeat" value="false"/>
     <property name="requires_not_status" value="switch_key"/>
     <property name="tooltip" value="Strange Rock"/>
    </properties>
@@ -225,6 +228,7 @@
    <properties>
     <property name="hotspot" value="location"/>
     <property name="msg" value="There is a strange groove in this rock"/>
+    <property name="repeat" value="false"/>
     <property name="requires_not_status" value="switch_key"/>
     <property name="tooltip" value="Strange Rock"/>
    </properties>
@@ -233,6 +237,7 @@
    <properties>
     <property name="hotspot" value="location"/>
     <property name="msg" value="There is a strange groove in this rock"/>
+    <property name="repeat" value="false"/>
     <property name="requires_not_status" value="switch_key"/>
     <property name="tooltip" value="Strange Rock"/>
    </properties>
@@ -241,6 +246,7 @@
    <properties>
     <property name="hotspot" value="location"/>
     <property name="msg" value="There is a strange groove in this rock"/>
+    <property name="repeat" value="false"/>
     <property name="requires_not_status" value="switch_key"/>
     <property name="tooltip" value="Strange Rock"/>
    </properties>
@@ -249,6 +255,7 @@
    <properties>
     <property name="hotspot" value="location"/>
     <property name="mapmod" value="object,4,17,0;object,4,12,0;collision,4,17,0;collision,4,12,0;object,10,1,0;collision,10,1,0"/>
+    <property name="repeat" value="false"/>
     <property name="requires_status" value="switch_key"/>
     <property name="tooltip" value="Strange Rock"/>
    </properties>
@@ -257,6 +264,7 @@
    <properties>
     <property name="hotspot" value="location"/>
     <property name="mapmod" value="collision,23,21,0;collision,17,21,0;object,23,21,0;object,17,21,0;"/>
+    <property name="repeat" value="false"/>
     <property name="requires_status" value="switch_key"/>
     <property name="tooltip" value="Strange Rock"/>
    </properties>
@@ -265,6 +273,7 @@
    <properties>
     <property name="hotspot" value="location"/>
     <property name="mapmod" value="object,2,25,0;object,11,25,0;collision,2,25,0;collision,11,25,0"/>
+    <property name="repeat" value="false"/>
     <property name="requires_status" value="switch_key"/>
     <property name="spawn" value="ghost,12,21"/>
     <property name="tooltip" value="Strange Rock"/>
@@ -274,6 +283,7 @@
    <properties>
     <property name="hotspot" value="location"/>
     <property name="mapmod" value="object,16,8,0;object,22,8,0;object,2,11,0;collision,16,8,0;collision,22,8,0;collision,2,11,0"/>
+    <property name="repeat" value="false"/>
     <property name="requires_status" value="switch_key"/>
     <property name="spawn" value="fireskeleton,29,3"/>
     <property name="tooltip" value="Strange Rock"/>
@@ -283,6 +293,7 @@
    <properties>
     <property name="hotspot" value="location"/>
     <property name="mapmod" value="object,28,9,0;object,26,16,0;collision,28,9,0;collision,26,16,0,object,14,26,0;collision,14,26,0"/>
+    <property name="repeat" value="false"/>
     <property name="requires_status" value="switch_key"/>
     <property name="tooltip" value="Strange Rock"/>
    </properties>
@@ -290,16 +301,18 @@
   <object name="Chest" type="on_trigger" x="288" y="64" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="loot" value="1,10,2,fixed,2"/>
+    <property name="loot" value="1,fixed,2"/>
     <property name="mapmod" value="object,9,2,206"/>
+    <property name="repeat" value="false"/>
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>
   <object name="Chest" type="on_trigger" x="288" y="96" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="loot" value="2,10,3,fixed,2"/>
+    <property name="loot" value="2,fixed,2"/>
     <property name="mapmod" value="object,9,3,206"/>
+    <property name="repeat" value="false"/>
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>

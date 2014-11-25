@@ -205,9 +205,10 @@ intermap=maps/basement6.txt,11,28
 type=on_trigger
 location=28,25,1,1
 hotspot=location
-loot=0,28,26,fixed,25,50
+loot=currency,fixed,25,50
 mapmod=object,28,25,206
 msg=Ambushed!
+repeat=false
 spawn=fireskeleton,23,23;fireskeleton,24,23
 tooltip=Chest
 

@@ -178,8 +178,9 @@
   <object name="Ghost Talisman" type="on_trigger" x="736" y="224" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="loot" value="400,24,6,fixed,1"/>
+    <property name="loot" value="400,fixed,1"/>
     <property name="msg" value="Someone has scrawled here: &quot;The fire skeleton's bombs killed my friend instantly!  If I wasn't a ghost already, I'd have died, too.&quot;"/>
+    <property name="repeat" value="false"/>
     <property name="requires_not_status" value="ghosttalis"/>
     <property name="tooltip" value="Altar"/>
    </properties>

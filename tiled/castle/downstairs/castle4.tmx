@@ -179,8 +179,9 @@
   <object name="Chest" type="on_trigger" x="704" y="480" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="loot" value="300,22,16,fixed,1"/>
+    <property name="loot" value="300,fixed,1"/>
     <property name="mapmod" value="object,22,15,206"/>
+    <property name="repeat" value="false"/>
     <property name="requires_not_status" value="snaketalis"/>
     <property name="tooltip" value="Chest"/>
    </properties>

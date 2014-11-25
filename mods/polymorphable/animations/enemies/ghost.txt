@@ -3,7 +3,7 @@ image=images/enemies/ghost.png
 
 [stance]
 frames=3
-duration=100ms
+duration=300ms
 type=back_forth
 frame=0,0,70,44,32,46,15,40
 frame=0,1,70,44,32,46,15,40
@@ -45,7 +45,7 @@ frame=0,7,0,92,34,46,17,40
 
 [shoot]
 frames=3
-duration=100ms
+duration=300ms
 type=back_forth
 frame=0,0,70,44,32,46,15,40
 frame=0,1,70,44,32,46,15,40
@@ -74,7 +74,7 @@ frame=2,7,106,0,36,44,18,38
 
 [run]
 frames=3
-duration=100ms
+duration=300ms
 type=back_forth
 frame=0,0,70,44,32,46,15,40
 frame=0,1,70,44,32,46,15,40
@@ -103,7 +103,7 @@ frame=2,7,106,0,36,44,18,38
 
 [die]
 frames=3
-duration=100ms
+duration=300ms
 type=play_once
 frame=0,0,134,44,32,46,15,40
 frame=0,1,134,44,32,46,15,40
@@ -132,7 +132,7 @@ frame=2,7,36,184,36,38,18,34
 
 [critdie]
 frames=3
-duration=100ms
+duration=300ms
 type=play_once
 frame=0,0,134,44,32,46,15,40
 frame=0,1,134,44,32,46,15,40
@@ -161,7 +161,7 @@ frame=2,7,36,184,36,38,18,34
 
 [cast]
 frames=3
-duration=100ms
+duration=300ms
 type=back_forth
 frame=0,0,70,44,32,46,15,40
 frame=0,1,70,44,32,46,15,40
@@ -190,7 +190,7 @@ frame=2,7,106,0,36,44,18,38
 
 [swing]
 frames=3
-duration=100ms
+duration=300ms
 type=back_forth
 frame=0,0,70,44,32,46,15,40
 frame=0,1,70,44,32,46,15,40
@@ -232,7 +232,7 @@ frame=0,7,0,138,34,46,17,40
 
 [block]
 frames=3
-duration=100ms
+duration=300ms
 type=back_forth
 frame=0,0,70,44,32,46,15,40
 frame=0,1,70,44,32,46,15,40

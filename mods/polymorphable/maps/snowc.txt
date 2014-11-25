@@ -166,6 +166,6 @@ intermap=maps/snow6.txt,24,20
 
 [npc]
 # Shade of Elder Thomas
-type=eldershade
+type=npcs/eldershade.txt
 location=18,19,1,1
 

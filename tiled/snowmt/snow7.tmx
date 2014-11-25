@@ -239,11 +239,13 @@
   <object name="Alert" type="on_trigger" x="704" y="1472" width="32" height="32">
    <properties>
     <property name="msg" value="TRAPPED!"/>
+    <property name="repeat" value="false"/>
    </properties>
   </object>
   <object name="Dialog" type="on_trigger" x="704" y="1408" width="32" height="32">
    <properties>
     <property name="msg" value="Prepare to die!"/>
+    <property name="repeat" value="false"/>
    </properties>
   </object>
  </objectgroup>

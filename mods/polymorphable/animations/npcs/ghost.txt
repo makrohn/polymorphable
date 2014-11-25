@@ -3,7 +3,7 @@ image=images/npcs/ghost.png
 
 [stance]
 frames=3
-duration=2s
+duration=6s
 type=looped
 frame=0,0,36,0,34,46,17,58
 frame=1,0,0,0,36,46,18,58

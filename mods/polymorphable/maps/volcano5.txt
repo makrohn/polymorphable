@@ -161,6 +161,7 @@ data=
 type=on_trigger
 location=10,30,6,1
 msg=TRAPPED!
+repeat=false
 requires_not_status=1stjugg
 sfx=quake.ogg
 

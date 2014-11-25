@@ -167,7 +167,8 @@ intermap=maps/volcano1.txt,1,16
 type=on_trigger
 location=4,19,1,1
 hotspot=location
-loot=198,5,19,fixed,1
+loot=198,fixed,1
+repeat=false
 requires_not_status=skelkey
 tooltip=Anvil
 

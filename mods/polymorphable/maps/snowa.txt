@@ -179,6 +179,7 @@ location=23,16,1,1
 hotspot=location
 mapmod=object,23,16,206
 msg=Empty...
+repeat=false
 tooltip=Chest
 
 [event]

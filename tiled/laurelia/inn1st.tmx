@@ -215,6 +215,6 @@
   </object>
  </objectgroup>
  <objectgroup name="npc">
-  <object name="Inkeep's daughter" type="daughter" x="608" y="800" width="32" height="32"/>
+  <object name="Inkeep's daughter" type="npcs/daughter.txt" x="608" y="800" width="32" height="32"/>
  </objectgroup>
 </map>
