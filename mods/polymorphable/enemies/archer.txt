@@ -4,7 +4,6 @@ categories=cultist,archer,ranged
 rarity=common
 xp=0
 
-sfx_prefix=none
 animations=animations/enemies/archer.txt
 
 loot=1,25

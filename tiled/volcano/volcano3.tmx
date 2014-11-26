@@ -173,7 +173,7 @@
    <properties>
     <property name="msg" value="There might be a way to cross that small gap, but it looks deadly."/>
     <property name="repeat" value="false"/>
-    <property name="sfx" value="quake.ogg"/>
+    <property name="soundfx" value="soundfx/powers/quake.ogg"/>
    </properties>
   </object>
   <object name="Lava Trap" type="on_trigger" x="320" y="96" width="32" height="32">

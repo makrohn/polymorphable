@@ -4,7 +4,6 @@ categories=bat,venombat
 rarity=common
 xp=0
 
-sfx_prefix=none
 animations=animations/enemies/venombat.txt
 
 loot=1,25

@@ -1,10 +1,9 @@
 name=Giant Ghost
 level=3
-categories=ghost
+categories=giantghost
 rarity=common
 xp=0
 
-sfx_prefix=none
 animations=animations/enemies/giantghost.txt
 
 loot=1,25

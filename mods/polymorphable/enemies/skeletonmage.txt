@@ -4,7 +4,6 @@ categories=skeleton,skeletonmage
 rarity=common
 xp=0
 
-sfx_prefix=none
 animations=animations/enemies/skeletonmage.txt
 
 loot=1,25

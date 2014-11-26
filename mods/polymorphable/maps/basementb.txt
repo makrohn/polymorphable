@@ -209,7 +209,7 @@ loot=currency,fixed,25,50
 mapmod=object,28,25,206
 msg=Ambushed!
 repeat=false
-spawn=fireskeleton,23,23;fireskeleton,24,23
+spawn=enemies/fireskeleton.txt,23,23;enemies/fireskeleton.txt,24,23
 tooltip=Chest
 
 [enemy]

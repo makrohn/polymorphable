@@ -162,7 +162,7 @@
     <property name="msg" value="TRAPPED!"/>
     <property name="repeat" value="false"/>
     <property name="requires_not_status" value="1stjugg"/>
-    <property name="sfx" value="quake.ogg"/>
+    <property name="soundfx" value="soundfx/powers/quake.ogg"/>
    </properties>
   </object>
   <object name="Teleport to Volcano3" type="on_trigger" x="320" y="992" width="192" height="32">
@@ -174,7 +174,7 @@
   <object name="Giant Fire Skeleton" type="on_load" x="384" y="576" width="32" height="32">
    <properties>
     <property name="requires_not_status" value="1stjugg"/>
-    <property name="spawn" value="giantfireskeleton,12,18"/>
+    <property name="spawn" value="enemies/giantfireskeleton.txt,12,18"/>
    </properties>
   </object>
  </objectgroup>

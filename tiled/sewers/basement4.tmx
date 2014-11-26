@@ -68,7 +68,7 @@
     <property name="mapmod" value="object,30,4,206"/>
     <property name="msg" value="An empty chest!"/>
     <property name="repeat" value="false"/>
-    <property name="spawn" value="skeleton,30,3;ghost,29,5"/>
+    <property name="spawn" value="enemies/skeleton.txt,30,3;enemies/ghost.txt,29,5"/>
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>

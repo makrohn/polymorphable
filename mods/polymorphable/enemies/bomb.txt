@@ -4,7 +4,6 @@ categories=bomb
 rarity=common
 xp=0
 
-sfx_prefix=none
 animations=animations/enemies/bomb.txt
 
 suppress_hp=1

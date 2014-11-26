@@ -4,7 +4,6 @@ categories=firebomb
 rarity=common
 xp=0
 
-sfx_prefix=none
 animations=animations/enemies/firebomb.txt
 
 suppress_hp=1

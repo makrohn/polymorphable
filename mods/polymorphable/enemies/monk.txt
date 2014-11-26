@@ -4,7 +4,6 @@ categories=cultist,monk,melee
 rarity=common
 xp=0
 
-sfx_prefix=none
 animations=animations/enemies/brawler.txt
 
 loot=1,25

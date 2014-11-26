@@ -1,10 +1,9 @@
 name=Giant Fire Skeleton
 level=4
-categories=skeleton,fireskeleton
+categories=skeleton,fireskeleton,giantfireskeleton
 rarity=common
 xp=0
 
-sfx_prefix=none
 animations=animations/enemies/giantfireskeleton.txt
 
 loot=1,25

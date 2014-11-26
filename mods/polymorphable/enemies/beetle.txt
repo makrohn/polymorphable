@@ -4,7 +4,6 @@ categories=beetle,sewer
 rarity=common
 xp=0
 
-sfx_prefix=none
 animations=animations/enemies/beetle.txt
 
 loot=1,25
