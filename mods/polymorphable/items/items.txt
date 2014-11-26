@@ -44,6 +44,7 @@ id=4
 name=Gold
 level=1
 quality=normal
+icon=34
 item_type=other
 price=1
 price_sell=1

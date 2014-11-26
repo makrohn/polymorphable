@@ -163,7 +163,7 @@ location=10,30,6,1
 msg=TRAPPED!
 repeat=false
 requires_not_status=1stjugg
-sfx=quake.ogg
+soundfx=soundfx/powers/quake.ogg
 
 [event]
 # Teleport to Volcano3
@@ -177,5 +177,5 @@ requires_status=1stjugg
 type=on_load
 location=12,18,1,1
 requires_not_status=1stjugg
-spawn=giantfireskeleton,12,18
+spawn=enemies/giantfireskeleton.txt,12,18
 

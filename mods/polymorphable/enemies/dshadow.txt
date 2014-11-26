@@ -5,7 +5,6 @@ categories=dshadow
 rarity=common
 xp=0
 
-sfx_prefix=none
 animations=animations/enemies/ghostdup.txt
 
 loot=1,25

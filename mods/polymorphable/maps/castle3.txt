@@ -172,7 +172,7 @@ location=14,13,1,1
 hotspot=location
 mapmod=object,14,13,206
 repeat=false
-spawn=ghost,13,14
+spawn=enemies/ghost.txt,13,14
 tooltip=Chest
 
 [event]

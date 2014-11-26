@@ -175,7 +175,7 @@
     <property name="hotspot" value="location"/>
     <property name="mapmod" value="object,14,13,206"/>
     <property name="repeat" value="false"/>
-    <property name="spawn" value="ghost,13,14"/>
+    <property name="spawn" value="enemies/ghost.txt,13,14"/>
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>

@@ -1,10 +1,9 @@
 name=Zalkaz, Bane of Laurelia
 level=3
-categories=bat
+categories=bat,zalkaz
 rarity=common
 xp=0
 
-sfx_prefix=none
 animations=animations/enemies/zalkaz.txt
 defeat_status=theend
 

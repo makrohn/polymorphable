@@ -1,11 +1,10 @@
 name=Ghost
 level=1
 humanoid=true
-categories=ghostd
+categories=ghostd,ghostdup
 rarity=common
 xp=0
 
-sfx_prefix=none
 animations=animations/enemies/ghostdup.txt
 
 loot=1,25

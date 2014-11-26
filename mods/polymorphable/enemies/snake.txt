@@ -4,7 +4,6 @@ categories=snake
 rarity=common
 xp=0
 
-sfx_prefix=none
 animations=animations/enemies/snake.txt
 
 loot=1,25

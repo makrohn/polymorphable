@@ -210,7 +210,7 @@
     <property name="mapmod" value="object,28,25,206"/>
     <property name="msg" value="Ambushed!"/>
     <property name="repeat" value="false"/>
-    <property name="spawn" value="fireskeleton,23,23;fireskeleton,24,23"/>
+    <property name="spawn" value="enemies/fireskeleton.txt,23,23;enemies/fireskeleton.txt,24,23"/>
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>

@@ -275,7 +275,7 @@
     <property name="mapmod" value="object,2,25,0;object,11,25,0;collision,2,25,0;collision,11,25,0"/>
     <property name="repeat" value="false"/>
     <property name="requires_status" value="switch_key"/>
-    <property name="spawn" value="ghost,12,21"/>
+    <property name="spawn" value="enemies/ghost.txt,12,21"/>
     <property name="tooltip" value="Strange Rock"/>
    </properties>
   </object>
@@ -285,7 +285,7 @@
     <property name="mapmod" value="object,16,8,0;object,22,8,0;object,2,11,0;collision,16,8,0;collision,22,8,0;collision,2,11,0"/>
     <property name="repeat" value="false"/>
     <property name="requires_status" value="switch_key"/>
-    <property name="spawn" value="fireskeleton,29,3"/>
+    <property name="spawn" value="enemies/fireskeleton.txt,29,3"/>
     <property name="tooltip" value="Strange Rock"/>
    </properties>
   </object>
