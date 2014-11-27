@@ -198,7 +198,6 @@ data=
 # Switch
 type=on_trigger
 location=28,13,1,1
-=
 hotspot=location
 msg=There's a key-shaped hole in this rock.
 requires_not_status=switch_key

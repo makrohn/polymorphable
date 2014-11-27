@@ -178,5 +178,4 @@ intermap=maps/snow5.txt,13,22
 # Shop Chest
 type=npcs/shopchest.txt
 location=12,22,1,1
-=
 

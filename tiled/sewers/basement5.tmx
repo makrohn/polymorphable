@@ -200,7 +200,6 @@
  <objectgroup name="event">
   <object name="Switch" type="on_trigger" x="896" y="416" width="32" height="32">
    <properties>
-    <property name="" value=""/>
     <property name="hotspot" value="location"/>
     <property name="msg" value="There's a key-shaped hole in this rock."/>
     <property name="requires_not_status" value="switch_key"/>
