@@ -42,4 +42,3 @@ dmg_ranged_max_per_offense=0
 #absorb_max=0
 speed=7
 
-sfx_step=cloth
