@@ -1,6 +1,6 @@
 name=Zalkaz, Bane of Laurelia
 level=3
-categories=bat,zalkaz
+categories=zalkaz
 rarity=common
 xp=0
 

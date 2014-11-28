@@ -1,6 +1,6 @@
 name=Giant Fire Skeleton
 level=4
-categories=skeleton,fireskeleton,giantfireskeleton
+categories=giantfireskeleton
 rarity=common
 xp=0
 
