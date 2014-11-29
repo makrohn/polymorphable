@@ -226,7 +226,11 @@
 </data>
  </layer>
  <objectgroup name="enemy">
-  <object name="Zalkaz" type="zalkaz" x="672" y="544" width="32" height="32"/>
+  <object name="Zalkaz" type="zalkaz" x="672" y="544" width="32" height="32">
+   <properties>
+    <property name="requires_not_status" value="theend"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup name="event">
   <object name="Teleport to Laurelia" type="on_trigger" x="704" y="1504" width="32" height="32">
@@ -240,12 +244,14 @@
    <properties>
     <property name="msg" value="TRAPPED!"/>
     <property name="repeat" value="false"/>
+    <property name="requires_not_status" value="theend"/>
    </properties>
   </object>
   <object name="Dialog" type="on_trigger" x="704" y="1408" width="32" height="32">
    <properties>
     <property name="msg" value="Prepare to die!"/>
     <property name="repeat" value="false"/>
+    <property name="requires_not_status" value="theend"/>
    </properties>
   </object>
  </objectgroup>

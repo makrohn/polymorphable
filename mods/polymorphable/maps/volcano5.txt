@@ -156,6 +156,12 @@ data=
 0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 
+[enemy]
+# Giant Fire Skeleton
+type=giantfireskeleton
+location=12,18,1,1
+requires_not_status=1stjugg
+
 [event]
 # Alert
 type=on_trigger
@@ -171,11 +177,4 @@ type=on_trigger
 location=10,31,6,1
 intermap=maps/volcano3.txt,12,1
 requires_status=1stjugg
-
-[event]
-# Giant Fire Skeleton
-type=on_load
-location=12,18,1,1
-requires_not_status=1stjugg
-spawn=enemies/giantfireskeleton.txt,12,18
 
