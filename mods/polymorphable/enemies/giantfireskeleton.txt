@@ -19,6 +19,7 @@ threat_range=16
 turn_delay=400ms
 chance_pursue=20
 chance_melee_phys=20
+chance_ranged_phys=5
 chance_ranged_ment=5
 power_beacon=132
 power_melee_phys=1
@@ -32,3 +33,4 @@ avoidance=0
 
 dmg_melee_min=4
 dmg_melee_max=4
+cooldown=1s

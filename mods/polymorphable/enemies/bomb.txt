@@ -11,11 +11,7 @@ suppress_hp=1
 # combat stats
 hp=3
 speed=0
-chance_pursue=100
-threat_range=32
-melee_range=32
-chance_melee_phys=100
-power_melee_phys=105
+chance_pursue=0
 chance_on_death=100
 power_on_death=32
 cooldown_hit=133ms
@@ -26,3 +22,6 @@ avoidance=100
 dmg_ment_min=5
 dmg_ment_max=5
 cooldown=1s
+
+# bomb tick
+passive_powers=105

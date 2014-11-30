@@ -210,8 +210,6 @@ multitarget=true
 cooldown=3s
 source_type=neutral
 requires_targeting=false
-sacrifice=true
-type=fixed
 
 [power]
 id=33
@@ -232,8 +230,6 @@ multitarget=true
 cooldown=3s
 source_type=neutral
 requires_targeting=false
-sacrifice=true
-type=fixed
 
 [power]
 id=34
@@ -335,8 +331,6 @@ multitarget=true
 cooldown=3s
 source_type=enemy
 requires_targeting=false
-sacrifice=true
-type=fixed
 
 [power]
 id=104
@@ -358,22 +352,15 @@ multitarget=true
 cooldown=3s
 source_type=enemy
 requires_targeting=false
-sacrifice=true
-type=fixed
 
 [power]
 id=105
 name=Tick
 type=fixed
 icon=1
-new_state=cast
-requires_hp=1
-face=true
-use_hazard=true
-aim_assist=true
-starting_pos=melee
-sacrifice=true
-type=fixed
+passive=true
+buff=true
+post_effect=Bomb Tick,1,10s
 
 [power]
 id=132
