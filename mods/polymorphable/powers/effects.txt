@@ -154,3 +154,8 @@ type=hp_percent
 [effect]
 name=MP Percent
 type=mp_percent
+
+[effect]
+name=Bomb Tick
+type=damage
+can_stack=false

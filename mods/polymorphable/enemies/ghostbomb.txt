@@ -11,13 +11,11 @@ suppress_hp=1
 # combat stats
 hp=1
 speed=0
-melee_range=2
-threat_range=5
-turn_delay=400ms
-chance_pursue=20
+chance_pursue=0
 chance_ranged_phys=100
 power_ranged_phys=104
 cooldown_hit=133ms
+combat_style=aggressive
 
 accuracy=100
 avoidance=0
@@ -25,3 +23,6 @@ avoidance=0
 dmg_ment_min=100
 dmg_ment_max=100
 cooldown=1s
+
+# bomb tick
+passive_powers=105
