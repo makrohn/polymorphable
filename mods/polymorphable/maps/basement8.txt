@@ -215,7 +215,7 @@ hotspot=location
 msg=You must defeat your shadow!
 repeat=false
 requires_not_status=ghostupgrade
-spawn=enemies/dshadow.txt,14,25
+spawn=dshadow,14,25
 tooltip=Fountain
 
 [npc]

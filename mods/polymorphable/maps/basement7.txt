@@ -281,7 +281,7 @@ hotspot=location
 mapmod=object,2,25,0;object,11,25,0;collision,2,25,0;collision,11,25,0
 repeat=false
 requires_status=switch_key
-spawn=enemies/ghost.txt,12,21
+spawn=ghost,12,21
 tooltip=Strange Rock
 
 [event]
@@ -292,7 +292,7 @@ hotspot=location
 mapmod=object,16,8,0;object,22,8,0;object,2,11,0;collision,16,8,0;collision,22,8,0;collision,2,11,0
 repeat=false
 requires_status=switch_key
-spawn=enemies/fireskeleton.txt,29,3
+spawn=fireskeleton,29,3
 tooltip=Strange Rock
 
 [event]
