@@ -224,7 +224,7 @@ hotspot=location
 mapmod=object,30,4,206
 msg=An empty chest!
 repeat=false
-spawn=enemies/skeleton.txt,30,3;enemies/ghost.txt,29,5
+spawn=skeletondefault,30,3;ghost,29,5
 tooltip=Chest
 
 [event]

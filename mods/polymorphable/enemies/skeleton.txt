@@ -1,6 +1,6 @@
 name=Skeleton
 level=1
-categories=skeleton
+categories=skeleton,skeletondefault
 rarity=common
 xp=0
 
