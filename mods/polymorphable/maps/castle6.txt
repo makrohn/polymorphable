@@ -216,5 +216,5 @@ requires_not_status=2ndjugg
 type=on_load
 location=13,14,1,1
 requires_not_status=2ndjugg
-spawn=enemies/giantghost.txt,13,14
+spawn=giantghost,13,14
 

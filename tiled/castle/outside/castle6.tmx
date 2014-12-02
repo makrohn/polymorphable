@@ -223,7 +223,7 @@
   <object name="Giant Ghost" type="on_load" x="416" y="448" width="32" height="32">
    <properties>
     <property name="requires_not_status" value="2ndjugg"/>
-    <property name="spawn" value="enemies/giantghost.txt,13,14"/>
+    <property name="spawn" value="giantghost,13,14"/>
    </properties>
   </object>
  </objectgroup>
