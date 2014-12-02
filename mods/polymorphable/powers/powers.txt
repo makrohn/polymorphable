@@ -272,7 +272,7 @@ count=10
 new_state=cast
 starting_pos=source
 target_neighbor=1
-cooldown=100s
+cooldown=15s
 
 [power]
 id=100
@@ -309,7 +309,7 @@ description=Drop a bomb that does 10 damage when it explodes to the whole screen
 spawn_type=firebomb
 new_state=cast
 starting_pos=source
-cooldown=180s
+cooldown=15s
 
 [power]
 id=103

@@ -18,13 +18,20 @@ melee_range=3
 threat_range=16
 turn_delay=400ms
 chance_pursue=20
-chance_melee_phys=20
-chance_ranged_phys=5
-chance_ranged_ment=5
 power_beacon=132
+
+# swing
+chance_melee_phys=20
 power_melee_phys=1
+
+# fire bomb
+chance_ranged_phys=100
 power_ranged_phys=102
+
+# spit fire
+chance_ranged_ment=5
 power_ranged_ment=302
+
 quest_loot=juggsearch,1stjugg,498
 cooldown_hit=1s
 
