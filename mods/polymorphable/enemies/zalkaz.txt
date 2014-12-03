@@ -19,11 +19,16 @@ melee_range=2
 threat_range=16
 turn_delay=400ms
 chance_pursue=20
-chance_melee_phys=20
-chance_ranged_phys=5
 power_beacon=132
-power_ranged_phys=36
+
+# crush
+chance_melee_phys=20
 power_melee_phys=2
+
+# summon bat
+chance_ranged_phys=100
+power_ranged_phys=36
+
 flying=1
 cooldown_hit=1s
 

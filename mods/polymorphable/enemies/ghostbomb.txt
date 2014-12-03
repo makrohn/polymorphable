@@ -12,10 +12,18 @@ suppress_hp=1
 hp=1
 speed=0
 chance_pursue=0
-chance_ranged_phys=100
-power_ranged_phys=104
+
+# damage self when the player is near
+melee_range=2
+threat_range=5
+chance_melee_phys=100
+power_melee_phys=106
+
+# explode when damaged
+chance_on_death=100
+power_on_death=104
+
 cooldown_hit=133ms
-combat_style=aggressive
 
 accuracy=100
 avoidance=0
@@ -24,5 +32,3 @@ dmg_ment_min=100
 dmg_ment_max=100
 cooldown=1s
 
-# bomb tick
-passive_powers=105
