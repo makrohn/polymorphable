@@ -8,7 +8,6 @@ power=100
 power_desc=Restore 4 HP
 item_type=consumable
 loot_animation=animations/loot/carrot.txt
-rand_vendor=3
 max_quantity=25
 price=5
 
@@ -22,7 +21,6 @@ power=101
 power_desc=Restore 4 MP
 item_type=consumable
 loot_animation=animations/loot/watermelon.txt
-rand_vendor=3
 max_quantity=25
 price=5
 
