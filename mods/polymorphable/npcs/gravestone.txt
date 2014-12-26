@@ -6,6 +6,8 @@ gfx=animations/npcs/blank.txt
 
 [dialog]
 topic=Examine Tombstone
+requires_not_status=evil_unleashed
+allow_movement=false
 him=As you gaze upon the tombstone, you hear a voice coming from the walls.
 him=I knew it was just a matter of time until someone stumbled upon my tomb!
 him=But never in the wildest dreams did I believe it would be the daughter of my captors!
@@ -15,7 +17,21 @@ you=Oh, and I'm so scared now.  You're just a voice, who cares?
 him=Who cares?  The entire world shall tremble, for soon I shall have my body back, and I shall sweep through the lands with my fiery sword of rage!
 you=Great.  Why can't we just have a sewer like most modern cities?  Sheesh.
 you=Now I just need to find my way out of here.  Is that a breeze coming from behind the tombstone?
+set_status=evil_unleashed
+
+# open the passageway in maps/cavern.txt
+mapmod=object,75,72,880
+mapmod=object,76,72,0
+mapmod=object,77,72,0
+mapmod=object,78,72,878
+mapmod=object,75,71,885
+mapmod=object,76,71,0
+mapmod=object,77,71,0
+mapmod=object,78,71,883
+mapmod=collision,76,72,0
+mapmod=collision,77,72,0
 
 [dialog]
+topic=Examine Tombstone
 requires_status=evil_unleashed
 him=The tombstone stands quiet now.

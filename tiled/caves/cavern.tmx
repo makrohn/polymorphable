@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="32" tileheight="32" nextobjectid="21">
  <properties>
   <property name="music" value="music/technophobic.ogg"/>
   <property name="tileset" value="tilesetdefs/outside.txt"/>
@@ -434,7 +434,7 @@
 </data>
  </layer>
  <objectgroup name="event">
-  <object name="Bat Talisman Chest" type="on_trigger" x="1824" y="1504" width="32" height="32">
+  <object id="1" name="Bat Talisman Chest" type="on_trigger" x="1824" y="1504" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="loot" value="200,fixed,1"/>
@@ -445,7 +445,7 @@
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>
-  <object name="Chest" type="on_trigger" x="3008" y="1984" width="32" height="32">
+  <object id="2" name="Chest" type="on_trigger" x="3008" y="1984" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="loot" value="currency,fixed,5,15"/>
@@ -454,7 +454,7 @@
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>
-  <object name="Chest" type="on_trigger" x="2816" y="1344" width="32" height="32">
+  <object id="3" name="Chest" type="on_trigger" x="2816" y="1344" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="loot" value="currency,fixed,2,10"/>
@@ -463,7 +463,7 @@
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>
-  <object name="Chest" type="on_trigger" x="2752" y="1312" width="32" height="32">
+  <object id="4" name="Chest" type="on_trigger" x="2752" y="1312" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="loot" value="currency,fixed,2,10"/>
@@ -472,7 +472,7 @@
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>
-  <object name="Chest" type="on_trigger" x="2528" y="1312" width="32" height="32">
+  <object id="5" name="Chest" type="on_trigger" x="2528" y="1312" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="loot" value="currency,fixed,2,10"/>
@@ -481,7 +481,7 @@
     <property name="tooltip" value="Chest"/>
    </properties>
   </object>
-  <object name="Carrots" type="on_trigger" x="3104" y="2336" width="32" height="32">
+  <object id="6" name="Carrots" type="on_trigger" x="3104" y="2336" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="loot" value="1,fixed,2"/>
@@ -490,7 +490,7 @@
     <property name="tooltip" value="Carrots"/>
    </properties>
   </object>
-  <object name="Carrots" type="on_trigger" x="3040" y="2720" width="32" height="32">
+  <object id="7" name="Carrots" type="on_trigger" x="3040" y="2720" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="loot" value="1,fixed,2"/>
@@ -499,30 +499,27 @@
     <property name="tooltip" value="Carrots"/>
    </properties>
   </object>
-  <object name="Teleport to Glade" type="on_trigger" x="1984" y="1152" width="32" height="64">
+  <object id="8" name="Teleport to Glade" type="on_trigger" x="1984" y="1152" width="32" height="64">
    <properties>
     <property name="intermap" value="maps/glade.txt,15,14"/>
     <property name="set_status" value="cavernexplored"/>
    </properties>
   </object>
-  <object name="Block Passage" type="on_load" x="2400" y="2272" width="128" height="64">
+  <object id="9" name="Block Passage" type="on_load" x="2400" y="2272" width="128" height="64">
    <properties>
     <property name="mapmod" value="object,75,72,879;object,76,72,879;object,77,72,879;object,78,72,879;object,75,71,890;object,76,71,887;object,77,71,887;object,78,71,889;collision,75,72,1;collision,76,72,1;collision,77,72,1;collision,78,72,1"/>
     <property name="requires_not_status" value="evil_unleashed"/>
    </properties>
   </object>
-  <object name="Unblock passage" type="on_trigger" x="2432" y="2400" width="64" height="32">
+  <object id="10" name="Unblock passage" type="on_trigger" x="2432" y="2400" width="64" height="32">
    <properties>
     <property name="hotspot" value="location"/>
-    <property name="mapmod" value="object,75,72,880;object,76,72,0;object,77,72,0;object,78,72,878;object,75,71,885;object,76,71,0;object,77,71,0;object,78,71,883;collision,76,72,0;collision,77,72,0"/>
     <property name="npc" value="npcs/gravestone.txt"/>
-    <property name="repeat" value="false"/>
-    <property name="requires_not_status" value="evil_unleashed"/>
-    <property name="set_status" value="evil_unleashed"/>
+    <property name="repeat" value="true"/>
     <property name="tooltip" value="Unmarked Grave"/>
    </properties>
   </object>
-  <object name="Carrots" type="on_trigger" x="2400" y="3104" width="32" height="32">
+  <object id="11" name="Carrots" type="on_trigger" x="2400" y="3104" width="32" height="32">
    <properties>
     <property name="hotspot" value="location"/>
     <property name="loot" value="1,fixed,2"/>
@@ -533,52 +530,52 @@
   </object>
  </objectgroup>
  <objectgroup name="npc">
-  <object name="Gravestone" type="npcs/gravestone.txt" x="32" y="32" width="32" height="32"/>
+  <object id="12" name="Gravestone" type="npcs/gravestone.txt" x="32" y="32" width="32" height="32"/>
  </objectgroup>
  <objectgroup name="enemy" visible="0">
-  <object name="2 Snakes" type="snake" x="1408" y="1312" width="256" height="128">
+  <object id="13" name="2 Snakes" type="snake" x="1408" y="1312" width="256" height="128">
    <properties>
     <property name="level" value="1,3"/>
     <property name="number" value="2,2"/>
    </properties>
   </object>
-  <object name="2 Bats" type="bat" x="1408" y="1504" width="256" height="224">
+  <object id="14" name="2 Bats" type="bat" x="1408" y="1504" width="256" height="224">
    <properties>
     <property name="level" value="1,1"/>
     <property name="number" value="2,2"/>
    </properties>
   </object>
-  <object name="4-5 Bats" type="bat" x="2464" y="1344" width="384" height="256">
+  <object id="15" name="4-5 Bats" type="bat" x="2464" y="1344" width="384" height="256">
    <properties>
     <property name="level" value="1,1"/>
     <property name="number" value="4,5"/>
    </properties>
   </object>
-  <object name="1 snake" type="snake" x="2912" y="2016" width="160" height="128">
+  <object id="16" name="1 snake" type="snake" x="2912" y="2016" width="160" height="128">
    <properties>
     <property name="level" value="1,1"/>
     <property name="number" value="1,1"/>
    </properties>
   </object>
-  <object name="1 Bat" type="bat" x="1984" y="1664" width="320" height="192">
+  <object id="17" name="1 Bat" type="bat" x="1984" y="1664" width="320" height="192">
    <properties>
     <property name="level" value="1,1"/>
     <property name="number" value="1,1"/>
    </properties>
   </object>
-  <object name="2 bats" type="bat" x="2400" y="2432" width="96" height="64">
+  <object id="18" name="2 bats" type="bat" x="2400" y="2432" width="96" height="64">
    <properties>
     <property name="level" value="1,1"/>
     <property name="number" value="2,2"/>
    </properties>
   </object>
-  <object name="2 bats" type="bat" x="2656" y="2720" width="384" height="160">
+  <object id="19" name="2 bats" type="bat" x="2656" y="2720" width="384" height="160">
    <properties>
     <property name="level" value="1,1"/>
     <property name="number" value="2,2"/>
    </properties>
   </object>
-  <object name="1 bat" type="bat" x="2432" y="3040" width="128" height="96">
+  <object id="20" name="1 bat" type="bat" x="2432" y="3040" width="128" height="96">
    <properties>
     <property name="level" value="1,1"/>
     <property name="number" value="1,1"/>
