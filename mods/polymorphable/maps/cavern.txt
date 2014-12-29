@@ -521,11 +521,8 @@ requires_not_status=evil_unleashed
 type=on_trigger
 location=76,75,2,1
 hotspot=location
-mapmod=object,75,72,880;object,76,72,0;object,77,72,0;object,78,72,878;object,75,71,885;object,76,71,0;object,77,71,0;object,78,71,883;collision,76,72,0;collision,77,72,0
 npc=npcs/gravestone.txt
-repeat=false
-requires_not_status=evil_unleashed
-set_status=evil_unleashed
+repeat=true
 tooltip=Unmarked Grave
 
 [event]
