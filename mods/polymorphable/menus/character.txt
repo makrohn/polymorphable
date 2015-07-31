@@ -46,14 +46,8 @@ show_upgrade_mental=1
 show_upgrade_offense=0
 show_upgrade_defense=0
 
-show_maxhp=1
-show_hpregen=0
-show_maxmp=1
-show_mpregen=0
-show_melee=1
-show_ranged=0
-show_mental=1
+show_hp_regen=0
+show_mp_regen=0
+show_dmg_ranged_min=0
+show_dmg_ranged_max=0
 show_crit=0
-show_absorb=1
-show_resists=1
-

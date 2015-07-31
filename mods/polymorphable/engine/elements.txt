@@ -1,23 +1,23 @@
 [element]
-name=fire
-description=Fire Resistance
+id=fire
+name=Fire Resistance
 
 [element]
-name=ice
-description=Ice Resistance
+id=ice
+name=Ice Resistance
 
 [element]
-name=earth
-description=Earth Resistance
+id=earth
+name=Earth Resistance
 
 [element]
-name=wind
-description=Wind Resistance
+id=wind
+name=Wind Resistance
 
 #[element]
-#name=shadow
-#description=Shadow Resistance
+#id=shadow
+#name=Shadow Resistance
 
 #[element]
-#name=light
-#description=Light Resistance
+#id=light
+#name=Light Resistance

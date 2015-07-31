@@ -2,160 +2,160 @@
 #Effects
 ########################################
 [effect]
-name=Bleeding
+id=Bleeding
 icon=25
 type=damage
 animation=animations/powers/spark_red_loop.txt
 can_stack=false
 
 [effect]
-name=Immobilized
+id=Immobilized
 icon=24
 type=speed
 can_stack=false
 
 [effect]
-name=Slowed
+id=Slowed
 icon=24
 type=speed
 can_stack=false
 
 [effect]
-name=Stunned
+id=Stunned
 icon=26
 type=stun
 can_stack=false
 
 [effect]
-name=HP
+id=HP
 type=hp
 
 [effect]
-name=HP Regen
+id=HP Regen
 type=hp_regen
 
 [effect]
-name=MP
+id=MP
 type=mp
 
 [effect]
-name=MP Regen
+id=MP Regen
 type=mp_regen
 
 [effect]
-name=Accuracy
+id=Accuracy
 type=accuracy
 
 [effect]
-name=Avoidance
+id=Avoidance
 type=avoidance
 
 [effect]
-name=Crit
+id=Crit
 type=crit
 
 [effect]
-name=Speed
+id=Speed
 type=speed
 can_stack=false
 
 [effect]
-name=Offense
+id=Offense
 type=offense
 
 [effect]
-name=Defense
+id=Defense
 type=defense
 
 [effect]
-name=Physical
+id=Physical
 type=physical
 
 [effect]
-name=Mental
+id=Mental
 type=mental
 
 [effect]
-name=XP(bonus)
+id=XP(bonus)
 type=xp
 
 [effect]
-name=Gold
+id=Gold
 type=currency
 
 [effect]
-name=Fire Resistance
+id=Fire Resistance
 type=fire_resist
 
 [effect]
-name=Ice Resistance
+id=Ice Resistance
 type=ice_resist
 
 [effect]
-name=Immunity
+id=Immunity
 icon=12
 type=immunity
 can_stack=false
 
 [effect]
-name=Shield
+id=Shield
 icon=11
 type=shield
 animation=animations/powers/shield.txt
 can_stack=false
 
 [effect]
-name=Heal
+id=Heal
 type=heal
 animation=animations/powers/heal.txt
 can_stack=false
 
 [effect]
-name=Haste
+id=Haste
 icon=12
 type=speed
 can_stack=false
 
 [effect]
-name=HP over time
+id=HP over time
 type=hpot
 can_stack=false
 
 [effect]
-name=MP over time
+id=MP over time
 type=mpot
 can_stack=false
 
 [effect]
-name=Knockback
+id=Knockback
 type=forced_move
 can_stack=false
 
 [effect]
-name=Earth Resistance
+id=Earth Resistance
 type=earth_resist
 
 [effect]
-name=Wind Resistance
+id=Wind Resistance
 type=wind_resist
 
 [effect]
-name=Holy Resistance
+id=Holy Resistance
 type=holy_resist
 
 [effect]
-name=Dark Resistance
+id=Dark Resistance
 type=dark_resist
 
 [effect]
-name=HP Percent
+id=HP Percent
 type=hp_percent
 
 [effect]
-name=MP Percent
+id=MP Percent
 type=mp_percent
 
 [effect]
-name=Bomb Tick
+id=Bomb Tick
 type=damage
 can_stack=false
