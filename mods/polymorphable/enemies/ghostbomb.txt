@@ -16,12 +16,10 @@ chance_pursue=0
 # damage self when the player is near
 melee_range=2
 threat_range=5
-chance_melee_phys=100
-power_melee_phys=106
+power=melee,106,100
 
 # explode when damaged
-chance_on_death=100
-power_on_death=104
+power=on_death,104,100
 
 cooldown_hit=133ms
 

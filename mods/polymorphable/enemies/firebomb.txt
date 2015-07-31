@@ -12,8 +12,7 @@ suppress_hp=1
 hp=3
 speed=0
 chance_pursue=0
-chance_on_death=100
-power_on_death=103
+power=on_death,103,100
 cooldown_hit=133ms
 combat_style=aggressive
 

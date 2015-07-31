@@ -21,16 +21,13 @@ chance_pursue=20
 power_beacon=132
 
 # swing
-chance_melee_phys=20
-power_melee_phys=1
+power=melee,1,20
 
 # fire bomb
-chance_ranged_phys=100
-power_ranged_phys=102
+power=ranged,102,100
 
 # spit fire
-chance_ranged_ment=5
-power_ranged_ment=302
+power=ranged,302,5
 
 quest_loot=juggsearch,1stjugg,498
 cooldown_hit=1s

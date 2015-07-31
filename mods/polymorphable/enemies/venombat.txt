@@ -20,9 +20,9 @@ turn_delay=400ms
 chance_pursue=20
 chance_ranged_ment=2
 chance_melee_ment=10
-power_beacon=132
-power_ranged_ment=301
-power_melee_ment=301
+power=beacon,132
+power=ranged,301,100
+power=melee,301,100
 flying=1
 cooldown_hit=133ms
 

@@ -15,7 +15,6 @@ melee_range=0
 threat_range=0
 turn_delay=400ms
 chance_pursue=20
-chance_ranged_phys=5
 cooldown_hit=133ms
 
 accuracy=100
