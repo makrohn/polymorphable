@@ -19,7 +19,7 @@ melee_range=2
 threat_range=16
 turn_delay=400ms
 chance_pursue=20
-power=beacon,132
+power=beacon,132,100
 
 # crush
 power=melee,2,20

@@ -18,7 +18,7 @@ melee_range=3
 threat_range=16
 turn_delay=400ms
 chance_pursue=20
-power_beacon=132
+power=beacon,132,100
 
 # swing
 power=melee,1,20
