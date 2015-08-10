@@ -18,11 +18,9 @@ melee_range=1
 threat_range=16
 turn_delay=400ms
 chance_pursue=20
-chance_ranged_ment=2
-chance_melee_ment=10
 power=beacon,132,100
-power=ranged,301,100
-power=melee,301,100
+power=ranged,301,2
+power=melee,301,10
 flying=1
 cooldown_hit=133ms
 
