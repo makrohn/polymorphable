@@ -128,7 +128,7 @@ can_stack=false
 
 [effect]
 id=Knockback
-type=forced_move
+type=knockback
 can_stack=false
 
 [effect]
