@@ -28,7 +28,7 @@ base_damage=melee
 lifespan=33ms
 radius=2
 starting_pos=melee
-post_effect=Knockback,30,1s
+post_effect=Knockback,30,200ms
 type=fixed
 
 [power]
