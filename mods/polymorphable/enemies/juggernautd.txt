@@ -20,9 +20,9 @@ threat_range=16
 turn_delay=400ms
 chance_pursue=20
 power=beacon,132,100
-power=ranged,136,100
 power=melee,138,2
 power=ranged,35,100
+power=ranged,136,100
 cooldown_hit=133ms
 
 accuracy=100
