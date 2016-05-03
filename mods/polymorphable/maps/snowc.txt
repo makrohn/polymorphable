@@ -160,12 +160,14 @@ data=
 
 [event]
 # Teleport to Snow6
-type=on_trigger
+type=event
 location=17,31,3,1
+activate=on_trigger
 intermap=maps/snow6.txt,24,20
 
 [npc]
 # Shade of Elder Thomas
-type=npcs/eldershade.txt
+type=npc
 location=18,19,1,1
+filename=npcs/eldershade.txt
 

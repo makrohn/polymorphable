@@ -1,18 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32">
- <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
-  <image source="tiled_collision.png" width="480" height="32"/>
+<map height="32" orientation="orthogonal" renderorder="right-down" tileheight="32" tilewidth="32" version="1.0" width="32">
+ <tileset firstgid="1" name="tiled_collision" tileheight="32" tilewidth="32">
+  <image height="32" source="tiled_collision.png" width="480" />
  </tileset>
- <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32">
-  <image source="generic_background.png" width="864" height="832"/>
+ <tileset firstgid="16" name="generic_background" tileheight="32" tilewidth="32">
+  <image height="832" source="generic_background.png" width="864" />
  </tileset>
- <tileset firstgid="718" name="small_objects" tilewidth="32" tileheight="64">
-  <image source="small_objects.png" width="671" height="512"/>
+ <tileset firstgid="718" name="small_objects" tileheight="64" tilewidth="32">
+  <image height="512" source="small_objects.png" width="671" />
  </tileset>
- <tileset firstgid="878" name="sewer_objects" tilewidth="32" tileheight="128">
-  <image source="sewer_objects.png" width="672" height="768"/>
+ <tileset firstgid="878" name="sewer_objects" tileheight="128" tilewidth="32">
+  <image height="768" source="sewer_objects.png" width="672" />
  </tileset>
- <layer name="background" width="32" height="32">
+ <layer height="32" name="background" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -48,7 +47,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="fringe" width="32" height="32">
+ <layer height="32" name="fringe" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -84,7 +83,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="object" width="32" height="32">
+ <layer height="32" name="object" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -120,7 +119,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="foreground" width="32" height="32">
+ <layer height="32" name="foreground" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -156,7 +155,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="collision" width="32" height="32">
+ <layer height="32" name="collision" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -192,7 +191,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup name="event"/>
- <objectgroup name="enemy"/>
- <objectgroup name="npc"/>
+ <objectgroup name="event" />
+ <objectgroup name="enemy" />
+ <objectgroup name="npc" />
 </map>

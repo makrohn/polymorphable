@@ -158,20 +158,23 @@ data=
 
 [enemy]
 # Skeleton Mage
-type=skeletonmage
+type=enemy
 location=8,17,1,1
+category=skeletonmage
 
 [enemy]
 # 2 Skeleton
-type=skeleton
+type=enemy
 location=4,17,3,3
+category=skeleton
 level=1,1
 number=2,2
 
 [event]
 # Chest
-type=on_trigger
+type=event
 location=15,13,1,1
+activate=on_trigger
 hotspot=location
 loot=1,fixed,1
 mapmod=object,15,13,206
@@ -180,8 +183,9 @@ tooltip=Chest
 
 [event]
 # Chest
-type=on_trigger
+type=event
 location=23,13,1,1
+activate=on_trigger
 hotspot=location
 loot=2,fixed,1
 mapmod=object,23,13,206
@@ -190,8 +194,9 @@ tooltip=Chest
 
 [event]
 # Chest
-type=on_trigger
+type=event
 location=25,16,1,1
+activate=on_trigger
 hotspot=location
 loot=currency,fixed,5,20
 mapmod=object,25,16,206
@@ -200,8 +205,9 @@ tooltip=Chest
 
 [event]
 # Chest
-type=on_trigger
+type=event
 location=24,21,1,1
+activate=on_trigger
 hotspot=location
 loot=currency,fixed,5,20
 mapmod=object,24,21,206
@@ -210,8 +216,9 @@ tooltip=Chest
 
 [event]
 # Chest
-type=on_trigger
+type=event
 location=19,21,1,1
+activate=on_trigger
 hotspot=location
 loot=1,fixed,1
 mapmod=object,19,21,206
@@ -220,7 +227,8 @@ tooltip=Chest
 
 [event]
 # Teleport to Volcano2
-type=on_trigger
+type=event
 location=3,31,10,1
+activate=on_trigger
 intermap=maps/volcano2.txt,7,1
 

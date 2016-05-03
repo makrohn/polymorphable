@@ -160,35 +160,40 @@ data=
 
 [enemy]
 # 2 Melee Cultists
-type=melee
+type=enemy
 location=3,6,3,3
+category=melee
 level=2,2
 number=2,2
 
 [enemy]
 # 2 Ranged Cultists
-type=ranged
+type=enemy
 location=7,6,5,5
+category=ranged
 level=2,2
 number=2,2
 
 [enemy]
 # 2 Melee cultists
-type=melee
+type=enemy
 location=13,19,2,2
+category=melee
 level=2,2
 number=2,2
 
 [event]
 # Teleport to SnowC
-type=on_trigger
+type=event
 location=24,18,2,2
+activate=on_trigger
 intermap=maps/snowc.txt,18,30
 
 [event]
 # Alert
-type=on_trigger
+type=event
 location=9,3,1,1
+activate=on_trigger
 hotspot=location
 msg=Bring ssssacrifices for Zalkaz here!
 repeat=false
@@ -196,13 +201,15 @@ tooltip=Sign
 
 [event]
 # Teleport to Snow7
-type=on_trigger
+type=event
 location=8,0,1,1
+activate=on_trigger
 intermap=maps/snow7.txt,22,46
 
 [event]
 # Teleport to Snow5
-type=on_trigger
+type=event
 location=0,4,1,1
+activate=on_trigger
 intermap=maps/snow5.txt,30,12
 

@@ -116,45 +116,53 @@ data=
 
 [event]
 # Teleport to Laurelia
-type=on_trigger
+type=event
 location=40,18,2,1
+activate=on_trigger
 intermap=maps/laurelia.txt,120,68
 
 [event]
 # Teleport to Laurelia
-type=on_trigger
+type=event
 location=10,12,2,1
+activate=on_trigger
 intermap=maps/laurelia.txt,105,65
 
 [event]
 # Teleport to Laurelia
-type=on_trigger
+type=event
 location=26,12,2,1
+activate=on_trigger
 intermap=maps/laurelia.txt,113,65
 
 [event]
 # Teleport to Laurelia
-type=on_trigger
+type=event
 location=18,12,2,1
+activate=on_trigger
 intermap=maps/laurelia.txt,109,65
 
 [npc]
 # Combat Dummy
-type=npcs/combat_dummy.txt
+type=npc
 location=4,8,1,1
+filename=npcs/combat_dummy.txt
 
 [npc]
 # Trainee
-type=npcs/trainee.txt
+type=npc
 location=6,8,1,1
+filename=npcs/trainee.txt
 
 [npc]
 # Captain
-type=npcs/captain.txt
+type=npc
 location=36,6,1,1
+filename=npcs/captain.txt
 
 [enemy]
 # Combat Dummy
-type=combat_dummy
+type=enemy
 location=32,8,1,1
+category=combat_dummy
 

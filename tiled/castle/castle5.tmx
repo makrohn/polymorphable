@@ -1,23 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32">
+<map height="32" orientation="orthogonal" renderorder="right-down" tileheight="32" tilewidth="32" version="1.0" width="32">
  <properties>
-  <property name="music" value="music/mysticaltheme.ogg"/>
-  <property name="tileset" value="tilesetdefs/interior.txt"/>
-  <property name="title" value="Castle Hall"/>
+  <property name="music" value="music/mysticaltheme.ogg" />
+  <property name="tileset" value="tilesetdefs/interior.txt" />
+  <property name="title" value="Castle Hall" />
  </properties>
- <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
-  <image source="tiled_collision.png" width="480" height="32"/>
+ <tileset firstgid="1" name="tiled_collision" tileheight="32" tilewidth="32">
+  <image height="32" source="tiled_collision.png" width="480" />
  </tileset>
- <tileset firstgid="16" name="interior_background" tilewidth="32" tileheight="32">
-  <image source="interior_background.png" width="864" height="832"/>
+ <tileset firstgid="16" name="interior_background" tileheight="32" tilewidth="32">
+  <image height="832" source="interior_background.png" width="864" />
  </tileset>
- <tileset firstgid="718" name="intfurniture" tilewidth="32" tileheight="64">
-  <image source="intfurniture.png" width="671" height="512"/>
+ <tileset firstgid="718" name="intfurniture" tileheight="64" tilewidth="32">
+  <image height="512" source="intfurniture.png" width="671" />
  </tileset>
- <tileset firstgid="878" name="interiorbuildings" tilewidth="32" tileheight="128">
-  <image source="interiorbuildings.png" width="672" height="768"/>
+ <tileset firstgid="878" name="interiorbuildings" tileheight="128" tilewidth="32">
+  <image height="768" source="interiorbuildings.png" width="672" />
  </tileset>
- <layer name="background" width="32" height="32">
+ <layer height="32" name="background" width="32">
   <data encoding="csv">
 541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,508,509,509,510,541,541,541,541,541,541,541,541,541,541,541,541,541,
 541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,508,509,509,510,541,541,541,541,541,541,541,541,541,541,541,541,541,
@@ -53,7 +52,7 @@
 541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541
 </data>
  </layer>
- <layer name="object" width="32" height="32">
+ <layer height="32" name="object" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,597,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -89,7 +88,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,594,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="foreground" width="32" height="32">
+ <layer height="32" name="foreground" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -125,7 +124,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="collision" width="32" height="32" visible="0">
+ <layer height="32" name="collision" visible="0" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -162,54 +161,54 @@
 </data>
  </layer>
  <objectgroup name="enemy">
-  <object name="2 ghosts" type="ghost" x="480" y="512" width="128" height="64">
+  <object height="64" name="2 ghosts" type="enemy" width="128" x="480" y="512">
    <properties>
-    <property name="level" value="1,1"/>
-    <property name="number" value="2,2"/>
-   </properties>
+    <property name="level" value="1,1" />
+    <property name="number" value="2,2" />
+   <property name="category" value="ghost" /></properties>
   </object>
-  <object name="2 Venom bats" type="venombat" x="480" y="160" width="128" height="64">
+  <object height="64" name="2 Venom bats" type="enemy" width="128" x="480" y="160">
    <properties>
-    <property name="level" value="3,3"/>
-    <property name="number" value="2,2"/>
-   </properties>
+    <property name="level" value="3,3" />
+    <property name="number" value="2,2" />
+   <property name="category" value="venombat" /></properties>
   </object>
-  <object name="Target" type="ghostbomb" x="480" y="448" width="32" height="32"/>
-  <object name="Target" type="ghostbomb" x="576" y="480" width="32" height="32"/>
-  <object name="Target" type="ghostbomb" x="544" y="480" width="32" height="32"/>
-  <object name="Target" type="ghostbomb" x="512" y="480" width="32" height="32"/>
-  <object name="Target" type="ghostbomb" x="480" y="480" width="32" height="32"/>
-  <object name="Target" type="ghostbomb" x="576" y="448" width="32" height="32"/>
-  <object name="Target" type="ghostbomb" x="544" y="448" width="32" height="32"/>
-  <object name="Target" type="ghostbomb" x="512" y="448" width="32" height="32"/>
+  <object height="32" name="Target" type="enemy" width="32" x="480" y="448"><properties><property name="category" value="ghostbomb" /></properties></object>
+  <object height="32" name="Target" type="enemy" width="32" x="576" y="480"><properties><property name="category" value="ghostbomb" /></properties></object>
+  <object height="32" name="Target" type="enemy" width="32" x="544" y="480"><properties><property name="category" value="ghostbomb" /></properties></object>
+  <object height="32" name="Target" type="enemy" width="32" x="512" y="480"><properties><property name="category" value="ghostbomb" /></properties></object>
+  <object height="32" name="Target" type="enemy" width="32" x="480" y="480"><properties><property name="category" value="ghostbomb" /></properties></object>
+  <object height="32" name="Target" type="enemy" width="32" x="576" y="448"><properties><property name="category" value="ghostbomb" /></properties></object>
+  <object height="32" name="Target" type="enemy" width="32" x="544" y="448"><properties><property name="category" value="ghostbomb" /></properties></object>
+  <object height="32" name="Target" type="enemy" width="32" x="512" y="448"><properties><property name="category" value="ghostbomb" /></properties></object>
  </objectgroup>
  <objectgroup name="event">
-  <object name="Teleport to Castle3" type="on_trigger" x="992" y="800" width="32" height="128">
+  <object height="128" name="Teleport to Castle3" type="event" width="32" x="992" y="800">
    <properties>
-    <property name="intermap" value="maps/castle3.txt,1,22"/>
-   </properties>
+    <property name="intermap" value="maps/castle3.txt,1,22" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Teleport to Castle6" type="on_trigger" x="480" y="0" width="128" height="32">
+  <object height="32" name="Teleport to Castle6" type="event" width="128" x="480" y="0">
    <properties>
-    <property name="intermap" value="maps/castle6.txt,14,30"/>
-   </properties>
+    <property name="intermap" value="maps/castle6.txt,14,30" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Teleport to CastleC" type="on_trigger" x="0" y="288" width="32" height="128">
+  <object height="128" name="Teleport to CastleC" type="event" width="32" x="0" y="288">
    <properties>
-    <property name="intermap" value="maps/castlec.txt,30,12"/>
-   </properties>
+    <property name="intermap" value="maps/castlec.txt,30,12" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Alert" type="on_trigger" x="864" y="800" width="32" height="128">
+  <object height="128" name="Alert" type="event" width="32" x="864" y="800">
    <properties>
-    <property name="msg" value="Violent bombs ahead!"/>
-    <property name="repeat" value="false"/>
-   </properties>
+    <property name="msg" value="Violent bombs ahead!" />
+    <property name="repeat" value="false" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Alert" type="on_trigger" x="608" y="800" width="32" height="128">
+  <object height="128" name="Alert" type="event" width="32" x="608" y="800">
    <properties>
-    <property name="msg" value="Destroy them from afar to defuse them!"/>
-    <property name="repeat" value="false"/>
-   </properties>
+    <property name="msg" value="Destroy them from afar to defuse them!" />
+    <property name="repeat" value="false" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
  </objectgroup>
 </map>

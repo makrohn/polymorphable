@@ -124,34 +124,40 @@ data=
 
 [enemy]
 # Ghost
-type=ghost
+type=enemy
 location=21,12,1,1
+category=ghost
 
 [enemy]
 # Ghost
-type=ghost
+type=enemy
 location=21,18,1,1
+category=ghost
 
 [enemy]
 # Ghost
-type=ghost
+type=enemy
 location=5,12,1,1
+category=ghost
 
 [enemy]
 # Ghost
-type=ghost
+type=enemy
 location=5,18,1,1
+category=ghost
 
 [event]
 # Teleport to Castle2
-type=on_trigger
+type=event
 location=12,31,3,1
+activate=on_trigger
 intermap=maps/castle2.txt,25,1
 
 [event]
 # Chest
-type=on_trigger
+type=event
 location=13,14,1,1
+activate=on_trigger
 hotspot=location
 loot=currency,fixed,15,35
 mapmod=object,13,14,206
@@ -160,8 +166,9 @@ tooltip=Chest
 
 [event]
 # Chest
-type=on_trigger
+type=event
 location=4,11,1,1
+activate=on_trigger
 hotspot=location
 loot=1,fixed,1
 mapmod=object,4,11,206
@@ -170,8 +177,9 @@ tooltip=Chest
 
 [event]
 # Chest
-type=on_trigger
+type=event
 location=22,19,1,1
+activate=on_trigger
 hotspot=location
 loot=1,fixed,1
 mapmod=object,22,19,206
@@ -180,8 +188,9 @@ tooltip=Chest
 
 [event]
 # Chest
-type=on_trigger
+type=event
 location=4,19,1,1
+activate=on_trigger
 hotspot=location
 loot=2,fixed,1
 mapmod=object,4,19,206
@@ -190,8 +199,9 @@ tooltip=Chest
 
 [event]
 # Chest
-type=on_trigger
+type=event
 location=22,11,1,1
+activate=on_trigger
 hotspot=location
 loot=2,fixed,1
 mapmod=object,22,11,206

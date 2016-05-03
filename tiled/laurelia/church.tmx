@@ -1,23 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="32" tilewidth="32" tileheight="32">
+<map height="32" orientation="orthogonal" renderorder="right-down" tileheight="32" tilewidth="32" version="1.0" width="40">
  <properties>
-  <property name="music" value="music/calmtown.ogg"/>
-  <property name="tileset" value="tilesetdefs/interior.txt"/>
-  <property name="title" value="Church"/>
+  <property name="music" value="music/calmtown.ogg" />
+  <property name="tileset" value="tilesetdefs/interior.txt" />
+  <property name="title" value="Church" />
  </properties>
- <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
-  <image source="tiled_collision.png" width="480" height="32"/>
+ <tileset firstgid="1" name="tiled_collision" tileheight="32" tilewidth="32">
+  <image height="32" source="tiled_collision.png" width="480" />
  </tileset>
- <tileset firstgid="16" name="interior_background" tilewidth="32" tileheight="32">
-  <image source="interior_background.png" width="864" height="832"/>
+ <tileset firstgid="16" name="interior_background" tileheight="32" tilewidth="32">
+  <image height="832" source="interior_background.png" width="864" />
  </tileset>
- <tileset firstgid="718" name="intfurniture" tilewidth="32" tileheight="64">
-  <image source="intfurniture.png" width="671" height="512"/>
+ <tileset firstgid="718" name="intfurniture" tileheight="64" tilewidth="32">
+  <image height="512" source="intfurniture.png" width="671" />
  </tileset>
- <tileset firstgid="878" name="interiorbuildings" tilewidth="32" tileheight="128">
-  <image source="interiorbuildings.png" width="672" height="768"/>
+ <tileset firstgid="878" name="interiorbuildings" tileheight="128" tilewidth="32">
+  <image height="768" source="interiorbuildings.png" width="672" />
  </tileset>
- <layer name="background" width="40" height="32">
+ <layer height="32" name="background" width="40">
   <data encoding="csv">
 541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,489,489,489,489,489,489,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,
 541,541,597,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,489,489,541,541,541,541,541,541,541,541,595,541,541,541,597,541,541,541,541,541,541,
@@ -53,7 +52,7 @@
 541,541,541,541,541,595,541,541,541,541,541,541,541,541,489,489,489,489,489,489,489,489,489,489,489,489,489,489,489,489,489,489,489,489,489,489,489,489,489,489
 </data>
  </layer>
- <layer name="fringe" width="40" height="32">
+ <layer height="32" name="fringe" width="40">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,542,0,0,0,0,540,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -89,7 +88,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,460,568,569,0,0,0,0,0,0,567,568,568,568,568,568,568,568,568,569,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="object" width="40" height="32">
+ <layer height="32" name="object" width="40">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -125,7 +124,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="collision" width="40" height="32">
+ <layer height="32" name="collision" width="40">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -162,18 +161,18 @@
 </data>
  </layer>
  <objectgroup name="npc">
-  <object name="Deacon" type="npcs/deacon.txt" x="256" y="416" width="32" height="32"/>
+  <object height="32" name="Deacon" type="npc" width="32" x="256" y="416"><properties><property name="filename" value="npcs/deacon.txt" /></properties></object>
  </objectgroup>
  <objectgroup name="event">
-  <object name="Teleport to Graveyard" type="on_trigger" x="608" y="96" width="64" height="32">
+  <object height="32" name="Teleport to Graveyard" type="event" width="64" x="608" y="96">
    <properties>
-    <property name="intermap" value="maps/laurelia.txt,35,63"/>
-   </properties>
+    <property name="intermap" value="maps/laurelia.txt,35,63" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Teleport to road" type="on_trigger" x="544" y="800" width="192" height="32">
+  <object height="32" name="Teleport to road" type="event" width="192" x="544" y="800">
    <properties>
-    <property name="intermap" value="maps/laurelia.txt,35,77"/>
-   </properties>
+    <property name="intermap" value="maps/laurelia.txt,35,77" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
  </objectgroup>
 </map>

@@ -198,24 +198,28 @@ data=
 
 [enemy]
 # Ghost
-type=ghost
+type=enemy
 location=24,8,1,1
+category=ghost
 
 [enemy]
 # Ghost
-type=ghost
+type=enemy
 location=23,17,1,1
+category=ghost
 
 [event]
 # Teleport to Castle Path
-type=on_trigger
+type=event
 location=31,11,1,5
+activate=on_trigger
 intermap=maps/castlepath.txt,1,19
 
 [event]
 # Fire Trap
-type=on_trigger
+type=event
 location=14,3,1,1
+activate=on_trigger
 power=33
 power_damage=100,100
 power_path=0,0,14,3
@@ -223,8 +227,9 @@ repeat=false
 
 [event]
 # Fire Trap
-type=on_trigger
+type=event
 location=15,4,1,1
+activate=on_trigger
 power=33
 power_damage=100,100
 power_path=0,0,15,4
@@ -232,8 +237,9 @@ repeat=false
 
 [event]
 # Fire Trap
-type=on_trigger
+type=event
 location=14,4,1,1
+activate=on_trigger
 power=33
 power_damage=100,100
 power_path=0,0,14,4
@@ -241,8 +247,9 @@ repeat=false
 
 [event]
 # Fire Trap
-type=on_trigger
+type=event
 location=13,4,1,1
+activate=on_trigger
 power=33
 power_damage=100,100
 power_path=0,0,13,4
@@ -250,8 +257,9 @@ repeat=false
 
 [event]
 # Fire Trap
-type=on_trigger
+type=event
 location=15,3,1,1
+activate=on_trigger
 power=33
 power_damage=100,100
 power_path=0,0,15,3
@@ -259,8 +267,9 @@ repeat=false
 
 [event]
 # Fire Trap
-type=on_trigger
+type=event
 location=13,3,1,1
+activate=on_trigger
 power=33
 power_damage=100,100
 power_path=0,0,13,3
@@ -268,12 +277,14 @@ repeat=false
 
 [event]
 # Teleport to Castle 2
-type=on_trigger
+type=event
 location=14,2,1,1
+activate=on_trigger
 intermap=maps/castle2.txt,13,29
 
 [npc]
 # Gaspar the Ghost
-type=npcs/ghost.txt
+type=npc
 location=15,7,1,1
+filename=npcs/ghost.txt
 

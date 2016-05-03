@@ -1,23 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32">
+<map height="32" orientation="orthogonal" renderorder="right-down" tileheight="32" tilewidth="32" version="1.0" width="32">
  <properties>
-  <property name="music" value="music/winds_of_stories.ogg"/>
-  <property name="tileset" value="tilesetdefs/sewer.txt"/>
-  <property name="title" value="Hidden Waterway"/>
+  <property name="music" value="music/winds_of_stories.ogg" />
+  <property name="tileset" value="tilesetdefs/sewer.txt" />
+  <property name="title" value="Hidden Waterway" />
  </properties>
- <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
-  <image source="tiled_collision.png" width="480" height="32"/>
+ <tileset firstgid="1" name="tiled_collision" tileheight="32" tilewidth="32">
+  <image height="32" source="tiled_collision.png" width="480" />
  </tileset>
- <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32">
-  <image source="generic_background.png" width="864" height="832"/>
+ <tileset firstgid="16" name="generic_background" tileheight="32" tilewidth="32">
+  <image height="832" source="generic_background.png" width="864" />
  </tileset>
- <tileset firstgid="718" name="small_objects" tilewidth="32" tileheight="64">
-  <image source="small_objects.png" width="671" height="512"/>
+ <tileset firstgid="718" name="small_objects" tileheight="64" tilewidth="32">
+  <image height="512" source="small_objects.png" width="671" />
  </tileset>
- <tileset firstgid="878" name="sewer_objects" tilewidth="32" tileheight="128">
-  <image source="sewer_objects.png" width="672" height="768"/>
+ <tileset firstgid="878" name="sewer_objects" tileheight="128" tilewidth="32">
+  <image height="768" source="sewer_objects.png" width="672" />
  </tileset>
- <layer name="background" width="32" height="32">
+ <layer height="32" name="background" width="32">
   <data encoding="csv">
 158,158,158,158,158,158,341,341,341,341,341,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,
 158,158,158,158,158,158,341,341,341,341,341,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,
@@ -53,7 +52,7 @@
 158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158
 </data>
  </layer>
- <layer name="fringe" width="32" height="32">
+ <layer height="32" name="fringe" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -89,7 +88,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="object" width="32" height="32">
+ <layer height="32" name="object" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -125,7 +124,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,885,0,883,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="foreground" width="32" height="32">
+ <layer height="32" name="foreground" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -161,7 +160,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="collision" width="32" height="32">
+ <layer height="32" name="collision" width="32">
   <data encoding="csv">
 0,0,0,0,0,1,3,3,3,3,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,1,4,4,4,4,4,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -198,73 +197,73 @@
 </data>
  </layer>
  <objectgroup name="event">
-  <object name="Switch" type="on_trigger" x="896" y="416" width="32" height="32">
+  <object height="32" name="Switch" type="event" width="32" x="896" y="416">
    <properties>
-    <property name="hotspot" value="location"/>
-    <property name="msg" value="There's a key-shaped hole in this rock."/>
-    <property name="requires_not_status" value="switch_key"/>
-    <property name="tooltip" value="Strange Rock"/>
-   </properties>
+    <property name="hotspot" value="location" />
+    <property name="msg" value="There's a key-shaped hole in this rock." />
+    <property name="requires_not_status" value="switch_key" />
+    <property name="tooltip" value="Strange Rock" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Switch" type="on_trigger" x="896" y="416" width="32" height="32">
+  <object height="32" name="Switch" type="event" width="32" x="896" y="416">
    <properties>
-    <property name="hotspot" value="location"/>
-    <property name="mapmod" value="object,25,26,890;object,26,26,887;object,27,26,887;object,28,26,889;collision,26,24,1;collision,27,24,1;object,14,12,0;object,15,12,0;collision,15,12,0"/>
-    <property name="msg" value="There's a key-shaped hole in this rock."/>
-    <property name="repeat" value="false"/>
-    <property name="requires_status" value="switch_key"/>
-    <property name="tooltip" value="Strange Rock"/>
-   </properties>
+    <property name="hotspot" value="location" />
+    <property name="mapmod" value="object,25,26,890;object,26,26,887;object,27,26,887;object,28,26,889;collision,26,24,1;collision,27,24,1;object,14,12,0;object,15,12,0;collision,15,12,0" />
+    <property name="msg" value="There's a key-shaped hole in this rock." />
+    <property name="repeat" value="false" />
+    <property name="requires_status" value="switch_key" />
+    <property name="tooltip" value="Strange Rock" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Teleport to Basement3" type="on_trigger" x="832" y="768" width="64" height="32">
+  <object height="32" name="Teleport to Basement3" type="event" width="64" x="832" y="768">
    <properties>
-    <property name="intermap" value="maps/basement3.txt,8,3"/>
-   </properties>
+    <property name="intermap" value="maps/basement3.txt,8,3" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Teleport to Basement6" type="on_trigger" x="0" y="224" width="32" height="96">
+  <object height="96" name="Teleport to Basement6" type="event" width="32" x="0" y="224">
    <properties>
-    <property name="intermap" value="maps/basement6.txt,30,28"/>
-   </properties>
+    <property name="intermap" value="maps/basement6.txt,30,28" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Switch" type="on_trigger" x="928" y="96" width="32" height="32">
+  <object height="32" name="Switch" type="event" width="32" x="928" y="96">
    <properties>
-    <property name="hotspot" value="location"/>
-    <property name="mapmod" value="object,25,26,885;object,26,26,0;object,27,26,0;object,28,26,883;collision,26,24,0;collision,27,24,0;object,14,12,0;object,15,12,0;collision,14,12,0;collision,15,12,0"/>
-    <property name="msg" value="There's a key-shaped hole in this rock."/>
-    <property name="repeat" value="false"/>
-    <property name="requires_status" value="switch_key"/>
-    <property name="tooltip" value="Strange Rock"/>
-   </properties>
+    <property name="hotspot" value="location" />
+    <property name="mapmod" value="object,25,26,885;object,26,26,0;object,27,26,0;object,28,26,883;collision,26,24,0;collision,27,24,0;object,14,12,0;object,15,12,0;collision,14,12,0;collision,15,12,0" />
+    <property name="msg" value="There's a key-shaped hole in this rock." />
+    <property name="repeat" value="false" />
+    <property name="requires_status" value="switch_key" />
+    <property name="tooltip" value="Strange Rock" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Carrot" type="on_trigger" x="928" y="256" width="32" height="32">
+  <object height="32" name="Carrot" type="event" width="32" x="928" y="256">
    <properties>
-    <property name="hotspot" value="location"/>
-    <property name="loot" value="1,fixed,2"/>
-    <property name="mapmod" value="object,29,8,0;collision,29,8,0"/>
-    <property name="repeat" value="false"/>
-    <property name="tooltip" value="Carrot"/>
-   </properties>
+    <property name="hotspot" value="location" />
+    <property name="loot" value="1,fixed,2" />
+    <property name="mapmod" value="object,29,8,0;collision,29,8,0" />
+    <property name="repeat" value="false" />
+    <property name="tooltip" value="Carrot" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
  </objectgroup>
  <objectgroup name="enemy">
-  <object name="3 Beetles" type="beetle" x="704" y="448" width="192" height="96">
+  <object height="96" name="3 Beetles" type="enemy" width="192" x="704" y="448">
    <properties>
-    <property name="level" value="1,1"/>
-    <property name="number" value="3,3"/>
-   </properties>
+    <property name="level" value="1,1" />
+    <property name="number" value="3,3" />
+   <property name="category" value="beetle" /></properties>
   </object>
-  <object name="2 Fireskeletons" type="fireskeleton" x="544" y="128" width="160" height="160">
+  <object height="160" name="2 Fireskeletons" type="enemy" width="160" x="544" y="128">
    <properties>
-    <property name="level" value="3,3"/>
-    <property name="number" value="2,2"/>
-   </properties>
+    <property name="level" value="3,3" />
+    <property name="number" value="2,2" />
+   <property name="category" value="fireskeleton" /></properties>
   </object>
-  <object name="2 Firebats" type="firebat" x="64" y="96" width="96" height="160">
+  <object height="160" name="2 Firebats" type="enemy" width="96" x="64" y="96">
    <properties>
-    <property name="level" value="2,2"/>
-    <property name="number" value="2,2"/>
-   </properties>
+    <property name="level" value="2,2" />
+    <property name="number" value="2,2" />
+   <property name="category" value="firebat" /></properties>
   </object>
  </objectgroup>
- <objectgroup name="npc"/>
+ <objectgroup name="npc" />
 </map>

@@ -91,7 +91,8 @@ data=
 
 [event]
 # Teleport to Market
-type=on_trigger
+type=event
 location=3,7,1,1
+activate=on_trigger
 intermap=maps/market.txt,3,7
 

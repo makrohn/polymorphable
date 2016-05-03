@@ -1,17 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32">
+<map height="32" orientation="orthogonal" renderorder="right-down" tileheight="32" tilewidth="32" version="1.0" width="32">
  <properties>
-  <property name="music" value="music/evil_temple.ogg"/>
-  <property name="tileset" value="tilesetdefs/volcano.txt"/>
-  <property name="title" value="Volcano"/>
+  <property name="music" value="music/evil_temple.ogg" />
+  <property name="tileset" value="tilesetdefs/volcano.txt" />
+  <property name="title" value="Volcano" />
  </properties>
- <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
-  <image source="tiled_collision.png" width="480" height="32"/>
+ <tileset firstgid="1" name="tiled_collision" tileheight="32" tilewidth="32">
+  <image height="32" source="tiled_collision.png" width="480" />
  </tileset>
- <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32">
-  <image source="generic_background.png" width="864" height="832"/>
+ <tileset firstgid="16" name="generic_background" tileheight="32" tilewidth="32">
+  <image height="832" source="generic_background.png" width="864" />
  </tileset>
- <layer name="background" width="32" height="32">
+ <layer height="32" name="background" width="32">
   <data encoding="csv">
 110,110,110,110,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,110,110,110,110,110,
 110,110,110,110,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,107,110,110,110,110,
@@ -47,7 +46,7 @@
 110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110
 </data>
  </layer>
- <layer name="fringe" width="32" height="32">
+ <layer height="32" name="fringe" width="32">
   <data encoding="csv">
 0,0,0,0,111,0,0,0,0,0,0,0,0,0,0,0,136,137,137,137,137,137,137,137,137,137,30,0,0,0,0,0,
 0,0,0,0,111,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,136,30,0,0,0,0,
@@ -83,7 +82,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="object" width="32" height="32">
+ <layer height="32" name="object" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,243,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -119,7 +118,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="collision" width="32" height="32">
+ <layer height="32" name="collision" width="32">
   <data encoding="csv">
 0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,
 0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,
@@ -156,44 +155,44 @@
 </data>
  </layer>
  <objectgroup name="event">
-  <object name="Teleport to Volcano1" type="on_trigger" x="992" y="800" width="32" height="160">
+  <object height="160" name="Teleport to Volcano1" type="event" width="32" x="992" y="800">
    <properties>
-    <property name="intermap" value="maps/volcano1.txt,1,16"/>
-   </properties>
+    <property name="intermap" value="maps/volcano1.txt,1,16" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Forge" type="on_trigger" x="128" y="608" width="32" height="32">
+  <object height="32" name="Forge" type="event" width="32" x="128" y="608">
    <properties>
-    <property name="hotspot" value="location"/>
-    <property name="loot" value="198,fixed,1"/>
-    <property name="repeat" value="false"/>
-    <property name="requires_not_status" value="skelkey"/>
-    <property name="tooltip" value="Anvil"/>
-   </properties>
+    <property name="hotspot" value="location" />
+    <property name="loot" value="198,fixed,1" />
+    <property name="repeat" value="false" />
+    <property name="requires_not_status" value="skelkey" />
+    <property name="tooltip" value="Anvil" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Teleport to VolcanoA" type="on_trigger" x="160" y="0" width="352" height="32">
+  <object height="32" name="Teleport to VolcanoA" type="event" width="352" x="160" y="0">
    <properties>
-    <property name="intermap" value="maps/volcanoa.txt,5,30"/>
-   </properties>
+    <property name="intermap" value="maps/volcanoa.txt,5,30" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
  </objectgroup>
  <objectgroup name="enemy">
-  <object name="Skeleton with Key" type="skeleton" x="160" y="608" width="32" height="32">
+  <object height="32" name="Skeleton with Key" type="enemy" width="32" x="160" y="608">
    <properties>
-    <property name="level" value="1,1"/>
-    <property name="number" value="1,1"/>
-   </properties>
+    <property name="level" value="1,1" />
+    <property name="number" value="1,1" />
+   <property name="category" value="skeleton" /></properties>
   </object>
-  <object name="Skeleton Knight" type="skeletonknight" x="704" y="64" width="32" height="32">
+  <object height="32" name="Skeleton Knight" type="enemy" width="32" x="704" y="64">
    <properties>
-    <property name="level" value="2,2"/>
-    <property name="number" value="1,1"/>
-   </properties>
+    <property name="level" value="2,2" />
+    <property name="number" value="1,1" />
+   <property name="category" value="skeletonknight" /></properties>
   </object>
-  <object name="2 firebats" type="bat" x="224" y="544" width="128" height="160">
+  <object height="160" name="2 firebats" type="enemy" width="128" x="224" y="544">
    <properties>
-    <property name="level" value="2,2"/>
-    <property name="number" value="2,2"/>
-   </properties>
+    <property name="level" value="2,2" />
+    <property name="number" value="2,2" />
+   <property name="category" value="bat" /></properties>
   </object>
  </objectgroup>
 </map>

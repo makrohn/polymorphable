@@ -160,27 +160,31 @@ data=
 
 [enemy]
 # Cultist
-type=cultist
+type=enemy
 location=7,11,1,1
+category=cultist
 level=2,2
 number=1,1
 
 [event]
 # Teleport to Laurelia
-type=on_trigger
+type=event
 location=0,0,7,1
+activate=on_trigger
 intermap=maps/laurelia.txt,74,142
 
 [event]
 # Teleport to Snow2
-type=on_trigger
+type=event
 location=31,9,1,1
+activate=on_trigger
 intermap=maps/snow2.txt,1,9
 
 [event]
 # Require Juggernaut Talisman
-type=on_trigger
+type=event
 location=24,14,1,1
+activate=on_trigger
 intramap=24,24
 msg=You need the Juggernaut Talisman to proceed!
 requires_not_status=fulljugg

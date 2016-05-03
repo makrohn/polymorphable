@@ -1,23 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32">
+<map height="32" orientation="orthogonal" renderorder="right-down" tileheight="32" tilewidth="32" version="1.0" width="32">
  <properties>
-  <property name="music" value="music/mysticaltheme.ogg"/>
-  <property name="tileset" value="tilesetdefs/interior.txt"/>
-  <property name="title" value="Castle Hall"/>
+  <property name="music" value="music/mysticaltheme.ogg" />
+  <property name="tileset" value="tilesetdefs/interior.txt" />
+  <property name="title" value="Castle Hall" />
  </properties>
- <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
-  <image source="tiled_collision.png" width="480" height="32"/>
+ <tileset firstgid="1" name="tiled_collision" tileheight="32" tilewidth="32">
+  <image height="32" source="tiled_collision.png" width="480" />
  </tileset>
- <tileset firstgid="16" name="interior_background" tilewidth="32" tileheight="32">
-  <image source="interior_background.png" width="864" height="832"/>
+ <tileset firstgid="16" name="interior_background" tileheight="32" tilewidth="32">
+  <image height="832" source="interior_background.png" width="864" />
  </tileset>
- <tileset firstgid="718" name="intfurniture" tilewidth="32" tileheight="64">
-  <image source="intfurniture.png" width="671" height="512"/>
+ <tileset firstgid="718" name="intfurniture" tileheight="64" tilewidth="32">
+  <image height="512" source="intfurniture.png" width="671" />
  </tileset>
- <tileset firstgid="878" name="interiorbuildings" tilewidth="32" tileheight="128">
-  <image source="interiorbuildings.png" width="672" height="768"/>
+ <tileset firstgid="878" name="interiorbuildings" tileheight="128" tilewidth="32">
+  <image height="768" source="interiorbuildings.png" width="672" />
  </tileset>
- <layer name="background" width="32" height="32">
+ <layer height="32" name="background" width="32">
   <data encoding="csv">
 541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,
 541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,
@@ -53,7 +52,7 @@
 541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541
 </data>
  </layer>
- <layer name="object" width="32" height="32">
+ <layer height="32" name="object" width="32">
   <data encoding="csv">
 541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,
 541,541,597,541,541,541,541,541,541,541,0,0,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,
@@ -89,7 +88,7 @@
 541,541,541,541,541,541,541,541,597,541,541,541,541,541,541,594,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541
 </data>
  </layer>
- <layer name="foreground" width="32" height="32">
+ <layer height="32" name="foreground" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -125,7 +124,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="collision" width="32" height="32" visible="0">
+ <layer height="32" name="collision" visible="0" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -162,37 +161,37 @@
 </data>
  </layer>
  <objectgroup name="enemy">
-  <object name="3 snakes" type="snake" x="384" y="640" width="160" height="96">
+  <object height="96" name="3 snakes" type="enemy" width="160" x="384" y="640">
    <properties>
-    <property name="level" value="1,1"/>
-    <property name="number" value="3,3"/>
-   </properties>
+    <property name="level" value="1,1" />
+    <property name="number" value="3,3" />
+   <property name="category" value="snake" /></properties>
   </object>
  </objectgroup>
  <objectgroup name="event">
-  <object name="Fake chest" type="on_trigger" x="448" y="416" width="32" height="32">
+  <object height="32" name="Fake chest" type="event" width="32" x="448" y="416">
    <properties>
-    <property name="hotspot" value="location"/>
-    <property name="mapmod" value="object,14,13,206"/>
-    <property name="repeat" value="false"/>
-    <property name="spawn" value="ghost,14"/>
-    <property name="tooltip" value="Chest"/>
-   </properties>
+    <property name="hotspot" value="location" />
+    <property name="mapmod" value="object,14,13,206" />
+    <property name="repeat" value="false" />
+    <property name="spawn" value="ghost,14" />
+    <property name="tooltip" value="Chest" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Teleport to Castle2" type="on_trigger" x="992" y="704" width="32" height="128">
+  <object height="128" name="Teleport to Castle2" type="event" width="32" x="992" y="704">
    <properties>
-    <property name="intermap" value="maps/castle2.txt,3,20"/>
-   </properties>
+    <property name="intermap" value="maps/castle2.txt,3,20" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Teleport to Castle5" type="on_trigger" x="0" y="704" width="32" height="128">
+  <object height="128" name="Teleport to Castle5" type="event" width="32" x="0" y="704">
    <properties>
-    <property name="intermap" value="maps/castle5.txt,30,25"/>
-   </properties>
+    <property name="intermap" value="maps/castle5.txt,30,25" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Teleport to Castle4" type="on_trigger" x="448" y="320" width="32" height="32">
+  <object height="32" name="Teleport to Castle4" type="event" width="32" x="448" y="320">
    <properties>
-    <property name="intermap" value="maps/castle4.txt,15,30"/>
-   </properties>
+    <property name="intermap" value="maps/castle4.txt,15,30" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
  </objectgroup>
 </map>

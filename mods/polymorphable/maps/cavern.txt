@@ -432,8 +432,9 @@ data=
 
 [event]
 # Bat Talisman Chest
-type=on_trigger
+type=event
 location=57,47,1,1
+activate=on_trigger
 hotspot=location
 loot=200,fixed,1
 mapmod=object,57,47,206
@@ -444,8 +445,9 @@ tooltip=Chest
 
 [event]
 # Chest
-type=on_trigger
+type=event
 location=94,62,1,1
+activate=on_trigger
 hotspot=location
 loot=currency,fixed,5,15
 mapmod=object,94,62,206
@@ -454,8 +456,9 @@ tooltip=Chest
 
 [event]
 # Chest
-type=on_trigger
+type=event
 location=88,42,1,1
+activate=on_trigger
 hotspot=location
 loot=currency,fixed,2,10
 mapmod=object,88,42,206
@@ -464,8 +467,9 @@ tooltip=Chest
 
 [event]
 # Chest
-type=on_trigger
+type=event
 location=86,41,1,1
+activate=on_trigger
 hotspot=location
 loot=currency,fixed,2,10
 mapmod=object,86,41,206
@@ -474,8 +478,9 @@ tooltip=Chest
 
 [event]
 # Chest
-type=on_trigger
+type=event
 location=79,41,1,1
+activate=on_trigger
 hotspot=location
 loot=currency,fixed,2,10
 mapmod=object,79,41,206
@@ -484,8 +489,9 @@ tooltip=Chest
 
 [event]
 # Carrots
-type=on_trigger
+type=event
 location=97,73,1,1
+activate=on_trigger
 hotspot=location
 loot=1,fixed,2
 mapmod=object,97,73,0;collision,97,73,0
@@ -494,8 +500,9 @@ tooltip=Carrots
 
 [event]
 # Carrots
-type=on_trigger
+type=event
 location=95,85,1,1
+activate=on_trigger
 hotspot=location
 loot=1,fixed,2
 mapmod=object,95,85,0;collision,95,85,0
@@ -504,22 +511,25 @@ tooltip=Carrots
 
 [event]
 # Teleport to Glade
-type=on_trigger
+type=event
 location=62,36,1,2
+activate=on_trigger
 intermap=maps/glade.txt,15,14
 set_status=cavernexplored
 
 [event]
 # Block Passage
-type=on_load
+type=event
 location=75,71,4,2
+activate=on_load
 mapmod=object,75,72,879;object,76,72,879;object,77,72,879;object,78,72,879;object,75,71,890;object,76,71,887;object,77,71,887;object,78,71,889;collision,75,72,1;collision,76,72,1;collision,77,72,1;collision,78,72,1
 requires_not_status=evil_unleashed
 
 [event]
 # Unblock passage
-type=on_trigger
+type=event
 location=76,75,2,1
+activate=on_trigger
 hotspot=location
 npc=npcs/gravestone.txt
 repeat=true
@@ -527,8 +537,9 @@ tooltip=Unmarked Grave
 
 [event]
 # Carrots
-type=on_trigger
+type=event
 location=75,97,1,1
+activate=on_trigger
 hotspot=location
 loot=1,fixed,2
 mapmod=object,75,97,0;collision,75,97,0
@@ -537,62 +548,71 @@ tooltip=Carrots
 
 [npc]
 # Gravestone
-type=npcs/gravestone.txt
+type=npc
 location=1,1,1,1
+filename=npcs/gravestone.txt
 
 [enemy]
 # 2 Snakes
-type=snake
+type=enemy
 location=44,41,8,4
+category=snake
 level=1,3
 number=2,2
 
 [enemy]
 # 2 Bats
-type=bat
+type=enemy
 location=44,47,8,7
+category=bat
 level=1,1
 number=2,2
 
 [enemy]
 # 4-5 Bats
-type=bat
+type=enemy
 location=77,42,12,8
+category=bat
 level=1,1
 number=4,5
 
 [enemy]
 # 1 snake
-type=snake
+type=enemy
 location=91,63,5,4
+category=snake
 level=1,1
 number=1,1
 
 [enemy]
 # 1 Bat
-type=bat
+type=enemy
 location=62,52,10,6
+category=bat
 level=1,1
 number=1,1
 
 [enemy]
 # 2 bats
-type=bat
+type=enemy
 location=75,76,3,2
+category=bat
 level=1,1
 number=2,2
 
 [enemy]
 # 2 bats
-type=bat
+type=enemy
 location=83,85,12,5
+category=bat
 level=1,1
 number=2,2
 
 [enemy]
 # 1 bat
-type=bat
+type=enemy
 location=76,95,4,3
+category=bat
 level=1,1
 number=1,1
 

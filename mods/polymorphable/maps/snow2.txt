@@ -160,33 +160,38 @@ data=
 
 [enemy]
 # 2 Skeletons
-type=skeleton
+type=enemy
 location=8,5,5,9
+category=skeleton
 level=1,1
 number=2,2
 
 [enemy]
 # 2 Skeleton Mages
-type=skeletonmage
+type=enemy
 location=22,5,6,10
+category=skeletonmage
 level=2,2
 number=2,2,
 
 [event]
 # Teleport to Snow1
-type=on_trigger
+type=event
 location=0,9,1,1
+activate=on_trigger
 intermap=maps/snow1.txt,30,9
 
 [event]
 # Teleport to Snow3
-type=on_trigger
+type=event
 location=8,31,1,1
+activate=on_trigger
 intermap=maps/snow3.txt,6,1
 
 [event]
 # Teleport to Snow3
-type=on_trigger
+type=event
 location=22,31,1,1
+activate=on_trigger
 intermap=maps/snow3.txt,20,1
 

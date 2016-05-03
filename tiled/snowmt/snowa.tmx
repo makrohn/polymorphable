@@ -1,70 +1,69 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32">
+<map height="32" orientation="orthogonal" renderorder="right-down" tileheight="32" tilewidth="32" version="1.0" width="32">
  <properties>
-  <property name="music" value="music/snow_about_a_castle.ogg"/>
-  <property name="tileset" value="tilesetdefs/snowmt.txt"/>
-  <property name="title" value="Mountain Mine"/>
+  <property name="music" value="music/snow_about_a_castle.ogg" />
+  <property name="tileset" value="tilesetdefs/snowmt.txt" />
+  <property name="title" value="Mountain Mine" />
  </properties>
- <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
-  <image source="tiled_collision.png" width="480" height="32"/>
+ <tileset firstgid="1" name="tiled_collision" tileheight="32" tilewidth="32">
+  <image height="32" source="tiled_collision.png" width="480" />
  </tileset>
- <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32">
-  <image source="generic_background.png" width="864" height="832"/>
+ <tileset firstgid="16" name="generic_background" tileheight="32" tilewidth="32">
+  <image height="832" source="generic_background.png" width="864" />
  </tileset>
- <tileset firstgid="718" name="small_objects" tilewidth="32" tileheight="64">
-  <image source="small_objects.png" width="671" height="512"/>
+ <tileset firstgid="718" name="small_objects" tileheight="64" tilewidth="32">
+  <image height="512" source="small_objects.png" width="671" />
  </tileset>
- <tileset firstgid="878" name="outside_objects" tilewidth="32" tileheight="128">
-  <image source="outside_objects.png" width="672" height="768"/>
+ <tileset firstgid="878" name="outside_objects" tileheight="128" tilewidth="32">
+  <image height="768" source="outside_objects.png" width="672" />
  </tileset>
- <layer name="background" width="32" height="32">
-  <data encoding="base64" compression="zlib">
+ <layer height="32" name="background" width="32">
+  <data compression="zlib" encoding="base64">
    eJzt0rENACAIAEEmcmRmdQNjxKDFFd9yhJARkZIk6dvGYXw+/43d7d+6NZ+/s0uHx1//QWXeBFSXKq8=
   </data>
  </layer>
- <layer name="fringe" width="32" height="32">
-  <data encoding="base64" compression="zlib">
+ <layer height="32" name="fringe" width="32">
+  <data compression="zlib" encoding="base64">
    eJztwQENAAAAwqD3T20PBxQAAADwbhAAAAE=
   </data>
  </layer>
- <layer name="object" width="32" height="32">
-  <data encoding="base64" compression="zlib">
+ <layer height="32" name="object" width="32">
+  <data compression="zlib" encoding="base64">
    eJxjYBgFo2AUjIJRMApGwWAGNcwMDPkk4mpm6tlfSqJZm4G4eADtZxi1f9R+KtkPynsFBMwqA8qXo+FKKtlPjN+pGdaj9g8u+6uQ0lQF1B709EattEYIwMKClv4dtR87KEIqh/KAdCGFbgAAj28dCg==
   </data>
  </layer>
- <layer name="collision" width="32" height="32">
-  <data encoding="base64" compression="zlib">
+ <layer height="32" name="collision" width="32">
+  <data compression="zlib" encoding="base64">
    eJztlNEKABAMRSf//89epdWYYeWckif3aDYiAAAAkJniXJH+Fepjv/cMfvxajpV1cv5mciJrjT+ff+ypk3+9dZd+v83Pfu39d2hG+wBB
   </data>
  </layer>
  <objectgroup name="enemy">
-  <object name="2 Ranged Cultists" type="ranged" x="384" y="512" width="256" height="96">
+  <object height="96" name="2 Ranged Cultists" type="enemy" width="256" x="384" y="512">
    <properties>
-    <property name="level" value="2,2"/>
-    <property name="number" value="2,2"/>
-   </properties>
+    <property name="level" value="2,2" />
+    <property name="number" value="2,2" />
+   <property name="category" value="ranged" /></properties>
   </object>
-  <object name="2 Cultist Knights" type="knight" x="384" y="608" width="192" height="128">
+  <object height="128" name="2 Cultist Knights" type="enemy" width="192" x="384" y="608">
    <properties>
-    <property name="level" value="2,2"/>
-    <property name="number" value="2,2"/>
-   </properties>
+    <property name="level" value="2,2" />
+    <property name="number" value="2,2" />
+   <property name="category" value="knight" /></properties>
   </object>
  </objectgroup>
  <objectgroup name="event">
-  <object name="Chest" type="on_trigger" x="736" y="512" width="32" height="32">
+  <object height="32" name="Chest" type="event" width="32" x="736" y="512">
    <properties>
-    <property name="hotspot" value="location"/>
-    <property name="mapmod" value="object,23,16,206"/>
-    <property name="msg" value="Empty..."/>
-    <property name="repeat" value="false"/>
-    <property name="tooltip" value="Chest"/>
-   </properties>
+    <property name="hotspot" value="location" />
+    <property name="mapmod" value="object,23,16,206" />
+    <property name="msg" value="Empty..." />
+    <property name="repeat" value="false" />
+    <property name="tooltip" value="Chest" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Teleport to Snow4" type="on_trigger" x="448" y="992" width="32" height="32">
+  <object height="32" name="Teleport to Snow4" type="event" width="32" x="448" y="992">
    <properties>
-    <property name="intermap" value="maps/snow4.txt,14,1"/>
-   </properties>
+    <property name="intermap" value="maps/snow4.txt,14,1" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
  </objectgroup>
 </map>

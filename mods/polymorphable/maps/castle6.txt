@@ -198,23 +198,26 @@ data=
 
 [event]
 # Teleport to Castle5
-type=on_trigger
+type=event
 location=12,31,4,1
+activate=on_trigger
 intermap=maps/castle5.txt,17,1
 requires_status=2ndjugg
 
 [event]
 # Alert
-type=on_trigger
+type=event
 location=12,30,4,1
+activate=on_trigger
 msg=TRAPPED!
 repeat=false
 requires_not_status=2ndjugg
 
 [event]
 # Giant Ghost
-type=on_load
+type=event
 location=13,14,1,1
+activate=on_load
 requires_not_status=2ndjugg
 spawn=giantghost,13,14
 

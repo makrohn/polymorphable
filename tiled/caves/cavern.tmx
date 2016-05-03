@@ -1,23 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="32" tileheight="32" nextobjectid="21">
+<map height="100" nextobjectid="21" orientation="orthogonal" renderorder="right-down" tileheight="32" tilewidth="32" version="1.0" width="100">
  <properties>
-  <property name="music" value="music/technophobic.ogg"/>
-  <property name="tileset" value="tilesetdefs/outside.txt"/>
-  <property name="title" value="Cavern"/>
+  <property name="music" value="music/technophobic.ogg" />
+  <property name="tileset" value="tilesetdefs/outside.txt" />
+  <property name="title" value="Cavern" />
  </properties>
- <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
-  <image source="tiled_collision.png" width="480" height="32"/>
+ <tileset firstgid="1" name="tiled_collision" tileheight="32" tilewidth="32">
+  <image height="32" source="tiled_collision.png" width="480" />
  </tileset>
- <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32">
-  <image source="generic_background.png" width="864" height="832"/>
+ <tileset firstgid="16" name="generic_background" tileheight="32" tilewidth="32">
+  <image height="832" source="generic_background.png" width="864" />
  </tileset>
- <tileset firstgid="718" name="small_objects" tilewidth="32" tileheight="64">
-  <image source="small_objects.png" width="671" height="512"/>
+ <tileset firstgid="718" name="small_objects" tileheight="64" tilewidth="32">
+  <image height="512" source="small_objects.png" width="671" />
  </tileset>
- <tileset firstgid="878" name="outside_objects" tilewidth="32" tileheight="128">
-  <image source="outside_objects.png" width="672" height="768"/>
+ <tileset firstgid="878" name="outside_objects" tileheight="128" tilewidth="32">
+  <image height="768" source="outside_objects.png" width="672" />
  </tileset>
- <layer name="background" width="100" height="100">
+ <layer height="100" name="background" width="100">
   <data encoding="csv">
 159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,
 159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,
@@ -121,7 +120,7 @@
 159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159
 </data>
  </layer>
- <layer name="fringe" width="100" height="100">
+ <layer height="100" name="fringe" width="100">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -225,7 +224,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="object" width="100" height="100">
+ <layer height="100" name="object" width="100">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -329,7 +328,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,890,887,887,887,887,887,889,0,0,0,0,0,0,0,0,0,0,0,0,0,0,890,887,887,887,889
 </data>
  </layer>
- <layer name="collision" width="100" height="100" visible="0">
+ <layer height="100" name="collision" visible="0" width="100">
   <data encoding="csv">
 3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
 3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,
@@ -434,152 +433,152 @@
 </data>
  </layer>
  <objectgroup name="event">
-  <object id="1" name="Bat Talisman Chest" type="on_trigger" x="1824" y="1504" width="32" height="32">
+  <object height="32" id="1" name="Bat Talisman Chest" type="event" width="32" x="1824" y="1504">
    <properties>
-    <property name="hotspot" value="location"/>
-    <property name="loot" value="200,fixed,1"/>
-    <property name="mapmod" value="object,57,47,206"/>
-    <property name="msg" value="Drag to actionbar to use."/>
-    <property name="repeat" value="false"/>
-    <property name="requires_not_status" value="battalisfound"/>
-    <property name="tooltip" value="Chest"/>
-   </properties>
+    <property name="hotspot" value="location" />
+    <property name="loot" value="200,fixed,1" />
+    <property name="mapmod" value="object,57,47,206" />
+    <property name="msg" value="Drag to actionbar to use." />
+    <property name="repeat" value="false" />
+    <property name="requires_not_status" value="battalisfound" />
+    <property name="tooltip" value="Chest" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object id="2" name="Chest" type="on_trigger" x="3008" y="1984" width="32" height="32">
+  <object height="32" id="2" name="Chest" type="event" width="32" x="3008" y="1984">
    <properties>
-    <property name="hotspot" value="location"/>
-    <property name="loot" value="currency,fixed,5,15"/>
-    <property name="mapmod" value="object,94,62,206"/>
-    <property name="repeat" value="false"/>
-    <property name="tooltip" value="Chest"/>
-   </properties>
+    <property name="hotspot" value="location" />
+    <property name="loot" value="currency,fixed,5,15" />
+    <property name="mapmod" value="object,94,62,206" />
+    <property name="repeat" value="false" />
+    <property name="tooltip" value="Chest" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object id="3" name="Chest" type="on_trigger" x="2816" y="1344" width="32" height="32">
+  <object height="32" id="3" name="Chest" type="event" width="32" x="2816" y="1344">
    <properties>
-    <property name="hotspot" value="location"/>
-    <property name="loot" value="currency,fixed,2,10"/>
-    <property name="mapmod" value="object,88,42,206"/>
-    <property name="repeat" value="false"/>
-    <property name="tooltip" value="Chest"/>
-   </properties>
+    <property name="hotspot" value="location" />
+    <property name="loot" value="currency,fixed,2,10" />
+    <property name="mapmod" value="object,88,42,206" />
+    <property name="repeat" value="false" />
+    <property name="tooltip" value="Chest" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object id="4" name="Chest" type="on_trigger" x="2752" y="1312" width="32" height="32">
+  <object height="32" id="4" name="Chest" type="event" width="32" x="2752" y="1312">
    <properties>
-    <property name="hotspot" value="location"/>
-    <property name="loot" value="currency,fixed,2,10"/>
-    <property name="mapmod" value="object,86,41,206"/>
-    <property name="repeat" value="false"/>
-    <property name="tooltip" value="Chest"/>
-   </properties>
+    <property name="hotspot" value="location" />
+    <property name="loot" value="currency,fixed,2,10" />
+    <property name="mapmod" value="object,86,41,206" />
+    <property name="repeat" value="false" />
+    <property name="tooltip" value="Chest" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object id="5" name="Chest" type="on_trigger" x="2528" y="1312" width="32" height="32">
+  <object height="32" id="5" name="Chest" type="event" width="32" x="2528" y="1312">
    <properties>
-    <property name="hotspot" value="location"/>
-    <property name="loot" value="currency,fixed,2,10"/>
-    <property name="mapmod" value="object,79,41,206"/>
-    <property name="repeat" value="false"/>
-    <property name="tooltip" value="Chest"/>
-   </properties>
+    <property name="hotspot" value="location" />
+    <property name="loot" value="currency,fixed,2,10" />
+    <property name="mapmod" value="object,79,41,206" />
+    <property name="repeat" value="false" />
+    <property name="tooltip" value="Chest" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object id="6" name="Carrots" type="on_trigger" x="3104" y="2336" width="32" height="32">
+  <object height="32" id="6" name="Carrots" type="event" width="32" x="3104" y="2336">
    <properties>
-    <property name="hotspot" value="location"/>
-    <property name="loot" value="1,fixed,2"/>
-    <property name="mapmod" value="object,97,73,0;collision,97,73,0"/>
-    <property name="repeat" value="false"/>
-    <property name="tooltip" value="Carrots"/>
-   </properties>
+    <property name="hotspot" value="location" />
+    <property name="loot" value="1,fixed,2" />
+    <property name="mapmod" value="object,97,73,0;collision,97,73,0" />
+    <property name="repeat" value="false" />
+    <property name="tooltip" value="Carrots" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object id="7" name="Carrots" type="on_trigger" x="3040" y="2720" width="32" height="32">
+  <object height="32" id="7" name="Carrots" type="event" width="32" x="3040" y="2720">
    <properties>
-    <property name="hotspot" value="location"/>
-    <property name="loot" value="1,fixed,2"/>
-    <property name="mapmod" value="object,95,85,0;collision,95,85,0"/>
-    <property name="repeat" value="false"/>
-    <property name="tooltip" value="Carrots"/>
-   </properties>
+    <property name="hotspot" value="location" />
+    <property name="loot" value="1,fixed,2" />
+    <property name="mapmod" value="object,95,85,0;collision,95,85,0" />
+    <property name="repeat" value="false" />
+    <property name="tooltip" value="Carrots" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object id="8" name="Teleport to Glade" type="on_trigger" x="1984" y="1152" width="32" height="64">
+  <object height="64" id="8" name="Teleport to Glade" type="event" width="32" x="1984" y="1152">
    <properties>
-    <property name="intermap" value="maps/glade.txt,15,14"/>
-    <property name="set_status" value="cavernexplored"/>
-   </properties>
+    <property name="intermap" value="maps/glade.txt,15,14" />
+    <property name="set_status" value="cavernexplored" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object id="9" name="Block Passage" type="on_load" x="2400" y="2272" width="128" height="64">
+  <object height="64" id="9" name="Block Passage" type="event" width="128" x="2400" y="2272">
    <properties>
-    <property name="mapmod" value="object,75,72,879;object,76,72,879;object,77,72,879;object,78,72,879;object,75,71,890;object,76,71,887;object,77,71,887;object,78,71,889;collision,75,72,1;collision,76,72,1;collision,77,72,1;collision,78,72,1"/>
-    <property name="requires_not_status" value="evil_unleashed"/>
-   </properties>
+    <property name="mapmod" value="object,75,72,879;object,76,72,879;object,77,72,879;object,78,72,879;object,75,71,890;object,76,71,887;object,77,71,887;object,78,71,889;collision,75,72,1;collision,76,72,1;collision,77,72,1;collision,78,72,1" />
+    <property name="requires_not_status" value="evil_unleashed" />
+   <property name="activate" value="on_load" /></properties>
   </object>
-  <object id="10" name="Unblock passage" type="on_trigger" x="2432" y="2400" width="64" height="32">
+  <object height="32" id="10" name="Unblock passage" type="event" width="64" x="2432" y="2400">
    <properties>
-    <property name="hotspot" value="location"/>
-    <property name="npc" value="npcs/gravestone.txt"/>
-    <property name="repeat" value="true"/>
-    <property name="tooltip" value="Unmarked Grave"/>
-   </properties>
+    <property name="hotspot" value="location" />
+    <property name="npc" value="npcs/gravestone.txt" />
+    <property name="repeat" value="true" />
+    <property name="tooltip" value="Unmarked Grave" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object id="11" name="Carrots" type="on_trigger" x="2400" y="3104" width="32" height="32">
+  <object height="32" id="11" name="Carrots" type="event" width="32" x="2400" y="3104">
    <properties>
-    <property name="hotspot" value="location"/>
-    <property name="loot" value="1,fixed,2"/>
-    <property name="mapmod" value="object,75,97,0;collision,75,97,0"/>
-    <property name="repeat" value="false"/>
-    <property name="tooltip" value="Carrots"/>
-   </properties>
+    <property name="hotspot" value="location" />
+    <property name="loot" value="1,fixed,2" />
+    <property name="mapmod" value="object,75,97,0;collision,75,97,0" />
+    <property name="repeat" value="false" />
+    <property name="tooltip" value="Carrots" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
  </objectgroup>
  <objectgroup name="npc">
-  <object id="12" name="Gravestone" type="npcs/gravestone.txt" x="32" y="32" width="32" height="32"/>
+  <object height="32" id="12" name="Gravestone" type="npc" width="32" x="32" y="32"><properties><property name="filename" value="npcs/gravestone.txt" /></properties></object>
  </objectgroup>
  <objectgroup name="enemy" visible="0">
-  <object id="13" name="2 Snakes" type="snake" x="1408" y="1312" width="256" height="128">
+  <object height="128" id="13" name="2 Snakes" type="enemy" width="256" x="1408" y="1312">
    <properties>
-    <property name="level" value="1,3"/>
-    <property name="number" value="2,2"/>
-   </properties>
+    <property name="level" value="1,3" />
+    <property name="number" value="2,2" />
+   <property name="category" value="snake" /></properties>
   </object>
-  <object id="14" name="2 Bats" type="bat" x="1408" y="1504" width="256" height="224">
+  <object height="224" id="14" name="2 Bats" type="enemy" width="256" x="1408" y="1504">
    <properties>
-    <property name="level" value="1,1"/>
-    <property name="number" value="2,2"/>
-   </properties>
+    <property name="level" value="1,1" />
+    <property name="number" value="2,2" />
+   <property name="category" value="bat" /></properties>
   </object>
-  <object id="15" name="4-5 Bats" type="bat" x="2464" y="1344" width="384" height="256">
+  <object height="256" id="15" name="4-5 Bats" type="enemy" width="384" x="2464" y="1344">
    <properties>
-    <property name="level" value="1,1"/>
-    <property name="number" value="4,5"/>
-   </properties>
+    <property name="level" value="1,1" />
+    <property name="number" value="4,5" />
+   <property name="category" value="bat" /></properties>
   </object>
-  <object id="16" name="1 snake" type="snake" x="2912" y="2016" width="160" height="128">
+  <object height="128" id="16" name="1 snake" type="enemy" width="160" x="2912" y="2016">
    <properties>
-    <property name="level" value="1,1"/>
-    <property name="number" value="1,1"/>
-   </properties>
+    <property name="level" value="1,1" />
+    <property name="number" value="1,1" />
+   <property name="category" value="snake" /></properties>
   </object>
-  <object id="17" name="1 Bat" type="bat" x="1984" y="1664" width="320" height="192">
+  <object height="192" id="17" name="1 Bat" type="enemy" width="320" x="1984" y="1664">
    <properties>
-    <property name="level" value="1,1"/>
-    <property name="number" value="1,1"/>
-   </properties>
+    <property name="level" value="1,1" />
+    <property name="number" value="1,1" />
+   <property name="category" value="bat" /></properties>
   </object>
-  <object id="18" name="2 bats" type="bat" x="2400" y="2432" width="96" height="64">
+  <object height="64" id="18" name="2 bats" type="enemy" width="96" x="2400" y="2432">
    <properties>
-    <property name="level" value="1,1"/>
-    <property name="number" value="2,2"/>
-   </properties>
+    <property name="level" value="1,1" />
+    <property name="number" value="2,2" />
+   <property name="category" value="bat" /></properties>
   </object>
-  <object id="19" name="2 bats" type="bat" x="2656" y="2720" width="384" height="160">
+  <object height="160" id="19" name="2 bats" type="enemy" width="384" x="2656" y="2720">
    <properties>
-    <property name="level" value="1,1"/>
-    <property name="number" value="2,2"/>
-   </properties>
+    <property name="level" value="1,1" />
+    <property name="number" value="2,2" />
+   <property name="category" value="bat" /></properties>
   </object>
-  <object id="20" name="1 bat" type="bat" x="2432" y="3040" width="128" height="96">
+  <object height="96" id="20" name="1 bat" type="enemy" width="128" x="2432" y="3040">
    <properties>
-    <property name="level" value="1,1"/>
-    <property name="number" value="1,1"/>
-   </properties>
+    <property name="level" value="1,1" />
+    <property name="number" value="1,1" />
+   <property name="category" value="bat" /></properties>
   </object>
  </objectgroup>
 </map>

@@ -160,14 +160,16 @@ data=
 
 [event]
 # Teleport to Laurelia
-type=on_trigger
+type=event
 location=11,31,6,1
+activate=on_trigger
 intermap=maps/laurelia.txt,91,2
 
 [event]
 # Fairy Flower
-type=on_trigger
+type=event
 location=14,15,1,2
+activate=on_trigger
 hotspot=location
 loot=199,fixed,1
 repeat=false
@@ -177,8 +179,9 @@ tooltip=Fairy Flower
 
 [event]
 # Teleport to Cavern
-type=on_trigger
+type=event
 location=14,12,2,2
+activate=on_trigger
 intermap=maps/cavern.txt,61,36
 requires_status=cavernexplored
 

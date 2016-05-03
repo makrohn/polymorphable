@@ -160,18 +160,21 @@ data=
 
 [npc]
 # Deacon
-type=npcs/deacon.txt
+type=npc
 location=8,13,1,1
+filename=npcs/deacon.txt
 
 [event]
 # Teleport to Graveyard
-type=on_trigger
+type=event
 location=19,3,2,1
+activate=on_trigger
 intermap=maps/laurelia.txt,35,63
 
 [event]
 # Teleport to road
-type=on_trigger
+type=event
 location=17,25,6,1
+activate=on_trigger
 intermap=maps/laurelia.txt,35,77
 

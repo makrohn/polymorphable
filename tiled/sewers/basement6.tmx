@@ -1,23 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32">
+<map height="32" orientation="orthogonal" renderorder="right-down" tileheight="32" tilewidth="32" version="1.0" width="32">
  <properties>
-  <property name="music" value="music/winds_of_stories.ogg"/>
-  <property name="tileset" value="tilesetdefs/sewer.txt"/>
-  <property name="title" value="Hidden Waterway"/>
+  <property name="music" value="music/winds_of_stories.ogg" />
+  <property name="tileset" value="tilesetdefs/sewer.txt" />
+  <property name="title" value="Hidden Waterway" />
  </properties>
- <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
-  <image source="tiled_collision.png" width="480" height="32"/>
+ <tileset firstgid="1" name="tiled_collision" tileheight="32" tilewidth="32">
+  <image height="32" source="tiled_collision.png" width="480" />
  </tileset>
- <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32">
-  <image source="generic_background.png" width="864" height="832"/>
+ <tileset firstgid="16" name="generic_background" tileheight="32" tilewidth="32">
+  <image height="832" source="generic_background.png" width="864" />
  </tileset>
- <tileset firstgid="718" name="small_objects" tilewidth="32" tileheight="64">
-  <image source="small_objects.png" width="671" height="512"/>
+ <tileset firstgid="718" name="small_objects" tileheight="64" tilewidth="32">
+  <image height="512" source="small_objects.png" width="671" />
  </tileset>
- <tileset firstgid="878" name="sewer_objects" tilewidth="32" tileheight="128">
-  <image source="sewer_objects.png" width="672" height="768"/>
+ <tileset firstgid="878" name="sewer_objects" tileheight="128" tilewidth="32">
+  <image height="768" source="sewer_objects.png" width="672" />
  </tileset>
- <layer name="background" width="32" height="32">
+ <layer height="32" name="background" width="32">
   <data encoding="csv">
 158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,
 158,158,158,158,158,158,508,510,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,
@@ -53,7 +52,7 @@
 158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,158,344,344,344,344,344,344,344,344,344,344
 </data>
  </layer>
- <layer name="fringe" width="32" height="32">
+ <layer height="32" name="fringe" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -89,7 +88,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="object" width="32" height="32">
+ <layer height="32" name="object" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -125,7 +124,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,963,963,963,963,963,963,963,963,963,964
 </data>
  </layer>
- <layer name="foreground" width="32" height="32">
+ <layer height="32" name="foreground" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -161,7 +160,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,966,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="collision" width="32" height="32">
+ <layer height="32" name="collision" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -198,51 +197,51 @@
 </data>
  </layer>
  <objectgroup name="event">
-  <object name="Teleport to Basement5" type="on_trigger" x="992" y="896" width="32" height="96">
+  <object height="96" name="Teleport to Basement5" type="event" width="32" x="992" y="896">
    <properties>
-    <property name="intermap" value="maps/basement5.txt,1,7"/>
-   </properties>
+    <property name="intermap" value="maps/basement5.txt,1,7" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Teleport to Basement B" type="on_trigger" x="320" y="928" width="64" height="32">
+  <object height="32" name="Teleport to Basement B" type="event" width="64" x="320" y="928">
    <properties>
-    <property name="intermap" value="maps/basementb.txt,28,4"/>
-   </properties>
+    <property name="intermap" value="maps/basementb.txt,28,4" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Alert" type="on_trigger" x="320" y="576" width="32" height="32">
+  <object height="32" name="Alert" type="event" width="32" x="320" y="576">
    <properties>
-    <property name="hotspot" value="location"/>
-    <property name="msg" value="&quot;Leftover material from blasting is unstable due to cave-ins!  Do not approach!&quot;"/>
-    <property name="repeat" value="false"/>
-    <property name="tooltip" value="Sign"/>
-   </properties>
+    <property name="hotspot" value="location" />
+    <property name="msg" value="&quot;Leftover material from blasting is unstable due to cave-ins!  Do not approach!&quot;" />
+    <property name="repeat" value="false" />
+    <property name="tooltip" value="Sign" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Teleport to Basement7" type="on_trigger" x="192" y="96" width="64" height="32">
+  <object height="32" name="Teleport to Basement7" type="event" width="64" x="192" y="96">
    <properties>
-    <property name="intermap" value="maps/basement7.txt,29,29"/>
-   </properties>
+    <property name="intermap" value="maps/basement7.txt,29,29" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
  </objectgroup>
  <objectgroup name="enemy">
-  <object name="bomb" type="ghostbomb" x="320" y="736" width="32" height="32"/>
-  <object name="bomb" type="ghostbomb" x="352" y="736" width="32" height="32"/>
-  <object name="3 Skeletons" type="skeleton" x="704" y="192" width="96" height="128">
+  <object height="32" name="bomb" type="enemy" width="32" x="320" y="736"><properties><property name="category" value="ghostbomb" /></properties></object>
+  <object height="32" name="bomb" type="enemy" width="32" x="352" y="736"><properties><property name="category" value="ghostbomb" /></properties></object>
+  <object height="128" name="3 Skeletons" type="enemy" width="96" x="704" y="192">
    <properties>
-    <property name="level" value="2,2"/>
-    <property name="number" value="3,3"/>
-   </properties>
+    <property name="level" value="2,2" />
+    <property name="number" value="3,3" />
+   <property name="category" value="skeleton" /></properties>
   </object>
-  <object name="3 Ruby Snakes" type="rubysnake" x="320" y="480" width="128" height="96">
+  <object height="96" name="3 Ruby Snakes" type="enemy" width="128" x="320" y="480">
    <properties>
-    <property name="level" value="1,1"/>
-    <property name="number" value="3,3"/>
-   </properties>
+    <property name="level" value="1,1" />
+    <property name="number" value="3,3" />
+   <property name="category" value="rubysnake" /></properties>
   </object>
-  <object name="4 Slimes" type="slime" x="256" y="192" width="64" height="160">
+  <object height="160" name="4 Slimes" type="enemy" width="64" x="256" y="192">
    <properties>
-    <property name="level" value="1,1"/>
-    <property name="number" value="4,4"/>
-   </properties>
+    <property name="level" value="1,1" />
+    <property name="number" value="4,4" />
+   <property name="category" value="slime" /></properties>
   </object>
  </objectgroup>
- <objectgroup name="npc"/>
+ <objectgroup name="npc" />
 </map>

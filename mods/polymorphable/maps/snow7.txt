@@ -224,30 +224,34 @@ data=
 
 [enemy]
 # Zalkaz
-type=zalkaz
+type=enemy
 location=21,17,1,1
+category=zalkaz
 requires_not_status=theend
 
 [event]
 # Teleport to Laurelia
-type=on_trigger
+type=event
 location=22,47,1,1
+activate=on_trigger
 intermap=maps/laurelia.txt,20,81
 msg=You're home!
 requires_status=theend
 
 [event]
 # Alert
-type=on_trigger
+type=event
 location=22,46,1,1
+activate=on_trigger
 msg=TRAPPED!
 repeat=false
 requires_not_status=theend
 
 [event]
 # Dialog
-type=on_trigger
+type=event
 location=22,44,1,1
+activate=on_trigger
 msg=Prepare to die!
 repeat=false
 requires_not_status=theend

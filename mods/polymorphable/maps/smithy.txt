@@ -100,12 +100,14 @@ data=
 
 [event]
 # Teleport to Laurelia
-type=on_trigger
+type=event
 location=11,15,2,1
+activate=on_trigger
 intermap=maps/laurelia.txt,52,90
 
 [npc]
 # Apprentice
-type=npcs/apprentice.txt
+type=npc
 location=5,7,1,1
+filename=npcs/apprentice.txt
 

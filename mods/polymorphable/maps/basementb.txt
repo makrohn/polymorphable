@@ -196,14 +196,16 @@ data=
 
 [event]
 # Teleport to Basement 6
-type=on_trigger
+type=event
 location=27,3,2,1
+activate=on_trigger
 intermap=maps/basement6.txt,11,28
 
 [event]
 # Chest
-type=on_trigger
+type=event
 location=28,25,1,1
+activate=on_trigger
 hotspot=location
 loot=currency,fixed,25,50
 mapmod=object,28,25,206
@@ -214,22 +216,25 @@ tooltip=Chest
 
 [enemy]
 # 6 bats
-type=bat
+type=enemy
 location=11,11,9,12
+category=bat
 level=2,2
-type=6,6
+type=enemy
 
 [enemy]
 # 3 Skeletons
-type=skeleton
+type=enemy
 location=7,20,2,5
+category=skeleton
 level=2,2
 number=3,3
 
 [enemy]
 # 3 beetles or goos
-type=sewer
+type=enemy
 location=1,9,3,3
+category=sewer
 level=1,1
 number=3,3
 

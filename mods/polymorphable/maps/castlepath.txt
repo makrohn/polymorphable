@@ -160,23 +160,27 @@ data=
 
 [event]
 # Teleport to Laurelia
-type=on_trigger
+type=event
 location=31,13,1,6
+activate=on_trigger
 intermap=maps/laurelia.txt,1,104
 
 [event]
 # Teleport to Castle1
-type=on_trigger
+type=event
 location=0,17,1,6
+activate=on_trigger
 intermap=maps/castle1.txt,30,13
 
 [enemy]
 # Bat
-type=bat
+type=enemy
 location=18,4,1,1
+category=bat
 
 [enemy]
 # Bat
-type=bat
+type=enemy
 location=18,24,1,1
+category=bat
 

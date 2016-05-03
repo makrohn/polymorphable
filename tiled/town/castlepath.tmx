@@ -1,23 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32">
+<map height="32" orientation="orthogonal" renderorder="right-down" tileheight="32" tilewidth="32" version="1.0" width="32">
  <properties>
-  <property name="music" value="music/mysticaltheme.ogg"/>
-  <property name="tileset" value="tilesetdefs/town.txt"/>
-  <property name="title" value="Castle Path"/>
+  <property name="music" value="music/mysticaltheme.ogg" />
+  <property name="tileset" value="tilesetdefs/town.txt" />
+  <property name="title" value="Castle Path" />
  </properties>
- <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
-  <image source="tiled_collision.png" width="480" height="32"/>
+ <tileset firstgid="1" name="tiled_collision" tileheight="32" tilewidth="32">
+  <image height="32" source="tiled_collision.png" width="480" />
  </tileset>
- <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32">
-  <image source="generic_background.png" width="864" height="832"/>
+ <tileset firstgid="16" name="generic_background" tileheight="32" tilewidth="32">
+  <image height="832" source="generic_background.png" width="864" />
  </tileset>
- <tileset firstgid="718" name="town_buildings" tilewidth="32" tileheight="32">
-  <image source="town_buildings.png" width="672" height="768"/>
+ <tileset firstgid="718" name="town_buildings" tileheight="32" tilewidth="32">
+  <image height="768" source="town_buildings.png" width="672" />
  </tileset>
- <tileset firstgid="1222" name="small_objects" tilewidth="32" tileheight="32">
-  <image source="small_objects.png" width="671" height="512"/>
+ <tileset firstgid="1222" name="small_objects" tileheight="32" tilewidth="32">
+  <image height="512" source="small_objects.png" width="671" />
  </tileset>
- <layer name="background" width="32" height="32">
+ <layer height="32" name="background" width="32">
   <data encoding="csv">
 101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,
 101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,
@@ -53,7 +52,7 @@
 101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101
 </data>
  </layer>
- <layer name="fringe" width="32" height="32">
+ <layer height="32" name="fringe" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,259,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -89,7 +88,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="object" width="32" height="32">
+ <layer height="32" name="object" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,259,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -125,7 +124,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="collision" width="32" height="32" visible="0">
+ <layer height="32" name="collision" visible="0" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -162,19 +161,19 @@
 </data>
  </layer>
  <objectgroup name="event">
-  <object name="Teleport to Laurelia" type="on_trigger" x="992" y="416" width="32" height="192">
+  <object height="192" name="Teleport to Laurelia" type="event" width="32" x="992" y="416">
    <properties>
-    <property name="intermap" value="maps/laurelia.txt,1,104"/>
-   </properties>
+    <property name="intermap" value="maps/laurelia.txt,1,104" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Teleport to Castle1" type="on_trigger" x="0" y="544" width="32" height="192">
+  <object height="192" name="Teleport to Castle1" type="event" width="32" x="0" y="544">
    <properties>
-    <property name="intermap" value="maps/castle1.txt,30,13"/>
-   </properties>
+    <property name="intermap" value="maps/castle1.txt,30,13" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
  </objectgroup>
  <objectgroup name="enemy">
-  <object name="Bat" type="bat" x="576" y="128" width="32" height="32"/>
-  <object name="Bat" type="bat" x="576" y="768" width="32" height="32"/>
+  <object height="32" name="Bat" type="enemy" width="32" x="576" y="128"><properties><property name="category" value="bat" /></properties></object>
+  <object height="32" name="Bat" type="enemy" width="32" x="576" y="768"><properties><property name="category" value="bat" /></properties></object>
  </objectgroup>
 </map>

@@ -196,20 +196,23 @@ data=
 
 [event]
 # Teleport to Basement1
-type=on_trigger
+type=event
 location=2,6,1,1
+activate=on_trigger
 intermap=maps/basement1.txt,8,13
 
 [event]
 # Teleport to Basement3
-type=on_trigger
+type=event
 location=27,9,1,1
+activate=on_trigger
 intermap=maps/basement3.txt,28,13
 
 [enemy]
 # 2 Ruby Snakes
-type=rubysnake
+type=enemy
 location=21,8,4,6
+category=rubysnake
 level=1,1
 number=2,2
 
