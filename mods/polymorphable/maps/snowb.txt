@@ -160,22 +160,26 @@ data=
 
 [enemy]
 # Shopkeep
-type=skeleton
+type=enemy
 location=13,24,1,1
+category=skeleton
 
 [enemy]
 # Shopkeep
-type=skeleton
+type=enemy
 location=17,24,1,1
+category=skeleton
 
 [event]
 # Teleport to Snow5
-type=on_trigger
+type=event
 location=17,31,1,1
+activate=on_trigger
 intermap=maps/snow5.txt,13,22
 
 [npc]
 # Shop Chest
-type=npcs/shopchest.txt
+type=npc
 location=12,22,1,1
+filename=npcs/shopchest.txt
 

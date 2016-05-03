@@ -196,28 +196,33 @@ data=
 
 [event]
 # Teleport to inn1st
-type=on_trigger
+type=event
 location=25,16,1,1
+activate=on_trigger
 intermap=maps/inn1st.txt,25,19
 
 [event]
 # Teleport to inn1st
-type=on_trigger
+type=event
 location=6,16,1,1
+activate=on_trigger
 intermap=maps/inn1st.txt,6,19
 
 [npc]
 # Vacationera
-type=npcs/vacationera.txt
+type=npc
 location=7,21,1,1
+filename=npcs/vacationera.txt
 
 [npc]
 # Guard
-type=npcs/guard.txt
+type=npc
 location=24,21,1,1
+filename=npcs/guard.txt
 
 [npc]
 # Vacationer B
-type=npcs/vacationerb.txt
+type=npc
 location=8,21,1,1
+filename=npcs/vacationerb.txt
 

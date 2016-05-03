@@ -160,33 +160,38 @@ data=
 
 [enemy]
 # 1 Skeleton Mage
-type=skeletonmage
+type=enemy
 location=13,22,6,1
+category=skeletonmage
 level=2,2
 number=1,1
 
 [enemy]
 # 2 Melee Cultists
-type=melee
+type=enemy
 location=13,23,6,5
+category=melee
 level=2,2
 number=2,2
 
 [event]
 # Teleport to Snow3
-type=on_trigger
+type=event
 location=1,31,3,1
+activate=on_trigger
 intermap=maps/snow3.txt,21,15
 
 [event]
 # Teleport to Snow5
-type=on_trigger
+type=event
 location=28,31,3,1
+activate=on_trigger
 intermap=maps/snow5.txt,4,27
 
 [event]
 # Teleport to SnowA
-type=on_trigger
+type=event
 location=13,0,2,1
+activate=on_trigger
 intermap=maps/snowa.txt,14,30
 

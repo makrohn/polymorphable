@@ -1,23 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="38" height="19" tilewidth="32" tileheight="32">
+<map height="19" orientation="orthogonal" renderorder="right-down" tileheight="32" tilewidth="32" version="1.0" width="38">
  <properties>
-  <property name="music" value="music/calmtown.ogg"/>
-  <property name="tileset" value="tilesetdefs/interior.txt"/>
-  <property name="title" value="Elder's House"/>
+  <property name="music" value="music/calmtown.ogg" />
+  <property name="tileset" value="tilesetdefs/interior.txt" />
+  <property name="title" value="Elder's House" />
  </properties>
- <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
-  <image source="tiled_collision.png" width="480" height="32"/>
+ <tileset firstgid="1" name="tiled_collision" tileheight="32" tilewidth="32">
+  <image height="32" source="tiled_collision.png" width="480" />
  </tileset>
- <tileset firstgid="16" name="interior_background" tilewidth="32" tileheight="32">
-  <image source="interior_background.png" width="864" height="832"/>
+ <tileset firstgid="16" name="interior_background" tileheight="32" tilewidth="32">
+  <image height="832" source="interior_background.png" width="864" />
  </tileset>
- <tileset firstgid="718" name="intfurniture" tilewidth="32" tileheight="64">
-  <image source="intfurniture.png" width="671" height="512"/>
+ <tileset firstgid="718" name="intfurniture" tileheight="64" tilewidth="32">
+  <image height="512" source="intfurniture.png" width="671" />
  </tileset>
- <tileset firstgid="878" name="interiorbuildings" tilewidth="32" tileheight="128">
-  <image source="interiorbuildings.png" width="672" height="768"/>
+ <tileset firstgid="878" name="interiorbuildings" tileheight="128" tilewidth="32">
+  <image height="768" source="interiorbuildings.png" width="672" />
  </tileset>
- <layer name="background" width="38" height="19">
+ <layer height="19" name="background" width="38">
   <data encoding="csv">
 541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,
 541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,284,284,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,
@@ -40,7 +39,7 @@
 541,541,541,541,541,541,541,541,541,541,541,541,541,541,541,489,489,489,489,489,489,489,489,541,541,541,541,541,541,541,541,541,541,541,541,541,541,541
 </data>
  </layer>
- <layer name="fringe" width="38" height="19">
+ <layer height="19" name="fringe" width="38">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -63,7 +62,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,542,0,0,0,0,0,0,540,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="object" width="38" height="19">
+ <layer height="19" name="object" width="38">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,284,284,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -86,7 +85,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="collision" width="38" height="19" visible="0">
+ <layer height="19" name="collision" visible="0" width="38">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -110,20 +109,20 @@
 </data>
  </layer>
  <objectgroup name="event" visible="0">
-  <object name="Teleport to Laurelia" type="on_trigger" x="576" y="384" width="64" height="32">
+  <object height="32" name="Teleport to Laurelia" type="event" width="64" x="576" y="384">
    <properties>
-    <property name="intermap" value="maps/laurelia.txt,69,59"/>
-   </properties>
+    <property name="intermap" value="maps/laurelia.txt,69,59" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Fireplace" type="on_trigger" x="576" y="128" width="64" height="32">
+  <object height="32" name="Fireplace" type="event" width="64" x="576" y="128">
    <properties>
-    <property name="hotspot" value="location"/>
-    <property name="intermap" value="maps/basement1.txt,13,30"/>
-    <property name="msg" value="A secret passage!"/>
-    <property name="requires_status" value="ghosttalis"/>
-    <property name="set_status" value="explorebasement"/>
-   </properties>
+    <property name="hotspot" value="location" />
+    <property name="intermap" value="maps/basement1.txt,13,30" />
+    <property name="msg" value="A secret passage!" />
+    <property name="requires_status" value="ghosttalis" />
+    <property name="set_status" value="explorebasement" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
  </objectgroup>
- <objectgroup name="npc"/>
+ <objectgroup name="npc" />
 </map>

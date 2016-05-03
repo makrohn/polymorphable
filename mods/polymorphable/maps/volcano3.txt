@@ -158,130 +158,147 @@ data=
 
 [enemy]
 # 2 Skeleton Knights
-type=skeletonknight
+type=enemy
 location=13,9,4,6
+category=skeletonknight
 level=2,2
 number=2,2
 
 [event]
 # Teleport to Volcano1
-type=on_trigger
+type=event
 location=0,11,1,6
+activate=on_trigger
 intermap=maps/volcano1.txt,30,18
 
 [event]
 # Fire alert
-type=on_trigger
+type=event
 location=10,5,6,3
+activate=on_trigger
 msg=There might be a way to cross that small gap, but it looks deadly.
 repeat=false
 soundfx=soundfx/powers/quake.ogg
 
 [event]
 # Lava Trap
-type=on_trigger
+type=event
 location=10,3,1,1
+activate=on_trigger
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=on_trigger
+type=event
 location=11,3,1,1
+activate=on_trigger
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=on_trigger
+type=event
 location=13,3,1,1
+activate=on_trigger
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=on_trigger
+type=event
 location=12,3,1,1
+activate=on_trigger
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=on_trigger
+type=event
 location=14,3,1,1
+activate=on_trigger
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=on_trigger
+type=event
 location=15,3,1,1
+activate=on_trigger
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=on_trigger
+type=event
 location=11,4,1,1
+activate=on_trigger
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=on_trigger
+type=event
 location=10,4,1,1
+activate=on_trigger
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=on_trigger
+type=event
 location=12,4,1,1
+activate=on_trigger
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=on_trigger
+type=event
 location=13,4,1,1
+activate=on_trigger
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=on_trigger
+type=event
 location=14,4,1,1
+activate=on_trigger
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Lava Trap
-type=on_trigger
+type=event
 location=15,4,1,1
+activate=on_trigger
 power=33
 power_damage=100,100
 tooltip=Lava River
 
 [event]
 # Teleport to Volcano 4
-type=on_trigger
+type=event
 location=31,8,1,8
+activate=on_trigger
 intermap=maps/volcano4.txt,1,23
 
 [event]
 # Teleport to Volcano5
-type=on_trigger
+type=event
 location=10,0,6,1
+activate=on_trigger
 intermap=maps/volcano5.txt,12,30
 

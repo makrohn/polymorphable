@@ -196,8 +196,9 @@ data=
 
 [event]
 # Alert
-type=on_trigger
+type=event
 location=30,27,1,1
+activate=on_trigger
 hotspot=location
 msg=FENCES ARE FOR YOUR PROTECTION.  DO NOT OPEN GATES.
 repeat=false
@@ -205,8 +206,9 @@ tooltip=Signpost
 
 [event]
 # Switch
-type=on_trigger
+type=event
 location=29,17,1,1
+activate=on_trigger
 hotspot=location
 msg=There is a strange groove in this rock
 repeat=false
@@ -215,8 +217,9 @@ tooltip=Strange Rock
 
 [event]
 # Switch
-type=on_trigger
+type=event
 location=16,25,1,1
+activate=on_trigger
 hotspot=location
 msg=There is a strange groove in this rock
 repeat=false
@@ -225,8 +228,9 @@ tooltip=Strange Rock
 
 [event]
 # Switch
-type=on_trigger
+type=event
 location=8,28,1,1
+activate=on_trigger
 hotspot=location
 msg=There is a strange groove in this rock
 repeat=false
@@ -235,8 +239,9 @@ tooltip=Strange Rock
 
 [event]
 # Switch
-type=on_trigger
+type=event
 location=3,8,1,1
+activate=on_trigger
 hotspot=location
 msg=There is a strange groove in this rock
 repeat=false
@@ -245,8 +250,9 @@ tooltip=Strange Rock
 
 [event]
 # Switch
-type=on_trigger
+type=event
 location=29,8,1,1
+activate=on_trigger
 hotspot=location
 msg=There is a strange groove in this rock
 repeat=false
@@ -255,8 +261,9 @@ tooltip=Strange Rock
 
 [event]
 # Switch
-type=on_trigger
+type=event
 location=3,8,1,1
+activate=on_trigger
 hotspot=location
 mapmod=object,4,17,0;object,4,12,0;collision,4,17,0;collision,4,12,0;object,10,1,0;collision,10,1,0
 repeat=false
@@ -265,8 +272,9 @@ tooltip=Strange Rock
 
 [event]
 # Switch
-type=on_trigger
+type=event
 location=29,17,1,1
+activate=on_trigger
 hotspot=location
 mapmod=collision,23,21,0;collision,17,21,0;object,23,21,0;object,17,21,0;
 repeat=false
@@ -275,8 +283,9 @@ tooltip=Strange Rock
 
 [event]
 # Switch
-type=on_trigger
+type=event
 location=16,25,1,1
+activate=on_trigger
 hotspot=location
 mapmod=object,2,25,0;object,11,25,0;collision,2,25,0;collision,11,25,0
 repeat=false
@@ -286,8 +295,9 @@ tooltip=Strange Rock
 
 [event]
 # Switch
-type=on_trigger
+type=event
 location=29,8,1,1
+activate=on_trigger
 hotspot=location
 mapmod=object,16,8,0;object,22,8,0;object,2,11,0;collision,16,8,0;collision,22,8,0;collision,2,11,0
 repeat=false
@@ -297,8 +307,9 @@ tooltip=Strange Rock
 
 [event]
 # Switch
-type=on_trigger
+type=event
 location=8,28,1,1
+activate=on_trigger
 hotspot=location
 mapmod=object,28,9,0;object,26,16,0;collision,28,9,0;collision,26,16,0,object,14,26,0;collision,14,26,0
 repeat=false
@@ -307,8 +318,9 @@ tooltip=Strange Rock
 
 [event]
 # Chest
-type=on_trigger
+type=event
 location=9,2,1,1
+activate=on_trigger
 hotspot=location
 loot=1,fixed,2
 mapmod=object,9,2,206
@@ -317,8 +329,9 @@ tooltip=Chest
 
 [event]
 # Chest
-type=on_trigger
+type=event
 location=9,3,1,1
+activate=on_trigger
 hotspot=location
 loot=2,fixed,2
 mapmod=object,9,3,206
@@ -327,53 +340,61 @@ tooltip=Chest
 
 [event]
 # Teleport to Basement8
-type=on_trigger
+type=event
 location=26,0,2,1
+activate=on_trigger
 intermap=maps/basement8.txt,12,30
 
 [event]
 # Teleport to Basement6
-type=on_trigger
+type=event
 location=28,30,2,1
+activate=on_trigger
 intermap=maps/basement6.txt,7,4
 
 [enemy]
 # Venombat
-type=venombat
+type=enemy
 location=5,4,1,1
+category=venombat
 
 [enemy]
 # 2 Firebats
-type=bat
+type=enemy
 location=13,29,3,2
+category=bat
 level=2,2
 number=2,2
 
 [enemy]
 # 2 Skeletons
-type=skeleton
+type=enemy
 location=3,19,3,2
+category=skeleton
 level=2,2
 number=2,2
 
 [enemy]
 # 3 Beetles
-type=beetle
+type=enemy
 location=4,8,3,4
+category=beetle
 level=1,1
 number=3,3
 
 [enemy]
 # 3 Bats
-type=bat
+type=enemy
 location=25,13,4,2
+category=bat
 level=1,1
 number=3,3
 
 [enemy]
 # 3 Ruby Snakes
-type=rubysnake
+type=enemy
 location=24,3,5,3
+category=rubysnake
 level=1,1
 number=3,3
 

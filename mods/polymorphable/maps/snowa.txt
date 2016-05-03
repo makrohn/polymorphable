@@ -160,22 +160,25 @@ data=
 
 [enemy]
 # 2 Ranged Cultists
-type=ranged
+type=enemy
 location=12,16,8,3
+category=ranged
 level=2,2
 number=2,2
 
 [enemy]
 # 2 Cultist Knights
-type=knight
+type=enemy
 location=12,19,6,4
+category=knight
 level=2,2
 number=2,2
 
 [event]
 # Chest
-type=on_trigger
+type=event
 location=23,16,1,1
+activate=on_trigger
 hotspot=location
 mapmod=object,23,16,206
 msg=Empty...
@@ -184,7 +187,8 @@ tooltip=Chest
 
 [event]
 # Teleport to Snow4
-type=on_trigger
+type=event
 location=14,31,1,1
+activate=on_trigger
 intermap=maps/snow4.txt,14,1
 

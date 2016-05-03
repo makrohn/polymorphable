@@ -158,28 +158,32 @@ data=
 
 [enemy]
 # 2 Skeleton Mages
-type=skeletonmage
+type=enemy
 location=21,9,6,2
+category=skeletonmage
 level=2,2
 number=2,2
 
 [enemy]
 # 3 Firebats
-type=firebat
+type=enemy
 location=14,20,5,5
+category=firebat
 level=2,2
 number=3,3
 
 [event]
 # Teleport to Volcano3
-type=on_trigger
+type=event
 location=0,22,1,8
+activate=on_trigger
 intermap=maps/volcano3.txt,30,9
 
 [event]
 # Ghost Talisman
-type=on_trigger
+type=event
 location=23,7,1,1
+activate=on_trigger
 hotspot=location
 loot=400,fixed,1
 msg=Someone has scrawled here: "The fire skeleton's bombs killed my friend instantly!  If I wasn't a ghost already, I'd have died, too."

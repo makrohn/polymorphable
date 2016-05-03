@@ -1,17 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32">
+<map height="32" orientation="orthogonal" renderorder="right-down" tileheight="32" tilewidth="32" version="1.0" width="32">
  <properties>
-  <property name="music" value="music/evil_temple.ogg"/>
-  <property name="tileset" value="tilesetdefs/volcano.txt"/>
-  <property name="title" value="Volcano"/>
+  <property name="music" value="music/evil_temple.ogg" />
+  <property name="tileset" value="tilesetdefs/volcano.txt" />
+  <property name="title" value="Volcano" />
  </properties>
- <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
-  <image source="tiled_collision.png" width="480" height="32"/>
+ <tileset firstgid="1" name="tiled_collision" tileheight="32" tilewidth="32">
+  <image height="32" source="tiled_collision.png" width="480" />
  </tileset>
- <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32">
-  <image source="generic_background.png" width="864" height="832"/>
+ <tileset firstgid="16" name="generic_background" tileheight="32" tilewidth="32">
+  <image height="832" source="generic_background.png" width="864" />
  </tileset>
- <layer name="background" width="32" height="32">
+ <layer height="32" name="background" width="32">
   <data encoding="csv">
 110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,
 110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,110,
@@ -47,7 +46,7 @@
 110,110,107,107,107,107,107,107,107,107,107,107,107,107,110,110,110,110,110,110,164,110,110,110,110,110,110,110,110,110,110,110
 </data>
  </layer>
- <layer name="fringe" width="32" height="32">
+ <layer height="32" name="fringe" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -83,7 +82,7 @@
 0,0,111,0,0,0,0,0,0,0,0,0,0,109,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="object" width="32" height="32">
+ <layer height="32" name="object" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -119,7 +118,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="collision" width="32" height="32">
+ <layer height="32" name="collision" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -156,64 +155,64 @@
 </data>
  </layer>
  <objectgroup name="enemy">
-  <object name="Skeleton Mage" type="skeletonmage" x="256" y="544" width="32" height="32"/>
-  <object name="2 Skeleton" type="skeleton" x="128" y="544" width="96" height="96">
+  <object height="32" name="Skeleton Mage" type="enemy" width="32" x="256" y="544"><properties><property name="category" value="skeletonmage" /></properties></object>
+  <object height="96" name="2 Skeleton" type="enemy" width="96" x="128" y="544">
    <properties>
-    <property name="level" value="1,1"/>
-    <property name="number" value="2,2"/>
-   </properties>
+    <property name="level" value="1,1" />
+    <property name="number" value="2,2" />
+   <property name="category" value="skeleton" /></properties>
   </object>
  </objectgroup>
  <objectgroup name="event">
-  <object name="Chest" type="on_trigger" x="480" y="416" width="32" height="32">
+  <object height="32" name="Chest" type="event" width="32" x="480" y="416">
    <properties>
-    <property name="hotspot" value="location"/>
-    <property name="loot" value="1,fixed,1"/>
-    <property name="mapmod" value="object,15,13,206"/>
-    <property name="repeat" value="false"/>
-    <property name="tooltip" value="Chest"/>
-   </properties>
+    <property name="hotspot" value="location" />
+    <property name="loot" value="1,fixed,1" />
+    <property name="mapmod" value="object,15,13,206" />
+    <property name="repeat" value="false" />
+    <property name="tooltip" value="Chest" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Chest" type="on_trigger" x="736" y="416" width="32" height="32">
+  <object height="32" name="Chest" type="event" width="32" x="736" y="416">
    <properties>
-    <property name="hotspot" value="location"/>
-    <property name="loot" value="2,fixed,1"/>
-    <property name="mapmod" value="object,23,13,206"/>
-    <property name="repeat" value="false"/>
-    <property name="tooltip" value="Chest"/>
-   </properties>
+    <property name="hotspot" value="location" />
+    <property name="loot" value="2,fixed,1" />
+    <property name="mapmod" value="object,23,13,206" />
+    <property name="repeat" value="false" />
+    <property name="tooltip" value="Chest" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Chest" type="on_trigger" x="800" y="512" width="32" height="32">
+  <object height="32" name="Chest" type="event" width="32" x="800" y="512">
    <properties>
-    <property name="hotspot" value="location"/>
-    <property name="loot" value="currency,fixed,5,20"/>
-    <property name="mapmod" value="object,25,16,206"/>
-    <property name="repeat" value="false"/>
-    <property name="tooltip" value="Chest"/>
-   </properties>
+    <property name="hotspot" value="location" />
+    <property name="loot" value="currency,fixed,5,20" />
+    <property name="mapmod" value="object,25,16,206" />
+    <property name="repeat" value="false" />
+    <property name="tooltip" value="Chest" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Chest" type="on_trigger" x="768" y="672" width="32" height="32">
+  <object height="32" name="Chest" type="event" width="32" x="768" y="672">
    <properties>
-    <property name="hotspot" value="location"/>
-    <property name="loot" value="currency,fixed,5,20"/>
-    <property name="mapmod" value="object,24,21,206"/>
-    <property name="repeat" value="false"/>
-    <property name="tooltip" value="Chest"/>
-   </properties>
+    <property name="hotspot" value="location" />
+    <property name="loot" value="currency,fixed,5,20" />
+    <property name="mapmod" value="object,24,21,206" />
+    <property name="repeat" value="false" />
+    <property name="tooltip" value="Chest" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Chest" type="on_trigger" x="608" y="672" width="32" height="32">
+  <object height="32" name="Chest" type="event" width="32" x="608" y="672">
    <properties>
-    <property name="hotspot" value="location"/>
-    <property name="loot" value="1,fixed,1"/>
-    <property name="mapmod" value="object,19,21,206"/>
-    <property name="repeat" value="false"/>
-    <property name="tooltip" value="Chest"/>
-   </properties>
+    <property name="hotspot" value="location" />
+    <property name="loot" value="1,fixed,1" />
+    <property name="mapmod" value="object,19,21,206" />
+    <property name="repeat" value="false" />
+    <property name="tooltip" value="Chest" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Teleport to Volcano2" type="on_trigger" x="96" y="992" width="320" height="32">
+  <object height="32" name="Teleport to Volcano2" type="event" width="320" x="96" y="992">
    <properties>
-    <property name="intermap" value="maps/volcano2.txt,7,1"/>
-   </properties>
+    <property name="intermap" value="maps/volcano2.txt,7,1" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
  </objectgroup>
 </map>

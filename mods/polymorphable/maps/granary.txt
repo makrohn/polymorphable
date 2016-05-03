@@ -97,12 +97,14 @@ data=
 
 [event]
 # Teleport to Laurelia
-type=on_trigger
+type=event
 location=6,10,2,1
+activate=on_trigger
 intermap=maps/laurelia.txt,91,100
 
 [npc]
 # Quartermaster
-type=npcs/quartermaster.txt
+type=npc
 location=17,11,1,1
+filename=npcs/quartermaster.txt
 

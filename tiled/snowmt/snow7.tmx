@@ -1,23 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="48" tilewidth="32" tileheight="32">
+<map height="48" orientation="orthogonal" renderorder="right-down" tileheight="32" tilewidth="32" version="1.0" width="48">
  <properties>
-  <property name="music" value="music/snow_about_a_castle.ogg"/>
-  <property name="tileset" value="tilesetdefs/snowmt.txt"/>
-  <property name="title" value="Zalkaz's Lair"/>
+  <property name="music" value="music/snow_about_a_castle.ogg" />
+  <property name="tileset" value="tilesetdefs/snowmt.txt" />
+  <property name="title" value="Zalkaz's Lair" />
  </properties>
- <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
-  <image source="tiled_collision.png" width="480" height="32"/>
+ <tileset firstgid="1" name="tiled_collision" tileheight="32" tilewidth="32">
+  <image height="32" source="tiled_collision.png" width="480" />
  </tileset>
- <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32">
-  <image source="generic_background.png" width="864" height="832"/>
+ <tileset firstgid="16" name="generic_background" tileheight="32" tilewidth="32">
+  <image height="832" source="generic_background.png" width="864" />
  </tileset>
- <tileset firstgid="718" name="small_objects" tilewidth="32" tileheight="64">
-  <image source="small_objects.png" width="671" height="512"/>
+ <tileset firstgid="718" name="small_objects" tileheight="64" tilewidth="32">
+  <image height="512" source="small_objects.png" width="671" />
  </tileset>
- <tileset firstgid="878" name="outside_objects" tilewidth="32" tileheight="128">
-  <image source="outside_objects.png" width="672" height="768"/>
+ <tileset firstgid="878" name="outside_objects" tileheight="128" tilewidth="32">
+  <image height="768" source="outside_objects.png" width="672" />
  </tileset>
- <layer name="background" width="48" height="48">
+ <layer height="48" name="background" width="48">
   <data encoding="csv">
 281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,
 281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,
@@ -69,7 +68,7 @@
 281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281
 </data>
  </layer>
- <layer name="fringe" width="48" height="48">
+ <layer height="48" name="fringe" width="48">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -121,7 +120,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,900,444,900,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="object" width="48" height="48">
+ <layer height="48" name="object" width="48">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -173,7 +172,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,412,0,0,0,414,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="collision" width="48" height="48" visible="0">
+ <layer height="48" name="collision" visible="0" width="48">
   <data encoding="csv">
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,
@@ -226,33 +225,33 @@
 </data>
  </layer>
  <objectgroup name="enemy">
-  <object name="Zalkaz" type="zalkaz" x="672" y="544" width="32" height="32">
+  <object height="32" name="Zalkaz" type="enemy" width="32" x="672" y="544">
    <properties>
-    <property name="requires_not_status" value="theend"/>
-   </properties>
+    <property name="requires_not_status" value="theend" />
+   <property name="category" value="zalkaz" /></properties>
   </object>
  </objectgroup>
  <objectgroup name="event">
-  <object name="Teleport to Laurelia" type="on_trigger" x="704" y="1504" width="32" height="32">
+  <object height="32" name="Teleport to Laurelia" type="event" width="32" x="704" y="1504">
    <properties>
-    <property name="intermap" value="maps/laurelia.txt,20,81"/>
-    <property name="msg" value="You're home!"/>
-    <property name="requires_status" value="theend"/>
-   </properties>
+    <property name="intermap" value="maps/laurelia.txt,20,81" />
+    <property name="msg" value="You're home!" />
+    <property name="requires_status" value="theend" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Alert" type="on_trigger" x="704" y="1472" width="32" height="32">
+  <object height="32" name="Alert" type="event" width="32" x="704" y="1472">
    <properties>
-    <property name="msg" value="TRAPPED!"/>
-    <property name="repeat" value="false"/>
-    <property name="requires_not_status" value="theend"/>
-   </properties>
+    <property name="msg" value="TRAPPED!" />
+    <property name="repeat" value="false" />
+    <property name="requires_not_status" value="theend" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Dialog" type="on_trigger" x="704" y="1408" width="32" height="32">
+  <object height="32" name="Dialog" type="event" width="32" x="704" y="1408">
    <properties>
-    <property name="msg" value="Prepare to die!"/>
-    <property name="repeat" value="false"/>
-    <property name="requires_not_status" value="theend"/>
-   </properties>
+    <property name="msg" value="Prepare to die!" />
+    <property name="repeat" value="false" />
+    <property name="requires_not_status" value="theend" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
  </objectgroup>
 </map>

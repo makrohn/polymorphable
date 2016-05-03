@@ -1,31 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32">
+<map height="32" orientation="orthogonal" renderorder="right-down" tileheight="32" tilewidth="32" version="1.0" width="32">
  <properties>
-  <property name="music" value="music/mysticaltheme.ogg"/>
-  <property name="tileset" value="tilesetdefs/town.txt"/>
-  <property name="title" value="Castle Balcony"/>
+  <property name="music" value="music/mysticaltheme.ogg" />
+  <property name="tileset" value="tilesetdefs/town.txt" />
+  <property name="title" value="Castle Balcony" />
  </properties>
- <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
-  <image source="tiled_collision.png" width="480" height="32"/>
+ <tileset firstgid="1" name="tiled_collision" tileheight="32" tilewidth="32">
+  <image height="32" source="tiled_collision.png" width="480" />
  </tileset>
- <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32">
-  <image source="generic_background.png" width="864" height="832"/>
+ <tileset firstgid="16" name="generic_background" tileheight="32" tilewidth="32">
+  <image height="832" source="generic_background.png" width="864" />
  </tileset>
- <tileset firstgid="718" name="small_objects" tilewidth="32" tileheight="64">
-  <image source="small_objects.png" width="671" height="512"/>
+ <tileset firstgid="718" name="small_objects" tileheight="64" tilewidth="32">
+  <image height="512" source="small_objects.png" width="671" />
  </tileset>
- <tileset firstgid="878" name="town_buildings" tilewidth="32" tileheight="128">
-  <image source="town_buildings.png" width="672" height="768"/>
+ <tileset firstgid="878" name="town_buildings" tileheight="128" tilewidth="32">
+  <image height="768" source="town_buildings.png" width="672" />
  </tileset>
- <tileset firstgid="1004" name="bldgleft" tilewidth="32" tileheight="128">
-  <tileoffset x="16" y="0"/>
-  <image source="bldgleft.png" width="704" height="128"/>
+ <tileset firstgid="1004" name="bldgleft" tileheight="128" tilewidth="32">
+  <tileoffset x="16" y="0" />
+  <image height="128" source="bldgleft.png" width="704" />
  </tileset>
- <tileset firstgid="1026" name="bldgright" tilewidth="32" tileheight="128">
-  <tileoffset x="-16" y="0"/>
-  <image source="bldgright.png" width="864" height="128"/>
+ <tileset firstgid="1026" name="bldgright" tileheight="128" tilewidth="32">
+  <tileoffset x="-16" y="0" />
+  <image height="128" source="bldgright.png" width="864" />
  </tileset>
- <layer name="background" width="32" height="32">
+ <layer height="32" name="background" width="32">
   <data encoding="csv">
 119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,
 119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,
@@ -61,7 +60,7 @@
 122,122,122,119,122,122,122,122,122,122,122,702,508,509,509,510,702,122,122,122,122,122,122,122,122,122,119,122,122,122,122,122
 </data>
  </layer>
- <layer name="fringe" width="32" height="32">
+ <layer height="32" name="fringe" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,226,253,254,255,0,0,0,0,0,0,0,0,0,0,0,0,0,226,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,307,308,309,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,253,255,0,0,0,
@@ -97,7 +96,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="object" width="32" height="32">
+ <layer height="32" name="object" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -133,7 +132,7 @@
 0,0,0,1005,900,900,900,900,900,900,900,1027,0,0,0,0,1005,900,900,900,900,900,900,900,900,900,1027,0,0,0,0,0
 </data>
  </layer>
- <layer name="foreground" width="32" height="32">
+ <layer height="32" name="foreground" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -169,7 +168,7 @@
 0,0,0,1019,0,0,0,0,0,0,0,0,0,0,0,0,1005,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="collision" width="32" height="32">
+ <layer height="32" name="collision" width="32">
   <data encoding="csv">
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,
 4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,
@@ -205,26 +204,26 @@
 4,4,4,4,1,1,1,1,1,1,1,1,0,0,0,0,1,1,1,1,1,1,1,1,1,1,2,4,4,4,4,4
 </data>
  </layer>
- <objectgroup name="enemy"/>
+ <objectgroup name="enemy" />
  <objectgroup name="event">
-  <object name="Teleport to Castle5" type="on_trigger" x="384" y="992" width="128" height="32">
+  <object height="32" name="Teleport to Castle5" type="event" width="128" x="384" y="992">
    <properties>
-    <property name="intermap" value="maps/castle5.txt,17,1"/>
-    <property name="requires_status" value="2ndjugg"/>
-   </properties>
+    <property name="intermap" value="maps/castle5.txt,17,1" />
+    <property name="requires_status" value="2ndjugg" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Alert" type="on_trigger" x="384" y="960" width="128" height="32">
+  <object height="32" name="Alert" type="event" width="128" x="384" y="960">
    <properties>
-    <property name="msg" value="TRAPPED!"/>
-    <property name="repeat" value="false"/>
-    <property name="requires_not_status" value="2ndjugg"/>
-   </properties>
+    <property name="msg" value="TRAPPED!" />
+    <property name="repeat" value="false" />
+    <property name="requires_not_status" value="2ndjugg" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Giant Ghost" type="on_load" x="416" y="448" width="32" height="32">
+  <object height="32" name="Giant Ghost" type="event" width="32" x="416" y="448">
    <properties>
-    <property name="requires_not_status" value="2ndjugg"/>
-    <property name="spawn" value="giantghost,13,14"/>
-   </properties>
+    <property name="requires_not_status" value="2ndjugg" />
+    <property name="spawn" value="giantghost,13,14" />
+   <property name="activate" value="on_load" /></properties>
   </object>
  </objectgroup>
 </map>

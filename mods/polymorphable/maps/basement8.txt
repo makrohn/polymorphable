@@ -196,21 +196,24 @@ data=
 
 [event]
 # Teleport to Elder's House
-type=on_trigger
+type=event
 location=15,13,1,1
+activate=on_trigger
 intermap=maps/laurelia.txt,69,51
 requires_status=ghostupgrade
 
 [event]
 # Teleport to Basement7
-type=on_trigger
+type=event
 location=11,31,2,1
+activate=on_trigger
 intermap=maps/basement7.txt,27,1
 
 [event]
 # Spawn Daphne's Shadow
-type=on_trigger
+type=event
 location=7,16,1,1
+activate=on_trigger
 hotspot=location
 msg=You must defeat your shadow!
 repeat=false
@@ -220,6 +223,7 @@ tooltip=Fountain
 
 [npc]
 # Strange Ghost
-type=npcs/basementghost.txt
+type=npc
 location=11,14,1,1
+filename=npcs/basementghost.txt
 

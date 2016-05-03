@@ -160,15 +160,17 @@ data=
 
 [enemy]
 # 3 snakes
-type=snake
+type=enemy
 location=12,20,5,3
+category=snake
 level=1,1
 number=3,3
 
 [event]
 # Fake chest
-type=on_trigger
+type=event
 location=14,13,1,1
+activate=on_trigger
 hotspot=location
 mapmod=object,14,13,206
 repeat=false
@@ -177,19 +179,22 @@ tooltip=Chest
 
 [event]
 # Teleport to Castle2
-type=on_trigger
+type=event
 location=31,22,1,4
+activate=on_trigger
 intermap=maps/castle2.txt,3,20
 
 [event]
 # Teleport to Castle5
-type=on_trigger
+type=event
 location=0,22,1,4
+activate=on_trigger
 intermap=maps/castle5.txt,30,25
 
 [event]
 # Teleport to Castle4
-type=on_trigger
+type=event
 location=14,10,1,1
+activate=on_trigger
 intermap=maps/castle4.txt,15,30
 

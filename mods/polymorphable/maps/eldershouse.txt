@@ -108,14 +108,16 @@ data=
 
 [event]
 # Teleport to Laurelia
-type=on_trigger
+type=event
 location=18,12,2,1
+activate=on_trigger
 intermap=maps/laurelia.txt,69,59
 
 [event]
 # Fireplace
-type=on_trigger
+type=event
 location=18,4,2,1
+activate=on_trigger
 hotspot=location
 intermap=maps/basement1.txt,13,30
 msg=A secret passage!

@@ -1,67 +1,66 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32">
+<map height="32" orientation="orthogonal" renderorder="right-down" tileheight="32" tilewidth="32" version="1.0" width="32">
  <properties>
-  <property name="music" value="music/snow_about_a_castle.ogg"/>
-  <property name="tileset" value="tilesetdefs/snowmt.txt"/>
-  <property name="title" value="Snow Mountain"/>
+  <property name="music" value="music/snow_about_a_castle.ogg" />
+  <property name="tileset" value="tilesetdefs/snowmt.txt" />
+  <property name="title" value="Snow Mountain" />
  </properties>
- <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
-  <image source="tiled_collision.png" width="480" height="32"/>
+ <tileset firstgid="1" name="tiled_collision" tileheight="32" tilewidth="32">
+  <image height="32" source="tiled_collision.png" width="480" />
  </tileset>
- <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32">
-  <image source="generic_background.png" width="864" height="832"/>
+ <tileset firstgid="16" name="generic_background" tileheight="32" tilewidth="32">
+  <image height="832" source="generic_background.png" width="864" />
  </tileset>
- <tileset firstgid="718" name="small_objects" tilewidth="32" tileheight="64">
-  <image source="small_objects.png" width="671" height="512"/>
+ <tileset firstgid="718" name="small_objects" tileheight="64" tilewidth="32">
+  <image height="512" source="small_objects.png" width="671" />
  </tileset>
- <tileset firstgid="878" name="outside_objects" tilewidth="32" tileheight="128">
-  <image source="outside_objects.png" width="672" height="768"/>
+ <tileset firstgid="878" name="outside_objects" tileheight="128" tilewidth="32">
+  <image height="768" source="outside_objects.png" width="672" />
  </tileset>
- <layer name="background" width="32" height="32">
-  <data encoding="base64" compression="zlib">
+ <layer height="32" name="background" width="32">
+  <data compression="zlib" encoding="base64">
    eJztlVsOhTAIRNs1sA8X1cS93GWrHya1obxKUeMlmU9zpjAgpJQWRLBrDRD8+Y/lR3jo8aN6cL7z6z2g+LM9UHytB8i8fpW4DGjmUIR8yPN6MML38GDle81Byi9EFkf2oa2DhVWPL/Uwyp91E+oeX74RzF+7D97588iBF9+aA08+5wHrgTdfm8W2rPm3ZAEUfO1/lduHrrdM+76Lb3m/xQPFp24w5UHjA+ODkY/5YO9ke4crtpVPeZGoOPI5RTDezN8A59QVFA==
   </data>
  </layer>
- <layer name="fringe" width="32" height="32">
-  <data encoding="base64" compression="zlib">
+ <layer height="32" name="fringe" width="32">
+  <data compression="zlib" encoding="base64">
    eJztlt0NwjAMhFtlA+bgZwt4YArUNeCJ/iAQSzApiRSECHF8TlxAoif5JbX0XS9O06aKa0esa6uZ+D/J39uafZHv9IkM5ra2xLN/ySDFl2awrLFC+TkeUhrq97VVRc/AQ8g+XAzfc/P8a9CrkcEJ4FNCMuA8SPjnSG/pPpTyEQ+pDDT4iAcqAy2+U+43oTXP6j1jMK/rLeCTOw+xDErmP1TOHGjmj3gIM9Dmcx7CDMbgO6GzOBYfmYWDLwlfcqdx58HpaPDz1xnZvwXCl2htayHoR+4GiXL+q5yHjYIP6btTPnK8lLJTXpDSZE8q1x0MCzc7
   </data>
  </layer>
- <layer name="object" width="32" height="32">
-  <data encoding="base64" compression="zlib">
+ <layer height="32" name="object" width="32">
+  <data compression="zlib" encoding="base64">
    eJxjYBgFo2AUjAL6gBxGBoZcJDwKRsEoGB6gmZl4ta0kqB0Fo2AogI7RNI0VzBqt50fBKBiUAAChGgPs
   </data>
  </layer>
- <layer name="collision" width="32" height="32">
-  <data encoding="base64" compression="zlib">
+ <layer height="32" name="collision" width="32">
+  <data compression="zlib" encoding="base64">
    eJzt0sENACAIBEHsv2ka4GEEPIw7ie8NghkA5K2DV91X2ulPmb/jr+jH+71x+/Rn7J++tq++v5/7AN7i9+4AZA==
   </data>
  </layer>
  <objectgroup name="enemy">
-  <object name="Cultist" type="cultist" x="224" y="352" width="32" height="32">
+  <object height="32" name="Cultist" type="enemy" width="32" x="224" y="352">
    <properties>
-    <property name="level" value="2,2"/>
-    <property name="number" value="1,1"/>
-   </properties>
+    <property name="level" value="2,2" />
+    <property name="number" value="1,1" />
+   <property name="category" value="cultist" /></properties>
   </object>
  </objectgroup>
  <objectgroup name="event">
-  <object name="Teleport to Laurelia" type="on_trigger" x="0" y="0" width="224" height="32">
+  <object height="32" name="Teleport to Laurelia" type="event" width="224" x="0" y="0">
    <properties>
-    <property name="intermap" value="maps/laurelia.txt,74,142"/>
-   </properties>
+    <property name="intermap" value="maps/laurelia.txt,74,142" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Teleport to Snow2" type="on_trigger" x="992" y="288" width="32" height="32">
+  <object height="32" name="Teleport to Snow2" type="event" width="32" x="992" y="288">
    <properties>
-    <property name="intermap" value="maps/snow2.txt,1,9"/>
-   </properties>
+    <property name="intermap" value="maps/snow2.txt,1,9" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Require Juggernaut Talisman" type="on_trigger" x="768" y="448" width="32" height="32">
+  <object height="32" name="Require Juggernaut Talisman" type="event" width="32" x="768" y="448">
    <properties>
-    <property name="intramap" value="24,24"/>
-    <property name="msg" value="You need the Juggernaut Talisman to proceed!"/>
-    <property name="requires_not_status" value="fulljugg"/>
-   </properties>
+    <property name="intramap" value="24,24" />
+    <property name="msg" value="You need the Juggernaut Talisman to proceed!" />
+    <property name="requires_not_status" value="fulljugg" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
  </objectgroup>
 </map>

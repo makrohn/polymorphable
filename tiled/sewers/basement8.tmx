@@ -1,23 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32">
+<map height="32" orientation="orthogonal" renderorder="right-down" tileheight="32" tilewidth="32" version="1.0" width="32">
  <properties>
-  <property name="music" value="music/winds_of_stories.ogg"/>
-  <property name="tileset" value="tilesetdefs/sewer.txt"/>
-  <property name="title" value="Sanctuary"/>
+  <property name="music" value="music/winds_of_stories.ogg" />
+  <property name="tileset" value="tilesetdefs/sewer.txt" />
+  <property name="title" value="Sanctuary" />
  </properties>
- <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
-  <image source="tiled_collision.png" width="480" height="32"/>
+ <tileset firstgid="1" name="tiled_collision" tileheight="32" tilewidth="32">
+  <image height="32" source="tiled_collision.png" width="480" />
  </tileset>
- <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32">
-  <image source="generic_background.png" width="864" height="832"/>
+ <tileset firstgid="16" name="generic_background" tileheight="32" tilewidth="32">
+  <image height="832" source="generic_background.png" width="864" />
  </tileset>
- <tileset firstgid="718" name="small_objects" tilewidth="32" tileheight="64">
-  <image source="small_objects.png" width="671" height="512"/>
+ <tileset firstgid="718" name="small_objects" tileheight="64" tilewidth="32">
+  <image height="512" source="small_objects.png" width="671" />
  </tileset>
- <tileset firstgid="878" name="sewer_objects" tilewidth="32" tileheight="128">
-  <image source="sewer_objects.png" width="672" height="768"/>
+ <tileset firstgid="878" name="sewer_objects" tileheight="128" tilewidth="32">
+  <image height="768" source="sewer_objects.png" width="672" />
  </tileset>
- <layer name="background" width="32" height="32">
+ <layer height="32" name="background" width="32">
   <data encoding="csv">
 159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,
 159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159,
@@ -53,7 +52,7 @@
 159,159,159,159,159,273,273,273,273,273,273,273,273,273,273,273,273,159,159,159,159,159,159,159,159,159,159,159,159,159,159,159
 </data>
  </layer>
- <layer name="fringe" width="32" height="32">
+ <layer height="32" name="fringe" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -89,7 +88,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="object" width="32" height="32">
+ <layer height="32" name="object" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -125,7 +124,7 @@
 0,0,0,0,0,963,963,963,963,963,963,970,971,963,963,963,963,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="foreground" width="32" height="32">
+ <layer height="32" name="foreground" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -161,7 +160,7 @@
 0,0,0,0,0,966,0,0,0,0,0,0,0,0,0,0,965,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="collision" width="32" height="32">
+ <layer height="32" name="collision" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -198,30 +197,30 @@
 </data>
  </layer>
  <objectgroup name="event">
-  <object name="Teleport to Elder's House" type="on_trigger" x="480" y="416" width="32" height="32">
+  <object height="32" name="Teleport to Elder's House" type="event" width="32" x="480" y="416">
    <properties>
-    <property name="intermap" value="maps/laurelia.txt,69,51"/>
-    <property name="requires_status" value="ghostupgrade"/>
-   </properties>
+    <property name="intermap" value="maps/laurelia.txt,69,51" />
+    <property name="requires_status" value="ghostupgrade" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Teleport to Basement7" type="on_trigger" x="352" y="992" width="64" height="32">
+  <object height="32" name="Teleport to Basement7" type="event" width="64" x="352" y="992">
    <properties>
-    <property name="intermap" value="maps/basement7.txt,27,1"/>
-   </properties>
+    <property name="intermap" value="maps/basement7.txt,27,1" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Spawn Daphne's Shadow" type="on_trigger" x="224" y="512" width="32" height="32">
+  <object height="32" name="Spawn Daphne's Shadow" type="event" width="32" x="224" y="512">
    <properties>
-    <property name="hotspot" value="location"/>
-    <property name="msg" value="You must defeat your shadow!"/>
-    <property name="repeat" value="false"/>
-    <property name="requires_not_status" value="ghostupgrade"/>
-    <property name="spawn" value="dshadow,14,25"/>
-    <property name="tooltip" value="Fountain"/>
-   </properties>
+    <property name="hotspot" value="location" />
+    <property name="msg" value="You must defeat your shadow!" />
+    <property name="repeat" value="false" />
+    <property name="requires_not_status" value="ghostupgrade" />
+    <property name="spawn" value="dshadow,14,25" />
+    <property name="tooltip" value="Fountain" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
  </objectgroup>
- <objectgroup name="enemy"/>
+ <objectgroup name="enemy" />
  <objectgroup name="npc">
-  <object name="Strange Ghost" type="npcs/basementghost.txt" x="352" y="448" width="32" height="32"/>
+  <object height="32" name="Strange Ghost" type="npc" width="32" x="352" y="448"><properties><property name="filename" value="npcs/basementghost.txt" /></properties></object>
  </objectgroup>
 </map>

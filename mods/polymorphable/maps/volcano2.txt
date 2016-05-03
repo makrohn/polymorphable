@@ -158,14 +158,16 @@ data=
 
 [event]
 # Teleport to Volcano1
-type=on_trigger
+type=event
 location=31,25,1,5
+activate=on_trigger
 intermap=maps/volcano1.txt,1,16
 
 [event]
 # Forge
-type=on_trigger
+type=event
 location=4,19,1,1
+activate=on_trigger
 hotspot=location
 loot=198,fixed,1
 repeat=false
@@ -174,28 +176,32 @@ tooltip=Anvil
 
 [event]
 # Teleport to VolcanoA
-type=on_trigger
+type=event
 location=5,0,11,1
+activate=on_trigger
 intermap=maps/volcanoa.txt,5,30
 
 [enemy]
 # Skeleton with Key
-type=skeleton
+type=enemy
 location=5,19,1,1
+category=skeleton
 level=1,1
 number=1,1
 
 [enemy]
 # Skeleton Knight
-type=skeletonknight
+type=enemy
 location=22,2,1,1
+category=skeletonknight
 level=2,2
 number=1,1
 
 [enemy]
 # 2 firebats
-type=bat
+type=enemy
 location=7,17,4,5
+category=bat
 level=2,2
 number=2,2
 

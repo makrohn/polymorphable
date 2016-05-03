@@ -160,22 +160,25 @@ data=
 
 [enemy]
 # Venom Bat
-type=venombat
+type=enemy
 location=12,17,9,9
+category=venombat
 level=3,3
 number=1,1
 
 [enemy]
 # 2 snakes
-type=snake
+type=enemy
 location=11,17,9,9
+category=snake
 level=1,1
 number=2,2
 
 [event]
 # Chest
-type=on_trigger
+type=event
 location=22,15,1,1
+activate=on_trigger
 hotspot=location
 loot=300,fixed,1
 mapmod=object,22,15,206
@@ -185,13 +188,15 @@ tooltip=Chest
 
 [event]
 # Teleport to Castle3
-type=on_trigger
+type=event
 location=15,31,2,1
+activate=on_trigger
 intermap=maps/castle3.txt,14,11
 
 [event]
 # Teleport to CastleB
-type=on_trigger
+type=event
 location=0,15,1,4
+activate=on_trigger
 intermap=maps/castleb.txt,30,11
 

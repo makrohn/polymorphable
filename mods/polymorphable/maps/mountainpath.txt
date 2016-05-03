@@ -159,13 +159,15 @@ data=
 
 [event]
 # Teleport to Volcano
-type=on_trigger
+type=event
 location=15,0,4,1
+activate=on_trigger
 intermap=maps/volcano1.txt,16,30
 
 [event]
 # Teleport to Laurelia
-type=on_trigger
+type=event
 location=0,16,1,5
+activate=on_trigger
 intermap=maps/laurelia.txt,176,71
 

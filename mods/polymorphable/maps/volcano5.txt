@@ -158,14 +158,16 @@ data=
 
 [enemy]
 # Giant Fire Skeleton
-type=giantfireskeleton
+type=enemy
 location=12,18,1,1
+category=giantfireskeleton
 requires_not_status=1stjugg
 
 [event]
 # Alert
-type=on_trigger
+type=event
 location=10,30,6,1
+activate=on_trigger
 msg=TRAPPED!
 repeat=false
 requires_not_status=1stjugg
@@ -173,8 +175,9 @@ soundfx=soundfx/powers/quake.ogg
 
 [event]
 # Teleport to Volcano3
-type=on_trigger
+type=event
 location=10,31,6,1
+activate=on_trigger
 intermap=maps/volcano3.txt,12,1
 requires_status=1stjugg
 

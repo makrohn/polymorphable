@@ -1,23 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32">
+<map height="32" orientation="orthogonal" renderorder="right-down" tileheight="32" tilewidth="32" version="1.0" width="32">
  <properties>
-  <property name="music" value="music/snow_about_a_castle.ogg"/>
-  <property name="tileset" value="tilesetdefs/snowmt.txt"/>
-  <property name="title" value="Snow Mountain"/>
+  <property name="music" value="music/snow_about_a_castle.ogg" />
+  <property name="tileset" value="tilesetdefs/snowmt.txt" />
+  <property name="title" value="Snow Mountain" />
  </properties>
- <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32">
-  <image source="tiled_collision.png" width="480" height="32"/>
+ <tileset firstgid="1" name="tiled_collision" tileheight="32" tilewidth="32">
+  <image height="32" source="tiled_collision.png" width="480" />
  </tileset>
- <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32">
-  <image source="generic_background.png" width="864" height="832"/>
+ <tileset firstgid="16" name="generic_background" tileheight="32" tilewidth="32">
+  <image height="832" source="generic_background.png" width="864" />
  </tileset>
- <tileset firstgid="718" name="small_objects" tilewidth="32" tileheight="64">
-  <image source="small_objects.png" width="671" height="512"/>
+ <tileset firstgid="718" name="small_objects" tileheight="64" tilewidth="32">
+  <image height="512" source="small_objects.png" width="671" />
  </tileset>
- <tileset firstgid="878" name="outside_objects" tilewidth="32" tileheight="128">
-  <image source="outside_objects.png" width="672" height="768"/>
+ <tileset firstgid="878" name="outside_objects" tileheight="128" tilewidth="32">
+  <image height="768" source="outside_objects.png" width="672" />
  </tileset>
- <layer name="background" width="32" height="32">
+ <layer height="32" name="background" width="32">
   <data encoding="csv">
 281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,
 281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,
@@ -53,7 +52,7 @@
 281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281,281
 </data>
  </layer>
- <layer name="fringe" width="32" height="32">
+ <layer height="32" name="fringe" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,444,0,0,0,0,0,0,0,0,0,0,0,0,0,444,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,444,0,0,0,0,0,0,0,0,0,0,0,0,0,444,0,0,0,0,0,0,0,0,0,0,0,
@@ -89,7 +88,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="object" width="32" height="32">
+ <layer height="32" name="object" width="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -125,7 +124,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="collision" width="32" height="32">
+ <layer height="32" name="collision" width="32">
   <data encoding="csv">
 0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,
@@ -162,34 +161,34 @@
 </data>
  </layer>
  <objectgroup name="enemy">
-  <object name="2 Skeletons" type="skeleton" x="128" y="192" width="608" height="160">
+  <object height="160" name="2 Skeletons" type="enemy" width="608" x="128" y="192">
    <properties>
-    <property name="level" value="1,1"/>
-    <property name="number" value="2,2"/>
-   </properties>
+    <property name="level" value="1,1" />
+    <property name="number" value="2,2" />
+   <property name="category" value="skeleton" /></properties>
   </object>
-  <object name="2 melee cultists" type="melee" x="96" y="480" width="672" height="160">
+  <object height="160" name="2 melee cultists" type="enemy" width="672" x="96" y="480">
    <properties>
-    <property name="level" value="2,2"/>
-    <property name="number" value="2,2"/>
-   </properties>
+    <property name="level" value="2,2" />
+    <property name="number" value="2,2" />
+   <property name="category" value="melee" /></properties>
   </object>
  </objectgroup>
  <objectgroup name="event">
-  <object name="Teleport to Snow2" type="on_trigger" x="640" y="0" width="32" height="32">
+  <object height="32" name="Teleport to Snow2" type="event" width="32" x="640" y="0">
    <properties>
-    <property name="intermap" value="maps/snow2.txt,22,30"/>
-   </properties>
+    <property name="intermap" value="maps/snow2.txt,22,30" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Teleport to Snow2" type="on_trigger" x="192" y="0" width="32" height="32">
+  <object height="32" name="Teleport to Snow2" type="event" width="32" x="192" y="0">
    <properties>
-    <property name="intermap" value="maps/snow2.txt,8,30"/>
-   </properties>
+    <property name="intermap" value="maps/snow2.txt,8,30" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
-  <object name="Teleport to Snow4" type="on_trigger" x="640" y="416" width="64" height="64">
+  <object height="64" name="Teleport to Snow4" type="event" width="64" x="640" y="416">
    <properties>
-    <property name="intermap" value="maps/snow4.txt,2,30"/>
-   </properties>
+    <property name="intermap" value="maps/snow4.txt,2,30" />
+   <property name="activate" value="on_trigger" /></properties>
   </object>
  </objectgroup>
 </map>

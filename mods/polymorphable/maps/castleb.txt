@@ -160,22 +160,25 @@ data=
 
 [enemy]
 # 2 snakes
-type=snake
+type=enemy
 location=4,5,1,5
+category=snake
 level=1,1
 number=2,2
 
 [enemy]
 # 2 Ghosts
-type=ghost
+type=enemy
 location=9,5,1,5
+category=ghost
 level=1,1
 number=2,2
 
 [event]
 # Chest
-type=on_trigger
+type=event
 location=2,5,1,1
+activate=on_trigger
 hotspot=location
 loot=3,fixed,2
 mapmod=object,2,5,206
@@ -184,8 +187,9 @@ tooltip=Chest
 
 [event]
 # Chest
-type=on_trigger
+type=event
 location=2,9,1,1
+activate=on_trigger
 hotspot=location
 loot=1,fixed,1;2,fixed,1
 mapmod=object,2,9,206
@@ -194,7 +198,8 @@ tooltip=Chest
 
 [event]
 # Teleport to Castle4
-type=on_trigger
+type=event
 location=31,10,1,4
+activate=on_trigger
 intermap=maps/castle4.txt,1,16
 

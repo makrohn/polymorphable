@@ -198,14 +198,16 @@ data=
 
 [enemy]
 # 3 venombats
-type=venombat
+type=enemy
 location=9,14,6,6
+category=venombat
 level=3,3
 number=3,3
 
 [event]
 # Teleport to Castle5
-type=on_trigger
+type=event
 location=31,12,1,4
+activate=on_trigger
 intermap=maps/castle5.txt,1,9
 

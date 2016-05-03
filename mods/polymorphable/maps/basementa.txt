@@ -196,8 +196,9 @@ data=
 
 [event]
 # Strange Rock
-type=on_trigger
+type=event
 location=1,16,1,1
+activate=on_trigger
 hotspot=location
 msg=There's a key-shaped hole in this rock.
 repeat=false
@@ -206,8 +207,9 @@ tooltip=Strange Rock
 
 [event]
 # Strange Rock
-type=on_trigger
+type=event
 location=1,16,1,1
+activate=on_trigger
 hotspot=location
 mapmod=foreground,15,13,0;foreground,15,14,0;foreground,15,15,0;foreground,15,16,0;foreground,15,17,0;object,14,16,0;object,14,17,0;collision,14,16,0
 msg=The switch key fits into the hole in this rock!
@@ -217,14 +219,16 @@ tooltip=Strange Rock
 
 [event]
 # Teleport to Basement4
-type=on_trigger
+type=event
 location=1,31,1,1
+activate=on_trigger
 intermap=maps/basement4.txt,29,2
 
 [event]
 # Book
-type=on_trigger
+type=event
 location=28,3,1,1
+activate=on_trigger
 hotspot=location
 msg=It has been a long journey from Castle Hestian, but we have finally found a safe glade away from prying eyes.  We shall found our village here, among the laurel trees.
 repeat=false
@@ -232,8 +236,9 @@ tooltip=Dusty Diary
 
 [event]
 # Book
-type=on_trigger
+type=event
 location=29,3,1,1
+activate=on_trigger
 hotspot=location
 msg=It has been a hundred years now since King Hestian's decree to burn all the "skinchangers."  We must go into hiding or he'll destroy us all.
 repeat=false
@@ -241,8 +246,9 @@ tooltip=Moldy Diary
 
 [event]
 # Book
-type=on_trigger
+type=event
 location=30,3,1,1
+activate=on_trigger
 hotspot=location
 msg=King Hestian will not let us live in the open unless we share with him the secret of immortality.  If only we actually held that secret, as he believes!
 repeat=false
@@ -250,22 +256,25 @@ tooltip=Yellowed Diary
 
 [enemy]
 # 2 Skeletons
-type=skeleton
+type=enemy
 location=25,6,3,3
+category=skeleton
 level=2,2
 number=2,2
 
 [enemy]
 # 3 Ruby Snakes
-type=rubysnake
+type=enemy
 location=3,17,9,9
+category=rubysnake
 level=1,1
 number=3,3
 
 [enemy]
 # 2 Skeletons
-type=skeleton
+type=enemy
 location=10,18,2,2
+category=skeleton
 level=1,1
 number=2,2
 
