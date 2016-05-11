@@ -13,7 +13,7 @@ loot=3,5
 loot=currency,33
 
 # combat stats
-hp=5
+stat=hp,5
 speed=7
 melee_range=1
 threat_range=16
@@ -25,9 +25,9 @@ power=melee,136,0
 passive_powers=137
 cooldown_hit=133ms
 
-accuracy=100
-avoidance=0
+stat=accuracy,100
+stat=avoidance,0
 
-dmg_melee_min=2
-dmg_melee_max=2
+stat=dmg_melee_min,2
+stat=dmg_melee_max,2
 cooldown=1s

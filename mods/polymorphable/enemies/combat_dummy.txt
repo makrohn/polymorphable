@@ -9,7 +9,7 @@ animations=animations/enemies/combat_dummy.txt
 suppress_hp=1
 
 # combat stats
-hp=1000000
+stat=hp,1000000
 speed=0
 melee_range=0
 threat_range=0
@@ -17,9 +17,9 @@ turn_delay=400ms
 chance_pursue=20
 cooldown_hit=133ms
 
-accuracy=100
-avoidance=0
+stat=accuracy,100
+stat=avoidance,0
 
-dmg_ranged_min=0
-dmg_ranged_max=0
+stat=dmg_ranged_min,0
+stat=dmg_ranged_max,0
 cooldown=1s

@@ -9,7 +9,7 @@ animations=animations/enemies/bomb.txt
 suppress_hp=1
 
 # combat stats
-hp=1
+stat=hp,1
 speed=0
 chance_pursue=0
 
@@ -23,10 +23,10 @@ power=on_death,104,100
 
 cooldown_hit=133ms
 
-accuracy=100
-avoidance=0
+stat=accuracy,100
+stat=avoidance,0
 
-dmg_ment_min=100
-dmg_ment_max=100
+stat=dmg_ment_min,100
+stat=dmg_ment_max,100
 cooldown=1s
 

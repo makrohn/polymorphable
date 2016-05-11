@@ -12,7 +12,7 @@ loot=3,5
 loot=currency,33,10,15
 
 # combat stats
-hp=6
+stat=hp,6
 speed=3
 melee_range=2
 threat_range=16
@@ -22,9 +22,9 @@ power=beacon,132,100
 power=melee,2,10
 cooldown_hit=133ms
 
-accuracy=100
-avoidance=0
+stat=accuracy,100
+stat=avoidance,0
 
-dmg_melee_min=2
-dmg_melee_max=2
+stat=dmg_melee_min,2
+stat=dmg_melee_max,2
 cooldown=1s

@@ -9,17 +9,17 @@ animations=animations/enemies/bomb.txt
 suppress_hp=1
 
 # combat stats
-hp=3
+stat=hp,3
 speed=0
 chance_pursue=0
 power=on_death,32,100
 cooldown_hit=133ms
 
-accuracy=100
-avoidance=100
+stat=accuracy,100
+stat=avoidance,100
 
-dmg_ment_min=5
-dmg_ment_max=5
+stat=dmg_ment_min,5
+stat=dmg_ment_max,5
 cooldown=1s
 
 # bomb tick

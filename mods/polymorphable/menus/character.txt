@@ -41,13 +41,13 @@ unspent=96,106,120,16
 # item visibility
 # these are boolean. 0 to hide, 1 to show
 
-show_upgrade_physical=1
-show_upgrade_mental=1
-show_upgrade_offense=0
-show_upgrade_defense=0
+show_stat=upgrade_physical,1
+show_stat=upgrade_mental,1
+show_stat=upgrade_offense,0
+show_stat=upgrade_defense,0
 
-show_hp_regen=0
-show_mp_regen=0
-show_dmg_ranged_min=0
-show_dmg_ranged_max=0
-show_crit=0
+show_stat=hp_regen,0
+show_stat=mp_regen,0
+show_stat=dmg_ranged_min,0
+show_stat=dmg_ranged_max,0
+show_stat=crit,0

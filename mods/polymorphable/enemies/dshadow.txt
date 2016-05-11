@@ -14,7 +14,7 @@ loot=currency,33
 defeat_status=shadowdefeated
 
 # combat stats
-hp=10
+stat=hp,10
 speed=7
 melee_range=1
 threat_range=16
@@ -23,12 +23,12 @@ chance_pursue=20
 power=beacon,132,100
 power=melee,1,20
 power=melee,136,0
-vulnerable_fire=0
+vulnerable=fire,0
 cooldown_hit=133ms
 
-accuracy=100
-avoidance=0
+stat=accuracy,100
+stat=avoidance,0
 
-dmg_melee_min=2
-dmg_melee_max=2
+stat=dmg_melee_min,2
+stat=dmg_melee_max,2
 cooldown=1s

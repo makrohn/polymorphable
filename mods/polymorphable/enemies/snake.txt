@@ -12,7 +12,7 @@ loot=3,5
 loot=currency,33,2,4
 
 # combat stats
-hp=3
+stat=hp,3
 speed=4
 melee_range=1
 threat_range=16
@@ -23,9 +23,9 @@ power=ranged,301,2
 power=melee,301,10
 cooldown_hit=133ms
 
-accuracy=100
-avoidance=0
+stat=accuracy,100
+stat=avoidance,0
 
-dmg_ranged_min=2
-dmg_ranged_max=2
+stat=dmg_ranged_min,2
+stat=dmg_ranged_max,2
 cooldown=1s

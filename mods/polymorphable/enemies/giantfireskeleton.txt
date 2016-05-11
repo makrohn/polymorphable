@@ -12,7 +12,7 @@ loot=3,5
 loot=currency,100,15,25
 
 # combat stats
-hp=10
+stat=hp,10
 speed=4
 melee_range=3
 threat_range=16
@@ -32,9 +32,9 @@ power=ranged,302,5
 quest_loot=juggsearch,1stjugg,498
 cooldown_hit=1s
 
-accuracy=100
-avoidance=0
+stat=accuracy,100
+stat=avoidance,0
 
-dmg_melee_min=4
-dmg_melee_max=4
+stat=dmg_melee_min,4
+stat=dmg_melee_max,4
 cooldown=1s
