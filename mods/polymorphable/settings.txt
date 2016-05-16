@@ -1,0 +1,2 @@
+description=A total conversion, orthographic game based on Clint Bellanger's FLARE
+game=polymorphable
