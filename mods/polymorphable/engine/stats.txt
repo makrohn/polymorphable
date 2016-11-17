@@ -4,39 +4,35 @@
 max_points_per_stat=10
 stat=hp,10
 stat_per_level=hp,0
-stat_per_physical=hp,2
+stat_per_primary=physical,hp,2
 stat=hp_regen,0
 stat_per_level=hp_regen,0
-stat_per_physical=hp_regen,0
+stat_per_primary=physical,hp_regen,0
 stat=mp,5
 stat_per_level=mp,0
-stat_per_mental=mp,1
+stat_per_primary=mental,mp,1
 stat=mp_regen,0
 stat_per_level=mp_regen,0
-stat_per_mental=mp_regen,0
+stat_per_primary=mental,mp_regen,0
 stat=accuracy,100
 stat_per_level=accuracy,0
-stat_per_offense=accuracy,0
 stat=avoidance,0
 stat_per_level=avoidance,0
-stat_per_defense=avoidance,0
 stat=crit,0
 stat_per_level=crit,0
 
 stat=dmg_melee_min,1
 stat=dmg_melee_max,1
-stat_per_physical=dmg_melee_min,0
-stat_per_physical=dmg_melee_max,0
+stat_per_primary=physical,dmg_melee_min,0
+stat_per_primary=physical,dmg_melee_max,0
 
 stat=dmg_ment_min,1
 stat=dmg_ment_max,1
-stat_per_mental=dmg_ment_min,0
-stat_per_mental=dmg_ment_max,0
+stat_per_primary=mental,dmg_ment_min,0
+stat_per_primary=mental,dmg_ment_max,0
 
 stat=dmg_ranged_min,1
 stat=dmg_ranged_max,1
-stat_per_offense=dmg_ranged_min,0
-stat_per_offense=dmg_ranged_max,0
 
 #absorb_min=0
 #absorb_max=0

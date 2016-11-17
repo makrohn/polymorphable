@@ -1,0 +1,7 @@
+[stat]
+id=physical
+name=Physical
+
+[stat]
+id=mental
+name=Mental
