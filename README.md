@@ -17,7 +17,7 @@ Mac OSX and Windows
 
 Linux
 - Install Flare v1.x using your favorite package manager, or compile from source from https://github.com/clintbellanger/flare-engine/tree/master
-- Copy the entire mods/polymorphable folder into the Flare mods/ directory.
+- Copy the entire mods/polymorphable folder into the Flare-game mods/ directory.
 
 All distributions
 - At the Flare launch screen, enter "Configuration"
