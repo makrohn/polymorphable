@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-22 21:03+\n"
+"POT-Creation-Date: 2018-02-07 20:35+\n"
 "PO-Revision-Date: 2014-09-22 21:43+0200\n"
 "Last-Translator: Martin Quinson\n"
 "Language-Team: French <>\n"
@@ -25,121 +25,99 @@ msgstr "Carotte"
 msgid "Restore 4 HP"
 msgstr "Donne 4 PV"
 
-#: ../items/items.txt:9
-msgid "consumable"
-msgstr "consommable"
-
-#: ../items/items.txt:17
+#: ../items/items.txt:16
 msgid "Watermelon"
 msgstr "Pastèque"
 
-#: ../items/items.txt:22
+#: ../items/items.txt:21
 msgid "Restore 4 MP"
 msgstr "Donne 4 PM"
 
-#: ../items/items.txt:31
+#: ../items/items.txt:29
 msgid "Bomb"
 msgstr "Bombe"
 
-#: ../items/items.txt:36
+#: ../items/items.txt:34
 msgid "Plant a 3-second bomb"
 msgstr "Plante une bombe de 3 secondes"
 
-#: ../items/items.txt:44
+#: ../items/items.txt:42
 msgid "Gold"
 msgstr "Or"
 
-#: ../items/items.txt:47
-msgid "other"
-msgstr "autre"
-
-#: ../items/items.txt:58
+#: ../items/items.txt:57
 msgid "Leather Armor"
 msgstr "Armure de cuir"
 
-#: ../items/items.txt:61
-msgid "body"
-msgstr "corps"
-
-#: ../items/items.txt:70
+#: ../items/items.txt:69
 msgid "Knife"
 msgstr "Couteau"
 
-#: ../items/items.txt:73
-msgid "main"
-msgstr ""
-
-#: ../items/items.txt:78
+#: ../items/items.txt:77
 msgid "Just a kitchen knife"
 msgstr "Juste un couteau de cuisine"
 
-#: ../items/items.txt:83
+#: ../items/items.txt:82
 msgid "Hero's Sword"
 msgstr "Épée héroïque"
 
-#: ../items/items.txt:91
+#: ../items/items.txt:90
 msgid "The sword of the ancient hero"
 msgstr "L'épée d'un héro disparu"
 
-#: ../items/items.txt:97
+#: ../items/items.txt:96
 msgid "Skeleton Key"
 msgstr "Clé squelette"
 
-#: ../items/items.txt:100
-msgid "quest"
-msgstr "quête"
-
-#: ../items/items.txt:103
+#: ../items/items.txt:102
 msgid "Unlocks a door in the Volcano"
 msgstr "Déverrouille une porte dans le volcan"
 
-#: ../items/items.txt:108
+#: ../items/items.txt:107
 msgid "Fairy Flower"
 msgstr "Fleur féerique"
 
-#: ../items/items.txt:114
+#: ../items/items.txt:113
 msgid "Return this flower to Elder Thomas"
 msgstr "Rendez cette fleur au vénérable Thomas"
 
-#: ../items/items.txt:119
+#: ../items/items.txt:118
 msgid "Bat Talisman"
 msgstr "Talisman de chauve-souris"
 
-#: ../items/items.txt:125
+#: ../items/items.txt:124
 msgid "Use to transform into a bat and fly"
 msgstr "Permet de se changer en chauve-souris et voler"
 
-#: ../items/items.txt:131
+#: ../items/items.txt:130
 msgid "Snake Talisman"
 msgstr "Talisman de serpent"
 
-#: ../items/items.txt:137
+#: ../items/items.txt:136
 msgid "Use to transform into a snake and spit acid at enemies and switches"
-msgstr ""
-"Permet de se changer en serpent et cracher de l'acide sur les ennemis et "
-"interrupteurs"
+msgstr "Permet de se changer en serpent et cracher de l'acide sur les ennemis et interrupteurs"
 
-#: ../items/items.txt:143
+#: ../items/items.txt:142
 msgid "Ghost Talisman"
 msgstr "Talisman de fantôme"
 
-#: ../items/items.txt:149
+#: ../items/items.txt:148
 msgid "Use to transform into a ghost and pass through flame"
 msgstr "Permet de se changer en fantôme et passer à travers les flammes"
 
-#: ../items/items.txt:167
+#: ../items/items.txt:166
 msgid "Half of Juggernaut Talisman"
 msgstr "Talisman du demi-fléau"
 
-#: ../items/items.txt:173
+#: ../items/items.txt:172
 msgid "Bring to the Village Elder to create the Juggernaut Talisman"
 msgstr "Apportez ceci à l'ancien du village pour créer le Talisman du Fléau"
 
-#: ../items/items.txt:193
+#: ../items/items.txt:192
 msgid "Juggernaut Talisman"
 msgstr "Talisman du Fléau"
 
-#: ../items/items.txt:200
+#: ../items/items.txt:199
 msgid "Transform into a mighty juggernaut"
 msgstr "Permet de se changer en Fléau puissant"
 
@@ -150,10 +128,6 @@ msgstr "Corps"
 #: ../items/types.txt:7
 msgid "Consumable"
 msgstr "Consommable"
-
-#: ../items/types.txt:10
-msgid "gem"
-msgstr "gemme"
 
 #: ../items/types.txt:11
 msgid "Gem"
@@ -167,6 +141,26 @@ msgstr "Main principale"
 msgid "Quest Item"
 msgstr "Quêtes"
 
+#: ../items/qualities.txt:3
+msgid "Low"
+msgstr ""
+
+#: ../items/qualities.txt:8
+msgid "Normal"
+msgstr ""
+
+#: ../items/qualities.txt:13
+msgid "High"
+msgstr ""
+
+#: ../items/qualities.txt:18
+msgid "Epic"
+msgstr ""
+
+#: ../items/qualities.txt:23
+msgid "Unique"
+msgstr ""
+
 #: ../powers/powers.txt:3
 msgid "Swing"
 msgstr "Swing"
@@ -175,222 +169,209 @@ msgstr "Swing"
 msgid "Basic melee attack"
 msgstr "Attaque de mêlée classique"
 
-#: ../powers/powers.txt:19
+#: ../powers/powers.txt:18
 msgid "Crush"
 msgstr "Crash"
 
-#: ../powers/powers.txt:22
+#: ../powers/powers.txt:21
 msgid "Knock your enemy back"
 msgstr "Renvoi vos ennemis en arrière"
 
-#: ../powers/powers.txt:38
+#: ../powers/powers.txt:36
 msgid "Lightning Storm"
 msgstr "Éclairs"
 
-#: ../powers/powers.txt:41
+#: ../powers/powers.txt:39
 msgid "Three lightning bolts strike randomly around you"
 msgstr "Trois éclairs frappent au hasard autour de vous"
 
-#: ../powers/powers.txt:61
+#: ../powers/powers.txt:59
 msgid "Shield"
 msgstr "Bouclier"
 
-#: ../powers/powers.txt:64
+#: ../powers/powers.txt:62
 msgid "Create a force field that absorbs damage"
 msgstr "Crée un champ de force qui absorbe des dommages"
 
-#: ../powers/powers.txt:76
+#: ../powers/powers.txt:74
 msgid "Haste"
 msgstr "Rage"
 
-#: ../powers/powers.txt:78
+#: ../powers/powers.txt:76
 msgid "Double run and attack speed for 8 seconds"
 msgstr "Double la vitesse d'attaque et déplacements pour 8 secondes"
 
-#: ../powers/powers.txt:88
+#: ../powers/powers.txt:86
 msgid "Cleave"
 msgstr "Fente"
 
-#: ../powers/powers.txt:91
+#: ../powers/powers.txt:89
 msgid "Attack all enemies in a wide arc"
 msgstr "Attaque plusieurs ennemies à la fois"
 
-#: ../powers/powers.txt:107
+#: ../powers/powers.txt:104
 msgid "Leech Strike"
 msgstr "Baiser de Liche"
 
-#: ../powers/powers.txt:110
+#: ../powers/powers.txt:107
 msgid "Turn 50% of damage you deal into HP"
 msgstr "Change 50% des dommages infligés en PV"
 
-#: ../powers/powers.txt:126
+#: ../powers/powers.txt:122
 msgid "Stun Strike"
 msgstr "Coup de masse"
 
-#: ../powers/powers.txt:129
+#: ../powers/powers.txt:125
 msgid "Stun an enemy for 3 seconds"
 msgstr "Assomme un ennemi pour 3 secondes"
 
-#: ../powers/powers.txt:145
+#: ../powers/powers.txt:140
 msgid "Ice Blast"
 msgstr "Souffle glacé"
 
-#: ../powers/powers.txt:148
+#: ../powers/powers.txt:143
 msgid "Slow nearby enemies for 5 seconds"
 msgstr "Ralentie les ennemis proches pour 5 secondes"
 
-#: ../powers/powers.txt:168
+#: ../powers/powers.txt:163
 msgid "Shoot (enemy)"
 msgstr "Tir (ennemi)"
 
-#: ../powers/powers.txt:191
+#: ../powers/powers.txt:186
 msgid "Drop a bomb that does 5 damage when it explodes."
 msgstr "Pose une bombe infligeant 5 dommages en explosant."
 
-#: ../powers/powers.txt:200
+#: ../powers/powers.txt:195
 msgid "Explode (npc)"
 msgstr "Explose (pnj)"
 
-#: ../powers/powers.txt:203
+#: ../powers/powers.txt:198
 msgid "Damages nearby enemies"
 msgstr "Blesse les ennemis proches"
 
-#: ../powers/powers.txt:223
+#: ../powers/powers.txt:216
 msgid "flametrap (trap)"
 msgstr "piège à feu (piège)"
 
-#: ../powers/powers.txt:248
+#: ../powers/powers.txt:239
 msgid "Plant a 3-second bomb."
 msgstr "Pose une bombe de 3 secondes."
 
-#: ../powers/powers.txt:257
+#: ../powers/powers.txt:248
 msgid "Holy Sword"
 msgstr "Épée sacrée"
 
-#: ../powers/powers.txt:260
+#: ../powers/powers.txt:251
 msgid "Deal two damage to all enemies on-screen"
 msgstr "Inflige deux dommages à tous les ennemis à l'écran"
 
-#: ../powers/powers.txt:276
+#: ../powers/powers.txt:267
 msgid "Summon Bat (enemy)"
 msgstr ""
 
-#: ../powers/powers.txt:314
+#: ../powers/powers.txt:305
 msgid "Fire Bomb (enemy)"
 msgstr "Bombe de feu (ennemi)"
 
-#: ../powers/powers.txt:317
+#: ../powers/powers.txt:308
 msgid "Drop a bomb that does 10 damage when it explodes to the whole screen."
-msgstr ""
-"Pose une bombe infligeant 10 dommages à tout l'écran quand elle explose."
+msgstr "Pose une bombe infligeant 10 dommages à tout l'écran quand elle explose."
 
-#: ../powers/powers.txt:325
+#: ../powers/powers.txt:316
 msgid "Firebomb Explosion (enemy)"
 msgstr "Explosion de la bombe de feu (ennemi)"
 
-#: ../powers/powers.txt:348
+#: ../powers/powers.txt:337
 msgid "Explode (enemy)"
 msgstr "Explose (ennemi)"
 
-#: ../powers/powers.txt:371
+#: ../powers/powers.txt:358
 msgid "Tick"
 msgstr "Tic"
 
-#: ../powers/powers.txt:386
+#: ../powers/powers.txt:367
+msgid "Tick (proximity)"
+msgstr ""
+
+#: ../powers/powers.txt:376
 msgid "Enemy Beacon"
 msgstr "Appât"
 
-#: ../powers/powers.txt:387
+#: ../powers/powers.txt:377
 msgid "Bring other enemies into the fight with a dummy attack"
 msgstr "Attire d'autres ennemis dans le combat avec une fausse attaque"
 
-#: ../powers/powers.txt:399
+#: ../powers/powers.txt:389
 msgid "Disenchant"
 msgstr "Désenchantement"
 
-#: ../powers/powers.txt:404
+#: ../powers/powers.txt:394
 msgid "Transform back to human"
 msgstr "Permet de reprendre une forme humaine"
 
-#: ../powers/powers.txt:409
+#: ../powers/powers.txt:399
 msgid "Fire Immunity"
 msgstr "Immunité au feu"
 
-#: ../powers/powers.txt:434
+#: ../powers/powers.txt:423
 msgid "Transform into Bat"
 msgstr "Transformer en chauve-souris"
 
-#: ../powers/powers.txt:439
+#: ../powers/powers.txt:428
 msgid "Turn into a bat"
 msgstr "Changer en chauve-souris"
 
-#: ../powers/powers.txt:444
+#: ../powers/powers.txt:433
 msgid "Transform into Snake"
 msgstr "Transformer en serpent"
 
-#: ../powers/powers.txt:449
+#: ../powers/powers.txt:438
 msgid "Turn into a spitting snake"
 msgstr "Changer en serpent cracheur"
 
-#: ../powers/powers.txt:454
+#: ../powers/powers.txt:443
 msgid "Spit Acid"
 msgstr "Cracher de l'acide"
 
-#: ../powers/powers.txt:476
+#: ../powers/powers.txt:465
 msgid "Spit Fire"
 msgstr "Cracher du feu"
 
-#: ../powers/powers.txt:497
+#: ../powers/powers.txt:486
 msgid "Transform into Ghost"
 msgstr "Transformer en fantôme"
 
-#: ../powers/powers.txt:502
+#: ../powers/powers.txt:491
 msgid "Turn into a ghost"
 msgstr "Changer en fantôme"
 
-#: ../powers/powers.txt:517
+#: ../powers/powers.txt:506
 msgid "Transform into Juggernaut"
 msgstr "Transformer en Fléau"
 
-#: ../powers/powers.txt:523
+#: ../powers/powers.txt:512
 msgid "Turn into a powerful knight for a short time"
 msgstr "Changer en un guerrier puissant pour un court instant"
 
-#: ../powers/powers.txt:528
+#: ../powers/powers.txt:517
 msgid "Transform into Squirrel"
 msgstr "Transformer en écureuil"
 
-#: ../powers/powers.txt:533
+#: ../powers/powers.txt:522
 msgid "Turn into a squirrel"
 msgstr "Changer en écureuil"
-
-#: ../engine/elements.txt:2
-msgid "fire"
-msgstr "feu"
 
 #: ../engine/elements.txt:3
 msgid "Fire Resistance"
 msgstr "Résistance au feu"
 
-#: ../engine/elements.txt:6
-msgid "ice"
-msgstr "glace"
-
 #: ../engine/elements.txt:7
 msgid "Ice Resistance"
 msgstr "Résistance à la glace"
 
-#: ../engine/elements.txt:10
-msgid "earth"
-msgstr "terre"
-
 #: ../engine/elements.txt:11
 msgid "Earth Resistance"
 msgstr "Résistance à la terre"
-
-#: ../engine/elements.txt:14
-msgid "wind"
-msgstr "vent"
 
 #: ../engine/elements.txt:15
 msgid "Wind Resistance"
@@ -435,6 +416,14 @@ msgstr "Caméléon"
 #: ../engine/titles.txt:30
 msgid "Girl"
 msgstr "Fille"
+
+#: ../engine/primary_stats.txt:3
+msgid "Physical"
+msgstr ""
+
+#: ../engine/primary_stats.txt:7
+msgid "Mental"
+msgstr ""
 
 #: ../enemies/archer.txt:1
 msgid "Cultist Archer"
@@ -532,35 +521,35 @@ msgstr "Chauve-souris venimeuse"
 msgid "Zalkaz, Bane of Laurelia"
 msgstr "Zalkaz, peste de Laurelia"
 
-#: ../maps/barracks.txt:8
+#: ../maps/barracks.txt:9
 msgid "Barracks"
 msgstr "Baraquements"
 
-#: ../maps/basement1.txt:6
+#: ../maps/basement1.txt:9
 msgid "Secret Basement"
 msgstr "Base secrète"
 
-#: ../maps/basement3.txt:8
+#: ../maps/basement3.txt:9
 msgid "Secret Cavern"
 msgstr "Caverne secrète"
 
-#: ../maps/basement3.txt:222
+#: ../maps/basement3.txt:227
 msgid "Chest"
 msgstr "Coffre"
 
-#: ../maps/basement4.txt:8
+#: ../maps/basement4.txt:9
 msgid "Hidden Waterway"
 msgstr "Canal caché"
 
-#: ../maps/basement4.txt:202
+#: ../maps/basement4.txt:203
 msgid "You found the switch key in a barrel!"
 msgstr "Vous avez trouvé la clé dans le tonneau !"
 
-#: ../maps/basement4.txt:204
+#: ../maps/basement4.txt:206
 msgid "Suspicious Barrel"
 msgstr "Tonneau bizarre"
 
-#: ../maps/basement4.txt:225
+#: ../maps/basement4.txt:229
 msgid "An empty chest!"
 msgstr "Un coffre vide !"
 
@@ -572,352 +561,311 @@ msgstr "Il y a un trou en forme de clé dans ce rocher."
 msgid "Strange Rock"
 msgstr "Rocher étrange"
 
-#: ../maps/basement6.txt:206
-msgid ""
-"\"Leftover material from blasting is unstable due to cave-ins!  Do not "
-"approach!\""
-msgstr ""
-"« Restes d'explosion instables risquant de s'effondrer ! Ne pas approcher ! »"
+#: ../maps/basement6.txt:217
+msgid "\"Leftover material from blasting is unstable due to cave-ins!  Do not approach!\""
+msgstr "« Restes d'explosion instables risquant de s'effondrer ! Ne pas approcher ! »"
 
-#: ../maps/basement6.txt:207
+#: ../maps/basement6.txt:219
 msgid "Sign"
 msgstr "Panneau"
 
-#: ../maps/basement7.txt:8
+#: ../maps/basement7.txt:9
 msgid "Sewer"
 msgstr "Égout"
 
-#: ../maps/basement7.txt:202
+#: ../maps/basement7.txt:203
 msgid "FENCES ARE FOR YOUR PROTECTION.  DO NOT OPEN GATES."
 msgstr "GRILLES PLACÉES POUR VOTRE PROTECTION.  NE PAS OUVRIR LES GRILLES."
 
-#: ../maps/basement7.txt:203
+#: ../maps/basement7.txt:205
 msgid "Signpost"
 msgstr "Poteau indicateur"
 
-#: ../maps/basement7.txt:211
+#: ../maps/basement7.txt:213
 msgid "There is a strange groove in this rock"
 msgstr "Cette roche porte une rainure étrange"
 
-#: ../maps/basement8.txt:6
+#: ../maps/basement8.txt:9
 msgid "Sanctuary"
 msgstr "Sanctuaire"
 
-#: ../maps/basement8.txt:207
+#: ../maps/basement8.txt:218
 msgid "You must defeat your shadow!"
 msgstr "Vous devez battre votre ombre !"
 
-#: ../maps/basement8.txt:210
+#: ../maps/basement8.txt:222
 msgid "Fountain"
 msgstr "Fontaine"
 
-#: ../maps/basementa.txt:213
+#: ../maps/basementa.txt:215
 msgid "The switch key fits into the hole in this rock!"
 msgstr "La clé rentre dans le trou de ce rocher !"
 
-#: ../maps/basementa.txt:229
-msgid ""
-"It has been a long journey from Castle Hestian, but we have finally found a "
-"safe glade away from prying eyes.  We shall found our village here, among "
-"the laurel trees."
-msgstr ""
-"Ce fût un long voyage depuis le château Hestian, mais vous avez enfin trouvé "
-"une clairière sure, loin des regards accusateurs. On y trouve notre village, "
-"entre les lauriers."
+#: ../maps/basementa.txt:233
+msgid "It has been a long journey from Castle Hestian, but we have finally found a safe glade away from prying eyes.  We shall found our village here, among the laurel trees."
+msgstr "Ce fût un long voyage depuis le château Hestian, mais vous avez enfin trouvé une clairière sure, loin des regards accusateurs. On y trouve notre village, entre les lauriers."
 
-#: ../maps/basementa.txt:230
+#: ../maps/basementa.txt:235
 msgid "Dusty Diary"
 msgstr "Journal intime poussiéreux"
 
-#: ../maps/basementa.txt:238
-msgid ""
-"It has been a hundred years now since King Hestian's decree to burn all the "
-"\"skinchangers.\"  We must go into hiding or he'll destroy us all."
-msgstr ""
-"Cela fait un siècle maintenant que le décret du roi Hestian demande de "
-"brûler tous les «change-formes». Nous devons nous cacher, ou il nous "
-"détruira tous."
+#: ../maps/basementa.txt:243
+msgid "It has been a hundred years now since King Hestian's decree to burn all the \"skinchangers.\"  We must go into hiding or he'll destroy us all."
+msgstr "Cela fait un siècle maintenant que le décret du roi Hestian demande de brûler tous les «change-formes». Nous devons nous cacher, ou il nous détruira tous."
 
-#: ../maps/basementa.txt:239
+#: ../maps/basementa.txt:245
 msgid "Moldy Diary"
 msgstr "Journal intime moisi"
 
-#: ../maps/basementa.txt:247
-msgid ""
-"King Hestian will not let us live in the open unless we share with him the "
-"secret of immortality.  If only we actually held that secret, as he believes!"
-msgstr ""
-"Le roi Hestian ne nous laissera pas en paix avant que nous ne lui donnions "
-"le secret de l'immortalité. Si seulement nous pouvions avoir ce secret comme "
-"il le croit !"
+#: ../maps/basementa.txt:253
+msgid "King Hestian will not let us live in the open unless we share with him the secret of immortality.  If only we actually held that secret, as he believes!"
+msgstr "Le roi Hestian ne nous laissera pas en paix avant que nous ne lui donnions le secret de l'immortalité. Si seulement nous pouvions avoir ce secret comme il le croit !"
 
-#: ../maps/basementa.txt:248
+#: ../maps/basementa.txt:255
 msgid "Yellowed Diary"
 msgstr "Journal intime jauni"
 
-#: ../maps/basementb.txt:8
+#: ../maps/basementb.txt:9
 msgid "Underground Lake"
 msgstr "Lac sous-terrain"
 
-#: ../maps/basementb.txt:210
+#: ../maps/basementb.txt:212
 msgid "Ambushed!"
 msgstr "Embusqué !"
 
-#: ../maps/castle1.txt:6
+#: ../maps/castle1.txt:9
 msgid "Castle Entry"
 msgstr "Entrée du château"
 
-#: ../maps/castle2.txt:8
+#: ../maps/castle2.txt:9
 msgid "Castle Atrium"
 msgstr "Atrium du château"
 
-#: ../maps/castle3.txt:6
+#: ../maps/castle3.txt:9
 msgid "Castle Hall"
 msgstr "Hall du château"
 
-#: ../maps/castle4.txt:8
+#: ../maps/castle4.txt:9
 msgid "Castle Basement"
 msgstr "Cave du château"
 
-#: ../maps/castle5.txt:229
+#: ../maps/castle5.txt:251
 msgid "Violent bombs ahead!"
 msgstr "Explosions violentes devant !"
 
-#: ../maps/castle5.txt:236
+#: ../maps/castle5.txt:259
 msgid "Destroy them from afar to defuse them!"
 msgstr "Détruisez-les à distance pour les désamorcer !"
 
-#: ../maps/castle6.txt:8
+#: ../maps/castle6.txt:9
 msgid "Castle Balcony"
 msgstr "Balcon du château"
 
-#: ../maps/castle6.txt:210
+#: ../maps/castle6.txt:212
 msgid "TRAPPED!"
 msgstr "PIÉGÉ !"
 
-#: ../maps/castlea.txt:8
+#: ../maps/castlea.txt:9
 msgid "Castle Ballroom"
 msgstr "Salle de bal du château"
 
-#: ../maps/castleb.txt:8
+#: ../maps/castleb.txt:9
 msgid "Castle Sewer"
 msgstr "Égout du château"
 
-#: ../maps/castlepath.txt:6
+#: ../maps/castlepath.txt:9
 msgid "Castle Path"
 msgstr "Chemin du château"
 
-#: ../maps/cavern.txt:8
+#: ../maps/cavern.txt:9
 msgid "Cavern"
 msgstr "Caverne"
 
-#: ../maps/cavern.txt:440
+#: ../maps/cavern.txt:441
 msgid "Drag to actionbar to use."
 msgstr "Placer-le sur la barre d'action pour l'utiliser."
 
-#: ../maps/cavern.txt:492
+#: ../maps/cavern.txt:499
 msgid "Carrots"
 msgstr "Carottes"
 
-#: ../maps/cavern.txt:528
+#: ../maps/cavern.txt:536
 msgid "Unmarked Grave"
 msgstr "Tombe anonyme"
 
-#: ../maps/church.txt:8
+#: ../maps/church.txt:9
 msgid "Church"
 msgstr "Église"
 
-#: ../maps/daphneshouse.txt:6
+#: ../maps/daphneshouse.txt:9
 msgid "Daphne's House"
 msgstr "Maison de Daphné"
 
-#: ../maps/eldershouse.txt:6
+#: ../maps/eldershouse.txt:9
 msgid "Elder's House"
 msgstr "Maison de l'ancien"
 
-#: ../maps/eldershouse.txt:112
+#: ../maps/eldershouse.txt:123
 msgid "A secret passage!"
 msgstr "Un passage secret !"
 
-#: ../maps/glade.txt:8
+#: ../maps/glade.txt:9
 msgid "Glade"
 msgstr "Clairière"
 
-#: ../maps/granary.txt:6
+#: ../maps/granary.txt:9
 msgid "Granary"
 msgstr "Grenier"
 
-#: ../maps/inn1st.txt:8
+#: ../maps/inn1st.txt:9
 msgid "Inn, 1st Floor"
 msgstr "Auberge, premier étage"
 
-#: ../maps/inn2nd.txt:6
+#: ../maps/inn2nd.txt:9
 msgid "Inn, 2nd Floor"
 msgstr "Auberge, deuxième étage"
 
-#: ../maps/laurelia.txt:8
+#: ../maps/laurelia.txt:9
 msgid "Laurelia"
 msgstr ""
 
-#: ../maps/laurelia.txt:827
+#: ../maps/laurelia.txt:840
 msgid "You've fallen in a hole!"
 msgstr "Vous êtes tombé dans un trou !"
 
-#: ../maps/library.txt:8
+#: ../maps/library.txt:9
 msgid "Library"
 msgstr "Bibliothèque"
 
-#: ../maps/library.txt:94
-msgid ""
-"p.32: \"Ghosts, being incorporeal, are nearly immune to heat and fire.\""
-msgstr ""
-"p.32 : « Les fantômes étant incorporels, ils sont pratiquement immunisés "
-"contre la chaleur et le feu »"
+#: ../maps/library.txt:96
+msgid "p.32: \"Ghosts, being incorporeal, are nearly immune to heat and fire.\""
+msgstr "p.32 : « Les fantômes étant incorporels, ils sont pratiquement immunisés contre la chaleur et le feu »"
 
-#: ../maps/library.txt:95
+#: ../maps/library.txt:98
 msgid "On Ghosts"
 msgstr "À propos des fantômes"
 
-#: ../maps/library.txt:103
-msgid ""
-"p.1:  \"This small town is a seeming backwater.  However, nearly every one "
-"of it's citizens has the ability to polymorph into another creature.\"  "
-"Better put it back on the top shelf where the tourists can't find it."
-msgstr ""
-"p.1 : « Cette petite ville semble paisible au premier abord, mais presque "
-"tous ses habitants peuvent se transformer en une autre créature. » Il vaut "
-"mieux reposer ce livre sur l'étagère du haut où les touristes ne le "
-"trouveront pas."
+#: ../maps/library.txt:106
+msgid "p.1:  \"This small town is a seeming backwater.  However, nearly every one of it's citizens has the ability to polymorph into another creature.\"  Better put it back on the top shelf where the tourists can't find it."
+msgstr "p.1 : « Cette petite ville semble paisible au premier abord, mais presque tous ses habitants peuvent se transformer en une autre créature. » Il vaut mieux reposer ce livre sur l'étagère du haut où les touristes ne le trouveront pas."
 
-#: ../maps/library.txt:104
+#: ../maps/library.txt:108
 msgid "History of Laurelia"
 msgstr "Histoire de Laurelia"
 
-#: ../maps/library.txt:112
-msgid ""
-"p. 967: \"Zalkaz was constantly beset by paladins seeking to destroy him; he "
-"would eliminate each one by blotting out the light with hordes of bats.\""
-msgstr ""
-"p. 967 : « Zalkaz était constamment assailli par des paladins cherchant à le "
-"détruire, mais il les éliminait les uns après les autres en masquant la "
-"lumière avec des hordes de chauves-souris. »"
+#: ../maps/library.txt:116
+#, fuzzy
+msgid "p. 967: \"Zalkas was constantly beset by paladins seeking to destroy them; he would eliminate each one by blotting out the light with flocks of bats.\""
+msgstr "p. 967 : « Zalkaz était constamment assailli par des paladins cherchant à le détruire, mais il les éliminait les uns après les autres en masquant la lumière avec des hordes de chauves-souris. »"
 
-#: ../maps/library.txt:113
-msgid "Demonology"
+#: ../maps/library.txt:118
+#, fuzzy
+msgid "Deomonology"
 msgstr "Démonologie"
 
-#: ../maps/market.txt:6
+#: ../maps/market.txt:9
 msgid "Market"
 msgstr "Marché"
 
-#: ../maps/marketbasement.txt:6
+#: ../maps/marketbasement.txt:9
 msgid "Market Basement"
 msgstr "Cave du marché"
 
-#: ../maps/mountainpath.txt:5
+#: ../maps/mountainpath.txt:8
 msgid "Mountain Path"
 msgstr "Chemin de la montagne"
 
-#: ../maps/smallhouse.txt:6
+#: ../maps/smallhouse.txt:9
 msgid "Small House"
 msgstr "Petite maison"
 
-#: ../maps/smithy.txt:6
+#: ../maps/smithy.txt:9
 msgid "Smithy"
 msgstr "Forge"
 
-#: ../maps/snow1.txt:6
+#: ../maps/snow1.txt:9
 msgid "Snow Mountain"
 msgstr "Montagne enneigée"
 
-#: ../maps/snow1.txt:176
+#: ../maps/snow1.txt:189
 msgid "You need the Juggernaut Talisman to proceed!"
 msgstr "Il vous faut le talisman du Fléau pour continuer !"
 
-#: ../maps/snow4.txt:6
+#: ../maps/snow4.txt:9
 msgid "Mountain Cave"
 msgstr "Grotte"
 
-#: ../maps/snow6.txt:185
+#: ../maps/snow6.txt:198
 msgid "Bring ssssacrifices for Zalkaz here!"
 msgstr "Apportez les sssssacrifices de Zalkaz isssssi !"
 
-#: ../maps/snow7.txt:6
+#: ../maps/snow7.txt:9
 msgid "Zalkaz's Lair"
 msgstr "Repère de Zalkaz"
 
-#: ../maps/snow7.txt:226
+#: ../maps/snow7.txt:238
 msgid "You're home!"
 msgstr "Vous êtes comme chez vous !"
 
-#: ../maps/snow7.txt:241
+#: ../maps/snow7.txt:255
 msgid "Prepare to die!"
 msgstr "Préparez vous à mourir !"
 
-#: ../maps/snowa.txt:6
+#: ../maps/snowa.txt:9
 msgid "Mountain Mine"
 msgstr "Mine de la montagne"
 
-#: ../maps/snowa.txt:173
+#: ../maps/snowa.txt:184
 msgid "Empty..."
 msgstr "Vide..."
 
-#: ../maps/snowb.txt:6
+#: ../maps/snowb.txt:9
 msgid "Mountain Shop"
 msgstr "Magasin de la montagne"
 
-#: ../maps/snowc.txt:6
+#: ../maps/snowc.txt:9
 msgid "Safe Room"
 msgstr "Pièce sure"
 
-#: ../maps/tavern.txt:6
+#: ../maps/tavern.txt:9
 msgid "Tavern"
 msgstr "Taverne"
 
-#: ../maps/volcano1.txt:8
+#: ../maps/volcano1.txt:9
 msgid "Volcano"
 msgstr "Volcan"
 
-#: ../maps/volcano1.txt:185
+#: ../maps/volcano1.txt:190
 msgid "Locked Gate"
 msgstr "Portail verrouillé"
 
-#: ../maps/volcano2.txt:172
+#: ../maps/volcano2.txt:175
 msgid "Anvil"
 msgstr "Enclume"
 
-#: ../maps/volcano3.txt:170
-msgid "There might be a way to cross that small gap, but it looks deadly."
-msgstr ""
-"Il y a peut-être un passage pour traverser le petit espace, mais il semble "
-"mortel."
-
 #: ../maps/volcano3.txt:179
+msgid "There might be a way to cross that small gap, but it looks deadly."
+msgstr "Il y a peut-être un passage pour traverser le petit espace, mais il semble mortel."
+
+#: ../maps/volcano3.txt:190
 msgid "Lava River"
 msgstr "Rivière de lave"
 
-#: ../maps/volcano4.txt:185
-msgid ""
-"Someone has scrawled here: \"The fire skeleton's bombs killed my friend "
-"instantly!  If I wasn't a ghost already, I'd have died, too.\""
-msgstr ""
-"Quelqu'un a gravé ici : « les bombes du squelette de feu ont tué mon ami "
-"instantanément ! Si je n'étais pas déjà un fantôme, je serais mort moi "
-"aussi. »"
+#: ../maps/volcano4.txt:189
+msgid "Someone has scrawled here: \"The fire skeleton's bombs killed my friend instantly!  If I wasn't a ghost already, I'd have died, too.\""
+msgstr "Quelqu'un a gravé ici : « les bombes du squelette de feu ont tué mon ami instantanément ! Si je n'étais pas déjà un fantôme, je serais mort moi aussi. »"
 
-#: ../maps/volcano4.txt:187
+#: ../maps/volcano4.txt:192
 msgid "Altar"
 msgstr "Autel"
 
 #: ../quests/basement.txt:4
 msgid "Explore the strange basement you've found underneath the Elder's house."
-msgstr ""
-"Explorez l'étrange sous-sol que vous avez trouvé sous la maison de l'ancien."
+msgstr "Explorez l'étrange sous-sol que vous avez trouvé sous la maison de l'ancien."
 
 #: ../quests/basement.txt:9
 msgid "You've found a strange key, but what on earth could it be used for?"
-msgstr ""
-"Vous avez trouvé une étrange clé, mais à quoi diable peut-elle servir ?"
+msgstr "Vous avez trouvé une étrange clé, mais à quoi diable peut-elle servir ?"
 
 #: ../quests/basement.txt:14
 msgid "Speak with the ghost in the basement."
@@ -932,52 +880,28 @@ msgid "Find the Fairy Flower north of town, over the river."
 msgstr "Trouvez la fleur féerique au nord de la ville, après la rivière."
 
 #: ../quests/downahole.txt:13
-msgid ""
-"You found the Fairy Flower!  Now to bring it home to the Elder, and to "
-"explain what you saw in the cave."
-msgstr ""
-"Vous avez trouvé la fleur féerique ! Rapportez-la maintenant à la maison de "
-"l'ancien, et expliquez ce que vous avez vu dans la grotte."
+msgid "You found the Fairy Flower!  Now to bring it home to the Elder, and to explain what you saw in the cave."
+msgstr "Vous avez trouvé la fleur féerique ! Rapportez-la maintenant à la maison de l'ancien, et expliquez ce que vous avez vu dans la grotte."
 
 #: ../quests/juggernaut.txt:4
-msgid ""
-"You have been tasked with finding the Juggernaut Talisman.  Go east to find "
-"the first half in the volcano."
-msgstr ""
-"On vous a demandé de trouver le Talisman du Fléau. Allez à l'est pour "
-"trouver la première moitié dans le volcan."
+msgid "You have been tasked with finding the Juggernaut Talisman.  Go east to find the first half in the volcano."
+msgstr "On vous a demandé de trouver le Talisman du Fléau. Allez à l'est pour trouver la première moitié dans le volcan."
 
 #: ../quests/juggernaut.txt:9
-msgid ""
-"You have found the first half of the Juggernaut Talisman.  Go to the volcano "
-"to the west to find the second half."
-msgstr ""
-"Vous avez trouvé la première moitié du talisman du Fléau. Allez au volcan de "
-"l'ouest pour trouver la seconde moitié."
+msgid "You have found the first half of the Juggernaut Talisman.  Go to the volcano to the west to find the second half."
+msgstr "Vous avez trouvé la première moitié du talisman du Fléau. Allez au volcan de l'ouest pour trouver la seconde moitié."
 
 #: ../quests/juggernaut.txt:14
-msgid ""
-"You have found the 2nd half of the Juggernaut Talisman.  Bring it to the "
-"village elder to have him combine the halves."
-msgstr ""
-"Vous avez trouvé les deux moitiés du talisman du Fléau. Apportez-les à "
-"l'ancien du village pour qu'il les combine."
+msgid "You have found the 2nd half of the Juggernaut Talisman.  Bring it to the village elder to have him combine the halves."
+msgstr "Vous avez trouvé les deux moitiés du talisman du Fléau. Apportez-les à l'ancien du village pour qu'il les combine."
 
 #: ../quests/snowmountain.txt:4
-msgid ""
-"Scale Snow Mountain, south of Laurelia, to put an end to Zalkaz once and for "
-"all."
-msgstr ""
-"Escaladez la montagne enneigée au sud de Laurelia, pour mettre fin à Zalkaz "
-"une bonne fois pour toute."
+msgid "Scale Snow Mountain, south of Laurelia, to put an end to Zalkaz once and for all."
+msgstr "Escaladez la montagne enneigée au sud de Laurelia, pour mettre fin à Zalkaz une bonne fois pour toute."
 
 #: ../quests/snowmountain.txt:8
-msgid ""
-"Leave Zalkaz's Lair, and return to Laurelia to talk to the townsfolk.  "
-"Congratulations, you've beaten Laurelia's Polymorphable Citizens!"
-msgstr ""
-"Quittez le repaire de Zalkaz et retournez parler aux habitants de Laurelia. "
-"Bravo, vous avez vaincu les citoyens changeforme de Laurelia !"
+msgid "Leave Zalkaz's Lair, and return to Laurelia to talk to the townsfolk.  Congratulations, you've beaten Laurelia's Polymorphable Citizens!"
+msgstr "Quittez le repaire de Zalkaz et retournez parler aux habitants de Laurelia. Bravo, vous avez vaincu les citoyens changeforme de Laurelia !"
 
 #: ../npcs/apprentice.txt:1
 msgid "Wot the Apprentice"
@@ -996,33 +920,20 @@ msgid "Good morning Wot!  Clara working you hard?"
 msgstr "Bonjour, Wot ! Clara te fait travailler dur ?"
 
 #: ../npcs/apprentice.txt:11
-msgid ""
-"It's miserable.  I've forged three swords and two helms this morning, but "
-"she says it's still not enough."
-msgstr ""
-"C'est terrible. J'ai forgé trois épées et deux casques ce matin, mais ce "
-"n'est pas encore assez pour elle."
+msgid "It's miserable.  I've forged three swords and two helms this morning, but she says it's still not enough."
+msgstr "C'est terrible. J'ai forgé trois épées et deux casques ce matin, mais ce n'est pas encore assez pour elle."
 
 #: ../npcs/apprentice.txt:12
-msgid ""
-"Keep at it!  One of these days, maybe you'll be as good a smith as she is!"
+msgid "Keep at it!  One of these days, maybe you'll be as good a smith as she is!"
 msgstr "Courage ! Un de ces jours, tu seras aussi bon forgeron qu'elle !"
 
 #: ../npcs/apprentice.txt:13
-msgid ""
-"I hope so, but I suppose I can always join the King's knights if this "
-"doesn't pan out."
-msgstr ""
-"J'espère, mais je suppose que je peux toujours rejoindre les chevaliers du "
-"roi si jamais ça ne marche pas."
+msgid "I hope so, but I suppose I can always join the King's knights if this doesn't pan out."
+msgstr "J'espère, mais je suppose que je peux toujours rejoindre les chevaliers du roi si jamais ça ne marche pas."
 
 #: ../npcs/apprentice.txt:14
-msgid ""
-"Oh, don't be silly - you couldn't leave this village.  I've seen how Waka "
-"looks at you!"
-msgstr ""
-"Oh, ne sois pas bête. Tu ne pourrais pas quitter ce village. J'ai vu comment "
-"Waka te regarde !"
+msgid "Oh, don't be silly - you couldn't leave this village.  I've seen how Waka looks at you!"
+msgstr "Oh, ne sois pas bête. Tu ne pourrais pas quitter ce village. J'ai vu comment Waka te regarde !"
 
 #: ../npcs/apprentice.txt:15
 msgid "Wait, what?  She's never said anything!"
@@ -1065,75 +976,44 @@ msgid "Death of the Shade"
 msgstr "La mort des Ombres"
 
 #: ../npcs/basementghost.txt:10
-msgid ""
-"Ah, I can rest now...  if you wish, read the books beside me for history of "
-"these ruins..."
-msgstr ""
-"Ah, je peux reposer maintenant... si vous le souhaitez, vous pouvez consulter "
-"les livres derrière moi pour découvrir l'histoire de ces ruines..."
+msgid "Ah, I can rest now...  if you wish, read the books beside me for history of these ruins..."
+msgstr "Ah, je peux reposer maintenant... si vous le souhaitez, vous pouvez consulter les livres derrière moi pour découvrir l'histoire de ces ruines..."
 
 #: ../npcs/basementghost.txt:13
 msgid "The Shade"
 msgstr "Les Ombres"
 
 #: ../npcs/basementghost.txt:15
-msgid ""
-"I cannot rest!  Look into the fountain...  and defeat your shadow there!"
+msgid "I cannot rest!  Look into the fountain...  and defeat your shadow there!"
 msgstr "Je ne peux reposer ! Fouillez la fontaine... et vainquez votre ombre !"
 
 #: ../npcs/basementghost.txt:25
-msgid ""
-"These ruins have been here a long time, before the founding of Laurelia."
-msgstr ""
-"Ces ruines sont ici depuis longtemps, avant même que Laurelia ne soit fondée."
+msgid "These ruins have been here a long time, before the founding of Laurelia."
+msgstr "Ces ruines sont ici depuis longtemps, avant même que Laurelia ne soit fondée."
 
 #: ../npcs/basementghost.txt:26
-msgid ""
-"During the dark times when we the Kingdom was ruled by King Hestian, we fled "
-"here, and built a city in the light."
-msgstr ""
-"Durant les ages sombres du règne du roi Hestian, nous avons fuit ici, et nous "
-"avons construit une cité dans la lumière."
+msgid "During the dark times when we the Kingdom was ruled by King Hestian, we fled here, and built a city in the light."
+msgstr "Durant les ages sombres du règne du roi Hestian, nous avons fuit ici, et nous avons construit une cité dans la lumière."
 
 #: ../npcs/basementghost.txt:27
-msgid ""
-"Some people, including the sorcerer Zalkaz, created warrens under the city, "
-"in case the mad King's soldiers found us."
-msgstr ""
-"Le sorcier Zalkaz et quelques autres ont construit des galeries souterraines "
-"sous la ville, au cas où les soldats du roi fou nous trouveraient."
+msgid "Some people, including the sorcerer Zalkaz, created warrens under the city, in case the mad King's soldiers found us."
+msgstr "Le sorcier Zalkaz et quelques autres ont construit des galeries souterraines sous la ville, au cas où les soldats du roi fou nous trouveraient."
 
 #: ../npcs/basementghost.txt:28
-msgid ""
-"Zalkaz conducted experiments in the darkness while the other Laurelians "
-"remained in the light."
-msgstr ""
-"Zalkaz a fait des expériences dans l'ombre tandis que les autres Lauréliens "
-"restaient à la lumière."
+msgid "Zalkaz conducted experiments in the darkness while the other Laurelians remained in the light."
+msgstr "Zalkaz a fait des expériences dans l'ombre tandis que les autres Lauréliens restaient à la lumière."
 
 #: ../npcs/basementghost.txt:29
-msgid ""
-"After the mad King died, he sent guards to root our Zalkaz, with the "
-"assistance of the Laurelian populace."
-msgstr ""
-"À la mort du roi fou, il a lancé des soldats pour fonder Zalkaz, avec l'aide "
-"du peuple de Laurelian."
+msgid "After the mad King died, he sent guards to root our Zalkaz, with the assistance of the Laurelian populace."
+msgstr "À la mort du roi fou, il a lancé des soldats pour fonder Zalkaz, avec l'aide du peuple de Laurelian."
 
 #: ../npcs/basementghost.txt:30
-msgid ""
-"The skeletons you see down here are the remainder of his frightening "
-"experiments."
-msgstr ""
-"Les squelettes que vous voyez ici sont les restes de ses effroyables "
-"expériences."
+msgid "The skeletons you see down here are the remainder of his frightening experiments."
+msgstr "Les squelettes que vous voyez ici sont les restes de ses effroyables expériences."
 
 #: ../npcs/basementghost.txt:31
-msgid ""
-"Take this talisman, which has a piece of your shadow bound to it.  You "
-"should now be able to remain humanoid while incorporeal."
-msgstr ""
-"Prenez ce talisman, sur lequel est serti un morceau de votre ombre. Vous "
-"devriez maintenant parvenir à rester humanoïde lorsque vous serez incorporel."
+msgid "Take this talisman, which has a piece of your shadow bound to it.  You should now be able to remain humanoid while incorporeal."
+msgstr "Prenez ce talisman, sur lequel est serti un morceau de votre ombre. Vous devriez maintenant parvenir à rester humanoïde lorsque vous serez incorporel."
 
 #: ../npcs/blacksmith.txt:1
 msgid "Clara the Blacksmith"
@@ -1148,9 +1028,7 @@ msgid "Ah, so you need a better sword to beat the Evil One?"
 msgstr "Ah, vous cherchez une meilleure épée pour battre le Maléfique ?"
 
 #: ../npcs/blacksmith.txt:13
-msgid ""
-"I've got this one that I made last night, but I'm feeling pretty attached to "
-"it."
+msgid "I've got this one that I made last night, but I'm feeling pretty attached to it."
 msgstr "J'ai celle-ci. Je l'ai faite la nuit passée, et je l'aime beaucoup."
 
 #: ../npcs/blacksmith.txt:14
@@ -1174,51 +1052,32 @@ msgid "Didn't you say you just finished forging it last night?"
 msgstr "Vous avez dit que vous l'avez forgée la nuit passée ?"
 
 #: ../npcs/blacksmith.txt:22
-msgid ""
-"No!  Of course not!  It's the Ancient Hero's sword.  I just finished "
-"polishing it last night."
-msgstr ""
-"Non ! Bien sûr que non ! C'est l'épée de l'ancien héros. J'ai fini de "
-"l'astiquer la nuit passée."
+msgid "No!  Of course not!  It's the Ancient Hero's sword.  I just finished polishing it last night."
+msgstr "Non ! Bien sûr que non ! C'est l'épée de l'ancien héros. J'ai fini de l'astiquer la nuit passée."
 
 #: ../npcs/blacksmith.txt:23
-msgid ""
-"You were going to try to sell it to the next nobleman who comes through "
-"town, weren't you?"
-msgstr ""
-"Vous alliez tenter de la vendre au prochain noble de passage en ville, n'est "
-"ce pas ?"
+msgid "You were going to try to sell it to the next nobleman who comes through town, weren't you?"
+msgstr "Vous alliez tenter de la vendre au prochain noble de passage en ville, n'est ce pas ?"
 
 #: ../npcs/blacksmith.txt:24
 msgid "Could be."
 msgstr "Peut-être bien."
 
 #: ../npcs/blacksmith.txt:29
-msgid ""
-"Good morning!  I just finished some work on a new sword last night, and I'm "
-"showing it off to anyone who comes by."
-msgstr ""
-"Bonjour ! J'ai justement fini de travailler à une nouvelle épée la nuit "
-"dernière, et depuis, je la montre à tous ceux qui passent."
+msgid "Good morning!  I just finished some work on a new sword last night, and I'm showing it off to anyone who comes by."
+msgstr "Bonjour ! J'ai justement fini de travailler à une nouvelle épée la nuit dernière, et depuis, je la montre à tous ceux qui passent."
 
 #: ../npcs/blacksmith.txt:32
 msgid "The End"
 msgstr "La fin"
 
 #: ../npcs/blacksmith.txt:34
-msgid ""
-"Daphne, you've destroyed Zalkaz!  I'm proud of you for putting that sword to "
-"good use."
-msgstr ""
-"Daphné, tu a détruit Zalkaz ! Je suis si fière de la façon dont tu as "
-"utilisée cette épée."
+msgid "Daphne, you've destroyed Zalkaz!  I'm proud of you for putting that sword to good use."
+msgstr "Daphné, tu a détruit Zalkaz ! Je suis si fière de la façon dont tu as utilisée cette épée."
 
 #: ../npcs/blacksmith.txt:35
-msgid ""
-"So that means I'll get a refund?  Come on, this is like free advertising."
-msgstr ""
-"Ça veut dire que j'ai droit à une réduction ? Allez, je te fait de la "
-"publicité gratuite."
+msgid "So that means I'll get a refund?  Come on, this is like free advertising."
+msgstr "Ça veut dire que j'ai droit à une réduction ? Allez, je te fait de la publicité gratuite."
 
 #: ../npcs/blacksmith.txt:36
 msgid "No way!  But I'll tell you what, I'll cook you dinner tonight."
@@ -1234,9 +1093,7 @@ msgstr "Bonsoir ! Avez-vous goûté à ma dernière création ?"
 
 #: ../npcs/brewmaster.txt:10
 msgid "I promise tonight's oatmeal stout is the best batch I've ever made."
-msgstr ""
-"Je vous assure que la fournée de gruau de ce soir est la meilleure que j'ai "
-"jamais faite."
+msgstr "Je vous assure que la fournée de gruau de ce soir est la meilleure que j'ai jamais faite."
 
 #: ../npcs/brewmaster.txt:15
 msgid "Let's raise a glass to your good health!"
@@ -1255,12 +1112,8 @@ msgid "Slow day?"
 msgstr "Comment ça va ?"
 
 #: ../npcs/captain.txt:11
-msgid ""
-"Very slow...  that new recruit keeps getting hit by the combat dummy, "
-"though, so that's good for a laugh."
-msgstr ""
-"Calmement... à part cette jeune recrue qui se blesse sans cesse sur le "
-"mannequin d'entraînement. C'est tellement drôle !"
+msgid "Very slow...  that new recruit keeps getting hit by the combat dummy, though, so that's good for a laugh."
+msgstr "Calmement... à part cette jeune recrue qui se blesse sans cesse sur le mannequin d'entraînement. C'est tellement drôle !"
 
 #: ../npcs/cleric.txt:1
 msgid "Altea, Keeper of the Faith"
@@ -1287,9 +1140,7 @@ msgid "Hey Daphne, out and about today?"
 msgstr ""
 
 #: ../npcs/daughter.txt:10
-msgid ""
-"It's beautiful, plus I have a couple errands to do for Elder Thomas.  Will "
-"you be coming to my sixteenth birthday ceremony tomorrow?"
+msgid "It's beautiful, plus I have a couple errands to do for Elder Thomas.  Will you be coming to my sixteenth birthday ceremony tomorrow?"
 msgstr ""
 
 #: ../npcs/daughter.txt:11
@@ -1313,9 +1164,7 @@ msgid "Deacon Ray"
 msgstr ""
 
 #: ../npcs/deacon.txt:9
-msgid ""
-"Hi Daphne, it's bee a while.  You don't see anything weird around here, do "
-"you?"
+msgid "Hi Daphne, it's bee a while.  You don't see anything weird around here, do you?"
 msgstr ""
 
 #: ../npcs/deacon.txt:10
@@ -1323,9 +1172,7 @@ msgid "Should I?"
 msgstr ""
 
 #: ../npcs/deacon.txt:11
-msgid ""
-"No, uh, no.  It's just that there's been weird sounds from the graveyard at "
-"night lately."
+msgid "No, uh, no.  It's just that there's been weird sounds from the graveyard at night lately."
 msgstr ""
 
 #: ../npcs/deacon.txt:12
@@ -1369,9 +1216,7 @@ msgid "So, what do I do now with this thing?"
 msgstr ""
 
 #: ../npcs/elder.txt:32
-msgid ""
-"Go south to the Snow Mountain.  The ancient texts say that is where Zalkaz "
-"makes his lair."
+msgid "Go south to the Snow Mountain.  The ancient texts say that is where Zalkaz makes his lair."
 msgstr ""
 
 #: ../npcs/elder.txt:33
@@ -1383,15 +1228,11 @@ msgid "Of course not!  He's a bat!  Be prepared for anything."
 msgstr ""
 
 #: ../npcs/elder.txt:42
-msgid ""
-"You've found the first half of the Talisman, wonderful!  The second half is "
-"in a ruined castle to the west."
+msgid "You've found the first half of the Talisman, wonderful!  The second half is in a ruined castle to the west."
 msgstr ""
 
 #: ../npcs/elder.txt:43
-msgid ""
-"You may also want to speak with Robin the Hunter on your way over.  I told "
-"him to give you some of his equipment."
+msgid "You may also want to speak with Robin the Hunter on your way over.  I told him to give you some of his equipment."
 msgstr ""
 
 #: ../npcs/elder.txt:52
@@ -1407,17 +1248,11 @@ msgid "Snarks?  Grumpkins?"
 msgstr ""
 
 #: ../npcs/elder.txt:55
-msgid ""
-"No, I just, you know, unleashed an ancient evil.  Thanks a bunch for the "
-"warning."
+msgid "No, I just, you know, unleashed an ancient evil.  Thanks a bunch for the warning."
 msgstr ""
 
 #: ../npcs/elder.txt:56
-msgid ""
-"Ah, I hoped that I would never have to tell you.  You see, I never told you "
-"about your parents.  You weren't actually left on my doorstep - the house "
-"you live in was theirs, before they left to seal away the ancient evil "
-"Zalkaz."
+msgid "Ah, I hoped that I would never have to tell you.  You see, I never told you about your parents.  You weren't actually left on my doorstep - the house you live in was theirs, before they left to seal away the ancient evil Zalkaz."
 msgstr ""
 
 #: ../npcs/elder.txt:57
@@ -1425,21 +1260,15 @@ msgid "When in the heck were you planning on letting me know the truth!?"
 msgstr ""
 
 #: ../npcs/elder.txt:58
-msgid ""
-"Tomorrow, after your birthday party, I promise!  They died nobly, but now, "
-"it falls to you to finish their work."
+msgid "Tomorrow, after your birthday party, I promise!  They died nobly, but now, it falls to you to finish their work."
 msgstr ""
 
 #: ../npcs/elder.txt:59
-msgid ""
-"You must find what they never could: both halves of the Juggernaut "
-"Talisman.  With the Talisman, you can seal away the Ancient Evil forever!"
+msgid "You must find what they never could: both halves of the Juggernaut Talisman.  With the Talisman, you can seal away the Ancient Evil forever!"
 msgstr ""
 
 #: ../npcs/elder.txt:60
-msgid ""
-"Go east, and use your bat talisman to fly over the ruined bridge, and seek "
-"the first half of the Juggernaut Talisman in the volcano."
+msgid "Go east, and use your bat talisman to fly over the ruined bridge, and seek the first half of the Juggernaut Talisman in the volcano."
 msgstr ""
 
 #: ../npcs/elder.txt:63
@@ -1451,9 +1280,7 @@ msgid "Have you found the Fairy Flower yet?"
 msgstr ""
 
 #: ../npcs/elder.txt:72
-msgid ""
-"Ah, Daphne!  It's good to see you this morning.  You turn sixteen tomorrow, "
-"but it seems like just yesterday that I found you in a basket at my door."
+msgid "Ah, Daphne!  It's good to see you this morning.  You turn sixteen tomorrow, but it seems like just yesterday that I found you in a basket at my door."
 msgstr ""
 
 #: ../npcs/elder.txt:73
@@ -1461,9 +1288,7 @@ msgid "Sixteen long years of doing pointless chores for you, Thomas."
 msgstr ""
 
 #: ../npcs/elder.txt:74
-msgid ""
-"Come now, you wound an old man!  Tomorrow you shall be released from my "
-"endless tasks, but today, I need you to do one more."
+msgid "Come now, you wound an old man!  Tomorrow you shall be released from my endless tasks, but today, I need you to do one more."
 msgstr ""
 
 #: ../npcs/elder.txt:75
@@ -1471,26 +1296,19 @@ msgid "Joy of joys.  Where are you sending me today?"
 msgstr ""
 
 #: ../npcs/elder.txt:76
-msgid ""
-"I need you to find the Fairy Flower in the forests.  It's the last "
-"ingredient I need to create the wreath to hang in your new home."
+msgid "I need you to find the Fairy Flower in the forests.  It's the last ingredient I need to create the wreath to hang in your new home."
 msgstr ""
 
 #: ../npcs/elder.txt:77
-msgid ""
-"A housewarming present I have to fetch myself?  Awww, you shouldn't have."
+msgid "A housewarming present I have to fetch myself?  Awww, you shouldn't have."
 msgstr ""
 
 #: ../npcs/elder.txt:78
-msgid ""
-"Ha!  You're my girl.  The Fairy Flower is found north of town, across the "
-"river."
+msgid "Ha!  You're my girl.  The Fairy Flower is found north of town, across the river."
 msgstr ""
 
 #: ../npcs/elder.txt:83
-msgid ""
-"I know your parents will rest much better knowing that their work is "
-"finished."
+msgid "I know your parents will rest much better knowing that their work is finished."
 msgstr ""
 
 #: ../npcs/elder.txt:84
@@ -1498,10 +1316,7 @@ msgid "May they rest in peace...  Thank you, Thomas."
 msgstr ""
 
 #: ../npcs/elder.txt:85
-msgid ""
-"Be wary, though.  Zalkaz is but one of the many evils who threaten our "
-"world.  I hope that someday you can venture beyond Laurelia, where the world "
-"may have use of your sword once more."
+msgid "Be wary, though.  Zalkaz is but one of the many evils who threaten our world.  I hope that someday you can venture beyond Laurelia, where the world may have use of your sword once more."
 msgstr ""
 
 #: ../npcs/elder.txt:86
@@ -1517,9 +1332,7 @@ msgid "Daphne, I'm projecting to you via telepathy!"
 msgstr ""
 
 #: ../npcs/eldershade.txt:10
-msgid ""
-"I was reading my brother's ancient scrolls, and discovered that Zalkaz has "
-"the power to summon hordes of bats."
+msgid "I was reading my brother's ancient scrolls, and discovered that Zalkaz has the power to summon hordes of bats."
 msgstr ""
 
 #: ../npcs/eldershade.txt:11
@@ -1527,9 +1340,7 @@ msgid "Do not face him without polymorphing into a juggernaut first!"
 msgstr ""
 
 #: ../npcs/eldershade.txt:12
-msgid ""
-"Avoid him when he summons the bats, and then use your Holy Sword power to "
-"knock them all out in one swing of your sword!"
+msgid "Avoid him when he summons the bats, and then use your Holy Sword power to knock them all out in one swing of your sword!"
 msgstr ""
 
 #: ../npcs/eldershade.txt:13
@@ -1541,9 +1352,7 @@ msgid "Howard the Gardener"
 msgstr ""
 
 #: ../npcs/gardener.txt:11
-msgid ""
-"Oh, I have some fresh carrots and watermelons, they're good for what ails "
-"you!"
+msgid "Oh, I have some fresh carrots and watermelons, they're good for what ails you!"
 msgstr ""
 
 #: ../npcs/gardener.txt:16
@@ -1551,8 +1360,7 @@ msgid "Thanks for saving the village!"
 msgstr ""
 
 #: ../npcs/gardener.txt:17
-msgid ""
-"Now that we're so famous, maybe soon some more vendors will come to town."
+msgid "Now that we're so famous, maybe soon some more vendors will come to town."
 msgstr ""
 
 #: ../npcs/ghost.txt:1
@@ -1580,9 +1388,7 @@ msgid "How do you know my name?  Why aren't you attacking me?"
 msgstr ""
 
 #: ../npcs/ghost.txt:18
-msgid ""
-"I knew your father long ago...  it was here he first battled Zalkaz, to try "
-"and seal him away.  Half the Juggernaut Talisman is in here."
+msgid "I knew your father long ago...  it was here he first battled Zalkaz, to try and seal him away.  Half the Juggernaut Talisman is in here."
 msgstr ""
 
 #: ../npcs/ghost.txt:19
@@ -1590,15 +1396,11 @@ msgid "There is now a lava ward preventing anyone from passing to the house..."
 msgstr ""
 
 #: ../npcs/ghost.txt:20
-msgid ""
-"I can get across, but alas, I am already dead.  Stay away from the lava "
-"unless you want to be dead, too."
+msgid "I can get across, but alas, I am already dead.  Stay away from the lava unless you want to be dead, too."
 msgstr ""
 
 #: ../npcs/ghost.txt:21
-msgid ""
-"I think I learned not to touch hot objects when I was three, thanks for the "
-"tip."
+msgid "I think I learned not to touch hot objects when I was three, thanks for the tip."
 msgstr ""
 
 #: ../npcs/gravestone.txt:1
@@ -1609,53 +1411,43 @@ msgstr ""
 msgid "Examine Tombstone"
 msgstr ""
 
-#: ../npcs/gravestone.txt:9
+#: ../npcs/gravestone.txt:11
 msgid "As you gaze upon the tombstone, you hear a voice coming from the walls."
 msgstr ""
 
-#: ../npcs/gravestone.txt:10
-msgid ""
-"I knew it was just a matter of time until someone stumbled upon my tomb!"
-msgstr ""
-
-#: ../npcs/gravestone.txt:11
-msgid ""
-"But never in the wildest dreams did I believe it would be the daughter of my "
-"captors!"
-msgstr ""
-
 #: ../npcs/gravestone.txt:12
-msgid "What?  Who are you?  Where are you?"
+msgid "I knew it was just a matter of time until someone stumbled upon my tomb!"
 msgstr ""
 
 #: ../npcs/gravestone.txt:13
-msgid ""
-"I am Zalkaz, the Destroyer of Worlds!  When you approached my tombstone, "
-"your life force set me free."
+msgid "But never in the wildest dreams did I believe it would be the daughter of my captors!"
 msgstr ""
 
 #: ../npcs/gravestone.txt:14
-msgid "Oh, and I'm so scared now.  You're just a voice, who cares?"
+msgid "What?  Who are you?  Where are you?"
 msgstr ""
 
 #: ../npcs/gravestone.txt:15
-msgid ""
-"Who cares?  The entire world shall tremble, for soon I shall have my body "
-"back, and I shall sweep through the lands with my fiery sword of rage!"
+msgid "I am Zalkaz, the Destroyer of Worlds!  When you approached my tombstone, your life force set me free."
 msgstr ""
 
 #: ../npcs/gravestone.txt:16
-msgid ""
-"Great.  Why can't we just have a sewer like most modern cities?  Sheesh."
+msgid "Oh, and I'm so scared now.  You're just a voice, who cares?"
 msgstr ""
 
 #: ../npcs/gravestone.txt:17
-msgid ""
-"Now I just need to find my way out of here.  Is that a breeze coming from "
-"behind the tombstone?"
+msgid "Who cares?  The entire world shall tremble, for soon I shall have my body back, and I shall sweep through the lands with my fiery sword of rage!"
 msgstr ""
 
-#: ../npcs/gravestone.txt:21
+#: ../npcs/gravestone.txt:18
+msgid "Great.  Why can't we just have a sewer like most modern cities?  Sheesh."
+msgstr ""
+
+#: ../npcs/gravestone.txt:19
+msgid "Now I just need to find my way out of here.  Is that a breeze coming from behind the tombstone?"
+msgstr ""
+
+#: ../npcs/gravestone.txt:37
 msgid "The tombstone stands quiet now."
 msgstr ""
 
@@ -1664,9 +1456,7 @@ msgid "King's knight"
 msgstr ""
 
 #: ../npcs/guard.txt:9
-msgid ""
-"Careful on the roads out there, strange things have been afoot in the "
-"kingdom lately."
+msgid "Careful on the roads out there, strange things have been afoot in the kingdom lately."
 msgstr ""
 
 #: ../npcs/guard.txt:10
@@ -1678,8 +1468,7 @@ msgid "I'm a little scared, and you have a sword.  Can't you take care of it?"
 msgstr ""
 
 #: ../npcs/guard.txt:16
-msgid ""
-"The King sends his highest regards, and hopes you'll come to the palace soon!"
+msgid "The King sends his highest regards, and hopes you'll come to the palace soon!"
 msgstr ""
 
 #: ../npcs/hunter.txt:1
@@ -1723,15 +1512,11 @@ msgid "Ew, it smells like wet socks."
 msgstr ""
 
 #: ../npcs/hunter.txt:24
-msgid ""
-"No, that's just the smell o' tha woods!  Don't look a gift horse in the "
-"mouth!"
+msgid "No, that's just the smell o' tha woods!  Don't look a gift horse in the mouth!"
 msgstr ""
 
 #: ../npcs/hunter.txt:29
-msgid ""
-"Ah, hey, you kill Zalkaz!  I would have done it myself, but you know how it "
-"is."
+msgid "Ah, hey, you kill Zalkaz!  I would have done it myself, but you know how it is."
 msgstr ""
 
 #: ../npcs/hunter.txt:30
@@ -1751,9 +1536,7 @@ msgid "Welcome to the tavern.  Would you like some chicken wings?"
 msgstr ""
 
 #: ../npcs/innkeep.txt:14
-msgid ""
-"I expect suitors will soon be coming to town looking for you.  Ah, to be "
-"young again."
+msgid "I expect suitors will soon be coming to town looking for you.  Ah, to be young again."
 msgstr ""
 
 #: ../npcs/jailor.txt:1
@@ -1773,9 +1556,7 @@ msgid "I think I still have the keys around here somewhere, though..."
 msgstr ""
 
 #: ../npcs/jailor.txt:16
-msgid ""
-"Maybe you should be our new Sherriff!  Not that we've anyone around to "
-"imprison, still."
+msgid "Maybe you should be our new Sherriff!  Not that we've anyone around to imprison, still."
 msgstr ""
 
 #: ../npcs/jeweler.txt:1
@@ -1783,9 +1564,7 @@ msgid "Celade the Jeweler"
 msgstr ""
 
 #: ../npcs/jeweler.txt:9
-msgid ""
-"I came here all the way from the Castle Keradon to sell the jewels my family "
-"mines, but nobody here is buying!"
+msgid "I came here all the way from the Castle Keradon to sell the jewels my family mines, but nobody here is buying!"
 msgstr ""
 
 #: ../npcs/jeweler.txt:10
@@ -1825,9 +1604,7 @@ msgid "Read Note"
 msgstr ""
 
 #: ../npcs/shopchest.txt:11
-msgid ""
-"If we're not in right now, feel free to leave the money in the chest.  Honor "
-"system!"
+msgid "If we're not in right now, feel free to leave the money in the chest.  Honor system!"
 msgstr ""
 
 #: ../npcs/trainee.txt:1
@@ -1847,32 +1624,23 @@ msgid "We're getting away for a few days.  Castle life is just so hectic!"
 msgstr ""
 
 #: ../npcs/vacationera.txt:10
-msgid ""
-"Don't tell Harry, but I'm really interested in going to the volcano - there "
-"might even be some obsidian there!"
+msgid "Don't tell Harry, but I'm really interested in going to the volcano - there might even be some obsidian there!"
 msgstr ""
 
 #: ../npcs/vacationera.txt:11
-msgid ""
-"Only trouble is, it's too hot to get close enough.  If only there was a way "
-"to traverse the lava."
+msgid "Only trouble is, it's too hot to get close enough.  If only there was a way to traverse the lava."
 msgstr ""
 
 #: ../npcs/vacationera.txt:16
-msgid ""
-"We're almost ready to go back home to the castle, but I still haven't been "
-"to the volcano."
+msgid "We're almost ready to go back home to the castle, but I still haven't been to the volcano."
 msgstr ""
 
 #: ../npcs/vacationera.txt:17
-msgid ""
-"I'd let you borrow this charm, but apparently they only work for Laurelians,"
+msgid "I'd let you borrow this charm, but apparently they only work for Laurelians,"
 msgstr ""
 
 #: ../npcs/vacationera.txt:18
-msgid ""
-"Shucks.  Well, if you ever want to visit us back at the castle, just let me "
-"know!"
+msgid "Shucks.  Well, if you ever want to visit us back at the castle, just let me know!"
 msgstr ""
 
 #: ../npcs/vacationerb.txt:1
@@ -1884,8 +1652,7 @@ msgid "Ah, the vacation life!"
 msgstr ""
 
 #: ../npcs/vacationerb.txt:10
-msgid ""
-"I hear there's some great spelunking to the north, and skiing to the south."
+msgid "I hear there's some great spelunking to the north, and skiing to the south."
 msgstr ""
 
 #: ../npcs/vacationerb.txt:11
@@ -1897,8 +1664,36 @@ msgid "Uh, I'm not sure we have any shops like that."
 msgstr ""
 
 #: ../npcs/vacationerb.txt:13
-msgid ""
-"Darn.  Our castle is way more impressive than your ruined one here, I'll bet "
-"you could get skis there."
+msgid "Darn.  Our castle is way more impressive than your ruined one here, I'll bet you could get skis there."
 msgstr ""
 
+#: ../cutscenes/pit.txt:5
+msgid "A pit opens beneath your feet, and you fall into a dank cave!"
+msgstr ""
+
+#~ msgid "consumable"
+#~ msgstr "consommable"
+
+#~ msgid "other"
+#~ msgstr "autre"
+
+#~ msgid "body"
+#~ msgstr "corps"
+
+#~ msgid "quest"
+#~ msgstr "quête"
+
+#~ msgid "gem"
+#~ msgstr "gemme"
+
+#~ msgid "fire"
+#~ msgstr "feu"
+
+#~ msgid "ice"
+#~ msgstr "glace"
+
+#~ msgid "earth"
+#~ msgstr "terre"
+
+#~ msgid "wind"
+#~ msgstr "vent"

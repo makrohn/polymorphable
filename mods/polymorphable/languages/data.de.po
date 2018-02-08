@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-08 17:22+\n"
+"POT-Creation-Date: 2018-02-07 20:35+\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,111 +23,99 @@ msgstr "Möhre"
 msgid "Restore 4 HP"
 msgstr "Stelle 4 TP wieder her"
 
-#: ../items/items.txt:9
-msgid "consumable"
-msgstr "Verbrauchsgegenstand"
-
-#: ../items/items.txt:17
+#: ../items/items.txt:16
 msgid "Watermelon"
 msgstr "Wassermelone"
 
-#: ../items/items.txt:22
+#: ../items/items.txt:21
 msgid "Restore 4 MP"
 msgstr "Stelle 4 MP wieder her"
 
-#: ../items/items.txt:31
+#: ../items/items.txt:29
 msgid "Bomb"
 msgstr "Bombe"
 
-#: ../items/items.txt:36
+#: ../items/items.txt:34
 msgid "Plant a 3-second bomb"
 msgstr "Plaziere eine 3-Sekunden Bombe"
 
-#: ../items/items.txt:44
+#: ../items/items.txt:42
+msgid "Gold"
+msgstr "Gold"
+
+#: ../items/items.txt:57
 msgid "Leather Armor"
 msgstr "Lederrüstung"
 
-#: ../items/items.txt:47
-msgid "body"
-msgstr "Körper"
-
-#: ../items/items.txt:56
+#: ../items/items.txt:69
 msgid "Knife"
 msgstr "Messer"
 
-#: ../items/items.txt:59
-msgid "main"
-msgstr "Haupthand"
-
-#: ../items/items.txt:64
+#: ../items/items.txt:77
 msgid "Just a kitchen knife"
 msgstr "Ein Küchenmesser"
 
-#: ../items/items.txt:69
+#: ../items/items.txt:82
 msgid "Hero's Sword"
 msgstr "Heldenschwert"
 
-#: ../items/items.txt:77
+#: ../items/items.txt:90
 msgid "The sword of the ancient hero"
 msgstr "Schwert des antiken Helden"
 
-#: ../items/items.txt:83
+#: ../items/items.txt:96
 msgid "Skeleton Key"
 msgstr "Skelettschlüssel"
 
-#: ../items/items.txt:86
-msgid "quest"
-msgstr "Aufgabe"
-
-#: ../items/items.txt:89
+#: ../items/items.txt:102
 msgid "Unlocks a door in the Volcano"
 msgstr "Öffnet eine Tür im Vulkan"
 
-#: ../items/items.txt:94
+#: ../items/items.txt:107
 msgid "Fairy Flower"
 msgstr "Feenblume"
 
-#: ../items/items.txt:100
+#: ../items/items.txt:113
 msgid "Return this flower to Elder Thomas"
 msgstr "Bringe diesen Gegenstand zu Thomas dem Stammesältesten"
 
-#: ../items/items.txt:105
+#: ../items/items.txt:118
 msgid "Bat Talisman"
 msgstr "Fledermaus Talisman"
 
-#: ../items/items.txt:111
+#: ../items/items.txt:124
 msgid "Use to transform into a bat and fly"
 msgstr "Benutze es zur Verwandlung in eine Fledermaus zum fliegen"
 
-#: ../items/items.txt:117
+#: ../items/items.txt:130
 msgid "Snake Talisman"
 msgstr "Schlangen Talisman"
 
-#: ../items/items.txt:123
+#: ../items/items.txt:136
 msgid "Use to transform into a snake and spit acid at enemies and switches"
 msgstr "Benutze es zur Verwandlung in eine Schlange und spucke Gift"
 
-#: ../items/items.txt:129
+#: ../items/items.txt:142
 msgid "Ghost Talisman"
 msgstr "Geister Talisman"
 
-#: ../items/items.txt:135
+#: ../items/items.txt:148
 msgid "Use to transform into a ghost and pass through flame"
 msgstr "Benutze es und gehe durch Feuer"
 
-#: ../items/items.txt:153
+#: ../items/items.txt:166
 msgid "Half of Juggernaut Talisman"
 msgstr "Hälfte des Moloch Talismans"
 
-#: ../items/items.txt:159
+#: ../items/items.txt:172
 msgid "Bring to the Village Elder to create the Juggernaut Talisman"
 msgstr "Bringe es zum Stammesältesten um das Moloch Talisman zu erschaffen"
 
-#: ../items/items.txt:179
+#: ../items/items.txt:192
 msgid "Juggernaut Talisman"
 msgstr "Moloch Talisman"
 
-#: ../items/items.txt:186
+#: ../items/items.txt:199
 msgid "Transform into a mighty juggernaut"
 msgstr "Verwandle dich in einen mächtigen Moloch"
 
@@ -138,10 +126,6 @@ msgstr "Körper"
 #: ../items/types.txt:7
 msgid "Consumable"
 msgstr "Verbrauchsgegenstand"
-
-#: ../items/types.txt:10
-msgid "gem"
-msgstr "Edelstein"
 
 #: ../items/types.txt:11
 msgid "Gem"
@@ -155,6 +139,26 @@ msgstr "Haupthand"
 msgid "Quest Item"
 msgstr "Gegenstand für eine Aufgabe"
 
+#: ../items/qualities.txt:3
+msgid "Low"
+msgstr ""
+
+#: ../items/qualities.txt:8
+msgid "Normal"
+msgstr ""
+
+#: ../items/qualities.txt:13
+msgid "High"
+msgstr ""
+
+#: ../items/qualities.txt:18
+msgid "Epic"
+msgstr ""
+
+#: ../items/qualities.txt:23
+msgid "Unique"
+msgstr ""
+
 #: ../powers/powers.txt:3
 msgid "Swing"
 msgstr "Schlag"
@@ -163,353 +167,213 @@ msgstr "Schlag"
 msgid "Basic melee attack"
 msgstr "Standard Nahkampfangriff"
 
-#: ../powers/powers.txt:20
+#: ../powers/powers.txt:18
 msgid "Crush"
 msgstr "Stoß"
 
-#: ../powers/powers.txt:23
+#: ../powers/powers.txt:21
 msgid "Knock your enemy back"
 msgstr "Stoße die Gegner zurück"
 
-#: ../powers/powers.txt:39
+#: ../powers/powers.txt:36
 msgid "Lightning Storm"
 msgstr "Gewitter"
 
-#: ../powers/powers.txt:42
+#: ../powers/powers.txt:39
 msgid "Three lightning bolts strike randomly around you"
 msgstr "Drei Blitze zischen wahllos umher"
 
-#: ../powers/powers.txt:62
+#: ../powers/powers.txt:59
 msgid "Shield"
 msgstr "Schild"
 
-#: ../powers/powers.txt:65
+#: ../powers/powers.txt:62
 msgid "Create a force field that absorbs damage"
 msgstr "Beschwöre ein Kraftfeld, welches Schaden absorbiert"
 
-#: ../powers/powers.txt:77
+#: ../powers/powers.txt:74
 msgid "Haste"
 msgstr "Eile"
 
-#: ../powers/powers.txt:79
+#: ../powers/powers.txt:76
 msgid "Double run and attack speed for 8 seconds"
 msgstr "Doppelte Angriffs- und Gehgeschwindigkeit für die nächsten 8 Sekunden"
 
-#: ../powers/powers.txt:89
+#: ../powers/powers.txt:86
 msgid "Cleave"
 msgstr "Schlitzer"
 
-#: ../powers/powers.txt:92
+#: ../powers/powers.txt:89
 msgid "Attack all enemies in a wide arc"
 msgstr "Greife alle Gegner um dich herum mit einem weit ausgeholten Schlag an"
 
-#: ../powers/powers.txt:108
+#: ../powers/powers.txt:104
 msgid "Leech Strike"
 msgstr "Blutegelschlag"
 
-#: ../powers/powers.txt:111
+#: ../powers/powers.txt:107
 msgid "Turn 50% of damage you deal into HP"
 msgstr "Verwandle die Hälfte des Schadens in TP"
 
-#: ../powers/powers.txt:127
+#: ../powers/powers.txt:122
 msgid "Stun Strike"
 msgstr "Betäubungsschlag"
 
-#: ../powers/powers.txt:130
+#: ../powers/powers.txt:125
 msgid "Stun an enemy for 3 seconds"
 msgstr "Betäube einen Gegner 3 Sekunden lang"
 
-#: ../powers/powers.txt:146
+#: ../powers/powers.txt:140
 msgid "Ice Blast"
 msgstr "Eisige Druckwelle"
 
-#: ../powers/powers.txt:149
+#: ../powers/powers.txt:143
 msgid "Slow nearby enemies for 5 seconds"
 msgstr "Verlangsame Gegner in deiner Nähe 5 sekundenlang"
 
-#: ../powers/powers.txt:169
+#: ../powers/powers.txt:163
 msgid "Shoot (enemy)"
 msgstr "Schuss (Gegner)"
 
-#: ../powers/powers.txt:192
+#: ../powers/powers.txt:186
 msgid "Drop a bomb that does 5 damage when it explodes."
 msgstr "Lege eine Bombe, die bei Explosion 5 Schadenspunkte anrichtet."
 
-#: ../powers/powers.txt:201
+#: ../powers/powers.txt:195
 msgid "Explode (npc)"
 msgstr "Explosion (NPC)"
 
-#: ../powers/powers.txt:204
+#: ../powers/powers.txt:198
 msgid "Damages nearby enemies"
 msgstr "Schädigt Gegner in der Nähe"
 
-#: ../powers/powers.txt:224
+#: ../powers/powers.txt:216
 msgid "flametrap (trap)"
 msgstr "Feuerfalle"
 
-#: ../powers/powers.txt:249
+#: ../powers/powers.txt:239
 msgid "Plant a 3-second bomb."
 msgstr "Lege eine 3 Sekunden Bombe"
 
-#: ../powers/powers.txt:258
+#: ../powers/powers.txt:248
 msgid "Holy Sword"
 msgstr "Heiliges Schwert"
 
-#: ../powers/powers.txt:261
+#: ../powers/powers.txt:251
 msgid "Deal two damage to all enemies on-screen"
 msgstr "Füge allen Gegner auf dem Bildschirm 2 Schadenspunkte zu"
 
-#: ../powers/powers.txt:277
+#: ../powers/powers.txt:267
 msgid "Summon Bat (enemy)"
 msgstr "Beschwöre Fledermaus"
 
-#: ../powers/powers.txt:315
+#: ../powers/powers.txt:305
 msgid "Fire Bomb (enemy)"
 msgstr "Feuerbombe (Gegner)"
 
-#: ../powers/powers.txt:318
+#: ../powers/powers.txt:308
 msgid "Drop a bomb that does 10 damage when it explodes to the whole screen."
 msgstr "Lege ein Bombe, die allen auf dem Bildschirm 10 Schaden zufügt."
 
-#: ../powers/powers.txt:326
+#: ../powers/powers.txt:316
 msgid "Firebomb Explosion (enemy)"
 msgstr "Feuerbombenexplosion"
 
-#: ../powers/powers.txt:349
+#: ../powers/powers.txt:337
 msgid "Explode (enemy)"
 msgstr "Explosion (Gegner)"
 
-#: ../powers/powers.txt:372
+#: ../powers/powers.txt:358
 msgid "Tick"
 msgstr "Tick"
 
-#: ../powers/powers.txt:387
+#: ../powers/powers.txt:367
+msgid "Tick (proximity)"
+msgstr ""
+
+#: ../powers/powers.txt:376
 msgid "Enemy Beacon"
 msgstr "Gegnerisches Blinklicht"
 
-#: ../powers/powers.txt:388
+#: ../powers/powers.txt:377
 msgid "Bring other enemies into the fight with a dummy attack"
 msgstr "Locke andere Gegner in den Kampf durch einen unechten Angriff"
 
-#: ../powers/powers.txt:400
+#: ../powers/powers.txt:389
 msgid "Disenchant"
 msgstr "Entzaubern"
 
-#: ../powers/powers.txt:405
+#: ../powers/powers.txt:394
 msgid "Transform back to human"
 msgstr "Verwandlung zurück in einen Mensch"
 
-#: ../powers/powers.txt:410
+#: ../powers/powers.txt:399
 msgid "Fire Immunity"
 msgstr "Feuersicherheit"
 
-#: ../powers/powers.txt:438
-msgid "Bleeding"
-msgstr "Blutend"
-
-#: ../powers/powers.txt:446
-msgid "Immobilized"
-msgstr "Bewegungsunfähig"
-
-#: ../powers/powers.txt:453
-msgid "Slowed"
-msgstr "Verlangsamt"
-
-#: ../powers/powers.txt:460
-msgid "Stunned"
-msgstr "Betäubt"
-
-#: ../powers/powers.txt:467
-msgid "HP (bonus)"
-msgstr "TP (Bonus)"
-
-#: ../powers/powers.txt:475
-msgid "HP Regen (bonus)"
-msgstr "TP Wiederherstellung (Bonus)"
-
-#: ../powers/powers.txt:483
-msgid "MP (bonus)"
-msgstr "MP (Bonus)"
-
-#: ../powers/powers.txt:491
-msgid "MP Regen (bonus)"
-msgstr "MP Wiederherstellung(Bonus)"
-
-#: ../powers/powers.txt:499
-msgid "Accuracy (bonus)"
-msgstr "Genauigkeit (Bonus)"
-
-#: ../powers/powers.txt:507
-msgid "Avoidance (bonus)"
-msgstr "Ausweichen (Bonus)"
-
-#: ../powers/powers.txt:515
-msgid "Crit (bonus)"
-msgstr "Kritischer Treffer (Bonus)"
-
-#: ../powers/powers.txt:523
-msgid "Speed (bonus)"
-msgstr "Geschwindigkeit (Bonus)"
-
-#: ../powers/powers.txt:530
-msgid "Offense (bonus)"
-msgstr "Angriff (Bonus)"
-
-#: ../powers/powers.txt:538
-msgid "Defense (bonus)"
-msgstr "Verteidigung (Bonus)"
-
-#: ../powers/powers.txt:546
-msgid "Physical (bonus)"
-msgstr "Kraft (Bonus)"
-
-#: ../powers/powers.txt:554
-msgid "Mental (bonus)"
-msgstr "Geist (Bonus)"
-
-#: ../powers/powers.txt:562
-msgid "XP(bonus)"
-msgstr "EP (Bonus)"
-
-#: ../powers/powers.txt:570
-msgid "Gold (bonus)"
-msgstr "Gold (Bonus)"
-
-#: ../powers/powers.txt:578
-msgid "Fire Resistance (bonus)"
-msgstr "Feuerwiderstand (Bonus)"
-
-#: ../powers/powers.txt:586
-msgid "Ice Resistance (bonus)"
-msgstr "Kältewiderstand (Bonus)"
-
-#: ../powers/powers.txt:594
-msgid "Immunity"
-msgstr "Immunität"
-
-#: ../powers/powers.txt:609
-msgid "Heal"
-msgstr "Heilung"
-
-#: ../powers/powers.txt:623
-msgid "HP over time"
-msgstr "TP für eine gewisse Zeit"
-
-#: ../powers/powers.txt:629
-msgid "MP over time"
-msgstr "MP für eine gewisse Zeit"
-
-#: ../powers/powers.txt:635
-msgid "Knockback"
-msgstr "Rückstoß"
-
-#: ../powers/powers.txt:641
-msgid "Earth Resistance (bonus)"
-msgstr "Erdwiderstand (Bonus)"
-
-#: ../powers/powers.txt:649
-msgid "Wind Resistance (bonus)"
-msgstr "Windwiderstand (Bonus)"
-
-#: ../powers/powers.txt:657
-msgid "Holy Resistance (bonus)"
-msgstr "Heiligenwiderstand (Bonus)"
-
-#: ../powers/powers.txt:665
-msgid "Dark Resistance (bonus)"
-msgstr "Dunkelwiderstand (Bonus)"
-
-#: ../powers/powers.txt:673
-msgid "HP Percent (bonus)"
-msgstr "TP prozentualer Bonus"
-
-#: ../powers/powers.txt:681
-msgid "MP Percent (bonus)"
-msgstr "MP prozentualer Bonus"
-
-#: ../powers/powers.txt:689
+#: ../powers/powers.txt:423
 msgid "Transform into Bat"
 msgstr "Verwandlung in eine Fledermaus"
 
-#: ../powers/powers.txt:694
+#: ../powers/powers.txt:428
 msgid "Turn into a bat"
 msgstr "Werde eine Fledermaus"
 
-#: ../powers/powers.txt:699
+#: ../powers/powers.txt:433
 msgid "Transform into Snake"
 msgstr "Verwandlung in eine Schlange"
 
-#: ../powers/powers.txt:704
+#: ../powers/powers.txt:438
 msgid "Turn into a spitting snake"
 msgstr "Werde eine spuckende Schlange"
 
-#: ../powers/powers.txt:709
+#: ../powers/powers.txt:443
 msgid "Spit Acid"
 msgstr "Spucke Säure"
 
-#: ../powers/powers.txt:731
+#: ../powers/powers.txt:465
 msgid "Spit Fire"
 msgstr "Spucke Feuer"
 
-#: ../powers/powers.txt:752
+#: ../powers/powers.txt:486
 msgid "Transform into Ghost"
 msgstr "Verwandlung in einen Geist"
 
-#: ../powers/powers.txt:757
+#: ../powers/powers.txt:491
 msgid "Turn into a ghost"
 msgstr "Werde ein Geist"
 
-#: ../powers/powers.txt:772
+#: ../powers/powers.txt:506
 msgid "Transform into Juggernaut"
 msgstr "Werde ein Moloch"
 
-#: ../powers/powers.txt:778
+#: ../powers/powers.txt:512
 msgid "Turn into a powerful knight for a short time"
 msgstr "Werde ein sehr mächtiger Krieger für eine kurze Zeit"
 
-#: ../powers/powers.txt:783
+#: ../powers/powers.txt:517
 msgid "Transform into Squirrel"
 msgstr "Verwandlung in ein Eichhörnchen"
 
-#: ../powers/powers.txt:788
+#: ../powers/powers.txt:522
 msgid "Turn into a squirrel"
 msgstr "Werde ein Eichhörnchen"
-
-#: ../engine/elements.txt:2
-msgid "fire"
-msgstr "Feuer"
 
 #: ../engine/elements.txt:3
 msgid "Fire Resistance"
 msgstr "Feuerwiderstand"
 
-#: ../engine/elements.txt:6
-msgid "ice"
-msgstr "Eis"
-
 #: ../engine/elements.txt:7
 msgid "Ice Resistance"
 msgstr "Kältewiderstand"
-
-#: ../engine/elements.txt:10
-msgid "earth"
-msgstr "Erde"
 
 #: ../engine/elements.txt:11
 msgid "Earth Resistance"
 msgstr "Erdwiderstand"
 
-#: ../engine/elements.txt:14
-msgid "wind"
-msgstr "Wind"
-
 #: ../engine/elements.txt:15
 msgid "Wind Resistance"
 msgstr "Windwiderstand"
-
-#: ../engine/loot.txt:15
-msgid "Gold"
-msgstr "Gold"
 
 #: ../engine/classes.txt:2
 msgid "Adventurer"
@@ -550,6 +414,16 @@ msgstr "Chameleon"
 #: ../engine/titles.txt:30
 msgid "Girl"
 msgstr "Mädchen"
+
+#: ../engine/primary_stats.txt:3
+#, fuzzy
+msgid "Physical"
+msgstr "Kraft (Bonus)"
+
+#: ../engine/primary_stats.txt:7
+#, fuzzy
+msgid "Mental"
+msgstr "Geist (Bonus)"
 
 #: ../enemies/archer.txt:1
 msgid "Cultist Archer"
@@ -647,339 +521,341 @@ msgstr "Giftige Fledermaus"
 msgid "Zalkaz, Bane of Laurelia"
 msgstr "Zalkaz, Fluch von Laurelia"
 
-#: ../maps/barracks.txt:8
+#: ../maps/barracks.txt:9
 msgid "Barracks"
 msgstr "Kasernen"
 
-#: ../maps/basement1.txt:6
+#: ../maps/basement1.txt:9
 msgid "Secret Basement"
 msgstr "Geheimer Keller"
 
-#: ../maps/basement3.txt:8
+#: ../maps/basement3.txt:9
 msgid "Secret Cavern"
 msgstr "Geheime Grube"
 
-#: ../maps/basement3.txt:221
+#: ../maps/basement3.txt:227
 msgid "Chest"
 msgstr "Schatztruhe"
 
-#: ../maps/basement4.txt:8
+#: ../maps/basement4.txt:9
 msgid "Hidden Waterway"
 msgstr "Verstecktes Rinnsal"
 
-#: ../maps/basement4.txt:201
+#: ../maps/basement4.txt:203
 msgid "You found the switch key in a barrel!"
 msgstr "Du hast den Schalterschlüssel in einem Fass gefunden!"
 
-#: ../maps/basement4.txt:203
+#: ../maps/basement4.txt:206
 msgid "Suspicious Barrel"
 msgstr "Verdächtiges Fass"
 
-#: ../maps/basement4.txt:223
+#: ../maps/basement4.txt:229
 msgid "An empty chest!"
 msgstr "Eine leere Schatztruhe!"
 
-#: ../maps/basement5.txt:202
+#: ../maps/basement5.txt:203
 msgid "There's a key-shaped hole in this rock."
 msgstr "Da ist ein Schlüsselloch in dem Fels."
 
-#: ../maps/basement5.txt:204
+#: ../maps/basement5.txt:205
 msgid "Strange Rock"
 msgstr "Komischer Fels"
 
-#: ../maps/basement6.txt:205
+#: ../maps/basement6.txt:217
 msgid "\"Leftover material from blasting is unstable due to cave-ins!  Do not approach!\""
 msgstr "\"Zurückgelassenes Material vom Kammerbruchbau. Einsturzgefahr! "
 
-#: ../maps/basement6.txt:206
+#: ../maps/basement6.txt:219
 msgid "Sign"
 msgstr "Schild"
 
-#: ../maps/basement7.txt:8
+#: ../maps/basement7.txt:9
 msgid "Sewer"
 msgstr "Abflusskanal"
 
-#: ../maps/basement7.txt:201
+#: ../maps/basement7.txt:203
 msgid "FENCES ARE FOR YOUR PROTECTION.  DO NOT OPEN GATES."
 msgstr "ZÄUNE DIENEN DEINER SICHERHEIT! ÖFFNEN DES TORS VERBOTEN!"
 
-#: ../maps/basement7.txt:202
+#: ../maps/basement7.txt:205
 msgid "Signpost"
 msgstr "Wegweiser"
 
-#: ../maps/basement7.txt:209
+#: ../maps/basement7.txt:213
 msgid "There is a strange groove in this rock"
 msgstr "Eine komische Auskehlung befindet sich in diesem Fels"
 
-#: ../maps/basement8.txt:6
+#: ../maps/basement8.txt:9
 msgid "Sanctuary"
 msgstr "Altarraum"
 
-#: ../maps/basement8.txt:206
+#: ../maps/basement8.txt:218
 msgid "You must defeat your shadow!"
 msgstr "Du musst deinen Schatten besiegen!"
 
-#: ../maps/basement8.txt:209
+#: ../maps/basement8.txt:222
 msgid "Fountain"
 msgstr "Quelle"
 
-#: ../maps/basementa.txt:211
+#: ../maps/basementa.txt:215
 msgid "The switch key fits into the hole in this rock!"
 msgstr "Der Schalterschlüssel passt genau in das Loch im Felsen"
 
-#: ../maps/basementa.txt:226
+#: ../maps/basementa.txt:233
 msgid "It has been a long journey from Castle Hestian, but we have finally found a safe glade away from prying eyes.  We shall found our village here, among the laurel trees."
 msgstr "Es war eine lange Reise von der Burg Hestian, aber wir haben jetzt eine sichere Lichtung gefunden, die du mit deinen spähenden Augen nicht sehen kannst. Wir werden hier unser Dorf gründen, direkt unter dem Lorbeerbaum."
 
-#: ../maps/basementa.txt:227
+#: ../maps/basementa.txt:235
 msgid "Dusty Diary"
 msgstr "Verstaubtes Tagebuch"
 
-#: ../maps/basementa.txt:234
+#: ../maps/basementa.txt:243
 msgid "It has been a hundred years now since King Hestian's decree to burn all the \"skinchangers.\"  We must go into hiding or he'll destroy us all."
 msgstr "Es ist jetzt 100 Jahre her seit König Hestian das Dekret beschloß, alle Hautenwandler zu verbrennen. Wir müssen uns verstecken oder er wird uns alle verbrennen."
 
-#: ../maps/basementa.txt:235
+#: ../maps/basementa.txt:245
 msgid "Moldy Diary"
 msgstr "Angeschimmeltes Tagebuch"
 
-#: ../maps/basementa.txt:242
+#: ../maps/basementa.txt:253
 msgid "King Hestian will not let us live in the open unless we share with him the secret of immortality.  If only we actually held that secret, as he believes!"
 msgstr "König Hestian wird uns nicht öffentlich leben lassen, es sei denn wir teilen das Geheimnis der Unsterblichkeit mit ihm. Wenn wir das Geheimnis denn wüssten, so wie er es glaubt."
 
-#: ../maps/basementa.txt:243
+#: ../maps/basementa.txt:255
 msgid "Yellowed Diary"
 msgstr "Vergilbtes Tagebuch"
 
-#: ../maps/basementb.txt:8
+#: ../maps/basementb.txt:9
 msgid "Underground Lake"
 msgstr "Unterirdischer See"
 
-#: ../maps/basementb.txt:209
+#: ../maps/basementb.txt:212
 msgid "Ambushed!"
 msgstr "Überfallen!"
 
-#: ../maps/castle1.txt:6
+#: ../maps/castle1.txt:9
 msgid "Castle Entry"
 msgstr "Schlosseingang"
 
-#: ../maps/castle2.txt:8
+#: ../maps/castle2.txt:9
 msgid "Castle Atrium"
 msgstr "Schlossinnenhof"
 
-#: ../maps/castle3.txt:6
+#: ../maps/castle3.txt:9
 msgid "Castle Hall"
 msgstr "Schlosshalle"
 
-#: ../maps/castle4.txt:8
+#: ../maps/castle4.txt:9
 msgid "Castle Basement"
 msgstr "Schlosskeller"
 
-#: ../maps/castle5.txt:228
+#: ../maps/castle5.txt:251
 msgid "Violent bombs ahead!"
 msgstr "Gefährliche Bomben vorraus!"
 
-#: ../maps/castle5.txt:234
+#: ../maps/castle5.txt:259
 msgid "Destroy them from afar to defuse them!"
 msgstr "Zerstöre sie aus der Distanz, um sie zu entschärfen."
 
-#: ../maps/castle6.txt:8
+#: ../maps/castle6.txt:9
 msgid "Castle Balcony"
 msgstr "Schlossbalkon"
 
-#: ../maps/castle6.txt:209
+#: ../maps/castle6.txt:212
 msgid "TRAPPED!"
 msgstr "GEFANGEN!"
 
-#: ../maps/castlea.txt:8
+#: ../maps/castlea.txt:9
 msgid "Castle Ballroom"
 msgstr "Schlossballsaal"
 
-#: ../maps/castleb.txt:8
+#: ../maps/castleb.txt:9
 msgid "Castle Sewer"
 msgstr "Schlossabwasserkanal"
 
-#: ../maps/castlepath.txt:6
+#: ../maps/castlepath.txt:9
 msgid "Castle Path"
 msgstr "Schlossweg"
 
-#: ../maps/cavern.txt:8
+#: ../maps/cavern.txt:9
 msgid "Cavern"
 msgstr "Schlossgrube"
 
-#: ../maps/cavern.txt:439
+#: ../maps/cavern.txt:441
 msgid "Drag to actionbar to use."
 msgstr "Ziehe auf die Aktionsbar um es zu benutzen."
 
-#: ../maps/cavern.txt:486
+#: ../maps/cavern.txt:499
 msgid "Carrots"
 msgstr "Möhren"
 
-#: ../maps/cavern.txt:520
+#: ../maps/cavern.txt:536
 msgid "Unmarked Grave"
 msgstr "nicht gekennzeichnetes Grab"
 
-#: ../maps/church.txt:8
+#: ../maps/church.txt:9
 msgid "Church"
 msgstr "Kirche"
 
-#: ../maps/daphneshouse.txt:6
+#: ../maps/daphneshouse.txt:9
 msgid "Daphne's House"
 msgstr "Daphnes Haus"
 
-#: ../maps/eldershouse.txt:6
+#: ../maps/eldershouse.txt:9
 msgid "Elder's House"
 msgstr "Haus des Stammesältesten"
 
-#: ../maps/eldershouse.txt:112
+#: ../maps/eldershouse.txt:123
 msgid "A secret passage!"
 msgstr "Ein geheimer Durchgang!"
 
-#: ../maps/glade.txt:8
+#: ../maps/glade.txt:9
 msgid "Glade"
 msgstr "Lichtung"
 
-#: ../maps/granary.txt:6
+#: ../maps/granary.txt:9
 msgid "Granary"
 msgstr "Kornkammer"
 
-#: ../maps/inn1st.txt:8
+#: ../maps/inn1st.txt:9
 msgid "Inn, 1st Floor"
 msgstr "Gasthof, 1. Stock"
 
-#: ../maps/inn2nd.txt:6
+#: ../maps/inn2nd.txt:9
 msgid "Inn, 2nd Floor"
 msgstr "Gasthof, 2. Stock"
 
-#: ../maps/laurelia.txt:8
+#: ../maps/laurelia.txt:9
 msgid "Laurelia"
 msgstr "Lorbeerheim"
 
-#: ../maps/laurelia.txt:826
+#: ../maps/laurelia.txt:840
 msgid "You've fallen in a hole!"
 msgstr "Du bist in ein Loch gefallen!"
 
-#: ../maps/library.txt:8
+#: ../maps/library.txt:9
 msgid "Library"
 msgstr "Bibliothek"
 
-#: ../maps/library.txt:93
+#: ../maps/library.txt:96
 msgid "p.32: \"Ghosts, being incorporeal, are nearly immune to heat and fire.\""
 msgstr "Seite 32: \"Geister, körperlose Wesen, sind fast immun gegen Hitze und Feuer.\""
 
-#: ../maps/library.txt:94
+#: ../maps/library.txt:98
 msgid "On Ghosts"
 msgstr "Über Geister"
 
-#: ../maps/library.txt:101
+#: ../maps/library.txt:106
 msgid "p.1:  \"This small town is a seeming backwater.  However, nearly every one of it's citizens has the ability to polymorph into another creature.\"  Better put it back on the top shelf where the tourists can't find it."
 msgstr "Seite 1: \"Diese kleine Stadt ist ein ziemlich verschlafenes Nest. Wie auch immer, fast jeder der Einwohner hat die Fähigkeit sich in eine andere Gestalt zu verwandeln.\" Lege das Buch besser wieder oben auf das Regal, wo kein Tourist es finden kann."
 
-#: ../maps/library.txt:102
+#: ../maps/library.txt:108
 msgid "History of Laurelia"
 msgstr "Geschichte von Lorbeerheim"
 
-#: ../maps/library.txt:109
-msgid "p. 967: \"Zalkaz was constantly beset by paladins seeking to destroy him; he would eliminate each one by blotting out the light with hordes of bats.\""
+#: ../maps/library.txt:116
+#, fuzzy
+msgid "p. 967: \"Zalkas was constantly beset by paladins seeking to destroy them; he would eliminate each one by blotting out the light with flocks of bats.\""
 msgstr "Seite 967: \"Zalkaz wurde immer wieder von Paladinen bedrängt, die ihn zerstören wollten. Er tötete jeden von ihnen, indem er das Licht durch eine Horde von Fledermäusen verdunkelte."
 
-#: ../maps/library.txt:110
-msgid "Demonology"
+#: ../maps/library.txt:118
+#, fuzzy
+msgid "Deomonology"
 msgstr "Dämonenlehre"
 
-#: ../maps/market.txt:6
+#: ../maps/market.txt:9
 msgid "Market"
 msgstr "Markt"
 
-#: ../maps/marketbasement.txt:6
+#: ../maps/marketbasement.txt:9
 msgid "Market Basement"
 msgstr "Marktkeller"
 
-#: ../maps/mountainpath.txt:5
+#: ../maps/mountainpath.txt:8
 msgid "Mountain Path"
 msgstr "Bergweg"
 
-#: ../maps/smallhouse.txt:6
+#: ../maps/smallhouse.txt:9
 msgid "Small House"
 msgstr "Kleines Haus"
 
-#: ../maps/smithy.txt:6
+#: ../maps/smithy.txt:9
 msgid "Smithy"
 msgstr "Schmiede"
 
-#: ../maps/snow1.txt:6
+#: ../maps/snow1.txt:9
 msgid "Snow Mountain"
 msgstr "Verschneiter Berg"
 
-#: ../maps/snow1.txt:176
+#: ../maps/snow1.txt:189
 msgid "You need the Juggernaut Talisman to proceed!"
 msgstr "Du benötigst den Moloch Talisman, um weiterzukommen."
 
-#: ../maps/snow4.txt:6
+#: ../maps/snow4.txt:9
 msgid "Mountain Cave"
 msgstr "Berghöhle"
 
-#: ../maps/snow6.txt:184
+#: ../maps/snow6.txt:198
 msgid "Bring ssssacrifices for Zalkaz here!"
 msgstr "Bringt Opfer für Zalkaz hierher!"
 
-#: ../maps/snow7.txt:6
+#: ../maps/snow7.txt:9
 msgid "Zalkaz's Lair"
 msgstr "Zalkaz Versteck"
 
-#: ../maps/snow7.txt:226
+#: ../maps/snow7.txt:238
 msgid "You're home!"
 msgstr "Du bist zu Hause!"
 
-#: ../maps/snow7.txt:239
+#: ../maps/snow7.txt:255
 msgid "Prepare to die!"
 msgstr "Seid bereit zu sterben!"
 
-#: ../maps/snowa.txt:6
+#: ../maps/snowa.txt:9
 msgid "Mountain Mine"
 msgstr "Bergmine"
 
-#: ../maps/snowa.txt:172
+#: ../maps/snowa.txt:184
 msgid "Empty..."
 msgstr "Leer..."
 
-#: ../maps/snowb.txt:6
+#: ../maps/snowb.txt:9
 msgid "Mountain Shop"
 msgstr "Berg-Handelshütte"
 
-#: ../maps/snowc.txt:6
+#: ../maps/snowc.txt:9
 msgid "Safe Room"
 msgstr "Sicherer Raum"
 
-#: ../maps/tavern.txt:6
+#: ../maps/tavern.txt:9
 msgid "Tavern"
 msgstr "Taverne"
 
-#: ../maps/volcano1.txt:8
+#: ../maps/volcano1.txt:9
 msgid "Volcano"
 msgstr "Vulkan"
 
-#: ../maps/volcano1.txt:185
+#: ../maps/volcano1.txt:190
 msgid "Locked Gate"
 msgstr "Geschlossenes Tor"
 
-#: ../maps/volcano2.txt:171
+#: ../maps/volcano2.txt:175
 msgid "Anvil"
 msgstr "Amboss"
 
-#: ../maps/volcano3.txt:169
+#: ../maps/volcano3.txt:179
 msgid "There might be a way to cross that small gap, but it looks deadly."
 msgstr "Da könnte ein Weg sein, diese schmale Lücke zu überqueren, aber es sieht tödlich aus."
 
-#: ../maps/volcano3.txt:179
+#: ../maps/volcano3.txt:190
 msgid "Lava River"
 msgstr "Lavastrom"
 
-#: ../maps/volcano4.txt:184
+#: ../maps/volcano4.txt:189
 msgid "Someone has scrawled here: \"The fire skeleton's bombs killed my friend instantly!  If I wasn't a ghost already, I'd have died, too.\""
 msgstr "Jemand schrieb hier: \"Die Bombe des Feuerskeletts tötete meinen Kameraden sofort. Wenn ich nicht schon ein Geist gewesen wäre, wäre auch ich gestorben."
 
-#: ../maps/volcano4.txt:186
+#: ../maps/volcano4.txt:192
 msgid "Altar"
 msgstr "Altar"
 
@@ -1535,43 +1411,43 @@ msgstr "Alter Grabstein"
 msgid "Examine Tombstone"
 msgstr "Untersuche Grabstein"
 
-#: ../npcs/gravestone.txt:9
+#: ../npcs/gravestone.txt:11
 msgid "As you gaze upon the tombstone, you hear a voice coming from the walls."
 msgstr "Gerade als du den Grabstein anstarrst, hörst du eine Stimme aus den Wänden."
 
-#: ../npcs/gravestone.txt:10
+#: ../npcs/gravestone.txt:12
 msgid "I knew it was just a matter of time until someone stumbled upon my tomb!"
 msgstr "Ich wusste, dass es nur eine Frage der Zeit ist, bis jemand über mein Grab stolpert!"
 
-#: ../npcs/gravestone.txt:11
+#: ../npcs/gravestone.txt:13
 msgid "But never in the wildest dreams did I believe it would be the daughter of my captors!"
 msgstr "Aber niemals, auch in meinen wildesten Träumen nicht, wagte ich zu träumen, dass es die Tochter meines Bezwingers ist."
 
-#: ../npcs/gravestone.txt:12
+#: ../npcs/gravestone.txt:14
 msgid "What?  Who are you?  Where are you?"
 msgstr "Was? Wer bist du? Wo bist du?"
 
-#: ../npcs/gravestone.txt:13
+#: ../npcs/gravestone.txt:15
 msgid "I am Zalkaz, the Destroyer of Worlds!  When you approached my tombstone, your life force set me free."
 msgstr "Ich bin Zalkaz, Zerstörer der Welt! Als du dich meinem Grabstein nähertest, hat deine Lebenskraft mich befreit."
 
-#: ../npcs/gravestone.txt:14
+#: ../npcs/gravestone.txt:16
 msgid "Oh, and I'm so scared now.  You're just a voice, who cares?"
 msgstr "Oh, und ich bin jetzt so verängstigt. Du bist nur eine Stimme, also wen interessiert's? "
 
-#: ../npcs/gravestone.txt:15
+#: ../npcs/gravestone.txt:17
 msgid "Who cares?  The entire world shall tremble, for soon I shall have my body back, and I shall sweep through the lands with my fiery sword of rage!"
 msgstr "Wen es interessiert? Die ganze Welt soll erzittern, bald werde ich meinen Körper wiedererlangen und dann werde ich durch die Lande ziehen mit meinem feurigen Schwert des Zorns!"
 
-#: ../npcs/gravestone.txt:16
+#: ../npcs/gravestone.txt:18
 msgid "Great.  Why can't we just have a sewer like most modern cities?  Sheesh."
 msgstr "Großartig. Warum können wir nicht einfach ein Abwassersystem wie alle modernen Städte haben? Pfffft."
 
-#: ../npcs/gravestone.txt:17
+#: ../npcs/gravestone.txt:19
 msgid "Now I just need to find my way out of here.  Is that a breeze coming from behind the tombstone?"
 msgstr "Jetzt muss ich meinen Weg heraus finden. Ist das ein Atemhauch, der hinter dem Grabstein herkommt?"
 
-#: ../npcs/gravestone.txt:21
+#: ../npcs/gravestone.txt:37
 msgid "The tombstone stands quiet now."
 msgstr "Das Grab ist nun still."
 
@@ -1791,3 +1667,120 @@ msgstr "Erm, ich bin mir da nicht sicher, ob wir überhaupt solche Läden haben.
 msgid "Darn.  Our castle is way more impressive than your ruined one here, I'll bet you could get skis there."
 msgstr "Verdammt. Unsere Burg ist viel beeindruckender als eure Ruine hier. Ich wette, da könnte man Skier bekommen."
 
+#: ../cutscenes/pit.txt:5
+msgid "A pit opens beneath your feet, and you fall into a dank cave!"
+msgstr ""
+
+#~ msgid "consumable"
+#~ msgstr "Verbrauchsgegenstand"
+
+#~ msgid "body"
+#~ msgstr "Körper"
+
+#~ msgid "main"
+#~ msgstr "Haupthand"
+
+#~ msgid "quest"
+#~ msgstr "Aufgabe"
+
+#~ msgid "gem"
+#~ msgstr "Edelstein"
+
+#~ msgid "Bleeding"
+#~ msgstr "Blutend"
+
+#~ msgid "Immobilized"
+#~ msgstr "Bewegungsunfähig"
+
+#~ msgid "Slowed"
+#~ msgstr "Verlangsamt"
+
+#~ msgid "Stunned"
+#~ msgstr "Betäubt"
+
+#~ msgid "HP (bonus)"
+#~ msgstr "TP (Bonus)"
+
+#~ msgid "HP Regen (bonus)"
+#~ msgstr "TP Wiederherstellung (Bonus)"
+
+#~ msgid "MP (bonus)"
+#~ msgstr "MP (Bonus)"
+
+#~ msgid "MP Regen (bonus)"
+#~ msgstr "MP Wiederherstellung(Bonus)"
+
+#~ msgid "Accuracy (bonus)"
+#~ msgstr "Genauigkeit (Bonus)"
+
+#~ msgid "Avoidance (bonus)"
+#~ msgstr "Ausweichen (Bonus)"
+
+#~ msgid "Crit (bonus)"
+#~ msgstr "Kritischer Treffer (Bonus)"
+
+#~ msgid "Speed (bonus)"
+#~ msgstr "Geschwindigkeit (Bonus)"
+
+#~ msgid "Offense (bonus)"
+#~ msgstr "Angriff (Bonus)"
+
+#~ msgid "Defense (bonus)"
+#~ msgstr "Verteidigung (Bonus)"
+
+#~ msgid "XP(bonus)"
+#~ msgstr "EP (Bonus)"
+
+#~ msgid "Gold (bonus)"
+#~ msgstr "Gold (Bonus)"
+
+#~ msgid "Fire Resistance (bonus)"
+#~ msgstr "Feuerwiderstand (Bonus)"
+
+#~ msgid "Ice Resistance (bonus)"
+#~ msgstr "Kältewiderstand (Bonus)"
+
+#~ msgid "Immunity"
+#~ msgstr "Immunität"
+
+#~ msgid "Heal"
+#~ msgstr "Heilung"
+
+#~ msgid "HP over time"
+#~ msgstr "TP für eine gewisse Zeit"
+
+#~ msgid "MP over time"
+#~ msgstr "MP für eine gewisse Zeit"
+
+#~ msgid "Knockback"
+#~ msgstr "Rückstoß"
+
+#~ msgid "Earth Resistance (bonus)"
+#~ msgstr "Erdwiderstand (Bonus)"
+
+#~ msgid "Wind Resistance (bonus)"
+#~ msgstr "Windwiderstand (Bonus)"
+
+#~ msgid "Holy Resistance (bonus)"
+#~ msgstr "Heiligenwiderstand (Bonus)"
+
+#~ msgid "Dark Resistance (bonus)"
+#~ msgstr "Dunkelwiderstand (Bonus)"
+
+#~ msgid "HP Percent (bonus)"
+#~ msgstr "TP prozentualer Bonus"
+
+#~ msgid "MP Percent (bonus)"
+#~ msgstr "MP prozentualer Bonus"
+
+#~ msgid "fire"
+#~ msgstr "Feuer"
+
+#~ msgid "ice"
+#~ msgstr "Eis"
+
+#~ msgid "earth"
+#~ msgstr "Erde"
+
+#~ msgid "wind"
+#~ msgstr "Wind"
