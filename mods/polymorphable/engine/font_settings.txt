@@ -3,11 +3,30 @@
 [font]
 id=font_regular
 style=default,DroidSansMono.ttf,12,1
+style=ja,unifont-10.0.06.ttf,14,1
+style=zh,unifont-10.0.06.ttf,14,1
 
 [font]
 id=font_bold
 style=default,DroidSans-Bold.ttf,14,1
+style=ja,unifont-10.0.06.ttf,14,1
+style=zh,unifont-10.0.06.ttf,14,1
 
 [font]
 id=font_talker
 style=default,DroidSans.ttf,13,1
+style=ja,unifont-10.0.06.ttf,14,1
+style=zh,unifont-10.0.06.ttf,14,1
+
+[font]
+id=font_captions
+style=default,DroidSans.ttf,18,1
+style=ja,unifont-10.0.06.ttf,18,1
+style=zh,unifont-10.0.06.ttf,18,1
+
+[font]
+id=font_subtitles
+style=default,DroidSans.ttf,16,1
+style=ja,unifont-10.0.06.ttf,16,1
+style=zh,unifont-10.0.06.ttf,16,1
+
