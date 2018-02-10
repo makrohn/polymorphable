@@ -39,7 +39,7 @@ msgstr "ばくだん"
 
 #: ../items/items.txt:34
 msgid "Plant a 3-second bomb"
-msgstr ""
+msgstr "3びょう あとに ばくはつ する"
 
 #: ../items/items.txt:42
 msgid "Gold"
@@ -67,11 +67,11 @@ msgstr "いにしえのヒーローの つるぎ"
 
 #: ../items/items.txt:96
 msgid "Skeleton Key"
-msgstr ""
+msgstr "スケルトンのカギ"
 
 #: ../items/items.txt:102
 msgid "Unlocks a door in the Volcano"
-msgstr ""
+msgstr "火山にある、カギのかかったドアをあける"
 
 #: ../items/items.txt:107
 msgid "Fairy Flower"
@@ -255,7 +255,7 @@ msgstr ""
 
 #: ../powers/powers.txt:239
 msgid "Plant a 3-second bomb."
-msgstr ""
+msgstr "3びょう あと に ばくはつ する。"
 
 #: ../powers/powers.txt:248
 msgid "Holy Sword"
@@ -363,15 +363,15 @@ msgstr ""
 
 #: ../engine/elements.txt:3
 msgid "Fire Resistance"
-msgstr ""
+msgstr "ひ への ていこう"
 
 #: ../engine/elements.txt:7
 msgid "Ice Resistance"
-msgstr ""
+msgstr "こおり への ていこう"
 
 #: ../engine/elements.txt:11
 msgid "Earth Resistance"
-msgstr ""
+msgstr "つち への ていこう"
 
 #: ../engine/elements.txt:15
 msgid "Wind Resistance"
@@ -407,7 +407,7 @@ msgstr ""
 
 #: ../engine/titles.txt:22
 msgid "Doppelganger"
-msgstr ""
+msgstr "ドッペルゲンガー"
 
 #: ../engine/titles.txt:26
 msgid "Chameleon"
@@ -419,15 +419,15 @@ msgstr "おんなのこ"
 
 #: ../engine/primary_stats.txt:3
 msgid "Physical"
-msgstr ""
+msgstr "たいりょく"
 
 #: ../engine/primary_stats.txt:7
 msgid "Mental"
-msgstr ""
+msgstr "せいしんりょく"
 
 #: ../enemies/archer.txt:1
 msgid "Cultist Archer"
-msgstr ""
+msgstr "おかしいアーチャー"
 
 #: ../enemies/bat.txt:1
 msgid "Bat"
@@ -439,7 +439,7 @@ msgstr ""
 
 #: ../enemies/caster.txt:1
 msgid "Cultist Mage"
-msgstr ""
+msgstr "おかしいメイジ"
 
 #: ../enemies/combat_dummy.txt:1
 msgid "Combat Dummy"
@@ -483,7 +483,7 @@ msgstr ""
 
 #: ../enemies/knight.txt:1
 msgid "Cultist Knight"
-msgstr ""
+msgstr "おかしな ナイト"
 
 #: ../enemies/monk.txt:1
 msgid "Cultist Monk"
@@ -495,27 +495,27 @@ msgstr ""
 
 #: ../enemies/skeleton.txt:1
 msgid "Skeleton"
-msgstr ""
+msgstr "スケルトン"
 
 #: ../enemies/skeletonknight.txt:1
 msgid "Skeleton Knight"
-msgstr ""
+msgstr "スケルトン ナイト"
 
 #: ../enemies/skeletonmage.txt:1
 msgid "Skeleton Mage"
-msgstr ""
+msgstr "スケルトン メイジ"
 
 #: ../enemies/slime.txt:1
 msgid "Slime"
-msgstr ""
+msgstr "スライム"
 
 #: ../enemies/snake.txt:1
 msgid "Snake"
-msgstr ""
+msgstr "ヘビ"
 
 #: ../enemies/venombat.txt:1
 msgid "Venom Bat"
-msgstr ""
+msgstr "どく の コウモリ"
 
 #: ../enemies/zalkaz.txt:1
 msgid "Zalkaz, Bane of Laurelia"
@@ -687,7 +687,7 @@ msgstr ""
 
 #: ../maps/cavern.txt:499
 msgid "Carrots"
-msgstr ""
+msgstr "にんじん"
 
 #: ../maps/cavern.txt:536
 msgid "Unmarked Grave"
@@ -695,15 +695,15 @@ msgstr ""
 
 #: ../maps/church.txt:9
 msgid "Church"
-msgstr ""
+msgstr "きょうかい"
 
 #: ../maps/daphneshouse.txt:9
 msgid "Daphne's House"
-msgstr ""
+msgstr "ダフネの 家（いえ）"
 
 #: ../maps/eldershouse.txt:9
 msgid "Elder's House"
-msgstr ""
+msgstr "長老（ちょうろう）の 家（いえ）"
 
 #: ../maps/eldershouse.txt:123
 msgid "A secret passage!"
@@ -735,7 +735,7 @@ msgstr "あな の なか に、 おちて しまった!"
 
 #: ../maps/library.txt:9
 msgid "Library"
-msgstr ""
+msgstr "としょしつ"
 
 #: ../maps/library.txt:96
 msgid "p.32: \"Ghosts, being incorporeal, are nearly immune to heat and fire.\""
@@ -763,11 +763,11 @@ msgstr ""
 
 #: ../maps/market.txt:9
 msgid "Market"
-msgstr ""
+msgstr "マーケット"
 
 #: ../maps/marketbasement.txt:9
 msgid "Market Basement"
-msgstr ""
+msgstr "マーケットの そうこ"
 
 #: ../maps/mountainpath.txt:8
 msgid "Mountain Path"
@@ -787,7 +787,7 @@ msgstr ""
 
 #: ../maps/snow1.txt:189
 msgid "You need the Juggernaut Talisman to proceed!"
-msgstr ""
+msgstr "このさき を すすむには、 Juggernaut の おまもり が ひつようだ!"
 
 #: ../maps/snow4.txt:9
 msgid "Mountain Cave"
@@ -827,11 +827,11 @@ msgstr ""
 
 #: ../maps/tavern.txt:9
 msgid "Tavern"
-msgstr ""
+msgstr "いざかや"
 
 #: ../maps/volcano1.txt:9
 msgid "Volcano"
-msgstr ""
+msgstr "火山"
 
 #: ../maps/volcano1.txt:190
 msgid "Locked Gate"
@@ -839,7 +839,7 @@ msgstr ""
 
 #: ../maps/volcano2.txt:175
 msgid "Anvil"
-msgstr ""
+msgstr "アンビル"
 
 #: ../maps/volcano3.txt:179
 msgid "There might be a way to cross that small gap, but it looks deadly."
@@ -847,7 +847,7 @@ msgstr ""
 
 #: ../maps/volcano3.txt:190
 msgid "Lava River"
-msgstr ""
+msgstr "Lava 川"
 
 #: ../maps/volcano4.txt:189
 msgid "Someone has scrawled here: \"The fire skeleton's bombs killed my friend instantly!  If I wasn't a ghost already, I'd have died, too.\""
@@ -931,15 +931,15 @@ msgstr "そう ねがいたい です。 しかし、I suppose I can always join
 
 #: ../npcs/apprentice.txt:14
 msgid "Oh, don't be silly - you couldn't leave this village.  I've seen how Waka looks at you!"
-msgstr "もうっ、ばかにしないで! あなた は、 このむら を はなれられない でしょう。 I've seen how Waka looks at you!"
+msgstr "もうっ、ばかにしないで! あなた は、 このむら を はなれられない でしょう。 Waka が どれほど あなたを みつめていたか、 わたしは しってるのですよ!"
 
 #: ../npcs/apprentice.txt:15
 msgid "Wait, what?  She's never said anything!"
-msgstr ""
+msgstr "まって、 え? かのじょは、そんなこと、ひとことも、 いってなかったよ。"
 
 #: ../npcs/apprentice.txt:16
 msgid "Oh, I see her staring."
-msgstr "ええ、 わたしはみましたよ。 かのじょ が みつめているのを。"
+msgstr "でも、 わたしは みましたよ。 かのじょ が みつめているのを。"
 
 #: ../npcs/apprentice.txt:17
 msgid "*Wot blushes*"
@@ -1151,7 +1151,7 @@ msgstr ""
 
 #: ../npcs/daughter.txt:13
 msgid "I'm sure it will be.  Come back tonight for dinner, too!"
-msgstr "そうなることを、しんじてる。 夕方（ゆうがた）には、\tもどってきてね。 ばんゴハン が あるよ。"
+msgstr "そうなることを、しんじてる。 夕方（ゆうがた）には、もどってきてね。 ばんゴハン が あるよ。"
 
 #: ../npcs/daughter.txt:14
 msgid "Mmm, more pulled pork?  Excellent!"
@@ -1183,7 +1183,7 @@ msgstr "もちろん、そうしてる。 コーヒーは やめている。"
 
 #: ../npcs/elder.txt:1
 msgid "Elder Thomas"
-msgstr ""
+msgstr "トーマス長老（ちょうろう）"
 
 #: ../npcs/elder.txt:8
 msgid "Zalkaz"
@@ -1199,7 +1199,7 @@ msgstr ""
 
 #: ../npcs/elder.txt:18
 msgid "You must find the Juggernaut Talisman!"
-msgstr ""
+msgstr "あなたは、 Juggernaut  の おまもり を みつけなければなりません。"
 
 #: ../npcs/elder.txt:29
 msgid "Thank you for finding both halves of the Talisman!"
@@ -1255,7 +1255,7 @@ msgstr ""
 
 #: ../npcs/elder.txt:57
 msgid "When in the heck were you planning on letting me know the truth!?"
-msgstr "いつ、ほんとのこと を、わたし に、 しらせようと、計画（けいかく） していたの !?"
+msgstr "いつ、ほんとのこと を、わたし に、 しらせようと、 計画（けいかく） していたの !?"
 
 #: ../npcs/elder.txt:58
 msgid "Tomorrow, after your birthday party, I promise!  They died nobly, but now, it falls to you to finish their work."
@@ -1379,7 +1379,7 @@ msgstr ""
 
 #: ../npcs/ghost.txt:16
 msgid "Hello, Daphne."
-msgstr ""
+msgstr "こんんちわ、ダフネ。"
 
 #: ../npcs/ghost.txt:17
 msgid "How do you know my name?  Why aren't you attacking me?"
@@ -1403,7 +1403,7 @@ msgstr ""
 
 #: ../npcs/gravestone.txt:1
 msgid "Ancient Tombstone"
-msgstr ""
+msgstr "おおむかしの 墓石（はかいし）"
 
 #: ../npcs/gravestone.txt:8
 msgid "Examine Tombstone"
@@ -1447,7 +1447,7 @@ msgstr ""
 
 #: ../npcs/gravestone.txt:37
 msgid "The tombstone stands quiet now."
-msgstr ""
+msgstr "墓石（はかいし）は、いまは、しずかなままだ。"
 
 #: ../npcs/guard.txt:1
 msgid "King's knight"
@@ -1527,7 +1527,7 @@ msgstr ""
 
 #: ../npcs/innkeep.txt:1
 msgid "Shandra the Innkeep"
-msgstr "Shandra ザ・宿屋（やどや）さん"
+msgstr "Shandra 宿屋（やどや）さん"
 
 #: ../npcs/innkeep.txt:9
 msgid "Welcome to the tavern.  Would you like some chicken wings?"
@@ -1559,7 +1559,7 @@ msgstr ""
 
 #: ../npcs/jeweler.txt:1
 msgid "Celade the Jeweler"
-msgstr ""
+msgstr "Celade ほうせきや"
 
 #: ../npcs/jeweler.txt:9
 msgid "I came here all the way from the Castle Keradon to sell the jewels my family mines, but nobody here is buying!"
@@ -1571,11 +1571,11 @@ msgstr "ハラドリアの 次（つぎ）の 停留所（ていりゅうじょ�
 
 #: ../npcs/librarian.txt:1
 msgid "Librarian Joe"
-msgstr ""
+msgstr "としょかんのひと Joe"
 
 #: ../npcs/librarian.txt:9
 msgid "Oh, no, I'm not the Elder, I'm just his twin brother!"
-msgstr "オー、ノー。 わたしは、 エルダーじゃないよ。 かれの ふたごの きょうだい です!"
+msgstr "オー、ノー。 わたしは、 長老（ちょうろう）じゃないよ。 かれの ふたごの きょうだい です!"
 
 #: ../npcs/librarian.txt:10
 msgid "Younger by an hour, but he gets to be the village elder."
