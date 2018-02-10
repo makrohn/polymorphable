@@ -1,0 +1,1670 @@
+# Copyright (C) 2011 Clint Bellanger
+# This file is distributed under the same license as the FLARE package.
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FULL NAME <EMAIL@ADDRESS>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-07 20:35+\n"
+"PO-Revision-Date: 2018-02-10 08:47+0900\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../items/items.txt:3
+msgid "Carrot"
+msgstr "にんじん"
+
+#: ../items/items.txt:8
+msgid "Restore 4 HP"
+msgstr "HPが4回復"
+
+#: ../items/items.txt:16
+msgid "Watermelon"
+msgstr "スイカ"
+
+#: ../items/items.txt:21
+msgid "Restore 4 MP"
+msgstr "MPが4回復"
+
+#: ../items/items.txt:29
+msgid "Bomb"
+msgstr "ばくだん"
+
+#: ../items/items.txt:34
+msgid "Plant a 3-second bomb"
+msgstr ""
+
+#: ../items/items.txt:42
+msgid "Gold"
+msgstr "ゴールド"
+
+#: ../items/items.txt:57
+msgid "Leather Armor"
+msgstr "かわの よろい"
+
+#: ../items/items.txt:69
+msgid "Knife"
+msgstr "ナイフ"
+
+#: ../items/items.txt:77
+msgid "Just a kitchen knife"
+msgstr "たんなる キッチンナイフ"
+
+#: ../items/items.txt:82
+msgid "Hero's Sword"
+msgstr "ヒーローのつるぎ"
+
+#: ../items/items.txt:90
+msgid "The sword of the ancient hero"
+msgstr "いにしえのヒーローの つるぎ"
+
+#: ../items/items.txt:96
+msgid "Skeleton Key"
+msgstr ""
+
+#: ../items/items.txt:102
+msgid "Unlocks a door in the Volcano"
+msgstr ""
+
+#: ../items/items.txt:107
+msgid "Fairy Flower"
+msgstr "ようせいの はな"
+
+#: ../items/items.txt:113
+msgid "Return this flower to Elder Thomas"
+msgstr "この花（はな）を、トーマス長老（ちょうろう）のとこに、 とどけよう。"
+
+#: ../items/items.txt:118
+msgid "Bat Talisman"
+msgstr "コウモリの おまもり"
+
+#: ../items/items.txt:124
+msgid "Use to transform into a bat and fly"
+msgstr "つかうと、 コウモリに へんしん できて、 そらを とべる"
+
+#: ../items/items.txt:130
+msgid "Snake Talisman"
+msgstr "ヘビの タリスマン"
+
+#: ../items/items.txt:136
+msgid "Use to transform into a snake and spit acid at enemies and switches"
+msgstr ""
+
+#: ../items/items.txt:142
+msgid "Ghost Talisman"
+msgstr ""
+
+#: ../items/items.txt:148
+msgid "Use to transform into a ghost and pass through flame"
+msgstr ""
+
+#: ../items/items.txt:166
+msgid "Half of Juggernaut Talisman"
+msgstr ""
+
+#: ../items/items.txt:172
+msgid "Bring to the Village Elder to create the Juggernaut Talisman"
+msgstr ""
+
+#: ../items/items.txt:192
+msgid "Juggernaut Talisman"
+msgstr ""
+
+#: ../items/items.txt:199
+msgid "Transform into a mighty juggernaut"
+msgstr ""
+
+#: ../items/types.txt:3
+msgid "Body"
+msgstr "からだ"
+
+#: ../items/types.txt:7
+msgid "Consumable"
+msgstr "消費（しょうひ）"
+
+#: ../items/types.txt:11
+msgid "Gem"
+msgstr "ほうせき"
+
+#: ../items/types.txt:15
+msgid "Main Hand"
+msgstr "ききて"
+
+#: ../items/types.txt:19
+msgid "Quest Item"
+msgstr "きちょうなアイテム"
+
+#: ../items/qualities.txt:3
+msgid "Low"
+msgstr ""
+
+#: ../items/qualities.txt:8
+msgid "Normal"
+msgstr ""
+
+#: ../items/qualities.txt:13
+msgid "High"
+msgstr ""
+
+#: ../items/qualities.txt:18
+msgid "Epic"
+msgstr ""
+
+#: ../items/qualities.txt:23
+msgid "Unique"
+msgstr ""
+
+#: ../powers/powers.txt:3
+msgid "Swing"
+msgstr "スイング"
+
+#: ../powers/powers.txt:6
+msgid "Basic melee attack"
+msgstr "きんせつ こうげき"
+
+#: ../powers/powers.txt:18
+msgid "Crush"
+msgstr "クラッシュ"
+
+#: ../powers/powers.txt:21
+msgid "Knock your enemy back"
+msgstr ""
+
+#: ../powers/powers.txt:36
+msgid "Lightning Storm"
+msgstr ""
+
+#: ../powers/powers.txt:39
+msgid "Three lightning bolts strike randomly around you"
+msgstr ""
+
+#: ../powers/powers.txt:59
+msgid "Shield"
+msgstr "シールド"
+
+#: ../powers/powers.txt:62
+msgid "Create a force field that absorbs damage"
+msgstr ""
+
+#: ../powers/powers.txt:74
+msgid "Haste"
+msgstr "ヘイスト"
+
+#: ../powers/powers.txt:76
+msgid "Double run and attack speed for 8 seconds"
+msgstr ""
+
+#: ../powers/powers.txt:86
+msgid "Cleave"
+msgstr "なぎはらい"
+
+#: ../powers/powers.txt:89
+msgid "Attack all enemies in a wide arc"
+msgstr ""
+
+#: ../powers/powers.txt:104
+msgid "Leech Strike"
+msgstr ""
+
+#: ../powers/powers.txt:107
+msgid "Turn 50% of damage you deal into HP"
+msgstr ""
+
+#: ../powers/powers.txt:122
+msgid "Stun Strike"
+msgstr ""
+
+#: ../powers/powers.txt:125
+msgid "Stun an enemy for 3 seconds"
+msgstr ""
+
+#: ../powers/powers.txt:140
+msgid "Ice Blast"
+msgstr ""
+
+#: ../powers/powers.txt:143
+msgid "Slow nearby enemies for 5 seconds"
+msgstr ""
+
+#: ../powers/powers.txt:163
+msgid "Shoot (enemy)"
+msgstr ""
+
+#: ../powers/powers.txt:186
+msgid "Drop a bomb that does 5 damage when it explodes."
+msgstr ""
+
+#: ../powers/powers.txt:195
+msgid "Explode (npc)"
+msgstr ""
+
+#: ../powers/powers.txt:198
+msgid "Damages nearby enemies"
+msgstr ""
+
+#: ../powers/powers.txt:216
+msgid "flametrap (trap)"
+msgstr ""
+
+#: ../powers/powers.txt:239
+msgid "Plant a 3-second bomb."
+msgstr ""
+
+#: ../powers/powers.txt:248
+msgid "Holy Sword"
+msgstr ""
+
+#: ../powers/powers.txt:251
+msgid "Deal two damage to all enemies on-screen"
+msgstr ""
+
+#: ../powers/powers.txt:267
+msgid "Summon Bat (enemy)"
+msgstr ""
+
+#: ../powers/powers.txt:305
+msgid "Fire Bomb (enemy)"
+msgstr ""
+
+#: ../powers/powers.txt:308
+msgid "Drop a bomb that does 10 damage when it explodes to the whole screen."
+msgstr ""
+
+#: ../powers/powers.txt:316
+msgid "Firebomb Explosion (enemy)"
+msgstr ""
+
+#: ../powers/powers.txt:337
+msgid "Explode (enemy)"
+msgstr ""
+
+#: ../powers/powers.txt:358
+msgid "Tick"
+msgstr ""
+
+#: ../powers/powers.txt:367
+msgid "Tick (proximity)"
+msgstr ""
+
+#: ../powers/powers.txt:376
+msgid "Enemy Beacon"
+msgstr ""
+
+#: ../powers/powers.txt:377
+msgid "Bring other enemies into the fight with a dummy attack"
+msgstr ""
+
+#: ../powers/powers.txt:389
+msgid "Disenchant"
+msgstr ""
+
+#: ../powers/powers.txt:394
+msgid "Transform back to human"
+msgstr ""
+
+#: ../powers/powers.txt:399
+msgid "Fire Immunity"
+msgstr ""
+
+#: ../powers/powers.txt:423
+msgid "Transform into Bat"
+msgstr "コウモリに へんしん"
+
+#: ../powers/powers.txt:428
+msgid "Turn into a bat"
+msgstr ""
+
+#: ../powers/powers.txt:433
+msgid "Transform into Snake"
+msgstr "ヘビに へんしん"
+
+#: ../powers/powers.txt:438
+msgid "Turn into a spitting snake"
+msgstr ""
+
+#: ../powers/powers.txt:443
+msgid "Spit Acid"
+msgstr ""
+
+#: ../powers/powers.txt:465
+msgid "Spit Fire"
+msgstr ""
+
+#: ../powers/powers.txt:486
+msgid "Transform into Ghost"
+msgstr ""
+
+#: ../powers/powers.txt:491
+msgid "Turn into a ghost"
+msgstr ""
+
+#: ../powers/powers.txt:506
+msgid "Transform into Juggernaut"
+msgstr ""
+
+#: ../powers/powers.txt:512
+msgid "Turn into a powerful knight for a short time"
+msgstr ""
+
+#: ../powers/powers.txt:517
+msgid "Transform into Squirrel"
+msgstr ""
+
+#: ../powers/powers.txt:522
+msgid "Turn into a squirrel"
+msgstr ""
+
+#: ../engine/elements.txt:3
+msgid "Fire Resistance"
+msgstr ""
+
+#: ../engine/elements.txt:7
+msgid "Ice Resistance"
+msgstr ""
+
+#: ../engine/elements.txt:11
+msgid "Earth Resistance"
+msgstr ""
+
+#: ../engine/elements.txt:15
+msgid "Wind Resistance"
+msgstr "かぜ への ていこう"
+
+#: ../engine/classes.txt:2
+msgid "Adventurer"
+msgstr "ぼうけんしゃ"
+
+#: ../engine/hero_options.txt:6
+msgid "Daphne"
+msgstr "ダフネ"
+
+#: ../engine/titles.txt:2
+msgid "Therianthrope"
+msgstr ""
+
+#: ../engine/titles.txt:6
+msgid "Metamorph"
+msgstr ""
+
+#: ../engine/titles.txt:10
+msgid "Skinwalker"
+msgstr ""
+
+#: ../engine/titles.txt:14
+msgid "Animagus"
+msgstr ""
+
+#: ../engine/titles.txt:18
+msgid "Shapeshifter"
+msgstr ""
+
+#: ../engine/titles.txt:22
+msgid "Doppelganger"
+msgstr ""
+
+#: ../engine/titles.txt:26
+msgid "Chameleon"
+msgstr ""
+
+#: ../engine/titles.txt:30
+msgid "Girl"
+msgstr "おんなのこ"
+
+#: ../engine/primary_stats.txt:3
+msgid "Physical"
+msgstr ""
+
+#: ../engine/primary_stats.txt:7
+msgid "Mental"
+msgstr ""
+
+#: ../enemies/archer.txt:1
+msgid "Cultist Archer"
+msgstr ""
+
+#: ../enemies/bat.txt:1
+msgid "Bat"
+msgstr "コウモリ"
+
+#: ../enemies/beetle.txt:1
+msgid "Beetle"
+msgstr ""
+
+#: ../enemies/caster.txt:1
+msgid "Cultist Mage"
+msgstr ""
+
+#: ../enemies/combat_dummy.txt:1
+msgid "Combat Dummy"
+msgstr ""
+
+#: ../enemies/dshadow.txt:1
+msgid "Daphne's Shadow"
+msgstr ""
+
+#: ../enemies/firebat.txt:1
+msgid "Firebat"
+msgstr ""
+
+#: ../enemies/firebomb.txt:1
+msgid "Fire Bomb"
+msgstr ""
+
+#: ../enemies/fireskeleton.txt:1
+msgid "Fire Skeleton"
+msgstr ""
+
+#: ../enemies/ghost.txt:1
+msgid "Ghost"
+msgstr ""
+
+#: ../enemies/ghostbomb.txt:1
+msgid "Ghost Bomb"
+msgstr ""
+
+#: ../enemies/giantfireskeleton.txt:1
+msgid "Giant Fire Skeleton"
+msgstr ""
+
+#: ../enemies/giantghost.txt:1
+msgid "Giant Ghost"
+msgstr ""
+
+#: ../enemies/juggernautd.txt:1
+msgid "Juggernaut"
+msgstr ""
+
+#: ../enemies/knight.txt:1
+msgid "Cultist Knight"
+msgstr ""
+
+#: ../enemies/monk.txt:1
+msgid "Cultist Monk"
+msgstr ""
+
+#: ../enemies/rubysnake.txt:1
+msgid "Ruby Snake"
+msgstr ""
+
+#: ../enemies/skeleton.txt:1
+msgid "Skeleton"
+msgstr ""
+
+#: ../enemies/skeletonknight.txt:1
+msgid "Skeleton Knight"
+msgstr ""
+
+#: ../enemies/skeletonmage.txt:1
+msgid "Skeleton Mage"
+msgstr ""
+
+#: ../enemies/slime.txt:1
+msgid "Slime"
+msgstr ""
+
+#: ../enemies/snake.txt:1
+msgid "Snake"
+msgstr ""
+
+#: ../enemies/venombat.txt:1
+msgid "Venom Bat"
+msgstr ""
+
+#: ../enemies/zalkaz.txt:1
+msgid "Zalkaz, Bane of Laurelia"
+msgstr ""
+
+#: ../maps/barracks.txt:9
+msgid "Barracks"
+msgstr ""
+
+#: ../maps/basement1.txt:9
+msgid "Secret Basement"
+msgstr ""
+
+#: ../maps/basement3.txt:9
+msgid "Secret Cavern"
+msgstr ""
+
+#: ../maps/basement3.txt:227
+msgid "Chest"
+msgstr ""
+
+#: ../maps/basement4.txt:9
+msgid "Hidden Waterway"
+msgstr ""
+
+#: ../maps/basement4.txt:203
+msgid "You found the switch key in a barrel!"
+msgstr ""
+
+#: ../maps/basement4.txt:206
+msgid "Suspicious Barrel"
+msgstr ""
+
+#: ../maps/basement4.txt:229
+msgid "An empty chest!"
+msgstr ""
+
+#: ../maps/basement5.txt:203
+msgid "There's a key-shaped hole in this rock."
+msgstr ""
+
+#: ../maps/basement5.txt:205
+msgid "Strange Rock"
+msgstr ""
+
+#: ../maps/basement6.txt:217
+msgid "\"Leftover material from blasting is unstable due to cave-ins!  Do not approach!\""
+msgstr ""
+
+#: ../maps/basement6.txt:219
+msgid "Sign"
+msgstr ""
+
+#: ../maps/basement7.txt:9
+msgid "Sewer"
+msgstr ""
+
+#: ../maps/basement7.txt:203
+msgid "FENCES ARE FOR YOUR PROTECTION.  DO NOT OPEN GATES."
+msgstr ""
+
+#: ../maps/basement7.txt:205
+msgid "Signpost"
+msgstr ""
+
+#: ../maps/basement7.txt:213
+msgid "There is a strange groove in this rock"
+msgstr ""
+
+#: ../maps/basement8.txt:9
+msgid "Sanctuary"
+msgstr ""
+
+#: ../maps/basement8.txt:218
+msgid "You must defeat your shadow!"
+msgstr ""
+
+#: ../maps/basement8.txt:222
+msgid "Fountain"
+msgstr ""
+
+#: ../maps/basementa.txt:215
+msgid "The switch key fits into the hole in this rock!"
+msgstr ""
+
+#: ../maps/basementa.txt:233
+msgid "It has been a long journey from Castle Hestian, but we have finally found a safe glade away from prying eyes.  We shall found our village here, among the laurel trees."
+msgstr ""
+
+#: ../maps/basementa.txt:235
+msgid "Dusty Diary"
+msgstr ""
+
+#: ../maps/basementa.txt:243
+msgid "It has been a hundred years now since King Hestian's decree to burn all the \"skinchangers.\"  We must go into hiding or he'll destroy us all."
+msgstr ""
+
+#: ../maps/basementa.txt:245
+msgid "Moldy Diary"
+msgstr ""
+
+#: ../maps/basementa.txt:253
+msgid "King Hestian will not let us live in the open unless we share with him the secret of immortality.  If only we actually held that secret, as he believes!"
+msgstr ""
+
+#: ../maps/basementa.txt:255
+msgid "Yellowed Diary"
+msgstr ""
+
+#: ../maps/basementb.txt:9
+msgid "Underground Lake"
+msgstr ""
+
+#: ../maps/basementb.txt:212
+msgid "Ambushed!"
+msgstr ""
+
+#: ../maps/castle1.txt:9
+msgid "Castle Entry"
+msgstr ""
+
+#: ../maps/castle2.txt:9
+msgid "Castle Atrium"
+msgstr ""
+
+#: ../maps/castle3.txt:9
+msgid "Castle Hall"
+msgstr ""
+
+#: ../maps/castle4.txt:9
+msgid "Castle Basement"
+msgstr ""
+
+#: ../maps/castle5.txt:251
+msgid "Violent bombs ahead!"
+msgstr ""
+
+#: ../maps/castle5.txt:259
+msgid "Destroy them from afar to defuse them!"
+msgstr ""
+
+#: ../maps/castle6.txt:9
+msgid "Castle Balcony"
+msgstr ""
+
+#: ../maps/castle6.txt:212
+msgid "TRAPPED!"
+msgstr ""
+
+#: ../maps/castlea.txt:9
+msgid "Castle Ballroom"
+msgstr ""
+
+#: ../maps/castleb.txt:9
+msgid "Castle Sewer"
+msgstr ""
+
+#: ../maps/castlepath.txt:9
+msgid "Castle Path"
+msgstr ""
+
+#: ../maps/cavern.txt:9
+msgid "Cavern"
+msgstr ""
+
+#: ../maps/cavern.txt:441
+msgid "Drag to actionbar to use."
+msgstr ""
+
+#: ../maps/cavern.txt:499
+msgid "Carrots"
+msgstr ""
+
+#: ../maps/cavern.txt:536
+msgid "Unmarked Grave"
+msgstr ""
+
+#: ../maps/church.txt:9
+msgid "Church"
+msgstr ""
+
+#: ../maps/daphneshouse.txt:9
+msgid "Daphne's House"
+msgstr ""
+
+#: ../maps/eldershouse.txt:9
+msgid "Elder's House"
+msgstr ""
+
+#: ../maps/eldershouse.txt:123
+msgid "A secret passage!"
+msgstr ""
+
+#: ../maps/glade.txt:9
+msgid "Glade"
+msgstr ""
+
+#: ../maps/granary.txt:9
+msgid "Granary"
+msgstr ""
+
+#: ../maps/inn1st.txt:9
+msgid "Inn, 1st Floor"
+msgstr ""
+
+#: ../maps/inn2nd.txt:9
+msgid "Inn, 2nd Floor"
+msgstr ""
+
+#: ../maps/laurelia.txt:9
+msgid "Laurelia"
+msgstr ""
+
+#: ../maps/laurelia.txt:840
+msgid "You've fallen in a hole!"
+msgstr "あな の なか に、 おちて しまった!"
+
+#: ../maps/library.txt:9
+msgid "Library"
+msgstr ""
+
+#: ../maps/library.txt:96
+msgid "p.32: \"Ghosts, being incorporeal, are nearly immune to heat and fire.\""
+msgstr ""
+
+#: ../maps/library.txt:98
+msgid "On Ghosts"
+msgstr ""
+
+#: ../maps/library.txt:106
+msgid "p.1:  \"This small town is a seeming backwater.  However, nearly every one of it's citizens has the ability to polymorph into another creature.\"  Better put it back on the top shelf where the tourists can't find it."
+msgstr ""
+
+#: ../maps/library.txt:108
+msgid "History of Laurelia"
+msgstr ""
+
+#: ../maps/library.txt:116
+msgid "p. 967: \"Zalkas was constantly beset by paladins seeking to destroy them; he would eliminate each one by blotting out the light with flocks of bats.\""
+msgstr ""
+
+#: ../maps/library.txt:118
+msgid "Deomonology"
+msgstr ""
+
+#: ../maps/market.txt:9
+msgid "Market"
+msgstr ""
+
+#: ../maps/marketbasement.txt:9
+msgid "Market Basement"
+msgstr ""
+
+#: ../maps/mountainpath.txt:8
+msgid "Mountain Path"
+msgstr ""
+
+#: ../maps/smallhouse.txt:9
+msgid "Small House"
+msgstr "ちいさな 家（いえ）"
+
+#: ../maps/smithy.txt:9
+msgid "Smithy"
+msgstr ""
+
+#: ../maps/snow1.txt:9
+msgid "Snow Mountain"
+msgstr ""
+
+#: ../maps/snow1.txt:189
+msgid "You need the Juggernaut Talisman to proceed!"
+msgstr ""
+
+#: ../maps/snow4.txt:9
+msgid "Mountain Cave"
+msgstr ""
+
+#: ../maps/snow6.txt:198
+msgid "Bring ssssacrifices for Zalkaz here!"
+msgstr ""
+
+#: ../maps/snow7.txt:9
+msgid "Zalkaz's Lair"
+msgstr ""
+
+#: ../maps/snow7.txt:238
+msgid "You're home!"
+msgstr ""
+
+#: ../maps/snow7.txt:255
+msgid "Prepare to die!"
+msgstr ""
+
+#: ../maps/snowa.txt:9
+msgid "Mountain Mine"
+msgstr ""
+
+#: ../maps/snowa.txt:184
+msgid "Empty..."
+msgstr ""
+
+#: ../maps/snowb.txt:9
+msgid "Mountain Shop"
+msgstr ""
+
+#: ../maps/snowc.txt:9
+msgid "Safe Room"
+msgstr ""
+
+#: ../maps/tavern.txt:9
+msgid "Tavern"
+msgstr ""
+
+#: ../maps/volcano1.txt:9
+msgid "Volcano"
+msgstr ""
+
+#: ../maps/volcano1.txt:190
+msgid "Locked Gate"
+msgstr ""
+
+#: ../maps/volcano2.txt:175
+msgid "Anvil"
+msgstr ""
+
+#: ../maps/volcano3.txt:179
+msgid "There might be a way to cross that small gap, but it looks deadly."
+msgstr ""
+
+#: ../maps/volcano3.txt:190
+msgid "Lava River"
+msgstr ""
+
+#: ../maps/volcano4.txt:189
+msgid "Someone has scrawled here: \"The fire skeleton's bombs killed my friend instantly!  If I wasn't a ghost already, I'd have died, too.\""
+msgstr ""
+
+#: ../maps/volcano4.txt:192
+msgid "Altar"
+msgstr ""
+
+#: ../quests/basement.txt:4
+msgid "Explore the strange basement you've found underneath the Elder's house."
+msgstr ""
+
+#: ../quests/basement.txt:9
+msgid "You've found a strange key, but what on earth could it be used for?"
+msgstr ""
+
+#: ../quests/basement.txt:14
+msgid "Speak with the ghost in the basement."
+msgstr ""
+
+#: ../quests/downahole.txt:3
+msgid "Explore the village of Laurelia"
+msgstr ""
+
+#: ../quests/downahole.txt:8
+msgid "Find the Fairy Flower north of town, over the river."
+msgstr "ようせい の 花（はな）  を みつけよう。 町（まち）の 北（きた）の、 川（かわ）の むこうに、花 は ある。"
+
+#: ../quests/downahole.txt:13
+msgid "You found the Fairy Flower!  Now to bring it home to the Elder, and to explain what you saw in the cave."
+msgstr "あなた は、すでに、ようせいのはな を みつけている。 これを、さっさと Elder に もっていこう。 そして、どうくつ で 見た（みた） もの を、 せつめい しよう。"
+
+#: ../quests/juggernaut.txt:4
+msgid "You have been tasked with finding the Juggernaut Talisman.  Go east to find the first half in the volcano."
+msgstr "Juggernaut のおまもり を さがそう。 さいしょに、ひがし（→）に いこう。 それから、火山（かざん）に いきます。"
+
+#: ../quests/juggernaut.txt:9
+msgid "You have found the first half of the Juggernaut Talisman.  Go to the volcano to the west to find the second half."
+msgstr ""
+
+#: ../quests/juggernaut.txt:14
+msgid "You have found the 2nd half of the Juggernaut Talisman.  Bring it to the village elder to have him combine the halves."
+msgstr ""
+
+#: ../quests/snowmountain.txt:4
+msgid "Scale Snow Mountain, south of Laurelia, to put an end to Zalkaz once and for all."
+msgstr ""
+
+#: ../quests/snowmountain.txt:8
+msgid "Leave Zalkaz's Lair, and return to Laurelia to talk to the townsfolk.  Congratulations, you've beaten Laurelia's Polymorphable Citizens!"
+msgstr ""
+
+#: ../npcs/apprentice.txt:1
+msgid "Wot the Apprentice"
+msgstr ""
+
+#: ../npcs/apprentice.txt:8
+msgid "Good Morning"
+msgstr "おはよう"
+
+#: ../npcs/apprentice.txt:9
+msgid "Good morning Daphne."
+msgstr "おはよう、ダフネ。"
+
+#: ../npcs/apprentice.txt:10
+msgid "Good morning Wot!  Clara working you hard?"
+msgstr "おはよう、Wot! クララは、あなた の ため に、はたらいて ますか?"
+
+#: ../npcs/apprentice.txt:11
+msgid "It's miserable.  I've forged three swords and two helms this morning, but she says it's still not enough."
+msgstr "ひさん です。 わたしは わすれてしまいました、3ほん の つるぎ と、2こ の かぶと を。 しかし、かのじょ は いうのですよ、「まだ じゅうぶん ではない」のだと。"
+
+#: ../npcs/apprentice.txt:12
+msgid "Keep at it!  One of these days, maybe you'll be as good a smith as she is!"
+msgstr "がんばって つづけろ! そのうち、たぶん、あなたも、かのじょの ように、うで の いい しょくにん に なれるだろう!"
+
+#: ../npcs/apprentice.txt:13
+msgid "I hope so, but I suppose I can always join the King's knights if this doesn't pan out."
+msgstr "そう ねがいたい です。 しかし、I suppose I can always join the King's knights if this doesn't pan out."
+
+#: ../npcs/apprentice.txt:14
+msgid "Oh, don't be silly - you couldn't leave this village.  I've seen how Waka looks at you!"
+msgstr "もうっ、ばかにしないで! あなた は、 このむら を はなれられない でしょう。 I've seen how Waka looks at you!"
+
+#: ../npcs/apprentice.txt:15
+msgid "Wait, what?  She's never said anything!"
+msgstr ""
+
+#: ../npcs/apprentice.txt:16
+msgid "Oh, I see her staring."
+msgstr "ええ、 わたしはみましたよ。 かのじょ が みつめているのを。"
+
+#: ../npcs/apprentice.txt:17
+msgid "*Wot blushes*"
+msgstr "* Wot 、かお が あかくなる *"
+
+#: ../npcs/apprentice.txt:18
+msgid "See you around!"
+msgstr "また こんど!"
+
+#: ../npcs/barman.txt:1
+msgid "Barman Insel"
+msgstr ""
+
+#: ../npcs/barman.txt:8
+msgid "Chat"
+msgstr "はなす"
+
+#: ../npcs/barman.txt:9
+msgid "Not too many people in the tavern."
+msgstr ""
+
+#: ../npcs/barman.txt:10
+msgid "It's midmorning.  Gives me time to get the steins clean."
+msgstr ""
+
+#: ../npcs/basementghost.txt:1
+msgid "Balthasar"
+msgstr ""
+
+#: ../npcs/basementghost.txt:8
+msgid "Death of the Shade"
+msgstr ""
+
+#: ../npcs/basementghost.txt:10
+msgid "Ah, I can rest now...  if you wish, read the books beside me for history of these ruins..."
+msgstr ""
+
+#: ../npcs/basementghost.txt:13
+msgid "The Shade"
+msgstr ""
+
+#: ../npcs/basementghost.txt:15
+msgid "I cannot rest!  Look into the fountain...  and defeat your shadow there!"
+msgstr ""
+
+#: ../npcs/basementghost.txt:25
+msgid "These ruins have been here a long time, before the founding of Laurelia."
+msgstr ""
+
+#: ../npcs/basementghost.txt:26
+msgid "During the dark times when we the Kingdom was ruled by King Hestian, we fled here, and built a city in the light."
+msgstr ""
+
+#: ../npcs/basementghost.txt:27
+msgid "Some people, including the sorcerer Zalkaz, created warrens under the city, in case the mad King's soldiers found us."
+msgstr ""
+
+#: ../npcs/basementghost.txt:28
+msgid "Zalkaz conducted experiments in the darkness while the other Laurelians remained in the light."
+msgstr ""
+
+#: ../npcs/basementghost.txt:29
+msgid "After the mad King died, he sent guards to root our Zalkaz, with the assistance of the Laurelian populace."
+msgstr ""
+
+#: ../npcs/basementghost.txt:30
+msgid "The skeletons you see down here are the remainder of his frightening experiments."
+msgstr ""
+
+#: ../npcs/basementghost.txt:31
+msgid "Take this talisman, which has a piece of your shadow bound to it.  You should now be able to remain humanoid while incorporeal."
+msgstr ""
+
+#: ../npcs/blacksmith.txt:1
+msgid "Clara the Blacksmith"
+msgstr ""
+
+#: ../npcs/blacksmith.txt:10
+msgid "Weapons"
+msgstr ""
+
+#: ../npcs/blacksmith.txt:12
+msgid "Ah, so you need a better sword to beat the Evil One?"
+msgstr ""
+
+#: ../npcs/blacksmith.txt:13
+msgid "I've got this one that I made last night, but I'm feeling pretty attached to it."
+msgstr ""
+
+#: ../npcs/blacksmith.txt:14
+msgid "It'll cost ya 100 gold.  Sound like a deal?"
+msgstr ""
+
+#: ../npcs/blacksmith.txt:17
+msgid "The Hero's Sword"
+msgstr ""
+
+#: ../npcs/blacksmith.txt:19
+msgid "The tag on this sword says \"The sword of the ancient hero.\""
+msgstr ""
+
+#: ../npcs/blacksmith.txt:20
+msgid "It is!"
+msgstr ""
+
+#: ../npcs/blacksmith.txt:21
+msgid "Didn't you say you just finished forging it last night?"
+msgstr ""
+
+#: ../npcs/blacksmith.txt:22
+msgid "No!  Of course not!  It's the Ancient Hero's sword.  I just finished polishing it last night."
+msgstr ""
+
+#: ../npcs/blacksmith.txt:23
+msgid "You were going to try to sell it to the next nobleman who comes through town, weren't you?"
+msgstr ""
+
+#: ../npcs/blacksmith.txt:24
+msgid "Could be."
+msgstr ""
+
+#: ../npcs/blacksmith.txt:29
+msgid "Good morning!  I just finished some work on a new sword last night, and I'm showing it off to anyone who comes by."
+msgstr "おはよう! わたしは、きのう、あたらしい つるぎ の、いくつか の しごと を おえたばかり だ。 そして、わたし の ところ に やってくる ひとに、みせている。"
+
+#: ../npcs/blacksmith.txt:32
+msgid "The End"
+msgstr ""
+
+#: ../npcs/blacksmith.txt:34
+msgid "Daphne, you've destroyed Zalkaz!  I'm proud of you for putting that sword to good use."
+msgstr ""
+
+#: ../npcs/blacksmith.txt:35
+msgid "So that means I'll get a refund?  Come on, this is like free advertising."
+msgstr ""
+
+#: ../npcs/blacksmith.txt:36
+msgid "No way!  But I'll tell you what, I'll cook you dinner tonight."
+msgstr ""
+
+#: ../npcs/brewmaster.txt:1
+msgid "Brewmistress Waka"
+msgstr ""
+
+#: ../npcs/brewmaster.txt:9
+msgid "Good evening!  Have you come to try one of my latest creations?"
+msgstr ""
+
+#: ../npcs/brewmaster.txt:10
+msgid "I promise tonight's oatmeal stout is the best batch I've ever made."
+msgstr ""
+
+#: ../npcs/brewmaster.txt:15
+msgid "Let's raise a glass to your good health!"
+msgstr ""
+
+#: ../npcs/captain.txt:1
+msgid "Captain Tam"
+msgstr ""
+
+#: ../npcs/captain.txt:9
+msgid "Good afternoon."
+msgstr ""
+
+#: ../npcs/captain.txt:10
+msgid "Slow day?"
+msgstr ""
+
+#: ../npcs/captain.txt:11
+msgid "Very slow...  that new recruit keeps getting hit by the combat dummy, though, so that's good for a laugh."
+msgstr ""
+
+#: ../npcs/cleric.txt:1
+msgid "Altea, Keeper of the Faith"
+msgstr "Altea, 信仰（しんこう）のキーパー"
+
+#: ../npcs/cleric.txt:8
+msgid "Restore"
+msgstr ""
+
+#: ../npcs/cleric.txt:10
+msgid "Welcome to the Church!"
+msgstr "きょうかい へ ようこそ!"
+
+#: ../npcs/cleric.txt:11
+msgid "Come to the Church whenever you are wounded, and I shall heal you."
+msgstr "あなたが ケガを していたら、きょうかい に きてくれ。 かいふく してあげよう。"
+
+#: ../npcs/daughter.txt:1
+msgid "Shandra's Daughter, Kelsey"
+msgstr "サンドラの娘（むすめ）、 ケルシー"
+
+#: ../npcs/daughter.txt:9
+msgid "Hey Daphne, out and about today?"
+msgstr "やあ、ダフネ。 きょうは、おでかけ かい?"
+
+#: ../npcs/daughter.txt:10
+msgid "It's beautiful, plus I have a couple errands to do for Elder Thomas.  Will you be coming to my sixteenth birthday ceremony tomorrow?"
+msgstr "それもよいけど、でも、今日（きょう）は、用事（ようじ）が あります。 トーマス長老（ちょうろう）から たのまれた、 お使い（おつかい） が あるのです。 あした、わたしの 16さい の 誕生日（たんじょうび）に、あなたも、きてくれる よね?"
+
+#: ../npcs/daughter.txt:11
+msgid "Of course!  There's no place else in the village I'd rather."
+msgstr "もちろん! わたしは、村（むら）の どこにも、しらない場所（ばしょ） は ありません。"
+
+#: ../npcs/daughter.txt:12
+msgid "I hope it's half as awesome as yours was last month."
+msgstr ""
+
+#: ../npcs/daughter.txt:13
+msgid "I'm sure it will be.  Come back tonight for dinner, too!"
+msgstr "そうなることを、しんじてる。 夕方（ゆうがた）には、\tもどってきてね。 ばんゴハン が あるよ。"
+
+#: ../npcs/daughter.txt:14
+msgid "Mmm, more pulled pork?  Excellent!"
+msgstr "うん? ブタの やきにく? すばらしい!"
+
+#: ../npcs/deacon.txt:1
+msgid "Deacon Ray"
+msgstr ""
+
+#: ../npcs/deacon.txt:9
+msgid "Hi Daphne, it's bee a while.  You don't see anything weird around here, do you?"
+msgstr "やあダフネ、ひさしぶり。 あなたは、 ここで へんなものを みかけなかった ですか?"
+
+#: ../npcs/deacon.txt:10
+msgid "Should I?"
+msgstr "わたしのこと?"
+
+#: ../npcs/deacon.txt:11
+msgid "No, uh, no.  It's just that there's been weird sounds from the graveyard at night lately."
+msgstr "ちがう、ちがう。 さいきん、よなかの はかば から へんな ものおと が きこえてくるんです。"
+
+#: ../npcs/deacon.txt:12
+msgid "Maybe you shouldn't drink coffee before bed."
+msgstr "たぶん、あなたは ねるまえには コーヒーを のまないほうが よい。"
+
+#: ../npcs/deacon.txt:13
+msgid "Yeah, that's it, I'll lay off the coffee."
+msgstr "もちろん、そうしてる。 コーヒーは やめている。"
+
+#: ../npcs/elder.txt:1
+msgid "Elder Thomas"
+msgstr ""
+
+#: ../npcs/elder.txt:8
+msgid "Zalkaz"
+msgstr ""
+
+#: ../npcs/elder.txt:11
+msgid "Daphne, you must save the world from Zalkaz!"
+msgstr "ダフネ。 ザルカズが せかいを ほろぼさないように、あなたは、せかいを、 すくわなければ なりません!"
+
+#: ../npcs/elder.txt:14
+msgid "The Juggernaut Talisman"
+msgstr ""
+
+#: ../npcs/elder.txt:18
+msgid "You must find the Juggernaut Talisman!"
+msgstr ""
+
+#: ../npcs/elder.txt:29
+msgid "Thank you for finding both halves of the Talisman!"
+msgstr ""
+
+#: ../npcs/elder.txt:30
+msgid "Now I will make them whole again."
+msgstr ""
+
+#: ../npcs/elder.txt:31
+msgid "So, what do I do now with this thing?"
+msgstr ""
+
+#: ../npcs/elder.txt:32
+msgid "Go south to the Snow Mountain.  The ancient texts say that is where Zalkaz makes his lair."
+msgstr ""
+
+#: ../npcs/elder.txt:33
+msgid "Does he have a sled to come back down on?"
+msgstr ""
+
+#: ../npcs/elder.txt:34
+msgid "Of course not!  He's a bat!  Be prepared for anything."
+msgstr ""
+
+#: ../npcs/elder.txt:42
+msgid "You've found the first half of the Talisman, wonderful!  The second half is in a ruined castle to the west."
+msgstr ""
+
+#: ../npcs/elder.txt:43
+msgid "You may also want to speak with Robin the Hunter on your way over.  I told him to give you some of his equipment."
+msgstr ""
+
+#: ../npcs/elder.txt:52
+msgid "Ah, the Fairy Flower!  Did you run into any trouble in the forest?"
+msgstr "おお、それは ようせいの花（はな） ! あなたは、森（もり）の なか で、どんなトラブル に、あいましたか?"
+
+#: ../npcs/elder.txt:53
+msgid "Yes, I did.  I suppose I ought to thank you for the sword."
+msgstr "ええ、わたしは、トラブルに、あいました。 この つるぎ に、かんしゃ します。"
+
+#: ../npcs/elder.txt:54
+msgid "Snarks?  Grumpkins?"
+msgstr ""
+
+#: ../npcs/elder.txt:55
+msgid "No, I just, you know, unleashed an ancient evil.  Thanks a bunch for the warning."
+msgstr "いいえ、わたしは、おおむかし の 悪（あく）を、ときはなって、しまった ようです。あなたもしっている、おおむかしの悪（あく）です。 Thanks a bunch for the warning."
+
+#: ../npcs/elder.txt:56
+msgid "Ah, I hoped that I would never have to tell you.  You see, I never told you about your parents.  You weren't actually left on my doorstep - the house you live in was theirs, before they left to seal away the ancient evil Zalkaz."
+msgstr ""
+
+#: ../npcs/elder.txt:57
+msgid "When in the heck were you planning on letting me know the truth!?"
+msgstr "いつ、ほんとのこと を、わたし に、 しらせようと、計画（けいかく） していたの !?"
+
+#: ../npcs/elder.txt:58
+msgid "Tomorrow, after your birthday party, I promise!  They died nobly, but now, it falls to you to finish their work."
+msgstr "あした、誕生日（たんじょうび の あと です。 約束（やくそく）します。  かれらは けだかく しにましたが、 しかし いま、 it falls to you to finish their work."
+
+#: ../npcs/elder.txt:59
+msgid "You must find what they never could: both halves of the Juggernaut Talisman.  With the Talisman, you can seal away the Ancient Evil forever!"
+msgstr "かれらの みつけられなかった ものを、 あなたは、みつけなければ、ならない のです。  Juggernaut の おまもり の 半分（はんぶん）です。 その おまもり で、おおむかしの悪（あく）を、封印（ふういん）する こと が できます。ずっと。"
+
+#: ../npcs/elder.txt:60
+msgid "Go east, and use your bat talisman to fly over the ruined bridge, and seek the first half of the Juggernaut Talisman in the volcano."
+msgstr "東（ひがし、→）に、いってください。 そして、コウモリ の おまもり を つかって、 そら を とんで、to fly over the ruined bridge, 。 そして火山（かざん）で、 seek the first half of the Juggernaut の おまもり の、さいしょの半分を、さがして ください。"
+
+#: ../npcs/elder.txt:63
+msgid "The Fairy Flower"
+msgstr ""
+
+#: ../npcs/elder.txt:66
+msgid "Have you found the Fairy Flower yet?"
+msgstr ""
+
+#: ../npcs/elder.txt:72
+msgid "Ah, Daphne!  It's good to see you this morning.  You turn sixteen tomorrow, but it seems like just yesterday that I found you in a basket at my door."
+msgstr "ああ、ダフネ! けさ も、おあい できて うれしい。 あしたで 16さい に きみ は なるようだけど、 まるで きのう に わたしのドアの バスケットで あなたを みつけた ばかりの ようだ。"
+
+#: ../npcs/elder.txt:73
+msgid "Sixteen long years of doing pointless chores for you, Thomas."
+msgstr "あなたのために、わたしは 16ねんかん も、 かね に ならない しごと を、してきたのよ、トーマス。"
+
+#: ../npcs/elder.txt:74
+msgid "Come now, you wound an old man!  Tomorrow you shall be released from my endless tasks, but today, I need you to do one more."
+msgstr "もうっ、あなたは そうやって ろうじんを きずつける。 あしたで、 いままでの はてしなかった しごと から、ときはなたれますが、 しかし、 きょう、あなた は、 もういちど、しごと を やる ひつよう が あります。"
+
+#: ../npcs/elder.txt:75
+msgid "Joy of joys.  Where are you sending me today?"
+msgstr "よろこんで。 どこに わたしを いかせる つもり ですか?"
+
+#: ../npcs/elder.txt:76
+msgid "I need you to find the Fairy Flower in the forests.  It's the last ingredient I need to create the wreath to hang in your new home."
+msgstr "わたしの ため、 あなたは もりで、ようせい の はな を みつける ひつよう が あります。 それは、あなたの あたらしい いえ に、かかげるため の はなわ を つくるため に ひつよう な、さいごの ぶひん です。"
+
+#: ../npcs/elder.txt:77
+msgid "A housewarming present I have to fetch myself?  Awww, you shouldn't have."
+msgstr ""
+
+#: ../npcs/elder.txt:78
+msgid "Ha!  You're my girl.  The Fairy Flower is found north of town, across the river."
+msgstr "ハハ! あなたは わたし の しょうじょ ですよ。 ようせいのはな の ばしょ は、まち の きた にある、かわ の むこう です。"
+
+#: ../npcs/elder.txt:83
+msgid "I know your parents will rest much better knowing that their work is finished."
+msgstr ""
+
+#: ../npcs/elder.txt:84
+msgid "May they rest in peace...  Thank you, Thomas."
+msgstr ""
+
+#: ../npcs/elder.txt:85
+msgid "Be wary, though.  Zalkaz is but one of the many evils who threaten our world.  I hope that someday you can venture beyond Laurelia, where the world may have use of your sword once more."
+msgstr ""
+
+#: ../npcs/elder.txt:86
+msgid "Oh great, just what I always wanted...  more bats and snakes to kill."
+msgstr ""
+
+#: ../npcs/eldershade.txt:1
+msgid "Shade of Elder Thomas"
+msgstr ""
+
+#: ../npcs/eldershade.txt:9
+msgid "Daphne, I'm projecting to you via telepathy!"
+msgstr ""
+
+#: ../npcs/eldershade.txt:10
+msgid "I was reading my brother's ancient scrolls, and discovered that Zalkaz has the power to summon hordes of bats."
+msgstr ""
+
+#: ../npcs/eldershade.txt:11
+msgid "Do not face him without polymorphing into a juggernaut first!"
+msgstr ""
+
+#: ../npcs/eldershade.txt:12
+msgid "Avoid him when he summons the bats, and then use your Holy Sword power to knock them all out in one swing of your sword!"
+msgstr ""
+
+#: ../npcs/eldershade.txt:13
+msgid "I wish you luck."
+msgstr ""
+
+#: ../npcs/gardener.txt:1
+msgid "Howard the Gardener"
+msgstr ""
+
+#: ../npcs/gardener.txt:11
+msgid "Oh, I have some fresh carrots and watermelons, they're good for what ails you!"
+msgstr "ああ、わたしは、とれたての にんじん と スイカ を、もってるよ。 もし、あなたが くるしいとき、これを つかうと、 よくなりますよ。"
+
+#: ../npcs/gardener.txt:16
+msgid "Thanks for saving the village!"
+msgstr ""
+
+#: ../npcs/gardener.txt:17
+msgid "Now that we're so famous, maybe soon some more vendors will come to town."
+msgstr ""
+
+#: ../npcs/ghost.txt:1
+msgid "Gaspar"
+msgstr ""
+
+#: ../npcs/ghost.txt:8
+msgid "River of Flames"
+msgstr ""
+
+#: ../npcs/ghost.txt:9
+msgid "Be careful not to traverse the river of flames..."
+msgstr ""
+
+#: ../npcs/ghost.txt:12
+msgid "Parents"
+msgstr ""
+
+#: ../npcs/ghost.txt:16
+msgid "Hello, Daphne."
+msgstr ""
+
+#: ../npcs/ghost.txt:17
+msgid "How do you know my name?  Why aren't you attacking me?"
+msgstr ""
+
+#: ../npcs/ghost.txt:18
+msgid "I knew your father long ago...  it was here he first battled Zalkaz, to try and seal him away.  Half the Juggernaut Talisman is in here."
+msgstr ""
+
+#: ../npcs/ghost.txt:19
+msgid "There is now a lava ward preventing anyone from passing to the house..."
+msgstr ""
+
+#: ../npcs/ghost.txt:20
+msgid "I can get across, but alas, I am already dead.  Stay away from the lava unless you want to be dead, too."
+msgstr ""
+
+#: ../npcs/ghost.txt:21
+msgid "I think I learned not to touch hot objects when I was three, thanks for the tip."
+msgstr ""
+
+#: ../npcs/gravestone.txt:1
+msgid "Ancient Tombstone"
+msgstr ""
+
+#: ../npcs/gravestone.txt:8
+msgid "Examine Tombstone"
+msgstr ""
+
+#: ../npcs/gravestone.txt:11
+msgid "As you gaze upon the tombstone, you hear a voice coming from the walls."
+msgstr "あなたが、墓石（はかいし）を、よく見ている とき、 かべ の ほう から、 こえ が きこえてくる。"
+
+#: ../npcs/gravestone.txt:12
+msgid "I knew it was just a matter of time until someone stumbled upon my tomb!"
+msgstr ""
+
+#: ../npcs/gravestone.txt:13
+msgid "But never in the wildest dreams did I believe it would be the daughter of my captors!"
+msgstr ""
+
+#: ../npcs/gravestone.txt:14
+msgid "What?  Who are you?  Where are you?"
+msgstr "なに? あなたは だれ? どこに、あなたは いるの?"
+
+#: ../npcs/gravestone.txt:15
+msgid "I am Zalkaz, the Destroyer of Worlds!  When you approached my tombstone, your life force set me free."
+msgstr "われ は Zalkaz（ザルカズ）、世界（せかい）の破壊者（はかいしゃ）だ! "
+
+#: ../npcs/gravestone.txt:16
+msgid "Oh, and I'm so scared now.  You're just a voice, who cares?"
+msgstr "ああ、いま、わたしは こわい。 あなたは、声（こえ） だけ です。 だれが、きにします か?"
+
+#: ../npcs/gravestone.txt:17
+msgid "Who cares?  The entire world shall tremble, for soon I shall have my body back, and I shall sweep through the lands with my fiery sword of rage!"
+msgstr "だれが きにする? 世界中（せかいじゅう）が ふるえるだろう。 すぐに、わたしは からだ を とりもどしてやる! そして、 わたし の、荒々しい（あらあらしい） つるぎ で、世の中（よのなか）を そうじ してやる!"
+
+#: ../npcs/gravestone.txt:18
+msgid "Great.  Why can't we just have a sewer like most modern cities?  Sheesh."
+msgstr ""
+
+#: ../npcs/gravestone.txt:19
+msgid "Now I just need to find my way out of here.  Is that a breeze coming from behind the tombstone?"
+msgstr ""
+
+#: ../npcs/gravestone.txt:37
+msgid "The tombstone stands quiet now."
+msgstr ""
+
+#: ../npcs/guard.txt:1
+msgid "King's knight"
+msgstr "王さま（おうさま）に つかえる 騎士（きし）"
+
+#: ../npcs/guard.txt:9
+msgid "Careful on the roads out there, strange things have been afoot in the kingdom lately."
+msgstr "さいきん、王国で、へんなこと が、おきてるんだ。 ちかくを いくときは、 きをつけて。"
+
+#: ../npcs/guard.txt:10
+msgid "The king sent me to help out if there any trouble, but honestly..."
+msgstr "王さまは、なにか もんだい が あれば たすけるようにしろ と、わたしを おくったが、 しょうじき に いうと..."
+
+#: ../npcs/guard.txt:11
+msgid "I'm a little scared, and you have a sword.  Can't you take care of it?"
+msgstr "わたしは、すこし、こわい。そして、あなたは、つるぎを もっている。 Can't you take care of it?"
+
+#: ../npcs/guard.txt:16
+msgid "The King sends his highest regards, and hopes you'll come to the palace soon!"
+msgstr ""
+
+#: ../npcs/hunter.txt:1
+msgid "Robin the Hunter"
+msgstr "Robin（ロビン） ザ・ハンター"
+
+#: ../npcs/hunter.txt:9
+msgid "This bow is the best ever seen in this village."
+msgstr "この弓（ゆみ）は、この村（むら）では、今まで（いままで） 見た（みた） なかでは、最高（さいこう）のものです。"
+
+#: ../npcs/hunter.txt:10
+msgid "What?  No, of course you can't have it!"
+msgstr "え? ダメだよ、もちろん、きみに あげることは できないよ!"
+
+#: ../npcs/hunter.txt:13
+msgid "Armor"
+msgstr ""
+
+#: ../npcs/hunter.txt:18
+msgid "I talked to the Elder...  he wants me to give you something."
+msgstr ""
+
+#: ../npcs/hunter.txt:19
+msgid "Your precious bow?  Yes, that should come in handy."
+msgstr ""
+
+#: ../npcs/hunter.txt:20
+msgid "My bow??  You're nuts, I grew up with this thing!"
+msgstr ""
+
+#: ../npcs/hunter.txt:21
+msgid "What else do you have?"
+msgstr ""
+
+#: ../npcs/hunter.txt:22
+msgid "Well, I have some old leather armor.  It should help."
+msgstr ""
+
+#: ../npcs/hunter.txt:23
+msgid "Ew, it smells like wet socks."
+msgstr ""
+
+#: ../npcs/hunter.txt:24
+msgid "No, that's just the smell o' tha woods!  Don't look a gift horse in the mouth!"
+msgstr ""
+
+#: ../npcs/hunter.txt:29
+msgid "Ah, hey, you kill Zalkaz!  I would have done it myself, but you know how it is."
+msgstr ""
+
+#: ../npcs/hunter.txt:30
+msgid "How is it exactly?"
+msgstr ""
+
+#: ../npcs/hunter.txt:31
+msgid "Ah, er, well...  oh look!  Squirrel!"
+msgstr ""
+
+#: ../npcs/innkeep.txt:1
+msgid "Shandra the Innkeep"
+msgstr "Shandra ザ・宿屋（やどや）さん"
+
+#: ../npcs/innkeep.txt:9
+msgid "Welcome to the tavern.  Would you like some chicken wings?"
+msgstr "わが 旅館（りょかん）へ、ようこそ。 とりにく の 手羽先（てばさき）は、 すき かい?"
+
+#: ../npcs/innkeep.txt:14
+msgid "I expect suitors will soon be coming to town looking for you.  Ah, to be young again."
+msgstr ""
+
+#: ../npcs/jailor.txt:1
+msgid "Jailor"
+msgstr "看守（かんしゅ）"
+
+#: ../npcs/jailor.txt:9
+msgid "Lots of unsavory types locked up here!"
+msgstr "ここには、たくさんの しゅるい の、いや な もの が、ある。"
+
+#: ../npcs/jailor.txt:10
+msgid "Aw, who am I kidding?  We haven't had an inmate in fifty years."
+msgstr ""
+
+#: ../npcs/jailor.txt:11
+msgid "I think I still have the keys around here somewhere, though..."
+msgstr ""
+
+#: ../npcs/jailor.txt:16
+msgid "Maybe you should be our new Sherriff!  Not that we've anyone around to imprison, still."
+msgstr ""
+
+#: ../npcs/jeweler.txt:1
+msgid "Celade the Jeweler"
+msgstr ""
+
+#: ../npcs/jeweler.txt:9
+msgid "I came here all the way from the Castle Keradon to sell the jewels my family mines, but nobody here is buying!"
+msgstr "わたしは、かぞくの 鉱山（こうざん）の宝石（ほうせき）を うるために、 ケラドンの おしろ から、はるばると ここに きたのに、ここでは まったく、かわれません!"
+
+#: ../npcs/jeweler.txt:10
+msgid "Hopefully there's more money to be made at my next stop in Haladria."
+msgstr "ハラドリアの 次（つぎ）の 停留所（ていりゅうじょ）には、もっと多くの お金 が あることを ねがっています。"
+
+#: ../npcs/librarian.txt:1
+msgid "Librarian Joe"
+msgstr ""
+
+#: ../npcs/librarian.txt:9
+msgid "Oh, no, I'm not the Elder, I'm just his twin brother!"
+msgstr "オー、ノー。 わたしは、 エルダーじゃないよ。 かれの ふたごの きょうだい です!"
+
+#: ../npcs/librarian.txt:10
+msgid "Younger by an hour, but he gets to be the village elder."
+msgstr "いちじかん ほど わかいのに、 かれ は、むら の ちょうろう に なった。"
+
+#: ../npcs/librarian.txt:11
+msgid "Let me know if you need to look anything up, maps or the like."
+msgstr ""
+
+#: ../npcs/librarian.txt:16
+msgid "I'm already writing down your story for future generations!"
+msgstr ""
+
+#: ../npcs/quartermaster.txt:1
+msgid "Quartermaster Fenton"
+msgstr ""
+
+#: ../npcs/quartermaster.txt:9
+msgid "We're stocking up the granary for the winter."
+msgstr ""
+
+#: ../npcs/shopchest.txt:10
+msgid "Read Note"
+msgstr ""
+
+#: ../npcs/shopchest.txt:11
+msgid "If we're not in right now, feel free to leave the money in the chest.  Honor system!"
+msgstr ""
+
+#: ../npcs/trainee.txt:1
+msgid "PFC Xavier"
+msgstr ""
+
+#: ../npcs/trainee.txt:9
+msgid "Don't break my concentration, or that thing will send me sprawling!"
+msgstr "ダメ、はなしかけないで! 集中（しゅうちゅう）してるんだ!  でないと、うごき が、 にぶってしまう!"
+
+#: ../npcs/vacationera.txt:1
+msgid "Sally"
+msgstr "サリー"
+
+#: ../npcs/vacationera.txt:9
+msgid "We're getting away for a few days.  Castle life is just so hectic!"
+msgstr "わたしたちは、ここで数日（すうじつ）を、すごしています。 城（しろ）での生活（せいかつ）は、いそがしくって、てんてこまい です。"
+
+#: ../npcs/vacationera.txt:10
+msgid "Don't tell Harry, but I'm really interested in going to the volcano - there might even be some obsidian there!"
+msgstr "ハリーには、ひみつ に しておいて ほしい けど、 わたしは、ほんとうは 火山（かざん）に、 いってみたい のです。 きっと、黒曜石（こくようせき）が、 たくさん ある でしょう。"
+
+#: ../npcs/vacationera.txt:11
+msgid "Only trouble is, it's too hot to get close enough.  If only there was a way to traverse the lava."
+msgstr "もんだい は ひとつ。 そこに ちかづく には、 あつすぎる のです。 もし、ようがん を よこぎる 道（みち） だけしか、 ない のなら。"
+
+#: ../npcs/vacationera.txt:16
+msgid "We're almost ready to go back home to the castle, but I still haven't been to the volcano."
+msgstr ""
+
+#: ../npcs/vacationera.txt:17
+msgid "I'd let you borrow this charm, but apparently they only work for Laurelians,"
+msgstr ""
+
+#: ../npcs/vacationera.txt:18
+msgid "Shucks.  Well, if you ever want to visit us back at the castle, just let me know!"
+msgstr ""
+
+#: ../npcs/vacationerb.txt:1
+msgid "Harry"
+msgstr "ハリー"
+
+#: ../npcs/vacationerb.txt:9
+msgid "Ah, the vacation life!"
+msgstr "ああ、バケーションの生活（せいかつ）だ!"
+
+#: ../npcs/vacationerb.txt:10
+msgid "I hear there's some great spelunking to the north, and skiing to the south."
+msgstr "わたしの きいた はなし では、 北（きた）に、大きな spelunking ある。南（みなみ）に、スキーがある。"
+
+#: ../npcs/vacationerb.txt:11
+msgid "Do you know where I rent some skis around here?"
+msgstr "おしえてほしい こと が あります。 このあたりでは、どこに いけば、 スキーを かりることが できますか?"
+
+#: ../npcs/vacationerb.txt:12
+msgid "Uh, I'm not sure we have any shops like that."
+msgstr "ええと。あいにく、あまり、そういう お店（おみせ）は、しらないんです。"
+
+#: ../npcs/vacationerb.txt:13
+msgid "Darn.  Our castle is way more impressive than your ruined one here, I'll bet you could get skis there."
+msgstr ""
+
+#: ../cutscenes/pit.txt:5
+msgid "A pit opens beneath your feet, and you fall into a dank cave!"
+msgstr ""
