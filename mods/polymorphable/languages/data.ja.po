@@ -95,15 +95,15 @@ msgstr "ヘビの タリスマン"
 
 #: ../items/items.txt:136
 msgid "Use to transform into a snake and spit acid at enemies and switches"
-msgstr ""
+msgstr "つかうと、 ヘビ に へんしん して、 アシッドを はきだして、こうげき できる"
 
 #: ../items/items.txt:142
 msgid "Ghost Talisman"
-msgstr ""
+msgstr "ゆうれい の タリスマン"
 
 #: ../items/items.txt:148
 msgid "Use to transform into a ghost and pass through flame"
-msgstr ""
+msgstr "つかうと、 ゆうれい に へんしん して、 ほのお の なかを、 すりぬけること が できる"
 
 #: ../items/items.txt:166
 msgid "Half of Juggernaut Talisman"
@@ -303,7 +303,7 @@ msgstr ""
 
 #: ../powers/powers.txt:389
 msgid "Disenchant"
-msgstr ""
+msgstr "まほうをとく"
 
 #: ../powers/powers.txt:394
 msgid "Transform back to human"
@@ -339,7 +339,7 @@ msgstr ""
 
 #: ../powers/powers.txt:486
 msgid "Transform into Ghost"
-msgstr ""
+msgstr "ゆうれい に へんしん"
 
 #: ../powers/powers.txt:491
 msgid "Turn into a ghost"
@@ -635,15 +635,15 @@ msgstr ""
 
 #: ../maps/castle1.txt:9
 msgid "Castle Entry"
-msgstr ""
+msgstr "しろ の いりぐち"
 
 #: ../maps/castle2.txt:9
 msgid "Castle Atrium"
-msgstr ""
+msgstr "しろ の ひろば"
 
 #: ../maps/castle3.txt:9
 msgid "Castle Hall"
-msgstr ""
+msgstr "しろ の ホール"
 
 #: ../maps/castle4.txt:9
 msgid "Castle Basement"
@@ -651,11 +651,11 @@ msgstr ""
 
 #: ../maps/castle5.txt:251
 msgid "Violent bombs ahead!"
-msgstr ""
+msgstr "ゆきさき に、ばくはつしそうな ばくだん が ある!"
 
 #: ../maps/castle5.txt:259
 msgid "Destroy them from afar to defuse them!"
-msgstr ""
+msgstr "とおくから はかいして、 みちを ひらけ!"
 
 #: ../maps/castle6.txt:9
 msgid "Castle Balcony"
@@ -675,7 +675,7 @@ msgstr ""
 
 #: ../maps/castlepath.txt:9
 msgid "Castle Path"
-msgstr ""
+msgstr "しろ に つづく みち"
 
 #: ../maps/cavern.txt:9
 msgid "Cavern"
@@ -691,7 +691,7 @@ msgstr "にんじん"
 
 #: ../maps/cavern.txt:536
 msgid "Unmarked Grave"
-msgstr ""
+msgstr "マークのない おはか"
 
 #: ../maps/church.txt:9
 msgid "Church"
@@ -715,7 +715,7 @@ msgstr ""
 
 #: ../maps/granary.txt:9
 msgid "Granary"
-msgstr ""
+msgstr "のうさくもつ の そうこ"
 
 #: ../maps/inn1st.txt:9
 msgid "Inn, 1st Floor"
@@ -727,7 +727,7 @@ msgstr ""
 
 #: ../maps/laurelia.txt:9
 msgid "Laurelia"
-msgstr ""
+msgstr "ローレリア"
 
 #: ../maps/laurelia.txt:840
 msgid "You've fallen in a hole!"
@@ -783,7 +783,7 @@ msgstr ""
 
 #: ../maps/snow1.txt:9
 msgid "Snow Mountain"
-msgstr ""
+msgstr "ゆき の やま"
 
 #: ../maps/snow1.txt:189
 msgid "You need the Juggernaut Talisman to proceed!"
@@ -831,11 +831,11 @@ msgstr "いざかや"
 
 #: ../maps/volcano1.txt:9
 msgid "Volcano"
-msgstr "火山"
+msgstr "火山（かざん）"
 
 #: ../maps/volcano1.txt:190
 msgid "Locked Gate"
-msgstr ""
+msgstr "カギのしまった とびら"
 
 #: ../maps/volcano2.txt:175
 msgid "Anvil"
@@ -843,7 +843,7 @@ msgstr "アンビル"
 
 #: ../maps/volcano3.txt:179
 msgid "There might be a way to cross that small gap, but it looks deadly."
-msgstr ""
+msgstr "もし、このスキマをむりやり とびこえたら、たぶん、しぬ。"
 
 #: ../maps/volcano3.txt:190
 msgid "Lava River"
@@ -855,7 +855,7 @@ msgstr ""
 
 #: ../maps/volcano4.txt:192
 msgid "Altar"
-msgstr ""
+msgstr "さいだん"
 
 #: ../quests/basement.txt:4
 msgid "Explore the strange basement you've found underneath the Elder's house."
@@ -903,7 +903,7 @@ msgstr ""
 
 #: ../npcs/apprentice.txt:1
 msgid "Wot the Apprentice"
-msgstr ""
+msgstr "Wot みならい"
 
 #: ../npcs/apprentice.txt:8
 msgid "Good Morning"
@@ -959,11 +959,11 @@ msgstr "はなす"
 
 #: ../npcs/barman.txt:9
 msgid "Not too many people in the tavern."
-msgstr ""
+msgstr "この いざかや には、 あまり、 人（ひと）が いない。"
 
 #: ../npcs/barman.txt:10
 msgid "It's midmorning.  Gives me time to get the steins clean."
-msgstr ""
+msgstr "まだ、あさ の まっただなか ですよ。 ジョッキを あらうような じかん です。"
 
 #: ../npcs/basementghost.txt:1
 msgid "Balthasar"
@@ -1015,47 +1015,47 @@ msgstr ""
 
 #: ../npcs/blacksmith.txt:1
 msgid "Clara the Blacksmith"
-msgstr ""
+msgstr "クララ かじや"
 
 #: ../npcs/blacksmith.txt:10
 msgid "Weapons"
-msgstr ""
+msgstr "ぶき"
 
 #: ../npcs/blacksmith.txt:12
 msgid "Ah, so you need a better sword to beat the Evil One?"
-msgstr ""
+msgstr "ふむ・・・ あなたは、あくまを たおすために、もっとよい、つるぎが、ひつよう ですか?"
 
 #: ../npcs/blacksmith.txt:13
 msgid "I've got this one that I made last night, but I'm feeling pretty attached to it."
-msgstr ""
+msgstr "わたしは、きのう つくったばかりの ぶき があるが、 しかし、おきにいり なんだ。"
 
 #: ../npcs/blacksmith.txt:14
 msgid "It'll cost ya 100 gold.  Sound like a deal?"
-msgstr ""
+msgstr "それは100ゴールドだろう。 Sound like a deal?"
 
 #: ../npcs/blacksmith.txt:17
 msgid "The Hero's Sword"
-msgstr ""
+msgstr "ヒーローのつるぎ"
 
 #: ../npcs/blacksmith.txt:19
 msgid "The tag on this sword says \"The sword of the ancient hero.\""
-msgstr ""
+msgstr "このつるぎに「いにしえのヒーローのつるぎ」と、かかれてるんだけど・・・"
 
 #: ../npcs/blacksmith.txt:20
 msgid "It is!"
-msgstr ""
+msgstr "そのとおり!"
 
 #: ../npcs/blacksmith.txt:21
 msgid "Didn't you say you just finished forging it last night?"
-msgstr ""
+msgstr "でも、きのう、つくりおえたって、いってたよね?"
 
 #: ../npcs/blacksmith.txt:22
 msgid "No!  Of course not!  It's the Ancient Hero's sword.  I just finished polishing it last night."
-msgstr ""
+msgstr "ちがう! もちろん、ちがう! これは、いにしえの ヒーローのつるぎ なんだ。 きのう、わたしは、つるぎを みがいた だけ なんだ。"
 
 #: ../npcs/blacksmith.txt:23
 msgid "You were going to try to sell it to the next nobleman who comes through town, weren't you?"
-msgstr ""
+msgstr "あなたは、このまちに やってくる かねもちに、 これを うろう と、してたのですか?"
 
 #: ../npcs/blacksmith.txt:24
 msgid "Could be."
@@ -1083,15 +1083,15 @@ msgstr ""
 
 #: ../npcs/brewmaster.txt:1
 msgid "Brewmistress Waka"
-msgstr ""
+msgstr "ウェイトレス Waka"
 
 #: ../npcs/brewmaster.txt:9
 msgid "Good evening!  Have you come to try one of my latest creations?"
-msgstr ""
+msgstr "こんばんは! あなたは、わたしの、いちばん あたらしい さくひんを、ためしに、きましたか？"
 
 #: ../npcs/brewmaster.txt:10
 msgid "I promise tonight's oatmeal stout is the best batch I've ever made."
-msgstr ""
+msgstr "わたしは、こんやの オートミール スタウト が、わたしが いままでに つくったなかでは、 さいこうの やきかげん だと やくそく します。"
 
 #: ../npcs/brewmaster.txt:15
 msgid "Let's raise a glass to your good health!"
@@ -1271,7 +1271,7 @@ msgstr "東（ひがし、→）に、いってください。 そして、コ�
 
 #: ../npcs/elder.txt:63
 msgid "The Fairy Flower"
-msgstr ""
+msgstr "ようせい の はな"
 
 #: ../npcs/elder.txt:66
 msgid "Have you found the Fairy Flower yet?"
@@ -1367,15 +1367,15 @@ msgstr ""
 
 #: ../npcs/ghost.txt:8
 msgid "River of Flames"
-msgstr ""
+msgstr "ほのお の 川（かわ）"
 
 #: ../npcs/ghost.txt:9
 msgid "Be careful not to traverse the river of flames..."
-msgstr ""
+msgstr "ほのお の かわ を とおるときは、きをつけて・・・"
 
 #: ../npcs/ghost.txt:12
 msgid "Parents"
-msgstr ""
+msgstr "ちち と はは"
 
 #: ../npcs/ghost.txt:16
 msgid "Hello, Daphne."
@@ -1383,19 +1383,19 @@ msgstr "こんんちわ、ダフネ。"
 
 #: ../npcs/ghost.txt:17
 msgid "How do you know my name?  Why aren't you attacking me?"
-msgstr ""
+msgstr "どうして、わたしの なまえ を しってるの?"
 
 #: ../npcs/ghost.txt:18
 msgid "I knew your father long ago...  it was here he first battled Zalkaz, to try and seal him away.  Half the Juggernaut Talisman is in here."
-msgstr ""
+msgstr "私はあなたの父親をずっと前から知っていた... ここで彼は最初にザルカズと戦って、やつを封印しようとした。 Juggernaut Talisman の半分は、ここにある。"
 
 #: ../npcs/ghost.txt:19
 msgid "There is now a lava ward preventing anyone from passing to the house..."
-msgstr ""
+msgstr "いまでは、 この家（いえ）に はいれなくするかのように、ようがんが ある。"
 
 #: ../npcs/ghost.txt:20
 msgid "I can get across, but alas, I am already dead.  Stay away from the lava unless you want to be dead, too."
-msgstr ""
+msgstr "わたしなら、よこぎることができますが、 ざんねん なことに、 わたしは すでに しんでいます。 あなたが しにたくないなら、 ようがん から はなれてください。"
 
 #: ../npcs/ghost.txt:21
 msgid "I think I learned not to touch hot objects when I was three, thanks for the tip."
@@ -1591,11 +1591,11 @@ msgstr ""
 
 #: ../npcs/quartermaster.txt:1
 msgid "Quartermaster Fenton"
-msgstr ""
+msgstr "ほかん がかり フェントン"
 
 #: ../npcs/quartermaster.txt:9
 msgid "We're stocking up the granary for the winter."
-msgstr ""
+msgstr "ふゆ に そなえて、 のうさくもつ を ためているんだ。"
 
 #: ../npcs/shopchest.txt:10
 msgid "Read Note"
