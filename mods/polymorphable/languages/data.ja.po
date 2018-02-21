@@ -331,7 +331,7 @@ msgstr ""
 
 #: ../powers/powers.txt:443
 msgid "Spit Acid"
-msgstr ""
+msgstr "アシッドを はく"
 
 #: ../powers/powers.txt:465
 msgid "Spit Fire"
@@ -363,19 +363,19 @@ msgstr ""
 
 #: ../engine/elements.txt:3
 msgid "Fire"
-msgstr ""
+msgstr "ほのお"
 
 #: ../engine/elements.txt:7
 msgid "Ice"
-msgstr ""
+msgstr "こおり"
 
 #: ../engine/elements.txt:11
 msgid "Earth"
-msgstr ""
+msgstr "つち"
 
 #: ../engine/elements.txt:15
 msgid "Wind"
-msgstr ""
+msgstr "かぜ"
 
 #: ../engine/classes.txt:2
 msgid "Adventurer"
@@ -1668,15 +1668,3 @@ msgstr ""
 #: ../cutscenes/pit.txt:5
 msgid "A pit opens beneath your feet, and you fall into a dank cave!"
 msgstr ""
-
-#~ msgid "Fire Resistance"
-#~ msgstr "ひ への ていこう"
-
-#~ msgid "Ice Resistance"
-#~ msgstr "こおり への ていこう"
-
-#~ msgid "Earth Resistance"
-#~ msgstr "つち への ていこう"
-
-#~ msgid "Wind Resistance"
-#~ msgstr "かぜ への ていこう"
