@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-07 20:35+\n"
+"POT-Creation-Date: 2018-02-21 08:34+\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -360,20 +360,23 @@ msgid "Turn into a squirrel"
 msgstr "Werde ein Eichhörnchen"
 
 #: ../engine/elements.txt:3
-msgid "Fire Resistance"
-msgstr "Feuerwiderstand"
+#, fuzzy
+msgid "Fire"
+msgstr "Feuerfledermaus"
 
 #: ../engine/elements.txt:7
-msgid "Ice Resistance"
-msgstr "Kältewiderstand"
+#, fuzzy
+msgid "Ice"
+msgstr "Eis"
 
 #: ../engine/elements.txt:11
-msgid "Earth Resistance"
-msgstr "Erdwiderstand"
+#, fuzzy
+msgid "Earth"
+msgstr "Erde"
 
 #: ../engine/elements.txt:15
-msgid "Wind Resistance"
-msgstr "Windwiderstand"
+msgid "Wind"
+msgstr ""
 
 #: ../engine/classes.txt:2
 msgid "Adventurer"
@@ -1671,6 +1674,18 @@ msgstr "Verdammt. Unsere Burg ist viel beeindruckender als eure Ruine hier. Ich 
 msgid "A pit opens beneath your feet, and you fall into a dank cave!"
 msgstr ""
 
+#~ msgid "Fire Resistance"
+#~ msgstr "Feuerwiderstand"
+
+#~ msgid "Ice Resistance"
+#~ msgstr "Kältewiderstand"
+
+#~ msgid "Earth Resistance"
+#~ msgstr "Erdwiderstand"
+
+#~ msgid "Wind Resistance"
+#~ msgstr "Windwiderstand"
+
 #~ msgid "consumable"
 #~ msgstr "Verbrauchsgegenstand"
 
@@ -1775,12 +1790,6 @@ msgstr ""
 
 #~ msgid "fire"
 #~ msgstr "Feuer"
-
-#~ msgid "ice"
-#~ msgstr "Eis"
-
-#~ msgid "earth"
-#~ msgstr "Erde"
 
 #~ msgid "wind"
 #~ msgstr "Wind"

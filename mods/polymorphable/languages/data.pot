@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-07 20:35+\n"
+"POT-Creation-Date: 2018-02-21 08:34+\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -360,19 +360,19 @@ msgid "Turn into a squirrel"
 msgstr ""
 
 #: ../engine/elements.txt:3
-msgid "Fire Resistance"
+msgid "Fire"
 msgstr ""
 
 #: ../engine/elements.txt:7
-msgid "Ice Resistance"
+msgid "Ice"
 msgstr ""
 
 #: ../engine/elements.txt:11
-msgid "Earth Resistance"
+msgid "Earth"
 msgstr ""
 
 #: ../engine/elements.txt:15
-msgid "Wind Resistance"
+msgid "Wind"
 msgstr ""
 
 #: ../engine/classes.txt:2

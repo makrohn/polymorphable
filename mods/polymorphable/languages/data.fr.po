@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-07 20:35+\n"
+"POT-Creation-Date: 2018-02-21 08:34+\n"
 "PO-Revision-Date: 2014-09-22 21:43+0200\n"
 "Last-Translator: Martin Quinson\n"
 "Language-Team: French <>\n"
@@ -362,20 +362,23 @@ msgid "Turn into a squirrel"
 msgstr "Changer en écureuil"
 
 #: ../engine/elements.txt:3
-msgid "Fire Resistance"
-msgstr "Résistance au feu"
+#, fuzzy
+msgid "Fire"
+msgstr "Chauve-souris de feu"
 
 #: ../engine/elements.txt:7
-msgid "Ice Resistance"
-msgstr "Résistance à la glace"
+#, fuzzy
+msgid "Ice"
+msgstr "glace"
 
 #: ../engine/elements.txt:11
-msgid "Earth Resistance"
-msgstr "Résistance à la terre"
+#, fuzzy
+msgid "Earth"
+msgstr "terre"
 
 #: ../engine/elements.txt:15
-msgid "Wind Resistance"
-msgstr "Résistance au vent"
+msgid "Wind"
+msgstr ""
 
 #: ../engine/classes.txt:2
 msgid "Adventurer"
@@ -1671,6 +1674,18 @@ msgstr ""
 msgid "A pit opens beneath your feet, and you fall into a dank cave!"
 msgstr ""
 
+#~ msgid "Fire Resistance"
+#~ msgstr "Résistance au feu"
+
+#~ msgid "Ice Resistance"
+#~ msgstr "Résistance à la glace"
+
+#~ msgid "Earth Resistance"
+#~ msgstr "Résistance à la terre"
+
+#~ msgid "Wind Resistance"
+#~ msgstr "Résistance au vent"
+
 #~ msgid "consumable"
 #~ msgstr "consommable"
 
@@ -1688,12 +1703,6 @@ msgstr ""
 
 #~ msgid "fire"
 #~ msgstr "feu"
-
-#~ msgid "ice"
-#~ msgstr "glace"
-
-#~ msgid "earth"
-#~ msgstr "terre"
 
 #~ msgid "wind"
 #~ msgstr "vent"

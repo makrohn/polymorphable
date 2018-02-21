@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-07 20:35+\n"
+"POT-Creation-Date: 2018-02-21 08:34+\n"
 "PO-Revision-Date: 2018-02-10 08:47+0900\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -362,20 +362,20 @@ msgid "Turn into a squirrel"
 msgstr ""
 
 #: ../engine/elements.txt:3
-msgid "Fire Resistance"
-msgstr "ひ への ていこう"
+msgid "Fire"
+msgstr ""
 
 #: ../engine/elements.txt:7
-msgid "Ice Resistance"
-msgstr "こおり への ていこう"
+msgid "Ice"
+msgstr ""
 
 #: ../engine/elements.txt:11
-msgid "Earth Resistance"
-msgstr "つち への ていこう"
+msgid "Earth"
+msgstr ""
 
 #: ../engine/elements.txt:15
-msgid "Wind Resistance"
-msgstr "かぜ への ていこう"
+msgid "Wind"
+msgstr ""
 
 #: ../engine/classes.txt:2
 msgid "Adventurer"
@@ -1668,3 +1668,15 @@ msgstr ""
 #: ../cutscenes/pit.txt:5
 msgid "A pit opens beneath your feet, and you fall into a dank cave!"
 msgstr ""
+
+#~ msgid "Fire Resistance"
+#~ msgstr "ひ への ていこう"
+
+#~ msgid "Ice Resistance"
+#~ msgstr "こおり への ていこう"
+
+#~ msgid "Earth Resistance"
+#~ msgstr "つち への ていこう"
+
+#~ msgid "Wind Resistance"
+#~ msgstr "かぜ への ていこう"
