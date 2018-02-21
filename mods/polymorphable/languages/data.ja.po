@@ -303,7 +303,7 @@ msgstr ""
 
 #: ../powers/powers.txt:389
 msgid "Disenchant"
-msgstr ""
+msgstr "まほうをとく"
 
 #: ../powers/powers.txt:394
 msgid "Transform back to human"
@@ -715,7 +715,7 @@ msgstr ""
 
 #: ../maps/granary.txt:9
 msgid "Granary"
-msgstr ""
+msgstr "のうさくもつ の そうこ"
 
 #: ../maps/inn1st.txt:9
 msgid "Inn, 1st Floor"
@@ -727,7 +727,7 @@ msgstr ""
 
 #: ../maps/laurelia.txt:9
 msgid "Laurelia"
-msgstr ""
+msgstr "ローレリア"
 
 #: ../maps/laurelia.txt:840
 msgid "You've fallen in a hole!"
@@ -835,7 +835,7 @@ msgstr "火山"
 
 #: ../maps/volcano1.txt:190
 msgid "Locked Gate"
-msgstr ""
+msgstr "カギのしまった とびら"
 
 #: ../maps/volcano2.txt:175
 msgid "Anvil"
@@ -843,7 +843,7 @@ msgstr "アンビル"
 
 #: ../maps/volcano3.txt:179
 msgid "There might be a way to cross that small gap, but it looks deadly."
-msgstr ""
+msgstr "もし、このスキマをむりやり とびこえたら、たぶん、しぬ。"
 
 #: ../maps/volcano3.txt:190
 msgid "Lava River"
@@ -903,7 +903,7 @@ msgstr ""
 
 #: ../npcs/apprentice.txt:1
 msgid "Wot the Apprentice"
-msgstr ""
+msgstr "Wot みならい"
 
 #: ../npcs/apprentice.txt:8
 msgid "Good Morning"
@@ -959,11 +959,11 @@ msgstr "はなす"
 
 #: ../npcs/barman.txt:9
 msgid "Not too many people in the tavern."
-msgstr ""
+msgstr "この いざかや には、 あまり、 人（ひと）が いない。"
 
 #: ../npcs/barman.txt:10
 msgid "It's midmorning.  Gives me time to get the steins clean."
-msgstr ""
+msgstr "まだ、あさ の まっただなか ですよ。 ジョッキを あらうような じかん です。"
 
 #: ../npcs/basementghost.txt:1
 msgid "Balthasar"
@@ -1083,15 +1083,15 @@ msgstr ""
 
 #: ../npcs/brewmaster.txt:1
 msgid "Brewmistress Waka"
-msgstr ""
+msgstr "ウェイトレス Waka"
 
 #: ../npcs/brewmaster.txt:9
 msgid "Good evening!  Have you come to try one of my latest creations?"
-msgstr ""
+msgstr "こんばんは! あなたは、わたしの、いちばん あたらしい さくひんを、ためしに、きましたか？"
 
 #: ../npcs/brewmaster.txt:10
 msgid "I promise tonight's oatmeal stout is the best batch I've ever made."
-msgstr ""
+msgstr "わたしは、こんやの オートミール スタウト が、わたしが いままでに つくったなかでは、 さいこうの やきかげん だと やくそく します。"
 
 #: ../npcs/brewmaster.txt:15
 msgid "Let's raise a glass to your good health!"
