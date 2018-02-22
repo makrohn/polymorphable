@@ -111,15 +111,15 @@ msgstr ""
 
 #: ../items/items.txt:172
 msgid "Bring to the Village Elder to create the Juggernaut Talisman"
-msgstr ""
+msgstr "これを長老のところにもっていき、 Juggernaut タリスマンをつくってもらう。"
 
 #: ../items/items.txt:192
 msgid "Juggernaut Talisman"
-msgstr ""
+msgstr " Juggernaut のタリスマン"
 
 #: ../items/items.txt:199
 msgid "Transform into a mighty juggernaut"
-msgstr ""
+msgstr "つよい juggernaut にへんしん"
 
 #: ../items/types.txt:3
 msgid "Body"
@@ -191,7 +191,7 @@ msgstr "シールド"
 
 #: ../powers/powers.txt:62
 msgid "Create a force field that absorbs damage"
-msgstr ""
+msgstr "ダメージ を きゅうしゅう する フィールド を つくります"
 
 #: ../powers/powers.txt:74
 msgid "Haste"
@@ -207,7 +207,7 @@ msgstr "なぎはらい"
 
 #: ../powers/powers.txt:89
 msgid "Attack all enemies in a wide arc"
-msgstr ""
+msgstr "はばひろい えんきどう で、てき を きりさきます"
 
 #: ../powers/powers.txt:104
 msgid "Leech Strike"
@@ -259,7 +259,7 @@ msgstr "3びょう あと に ばくはつ する。"
 
 #: ../powers/powers.txt:248
 msgid "Holy Sword"
-msgstr ""
+msgstr "せいなる つるぎ"
 
 #: ../powers/powers.txt:251
 msgid "Deal two damage to all enemies on-screen"
@@ -347,7 +347,7 @@ msgstr ""
 
 #: ../powers/powers.txt:506
 msgid "Transform into Juggernaut"
-msgstr ""
+msgstr "Juggernaut に へんしん"
 
 #: ../powers/powers.txt:512
 msgid "Turn into a powerful knight for a short time"
@@ -411,7 +411,7 @@ msgstr "ドッペルゲンガー"
 
 #: ../engine/titles.txt:26
 msgid "Chameleon"
-msgstr ""
+msgstr "カメレオン"
 
 #: ../engine/titles.txt:30
 msgid "Girl"
@@ -459,11 +459,11 @@ msgstr ""
 
 #: ../enemies/fireskeleton.txt:1
 msgid "Fire Skeleton"
-msgstr ""
+msgstr "ほのお の スケルトン"
 
 #: ../enemies/ghost.txt:1
 msgid "Ghost"
-msgstr ""
+msgstr "ゆうれい"
 
 #: ../enemies/ghostbomb.txt:1
 msgid "Ghost Bomb"
@@ -471,11 +471,11 @@ msgstr ""
 
 #: ../enemies/giantfireskeleton.txt:1
 msgid "Giant Fire Skeleton"
-msgstr ""
+msgstr "ジャイアント ファイア スケルトン"
 
 #: ../enemies/giantghost.txt:1
 msgid "Giant Ghost"
-msgstr ""
+msgstr "ジャイアント ゴースト"
 
 #: ../enemies/juggernautd.txt:1
 msgid "Juggernaut"
@@ -483,11 +483,11 @@ msgstr ""
 
 #: ../enemies/knight.txt:1
 msgid "Cultist Knight"
-msgstr "おかしな ナイト"
+msgstr "カルトの ナイト"
 
 #: ../enemies/monk.txt:1
 msgid "Cultist Monk"
-msgstr ""
+msgstr "カルトの モンク"
 
 #: ../enemies/rubysnake.txt:1
 msgid "Ruby Snake"
@@ -523,19 +523,19 @@ msgstr ""
 
 #: ../maps/barracks.txt:9
 msgid "Barracks"
-msgstr ""
+msgstr "バラック"
 
 #: ../maps/basement1.txt:9
 msgid "Secret Basement"
-msgstr ""
+msgstr "ひみつの Basement"
 
 #: ../maps/basement3.txt:9
 msgid "Secret Cavern"
-msgstr ""
+msgstr "ひみつの どうくつ"
 
 #: ../maps/basement3.txt:227
 msgid "Chest"
-msgstr ""
+msgstr "はこ"
 
 #: ../maps/basement4.txt:9
 msgid "Hidden Waterway"
@@ -551,15 +551,15 @@ msgstr ""
 
 #: ../maps/basement4.txt:229
 msgid "An empty chest!"
-msgstr ""
+msgstr "からっぽ の はこ だ!"
 
 #: ../maps/basement5.txt:203
 msgid "There's a key-shaped hole in this rock."
-msgstr ""
+msgstr "この いわ には、かぎ の かたち を した、穴（あな）がある。"
 
 #: ../maps/basement5.txt:205
 msgid "Strange Rock"
-msgstr ""
+msgstr "きみょう な いわ"
 
 #: ../maps/basement6.txt:217
 msgid "\"Leftover material from blasting is unstable due to cave-ins!  Do not approach!\""
@@ -567,11 +567,11 @@ msgstr ""
 
 #: ../maps/basement6.txt:219
 msgid "Sign"
-msgstr ""
+msgstr "たてふだ"
 
 #: ../maps/basement7.txt:9
 msgid "Sewer"
-msgstr ""
+msgstr "ちかすいどう"
 
 #: ../maps/basement7.txt:203
 msgid "FENCES ARE FOR YOUR PROTECTION.  DO NOT OPEN GATES."
@@ -587,11 +587,11 @@ msgstr ""
 
 #: ../maps/basement8.txt:9
 msgid "Sanctuary"
-msgstr ""
+msgstr "サンクチュアリ"
 
 #: ../maps/basement8.txt:218
 msgid "You must defeat your shadow!"
-msgstr ""
+msgstr "あなたは かげ を たおさなければならない!"
 
 #: ../maps/basement8.txt:222
 msgid "Fountain"
@@ -659,11 +659,11 @@ msgstr "とおくから はかいして、 みちを ひらけ!"
 
 #: ../maps/castle6.txt:9
 msgid "Castle Balcony"
-msgstr ""
+msgstr "しろ の バルコニー"
 
 #: ../maps/castle6.txt:212
 msgid "TRAPPED!"
-msgstr ""
+msgstr "ワナだ!"
 
 #: ../maps/castlea.txt:9
 msgid "Castle Ballroom"
@@ -671,7 +671,7 @@ msgstr ""
 
 #: ../maps/castleb.txt:9
 msgid "Castle Sewer"
-msgstr ""
+msgstr "しろ の ちかすいどう"
 
 #: ../maps/castlepath.txt:9
 msgid "Castle Path"
@@ -679,7 +679,7 @@ msgstr "しろ に つづく みち"
 
 #: ../maps/cavern.txt:9
 msgid "Cavern"
-msgstr ""
+msgstr "どうくつ"
 
 #: ../maps/cavern.txt:441
 msgid "Drag to actionbar to use."
@@ -707,7 +707,7 @@ msgstr "長老（ちょうろう）の 家（いえ）"
 
 #: ../maps/eldershouse.txt:123
 msgid "A secret passage!"
-msgstr ""
+msgstr "ひみつ の 通路（つうろ） だ!"
 
 #: ../maps/glade.txt:9
 msgid "Glade"
@@ -751,7 +751,7 @@ msgstr ""
 
 #: ../maps/library.txt:108
 msgid "History of Laurelia"
-msgstr ""
+msgstr "ローレリア の れきし"
 
 #: ../maps/library.txt:116
 msgid "p. 967: \"Zalkas was constantly beset by paladins seeking to destroy them; he would eliminate each one by blotting out the light with flocks of bats.\""
@@ -791,7 +791,7 @@ msgstr "このさき を すすむには、 Juggernaut の おまもり が ひ�
 
 #: ../maps/snow4.txt:9
 msgid "Mountain Cave"
-msgstr ""
+msgstr "やま の どうくつ"
 
 #: ../maps/snow6.txt:198
 msgid "Bring ssssacrifices for Zalkaz here!"
@@ -799,7 +799,7 @@ msgstr ""
 
 #: ../maps/snow7.txt:9
 msgid "Zalkaz's Lair"
-msgstr ""
+msgstr "Zalkaz の すみか"
 
 #: ../maps/snow7.txt:238
 msgid "You're home!"
@@ -815,15 +815,15 @@ msgstr ""
 
 #: ../maps/snowa.txt:184
 msgid "Empty..."
-msgstr ""
+msgstr "からっぽ・・・"
 
 #: ../maps/snowb.txt:9
 msgid "Mountain Shop"
-msgstr ""
+msgstr "やま の 店（みせ）"
 
 #: ../maps/snowc.txt:9
 msgid "Safe Room"
-msgstr ""
+msgstr "あんぜん な へや"
 
 #: ../maps/tavern.txt:9
 msgid "Tavern"
@@ -871,7 +871,7 @@ msgstr ""
 
 #: ../quests/downahole.txt:3
 msgid "Explore the village of Laurelia"
-msgstr ""
+msgstr "ローレリアの村（むら）を、探検（たんけん） しよう"
 
 #: ../quests/downahole.txt:8
 msgid "Find the Fairy Flower north of town, over the river."
@@ -1071,7 +1071,7 @@ msgstr ""
 
 #: ../npcs/blacksmith.txt:34
 msgid "Daphne, you've destroyed Zalkaz!  I'm proud of you for putting that sword to good use."
-msgstr ""
+msgstr "ダフネ、ついに Zalkaz をやっつけたのね! I'm proud of you for putting that sword to good use."
 
 #: ../npcs/blacksmith.txt:35
 msgid "So that means I'll get a refund?  Come on, this is like free advertising."
@@ -1195,7 +1195,7 @@ msgstr "ダフネ。 ザルカズが せかいを ほろぼさないように、
 
 #: ../npcs/elder.txt:14
 msgid "The Juggernaut Talisman"
-msgstr ""
+msgstr "Juggernaut のタリスマン"
 
 #: ../npcs/elder.txt:18
 msgid "You must find the Juggernaut Talisman!"
@@ -1203,11 +1203,11 @@ msgstr "あなたは、 Juggernaut  の おまもり を みつけなければ�
 
 #: ../npcs/elder.txt:29
 msgid "Thank you for finding both halves of the Talisman!"
-msgstr ""
+msgstr "タリスマンの かたわれ を りょうほう とも、あつめてくれて、 ごくろう!"
 
 #: ../npcs/elder.txt:30
 msgid "Now I will make them whole again."
-msgstr ""
+msgstr "いま、ここで、わたしがタリスマンを、完成（かんせい）させるぞ。"
 
 #: ../npcs/elder.txt:31
 msgid "So, what do I do now with this thing?"
@@ -1215,7 +1215,7 @@ msgstr ""
 
 #: ../npcs/elder.txt:32
 msgid "Go south to the Snow Mountain.  The ancient texts say that is where Zalkaz makes his lair."
-msgstr ""
+msgstr "みなみ（↓）の、雪（ゆき）の山に、いきなさい。 古文書（こもんじょ）によると、 Zalkazはそこに、ねぐら を つくる。"
 
 #: ../npcs/elder.txt:33
 msgid "Does he have a sled to come back down on?"
@@ -1227,11 +1227,11 @@ msgstr ""
 
 #: ../npcs/elder.txt:42
 msgid "You've found the first half of the Talisman, wonderful!  The second half is in a ruined castle to the west."
-msgstr ""
+msgstr "あなたは、タリスマンの半分（はんぶん） を みつけた! すばらしい! のこり半分は、にし（←）の、廃墟（はいきょ）になった 城（しろ）にある。"
 
 #: ../npcs/elder.txt:43
 msgid "You may also want to speak with Robin the Hunter on your way over.  I told him to give you some of his equipment."
-msgstr ""
+msgstr "ロビンに、はなしかけなさい。ハンターのロビンに、です。 わたしから、ロビンに、あなたに、なにか べんり な もの を、あげるように、いっておく。装備（そうび）できるもの、で。"
 
 #: ../npcs/elder.txt:52
 msgid "Ah, the Fairy Flower!  Did you run into any trouble in the forest?"
@@ -1267,7 +1267,7 @@ msgstr "かれらの みつけられなかった ものを、 あなたは、み
 
 #: ../npcs/elder.txt:60
 msgid "Go east, and use your bat talisman to fly over the ruined bridge, and seek the first half of the Juggernaut Talisman in the volcano."
-msgstr "東（ひがし、→）に、いってください。 そして、コウモリ の おまもり を つかって、 そら を とんで、to fly over the ruined bridge, 。 そして火山（かざん）で、 seek the first half of the Juggernaut の おまもり の、さいしょの半分を、さがして ください。"
+msgstr "東（ひがし、→）に、いってください。 そして、コウモリ の おまもり を つかって、 そら を とんで、川（かわ）をこえてください。 橋（はし）は、こわれており、つかえません。そして 川（かわ）を わたったら、火山（かざん）で、 Juggernaut の タリスマン の、さいしょの半分を、さがして ください。"
 
 #: ../npcs/elder.txt:63
 msgid "The Fairy Flower"
@@ -1327,11 +1327,11 @@ msgstr ""
 
 #: ../npcs/eldershade.txt:9
 msgid "Daphne, I'm projecting to you via telepathy!"
-msgstr ""
+msgstr "ダフネ、わたしはいま、テレパシーを、きみ に おくってるんだ!"
 
 #: ../npcs/eldershade.txt:10
 msgid "I was reading my brother's ancient scrolls, and discovered that Zalkaz has the power to summon hordes of bats."
-msgstr ""
+msgstr "わたしは、こもんじょの 巻き物（まきもの） を よんだんだが、 Zalkaz の 特技（とくぎ） を 発見（はっけん） した。 やつは、コウモリをたくさん、コウモリの群れ（むれ）を、 よびだすんだ。"
 
 #: ../npcs/eldershade.txt:11
 msgid "Do not face him without polymorphing into a juggernaut first!"
@@ -1339,7 +1339,7 @@ msgstr ""
 
 #: ../npcs/eldershade.txt:12
 msgid "Avoid him when he summons the bats, and then use your Holy Sword power to knock them all out in one swing of your sword!"
-msgstr ""
+msgstr "ヤツが コウモリたちを よびだすときは、 ヤツのこうげきを さけるんだ。 そこで、せいなる つるぎ をつかえば、 てき を みんな、こうげき できるんだ。"
 
 #: ../npcs/eldershade.txt:13
 msgid "I wish you luck."
@@ -1355,7 +1355,7 @@ msgstr "ああ、わたしは、とれたての にんじん と スイカ を�
 
 #: ../npcs/gardener.txt:16
 msgid "Thanks for saving the village!"
-msgstr ""
+msgstr "むら を すくってくれて、ありがとう!"
 
 #: ../npcs/gardener.txt:17
 msgid "Now that we're so famous, maybe soon some more vendors will come to town."
@@ -1407,7 +1407,7 @@ msgstr "おおむかしの 墓石（はかいし）"
 
 #: ../npcs/gravestone.txt:8
 msgid "Examine Tombstone"
-msgstr ""
+msgstr "墓石（はかいし） を しらべよう"
 
 #: ../npcs/gravestone.txt:11
 msgid "As you gaze upon the tombstone, you hear a voice coming from the walls."
@@ -1415,7 +1415,7 @@ msgstr "あなたが、墓石（はかいし）を、よく見ている とき�
 
 #: ../npcs/gravestone.txt:12
 msgid "I knew it was just a matter of time until someone stumbled upon my tomb!"
-msgstr ""
+msgstr "わたしの墓（はか）の 前（まえ）に、だれかがいることに、きづいてるぞ!"
 
 #: ../npcs/gravestone.txt:13
 msgid "But never in the wildest dreams did I believe it would be the daughter of my captors!"
@@ -1483,19 +1483,19 @@ msgstr "え? ダメだよ、もちろん、きみに あげることは でき�
 
 #: ../npcs/hunter.txt:13
 msgid "Armor"
-msgstr ""
+msgstr "防具（ぼうぐ）"
 
 #: ../npcs/hunter.txt:18
 msgid "I talked to the Elder...  he wants me to give you something."
-msgstr ""
+msgstr "長老とは、はなしてある・・・。 きみに、なにかをあげるよう、長老は いっていた。"
 
 #: ../npcs/hunter.txt:19
 msgid "Your precious bow?  Yes, that should come in handy."
-msgstr ""
+msgstr "あなたの おきにいりの弓（ゆみ）? いいね。べんりそう な 武器（ぶき）ね。"
 
 #: ../npcs/hunter.txt:20
 msgid "My bow??  You're nuts, I grew up with this thing!"
-msgstr ""
+msgstr "わたしの弓（ゆみ）?? ダメだよ。  I grew up with this thing!"
 
 #: ../npcs/hunter.txt:21
 msgid "What else do you have?"
@@ -1503,15 +1503,15 @@ msgstr ""
 
 #: ../npcs/hunter.txt:22
 msgid "Well, I have some old leather armor.  It should help."
-msgstr ""
+msgstr "ううん、 わたしは、ふるい 革（かわ）の よろい をもっている。 きみにも、これはきっと、やくだつだろう。"
 
 #: ../npcs/hunter.txt:23
 msgid "Ew, it smells like wet socks."
-msgstr ""
+msgstr "くつした の におい とか、しないよね。"
 
 #: ../npcs/hunter.txt:24
 msgid "No, that's just the smell o' tha woods!  Don't look a gift horse in the mouth!"
-msgstr ""
+msgstr "ない。 木（き） の かおり だ。 ひと の あげるもの に、 ケチ を つけるな!"
 
 #: ../npcs/hunter.txt:29
 msgid "Ah, hey, you kill Zalkaz!  I would have done it myself, but you know how it is."
@@ -1599,11 +1599,11 @@ msgstr "ふゆ に そなえて、 のうさくもつ を ためているんだ�
 
 #: ../npcs/shopchest.txt:10
 msgid "Read Note"
-msgstr ""
+msgstr "メモ を よむ"
 
 #: ../npcs/shopchest.txt:11
 msgid "If we're not in right now, feel free to leave the money in the chest.  Honor system!"
-msgstr ""
+msgstr "もし、わたし が いないなら、 おかね を この箱（はこ）に、 おいていってください。 Honor（オナー）システム!"
 
 #: ../npcs/trainee.txt:1
 msgid "PFC Xavier"
@@ -1667,4 +1667,4 @@ msgstr ""
 
 #: ../cutscenes/pit.txt:5
 msgid "A pit opens beneath your feet, and you fall into a dank cave!"
-msgstr ""
+msgstr "穴（あな）に、おっこちてしまった。 どうくつ の なか に、 ほうりこまれて しまった ようだ!"
