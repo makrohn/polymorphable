@@ -3,4 +3,4 @@
 # head is the png in /images/avatar/[base]
 # portrait is the png in /images/portraits
 
-option=female,head_long,images/portraits/female01.png,Daphne
+option=0,female,head_long,images/portraits/female01.png,Daphne

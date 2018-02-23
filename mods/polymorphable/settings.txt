@@ -1,2 +1,3 @@
 description=A total conversion, orthographic game based on Clint Bellanger's FLARE
 game=polymorphable
+engine_version_min=0.90.33
