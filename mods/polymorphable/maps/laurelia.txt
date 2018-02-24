@@ -4,6 +4,7 @@ height=144
 tilewidth=32
 tileheight=32
 orientation=orthogonal
+background_color=47,129,54,255
 music=music/calmtown.ogg
 tileset=tilesetdefs/town.txt
 title=Laurelia
@@ -847,6 +848,17 @@ type=event
 location=0,103,1,6
 activate=on_trigger
 intermap=maps/castlepath.txt,30,14
+requires_status=1stjuggfound
+
+[event]
+# Travel east msg
+type=event
+location=0,103,1,6
+activate=on_trigger
+cooldown=1s
+msg=You should travel east first. Remember to speak with the Elder when you return.
+repeat=true
+requires_not_status=1stjuggfound
 
 [event]
 # Teleport to Snow1

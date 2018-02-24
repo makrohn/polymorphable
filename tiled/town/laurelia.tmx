@@ -1,30 +1,31 @@
-<map height="144" orientation="orthogonal" renderorder="right-down" tileheight="32" tilewidth="32" version="1.0" width="178">
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.1.2" orientation="orthogonal" renderorder="right-down" width="178" height="144" tilewidth="32" tileheight="32" infinite="0" backgroundcolor="#2f8136" nextobjectid="36">
  <properties>
-  <property name="music" value="music/calmtown.ogg" />
-  <property name="tileset" value="tilesetdefs/town.txt" />
-  <property name="title" value="Laurelia" />
+  <property name="music" value="music/calmtown.ogg"/>
+  <property name="tileset" value="tilesetdefs/town.txt"/>
+  <property name="title" value="Laurelia"/>
  </properties>
- <tileset firstgid="1" name="tiled_collision" tileheight="32" tilewidth="32">
-  <image height="32" source="tiled_collision.png" width="480" />
+ <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32" tilecount="15" columns="15">
+  <image source="tiled_collision.png" width="480" height="32"/>
  </tileset>
- <tileset firstgid="16" name="generic_background" tileheight="32" tilewidth="32">
-  <image height="832" source="generic_background.png" width="864" />
+ <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32" tilecount="702" columns="27">
+  <image source="generic_background.png" width="864" height="832"/>
  </tileset>
- <tileset firstgid="718" name="small_objects" tileheight="64" tilewidth="32">
-  <image height="512" source="small_objects.png" width="671" />
+ <tileset firstgid="718" name="small_objects" tilewidth="32" tileheight="64" tilecount="160" columns="20">
+  <image source="small_objects.png" width="671" height="512"/>
  </tileset>
- <tileset firstgid="878" name="town_buildings" tileheight="128" tilewidth="32">
-  <image height="768" source="town_buildings.png" width="672" />
+ <tileset firstgid="878" name="town_buildings" tilewidth="32" tileheight="128" tilecount="126" columns="21">
+  <image source="town_buildings.png" width="672" height="768"/>
  </tileset>
- <tileset firstgid="1004" name="bldgleft" tileheight="128" tilewidth="32">
-  <tileoffset x="16" y="0" />
-  <image height="128" source="bldgleft.png" width="704" />
+ <tileset firstgid="1004" name="bldgleft" tilewidth="32" tileheight="128" tilecount="22" columns="22">
+  <tileoffset x="16" y="0"/>
+  <image source="bldgleft.png" width="704" height="128"/>
  </tileset>
- <tileset firstgid="1026" name="bldgright" tileheight="128" tilewidth="32">
-  <tileoffset x="-16" y="0" />
-  <image height="128" source="bldgright.png" width="864" />
+ <tileset firstgid="1026" name="bldgright" tilewidth="32" tileheight="128" tilecount="27" columns="27">
+  <tileoffset x="-16" y="0"/>
+  <image source="bldgright.png" width="864" height="128"/>
  </tileset>
- <layer height="144" name="background" width="178">
+ <layer name="background" width="178" height="144">
   <data encoding="csv">
 98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,118,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,120,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,46,401,19,19,19,46,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,
 98,98,98,98,98,98,153,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,145,39,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,65,93,98,98,98,98,98,153,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,46,19,19,19,19,46,46,98,98,98,98,98,98,98,98,98,98,153,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,153,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,153,98,98,98,98,98,98,
@@ -172,7 +173,7 @@
 98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,154,98,98,98,98,98,98,98,98,98,98,98,98,98,152,98,153,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,154,98,98,98,98,98,98,98,98,98,98,98,98,98,152,98,153,98,98,98,98,98,46,19,19,19,19,46,46,98,98,98,98,154,98,98,98,98,98,98,98,98,98,98,98,98,98,152,98,153,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,98,154,98,98,98,98,98,98,98,98,98,98,98,98,98,152,98,153,98,98,98,98,98,98,98,98,98,98,98,98,98,118,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,119,120,98,98,98,98,98,98,98,98,98,98,98,98,98
 </data>
  </layer>
- <layer height="144" name="fringe" width="178">
+ <layer name="fringe" width="178" height="144">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,121,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,123,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,102,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,148,42,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,68,96,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,102,0,0,0,0,127,21,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -320,7 +321,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,99,0,0,0,0,0,97,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,121,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,123,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer height="144" name="object" width="178">
+ <layer name="object" width="178" height="144">
   <data encoding="csv">
 1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,
 1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1001,1002,1003,1001,1002,1003,1001,1002,1003,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,
@@ -468,7 +469,7 @@
 1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,1001,1002,1003,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1001,1002,1003,1001,1002,1003
 </data>
  </layer>
- <layer height="144" name="foreground" width="178">
+ <layer name="foreground" width="178" height="144">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -616,7 +617,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer height="144" name="collision" visible="0" width="178">
+ <layer name="collision" width="178" height="144">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,2,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,2,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,2,2,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,2,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -765,144 +766,218 @@
 </data>
  </layer>
  <objectgroup name="npc">
-  <object height="32" name="Gardener" type="npc" width="32" x="3648" y="3168"><properties><property name="filename" value="npcs/gardener.txt" /></properties></object>
-  <object height="32" name="Blacksmith" type="npc" width="32" x="1696" y="2912"><properties><property name="filename" value="npcs/blacksmith.txt" /></properties></object>
-  <object height="32" name="Jailor" type="npc" width="32" x="3872" y="2176"><properties><property name="filename" value="npcs/jailor.txt" /></properties></object>
-  <object height="32" name="Brewmaster" type="npc" width="32" x="2720" y="2592"><properties><property name="filename" value="npcs/brewmaster.txt" /></properties></object>
-  <object height="32" name="Cleric" type="npc" width="32" x="1152" y="2464"><properties><property name="filename" value="npcs/cleric.txt" /></properties></object>
-  <object height="32" name="Librarian" type="npc" width="32" x="800" y="2944"><properties><property name="filename" value="npcs/librarian.txt" /></properties></object>
-  <object height="32" name="Innkeep" type="npc" width="32" x="3232" y="2720"><properties><property name="filename" value="npcs/innkeep.txt" /></properties></object>
-  <object height="32" name="Elder" type="npc" width="32" x="2208" y="1920"><properties><property name="filename" value="npcs/elder.txt" /></properties></object>
-  <object height="32" name="Hunter" type="npc" width="32" x="704" y="3392"><properties><property name="filename" value="npcs/hunter.txt" /></properties></object>
-  <object height="32" name="Jeweler" type="npc" width="32" x="1952" y="3488"><properties><property name="filename" value="npcs/jeweler.txt" /></properties></object>
+  <object id="1" name="Gardener" type="npc" x="3648" y="3168" width="32" height="32">
+   <properties>
+    <property name="filename" value="npcs/gardener.txt"/>
+   </properties>
+  </object>
+  <object id="2" name="Blacksmith" type="npc" x="1696" y="2912" width="32" height="32">
+   <properties>
+    <property name="filename" value="npcs/blacksmith.txt"/>
+   </properties>
+  </object>
+  <object id="3" name="Jailor" type="npc" x="3872" y="2176" width="32" height="32">
+   <properties>
+    <property name="filename" value="npcs/jailor.txt"/>
+   </properties>
+  </object>
+  <object id="4" name="Brewmaster" type="npc" x="2720" y="2592" width="32" height="32">
+   <properties>
+    <property name="filename" value="npcs/brewmaster.txt"/>
+   </properties>
+  </object>
+  <object id="5" name="Cleric" type="npc" x="1152" y="2464" width="32" height="32">
+   <properties>
+    <property name="filename" value="npcs/cleric.txt"/>
+   </properties>
+  </object>
+  <object id="6" name="Librarian" type="npc" x="800" y="2944" width="32" height="32">
+   <properties>
+    <property name="filename" value="npcs/librarian.txt"/>
+   </properties>
+  </object>
+  <object id="7" name="Innkeep" type="npc" x="3232" y="2720" width="32" height="32">
+   <properties>
+    <property name="filename" value="npcs/innkeep.txt"/>
+   </properties>
+  </object>
+  <object id="8" name="Elder" type="npc" x="2208" y="1920" width="32" height="32">
+   <properties>
+    <property name="filename" value="npcs/elder.txt"/>
+   </properties>
+  </object>
+  <object id="9" name="Hunter" type="npc" x="704" y="3392" width="32" height="32">
+   <properties>
+    <property name="filename" value="npcs/hunter.txt"/>
+   </properties>
+  </object>
+  <object id="10" name="Jeweler" type="npc" x="1952" y="3488" width="32" height="32">
+   <properties>
+    <property name="filename" value="npcs/jeweler.txt"/>
+   </properties>
+  </object>
  </objectgroup>
- <objectgroup name="enemy" />
+ <objectgroup name="enemy"/>
  <objectgroup name="event">
-  <object height="160" name="Teleport to Mt Path" type="event" width="32" x="5664" y="2208">
+  <object id="11" name="Teleport to Mt Path" type="event" x="5664" y="2208" width="32" height="160">
    <properties>
-    <property name="intermap" value="maps/mountainpath.txt,1,18" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="on_trigger"/>
+    <property name="intermap" value="maps/mountainpath.txt,1,18"/>
+   </properties>
   </object>
-  <object height="32" name="Teleport to Glade" type="event" width="192" x="2816" y="0">
+  <object id="12" name="Teleport to Glade" type="event" x="2816" y="0" width="192" height="32">
    <properties>
-    <property name="intermap" value="maps/glade.txt,13,30" />
-    <property name="requires_status" value="cavernexplored" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="on_trigger"/>
+    <property name="intermap" value="maps/glade.txt,13,30"/>
+    <property name="requires_status" value="cavernexplored"/>
+   </properties>
   </object>
-  <object height="32" name="Fall to Cavern" type="event" width="192" x="2752" y="448">
+  <object id="13" name="Fall to Cavern" type="event" x="2752" y="448" width="192" height="32">
    <properties>
-    <property name="intermap" value="maps/cavern.txt,98,98" />
-    <property name="msg" value="You've fallen in a hole!" />
-    <property name="requires_not_status" value="cavernexplored" />
-    <property name="requires_status" value="elderintro" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="on_trigger"/>
+    <property name="intermap" value="maps/cavern.txt,98,98"/>
+    <property name="msg" value="You've fallen in a hole!"/>
+    <property name="requires_not_status" value="cavernexplored"/>
+    <property name="requires_status" value="elderintro"/>
+   </properties>
   </object>
-  <object height="192" name="Teleport to Castle Path" type="event" width="32" x="0" y="3296">
+  <object id="14" name="Teleport to Castle Path" type="event" x="0" y="3296" width="32" height="192">
    <properties>
-    <property name="intermap" value="maps/castlepath.txt,30,14" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="on_trigger"/>
+    <property name="intermap" value="maps/castlepath.txt,30,14"/>
+    <property name="requires_status" value="1stjuggfound"/>
+   </properties>
   </object>
-  <object height="32" name="Teleport to Snow1" type="event" width="224" x="2272" y="4576">
+  <object id="35" name="Travel east msg" type="event" x="0" y="3296" width="32" height="192">
    <properties>
-    <property name="intermap" value="maps/snow1.txt,3,1" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="on_trigger"/>
+    <property name="cooldown" value="1s"/>
+    <property name="msg" value="You should travel east first. Remember to speak with the Elder when you return."/>
+    <property name="repeat" value="true"/>
+    <property name="requires_not_status" value="1stjuggfound"/>
+   </properties>
   </object>
-  <object height="32" name="Teleport to church" type="event" width="96" x="1088" y="2432">
+  <object id="15" name="Teleport to Snow1" type="event" x="2272" y="4576" width="224" height="32">
    <properties>
-    <property name="intermap" value="maps/church.txt,19,24" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="on_trigger"/>
+    <property name="intermap" value="maps/snow1.txt,3,1"/>
+   </properties>
   </object>
-  <object height="32" name="Teleport to backchurch" type="event" width="96" x="1088" y="2144">
+  <object id="16" name="Teleport to church" type="event" x="1088" y="2432" width="96" height="32">
    <properties>
-    <property name="intermap" value="maps/church.txt,19,4" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="on_trigger"/>
+    <property name="intermap" value="maps/church.txt,19,24"/>
+   </properties>
   </object>
-  <object height="32" name="Teleport to Small House" type="event" width="32" x="1696" y="2400">
+  <object id="17" name="Teleport to backchurch" type="event" x="1088" y="2144" width="96" height="32">
    <properties>
-    <property name="intermap" value="maps/smallhouse.txt,9,13" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="on_trigger"/>
+    <property name="intermap" value="maps/church.txt,19,4"/>
+   </properties>
   </object>
-  <object height="32" name="Teleport to Smallhouse1" type="event" width="32" x="2848" y="1952">
+  <object id="18" name="Teleport to Small House" type="event" x="1696" y="2400" width="32" height="32">
    <properties>
-    <property name="intermap" value="maps/smallhouse1.txt,9,13" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="on_trigger"/>
+    <property name="intermap" value="maps/smallhouse.txt,9,13"/>
+   </properties>
   </object>
-  <object height="32" name="Teleport to Smallhouse2" type="event" width="32" x="3424" y="1632">
+  <object id="19" name="Teleport to Smallhouse1" type="event" x="2848" y="1952" width="32" height="32">
    <properties>
-    <property name="intermap" value="maps/smallhouse2.txt,9,13" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="on_trigger"/>
+    <property name="intermap" value="maps/smallhouse1.txt,9,13"/>
+   </properties>
   </object>
-  <object height="32" name="Teleport to Inn" type="event" width="64" x="3232" y="2656">
+  <object id="20" name="Teleport to Smallhouse2" type="event" x="3424" y="1632" width="32" height="32">
    <properties>
-    <property name="intermap" value="maps/inn1st.txt,15,28" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="on_trigger"/>
+    <property name="intermap" value="maps/smallhouse2.txt,9,13"/>
+   </properties>
   </object>
-  <object height="32" name="Teleport to Library" type="event" width="32" x="768" y="2912">
+  <object id="21" name="Teleport to Inn" type="event" x="3232" y="2656" width="64" height="32">
    <properties>
-    <property name="intermap" value="maps/library.txt,13,15" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="on_trigger"/>
+    <property name="intermap" value="maps/inn1st.txt,15,28"/>
+   </properties>
   </object>
-  <object height="32" name="Teleport to Smithy" type="event" width="32" x="1664" y="2848">
+  <object id="22" name="Teleport to Library" type="event" x="768" y="2912" width="32" height="32">
    <properties>
-    <property name="intermap" value="maps/smithy.txt,11,14" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="on_trigger"/>
+    <property name="intermap" value="maps/library.txt,13,15"/>
+   </properties>
   </object>
-  <object height="32" name="Teleport to Market" type="event" width="32" x="2208" y="3104">
+  <object id="23" name="Teleport to Smithy" type="event" x="1664" y="2848" width="32" height="32">
    <properties>
-    <property name="intermap" value="maps/market.txt,18,17" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="on_trigger"/>
+    <property name="intermap" value="maps/smithy.txt,11,14"/>
+   </properties>
   </object>
-  <object height="32" name="Teleport to Granary" type="event" width="32" x="2912" y="3168">
+  <object id="24" name="Teleport to Market" type="event" x="2208" y="3104" width="32" height="32">
    <properties>
-    <property name="intermap" value="maps/granary.txt,7,9" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="on_trigger"/>
+    <property name="intermap" value="maps/market.txt,18,17"/>
+   </properties>
   </object>
-  <object height="32" name="Teleport to Barracks" type="event" width="32" x="3360" y="2048">
+  <object id="25" name="Teleport to Granary" type="event" x="2912" y="3168" width="32" height="32">
    <properties>
-    <property name="intermap" value="maps/barracks.txt,10,11" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="on_trigger"/>
+    <property name="intermap" value="maps/granary.txt,7,9"/>
+   </properties>
   </object>
-  <object height="32" name="Teleport to Barracks" type="event" width="32" x="3840" y="2144">
+  <object id="26" name="Teleport to Barracks" type="event" x="3360" y="2048" width="32" height="32">
    <properties>
-    <property name="intermap" value="maps/barracks.txt,40,17" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="on_trigger"/>
+    <property name="intermap" value="maps/barracks.txt,10,11"/>
+   </properties>
   </object>
-  <object height="32" name="Teleport to Barracks" type="event" width="32" x="3616" y="2048">
+  <object id="27" name="Teleport to Barracks" type="event" x="3840" y="2144" width="32" height="32">
    <properties>
-    <property name="intermap" value="maps/barracks.txt,26,11" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="on_trigger"/>
+    <property name="intermap" value="maps/barracks.txt,40,17"/>
+   </properties>
   </object>
-  <object height="32" name="Teleport to Barracks" type="event" width="32" x="3488" y="2048">
+  <object id="28" name="Teleport to Barracks" type="event" x="3616" y="2048" width="32" height="32">
    <properties>
-    <property name="intermap" value="maps/barracks.txt,18,11" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="on_trigger"/>
+    <property name="intermap" value="maps/barracks.txt,26,11"/>
+   </properties>
   </object>
-  <object height="32" name="Teleport to Elder's House" type="event" width="32" x="2208" y="1856">
+  <object id="29" name="Teleport to Barracks" type="event" x="3488" y="2048" width="32" height="32">
    <properties>
-    <property name="intermap" value="maps/eldershouse.txt,18,11" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="on_trigger"/>
+    <property name="intermap" value="maps/barracks.txt,18,11"/>
+   </properties>
   </object>
-  <object height="32" name="Teleport to Daphne's House" type="event" width="32" x="640" y="2560">
+  <object id="30" name="Teleport to Elder's House" type="event" x="2208" y="1856" width="32" height="32">
    <properties>
-    <property name="intermap" value="maps/daphneshouse.txt,9,13" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="on_trigger"/>
+    <property name="intermap" value="maps/eldershouse.txt,18,11"/>
+   </properties>
   </object>
-  <object height="32" name="Teleport to Tavern" type="event" width="32" x="2656" y="2560">
+  <object id="31" name="Teleport to Daphne's House" type="event" x="640" y="2560" width="32" height="32">
    <properties>
-    <property name="intermap" value="maps/tavern.txt,15,11" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="on_trigger"/>
+    <property name="intermap" value="maps/daphneshouse.txt,9,13"/>
+   </properties>
   </object>
-  <object height="32" name="teleport to Basement8" type="event" width="32" x="2208" y="1664">
+  <object id="32" name="Teleport to Tavern" type="event" x="2656" y="2560" width="32" height="32">
    <properties>
-    <property name="intermap" value="maps/basement8.txt,15,14" />
-    <property name="requires_status" value="ghostupgrade" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="on_trigger"/>
+    <property name="intermap" value="maps/tavern.txt,15,11"/>
+   </properties>
   </object>
-  <object height="32" name="Create stairs" type="event" width="32" x="2208" y="1536">
+  <object id="33" name="teleport to Basement8" type="event" x="2208" y="1664" width="32" height="32">
    <properties>
-    <property name="mapmod" value="fringe,68,51,76;fringe,69,51,77;fringe,70,51,78" />
-    <property name="requires_status" value="ghostupgrade" />
-   <property name="activate" value="on_load" /></properties>
+    <property name="activate" value="on_trigger"/>
+    <property name="intermap" value="maps/basement8.txt,15,14"/>
+    <property name="requires_status" value="ghostupgrade"/>
+   </properties>
+  </object>
+  <object id="34" name="Create stairs" type="event" x="2208" y="1536" width="32" height="32">
+   <properties>
+    <property name="activate" value="on_load"/>
+    <property name="mapmod" value="fringe,68,51,76;fringe,69,51,77;fringe,70,51,78"/>
+    <property name="requires_status" value="ghostupgrade"/>
+   </properties>
   </object>
  </objectgroup>
 </map>
