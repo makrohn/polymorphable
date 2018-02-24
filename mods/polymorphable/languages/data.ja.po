@@ -683,7 +683,7 @@ msgstr "どうくつ"
 
 #: ../maps/cavern.txt:441
 msgid "Drag to actionbar to use."
-msgstr ""
+msgstr "つかう には、アクションバーまで ドラッグしてください。"
 
 #: ../maps/cavern.txt:499
 msgid "Carrots"
@@ -719,11 +719,11 @@ msgstr "のうさくもつ の そうこ"
 
 #: ../maps/inn1st.txt:9
 msgid "Inn, 1st Floor"
-msgstr ""
+msgstr "やどや、 1かい"
 
 #: ../maps/inn2nd.txt:9
 msgid "Inn, 2nd Floor"
-msgstr ""
+msgstr "やどや、 2かい"
 
 #: ../maps/laurelia.txt:9
 msgid "Laurelia"
@@ -847,7 +847,7 @@ msgstr "もし、このスキマをむりやり とびこえたら、たぶん�
 
 #: ../maps/volcano3.txt:190
 msgid "Lava River"
-msgstr "Lava 川"
+msgstr "ようがん の 川"
 
 #: ../maps/volcano4.txt:189
 msgid "Someone has scrawled here: \"The fire skeleton's bombs killed my friend instantly!  If I wasn't a ghost already, I'd have died, too.\""
@@ -903,7 +903,7 @@ msgstr ""
 
 #: ../npcs/apprentice.txt:1
 msgid "Wot the Apprentice"
-msgstr "Wot みならい"
+msgstr "Wot（オット） みならい"
 
 #: ../npcs/apprentice.txt:8
 msgid "Good Morning"
@@ -915,7 +915,7 @@ msgstr "おはよう、ダフネ。"
 
 #: ../npcs/apprentice.txt:10
 msgid "Good morning Wot!  Clara working you hard?"
-msgstr "おはよう、Wot! クララは、あなた の ため に、はたらいて ますか?"
+msgstr "おはよう、Wot（オット）! クララは、あなた の ため に、はたらいて ますか?"
 
 #: ../npcs/apprentice.txt:11
 msgid "It's miserable.  I've forged three swords and two helms this morning, but she says it's still not enough."
@@ -931,7 +931,7 @@ msgstr "そう ねがいたい です。 しかし、I suppose I can always join
 
 #: ../npcs/apprentice.txt:14
 msgid "Oh, don't be silly - you couldn't leave this village.  I've seen how Waka looks at you!"
-msgstr "もうっ、ばかにしないで! あなた は、 このむら を はなれられない でしょう。 Waka が どれほど あなたを みつめていたか、 わたしは しってるのですよ!"
+msgstr "もうっ、ばか を いわないで! あなた は、 このむら を はなれられない でしょう。 ワカ が どれほど あなたを みつめていたか、 わたしは しってるのですよ!"
 
 #: ../npcs/apprentice.txt:15
 msgid "Wait, what?  She's never said anything!"
@@ -1083,7 +1083,7 @@ msgstr ""
 
 #: ../npcs/brewmaster.txt:1
 msgid "Brewmistress Waka"
-msgstr "ウェイトレス Waka"
+msgstr "ウェイトレス (Waka) ワカ"
 
 #: ../npcs/brewmaster.txt:9
 msgid "Good evening!  Have you come to try one of my latest creations?"
@@ -1119,7 +1119,7 @@ msgstr "Altea, 信仰（しんこう）のキーパー"
 
 #: ../npcs/cleric.txt:8
 msgid "Restore"
-msgstr ""
+msgstr "かいふく"
 
 #: ../npcs/cleric.txt:10
 msgid "Welcome to the Church!"
@@ -1187,7 +1187,7 @@ msgstr "トーマス長老（ちょうろう）"
 
 #: ../npcs/elder.txt:8
 msgid "Zalkaz"
-msgstr ""
+msgstr "Zalkaz （ザルカズ）"
 
 #: ../npcs/elder.txt:11
 msgid "Daphne, you must save the world from Zalkaz!"
@@ -1471,7 +1471,7 @@ msgstr ""
 
 #: ../npcs/hunter.txt:1
 msgid "Robin the Hunter"
-msgstr "Robin（ロビン） ザ・ハンター"
+msgstr "ロビン、 ザ・ハンター"
 
 #: ../npcs/hunter.txt:9
 msgid "This bow is the best ever seen in this village."
@@ -1527,7 +1527,7 @@ msgstr ""
 
 #: ../npcs/innkeep.txt:1
 msgid "Shandra the Innkeep"
-msgstr "Shandra 宿屋（やどや）さん"
+msgstr "サンドラ 宿屋（やどや）さん"
 
 #: ../npcs/innkeep.txt:9
 msgid "Welcome to the tavern.  Would you like some chicken wings?"
@@ -1559,7 +1559,7 @@ msgstr ""
 
 #: ../npcs/jeweler.txt:1
 msgid "Celade the Jeweler"
-msgstr "Celade ほうせきや"
+msgstr "Celade（セラデ） ほうせきや"
 
 #: ../npcs/jeweler.txt:9
 msgid "I came here all the way from the Castle Keradon to sell the jewels my family mines, but nobody here is buying!"
@@ -1571,7 +1571,7 @@ msgstr "ハラドリアの 次（つぎ）の 停留所（ていりゅうじょ�
 
 #: ../npcs/librarian.txt:1
 msgid "Librarian Joe"
-msgstr "としょかんのひと Joe"
+msgstr "としょかんのひと ジョー"
 
 #: ../npcs/librarian.txt:9
 msgid "Oh, no, I'm not the Elder, I'm just his twin brother!"
