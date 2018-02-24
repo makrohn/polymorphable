@@ -68,6 +68,7 @@ cooldown=10s
 type=fixed
 buff=true
 modifier_damage=multiply,500,0
+base_damage=ment
 
 [power]
 id=4
