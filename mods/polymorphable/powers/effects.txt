@@ -27,69 +27,9 @@ type=stun
 can_stack=false
 
 [effect]
-id=HP
-type=hp
-
-[effect]
-id=HP Regen
-type=hp_regen
-
-[effect]
-id=MP
-type=mp
-
-[effect]
-id=MP Regen
-type=mp_regen
-
-[effect]
-id=Accuracy
-type=accuracy
-
-[effect]
-id=Avoidance
-type=avoidance
-
-[effect]
-id=Crit
-type=crit
-
-[effect]
 id=Speed
 type=speed
 can_stack=false
-
-[effect]
-id=Offense
-type=offense
-
-[effect]
-id=Defense
-type=defense
-
-[effect]
-id=Physical
-type=physical
-
-[effect]
-id=Mental
-type=mental
-
-[effect]
-id=XP(bonus)
-type=xp
-
-[effect]
-id=Gold
-type=currency
-
-[effect]
-id=Fire Resistance
-type=fire_resist
-
-[effect]
-id=Ice Resistance
-type=ice_resist
 
 [effect]
 id=Immunity
@@ -132,30 +72,7 @@ type=knockback
 can_stack=false
 
 [effect]
-id=Earth Resistance
-type=earth_resist
-
-[effect]
-id=Wind Resistance
-type=wind_resist
-
-[effect]
-id=Holy Resistance
-type=holy_resist
-
-[effect]
-id=Dark Resistance
-type=dark_resist
-
-[effect]
-id=HP Percent
-type=hp_percent
-
-[effect]
-id=MP Percent
-type=mp_percent
-
-[effect]
 id=Bomb Tick
 type=damage
 can_stack=false
+

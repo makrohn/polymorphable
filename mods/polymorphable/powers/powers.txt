@@ -399,7 +399,7 @@ id=137
 name=Fire Immunity
 type=fixed
 buff=true
-post_effect=Fire Resistance,100,0
+post_effect=fire_resist,100,0
 passive=true
 
 [power]
