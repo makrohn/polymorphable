@@ -222,14 +222,14 @@ new_state=cast
 soundfx=soundfx/powers/quake.ogg
 use_hazard=true
 base_damage=ment
-lifespan=3s
+lifespan=1s
 complete_animation=true
 radius=1
 floor=true
 trait_elemental=fire
 starting_pos=source
 multitarget=true
-cooldown=3s
+cooldown=1s
 source_type=neutral
 requires_targeting=false
 
