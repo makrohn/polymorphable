@@ -735,7 +735,7 @@ msgstr "あな の なか に、 おちて しまった!"
 
 #: ../maps/laurelia.txt:858
 msgid "You should travel east first. Remember to speak with the Elder when you return."
-msgstr ""
+msgstr "あなたは、ここ の ひがし（→）を 探検（たんけん） ください。 たんけん したら、長老（ちょうろう）と、 おはなし してください。"
 
 #: ../maps/library.txt:9
 msgid "Library"
