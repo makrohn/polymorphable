@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-21 08:34+\n"
+"POT-Creation-Date: 2018-02-25 02:22+\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -191,171 +191,171 @@ msgstr ""
 msgid "Create a force field that absorbs damage"
 msgstr ""
 
-#: ../powers/powers.txt:74
+#: ../powers/powers.txt:75
 msgid "Haste"
 msgstr ""
 
-#: ../powers/powers.txt:76
+#: ../powers/powers.txt:77
 msgid "Double run and attack speed for 8 seconds"
 msgstr ""
 
-#: ../powers/powers.txt:86
+#: ../powers/powers.txt:87
 msgid "Cleave"
 msgstr ""
 
-#: ../powers/powers.txt:89
+#: ../powers/powers.txt:90
 msgid "Attack all enemies in a wide arc"
 msgstr ""
 
-#: ../powers/powers.txt:104
+#: ../powers/powers.txt:105
 msgid "Leech Strike"
 msgstr ""
 
-#: ../powers/powers.txt:107
+#: ../powers/powers.txt:108
 msgid "Turn 50% of damage you deal into HP"
 msgstr ""
 
-#: ../powers/powers.txt:122
+#: ../powers/powers.txt:123
 msgid "Stun Strike"
 msgstr ""
 
-#: ../powers/powers.txt:125
+#: ../powers/powers.txt:126
 msgid "Stun an enemy for 3 seconds"
 msgstr ""
 
-#: ../powers/powers.txt:140
+#: ../powers/powers.txt:141
 msgid "Ice Blast"
 msgstr ""
 
-#: ../powers/powers.txt:143
+#: ../powers/powers.txt:144
 msgid "Slow nearby enemies for 5 seconds"
 msgstr ""
 
-#: ../powers/powers.txt:163
+#: ../powers/powers.txt:164
 msgid "Shoot (enemy)"
 msgstr ""
 
-#: ../powers/powers.txt:186
+#: ../powers/powers.txt:187
 msgid "Drop a bomb that does 5 damage when it explodes."
 msgstr ""
 
-#: ../powers/powers.txt:195
+#: ../powers/powers.txt:196
 msgid "Explode (npc)"
 msgstr ""
 
-#: ../powers/powers.txt:198
+#: ../powers/powers.txt:199
 msgid "Damages nearby enemies"
 msgstr ""
 
-#: ../powers/powers.txt:216
+#: ../powers/powers.txt:217
 msgid "flametrap (trap)"
 msgstr ""
 
-#: ../powers/powers.txt:239
+#: ../powers/powers.txt:240
 msgid "Plant a 3-second bomb."
 msgstr ""
 
-#: ../powers/powers.txt:248
+#: ../powers/powers.txt:249
 msgid "Holy Sword"
 msgstr ""
 
-#: ../powers/powers.txt:251
+#: ../powers/powers.txt:252
 msgid "Deal two damage to all enemies on-screen"
 msgstr ""
 
-#: ../powers/powers.txt:267
+#: ../powers/powers.txt:268
 msgid "Summon Bat (enemy)"
 msgstr ""
 
-#: ../powers/powers.txt:305
+#: ../powers/powers.txt:306
 msgid "Fire Bomb (enemy)"
 msgstr ""
 
-#: ../powers/powers.txt:308
+#: ../powers/powers.txt:309
 msgid "Drop a bomb that does 10 damage when it explodes to the whole screen."
 msgstr ""
 
-#: ../powers/powers.txt:316
+#: ../powers/powers.txt:317
 msgid "Firebomb Explosion (enemy)"
 msgstr ""
 
-#: ../powers/powers.txt:337
+#: ../powers/powers.txt:338
 msgid "Explode (enemy)"
 msgstr ""
 
-#: ../powers/powers.txt:358
+#: ../powers/powers.txt:359
 msgid "Tick"
 msgstr ""
 
-#: ../powers/powers.txt:367
+#: ../powers/powers.txt:368
 msgid "Tick (proximity)"
 msgstr ""
 
-#: ../powers/powers.txt:376
+#: ../powers/powers.txt:377
 msgid "Enemy Beacon"
 msgstr ""
 
-#: ../powers/powers.txt:377
+#: ../powers/powers.txt:378
 msgid "Bring other enemies into the fight with a dummy attack"
 msgstr ""
 
-#: ../powers/powers.txt:389
+#: ../powers/powers.txt:390
 msgid "Disenchant"
 msgstr ""
 
-#: ../powers/powers.txt:394
+#: ../powers/powers.txt:395
 msgid "Transform back to human"
 msgstr ""
 
-#: ../powers/powers.txt:399
+#: ../powers/powers.txt:400
 msgid "Fire Immunity"
 msgstr ""
 
-#: ../powers/powers.txt:423
+#: ../powers/powers.txt:424
 msgid "Transform into Bat"
 msgstr ""
 
-#: ../powers/powers.txt:428
+#: ../powers/powers.txt:429
 msgid "Turn into a bat"
 msgstr ""
 
-#: ../powers/powers.txt:433
+#: ../powers/powers.txt:434
 msgid "Transform into Snake"
 msgstr ""
 
-#: ../powers/powers.txt:438
+#: ../powers/powers.txt:439
 msgid "Turn into a spitting snake"
 msgstr ""
 
-#: ../powers/powers.txt:443
+#: ../powers/powers.txt:444
 msgid "Spit Acid"
 msgstr ""
 
-#: ../powers/powers.txt:465
+#: ../powers/powers.txt:466
 msgid "Spit Fire"
 msgstr ""
 
-#: ../powers/powers.txt:486
+#: ../powers/powers.txt:487
 msgid "Transform into Ghost"
 msgstr ""
 
-#: ../powers/powers.txt:491
+#: ../powers/powers.txt:492
 msgid "Turn into a ghost"
 msgstr ""
 
-#: ../powers/powers.txt:506
+#: ../powers/powers.txt:507
 msgid "Transform into Juggernaut"
 msgstr ""
 
-#: ../powers/powers.txt:512
+#: ../powers/powers.txt:513
 msgid "Turn into a powerful knight for a short time"
 msgstr ""
 
-#: ../powers/powers.txt:517
+#: ../powers/powers.txt:518
 msgid "Transform into Squirrel"
 msgstr ""
 
-#: ../powers/powers.txt:522
+#: ../powers/powers.txt:523
 msgid "Turn into a squirrel"
 msgstr ""
 
@@ -631,7 +631,7 @@ msgstr ""
 msgid "Ambushed!"
 msgstr ""
 
-#: ../maps/castle1.txt:9
+#: ../maps/castle1.txt:10
 msgid "Castle Entry"
 msgstr ""
 
@@ -723,12 +723,16 @@ msgstr ""
 msgid "Inn, 2nd Floor"
 msgstr ""
 
-#: ../maps/laurelia.txt:9
+#: ../maps/laurelia.txt:10
 msgid "Laurelia"
 msgstr ""
 
-#: ../maps/laurelia.txt:840
+#: ../maps/laurelia.txt:841
 msgid "You've fallen in a hole!"
+msgstr ""
+
+#: ../maps/laurelia.txt:858
+msgid "You should travel east first. Remember to speak with the Elder when you return."
 msgstr ""
 
 #: ../maps/library.txt:9
@@ -839,11 +843,11 @@ msgstr ""
 msgid "Anvil"
 msgstr ""
 
-#: ../maps/volcano3.txt:179
+#: ../maps/volcano3.txt:180
 msgid "There might be a way to cross that small gap, but it looks deadly."
 msgstr ""
 
-#: ../maps/volcano3.txt:190
+#: ../maps/volcano3.txt:191
 msgid "Lava River"
 msgstr ""
 

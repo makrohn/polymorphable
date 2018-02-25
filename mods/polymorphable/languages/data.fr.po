@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-21 08:34+\n"
+"POT-Creation-Date: 2018-02-25 02:22+\n"
 "PO-Revision-Date: 2014-09-22 21:43+0200\n"
 "Last-Translator: Martin Quinson\n"
 "Language-Team: French <>\n"
@@ -193,171 +193,171 @@ msgstr "Bouclier"
 msgid "Create a force field that absorbs damage"
 msgstr "Crée un champ de force qui absorbe des dommages"
 
-#: ../powers/powers.txt:74
+#: ../powers/powers.txt:75
 msgid "Haste"
 msgstr "Rage"
 
-#: ../powers/powers.txt:76
+#: ../powers/powers.txt:77
 msgid "Double run and attack speed for 8 seconds"
 msgstr "Double la vitesse d'attaque et déplacements pour 8 secondes"
 
-#: ../powers/powers.txt:86
+#: ../powers/powers.txt:87
 msgid "Cleave"
 msgstr "Fente"
 
-#: ../powers/powers.txt:89
+#: ../powers/powers.txt:90
 msgid "Attack all enemies in a wide arc"
 msgstr "Attaque plusieurs ennemies à la fois"
 
-#: ../powers/powers.txt:104
+#: ../powers/powers.txt:105
 msgid "Leech Strike"
 msgstr "Baiser de Liche"
 
-#: ../powers/powers.txt:107
+#: ../powers/powers.txt:108
 msgid "Turn 50% of damage you deal into HP"
 msgstr "Change 50% des dommages infligés en PV"
 
-#: ../powers/powers.txt:122
+#: ../powers/powers.txt:123
 msgid "Stun Strike"
 msgstr "Coup de masse"
 
-#: ../powers/powers.txt:125
+#: ../powers/powers.txt:126
 msgid "Stun an enemy for 3 seconds"
 msgstr "Assomme un ennemi pour 3 secondes"
 
-#: ../powers/powers.txt:140
+#: ../powers/powers.txt:141
 msgid "Ice Blast"
 msgstr "Souffle glacé"
 
-#: ../powers/powers.txt:143
+#: ../powers/powers.txt:144
 msgid "Slow nearby enemies for 5 seconds"
 msgstr "Ralentie les ennemis proches pour 5 secondes"
 
-#: ../powers/powers.txt:163
+#: ../powers/powers.txt:164
 msgid "Shoot (enemy)"
 msgstr "Tir (ennemi)"
 
-#: ../powers/powers.txt:186
+#: ../powers/powers.txt:187
 msgid "Drop a bomb that does 5 damage when it explodes."
 msgstr "Pose une bombe infligeant 5 dommages en explosant."
 
-#: ../powers/powers.txt:195
+#: ../powers/powers.txt:196
 msgid "Explode (npc)"
 msgstr "Explose (pnj)"
 
-#: ../powers/powers.txt:198
+#: ../powers/powers.txt:199
 msgid "Damages nearby enemies"
 msgstr "Blesse les ennemis proches"
 
-#: ../powers/powers.txt:216
+#: ../powers/powers.txt:217
 msgid "flametrap (trap)"
 msgstr "piège à feu (piège)"
 
-#: ../powers/powers.txt:239
+#: ../powers/powers.txt:240
 msgid "Plant a 3-second bomb."
 msgstr "Pose une bombe de 3 secondes."
 
-#: ../powers/powers.txt:248
+#: ../powers/powers.txt:249
 msgid "Holy Sword"
 msgstr "Épée sacrée"
 
-#: ../powers/powers.txt:251
+#: ../powers/powers.txt:252
 msgid "Deal two damage to all enemies on-screen"
 msgstr "Inflige deux dommages à tous les ennemis à l'écran"
 
-#: ../powers/powers.txt:267
+#: ../powers/powers.txt:268
 msgid "Summon Bat (enemy)"
 msgstr ""
 
-#: ../powers/powers.txt:305
+#: ../powers/powers.txt:306
 msgid "Fire Bomb (enemy)"
 msgstr "Bombe de feu (ennemi)"
 
-#: ../powers/powers.txt:308
+#: ../powers/powers.txt:309
 msgid "Drop a bomb that does 10 damage when it explodes to the whole screen."
 msgstr "Pose une bombe infligeant 10 dommages à tout l'écran quand elle explose."
 
-#: ../powers/powers.txt:316
+#: ../powers/powers.txt:317
 msgid "Firebomb Explosion (enemy)"
 msgstr "Explosion de la bombe de feu (ennemi)"
 
-#: ../powers/powers.txt:337
+#: ../powers/powers.txt:338
 msgid "Explode (enemy)"
 msgstr "Explose (ennemi)"
 
-#: ../powers/powers.txt:358
+#: ../powers/powers.txt:359
 msgid "Tick"
 msgstr "Tic"
 
-#: ../powers/powers.txt:367
+#: ../powers/powers.txt:368
 msgid "Tick (proximity)"
 msgstr ""
 
-#: ../powers/powers.txt:376
+#: ../powers/powers.txt:377
 msgid "Enemy Beacon"
 msgstr "Appât"
 
-#: ../powers/powers.txt:377
+#: ../powers/powers.txt:378
 msgid "Bring other enemies into the fight with a dummy attack"
 msgstr "Attire d'autres ennemis dans le combat avec une fausse attaque"
 
-#: ../powers/powers.txt:389
+#: ../powers/powers.txt:390
 msgid "Disenchant"
 msgstr "Désenchantement"
 
-#: ../powers/powers.txt:394
+#: ../powers/powers.txt:395
 msgid "Transform back to human"
 msgstr "Permet de reprendre une forme humaine"
 
-#: ../powers/powers.txt:399
+#: ../powers/powers.txt:400
 msgid "Fire Immunity"
 msgstr "Immunité au feu"
 
-#: ../powers/powers.txt:423
+#: ../powers/powers.txt:424
 msgid "Transform into Bat"
 msgstr "Transformer en chauve-souris"
 
-#: ../powers/powers.txt:428
+#: ../powers/powers.txt:429
 msgid "Turn into a bat"
 msgstr "Changer en chauve-souris"
 
-#: ../powers/powers.txt:433
+#: ../powers/powers.txt:434
 msgid "Transform into Snake"
 msgstr "Transformer en serpent"
 
-#: ../powers/powers.txt:438
+#: ../powers/powers.txt:439
 msgid "Turn into a spitting snake"
 msgstr "Changer en serpent cracheur"
 
-#: ../powers/powers.txt:443
+#: ../powers/powers.txt:444
 msgid "Spit Acid"
 msgstr "Cracher de l'acide"
 
-#: ../powers/powers.txt:465
+#: ../powers/powers.txt:466
 msgid "Spit Fire"
 msgstr "Cracher du feu"
 
-#: ../powers/powers.txt:486
+#: ../powers/powers.txt:487
 msgid "Transform into Ghost"
 msgstr "Transformer en fantôme"
 
-#: ../powers/powers.txt:491
+#: ../powers/powers.txt:492
 msgid "Turn into a ghost"
 msgstr "Changer en fantôme"
 
-#: ../powers/powers.txt:506
+#: ../powers/powers.txt:507
 msgid "Transform into Juggernaut"
 msgstr "Transformer en Fléau"
 
-#: ../powers/powers.txt:512
+#: ../powers/powers.txt:513
 msgid "Turn into a powerful knight for a short time"
 msgstr "Changer en un guerrier puissant pour un court instant"
 
-#: ../powers/powers.txt:517
+#: ../powers/powers.txt:518
 msgid "Transform into Squirrel"
 msgstr "Transformer en écureuil"
 
-#: ../powers/powers.txt:522
+#: ../powers/powers.txt:523
 msgid "Turn into a squirrel"
 msgstr "Changer en écureuil"
 
@@ -636,7 +636,7 @@ msgstr "Lac sous-terrain"
 msgid "Ambushed!"
 msgstr "Embusqué !"
 
-#: ../maps/castle1.txt:9
+#: ../maps/castle1.txt:10
 msgid "Castle Entry"
 msgstr "Entrée du château"
 
@@ -728,13 +728,17 @@ msgstr "Auberge, premier étage"
 msgid "Inn, 2nd Floor"
 msgstr "Auberge, deuxième étage"
 
-#: ../maps/laurelia.txt:9
+#: ../maps/laurelia.txt:10
 msgid "Laurelia"
 msgstr ""
 
-#: ../maps/laurelia.txt:840
+#: ../maps/laurelia.txt:841
 msgid "You've fallen in a hole!"
 msgstr "Vous êtes tombé dans un trou !"
+
+#: ../maps/laurelia.txt:858
+msgid "You should travel east first. Remember to speak with the Elder when you return."
+msgstr ""
 
 #: ../maps/library.txt:9
 msgid "Library"
@@ -846,11 +850,11 @@ msgstr "Portail verrouillé"
 msgid "Anvil"
 msgstr "Enclume"
 
-#: ../maps/volcano3.txt:179
+#: ../maps/volcano3.txt:180
 msgid "There might be a way to cross that small gap, but it looks deadly."
 msgstr "Il y a peut-être un passage pour traverser le petit espace, mais il semble mortel."
 
-#: ../maps/volcano3.txt:190
+#: ../maps/volcano3.txt:191
 msgid "Lava River"
 msgstr "Rivière de lave"
 
