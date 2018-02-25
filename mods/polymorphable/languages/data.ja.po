@@ -107,19 +107,19 @@ msgstr "つかうと、 ゆうれい に へんしん して、 ほのお の �
 
 #: ../items/items.txt:166
 msgid "Half of Juggernaut Talisman"
-msgstr ""
+msgstr "Juggernaut タリスマン の はんぶん"
 
 #: ../items/items.txt:172
 msgid "Bring to the Village Elder to create the Juggernaut Talisman"
-msgstr "これを長老のところにもっていき、 Juggernaut タリスマンをつくってもらう。"
+msgstr "これを 長老のところ に もっていき、 Juggernaut タリスマン を つくってもらう。"
 
 #: ../items/items.txt:192
 msgid "Juggernaut Talisman"
-msgstr " Juggernaut のタリスマン"
+msgstr "Juggernaut の タリスマン"
 
 #: ../items/items.txt:199
 msgid "Transform into a mighty juggernaut"
-msgstr "つよい juggernaut にへんしん"
+msgstr "つよい juggernaut に へんしん"
 
 #: ../items/types.txt:3
 msgid "Body"
@@ -139,7 +139,7 @@ msgstr "ききて"
 
 #: ../items/types.txt:19
 msgid "Quest Item"
-msgstr "きちょうなアイテム"
+msgstr "きちょうな アイテム"
 
 #: ../items/qualities.txt:3
 msgid "Low"
@@ -303,7 +303,7 @@ msgstr ""
 
 #: ../powers/powers.txt:389
 msgid "Disenchant"
-msgstr "まほうをとく"
+msgstr "まほうを とく"
 
 #: ../powers/powers.txt:394
 msgid "Transform back to human"
@@ -519,7 +519,7 @@ msgstr "どく の コウモリ"
 
 #: ../enemies/zalkaz.txt:1
 msgid "Zalkaz, Bane of Laurelia"
-msgstr ""
+msgstr "Zalkaz, ローレリア の わざわい"
 
 #: ../maps/barracks.txt:9
 msgid "Barracks"
@@ -771,7 +771,7 @@ msgstr "マーケットの そうこ"
 
 #: ../maps/mountainpath.txt:8
 msgid "Mountain Path"
-msgstr ""
+msgstr "やま への みち"
 
 #: ../maps/smallhouse.txt:9
 msgid "Small House"
@@ -795,7 +795,7 @@ msgstr "やま の どうくつ"
 
 #: ../maps/snow6.txt:198
 msgid "Bring ssssacrifices for Zalkaz here!"
-msgstr ""
+msgstr "Zalkaz に ささげる いけにえ を、ここに もってこい!"
 
 #: ../maps/snow7.txt:9
 msgid "Zalkaz's Lair"
@@ -851,7 +851,7 @@ msgstr "ようがん の 川"
 
 #: ../maps/volcano4.txt:189
 msgid "Someone has scrawled here: \"The fire skeleton's bombs killed my friend instantly!  If I wasn't a ghost already, I'd have died, too.\""
-msgstr ""
+msgstr "ひめい が きこえてくる。 「ファイアースケルトン は、ばくだん で、 わたし の なかま を、すぐに ころした。 もし、 わたしが まだ、ゆうれい でないなら、わたしも、しんだ のだろう。」"
 
 #: ../maps/volcano4.txt:192
 msgid "Altar"
@@ -879,7 +879,7 @@ msgstr "ようせい の 花（はな）  を みつけよう。 町（まち）
 
 #: ../quests/downahole.txt:13
 msgid "You found the Fairy Flower!  Now to bring it home to the Elder, and to explain what you saw in the cave."
-msgstr "あなた は、すでに、ようせいのはな を みつけている。 これを、さっさと Elder に もっていこう。 そして、どうくつ で 見た（みた） もの を、 せつめい しよう。"
+msgstr "あなた は、すでに、ようせいのはな を みつけている。 これを、さっさと 長老（ちょうろう）に もっていこう。 そして、どうくつ で 見た（みた） もの を、 せつめい しよう。"
 
 #: ../quests/juggernaut.txt:4
 msgid "You have been tasked with finding the Juggernaut Talisman.  Go east to find the first half in the volcano."
@@ -887,11 +887,11 @@ msgstr "Juggernaut のおまもり を さがそう。 さいしょに、ひが�
 
 #: ../quests/juggernaut.txt:9
 msgid "You have found the first half of the Juggernaut Talisman.  Go to the volcano to the west to find the second half."
-msgstr ""
+msgstr "あなたは、すでに、Juggernaut タリスマンのはんぶん を もっている。 にし に いって、 2こめ の タリスマンを、さがそう。"
 
 #: ../quests/juggernaut.txt:14
 msgid "You have found the 2nd half of the Juggernaut Talisman.  Bring it to the village elder to have him combine the halves."
-msgstr ""
+msgstr "あなたは、すでに、Juggernaut タリスマン の 2こめ を もっている。 村（むら）に もどって、長老に たのんで、くっつけてもらおう。"
 
 #: ../quests/snowmountain.txt:4
 msgid "Scale Snow Mountain, south of Laurelia, to put an end to Zalkaz once and for all."
@@ -899,7 +899,7 @@ msgstr ""
 
 #: ../quests/snowmountain.txt:8
 msgid "Leave Zalkaz's Lair, and return to Laurelia to talk to the townsfolk.  Congratulations, you've beaten Laurelia's Polymorphable Citizens!"
-msgstr ""
+msgstr "Zalkaz の すみか を、 はねれよう。 そして、ローレリアのむら に もどろう。 むら の ひと と おはなしをしよう。 おめでとう 。 you've beaten Laurelia's Polymorphable Citizens!"
 
 #: ../npcs/apprentice.txt:1
 msgid "Wot the Apprentice"
@@ -1059,7 +1059,7 @@ msgstr "あなたは、このまちに やってくる かねもちに、 これ
 
 #: ../npcs/blacksmith.txt:24
 msgid "Could be."
-msgstr ""
+msgstr "できればね。"
 
 #: ../npcs/blacksmith.txt:29
 msgid "Good morning!  I just finished some work on a new sword last night, and I'm showing it off to anyone who comes by."
@@ -1251,7 +1251,7 @@ msgstr "いいえ、わたしは、おおむかし の 悪（あく）を、と�
 
 #: ../npcs/elder.txt:56
 msgid "Ah, I hoped that I would never have to tell you.  You see, I never told you about your parents.  You weren't actually left on my doorstep - the house you live in was theirs, before they left to seal away the ancient evil Zalkaz."
-msgstr ""
+msgstr "ああ、わたしは、 ほんとうのこと を、 おしえないで すむこと を、ねがっていました。 でも、あなたは、みてしまった。 わたしは、いままで、あなたの おや の、ほんとうのこと について、はなさなかった。 あなたは、ほんとうは、すてご では ないのです。 ドアのまえ に すてられてた という はなし は、ウソです。 あなたのすんでる、いま の いえ は、むかし は、 あなた の おとうさん と おかあさん が、すんでました。 Zalkaz を 封印（ふういん）する まえ までは。 "
 
 #: ../npcs/elder.txt:57
 msgid "When in the heck were you planning on letting me know the truth!?"
@@ -1259,11 +1259,11 @@ msgstr "いつ、ほんとのこと を、わたし に、 しらせようと、
 
 #: ../npcs/elder.txt:58
 msgid "Tomorrow, after your birthday party, I promise!  They died nobly, but now, it falls to you to finish their work."
-msgstr "あした、誕生日（たんじょうび の あと です。 約束（やくそく）します。  かれらは けだかく しにましたが、 しかし いま、 it falls to you to finish their work."
+msgstr "あした、誕生日（たんじょうび の あと です。 約束（やくそく）します。  かれらは けだかく しにましたが、 しかし いま、 あなたは、おちちうえ と おははうえ の しごと を、おわらえなければなりません。"
 
 #: ../npcs/elder.txt:59
 msgid "You must find what they never could: both halves of the Juggernaut Talisman.  With the Talisman, you can seal away the Ancient Evil forever!"
-msgstr "かれらの みつけられなかった ものを、 あなたは、みつけなければ、ならない のです。  Juggernaut の おまもり の 半分（はんぶん）です。 その おまもり で、おおむかしの悪（あく）を、封印（ふういん）する こと が できます。ずっと。"
+msgstr "かれらの みつけられなかった ものを、 あなたは、みつけなければ、ならない のです。 はんぶん に わかれた Juggernaut の おまもり の 両方（りょうほう）です。 その おまもり で、おおむかしの悪（あく）を、封印（ふういん）する こと が できます。ずっと。"
 
 #: ../npcs/elder.txt:60
 msgid "Go east, and use your bat talisman to fly over the ruined bridge, and seek the first half of the Juggernaut Talisman in the volcano."
@@ -1275,7 +1275,7 @@ msgstr "ようせい の はな"
 
 #: ../npcs/elder.txt:66
 msgid "Have you found the Fairy Flower yet?"
-msgstr ""
+msgstr "まだ、 ようせい の はな を、 みつけて いませんか?"
 
 #: ../npcs/elder.txt:72
 msgid "Ah, Daphne!  It's good to see you this morning.  You turn sixteen tomorrow, but it seems like just yesterday that I found you in a basket at my door."
@@ -1347,7 +1347,7 @@ msgstr ""
 
 #: ../npcs/gardener.txt:1
 msgid "Howard the Gardener"
-msgstr ""
+msgstr "ホワード、 のうか"
 
 #: ../npcs/gardener.txt:11
 msgid "Oh, I have some fresh carrots and watermelons, they're good for what ails you!"
@@ -1363,7 +1363,7 @@ msgstr ""
 
 #: ../npcs/ghost.txt:1
 msgid "Gaspar"
-msgstr ""
+msgstr "ガスパー"
 
 #: ../npcs/ghost.txt:8
 msgid "River of Flames"
