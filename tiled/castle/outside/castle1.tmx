@@ -1,30 +1,31 @@
-<map height="32" orientation="orthogonal" renderorder="right-down" tileheight="32" tilewidth="32" version="1.0" width="32">
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.1.2" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32" infinite="0" backgroundcolor="#000000" nextobjectid="12">
  <properties>
-  <property name="music" value="music/mysticaltheme.ogg" />
-  <property name="tileset" value="tilesetdefs/town.txt" />
-  <property name="title" value="Castle Entry" />
+  <property name="music" value="music/mysticaltheme.ogg"/>
+  <property name="tileset" value="tilesetdefs/town.txt"/>
+  <property name="title" value="Castle Entry"/>
  </properties>
- <tileset firstgid="1" name="tiled_collision" tileheight="32" tilewidth="32">
-  <image height="32" source="tiled_collision.png" width="480" />
+ <tileset firstgid="1" name="tiled_collision" tilewidth="32" tileheight="32" tilecount="15" columns="15">
+  <image source="tiled_collision.png" width="480" height="32"/>
  </tileset>
- <tileset firstgid="16" name="generic_background" tileheight="32" tilewidth="32">
-  <image height="832" source="generic_background.png" width="864" />
+ <tileset firstgid="16" name="generic_background" tilewidth="32" tileheight="32" tilecount="702" columns="27">
+  <image source="generic_background.png" width="864" height="832"/>
  </tileset>
- <tileset firstgid="718" name="small_objects" tileheight="64" tilewidth="32">
-  <image height="512" source="small_objects.png" width="671" />
+ <tileset firstgid="718" name="small_objects" tilewidth="32" tileheight="64" tilecount="160" columns="20">
+  <image source="small_objects.png" width="671" height="512"/>
  </tileset>
- <tileset firstgid="878" name="town_buildings" tileheight="128" tilewidth="32">
-  <image height="768" source="town_buildings.png" width="672" />
+ <tileset firstgid="878" name="town_buildings" tilewidth="32" tileheight="128" tilecount="126" columns="21">
+  <image source="town_buildings.png" width="672" height="768"/>
  </tileset>
- <tileset firstgid="1004" name="bldgleft" tileheight="128" tilewidth="32">
-  <tileoffset x="16" y="0" />
-  <image height="128" source="bldgleft.png" width="704" />
+ <tileset firstgid="1004" name="bldgleft" tilewidth="32" tileheight="128" tilecount="22" columns="22">
+  <tileoffset x="16" y="0"/>
+  <image source="bldgleft.png" width="704" height="128"/>
  </tileset>
- <tileset firstgid="1026" name="bldgright" tileheight="128" tilewidth="32">
-  <tileoffset x="-16" y="0" />
-  <image height="128" source="bldgright.png" width="864" />
+ <tileset firstgid="1026" name="bldgright" tilewidth="32" tileheight="128" tilecount="27" columns="27">
+  <tileoffset x="-16" y="0"/>
+  <image source="bldgright.png" width="864" height="128"/>
  </tileset>
- <layer height="32" name="background" width="32">
+ <layer name="background" width="32" height="32">
   <data encoding="csv">
 101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,
 101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,
@@ -60,7 +61,7 @@
 101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101,101
 </data>
  </layer>
- <layer height="32" name="fringe" width="32">
+ <layer name="fringe" width="32" height="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -96,7 +97,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer height="32" name="object" width="32">
+ <layer name="object" width="32" height="32">
   <data encoding="csv">
 0,0,997,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,997,0,0,0,0,0,
 0,0,997,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,997,0,0,0,0,0,
@@ -132,7 +133,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer height="32" name="foreground" width="32">
+ <layer name="foreground" width="32" height="32">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -168,7 +169,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer height="32" name="collision" visible="0" width="32">
+ <layer name="collision" width="32" height="32" visible="0">
   <data encoding="csv">
 0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,
 0,0,1,1,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,
@@ -205,70 +206,84 @@
 </data>
  </layer>
  <objectgroup name="enemy">
-  <object height="32" name="Ghost" type="enemy" width="32" x="768" y="256"><properties><property name="category" value="ghost" /></properties></object>
-  <object height="32" name="Ghost" type="enemy" width="32" x="736" y="544"><properties><property name="category" value="ghost" /></properties></object>
+  <object id="1" name="Ghost" type="enemy" x="768" y="256" width="32" height="32">
+   <properties>
+    <property name="category" value="ghost"/>
+   </properties>
+  </object>
+  <object id="2" name="Ghost" type="enemy" x="736" y="544" width="32" height="32">
+   <properties>
+    <property name="category" value="ghost"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup name="event">
-  <object height="160" name="Teleport to Castle Path" type="event" width="32" x="992" y="352">
+  <object id="3" name="Teleport to Castle Path" type="event" x="992" y="352" width="32" height="160">
    <properties>
-    <property name="intermap" value="maps/castlepath.txt,1,19" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="on_trigger"/>
+    <property name="intermap" value="maps/castlepath.txt,1,19"/>
+   </properties>
   </object>
-  <object height="32" name="Fire Trap" type="event" width="32" x="448" y="96">
+  <object id="4" name="Fire Trap" type="event" x="448" y="96" width="32" height="32">
    <properties>
-    <property name="power" value="33" />
-    <property name="power_damage" value="100,100" />
-    <property name="power_path" value="0,0,14,3" />
-    <property name="repeat" value="false" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="static"/>
+    <property name="power" value="33"/>
+    <property name="power_damage" value="100,100"/>
+    <property name="repeat" value="true"/>
+   </properties>
   </object>
-  <object height="32" name="Fire Trap" type="event" width="32" x="480" y="128">
+  <object id="5" name="Fire Trap" type="event" x="480" y="128" width="32" height="32">
    <properties>
-    <property name="power" value="33" />
-    <property name="power_damage" value="100,100" />
-    <property name="power_path" value="0,0,15,4" />
-    <property name="repeat" value="false" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="static"/>
+    <property name="power" value="33"/>
+    <property name="power_damage" value="100,100"/>
+    <property name="repeat" value="true"/>
+   </properties>
   </object>
-  <object height="32" name="Fire Trap" type="event" width="32" x="448" y="128">
+  <object id="6" name="Fire Trap" type="event" x="448" y="128" width="32" height="32">
    <properties>
-    <property name="power" value="33" />
-    <property name="power_damage" value="100,100" />
-    <property name="power_path" value="0,0,14,4" />
-    <property name="repeat" value="false" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="static"/>
+    <property name="power" value="33"/>
+    <property name="power_damage" value="100,100"/>
+    <property name="repeat" value="true"/>
+   </properties>
   </object>
-  <object height="32" name="Fire Trap" type="event" width="32" x="416" y="128">
+  <object id="7" name="Fire Trap" type="event" x="416" y="128" width="32" height="32">
    <properties>
-    <property name="power" value="33" />
-    <property name="power_damage" value="100,100" />
-    <property name="power_path" value="0,0,13,4" />
-    <property name="repeat" value="false" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="static"/>
+    <property name="power" value="33"/>
+    <property name="power_damage" value="100,100"/>
+    <property name="repeat" value="true"/>
+   </properties>
   </object>
-  <object height="32" name="Fire Trap" type="event" width="32" x="480" y="96">
+  <object id="8" name="Fire Trap" type="event" x="480" y="96" width="32" height="32">
    <properties>
-    <property name="power" value="33" />
-    <property name="power_damage" value="100,100" />
-    <property name="power_path" value="0,0,15,3" />
-    <property name="repeat" value="false" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="static"/>
+    <property name="power" value="33"/>
+    <property name="power_damage" value="100,100"/>
+    <property name="repeat" value="true"/>
+   </properties>
   </object>
-  <object height="32" name="Fire Trap" type="event" width="32" x="416" y="96">
+  <object id="9" name="Fire Trap" type="event" x="416" y="96" width="32" height="32">
    <properties>
-    <property name="power" value="33" />
-    <property name="power_damage" value="100,100" />
-    <property name="power_path" value="0,0,13,3" />
-    <property name="repeat" value="false" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="static"/>
+    <property name="power" value="33"/>
+    <property name="power_damage" value="100,100"/>
+    <property name="repeat" value="true"/>
+   </properties>
   </object>
-  <object height="32" name="Teleport to Castle 2" type="event" width="32" x="448" y="64">
+  <object id="10" name="Teleport to Castle 2" type="event" x="448" y="64" width="32" height="32">
    <properties>
-    <property name="intermap" value="maps/castle2.txt,13,29" />
-   <property name="activate" value="on_trigger" /></properties>
+    <property name="activate" value="on_trigger"/>
+    <property name="intermap" value="maps/castle2.txt,13,29"/>
+   </properties>
   </object>
  </objectgroup>
  <objectgroup name="npc">
-  <object height="32" name="Gaspar the Ghost" type="npc" width="32" x="480" y="224"><properties><property name="filename" value="npcs/ghost.txt" /></properties></object>
+  <object id="11" name="Gaspar the Ghost" type="npc" x="480" y="224" width="32" height="32">
+   <properties>
+    <property name="filename" value="npcs/ghost.txt"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>

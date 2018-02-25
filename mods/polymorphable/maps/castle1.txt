@@ -4,6 +4,7 @@ height=32
 tilewidth=32
 tileheight=32
 orientation=orthogonal
+background_color=0,0,0,255
 music=music/mysticaltheme.ogg
 tileset=tilesetdefs/town.txt
 title=Castle Entry
@@ -219,61 +220,55 @@ intermap=maps/castlepath.txt,1,19
 # Fire Trap
 type=event
 location=14,3,1,1
-activate=on_trigger
+activate=static
 power=33
 power_damage=100,100
-power_path=0,0,14,3
-repeat=false
+repeat=true
 
 [event]
 # Fire Trap
 type=event
 location=15,4,1,1
-activate=on_trigger
+activate=static
 power=33
 power_damage=100,100
-power_path=0,0,15,4
-repeat=false
+repeat=true
 
 [event]
 # Fire Trap
 type=event
 location=14,4,1,1
-activate=on_trigger
+activate=static
 power=33
 power_damage=100,100
-power_path=0,0,14,4
-repeat=false
+repeat=true
 
 [event]
 # Fire Trap
 type=event
 location=13,4,1,1
-activate=on_trigger
+activate=static
 power=33
 power_damage=100,100
-power_path=0,0,13,4
-repeat=false
+repeat=true
 
 [event]
 # Fire Trap
 type=event
 location=15,3,1,1
-activate=on_trigger
+activate=static
 power=33
 power_damage=100,100
-power_path=0,0,15,3
-repeat=false
+repeat=true
 
 [event]
 # Fire Trap
 type=event
 location=13,3,1,1
-activate=on_trigger
+activate=static
 power=33
 power_damage=100,100
-power_path=0,0,13,3
-repeat=false
+repeat=true
 
 [event]
 # Teleport to Castle 2
