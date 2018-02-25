@@ -4,7 +4,7 @@ height=144
 tilewidth=32
 tileheight=32
 orientation=orthogonal
-background_color=47,129,54,255
+background_color=0,0,0,255
 music=music/calmtown.ogg
 tileset=tilesetdefs/town.txt
 title=Laurelia
@@ -855,9 +855,8 @@ requires_status=1stjuggfound
 type=event
 location=0,103,1,6
 activate=on_trigger
-cooldown=1s
 msg=You should travel east first. Remember to speak with the Elder when you return.
-repeat=true
+repeat=false
 requires_not_status=1stjuggfound
 
 [event]

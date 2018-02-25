@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.2" orientation="orthogonal" renderorder="right-down" width="178" height="144" tilewidth="32" tileheight="32" infinite="0" backgroundcolor="#2f8136" nextobjectid="36">
+<map version="1.0" tiledversion="1.1.2" orientation="orthogonal" renderorder="right-down" width="178" height="144" tilewidth="32" tileheight="32" infinite="0" backgroundcolor="#000000" nextobjectid="36">
  <properties>
   <property name="music" value="music/calmtown.ogg"/>
   <property name="tileset" value="tilesetdefs/town.txt"/>
@@ -851,9 +851,8 @@
   <object id="35" name="Travel east msg" type="event" x="0" y="3296" width="32" height="192">
    <properties>
     <property name="activate" value="on_trigger"/>
-    <property name="cooldown" value="1s"/>
     <property name="msg" value="You should travel east first. Remember to speak with the Elder when you return."/>
-    <property name="repeat" value="true"/>
+    <property name="repeat" value="false"/>
     <property name="requires_not_status" value="1stjuggfound"/>
    </properties>
   </object>
