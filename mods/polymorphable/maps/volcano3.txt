@@ -4,6 +4,7 @@ height=32
 tilewidth=32
 tileheight=32
 orientation=orthogonal
+background_color=0,0,0,255
 music=music/evil_temple.ogg
 tileset=tilesetdefs/volcano.txt
 title=Volcano
@@ -184,7 +185,7 @@ soundfx=soundfx/powers/quake.ogg
 # Lava Trap
 type=event
 location=10,3,1,1
-activate=on_trigger
+activate=static
 power=33
 power_damage=100,100
 tooltip=Lava River
@@ -193,7 +194,7 @@ tooltip=Lava River
 # Lava Trap
 type=event
 location=11,3,1,1
-activate=on_trigger
+activate=static
 power=33
 power_damage=100,100
 tooltip=Lava River
@@ -202,7 +203,7 @@ tooltip=Lava River
 # Lava Trap
 type=event
 location=13,3,1,1
-activate=on_trigger
+activate=static
 power=33
 power_damage=100,100
 tooltip=Lava River
@@ -211,7 +212,7 @@ tooltip=Lava River
 # Lava Trap
 type=event
 location=12,3,1,1
-activate=on_trigger
+activate=static
 power=33
 power_damage=100,100
 tooltip=Lava River
@@ -220,7 +221,7 @@ tooltip=Lava River
 # Lava Trap
 type=event
 location=14,3,1,1
-activate=on_trigger
+activate=static
 power=33
 power_damage=100,100
 tooltip=Lava River
@@ -229,7 +230,7 @@ tooltip=Lava River
 # Lava Trap
 type=event
 location=15,3,1,1
-activate=on_trigger
+activate=static
 power=33
 power_damage=100,100
 tooltip=Lava River
@@ -238,7 +239,7 @@ tooltip=Lava River
 # Lava Trap
 type=event
 location=11,4,1,1
-activate=on_trigger
+activate=static
 power=33
 power_damage=100,100
 tooltip=Lava River
@@ -247,7 +248,7 @@ tooltip=Lava River
 # Lava Trap
 type=event
 location=10,4,1,1
-activate=on_trigger
+activate=static
 power=33
 power_damage=100,100
 tooltip=Lava River
@@ -256,7 +257,7 @@ tooltip=Lava River
 # Lava Trap
 type=event
 location=12,4,1,1
-activate=on_trigger
+activate=static
 power=33
 power_damage=100,100
 tooltip=Lava River
@@ -265,7 +266,7 @@ tooltip=Lava River
 # Lava Trap
 type=event
 location=13,4,1,1
-activate=on_trigger
+activate=static
 power=33
 power_damage=100,100
 tooltip=Lava River
@@ -274,7 +275,7 @@ tooltip=Lava River
 # Lava Trap
 type=event
 location=14,4,1,1
-activate=on_trigger
+activate=static
 power=33
 power_damage=100,100
 tooltip=Lava River
@@ -283,7 +284,7 @@ tooltip=Lava River
 # Lava Trap
 type=event
 location=15,4,1,1
-activate=on_trigger
+activate=static
 power=33
 power_damage=100,100
 tooltip=Lava River

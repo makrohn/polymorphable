@@ -1,0 +1,1 @@
+resist_percent=0,100
