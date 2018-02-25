@@ -219,7 +219,6 @@ type=fixed
 icon=10
 description=Damages nearby enemies
 new_state=cast
-soundfx=soundfx/powers/quake.ogg
 use_hazard=true
 base_damage=ment
 lifespan=1s
