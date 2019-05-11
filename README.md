@@ -16,7 +16,7 @@ Mac OSX and Windows
 - A pre-packaged Polymorphable binary with Flare 0.18 Engine can be found here: https://sourceforge.net/projects/polymorphable/files/?source=navbar
 
 Linux
-- Install Flare v1.x using your favorite package manager, or compile from source from https://github.com/clintbellanger/flare-engine/tree/master
+- Install Flare v1.x using your favorite package manager, or compile from source from https://github.com/flareteam/flare-engine
 - Copy the entire mods/polymorphable folder into the Flare mods/ directory.
 
 ```
