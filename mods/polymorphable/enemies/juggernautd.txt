@@ -2,7 +2,7 @@ name=Juggernaut
 humanoid=true
 level=1
 categories=juggernautd
-rarity=commons
+rarity=common
 xp=0
 
 animations=animations/enemies/juggernaut.txt
