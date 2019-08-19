@@ -1,0 +1,1756 @@
+# Copyright (C) 2011 Clint Bellanger
+# This file is distributed under the same license as the FLARE package.
+# MiroslavR <miroslavr256@gmail.com>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-25 02:22+\n"
+"PO-Revision-Date: 2019-08-24 19:59+0200\n"
+"Last-Translator: MiroslavR <miroslavr256@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Virtaal 0.7.1\n"
+
+#: ../items/items.txt:3
+msgid "Carrot"
+msgstr "Mrkva"
+
+#: ../items/items.txt:8
+msgid "Restore 4 HP"
+msgstr "Obnoví 4 HP"
+
+#: ../items/items.txt:16
+msgid "Watermelon"
+msgstr "Melón"
+
+#: ../items/items.txt:21
+msgid "Restore 4 MP"
+msgstr "Obnoví 4 MP"
+
+#: ../items/items.txt:29
+msgid "Bomb"
+msgstr "Bomba"
+
+#: ../items/items.txt:34
+msgid "Plant a 3-second bomb"
+msgstr "Umiestni 3-sekundovú bombu"
+
+#: ../items/items.txt:42
+msgid "Gold"
+msgstr "Zlat."
+
+#: ../items/items.txt:57
+msgid "Leather Armor"
+msgstr "Kožená zbroj"
+
+#: ../items/items.txt:69
+msgid "Knife"
+msgstr "Nôž"
+
+#: ../items/items.txt:77
+msgid "Just a kitchen knife"
+msgstr "Obyčajný kuchynský nôž"
+
+#: ../items/items.txt:82
+msgid "Hero's Sword"
+msgstr "Hrdinov meč"
+
+#: ../items/items.txt:90
+msgid "The sword of the ancient hero"
+msgstr "Meč dávneho hrdinu"
+
+#: ../items/items.txt:96
+msgid "Skeleton Key"
+msgstr "Skupinový kľúč"
+
+#: ../items/items.txt:102
+msgid "Unlocks a door in the Volcano"
+msgstr "Odomyká dvere v sopke"
+
+#: ../items/items.txt:107
+msgid "Fairy Flower"
+msgstr "Vílí kvet"
+
+#: ../items/items.txt:113
+msgid "Return this flower to Elder Thomas"
+msgstr "Tento kvet doneste staršinovi Tomášovi"
+
+#: ../items/items.txt:118
+msgid "Bat Talisman"
+msgstr "Netopierí talizman"
+
+#: ../items/items.txt:124
+msgid "Use to transform into a bat and fly"
+msgstr "Použitím sa premeníte na netopiera so schopnosťou letu"
+
+#: ../items/items.txt:130
+msgid "Snake Talisman"
+msgstr "Hadí talizman"
+
+#: ../items/items.txt:136
+msgid "Use to transform into a snake and spit acid at enemies and switches"
+msgstr ""
+"Použitím sa premeníte na hada so schopnosťou pľuť kyselinu na nepriateľov a "
+"prepínače"
+
+#: ../items/items.txt:142
+msgid "Ghost Talisman"
+msgstr "Talizman ducha"
+
+#: ../items/items.txt:148
+msgid "Use to transform into a ghost and pass through flame"
+msgstr "Použitím sa premeníte na ducha so schopnosťou prechodu cez oheň"
+
+#: ../items/items.txt:166
+msgid "Half of Juggernaut Talisman"
+msgstr "Polovica talizmanu molocha"
+
+#: ../items/items.txt:172
+msgid "Bring to the Village Elder to create the Juggernaut Talisman"
+msgstr "Doneste ju staršinovi dediny, aby mohol vyrobiť talizman molocha"
+
+#: ../items/items.txt:192
+msgid "Juggernaut Talisman"
+msgstr "Talizman molocha"
+
+#: ../items/items.txt:199
+msgid "Transform into a mighty juggernaut"
+msgstr "Premeníte sa na mocného molocha"
+
+#: ../items/types.txt:3
+msgid "Body"
+msgstr "Trup"
+
+#: ../items/types.txt:7
+msgid "Consumable"
+msgstr "Spotrebný predmet"
+
+#: ../items/types.txt:11
+msgid "Gem"
+msgstr "Drahokam"
+
+#: ../items/types.txt:15
+msgid "Main Hand"
+msgstr "Hlavná ruka"
+
+#: ../items/types.txt:19
+msgid "Quest Item"
+msgstr "Predmet úlohy"
+
+#: ../items/qualities.txt:3
+msgid "Low"
+msgstr "Nízka"
+
+#: ../items/qualities.txt:8
+msgid "Normal"
+msgstr "Normálna"
+
+#: ../items/qualities.txt:13
+msgid "High"
+msgstr "Vysoká"
+
+#: ../items/qualities.txt:18
+msgid "Epic"
+msgstr "Veľkolepá"
+
+#: ../items/qualities.txt:23
+msgid "Unique"
+msgstr "Unikátna"
+
+#: ../powers/powers.txt:3
+msgid "Swing"
+msgstr "Švih"
+
+#: ../powers/powers.txt:6
+msgid "Basic melee attack"
+msgstr "Základný útok zblízka"
+
+#: ../powers/powers.txt:18
+msgid "Crush"
+msgstr "Náraz"
+
+#: ../powers/powers.txt:21
+msgid "Knock your enemy back"
+msgstr "Odhodí nepriateľa dozadu"
+
+#: ../powers/powers.txt:36
+msgid "Lightning Storm"
+msgstr "Búrka"
+
+#: ../powers/powers.txt:39
+msgid "Three lightning bolts strike randomly around you"
+msgstr "Na náhodných miestach okolo vás udrú tri blesky"
+
+#: ../powers/powers.txt:59
+msgid "Shield"
+msgstr "Štít"
+
+#: ../powers/powers.txt:62
+msgid "Create a force field that absorbs damage"
+msgstr "Vytvorí silové pole pohlcujúce zranenie"
+
+#: ../powers/powers.txt:75
+msgid "Haste"
+msgstr "Zhon"
+
+#: ../powers/powers.txt:77
+msgid "Double run and attack speed for 8 seconds"
+msgstr "Dvojnásobná rýchlosť behu a útoku na 8 sekúnd"
+
+#: ../powers/powers.txt:87
+msgid "Cleave"
+msgstr "Sek"
+
+#: ../powers/powers.txt:90
+msgid "Attack all enemies in a wide arc"
+msgstr "Zaútočí na všetkých nepriateľov v širokom oblúku"
+
+#: ../powers/powers.txt:105
+msgid "Leech Strike"
+msgstr "Parazitný úder"
+
+#: ../powers/powers.txt:108
+msgid "Turn 50% of damage you deal into HP"
+msgstr "Premení 50 % zranenia, ktoré spôsobíte, na HP"
+
+#: ../powers/powers.txt:123
+msgid "Stun Strike"
+msgstr "Omráčenie"
+
+#: ../powers/powers.txt:126
+msgid "Stun an enemy for 3 seconds"
+msgstr "Omráči nepriateľa na 3 sekundy"
+
+#: ../powers/powers.txt:141
+msgid "Ice Blast"
+msgstr "Ľadový výbuch"
+
+#: ../powers/powers.txt:144
+msgid "Slow nearby enemies for 5 seconds"
+msgstr "Spomalí blízkych nepriateľov na 5 sekúnd"
+
+#: ../powers/powers.txt:164
+msgid "Shoot (enemy)"
+msgstr "Strela (nepriateľ)"
+
+#: ../powers/powers.txt:187
+msgid "Drop a bomb that does 5 damage when it explodes."
+msgstr "Položí bombu, ktorá po výbuchu spôsobí 5 bodov zranenia."
+
+#: ../powers/powers.txt:196
+msgid "Explode (npc)"
+msgstr "Výbuch (npc)"
+
+#: ../powers/powers.txt:199
+msgid "Damages nearby enemies"
+msgstr "Zraní blízkych nepriateľov"
+
+#: ../powers/powers.txt:217
+msgid "flametrap (trap)"
+msgstr "Ohnivá pasca (pasca)"
+
+#: ../powers/powers.txt:240
+msgid "Plant a 3-second bomb."
+msgstr "Umiestni 3-sekundovú bombu"
+
+#: ../powers/powers.txt:249
+msgid "Holy Sword"
+msgstr "Svätý meč"
+
+#: ../powers/powers.txt:252
+msgid "Deal two damage to all enemies on-screen"
+msgstr "Spôsobí dva body zranenia všetkým nepriateľom na obrazovke"
+
+#: ../powers/powers.txt:268
+msgid "Summon Bat (enemy)"
+msgstr "Vyvolanie netopiera (nepriateľ)"
+
+#: ../powers/powers.txt:306
+msgid "Fire Bomb (enemy)"
+msgstr "Ohnivá bomba (nepriateľ)"
+
+#: ../powers/powers.txt:309
+msgid "Drop a bomb that does 10 damage when it explodes to the whole screen."
+msgstr ""
+"Položí bombu, ktorá po výbuchu spôsobí 10 bodov zranenia všetkému na "
+"obrazovke."
+
+#: ../powers/powers.txt:317
+msgid "Firebomb Explosion (enemy)"
+msgstr "Výbuch ohnivej bomby (nepriateľ)"
+
+#: ../powers/powers.txt:338
+msgid "Explode (enemy)"
+msgstr "Výbuch (nepriateľ)"
+
+#: ../powers/powers.txt:359
+msgid "Tick"
+msgstr ""
+
+#: ../powers/powers.txt:368
+msgid "Tick (proximity)"
+msgstr ""
+
+#: ../powers/powers.txt:377
+msgid "Enemy Beacon"
+msgstr "Privolanie nepriateľov"
+
+#: ../powers/powers.txt:378
+msgid "Bring other enemies into the fight with a dummy attack"
+msgstr "Nepravý útok na privolanie ostatných nepriateľov do boja"
+
+#: ../powers/powers.txt:390
+msgid "Disenchant"
+msgstr "Zvrátiť premenu"
+
+#: ../powers/powers.txt:395
+msgid "Transform back to human"
+msgstr "Premeníte sa naspäť na človeka"
+
+#: ../powers/powers.txt:400
+msgid "Fire Immunity"
+msgstr "Imunita voči ohňu"
+
+#: ../powers/powers.txt:424
+msgid "Transform into Bat"
+msgstr "Premena na netopiera"
+
+#: ../powers/powers.txt:429
+msgid "Turn into a bat"
+msgstr "Premení vás na netopiera"
+
+#: ../powers/powers.txt:434
+msgid "Transform into Snake"
+msgstr "Premena na hada"
+
+#: ../powers/powers.txt:439
+msgid "Turn into a spitting snake"
+msgstr "Premení vás na pľuvajúceho hada"
+
+#: ../powers/powers.txt:444
+msgid "Spit Acid"
+msgstr "Pľuť kyselinu"
+
+#: ../powers/powers.txt:466
+msgid "Spit Fire"
+msgstr "Pľuť oheň"
+
+#: ../powers/powers.txt:487
+msgid "Transform into Ghost"
+msgstr "Premena na ducha"
+
+#: ../powers/powers.txt:492
+msgid "Turn into a ghost"
+msgstr "Premení vás na ducha"
+
+#: ../powers/powers.txt:507
+msgid "Transform into Juggernaut"
+msgstr "Premena na molocha"
+
+#: ../powers/powers.txt:513
+msgid "Turn into a powerful knight for a short time"
+msgstr "Na krátku dobu vás premení na silného rytiera"
+
+#: ../powers/powers.txt:518
+msgid "Transform into Squirrel"
+msgstr "Premena na veveričku"
+
+#: ../powers/powers.txt:523
+msgid "Turn into a squirrel"
+msgstr "Premení vás na veveričku"
+
+#: ../engine/elements.txt:3
+msgid "Fire"
+msgstr "Oheň"
+
+#: ../engine/elements.txt:7
+msgid "Ice"
+msgstr "Ľad"
+
+#: ../engine/elements.txt:11
+msgid "Earth"
+msgstr "Zem"
+
+#: ../engine/elements.txt:15
+msgid "Wind"
+msgstr "Vietor"
+
+#: ../engine/classes.txt:2
+msgid "Adventurer"
+msgstr "Dobrodruh"
+
+#: ../engine/hero_options.txt:6
+msgid "Daphne"
+msgstr "Dafné"
+
+#: ../engine/titles.txt:2
+msgid "Therianthrope"
+msgstr ""
+
+#: ../engine/titles.txt:6
+msgid "Metamorph"
+msgstr ""
+
+#: ../engine/titles.txt:10
+msgid "Skinwalker"
+msgstr ""
+
+#: ../engine/titles.txt:14
+msgid "Animagus"
+msgstr ""
+
+#: ../engine/titles.txt:18
+msgid "Shapeshifter"
+msgstr ""
+
+#: ../engine/titles.txt:22
+msgid "Doppelganger"
+msgstr ""
+
+#: ../engine/titles.txt:26
+msgid "Chameleon"
+msgstr "Chameleón"
+
+#: ../engine/titles.txt:30
+msgid "Girl"
+msgstr "Dievča"
+
+#: ../engine/primary_stats.txt:3
+msgid "Physical"
+msgstr ""
+
+#: ../engine/primary_stats.txt:7
+msgid "Mental"
+msgstr ""
+
+#: ../enemies/archer.txt:1
+msgid "Cultist Archer"
+msgstr ""
+
+#: ../enemies/bat.txt:1
+msgid "Bat"
+msgstr "Netopier"
+
+#: ../enemies/beetle.txt:1
+msgid "Beetle"
+msgstr "Chrobák"
+
+#: ../enemies/caster.txt:1
+msgid "Cultist Mage"
+msgstr ""
+
+#: ../enemies/combat_dummy.txt:1
+msgid "Combat Dummy"
+msgstr "Bojová figurína"
+
+#: ../enemies/dshadow.txt:1
+msgid "Daphne's Shadow"
+msgstr "Tieň Dafné"
+
+#: ../enemies/firebat.txt:1
+msgid "Firebat"
+msgstr "Ohnivý netopier"
+
+#: ../enemies/firebomb.txt:1
+msgid "Fire Bomb"
+msgstr "Ohnivá bomba"
+
+#: ../enemies/fireskeleton.txt:1
+msgid "Fire Skeleton"
+msgstr "Ohnivý kostlivec"
+
+#: ../enemies/ghost.txt:1
+msgid "Ghost"
+msgstr "Duch"
+
+#: ../enemies/ghostbomb.txt:1
+msgid "Ghost Bomb"
+msgstr ""
+
+#: ../enemies/giantfireskeleton.txt:1
+msgid "Giant Fire Skeleton"
+msgstr "Veľký ohnivý kostlivec"
+
+#: ../enemies/giantghost.txt:1
+msgid "Giant Ghost"
+msgstr "Veľký duch"
+
+#: ../enemies/juggernautd.txt:1
+msgid "Juggernaut"
+msgstr "Moloch"
+
+#: ../enemies/knight.txt:1
+msgid "Cultist Knight"
+msgstr ""
+
+#: ../enemies/monk.txt:1
+msgid "Cultist Monk"
+msgstr ""
+
+#: ../enemies/rubysnake.txt:1
+msgid "Ruby Snake"
+msgstr "Rubínový had"
+
+#: ../enemies/skeleton.txt:1
+msgid "Skeleton"
+msgstr "Kostlivec"
+
+#: ../enemies/skeletonknight.txt:1
+msgid "Skeleton Knight"
+msgstr "Rytiersky kostlivec"
+
+#: ../enemies/skeletonmage.txt:1
+msgid "Skeleton Mage"
+msgstr "Čarodejnícky kostlivec"
+
+#: ../enemies/slime.txt:1
+msgid "Slime"
+msgstr "Sliz"
+
+#: ../enemies/snake.txt:1
+msgid "Snake"
+msgstr "Had"
+
+#: ../enemies/venombat.txt:1
+msgid "Venom Bat"
+msgstr "Jedovatý netopier"
+
+#: ../enemies/zalkaz.txt:1
+msgid "Zalkaz, Bane of Laurelia"
+msgstr "Zalkaz, skaza Laurelie"
+
+#: ../maps/barracks.txt:9
+msgid "Barracks"
+msgstr "Kasárne"
+
+#: ../maps/basement1.txt:9
+msgid "Secret Basement"
+msgstr "Tajná pivnica"
+
+#: ../maps/basement3.txt:9
+msgid "Secret Cavern"
+msgstr "Tajná jaskyňa"
+
+#: ../maps/basement3.txt:227
+msgid "Chest"
+msgstr "Truhlica"
+
+#: ../maps/basement4.txt:9
+msgid "Hidden Waterway"
+msgstr "Skrytá vodná cesta"
+
+#: ../maps/basement4.txt:203
+msgid "You found the switch key in a barrel!"
+msgstr "V sude ste našli prepínací kľúč!"
+
+#: ../maps/basement4.txt:206
+msgid "Suspicious Barrel"
+msgstr "Podozrivý sud"
+
+#: ../maps/basement4.txt:229
+msgid "An empty chest!"
+msgstr "Truhlica je prázdna!"
+
+#: ../maps/basement5.txt:203
+msgid "There's a key-shaped hole in this rock."
+msgstr "V kameni je otvor v tvare kľúča."
+
+#: ../maps/basement5.txt:205
+msgid "Strange Rock"
+msgstr "Zvláštny kameň"
+
+#: ../maps/basement6.txt:217
+msgid "\"Leftover material from blasting is unstable due to cave-ins!  Do not approach!\""
+msgstr ""
+"„Zvyšný materiál z trhacích prác je v dôsledku závalov nestabilný!  "
+"Nepribližovať sa!“"
+
+#: ../maps/basement6.txt:219
+msgid "Sign"
+msgstr "Značka"
+
+#: ../maps/basement7.txt:9
+msgid "Sewer"
+msgstr "Kanál"
+
+#: ../maps/basement7.txt:203
+msgid "FENCES ARE FOR YOUR PROTECTION.  DO NOT OPEN GATES."
+msgstr "PLOTY SÚ PRE VAŠU OCHRANU.  NEOTVÁRAJTE BRÁNY."
+
+#: ../maps/basement7.txt:205
+msgid "Signpost"
+msgstr "Smerová značka"
+
+#: ../maps/basement7.txt:213
+msgid "There is a strange groove in this rock"
+msgstr "V tomto kameni je zvláštna vyhĺbenina"
+
+#: ../maps/basement8.txt:9
+msgid "Sanctuary"
+msgstr "Útočisko"
+
+#: ../maps/basement8.txt:218
+msgid "You must defeat your shadow!"
+msgstr "Musíte poraziť svoj tieň!"
+
+#: ../maps/basement8.txt:222
+msgid "Fountain"
+msgstr "Fontána"
+
+#: ../maps/basementa.txt:215
+msgid "The switch key fits into the hole in this rock!"
+msgstr "Prepínací kľúč pasuje do otvoru v tomto kameni!"
+
+#: ../maps/basementa.txt:233
+msgid "It has been a long journey from Castle Hestian, but we have finally found a safe glade away from prying eyes.  We shall found our village here, among the laurel trees."
+msgstr ""
+
+#: ../maps/basementa.txt:235
+msgid "Dusty Diary"
+msgstr "Zaprášený denník"
+
+#: ../maps/basementa.txt:243
+msgid "It has been a hundred years now since King Hestian's decree to burn all the \"skinchangers.\"  We must go into hiding or he'll destroy us all."
+msgstr ""
+
+#: ../maps/basementa.txt:245
+msgid "Moldy Diary"
+msgstr "Plesnivý denník"
+
+#: ../maps/basementa.txt:253
+msgid "King Hestian will not let us live in the open unless we share with him the secret of immortality.  If only we actually held that secret, as he believes!"
+msgstr ""
+
+#: ../maps/basementa.txt:255
+msgid "Yellowed Diary"
+msgstr "Zažltnutý denník"
+
+#: ../maps/basementb.txt:9
+msgid "Underground Lake"
+msgstr "Podzemné jazero"
+
+#: ../maps/basementb.txt:212
+msgid "Ambushed!"
+msgstr "Prepad!"
+
+#: ../maps/castle1.txt:10
+msgid "Castle Entry"
+msgstr "Vchod do hradu"
+
+#: ../maps/castle2.txt:9
+msgid "Castle Atrium"
+msgstr "Átrium hradu"
+
+#: ../maps/castle3.txt:9
+msgid "Castle Hall"
+msgstr ""
+
+#: ../maps/castle4.txt:9
+msgid "Castle Basement"
+msgstr "Suterén hradu"
+
+#: ../maps/castle5.txt:251
+msgid "Violent bombs ahead!"
+msgstr "Pred vami sú silné bomby!"
+
+#: ../maps/castle5.txt:259
+msgid "Destroy them from afar to defuse them!"
+msgstr "Zneškodnite ich útokom z diaľky!"
+
+#: ../maps/castle6.txt:9
+msgid "Castle Balcony"
+msgstr "Balkón hradu"
+
+#: ../maps/castle6.txt:212
+msgid "TRAPPED!"
+msgstr "PASCA!"
+
+#: ../maps/castlea.txt:9
+msgid "Castle Ballroom"
+msgstr "Tanečná sála hradu"
+
+#: ../maps/castleb.txt:9
+msgid "Castle Sewer"
+msgstr "Hradná stoka"
+
+#: ../maps/castlepath.txt:9
+msgid "Castle Path"
+msgstr "Cesta k hradu"
+
+#: ../maps/cavern.txt:9
+msgid "Cavern"
+msgstr "Jaskyňa"
+
+#: ../maps/cavern.txt:441
+msgid "Drag to actionbar to use."
+msgstr ""
+
+#: ../maps/cavern.txt:499
+msgid "Carrots"
+msgstr "Mrvky"
+
+#: ../maps/cavern.txt:536
+msgid "Unmarked Grave"
+msgstr "Neoznačený hrob"
+
+#: ../maps/church.txt:9
+msgid "Church"
+msgstr "Kostol"
+
+#: ../maps/daphneshouse.txt:9
+msgid "Daphne's House"
+msgstr "Dom Dafné"
+
+#: ../maps/eldershouse.txt:9
+msgid "Elder's House"
+msgstr "Dom staršinu"
+
+#: ../maps/eldershouse.txt:123
+msgid "A secret passage!"
+msgstr "Tajná chodba!"
+
+#: ../maps/glade.txt:9
+msgid "Glade"
+msgstr "Čistina"
+
+#: ../maps/granary.txt:9
+msgid "Granary"
+msgstr "Sýpka"
+
+#: ../maps/inn1st.txt:9
+msgid "Inn, 1st Floor"
+msgstr "Hostinec, 1. podlažie"
+
+#: ../maps/inn2nd.txt:9
+msgid "Inn, 2nd Floor"
+msgstr "Hostinec, 2. podlažie"
+
+#: ../maps/laurelia.txt:10
+msgid "Laurelia"
+msgstr "Laurelia"
+
+#: ../maps/laurelia.txt:841
+msgid "You've fallen in a hole!"
+msgstr "Spadli ste do diery!"
+
+#: ../maps/laurelia.txt:858
+msgid "You should travel east first. Remember to speak with the Elder when you return."
+msgstr ""
+"Najprv sa vydajte na východ. Keď sa vrátite, nezabudnite hovoriť so "
+"staršinom."
+
+#: ../maps/library.txt:9
+msgid "Library"
+msgstr "Knižnica"
+
+#: ../maps/library.txt:96
+msgid "p.32: \"Ghosts, being incorporeal, are nearly immune to heat and fire.\""
+msgstr ""
+"s.32: „Duchovia, nehmotné bytosti, sú takmer úplne odolní voči teplu a ohňu.“"
+
+#: ../maps/library.txt:98
+msgid "On Ghosts"
+msgstr "O duchoch"
+
+#: ../maps/library.txt:106
+msgid "p.1:  \"This small town is a seeming backwater.  However, nearly every one of it's citizens has the ability to polymorph into another creature.\"  Better put it back on the top shelf where the tourists can't find it."
+msgstr ""
+"s.1.  „Toto mestečko sa na prvý pohľad javí ako zapadákov.  Takmer každý "
+"jeho obyvateľ však má schopnosť premeniť sa na nejaké stvorenie.“  Radšej to "
+"položím naspäť na hornú poličku, kde to nenájdu turisti."
+
+#: ../maps/library.txt:108
+msgid "History of Laurelia"
+msgstr "História Laurelie"
+
+#: ../maps/library.txt:116
+msgid "p. 967: \"Zalkas was constantly beset by paladins seeking to destroy them; he would eliminate each one by blotting out the light with flocks of bats.\""
+msgstr ""
+
+#: ../maps/library.txt:118
+msgid "Deomonology"
+msgstr "Démonológia"
+
+#: ../maps/market.txt:9
+msgid "Market"
+msgstr "Obchod"
+
+#: ../maps/marketbasement.txt:9
+msgid "Market Basement"
+msgstr "Pivnica obchodu"
+
+#: ../maps/mountainpath.txt:8
+msgid "Mountain Path"
+msgstr "Horská cesta"
+
+#: ../maps/smallhouse.txt:9
+msgid "Small House"
+msgstr "Domček"
+
+#: ../maps/smithy.txt:9
+msgid "Smithy"
+msgstr "Vyhňa"
+
+#: ../maps/snow1.txt:9
+msgid "Snow Mountain"
+msgstr "Snežná hora"
+
+#: ../maps/snow1.txt:189
+msgid "You need the Juggernaut Talisman to proceed!"
+msgstr "Nemôžete pokračovať bez talizmana molocha!"
+
+#: ../maps/snow4.txt:9
+msgid "Mountain Cave"
+msgstr "Horská jaskyňa"
+
+#: ../maps/snow6.txt:198
+msgid "Bring ssssacrifices for Zalkaz here!"
+msgstr "Tu prináššššajte Zalkazovi obete!"
+
+#: ../maps/snow7.txt:9
+msgid "Zalkaz's Lair"
+msgstr "Zalkazov brloh"
+
+#: ../maps/snow7.txt:238
+msgid "You're home!"
+msgstr "Ste doma!"
+
+#: ../maps/snow7.txt:255
+msgid "Prepare to die!"
+msgstr "Priprav sa zomrieť!"
+
+#: ../maps/snowa.txt:9
+msgid "Mountain Mine"
+msgstr "Horská baňa"
+
+#: ../maps/snowa.txt:184
+msgid "Empty..."
+msgstr "Prázdna..."
+
+#: ../maps/snowb.txt:9
+msgid "Mountain Shop"
+msgstr "Horský obchod"
+
+#: ../maps/snowc.txt:9
+msgid "Safe Room"
+msgstr "Bezpečná miestnosť"
+
+#: ../maps/tavern.txt:9
+msgid "Tavern"
+msgstr "Krčma"
+
+#: ../maps/volcano1.txt:9
+msgid "Volcano"
+msgstr "Sopka"
+
+#: ../maps/volcano1.txt:190
+msgid "Locked Gate"
+msgstr "Zamknutá brána"
+
+#: ../maps/volcano2.txt:175
+msgid "Anvil"
+msgstr "Nákova"
+
+#: ../maps/volcano3.txt:180
+msgid "There might be a way to cross that small gap, but it looks deadly."
+msgstr ""
+
+#: ../maps/volcano3.txt:191
+msgid "Lava River"
+msgstr "Lávová rieka"
+
+#: ../maps/volcano4.txt:189
+msgid "Someone has scrawled here: \"The fire skeleton's bombs killed my friend instantly!  If I wasn't a ghost already, I'd have died, too.\""
+msgstr ""
+
+#: ../maps/volcano4.txt:192
+msgid "Altar"
+msgstr "Oltár"
+
+#: ../quests/basement.txt:4
+msgid "Explore the strange basement you've found underneath the Elder's house."
+msgstr "Preskúmajte podivnú pivnicu, ktorú ste našli pod domom staršinu."
+
+#: ../quests/basement.txt:9
+msgid "You've found a strange key, but what on earth could it be used for?"
+msgstr "Našli ste zvláštny kľúč, ale kde ho len možno použiť?"
+
+#: ../quests/basement.txt:14
+msgid "Speak with the ghost in the basement."
+msgstr "Hovorte s duchom v pivnici."
+
+#: ../quests/downahole.txt:3
+msgid "Explore the village of Laurelia"
+msgstr "Preskúmajte dedinu Laurelia"
+
+#: ../quests/downahole.txt:8
+msgid "Find the Fairy Flower north of town, over the river."
+msgstr "Nájdite vílí kvet za riekou na severe mesta."
+
+#: ../quests/downahole.txt:13
+msgid "You found the Fairy Flower!  Now to bring it home to the Elder, and to explain what you saw in the cave."
+msgstr ""
+
+#: ../quests/juggernaut.txt:4
+msgid "You have been tasked with finding the Juggernaut Talisman.  Go east to find the first half in the volcano."
+msgstr ""
+"Dostali ste za úlohu nájsť talizman molocha.  Vydajte sa na východ k sopke, "
+"kde nájdete prvú polovicu."
+
+#: ../quests/juggernaut.txt:9
+msgid "You have found the first half of the Juggernaut Talisman.  Go to the volcano to the west to find the second half."
+msgstr ""
+"Našli ste prvú polovicu talizmanu molocha.  Vydajte sa k sopke na západe, "
+"kde nájdete druhú polovicu."
+
+#: ../quests/juggernaut.txt:14
+msgid "You have found the 2nd half of the Juggernaut Talisman.  Bring it to the village elder to have him combine the halves."
+msgstr ""
+"Našli ste druhú polovicu talizmanu molocha.  Doneste ju staršinovi dediny, "
+"aby mohol spojiť obe polovice dohromady."
+
+#: ../quests/snowmountain.txt:4
+msgid "Scale Snow Mountain, south of Laurelia, to put an end to Zalkaz once and for all."
+msgstr ""
+"Vylezte na snežnú horu južne od Laurelie a raz navždy sa zbavte Zalkaza."
+
+#: ../quests/snowmountain.txt:8
+msgid "Leave Zalkaz's Lair, and return to Laurelia to talk to the townsfolk.  Congratulations, you've beaten Laurelia's Polymorphable Citizens!"
+msgstr ""
+"Opustite Zalkazov brloh a vráťte sa do Laurelie, kde sa môžete porozprávať s "
+"obyvateľmi.  Gratulujeme, prešli ste hru Polymorfní obyvatelia Laurelie!"
+
+#: ../npcs/apprentice.txt:1
+msgid "Wot the Apprentice"
+msgstr "Učeň Wot"
+
+#: ../npcs/apprentice.txt:8
+msgid "Good Morning"
+msgstr "Dobré ráno"
+
+#: ../npcs/apprentice.txt:9
+msgid "Good morning Daphne."
+msgstr "Dobré ráno, Dafné."
+
+#: ../npcs/apprentice.txt:10
+msgid "Good morning Wot!  Clara working you hard?"
+msgstr "Dobré ráno, Wot!  Klára ti dáva poriadne zabrať?"
+
+#: ../npcs/apprentice.txt:11
+msgid "It's miserable.  I've forged three swords and two helms this morning, but she says it's still not enough."
+msgstr ""
+"Je to hrozné.  Dnes ráno som ukoval tri meče a dve helmy a stále jej to "
+"nestačí."
+
+#: ../npcs/apprentice.txt:12
+msgid "Keep at it!  One of these days, maybe you'll be as good a smith as she is!"
+msgstr "Len tak ďalej!  Jedného dňa možno budeš rovnako dobrý kováč ako ona!"
+
+#: ../npcs/apprentice.txt:13
+msgid "I hope so, but I suppose I can always join the King's knights if this doesn't pan out."
+msgstr "To dúfam, no ak by to nevyšlo, stále mám šancu u kráľových rytierov."
+
+#: ../npcs/apprentice.txt:14
+msgid "Oh, don't be silly - you couldn't leave this village.  I've seen how Waka looks at you!"
+msgstr ""
+"Ale neblázni - nemôžeš predsa odísť z dediny.  Videla som, ako na teba "
+"zazerá Waka!"
+
+#: ../npcs/apprentice.txt:15
+msgid "Wait, what?  She's never said anything!"
+msgstr "Počkaj, čo?  Nič mi nepovedala!"
+
+#: ../npcs/apprentice.txt:16
+msgid "Oh, I see her staring."
+msgstr "Veď vidím, že z teba nevie spustiť oči."
+
+#: ../npcs/apprentice.txt:17
+msgid "*Wot blushes*"
+msgstr "*Wot sa začervená*"
+
+#: ../npcs/apprentice.txt:18
+msgid "See you around!"
+msgstr "Maj sa pekne!"
+
+#: ../npcs/barman.txt:1
+msgid "Barman Insel"
+msgstr "Barman Insel"
+
+#: ../npcs/barman.txt:8
+msgid "Chat"
+msgstr "Hovoriť"
+
+#: ../npcs/barman.txt:9
+msgid "Not too many people in the tavern."
+msgstr "Je tu akosi prázdno."
+
+#: ../npcs/barman.txt:10
+msgid "It's midmorning.  Gives me time to get the steins clean."
+msgstr "Tak to dopoludnia býva.  Aspoň mám čas vyčistiť škvrny."
+
+#: ../npcs/basementghost.txt:1
+msgid "Balthasar"
+msgstr "Baltazár"
+
+#: ../npcs/basementghost.txt:8
+msgid "Death of the Shade"
+msgstr "Smrť tieňa"
+
+#: ../npcs/basementghost.txt:10
+msgid "Ah, I can rest now...  if you wish, read the books beside me for history of these ruins..."
+msgstr ""
+"Ach, teraz už môžem odpočívať... Ak sa chceš dozvedieť o dejinách týchto "
+"zrúcanín, prečítaj si knihy vedľa mňa..."
+
+#: ../npcs/basementghost.txt:13
+msgid "The Shade"
+msgstr "Tieň"
+
+#: ../npcs/basementghost.txt:15
+msgid "I cannot rest!  Look into the fountain...  and defeat your shadow there!"
+msgstr "Nemôžem odpočívať!  Nazri do fontány... a poraz tam svoj tieň!"
+
+#: ../npcs/basementghost.txt:25
+msgid "These ruins have been here a long time, before the founding of Laurelia."
+msgstr ""
+
+#: ../npcs/basementghost.txt:26
+msgid "During the dark times when we the Kingdom was ruled by King Hestian, we fled here, and built a city in the light."
+msgstr ""
+
+#: ../npcs/basementghost.txt:27
+msgid "Some people, including the sorcerer Zalkaz, created warrens under the city, in case the mad King's soldiers found us."
+msgstr ""
+
+#: ../npcs/basementghost.txt:28
+msgid "Zalkaz conducted experiments in the darkness while the other Laurelians remained in the light."
+msgstr ""
+
+#: ../npcs/basementghost.txt:29
+msgid "After the mad King died, he sent guards to root our Zalkaz, with the assistance of the Laurelian populace."
+msgstr ""
+
+#: ../npcs/basementghost.txt:30
+msgid "The skeletons you see down here are the remainder of his frightening experiments."
+msgstr ""
+
+#: ../npcs/basementghost.txt:31
+msgid "Take this talisman, which has a piece of your shadow bound to it.  You should now be able to remain humanoid while incorporeal."
+msgstr ""
+
+#: ../npcs/blacksmith.txt:1
+msgid "Clara the Blacksmith"
+msgstr "Kováčka Klára"
+
+#: ../npcs/blacksmith.txt:10
+msgid "Weapons"
+msgstr "Zbrane"
+
+#: ../npcs/blacksmith.txt:12
+msgid "Ah, so you need a better sword to beat the Evil One?"
+msgstr "Ach, potrebuješ lepší meč, aby si mohla poraziť toho zloducha?"
+
+#: ../npcs/blacksmith.txt:13
+msgid "I've got this one that I made last night, but I'm feeling pretty attached to it."
+msgstr "Tento som ukovala včera večer, ale celkom som k nemu pripútaná."
+
+#: ../npcs/blacksmith.txt:14
+msgid "It'll cost ya 100 gold.  Sound like a deal?"
+msgstr "Bude ťa to stáť 100 zlatých.  Dohodnuté?"
+
+#: ../npcs/blacksmith.txt:17
+msgid "The Hero's Sword"
+msgstr "Hrdinov meč"
+
+#: ../npcs/blacksmith.txt:19
+msgid "The tag on this sword says \"The sword of the ancient hero.\""
+msgstr "Na meči je napísané: „Meč dávneho hrdinu“."
+
+#: ../npcs/blacksmith.txt:20
+msgid "It is!"
+msgstr "Je to tak!"
+
+#: ../npcs/blacksmith.txt:21
+msgid "Didn't you say you just finished forging it last night?"
+msgstr "Nevravela si, že si ho dokovala včera večer?"
+
+#: ../npcs/blacksmith.txt:22
+msgid "No!  Of course not!  It's the Ancient Hero's sword.  I just finished polishing it last night."
+msgstr ""
+"Nie!  Samozrejme, že nie!  Je to naozaj meč dávneho hrdinu.  Včera večer som "
+"ho len doleštila."
+
+#: ../npcs/blacksmith.txt:23
+msgid "You were going to try to sell it to the next nobleman who comes through town, weren't you?"
+msgstr ""
+"Chcela si ho skúsiť predať najbližšiemu šlachticovi, ktorý bude prechádzať "
+"mestom, všakže?"
+
+#: ../npcs/blacksmith.txt:24
+msgid "Could be."
+msgstr "Možno."
+
+#: ../npcs/blacksmith.txt:29
+msgid "Good morning!  I just finished some work on a new sword last night, and I'm showing it off to anyone who comes by."
+msgstr ""
+
+#: ../npcs/blacksmith.txt:32
+msgid "The End"
+msgstr "Koniec"
+
+#: ../npcs/blacksmith.txt:34
+msgid "Daphne, you've destroyed Zalkaz!  I'm proud of you for putting that sword to good use."
+msgstr ""
+"Dafné, ty si zničila Zalkaza!  Som na teba hrdá, že si našla pre ten meč "
+"dobré využitie."
+
+#: ../npcs/blacksmith.txt:35
+msgid "So that means I'll get a refund?  Come on, this is like free advertising."
+msgstr ""
+"To znamená, že dostanem svoje peniaze späť?  No tak, prakticky ti robím "
+"zadarmo reklamu."
+
+#: ../npcs/blacksmith.txt:36
+msgid "No way!  But I'll tell you what, I'll cook you dinner tonight."
+msgstr "Ani náhodou!  Ale mám návrh – dnes ti uvarím večeru."
+
+#: ../npcs/brewmaster.txt:1
+msgid "Brewmistress Waka"
+msgstr "Pivovarníčka Waka"
+
+#: ../npcs/brewmaster.txt:9
+msgid "Good evening!  Have you come to try one of my latest creations?"
+msgstr "Dobrý večer!  Prišla si ochutnať jeden z mojich najnovších výtvorov?"
+
+#: ../npcs/brewmaster.txt:10
+msgid "I promise tonight's oatmeal stout is the best batch I've ever made."
+msgstr ""
+"Sľubujem, že dnešná várka ovseného piva je najlepšia, akú som kedy uvarila."
+
+#: ../npcs/brewmaster.txt:15
+msgid "Let's raise a glass to your good health!"
+msgstr "Pripime si na tvoje zdravie!"
+
+#: ../npcs/captain.txt:1
+msgid "Captain Tam"
+msgstr "Kapitán Tam"
+
+#: ../npcs/captain.txt:9
+msgid "Good afternoon."
+msgstr "Dobré odpoludnie."
+
+#: ../npcs/captain.txt:10
+msgid "Slow day?"
+msgstr "Pomalý deň?"
+
+#: ../npcs/captain.txt:11
+msgid "Very slow...  that new recruit keeps getting hit by the combat dummy, though, so that's good for a laugh."
+msgstr ""
+"Veľmi pomalý...  Na druhej strane toho zelenáča ustavične zasahuje bojová "
+"figurína, takže aspoň sa dobre zasmejem."
+
+#: ../npcs/cleric.txt:1
+msgid "Altea, Keeper of the Faith"
+msgstr "Altea, strážkyňa viery"
+
+#: ../npcs/cleric.txt:8
+msgid "Restore"
+msgstr "Obnova"
+
+#: ../npcs/cleric.txt:10
+msgid "Welcome to the Church!"
+msgstr "Vitaj v kostole!"
+
+#: ../npcs/cleric.txt:11
+msgid "Come to the Church whenever you are wounded, and I shall heal you."
+msgstr "Vždy, keď sa zraníš, príď ku kostolu a ja ťa vyliečim."
+
+#: ../npcs/daughter.txt:1
+msgid "Shandra's Daughter, Kelsey"
+msgstr "Šandrina dcéra Kelsey"
+
+#: ../npcs/daughter.txt:9
+msgid "Hey Daphne, out and about today?"
+msgstr "Ahoj, Dafné, dneš už si vonku?"
+
+#: ../npcs/daughter.txt:10
+msgid "It's beautiful, plus I have a couple errands to do for Elder Thomas.  Will you be coming to my sixteenth birthday ceremony tomorrow?"
+msgstr ""
+"Je krásne a k tomu musím vybaviť nejaké veci pre staršinu Tomáša.  Prídeš "
+"zajtra na oslavu mojich šestnástych narodenín?"
+
+#: ../npcs/daughter.txt:11
+msgid "Of course!  There's no place else in the village I'd rather."
+msgstr "Samozrejme!  Nie je miesto v dedine, kam by som šla radšej."
+
+#: ../npcs/daughter.txt:12
+msgid "I hope it's half as awesome as yours was last month."
+msgstr "Dúfam, že bude aspoň z polovice taká úžasná ako tá tvoja minulý mesiac."
+
+#: ../npcs/daughter.txt:13
+msgid "I'm sure it will be.  Come back tonight for dinner, too!"
+msgstr "Určite bude.  Inak vráť sa dnes na večeru!"
+
+#: ../npcs/daughter.txt:14
+msgid "Mmm, more pulled pork?  Excellent!"
+msgstr "Mmm, ďalšie bravčové pliecko?  Skvelé!"
+
+#: ../npcs/deacon.txt:1
+msgid "Deacon Ray"
+msgstr "Diakon Ray"
+
+#: ../npcs/deacon.txt:9
+msgid "Hi Daphne, it's bee a while.  You don't see anything weird around here, do you?"
+msgstr ""
+"Ahoj, Dafné, nevideli sme sa už dlhšiu dobu.  Nevšimla si si tu nič podivné, "
+"však?"
+
+#: ../npcs/deacon.txt:10
+msgid "Should I?"
+msgstr "Mala by som?"
+
+#: ../npcs/deacon.txt:11
+msgid "No, uh, no.  It's just that there's been weird sounds from the graveyard at night lately."
+msgstr ""
+"Nie, ehm, nie.  Ja len že sa poslednú dobu v noci ozývajú z cintorína "
+"podivné zvuky."
+
+#: ../npcs/deacon.txt:12
+msgid "Maybe you shouldn't drink coffee before bed."
+msgstr "Možno by si pred spaním nemal piť kávu."
+
+#: ../npcs/deacon.txt:13
+msgid "Yeah, that's it, I'll lay off the coffee."
+msgstr "Áno, to bude ono, prestanem piť kávu."
+
+#: ../npcs/elder.txt:1
+msgid "Elder Thomas"
+msgstr "Staršina Tomáš"
+
+#: ../npcs/elder.txt:8
+msgid "Zalkaz"
+msgstr "Zalkaz"
+
+#: ../npcs/elder.txt:11
+msgid "Daphne, you must save the world from Zalkaz!"
+msgstr "Dafné, musíš zachrániť svet pred Zalkazom!"
+
+#: ../npcs/elder.txt:14
+msgid "The Juggernaut Talisman"
+msgstr "Talizman molocha"
+
+#: ../npcs/elder.txt:18
+msgid "You must find the Juggernaut Talisman!"
+msgstr "Musíš nájsť talizman molocha!"
+
+#: ../npcs/elder.txt:29
+msgid "Thank you for finding both halves of the Talisman!"
+msgstr "Ďakujem ti, že si našla obe polovice talizmanu!"
+
+#: ../npcs/elder.txt:30
+msgid "Now I will make them whole again."
+msgstr "Teraz ich spojím dokopy."
+
+#: ../npcs/elder.txt:31
+msgid "So, what do I do now with this thing?"
+msgstr "A čo mám s tým teraz robiť?"
+
+#: ../npcs/elder.txt:32
+msgid "Go south to the Snow Mountain.  The ancient texts say that is where Zalkaz makes his lair."
+msgstr ""
+"Choď na juh k snežnej hore.  Podľa prastarých textov práve tam brloží Zalkaz."
+
+#: ../npcs/elder.txt:33
+msgid "Does he have a sled to come back down on?"
+msgstr "Ako zíde späť dolu, na sánkach?"
+
+#: ../npcs/elder.txt:34
+msgid "Of course not!  He's a bat!  Be prepared for anything."
+msgstr "Jasné, že nie!  Je netopier!  Buď pripravená na všetko."
+
+#: ../npcs/elder.txt:42
+msgid "You've found the first half of the Talisman, wonderful!  The second half is in a ruined castle to the west."
+msgstr ""
+"Výborne, našla si prvú polovicu talizmanu!  Druhú polovicu ukrýva zrúcanina "
+"hradu na západe."
+
+#: ../npcs/elder.txt:43
+msgid "You may also want to speak with Robin the Hunter on your way over.  I told him to give you some of his equipment."
+msgstr ""
+
+#: ../npcs/elder.txt:52
+msgid "Ah, the Fairy Flower!  Did you run into any trouble in the forest?"
+msgstr ""
+
+#: ../npcs/elder.txt:53
+msgid "Yes, I did.  I suppose I ought to thank you for the sword."
+msgstr ""
+
+#: ../npcs/elder.txt:54
+msgid "Snarks?  Grumpkins?"
+msgstr ""
+
+#: ../npcs/elder.txt:55
+msgid "No, I just, you know, unleashed an ancient evil.  Thanks a bunch for the warning."
+msgstr ""
+
+#: ../npcs/elder.txt:56
+msgid "Ah, I hoped that I would never have to tell you.  You see, I never told you about your parents.  You weren't actually left on my doorstep - the house you live in was theirs, before they left to seal away the ancient evil Zalkaz."
+msgstr ""
+
+#: ../npcs/elder.txt:57
+msgid "When in the heck were you planning on letting me know the truth!?"
+msgstr ""
+
+#: ../npcs/elder.txt:58
+msgid "Tomorrow, after your birthday party, I promise!  They died nobly, but now, it falls to you to finish their work."
+msgstr ""
+
+#: ../npcs/elder.txt:59
+msgid "You must find what they never could: both halves of the Juggernaut Talisman.  With the Talisman, you can seal away the Ancient Evil forever!"
+msgstr ""
+
+#: ../npcs/elder.txt:60
+msgid "Go east, and use your bat talisman to fly over the ruined bridge, and seek the first half of the Juggernaut Talisman in the volcano."
+msgstr ""
+
+#: ../npcs/elder.txt:63
+msgid "The Fairy Flower"
+msgstr "Vílí kvet"
+
+#: ../npcs/elder.txt:66
+msgid "Have you found the Fairy Flower yet?"
+msgstr "Už si našla vílí kvet?"
+
+#: ../npcs/elder.txt:72
+msgid "Ah, Daphne!  It's good to see you this morning.  You turn sixteen tomorrow, but it seems like just yesterday that I found you in a basket at my door."
+msgstr ""
+
+#: ../npcs/elder.txt:73
+msgid "Sixteen long years of doing pointless chores for you, Thomas."
+msgstr ""
+
+#: ../npcs/elder.txt:74
+msgid "Come now, you wound an old man!  Tomorrow you shall be released from my endless tasks, but today, I need you to do one more."
+msgstr ""
+
+#: ../npcs/elder.txt:75
+msgid "Joy of joys.  Where are you sending me today?"
+msgstr ""
+
+#: ../npcs/elder.txt:76
+msgid "I need you to find the Fairy Flower in the forests.  It's the last ingredient I need to create the wreath to hang in your new home."
+msgstr ""
+
+#: ../npcs/elder.txt:77
+msgid "A housewarming present I have to fetch myself?  Awww, you shouldn't have."
+msgstr ""
+
+#: ../npcs/elder.txt:78
+msgid "Ha!  You're my girl.  The Fairy Flower is found north of town, across the river."
+msgstr ""
+
+#: ../npcs/elder.txt:83
+msgid "I know your parents will rest much better knowing that their work is finished."
+msgstr ""
+
+#: ../npcs/elder.txt:84
+msgid "May they rest in peace...  Thank you, Thomas."
+msgstr ""
+
+#: ../npcs/elder.txt:85
+msgid "Be wary, though.  Zalkaz is but one of the many evils who threaten our world.  I hope that someday you can venture beyond Laurelia, where the world may have use of your sword once more."
+msgstr ""
+
+#: ../npcs/elder.txt:86
+msgid "Oh great, just what I always wanted...  more bats and snakes to kill."
+msgstr ""
+
+#: ../npcs/eldershade.txt:1
+msgid "Shade of Elder Thomas"
+msgstr "Tieň staršinu Tomáša"
+
+#: ../npcs/eldershade.txt:9
+msgid "Daphne, I'm projecting to you via telepathy!"
+msgstr "Dafné, premietam sa ti telepaticky!"
+
+#: ../npcs/eldershade.txt:10
+msgid "I was reading my brother's ancient scrolls, and discovered that Zalkaz has the power to summon hordes of bats."
+msgstr ""
+"Čítal som prastaré zvitky môjho brata a dozvedel som sa, že Zalkaz má "
+"schopnosť vyvolávať kolónie netopierov."
+
+#: ../npcs/eldershade.txt:11
+msgid "Do not face him without polymorphing into a juggernaut first!"
+msgstr "Prv ako sa mu postavíš, nezabudni sa premeniť na molocha!"
+
+#: ../npcs/eldershade.txt:12
+msgid "Avoid him when he summons the bats, and then use your Holy Sword power to knock them all out in one swing of your sword!"
+msgstr ""
+"Keď vyvolá netopiere, vyhýbaj sa mu a potom za pomoci sily svätého meča "
+"jedným švihom všetky zabi."
+
+#: ../npcs/eldershade.txt:13
+msgid "I wish you luck."
+msgstr "Veľa šťastia."
+
+#: ../npcs/gardener.txt:1
+msgid "Howard the Gardener"
+msgstr "Záhradník Howard"
+
+#: ../npcs/gardener.txt:11
+msgid "Oh, I have some fresh carrots and watermelons, they're good for what ails you!"
+msgstr "Ach, mám v ponuke čerstvé mrvky a melóny.  Sú dobré na všetko, čo bolí!"
+
+#: ../npcs/gardener.txt:16
+msgid "Thanks for saving the village!"
+msgstr "Ďakujem, že si zachránila našu dedinu!"
+
+#: ../npcs/gardener.txt:17
+msgid "Now that we're so famous, maybe soon some more vendors will come to town."
+msgstr "Keď sme teraz takí známi, možno do mesta zavíta viac obchodníkov."
+
+#: ../npcs/ghost.txt:1
+msgid "Gaspar"
+msgstr "Gašpar"
+
+#: ../npcs/ghost.txt:8
+msgid "River of Flames"
+msgstr "Rieka plameňov"
+
+#: ../npcs/ghost.txt:9
+msgid "Be careful not to traverse the river of flames..."
+msgstr "Dávaj si pozor na rieku plameňov.  Neprechádzaj cez ňu..."
+
+#: ../npcs/ghost.txt:12
+msgid "Parents"
+msgstr "Rodičia"
+
+#: ../npcs/ghost.txt:16
+msgid "Hello, Daphne."
+msgstr "Ahoj, Dafné."
+
+#: ../npcs/ghost.txt:17
+msgid "How do you know my name?  Why aren't you attacking me?"
+msgstr "Odkiaľ vieš, ako sa volám?  Prečo na mňa neútočíš?"
+
+#: ../npcs/ghost.txt:18
+msgid "I knew your father long ago...  it was here he first battled Zalkaz, to try and seal him away.  Half the Juggernaut Talisman is in here."
+msgstr ""
+"Kedysi dávno som poznal tvojho otca...  Práve na tomto mieste prvýkrát "
+"bojoval so Zalkazom a pokúsil sa ho zapudiť.  Ukrýva sa tu polovica "
+"talizmanu molocha."
+
+#: ../npcs/ghost.txt:19
+msgid "There is now a lava ward preventing anyone from passing to the house..."
+msgstr "V ceste do domu teraz bráni láva..."
+
+#: ../npcs/ghost.txt:20
+msgid "I can get across, but alas, I am already dead.  Stay away from the lava unless you want to be dead, too."
+msgstr ""
+"Ja sa na druhú stranu dostanem, ale som už, bohužiaľ, mŕtvy.  Drž sa ďaleko "
+"od tej lávy, pokiaľ nechceš skončiť ako ja."
+
+#: ../npcs/ghost.txt:21
+msgid "I think I learned not to touch hot objects when I was three, thanks for the tip."
+msgstr ""
+"Vďaka za radu, ale to, že sa nemám dotýkať horúcich predmetov, som sa "
+"naučila, keď som mala tri roky."
+
+#: ../npcs/gravestone.txt:1
+msgid "Ancient Tombstone"
+msgstr "Prastarý náhrobok"
+
+#: ../npcs/gravestone.txt:8
+msgid "Examine Tombstone"
+msgstr "Preskúmať náhrobok"
+
+#: ../npcs/gravestone.txt:11
+msgid "As you gaze upon the tombstone, you hear a voice coming from the walls."
+msgstr ""
+"Počas toho, ako ste hľadeli na náhrobok, začuli ste hlas vychádzajúci zo "
+"stien."
+
+#: ../npcs/gravestone.txt:12
+msgid "I knew it was just a matter of time until someone stumbled upon my tomb!"
+msgstr "Vedel som, že je len otázkou času, kedy niekto narazí na moju hrobku!"
+
+#: ../npcs/gravestone.txt:13
+msgid "But never in the wildest dreams did I believe it would be the daughter of my captors!"
+msgstr ""
+"Ale ani v najdivokejších snoch by som neveril, že to bude dcéra mojich "
+"únoscov!"
+
+#: ../npcs/gravestone.txt:14
+msgid "What?  Who are you?  Where are you?"
+msgstr "Čo?  Kto si?  Kde si?"
+
+#: ../npcs/gravestone.txt:15
+msgid "I am Zalkaz, the Destroyer of Worlds!  When you approached my tombstone, your life force set me free."
+msgstr ""
+
+#: ../npcs/gravestone.txt:16
+msgid "Oh, and I'm so scared now.  You're just a voice, who cares?"
+msgstr "Ach, už sa celá trasiem od strachu.  Si len hlas, koho to zaujíma?"
+
+#: ../npcs/gravestone.txt:17
+msgid "Who cares?  The entire world shall tremble, for soon I shall have my body back, and I shall sweep through the lands with my fiery sword of rage!"
+msgstr ""
+
+#: ../npcs/gravestone.txt:18
+msgid "Great.  Why can't we just have a sewer like most modern cities?  Sheesh."
+msgstr ""
+
+#: ../npcs/gravestone.txt:19
+msgid "Now I just need to find my way out of here.  Is that a breeze coming from behind the tombstone?"
+msgstr ""
+
+#: ../npcs/gravestone.txt:37
+msgid "The tombstone stands quiet now."
+msgstr ""
+
+#: ../npcs/guard.txt:1
+msgid "King's knight"
+msgstr "Kráľov rytier"
+
+#: ../npcs/guard.txt:9
+msgid "Careful on the roads out there, strange things have been afoot in the kingdom lately."
+msgstr ""
+
+#: ../npcs/guard.txt:10
+msgid "The king sent me to help out if there any trouble, but honestly..."
+msgstr ""
+
+#: ../npcs/guard.txt:11
+msgid "I'm a little scared, and you have a sword.  Can't you take care of it?"
+msgstr ""
+
+#: ../npcs/guard.txt:16
+msgid "The King sends his highest regards, and hopes you'll come to the palace soon!"
+msgstr ""
+
+#: ../npcs/hunter.txt:1
+msgid "Robin the Hunter"
+msgstr "Lovec Robin"
+
+#: ../npcs/hunter.txt:9
+msgid "This bow is the best ever seen in this village."
+msgstr "Toto je najlepší luk, aký kedy táto dedina videla."
+
+#: ../npcs/hunter.txt:10
+msgid "What?  No, of course you can't have it!"
+msgstr "Čo?  Nie, samozrejme, že ho nemôžeš mať!"
+
+#: ../npcs/hunter.txt:13
+msgid "Armor"
+msgstr "Zbroj"
+
+#: ../npcs/hunter.txt:18
+msgid "I talked to the Elder...  he wants me to give you something."
+msgstr "Hovoril som so staršinom... Chce, aby som ti niečo dal."
+
+#: ../npcs/hunter.txt:19
+msgid "Your precious bow?  Yes, that should come in handy."
+msgstr "Tvoj drahý luk?  Hej, ten by sa mi zišiel."
+
+#: ../npcs/hunter.txt:20
+msgid "My bow??  You're nuts, I grew up with this thing!"
+msgstr "Môj luk?!  Zbláznila si sa? S tým som vyrastal!"
+
+#: ../npcs/hunter.txt:21
+msgid "What else do you have?"
+msgstr "Čo ešte máš?"
+
+#: ../npcs/hunter.txt:22
+msgid "Well, I have some old leather armor.  It should help."
+msgstr "No, mám nejakú starú koženú zbroj.  Mala by ti pomôcť."
+
+#: ../npcs/hunter.txt:23
+msgid "Ew, it smells like wet socks."
+msgstr "Fuj, smrdí ako mokré ponožky."
+
+#: ../npcs/hunter.txt:24
+msgid "No, that's just the smell o' tha woods!  Don't look a gift horse in the mouth!"
+msgstr "Nie, to je len pach lesa!  Darovanému koňovi sa na zuby nehľadí!"
+
+#: ../npcs/hunter.txt:29
+msgid "Ah, hey, you kill Zalkaz!  I would have done it myself, but you know how it is."
+msgstr ""
+"Ahoj, počul som, že si zabila Zalkaza!  Zabil by som ho sám, ale veď vieš, "
+"ako to chodí."
+
+#: ../npcs/hunter.txt:30
+msgid "How is it exactly?"
+msgstr "Presne ako to chodí?"
+
+#: ../npcs/hunter.txt:31
+msgid "Ah, er, well...  oh look!  Squirrel!"
+msgstr "Ach, ja, no... aha, pozri!  Veverička!"
+
+#: ../npcs/innkeep.txt:1
+msgid "Shandra the Innkeep"
+msgstr "Hostinská Šandra"
+
+#: ../npcs/innkeep.txt:9
+msgid "Welcome to the tavern.  Would you like some chicken wings?"
+msgstr "Vitaj v hostinci.  Môžem ti ponúknuť kuracie krídla?"
+
+#: ../npcs/innkeep.txt:14
+msgid "I expect suitors will soon be coming to town looking for you.  Ah, to be young again."
+msgstr ""
+"Čakám, že zachvíľu do mesta zavítajú pytači a budú ťa hľadať.  Ach, keby som "
+"bola zase mladá..."
+
+#: ../npcs/jailor.txt:1
+msgid "Jailor"
+msgstr "Žalárnik"
+
+#: ../npcs/jailor.txt:9
+msgid "Lots of unsavory types locked up here!"
+msgstr "Je tu uväznených množstvo nedôveryhodných typov!"
+
+#: ../npcs/jailor.txt:10
+msgid "Aw, who am I kidding?  We haven't had an inmate in fifty years."
+msgstr "Ale čo si to nahováram?  Už päťdesiat rokov sme nemali väzňa."
+
+#: ../npcs/jailor.txt:11
+msgid "I think I still have the keys around here somewhere, though..."
+msgstr "Tuším, že by som tu niekde stále mal mať kľúče, ak by boli potrebné..."
+
+#: ../npcs/jailor.txt:16
+msgid "Maybe you should be our new Sherriff!  Not that we've anyone around to imprison, still."
+msgstr ""
+"Možno by si sa mala stať našou šerifkou!  Nie že by sme niekoho potrebovali "
+"zatvoriť, ale aj tak."
+
+#: ../npcs/jeweler.txt:1
+msgid "Celade the Jeweler"
+msgstr "Klenotníčka Celade"
+
+#: ../npcs/jeweler.txt:9
+msgid "I came here all the way from the Castle Keradon to sell the jewels my family mines, but nobody here is buying!"
+msgstr ""
+"Prišla som sem až z hradu Keradon predávať šperky z drahokamov, ktoré ťaží "
+"moja rodina, ale nikto tu nekupuje!"
+
+#: ../npcs/jeweler.txt:10
+msgid "Hopefully there's more money to be made at my next stop in Haladria."
+msgstr "Dúfam, že na ďalšej zastávke v Heladrii zarobím viac."
+
+#: ../npcs/librarian.txt:1
+msgid "Librarian Joe"
+msgstr "Knihovník Joe"
+
+#: ../npcs/librarian.txt:9
+msgid "Oh, no, I'm not the Elder, I'm just his twin brother!"
+msgstr "Ach, nie, ja nie som staršina. Som len jeho dvojča!"
+
+#: ../npcs/librarian.txt:10
+msgid "Younger by an hour, but he gets to be the village elder."
+msgstr "O hodinu mladší, ale staršinom dediny sa stane on."
+
+#: ../npcs/librarian.txt:11
+msgid "Let me know if you need to look anything up, maps or the like."
+msgstr "Ak niečo potrebuješ vyhľadať, mapy a podobne, daj mi vedieť."
+
+#: ../npcs/librarian.txt:16
+msgid "I'm already writing down your story for future generations!"
+msgstr "Tvoj príbeh už zaznamenávam pre budúce generácie!"
+
+#: ../npcs/quartermaster.txt:1
+msgid "Quartermaster Fenton"
+msgstr "Zásobovateľ Fenton"
+
+#: ../npcs/quartermaster.txt:9
+msgid "We're stocking up the granary for the winter."
+msgstr "Naplňujeme sýpku na zimu."
+
+#: ../npcs/shopchest.txt:10
+msgid "Read Note"
+msgstr "Prečítať odkaz"
+
+#: ../npcs/shopchest.txt:11
+msgid "If we're not in right now, feel free to leave the money in the chest.  Honor system!"
+msgstr ""
+"Ak nie sme prítomní, peniaze môžete pokojne nechať v truhlici.  Systém cti!"
+
+#: ../npcs/trainee.txt:1
+msgid "PFC Xavier"
+msgstr "Slobodník Xavier"
+
+#: ../npcs/trainee.txt:9
+msgid "Don't break my concentration, or that thing will send me sprawling!"
+msgstr "Nenarušuj moje sústredenie, inak ma tá vec zhodí na zem!"
+
+#: ../npcs/vacationera.txt:1
+msgid "Sally"
+msgstr "Sally"
+
+#: ../npcs/vacationera.txt:9
+msgid "We're getting away for a few days.  Castle life is just so hectic!"
+msgstr ""
+"Prišli sme sa na pár dní uvoľniť.  Život na hrade je proste taký hektický!"
+
+#: ../npcs/vacationera.txt:10
+msgid "Don't tell Harry, but I'm really interested in going to the volcano - there might even be some obsidian there!"
+msgstr ""
+"Nehovor Harrymu, ale veľmi by som sa chcela vybrať k sopke – možno je tam "
+"obsidián!"
+
+#: ../npcs/vacationera.txt:11
+msgid "Only trouble is, it's too hot to get close enough.  If only there was a way to traverse the lava."
+msgstr ""
+"Jediný problém je v tom, že horúčava mi nedovolí dostať sa tak blízko.  Kiež "
+"by existoval spôsob ako prejsť cez lávu."
+
+#: ../npcs/vacationera.txt:16
+msgid "We're almost ready to go back home to the castle, but I still haven't been to the volcano."
+msgstr ""
+"Už sme takmer pripravení na cestu späť domov do hradu, ale stále som nebola "
+"pri sopke."
+
+#: ../npcs/vacationera.txt:17
+msgid "I'd let you borrow this charm, but apparently they only work for Laurelians,"
+msgstr ""
+"Požičala by som ti tento prívesok, ale podľa všetkého má účinok len na "
+"obyvateľov Laurelie."
+
+#: ../npcs/vacationera.txt:18
+msgid "Shucks.  Well, if you ever want to visit us back at the castle, just let me know!"
+msgstr ""
+"Čo už.  Nuž, ak by si nás niekedy chcela navštíviť na hrade, daj mi vedieť!"
+
+#: ../npcs/vacationerb.txt:1
+msgid "Harry"
+msgstr "Harry"
+
+#: ../npcs/vacationerb.txt:9
+msgid "Ah, the vacation life!"
+msgstr "Ach, ten dovolenkový život!"
+
+#: ../npcs/vacationerb.txt:10
+msgid "I hear there's some great spelunking to the north, and skiing to the south."
+msgstr "Počul som, že na severe sa dá dobre jaskyniarčiť a na juhu lyžovať."
+
+#: ../npcs/vacationerb.txt:11
+msgid "Do you know where I rent some skis around here?"
+msgstr "Nevieš, kde by som si tu mohol požičať lyže?"
+
+#: ../npcs/vacationerb.txt:12
+msgid "Uh, I'm not sure we have any shops like that."
+msgstr "Ehm, nemyslím, že máme také obchody."
+
+#: ../npcs/vacationerb.txt:13
+msgid "Darn.  Our castle is way more impressive than your ruined one here, I'll bet you could get skis there."
+msgstr ""
+"Dofrasa.  Náš hrad je oveľa pôsobivejší ako tá vaša zrúcanina – stavím sa, "
+"že by som tam našiel lyže."
+
+#: ../cutscenes/pit.txt:5
+msgid "A pit opens beneath your feet, and you fall into a dank cave!"
+msgstr "Pod vašimi nohami sa otvorila jama a spadli ste do vlhkej jaskyňe!"
