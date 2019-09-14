@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-25 02:22+\n"
-"PO-Revision-Date: 2019-08-24 19:59+0200\n"
+"PO-Revision-Date: 2019-09-14 14:06+0200\n"
 "Last-Translator: MiroslavR <miroslavr256@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sk\n"
@@ -290,11 +290,11 @@ msgstr "Výbuch (nepriateľ)"
 
 #: ../powers/powers.txt:359
 msgid "Tick"
-msgstr ""
+msgstr "Tik"
 
 #: ../powers/powers.txt:368
 msgid "Tick (proximity)"
-msgstr ""
+msgstr "Tik (blízkosť)"
 
 #: ../powers/powers.txt:377
 msgid "Enemy Beacon"
@@ -390,27 +390,27 @@ msgstr "Dafné"
 
 #: ../engine/titles.txt:2
 msgid "Therianthrope"
-msgstr ""
+msgstr "Teriantrop"
 
 #: ../engine/titles.txt:6
 msgid "Metamorph"
-msgstr ""
+msgstr "Metamorf"
 
 #: ../engine/titles.txt:10
 msgid "Skinwalker"
-msgstr ""
+msgstr "Kožomenič"
 
 #: ../engine/titles.txt:14
 msgid "Animagus"
-msgstr ""
+msgstr "Animágus"
 
 #: ../engine/titles.txt:18
 msgid "Shapeshifter"
-msgstr ""
+msgstr "Menič podoby"
 
 #: ../engine/titles.txt:22
 msgid "Doppelganger"
-msgstr ""
+msgstr "Dvojník"
 
 #: ../engine/titles.txt:26
 msgid "Chameleon"
@@ -422,15 +422,15 @@ msgstr "Dievča"
 
 #: ../engine/primary_stats.txt:3
 msgid "Physical"
-msgstr ""
+msgstr "Fyzický útok"
 
 #: ../engine/primary_stats.txt:7
 msgid "Mental"
-msgstr ""
+msgstr "Mentálny útok"
 
 #: ../enemies/archer.txt:1
 msgid "Cultist Archer"
-msgstr ""
+msgstr "Lukostrelec kultu"
 
 #: ../enemies/bat.txt:1
 msgid "Bat"
@@ -442,7 +442,7 @@ msgstr "Chrobák"
 
 #: ../enemies/caster.txt:1
 msgid "Cultist Mage"
-msgstr ""
+msgstr "Mág kultu"
 
 #: ../enemies/combat_dummy.txt:1
 msgid "Combat Dummy"
@@ -470,7 +470,7 @@ msgstr "Duch"
 
 #: ../enemies/ghostbomb.txt:1
 msgid "Ghost Bomb"
-msgstr ""
+msgstr "Bomba duchov"
 
 #: ../enemies/giantfireskeleton.txt:1
 msgid "Giant Fire Skeleton"
@@ -486,11 +486,11 @@ msgstr "Moloch"
 
 #: ../enemies/knight.txt:1
 msgid "Cultist Knight"
-msgstr ""
+msgstr "Rytier kultu"
 
 #: ../enemies/monk.txt:1
 msgid "Cultist Monk"
-msgstr ""
+msgstr "Mních kultu"
 
 #: ../enemies/rubysnake.txt:1
 msgid "Ruby Snake"
@@ -609,6 +609,9 @@ msgstr "Prepínací kľúč pasuje do otvoru v tomto kameni!"
 #: ../maps/basementa.txt:233
 msgid "It has been a long journey from Castle Hestian, but we have finally found a safe glade away from prying eyes.  We shall found our village here, among the laurel trees."
 msgstr ""
+"Prešli sme dlhú cestu z hradu Hestian, ale nakoniec sme našli bezpečnú "
+"čistinku, ďaleko od zvedavých očí.  Založíme si tu našu dedinu, medzi "
+"vavrínovými stromami."
 
 #: ../maps/basementa.txt:235
 msgid "Dusty Diary"
@@ -617,6 +620,8 @@ msgstr "Zaprášený denník"
 #: ../maps/basementa.txt:243
 msgid "It has been a hundred years now since King Hestian's decree to burn all the \"skinchangers.\"  We must go into hiding or he'll destroy us all."
 msgstr ""
+"Prešlo sto rokov, odkedy kráľ Hestian vydal nariadenie o upaľovaní všetkých "
+"obdarovaných so schopnosťou zmeny podoby.  Musíme sa skryť, inak je po nás."
 
 #: ../maps/basementa.txt:245
 msgid "Moldy Diary"
@@ -625,6 +630,8 @@ msgstr "Plesnivý denník"
 #: ../maps/basementa.txt:253
 msgid "King Hestian will not let us live in the open unless we share with him the secret of immortality.  If only we actually held that secret, as he believes!"
 msgstr ""
+"Kráľ Hestian nás nenechá žiť na verejnosti, kým mu neprezradíme tajomstvo "
+"nesmrteľnosti.  Kiež by sme ho len ukrývali, tak ako si myslí!"
 
 #: ../maps/basementa.txt:255
 msgid "Yellowed Diary"
@@ -648,7 +655,7 @@ msgstr "Átrium hradu"
 
 #: ../maps/castle3.txt:9
 msgid "Castle Hall"
-msgstr ""
+msgstr "Sála hradu"
 
 #: ../maps/castle4.txt:9
 msgid "Castle Basement"
@@ -688,7 +695,7 @@ msgstr "Jaskyňa"
 
 #: ../maps/cavern.txt:441
 msgid "Drag to actionbar to use."
-msgstr ""
+msgstr "Ak chcete použiť predmet, potiahnite ho do akčného panelu."
 
 #: ../maps/cavern.txt:499
 msgid "Carrots"
@@ -771,6 +778,8 @@ msgstr "História Laurelie"
 #: ../maps/library.txt:116
 msgid "p. 967: \"Zalkas was constantly beset by paladins seeking to destroy them; he would eliminate each one by blotting out the light with flocks of bats.\""
 msgstr ""
+"s. 967: „Zalkaz hľadal spôsob, ako zničiť paladínov, ktorí ho neustále "
+"sužovali; nakoniec každého zlidkvidoval zakrytím svetla kŕdľami netopierov.“"
 
 #: ../maps/library.txt:118
 msgid "Deomonology"
@@ -859,6 +868,7 @@ msgstr "Nákova"
 #: ../maps/volcano3.txt:180
 msgid "There might be a way to cross that small gap, but it looks deadly."
 msgstr ""
+"Možno sa cez tú úzku medzeru nejako prejsť dá, ale vyzerá to nebezpečne."
 
 #: ../maps/volcano3.txt:191
 msgid "Lava River"
@@ -867,6 +877,8 @@ msgstr "Lávová rieka"
 #: ../maps/volcano4.txt:189
 msgid "Someone has scrawled here: \"The fire skeleton's bombs killed my friend instantly!  If I wasn't a ghost already, I'd have died, too.\""
 msgstr ""
+"Niekto tu načmáral: „Bomby ohnivého kostlivca v momente zabili môjho "
+"kamaráta!  Keby som už nebol duch, zomrel by som tiež.“"
 
 #: ../maps/volcano4.txt:192
 msgid "Altar"
@@ -895,6 +907,8 @@ msgstr "Nájdite vílí kvet za riekou na severe mesta."
 #: ../quests/downahole.txt:13
 msgid "You found the Fairy Flower!  Now to bring it home to the Elder, and to explain what you saw in the cave."
 msgstr ""
+"Našli ste vílí kvet!  Teraz ho len zostáva priniesť domov staršinovi a "
+"vysvetliť mu, čo sa odohralo v jaskyni."
 
 #: ../quests/juggernaut.txt:4
 msgid "You have been tasked with finding the Juggernaut Talisman.  Go east to find the first half in the volcano."
@@ -1017,31 +1031,41 @@ msgstr "Nemôžem odpočívať!  Nazri do fontány... a poraz tam svoj tieň!"
 
 #: ../npcs/basementghost.txt:25
 msgid "These ruins have been here a long time, before the founding of Laurelia."
-msgstr ""
+msgstr "Tieto ruiny siahajú ďaleko pred založením Laurelie."
 
 #: ../npcs/basementghost.txt:26
 msgid "During the dark times when we the Kingdom was ruled by King Hestian, we fled here, and built a city in the light."
 msgstr ""
+"Utiekli sme tu v temných časoch, kedy kráľovstvu vládol kráľ Hestian, a "
+"postavili mesto na povrchu."
 
 #: ../npcs/basementghost.txt:27
 msgid "Some people, including the sorcerer Zalkaz, created warrens under the city, in case the mad King's soldiers found us."
 msgstr ""
+"Niekoľko ľudí, vrátane čarodeja Zalkaza, vytvorilo priestory pod mestom pre "
+"prípad, že by nás našli vojaci šialeného kráľa."
 
 #: ../npcs/basementghost.txt:28
 msgid "Zalkaz conducted experiments in the darkness while the other Laurelians remained in the light."
 msgstr ""
+"Zalkaz robil pokusy v tme, zatiaľ čo zvyšní obyvatelia Laurelie zostali na "
+"svetle."
 
 #: ../npcs/basementghost.txt:29
 msgid "After the mad King died, he sent guards to root our Zalkaz, with the assistance of the Laurelian populace."
 msgstr ""
+"Šialený kráľ po smrti poslal svoju stráž s pomocou obyvateľov Laurelie "
+"vykoreniť nášho Zalkaza."
 
 #: ../npcs/basementghost.txt:30
 msgid "The skeletons you see down here are the remainder of his frightening experiments."
-msgstr ""
+msgstr "Kostlivci, ktorých tu vidíš, sú pozostatkom jeho desivých pokusov."
 
 #: ../npcs/basementghost.txt:31
 msgid "Take this talisman, which has a piece of your shadow bound to it.  You should now be able to remain humanoid while incorporeal."
 msgstr ""
+"Zober si tento talizman, je s ním zviazaný kúsok tvojho tieňa.  Teraz môžeš "
+"byť naraz v nehmotnej aj humanoidnej forme."
 
 #: ../npcs/blacksmith.txt:1
 msgid "Clara the Blacksmith"
@@ -1098,6 +1122,8 @@ msgstr "Možno."
 #: ../npcs/blacksmith.txt:29
 msgid "Good morning!  I just finished some work on a new sword last night, and I'm showing it off to anyone who comes by."
 msgstr ""
+"Dobré ráno!  Včera večer som dorobila niečo na novom meči a teraz ho "
+"ukazujem každému, kto sa pristaví."
 
 #: ../npcs/blacksmith.txt:32
 msgid "The End"
@@ -1282,42 +1308,56 @@ msgstr ""
 #: ../npcs/elder.txt:43
 msgid "You may also want to speak with Robin the Hunter on your way over.  I told him to give you some of his equipment."
 msgstr ""
+"Zároveň odporúčam, aby si sa cestou porozprávala s lovcom Robinom.  Povedal "
+"som mu, nech ti dá časť svojej výzbroje."
 
 #: ../npcs/elder.txt:52
 msgid "Ah, the Fairy Flower!  Did you run into any trouble in the forest?"
-msgstr ""
+msgstr "Ach, vílí kvet!  Narazila si v lese na nejaké problémy?"
 
 #: ../npcs/elder.txt:53
 msgid "Yes, I did.  I suppose I ought to thank you for the sword."
-msgstr ""
+msgstr "Áno, narazila.  Myslím, že by som ti mala poďakovať za ten meč."
 
 #: ../npcs/elder.txt:54
 msgid "Snarks?  Grumpkins?"
-msgstr ""
+msgstr "Snarkovia?  Grumpkini?"
 
 #: ../npcs/elder.txt:55
 msgid "No, I just, you know, unleashed an ancient evil.  Thanks a bunch for the warning."
 msgstr ""
+"Nie, len som, vieš, pustila na slobodu dávne zlo.  Ďakujem pekne za "
+"varovanie."
 
 #: ../npcs/elder.txt:56
 msgid "Ah, I hoped that I would never have to tell you.  You see, I never told you about your parents.  You weren't actually left on my doorstep - the house you live in was theirs, before they left to seal away the ancient evil Zalkaz."
 msgstr ""
+"Ach, dúfal som, že ti to nikdy nebudem musieť prezradiť.  Vieš, nikdy som ti "
+"nepovedal o tvojich rodičoch.  Nie je pravda, že ťa zanechali pred mojimi "
+"dverami – dom, v ktorom bývaš, patril im, dokým sa nevydali zapudiť dávne "
+"zlo Zalkaza."
 
 #: ../npcs/elder.txt:57
 msgid "When in the heck were you planning on letting me know the truth!?"
-msgstr ""
+msgstr "Kedy si mi, dočerta, plánoval povedať pravdu?"
 
 #: ../npcs/elder.txt:58
 msgid "Tomorrow, after your birthday party, I promise!  They died nobly, but now, it falls to you to finish their work."
 msgstr ""
+"Zajtra po tvojej oslave narodenín, prihasám!  Zomreli so cťou, ale teraz si "
+"to ty, kto musí dokončiť ich prácu."
 
 #: ../npcs/elder.txt:59
 msgid "You must find what they never could: both halves of the Juggernaut Talisman.  With the Talisman, you can seal away the Ancient Evil forever!"
 msgstr ""
+"Musíš nájsť to, čo sa im nikdy nepodarilo: obe polovice talizmanu molocha.  "
+"Za pomoci talizmanu budeš môcť navždy zapudiť dávne zlo!"
 
 #: ../npcs/elder.txt:60
 msgid "Go east, and use your bat talisman to fly over the ruined bridge, and seek the first half of the Juggernaut Talisman in the volcano."
 msgstr ""
+"Vydaj sa na východ a pomocou netopierieho talizmanu preleť cez zničený most "
+"a po prvej polovici talizmanu molocha pátraj v sopke."
 
 #: ../npcs/elder.txt:63
 msgid "The Fairy Flower"
@@ -1330,46 +1370,61 @@ msgstr "Už si našla vílí kvet?"
 #: ../npcs/elder.txt:72
 msgid "Ah, Daphne!  It's good to see you this morning.  You turn sixteen tomorrow, but it seems like just yesterday that I found you in a basket at my door."
 msgstr ""
+"Ach, Dafné!  Rád ťa vidím.  Zajtra máš už šestnásť rokov, ale mám pocit, že "
+"to bolo len včera, čo som ťa našiel v košíku pri dverách."
 
 #: ../npcs/elder.txt:73
 msgid "Sixteen long years of doing pointless chores for you, Thomas."
-msgstr ""
+msgstr "Šestnásť dlhých rokov, čo pre teba robím zbytočné práce, Tomáš."
 
 #: ../npcs/elder.txt:74
 msgid "Come now, you wound an old man!  Tomorrow you shall be released from my endless tasks, but today, I need you to do one more."
 msgstr ""
+"No tak, zraňuješ ma!  Od zajtra budeš odbremenená od mojich nekonečných "
+"úloh, ale dnes mám pre teba ešte jednu."
 
 #: ../npcs/elder.txt:75
 msgid "Joy of joys.  Where are you sending me today?"
-msgstr ""
+msgstr "Aká radosť.  Kam ma dnes posielaš?"
 
 #: ../npcs/elder.txt:76
 msgid "I need you to find the Fairy Flower in the forests.  It's the last ingredient I need to create the wreath to hang in your new home."
 msgstr ""
+"Chcem, aby si našla v lesoch vílí kvet.  Je to posledná zložka na výrobu "
+"venca, ktorý zavesíme v tvojom novom domove."
 
 #: ../npcs/elder.txt:77
 msgid "A housewarming present I have to fetch myself?  Awww, you shouldn't have."
 msgstr ""
+"Darček na oslavu nasťahovania, ktorý si musím zaobstarať sama?  Ále, to si "
+"nemusel."
 
 #: ../npcs/elder.txt:78
 msgid "Ha!  You're my girl.  The Fairy Flower is found north of town, across the river."
-msgstr ""
+msgstr "Ha!  To je moje dievča.  Vílí kvet nájdeš za riekou na severe od mesta."
 
 #: ../npcs/elder.txt:83
 msgid "I know your parents will rest much better knowing that their work is finished."
 msgstr ""
+"Viem, že tvoji rodičia budú odpočívať omnoho pokojnejšie s vedomím, že si "
+"dokončila ich robotu."
 
 #: ../npcs/elder.txt:84
 msgid "May they rest in peace...  Thank you, Thomas."
-msgstr ""
+msgstr "Nech odpočívajú v pokoji... Vďaka, Tomáš."
 
 #: ../npcs/elder.txt:85
 msgid "Be wary, though.  Zalkaz is but one of the many evils who threaten our world.  I hope that someday you can venture beyond Laurelia, where the world may have use of your sword once more."
 msgstr ""
+"Buď však na pozore.  Zalkaz nie je ani zďaleka jediné zlo, ktoré ohrozuje "
+"náš svet.  Verím, že jedného dňa nájdeš dobrodružstvo mimo Laurelie, kde sa "
+"opäť zíde tvoj meč."
 
 #: ../npcs/elder.txt:86
 msgid "Oh great, just what I always wanted...  more bats and snakes to kill."
 msgstr ""
+"No skvelé, presne to, po čom som vždy túžila... Zabíjať ďalšie netopiere a "
+"hady."
 
 #: ../npcs/eldershade.txt:1
 msgid "Shade of Elder Thomas"
@@ -1493,6 +1548,8 @@ msgstr "Čo?  Kto si?  Kde si?"
 #: ../npcs/gravestone.txt:15
 msgid "I am Zalkaz, the Destroyer of Worlds!  When you approached my tombstone, your life force set me free."
 msgstr ""
+"Som Zalkaz, ničiteľ svetov!  Keď si sa priblížila k môjmu náhrobku, tvoja "
+"životná sila ma oslobodila."
 
 #: ../npcs/gravestone.txt:16
 msgid "Oh, and I'm so scared now.  You're just a voice, who cares?"
@@ -1501,18 +1558,21 @@ msgstr "Ach, už sa celá trasiem od strachu.  Si len hlas, koho to zaujíma?"
 #: ../npcs/gravestone.txt:17
 msgid "Who cares?  The entire world shall tremble, for soon I shall have my body back, and I shall sweep through the lands with my fiery sword of rage!"
 msgstr ""
+"Koho to zaujíma?  Celý svet sa predo mnou rozklepe od strachu, pretože "
+"čoskoro získam naspäť svoje telo a krajinou prehnám svoj planúci meč hnevu!"
 
 #: ../npcs/gravestone.txt:18
 msgid "Great.  Why can't we just have a sewer like most modern cities?  Sheesh."
 msgstr ""
+"Super.  Prečo nemôžeme mať kanalizáciu ako väčšina moderných miest?  Pffff."
 
 #: ../npcs/gravestone.txt:19
 msgid "Now I just need to find my way out of here.  Is that a breeze coming from behind the tombstone?"
-msgstr ""
+msgstr "Teraz len musím nájsť cestu von.  Nevychádza spoza náhrobku vánok?"
 
 #: ../npcs/gravestone.txt:37
 msgid "The tombstone stands quiet now."
-msgstr ""
+msgstr "Náhrobok už nevydáva ďalšie zvuky."
 
 #: ../npcs/guard.txt:1
 msgid "King's knight"
@@ -1521,18 +1581,21 @@ msgstr "Kráľov rytier"
 #: ../npcs/guard.txt:9
 msgid "Careful on the roads out there, strange things have been afoot in the kingdom lately."
 msgstr ""
+"Dávaj si vonku na cestách pozor, v poslednej dobe sa v kráľovstve dejú divné "
+"veci."
 
 #: ../npcs/guard.txt:10
 msgid "The king sent me to help out if there any trouble, but honestly..."
 msgstr ""
+"Kráľ ma vyslal, aby som pomohol v prípade problémov, ale pravdupovediac..."
 
 #: ../npcs/guard.txt:11
 msgid "I'm a little scared, and you have a sword.  Can't you take care of it?"
-msgstr ""
+msgstr "Trochu sa bojím a ty máš meč.  Nemôžeš sa o to postarať?"
 
 #: ../npcs/guard.txt:16
 msgid "The King sends his highest regards, and hopes you'll come to the palace soon!"
-msgstr ""
+msgstr "Pozdravuje ťa sám kráľ a dúfa, že čoskoro prídeš do paláca!"
 
 #: ../npcs/hunter.txt:1
 msgid "Robin the Hunter"
