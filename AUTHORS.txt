@@ -39,7 +39,11 @@ Menu and UI design
 
 Stacey Brimhall
 ---------------
-mods/polymorphable/images/portraits
+mods/polymorphable/images/portraits/male01.png
+
+DiosYubi
+--------
+mods/polymorphable/images/portraits/female01.png
 
 --------------------------------------------------------------
 --------------------------------------------------------------
